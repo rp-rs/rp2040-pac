@@ -1,0 +1,20 @@
+[package]
+name = "rp2040-pac"
+version = "0.1.0"
+authors = ["eolder <evanmolder@gmail.com>"]
+edition = "2018"
+homepage = "https://github.com/rp-rs/rp2040-pac"
+description = "A Rust RP2040 PAC"
+license = "MIT OR Apache-2.0"
+
+[dependencies]
+bare-metal = "0.2.0"
+cortex-m = "0.5.8"
+vcell = "0.1.0"
+
+[dependencies.cortex-m-rt]
+optional = true
+version = "0.6.5"
+
+[features]
+rt = ["cortex-m-rt/device"]
