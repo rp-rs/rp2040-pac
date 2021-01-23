@@ -939,20 +939,18 @@ static mut DEVICE_PERIPHERALS: bool = false;
 #[doc = r"All the peripherals"]
 #[allow(non_snake_case)]
 pub struct Peripherals {
-    #[doc = "XIP_CTRL"]
-    pub XIP_CTRL: XIP_CTRL,
-    #[doc = "XIP_SSI"]
-    pub XIP_SSI: XIP_SSI,
-    #[doc = "SYSINFO"]
-    pub SYSINFO: SYSINFO,
-    #[doc = "SYSCFG"]
-    pub SYSCFG: SYSCFG,
+    #[doc = "ADC"]
+    pub ADC: ADC,
+    #[doc = "BUSCTRL"]
+    pub BUSCTRL: BUSCTRL,
     #[doc = "CLOCKS"]
     pub CLOCKS: CLOCKS,
-    #[doc = "RESETS"]
-    pub RESETS: RESETS,
-    #[doc = "PSM"]
-    pub PSM: PSM,
+    #[doc = "DMA"]
+    pub DMA: DMA,
+    #[doc = "I2C0"]
+    pub I2C0: I2C0,
+    #[doc = "I2C1"]
+    pub I2C1: I2C1,
     #[doc = "IO_BANK0"]
     pub IO_BANK0: IO_BANK0,
     #[doc = "IO_QSPI"]
@@ -961,54 +959,56 @@ pub struct Peripherals {
     pub PADS_BANK0: PADS_BANK0,
     #[doc = "PADS_QSPI"]
     pub PADS_QSPI: PADS_QSPI,
-    #[doc = "XOSC"]
-    pub XOSC: XOSC,
-    #[doc = "PLL_SYS"]
-    pub PLL_SYS: PLL_SYS,
-    #[doc = "PLL_USB"]
-    pub PLL_USB: PLL_USB,
-    #[doc = "BUSCTRL"]
-    pub BUSCTRL: BUSCTRL,
-    #[doc = "UART0"]
-    pub UART0: UART0,
-    #[doc = "UART1"]
-    pub UART1: UART1,
-    #[doc = "SPI0"]
-    pub SPI0: SPI0,
-    #[doc = "SPI1"]
-    pub SPI1: SPI1,
-    #[doc = "I2C0"]
-    pub I2C0: I2C0,
-    #[doc = "I2C1"]
-    pub I2C1: I2C1,
-    #[doc = "ADC"]
-    pub ADC: ADC,
-    #[doc = "PWM"]
-    pub PWM: PWM,
-    #[doc = "TIMER"]
-    pub TIMER: TIMER,
-    #[doc = "WATCHDOG"]
-    pub WATCHDOG: WATCHDOG,
-    #[doc = "RTC"]
-    pub RTC: RTC,
-    #[doc = "ROSC"]
-    pub ROSC: ROSC,
-    #[doc = "VREG_AND_CHIP_RESET"]
-    pub VREG_AND_CHIP_RESET: VREG_AND_CHIP_RESET,
-    #[doc = "TBMAN"]
-    pub TBMAN: TBMAN,
-    #[doc = "DMA"]
-    pub DMA: DMA,
-    #[doc = "USBCTRL_REGS"]
-    pub USBCTRL_REGS: USBCTRL_REGS,
     #[doc = "PIO0"]
     pub PIO0: PIO0,
     #[doc = "PIO1"]
     pub PIO1: PIO1,
-    #[doc = "SIO"]
-    pub SIO: SIO,
+    #[doc = "PLL_SYS"]
+    pub PLL_SYS: PLL_SYS,
+    #[doc = "PLL_USB"]
+    pub PLL_USB: PLL_USB,
     #[doc = "PPB"]
     pub PPB: PPB,
+    #[doc = "PSM"]
+    pub PSM: PSM,
+    #[doc = "PWM"]
+    pub PWM: PWM,
+    #[doc = "RESETS"]
+    pub RESETS: RESETS,
+    #[doc = "ROSC"]
+    pub ROSC: ROSC,
+    #[doc = "RTC"]
+    pub RTC: RTC,
+    #[doc = "SIO"]
+    pub SIO: SIO,
+    #[doc = "SPI0"]
+    pub SPI0: SPI0,
+    #[doc = "SPI1"]
+    pub SPI1: SPI1,
+    #[doc = "SYSCFG"]
+    pub SYSCFG: SYSCFG,
+    #[doc = "SYSINFO"]
+    pub SYSINFO: SYSINFO,
+    #[doc = "TBMAN"]
+    pub TBMAN: TBMAN,
+    #[doc = "TIMER"]
+    pub TIMER: TIMER,
+    #[doc = "UART0"]
+    pub UART0: UART0,
+    #[doc = "UART1"]
+    pub UART1: UART1,
+    #[doc = "USBCTRL_REGS"]
+    pub USBCTRL_REGS: USBCTRL_REGS,
+    #[doc = "VREG_AND_CHIP_RESET"]
+    pub VREG_AND_CHIP_RESET: VREG_AND_CHIP_RESET,
+    #[doc = "WATCHDOG"]
+    pub WATCHDOG: WATCHDOG,
+    #[doc = "XIP_CTRL"]
+    pub XIP_CTRL: XIP_CTRL,
+    #[doc = "XIP_SSI"]
+    pub XIP_SSI: XIP_SSI,
+    #[doc = "XOSC"]
+    pub XOSC: XOSC,
 }
 impl Peripherals {
     #[doc = r"Returns all the peripherals *once*"]
