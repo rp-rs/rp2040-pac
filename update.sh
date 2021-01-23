@@ -15,3 +15,6 @@ form -i lib.rs -o src
 rm lib.rs
 cargo fmt
 rustfmt build.rs
+
+# Sort doc specified fields alphanumerically for easier consumption in docs.rs
+./sortFieldsAlphaNum.sh
