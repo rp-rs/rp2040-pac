@@ -2,18 +2,14 @@
 #![deny(const_err)]
 #![deny(dead_code)]
 #![deny(improper_ctypes)]
-#![deny(legacy_directory_ownership)]
 #![deny(missing_docs)]
 #![deny(no_mangle_generic_items)]
 #![deny(non_shorthand_field_patterns)]
 #![deny(overflowing_literals)]
 #![deny(path_statements)]
 #![deny(patterns_in_fns_without_body)]
-#![deny(plugin_as_library)]
 #![deny(private_in_public)]
-#![deny(safe_extern_statics)]
 #![deny(unconditional_recursion)]
-#![deny(unions_with_drop_fields)]
 #![deny(unused_allocation)]
 #![deny(unused_comparisons)]
 #![deny(unused_parens)]
@@ -21,7 +17,6 @@
 #![allow(non_camel_case_types)]
 #![allow(non_snake_case)]
 #![no_std]
-extern crate bare_metal;
 extern crate cortex_m;
 #[cfg(feature = "rt")]
 extern crate cortex_m_rt;
@@ -193,7 +188,7 @@ pub enum Interrupt {
     #[doc = "25 - RTC_IRQ"]
     RTC_IRQ = 25,
 }
-unsafe impl bare_metal::Nr for Interrupt {
+unsafe impl cortex_m::interrupt::Nr for Interrupt {
     #[inline(always)]
     fn nr(&self) -> u8 {
         *self as u8
