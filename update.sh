@@ -15,4 +15,7 @@ form -i lib.rs -o src
 rm lib.rs
 cargo fmt
 
+# Sort specified fields alphanumerically for easier consumption in docs.rs
+./sortFieldsAlphaNum.sh
+
 # You will now need to manually remove the out of date lints, and replace `bare_metal::Nr` with `cortex_m::interrupt::Nr`
