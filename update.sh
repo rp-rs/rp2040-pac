@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
-set -x
-set -e
+
+set -ex
 
 # NOTE: Last executed using Rust 1.49.0
 
@@ -10,12 +10,18 @@ rustup component add rustfmt
 
 rm -rf src
 mkdir src
-svd2rust -i svd/rp2040.svd
+
+svd patch svd/rp2040.yaml
+
+svd2rust -i svd/rp2040.svd.patched
+
 form -i lib.rs -o src
 rm lib.rs
+
 cargo fmt
+
+sed -i "/extern crate bare_metal;/d" ./src/lib.rs
+sed -i 's/bare_metal::Nr/cortex_m::interrupt::Nr/g' ./src/lib.rs
 
 # Sort specified fields alphanumerically for easier consumption in docs.rs
 ./sortFieldsAlphaNum.sh
-
-# You will now need to manually remove the out of date lints, and replace `bare_metal::Nr` with `cortex_m::interrupt::Nr`

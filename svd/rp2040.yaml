@@ -1,0 +1,21 @@
+_svd: "./rp2040.svd"
+
+PIO0:
+  _array:
+    "INSTR_MEM*": {}
+    "TXF*": {}
+    "RXF*": {}
+
+  _cluster:
+    "SM%s":
+      "SM*_CLKDIV": {}
+      "SM*_EXECCTRL": {}
+      "SM*_SHIFTCTRL": {}
+      "SM*_ADDR": {}
+      "SM*_INSTR": {}
+      "SM*_PINCTRL": {}
+
+    "SM_IRQ%s":
+      "IRQ*_INTE": {}
+      "IRQ*_INTF": {}
+      "IRQ*_INTS": {}
