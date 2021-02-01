@@ -317,13 +317,15 @@ impl crate::Readable for INT_EP_CTRL {}
 impl crate::Writable for INT_EP_CTRL {}
 #[doc = "interrupt endpoint control register"]
 pub mod int_ep_ctrl;
-#[doc = "Buffer status register. A bit set here indicates that a buffer has completed on the endpoint (if the buffer interrupt is enabled). It is possible for 2 buffers to be completed, so clearing the buffer status bit may instantly re set it on the next clock cycle.\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [buff_status](buff_status) module"]
+#[doc = "Buffer status register. A bit set here indicates that a buffer has completed on the endpoint (if the buffer interrupt is enabled). It is possible for 2 buffers to be completed, so clearing the buffer status bit may instantly re set it on the next clock cycle.\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [buff_status](buff_status) module"]
 pub type BUFF_STATUS = crate::Reg<u32, _BUFF_STATUS>;
 #[allow(missing_docs)]
 #[doc(hidden)]
 pub struct _BUFF_STATUS;
 #[doc = "`read()` method returns [buff_status::R](buff_status::R) reader structure"]
 impl crate::Readable for BUFF_STATUS {}
+#[doc = "`write(|w| ..)` method takes [buff_status::W](buff_status::W) writer structure"]
+impl crate::Writable for BUFF_STATUS {}
 #[doc = "Buffer status register. A bit set here indicates that a buffer has completed on the endpoint (if the buffer interrupt is enabled). It is possible for 2 buffers to be completed, so clearing the buffer status bit may instantly re set it on the next clock cycle."]
 pub mod buff_status;
 #[doc = "Which of the double buffers should be handled. Only valid if using an interrupt per buffer (i.e. not per 2 buffers). Not valid for host interrupt endpoint polling because they are only single buffered.\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [buff_cpu_should_handle](buff_cpu_should_handle) module"]

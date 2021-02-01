@@ -1,69 +1,783 @@
 #[doc = "Reader of register BUFF_STATUS"]
 pub type R = crate::R<u32, super::BUFF_STATUS>;
+#[doc = "Writer for register BUFF_STATUS"]
+pub type W = crate::W<u32, super::BUFF_STATUS>;
+#[doc = "Register BUFF_STATUS `reset()`'s with value 0"]
+impl crate::ResetValue for super::BUFF_STATUS {
+    type Type = u32;
+    #[inline(always)]
+    fn reset_value() -> Self::Type {
+        0
+    }
+}
 #[doc = "Reader of field `EP15_OUT`"]
 pub type EP15_OUT_R = crate::R<bool, bool>;
+#[doc = "Write proxy for field `EP15_OUT`"]
+pub struct EP15_OUT_W<'a> {
+    w: &'a mut W,
+}
+impl<'a> EP15_OUT_W<'a> {
+    #[doc = r"Sets the field bit"]
+    #[inline(always)]
+    pub fn set_bit(self) -> &'a mut W {
+        self.bit(true)
+    }
+    #[doc = r"Clears the field bit"]
+    #[inline(always)]
+    pub fn clear_bit(self) -> &'a mut W {
+        self.bit(false)
+    }
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
+    pub fn bit(self, value: bool) -> &'a mut W {
+        self.w.bits = (self.w.bits & !(0x01 << 31)) | (((value as u32) & 0x01) << 31);
+        self.w
+    }
+}
 #[doc = "Reader of field `EP15_IN`"]
 pub type EP15_IN_R = crate::R<bool, bool>;
+#[doc = "Write proxy for field `EP15_IN`"]
+pub struct EP15_IN_W<'a> {
+    w: &'a mut W,
+}
+impl<'a> EP15_IN_W<'a> {
+    #[doc = r"Sets the field bit"]
+    #[inline(always)]
+    pub fn set_bit(self) -> &'a mut W {
+        self.bit(true)
+    }
+    #[doc = r"Clears the field bit"]
+    #[inline(always)]
+    pub fn clear_bit(self) -> &'a mut W {
+        self.bit(false)
+    }
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
+    pub fn bit(self, value: bool) -> &'a mut W {
+        self.w.bits = (self.w.bits & !(0x01 << 30)) | (((value as u32) & 0x01) << 30);
+        self.w
+    }
+}
 #[doc = "Reader of field `EP14_OUT`"]
 pub type EP14_OUT_R = crate::R<bool, bool>;
+#[doc = "Write proxy for field `EP14_OUT`"]
+pub struct EP14_OUT_W<'a> {
+    w: &'a mut W,
+}
+impl<'a> EP14_OUT_W<'a> {
+    #[doc = r"Sets the field bit"]
+    #[inline(always)]
+    pub fn set_bit(self) -> &'a mut W {
+        self.bit(true)
+    }
+    #[doc = r"Clears the field bit"]
+    #[inline(always)]
+    pub fn clear_bit(self) -> &'a mut W {
+        self.bit(false)
+    }
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
+    pub fn bit(self, value: bool) -> &'a mut W {
+        self.w.bits = (self.w.bits & !(0x01 << 29)) | (((value as u32) & 0x01) << 29);
+        self.w
+    }
+}
 #[doc = "Reader of field `EP14_IN`"]
 pub type EP14_IN_R = crate::R<bool, bool>;
+#[doc = "Write proxy for field `EP14_IN`"]
+pub struct EP14_IN_W<'a> {
+    w: &'a mut W,
+}
+impl<'a> EP14_IN_W<'a> {
+    #[doc = r"Sets the field bit"]
+    #[inline(always)]
+    pub fn set_bit(self) -> &'a mut W {
+        self.bit(true)
+    }
+    #[doc = r"Clears the field bit"]
+    #[inline(always)]
+    pub fn clear_bit(self) -> &'a mut W {
+        self.bit(false)
+    }
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
+    pub fn bit(self, value: bool) -> &'a mut W {
+        self.w.bits = (self.w.bits & !(0x01 << 28)) | (((value as u32) & 0x01) << 28);
+        self.w
+    }
+}
 #[doc = "Reader of field `EP13_OUT`"]
 pub type EP13_OUT_R = crate::R<bool, bool>;
+#[doc = "Write proxy for field `EP13_OUT`"]
+pub struct EP13_OUT_W<'a> {
+    w: &'a mut W,
+}
+impl<'a> EP13_OUT_W<'a> {
+    #[doc = r"Sets the field bit"]
+    #[inline(always)]
+    pub fn set_bit(self) -> &'a mut W {
+        self.bit(true)
+    }
+    #[doc = r"Clears the field bit"]
+    #[inline(always)]
+    pub fn clear_bit(self) -> &'a mut W {
+        self.bit(false)
+    }
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
+    pub fn bit(self, value: bool) -> &'a mut W {
+        self.w.bits = (self.w.bits & !(0x01 << 27)) | (((value as u32) & 0x01) << 27);
+        self.w
+    }
+}
 #[doc = "Reader of field `EP13_IN`"]
 pub type EP13_IN_R = crate::R<bool, bool>;
+#[doc = "Write proxy for field `EP13_IN`"]
+pub struct EP13_IN_W<'a> {
+    w: &'a mut W,
+}
+impl<'a> EP13_IN_W<'a> {
+    #[doc = r"Sets the field bit"]
+    #[inline(always)]
+    pub fn set_bit(self) -> &'a mut W {
+        self.bit(true)
+    }
+    #[doc = r"Clears the field bit"]
+    #[inline(always)]
+    pub fn clear_bit(self) -> &'a mut W {
+        self.bit(false)
+    }
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
+    pub fn bit(self, value: bool) -> &'a mut W {
+        self.w.bits = (self.w.bits & !(0x01 << 26)) | (((value as u32) & 0x01) << 26);
+        self.w
+    }
+}
 #[doc = "Reader of field `EP12_OUT`"]
 pub type EP12_OUT_R = crate::R<bool, bool>;
+#[doc = "Write proxy for field `EP12_OUT`"]
+pub struct EP12_OUT_W<'a> {
+    w: &'a mut W,
+}
+impl<'a> EP12_OUT_W<'a> {
+    #[doc = r"Sets the field bit"]
+    #[inline(always)]
+    pub fn set_bit(self) -> &'a mut W {
+        self.bit(true)
+    }
+    #[doc = r"Clears the field bit"]
+    #[inline(always)]
+    pub fn clear_bit(self) -> &'a mut W {
+        self.bit(false)
+    }
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
+    pub fn bit(self, value: bool) -> &'a mut W {
+        self.w.bits = (self.w.bits & !(0x01 << 25)) | (((value as u32) & 0x01) << 25);
+        self.w
+    }
+}
 #[doc = "Reader of field `EP12_IN`"]
 pub type EP12_IN_R = crate::R<bool, bool>;
+#[doc = "Write proxy for field `EP12_IN`"]
+pub struct EP12_IN_W<'a> {
+    w: &'a mut W,
+}
+impl<'a> EP12_IN_W<'a> {
+    #[doc = r"Sets the field bit"]
+    #[inline(always)]
+    pub fn set_bit(self) -> &'a mut W {
+        self.bit(true)
+    }
+    #[doc = r"Clears the field bit"]
+    #[inline(always)]
+    pub fn clear_bit(self) -> &'a mut W {
+        self.bit(false)
+    }
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
+    pub fn bit(self, value: bool) -> &'a mut W {
+        self.w.bits = (self.w.bits & !(0x01 << 24)) | (((value as u32) & 0x01) << 24);
+        self.w
+    }
+}
 #[doc = "Reader of field `EP11_OUT`"]
 pub type EP11_OUT_R = crate::R<bool, bool>;
+#[doc = "Write proxy for field `EP11_OUT`"]
+pub struct EP11_OUT_W<'a> {
+    w: &'a mut W,
+}
+impl<'a> EP11_OUT_W<'a> {
+    #[doc = r"Sets the field bit"]
+    #[inline(always)]
+    pub fn set_bit(self) -> &'a mut W {
+        self.bit(true)
+    }
+    #[doc = r"Clears the field bit"]
+    #[inline(always)]
+    pub fn clear_bit(self) -> &'a mut W {
+        self.bit(false)
+    }
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
+    pub fn bit(self, value: bool) -> &'a mut W {
+        self.w.bits = (self.w.bits & !(0x01 << 23)) | (((value as u32) & 0x01) << 23);
+        self.w
+    }
+}
 #[doc = "Reader of field `EP11_IN`"]
 pub type EP11_IN_R = crate::R<bool, bool>;
+#[doc = "Write proxy for field `EP11_IN`"]
+pub struct EP11_IN_W<'a> {
+    w: &'a mut W,
+}
+impl<'a> EP11_IN_W<'a> {
+    #[doc = r"Sets the field bit"]
+    #[inline(always)]
+    pub fn set_bit(self) -> &'a mut W {
+        self.bit(true)
+    }
+    #[doc = r"Clears the field bit"]
+    #[inline(always)]
+    pub fn clear_bit(self) -> &'a mut W {
+        self.bit(false)
+    }
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
+    pub fn bit(self, value: bool) -> &'a mut W {
+        self.w.bits = (self.w.bits & !(0x01 << 22)) | (((value as u32) & 0x01) << 22);
+        self.w
+    }
+}
 #[doc = "Reader of field `EP10_OUT`"]
 pub type EP10_OUT_R = crate::R<bool, bool>;
+#[doc = "Write proxy for field `EP10_OUT`"]
+pub struct EP10_OUT_W<'a> {
+    w: &'a mut W,
+}
+impl<'a> EP10_OUT_W<'a> {
+    #[doc = r"Sets the field bit"]
+    #[inline(always)]
+    pub fn set_bit(self) -> &'a mut W {
+        self.bit(true)
+    }
+    #[doc = r"Clears the field bit"]
+    #[inline(always)]
+    pub fn clear_bit(self) -> &'a mut W {
+        self.bit(false)
+    }
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
+    pub fn bit(self, value: bool) -> &'a mut W {
+        self.w.bits = (self.w.bits & !(0x01 << 21)) | (((value as u32) & 0x01) << 21);
+        self.w
+    }
+}
 #[doc = "Reader of field `EP10_IN`"]
 pub type EP10_IN_R = crate::R<bool, bool>;
+#[doc = "Write proxy for field `EP10_IN`"]
+pub struct EP10_IN_W<'a> {
+    w: &'a mut W,
+}
+impl<'a> EP10_IN_W<'a> {
+    #[doc = r"Sets the field bit"]
+    #[inline(always)]
+    pub fn set_bit(self) -> &'a mut W {
+        self.bit(true)
+    }
+    #[doc = r"Clears the field bit"]
+    #[inline(always)]
+    pub fn clear_bit(self) -> &'a mut W {
+        self.bit(false)
+    }
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
+    pub fn bit(self, value: bool) -> &'a mut W {
+        self.w.bits = (self.w.bits & !(0x01 << 20)) | (((value as u32) & 0x01) << 20);
+        self.w
+    }
+}
 #[doc = "Reader of field `EP9_OUT`"]
 pub type EP9_OUT_R = crate::R<bool, bool>;
+#[doc = "Write proxy for field `EP9_OUT`"]
+pub struct EP9_OUT_W<'a> {
+    w: &'a mut W,
+}
+impl<'a> EP9_OUT_W<'a> {
+    #[doc = r"Sets the field bit"]
+    #[inline(always)]
+    pub fn set_bit(self) -> &'a mut W {
+        self.bit(true)
+    }
+    #[doc = r"Clears the field bit"]
+    #[inline(always)]
+    pub fn clear_bit(self) -> &'a mut W {
+        self.bit(false)
+    }
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
+    pub fn bit(self, value: bool) -> &'a mut W {
+        self.w.bits = (self.w.bits & !(0x01 << 19)) | (((value as u32) & 0x01) << 19);
+        self.w
+    }
+}
 #[doc = "Reader of field `EP9_IN`"]
 pub type EP9_IN_R = crate::R<bool, bool>;
+#[doc = "Write proxy for field `EP9_IN`"]
+pub struct EP9_IN_W<'a> {
+    w: &'a mut W,
+}
+impl<'a> EP9_IN_W<'a> {
+    #[doc = r"Sets the field bit"]
+    #[inline(always)]
+    pub fn set_bit(self) -> &'a mut W {
+        self.bit(true)
+    }
+    #[doc = r"Clears the field bit"]
+    #[inline(always)]
+    pub fn clear_bit(self) -> &'a mut W {
+        self.bit(false)
+    }
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
+    pub fn bit(self, value: bool) -> &'a mut W {
+        self.w.bits = (self.w.bits & !(0x01 << 18)) | (((value as u32) & 0x01) << 18);
+        self.w
+    }
+}
 #[doc = "Reader of field `EP8_OUT`"]
 pub type EP8_OUT_R = crate::R<bool, bool>;
+#[doc = "Write proxy for field `EP8_OUT`"]
+pub struct EP8_OUT_W<'a> {
+    w: &'a mut W,
+}
+impl<'a> EP8_OUT_W<'a> {
+    #[doc = r"Sets the field bit"]
+    #[inline(always)]
+    pub fn set_bit(self) -> &'a mut W {
+        self.bit(true)
+    }
+    #[doc = r"Clears the field bit"]
+    #[inline(always)]
+    pub fn clear_bit(self) -> &'a mut W {
+        self.bit(false)
+    }
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
+    pub fn bit(self, value: bool) -> &'a mut W {
+        self.w.bits = (self.w.bits & !(0x01 << 17)) | (((value as u32) & 0x01) << 17);
+        self.w
+    }
+}
 #[doc = "Reader of field `EP8_IN`"]
 pub type EP8_IN_R = crate::R<bool, bool>;
+#[doc = "Write proxy for field `EP8_IN`"]
+pub struct EP8_IN_W<'a> {
+    w: &'a mut W,
+}
+impl<'a> EP8_IN_W<'a> {
+    #[doc = r"Sets the field bit"]
+    #[inline(always)]
+    pub fn set_bit(self) -> &'a mut W {
+        self.bit(true)
+    }
+    #[doc = r"Clears the field bit"]
+    #[inline(always)]
+    pub fn clear_bit(self) -> &'a mut W {
+        self.bit(false)
+    }
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
+    pub fn bit(self, value: bool) -> &'a mut W {
+        self.w.bits = (self.w.bits & !(0x01 << 16)) | (((value as u32) & 0x01) << 16);
+        self.w
+    }
+}
 #[doc = "Reader of field `EP7_OUT`"]
 pub type EP7_OUT_R = crate::R<bool, bool>;
+#[doc = "Write proxy for field `EP7_OUT`"]
+pub struct EP7_OUT_W<'a> {
+    w: &'a mut W,
+}
+impl<'a> EP7_OUT_W<'a> {
+    #[doc = r"Sets the field bit"]
+    #[inline(always)]
+    pub fn set_bit(self) -> &'a mut W {
+        self.bit(true)
+    }
+    #[doc = r"Clears the field bit"]
+    #[inline(always)]
+    pub fn clear_bit(self) -> &'a mut W {
+        self.bit(false)
+    }
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
+    pub fn bit(self, value: bool) -> &'a mut W {
+        self.w.bits = (self.w.bits & !(0x01 << 15)) | (((value as u32) & 0x01) << 15);
+        self.w
+    }
+}
 #[doc = "Reader of field `EP7_IN`"]
 pub type EP7_IN_R = crate::R<bool, bool>;
+#[doc = "Write proxy for field `EP7_IN`"]
+pub struct EP7_IN_W<'a> {
+    w: &'a mut W,
+}
+impl<'a> EP7_IN_W<'a> {
+    #[doc = r"Sets the field bit"]
+    #[inline(always)]
+    pub fn set_bit(self) -> &'a mut W {
+        self.bit(true)
+    }
+    #[doc = r"Clears the field bit"]
+    #[inline(always)]
+    pub fn clear_bit(self) -> &'a mut W {
+        self.bit(false)
+    }
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
+    pub fn bit(self, value: bool) -> &'a mut W {
+        self.w.bits = (self.w.bits & !(0x01 << 14)) | (((value as u32) & 0x01) << 14);
+        self.w
+    }
+}
 #[doc = "Reader of field `EP6_OUT`"]
 pub type EP6_OUT_R = crate::R<bool, bool>;
+#[doc = "Write proxy for field `EP6_OUT`"]
+pub struct EP6_OUT_W<'a> {
+    w: &'a mut W,
+}
+impl<'a> EP6_OUT_W<'a> {
+    #[doc = r"Sets the field bit"]
+    #[inline(always)]
+    pub fn set_bit(self) -> &'a mut W {
+        self.bit(true)
+    }
+    #[doc = r"Clears the field bit"]
+    #[inline(always)]
+    pub fn clear_bit(self) -> &'a mut W {
+        self.bit(false)
+    }
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
+    pub fn bit(self, value: bool) -> &'a mut W {
+        self.w.bits = (self.w.bits & !(0x01 << 13)) | (((value as u32) & 0x01) << 13);
+        self.w
+    }
+}
 #[doc = "Reader of field `EP6_IN`"]
 pub type EP6_IN_R = crate::R<bool, bool>;
+#[doc = "Write proxy for field `EP6_IN`"]
+pub struct EP6_IN_W<'a> {
+    w: &'a mut W,
+}
+impl<'a> EP6_IN_W<'a> {
+    #[doc = r"Sets the field bit"]
+    #[inline(always)]
+    pub fn set_bit(self) -> &'a mut W {
+        self.bit(true)
+    }
+    #[doc = r"Clears the field bit"]
+    #[inline(always)]
+    pub fn clear_bit(self) -> &'a mut W {
+        self.bit(false)
+    }
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
+    pub fn bit(self, value: bool) -> &'a mut W {
+        self.w.bits = (self.w.bits & !(0x01 << 12)) | (((value as u32) & 0x01) << 12);
+        self.w
+    }
+}
 #[doc = "Reader of field `EP5_OUT`"]
 pub type EP5_OUT_R = crate::R<bool, bool>;
+#[doc = "Write proxy for field `EP5_OUT`"]
+pub struct EP5_OUT_W<'a> {
+    w: &'a mut W,
+}
+impl<'a> EP5_OUT_W<'a> {
+    #[doc = r"Sets the field bit"]
+    #[inline(always)]
+    pub fn set_bit(self) -> &'a mut W {
+        self.bit(true)
+    }
+    #[doc = r"Clears the field bit"]
+    #[inline(always)]
+    pub fn clear_bit(self) -> &'a mut W {
+        self.bit(false)
+    }
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
+    pub fn bit(self, value: bool) -> &'a mut W {
+        self.w.bits = (self.w.bits & !(0x01 << 11)) | (((value as u32) & 0x01) << 11);
+        self.w
+    }
+}
 #[doc = "Reader of field `EP5_IN`"]
 pub type EP5_IN_R = crate::R<bool, bool>;
+#[doc = "Write proxy for field `EP5_IN`"]
+pub struct EP5_IN_W<'a> {
+    w: &'a mut W,
+}
+impl<'a> EP5_IN_W<'a> {
+    #[doc = r"Sets the field bit"]
+    #[inline(always)]
+    pub fn set_bit(self) -> &'a mut W {
+        self.bit(true)
+    }
+    #[doc = r"Clears the field bit"]
+    #[inline(always)]
+    pub fn clear_bit(self) -> &'a mut W {
+        self.bit(false)
+    }
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
+    pub fn bit(self, value: bool) -> &'a mut W {
+        self.w.bits = (self.w.bits & !(0x01 << 10)) | (((value as u32) & 0x01) << 10);
+        self.w
+    }
+}
 #[doc = "Reader of field `EP4_OUT`"]
 pub type EP4_OUT_R = crate::R<bool, bool>;
+#[doc = "Write proxy for field `EP4_OUT`"]
+pub struct EP4_OUT_W<'a> {
+    w: &'a mut W,
+}
+impl<'a> EP4_OUT_W<'a> {
+    #[doc = r"Sets the field bit"]
+    #[inline(always)]
+    pub fn set_bit(self) -> &'a mut W {
+        self.bit(true)
+    }
+    #[doc = r"Clears the field bit"]
+    #[inline(always)]
+    pub fn clear_bit(self) -> &'a mut W {
+        self.bit(false)
+    }
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
+    pub fn bit(self, value: bool) -> &'a mut W {
+        self.w.bits = (self.w.bits & !(0x01 << 9)) | (((value as u32) & 0x01) << 9);
+        self.w
+    }
+}
 #[doc = "Reader of field `EP4_IN`"]
 pub type EP4_IN_R = crate::R<bool, bool>;
+#[doc = "Write proxy for field `EP4_IN`"]
+pub struct EP4_IN_W<'a> {
+    w: &'a mut W,
+}
+impl<'a> EP4_IN_W<'a> {
+    #[doc = r"Sets the field bit"]
+    #[inline(always)]
+    pub fn set_bit(self) -> &'a mut W {
+        self.bit(true)
+    }
+    #[doc = r"Clears the field bit"]
+    #[inline(always)]
+    pub fn clear_bit(self) -> &'a mut W {
+        self.bit(false)
+    }
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
+    pub fn bit(self, value: bool) -> &'a mut W {
+        self.w.bits = (self.w.bits & !(0x01 << 8)) | (((value as u32) & 0x01) << 8);
+        self.w
+    }
+}
 #[doc = "Reader of field `EP3_OUT`"]
 pub type EP3_OUT_R = crate::R<bool, bool>;
+#[doc = "Write proxy for field `EP3_OUT`"]
+pub struct EP3_OUT_W<'a> {
+    w: &'a mut W,
+}
+impl<'a> EP3_OUT_W<'a> {
+    #[doc = r"Sets the field bit"]
+    #[inline(always)]
+    pub fn set_bit(self) -> &'a mut W {
+        self.bit(true)
+    }
+    #[doc = r"Clears the field bit"]
+    #[inline(always)]
+    pub fn clear_bit(self) -> &'a mut W {
+        self.bit(false)
+    }
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
+    pub fn bit(self, value: bool) -> &'a mut W {
+        self.w.bits = (self.w.bits & !(0x01 << 7)) | (((value as u32) & 0x01) << 7);
+        self.w
+    }
+}
 #[doc = "Reader of field `EP3_IN`"]
 pub type EP3_IN_R = crate::R<bool, bool>;
+#[doc = "Write proxy for field `EP3_IN`"]
+pub struct EP3_IN_W<'a> {
+    w: &'a mut W,
+}
+impl<'a> EP3_IN_W<'a> {
+    #[doc = r"Sets the field bit"]
+    #[inline(always)]
+    pub fn set_bit(self) -> &'a mut W {
+        self.bit(true)
+    }
+    #[doc = r"Clears the field bit"]
+    #[inline(always)]
+    pub fn clear_bit(self) -> &'a mut W {
+        self.bit(false)
+    }
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
+    pub fn bit(self, value: bool) -> &'a mut W {
+        self.w.bits = (self.w.bits & !(0x01 << 6)) | (((value as u32) & 0x01) << 6);
+        self.w
+    }
+}
 #[doc = "Reader of field `EP2_OUT`"]
 pub type EP2_OUT_R = crate::R<bool, bool>;
+#[doc = "Write proxy for field `EP2_OUT`"]
+pub struct EP2_OUT_W<'a> {
+    w: &'a mut W,
+}
+impl<'a> EP2_OUT_W<'a> {
+    #[doc = r"Sets the field bit"]
+    #[inline(always)]
+    pub fn set_bit(self) -> &'a mut W {
+        self.bit(true)
+    }
+    #[doc = r"Clears the field bit"]
+    #[inline(always)]
+    pub fn clear_bit(self) -> &'a mut W {
+        self.bit(false)
+    }
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
+    pub fn bit(self, value: bool) -> &'a mut W {
+        self.w.bits = (self.w.bits & !(0x01 << 5)) | (((value as u32) & 0x01) << 5);
+        self.w
+    }
+}
 #[doc = "Reader of field `EP2_IN`"]
 pub type EP2_IN_R = crate::R<bool, bool>;
+#[doc = "Write proxy for field `EP2_IN`"]
+pub struct EP2_IN_W<'a> {
+    w: &'a mut W,
+}
+impl<'a> EP2_IN_W<'a> {
+    #[doc = r"Sets the field bit"]
+    #[inline(always)]
+    pub fn set_bit(self) -> &'a mut W {
+        self.bit(true)
+    }
+    #[doc = r"Clears the field bit"]
+    #[inline(always)]
+    pub fn clear_bit(self) -> &'a mut W {
+        self.bit(false)
+    }
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
+    pub fn bit(self, value: bool) -> &'a mut W {
+        self.w.bits = (self.w.bits & !(0x01 << 4)) | (((value as u32) & 0x01) << 4);
+        self.w
+    }
+}
 #[doc = "Reader of field `EP1_OUT`"]
 pub type EP1_OUT_R = crate::R<bool, bool>;
+#[doc = "Write proxy for field `EP1_OUT`"]
+pub struct EP1_OUT_W<'a> {
+    w: &'a mut W,
+}
+impl<'a> EP1_OUT_W<'a> {
+    #[doc = r"Sets the field bit"]
+    #[inline(always)]
+    pub fn set_bit(self) -> &'a mut W {
+        self.bit(true)
+    }
+    #[doc = r"Clears the field bit"]
+    #[inline(always)]
+    pub fn clear_bit(self) -> &'a mut W {
+        self.bit(false)
+    }
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
+    pub fn bit(self, value: bool) -> &'a mut W {
+        self.w.bits = (self.w.bits & !(0x01 << 3)) | (((value as u32) & 0x01) << 3);
+        self.w
+    }
+}
 #[doc = "Reader of field `EP1_IN`"]
 pub type EP1_IN_R = crate::R<bool, bool>;
+#[doc = "Write proxy for field `EP1_IN`"]
+pub struct EP1_IN_W<'a> {
+    w: &'a mut W,
+}
+impl<'a> EP1_IN_W<'a> {
+    #[doc = r"Sets the field bit"]
+    #[inline(always)]
+    pub fn set_bit(self) -> &'a mut W {
+        self.bit(true)
+    }
+    #[doc = r"Clears the field bit"]
+    #[inline(always)]
+    pub fn clear_bit(self) -> &'a mut W {
+        self.bit(false)
+    }
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
+    pub fn bit(self, value: bool) -> &'a mut W {
+        self.w.bits = (self.w.bits & !(0x01 << 2)) | (((value as u32) & 0x01) << 2);
+        self.w
+    }
+}
 #[doc = "Reader of field `EP0_OUT`"]
 pub type EP0_OUT_R = crate::R<bool, bool>;
+#[doc = "Write proxy for field `EP0_OUT`"]
+pub struct EP0_OUT_W<'a> {
+    w: &'a mut W,
+}
+impl<'a> EP0_OUT_W<'a> {
+    #[doc = r"Sets the field bit"]
+    #[inline(always)]
+    pub fn set_bit(self) -> &'a mut W {
+        self.bit(true)
+    }
+    #[doc = r"Clears the field bit"]
+    #[inline(always)]
+    pub fn clear_bit(self) -> &'a mut W {
+        self.bit(false)
+    }
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
+    pub fn bit(self, value: bool) -> &'a mut W {
+        self.w.bits = (self.w.bits & !(0x01 << 1)) | (((value as u32) & 0x01) << 1);
+        self.w
+    }
+}
 #[doc = "Reader of field `EP0_IN`"]
 pub type EP0_IN_R = crate::R<bool, bool>;
+#[doc = "Write proxy for field `EP0_IN`"]
+pub struct EP0_IN_W<'a> {
+    w: &'a mut W,
+}
+impl<'a> EP0_IN_W<'a> {
+    #[doc = r"Sets the field bit"]
+    #[inline(always)]
+    pub fn set_bit(self) -> &'a mut W {
+        self.bit(true)
+    }
+    #[doc = r"Clears the field bit"]
+    #[inline(always)]
+    pub fn clear_bit(self) -> &'a mut W {
+        self.bit(false)
+    }
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
+    pub fn bit(self, value: bool) -> &'a mut W {
+        self.w.bits = (self.w.bits & !0x01) | ((value as u32) & 0x01);
+        self.w
+    }
+}
 impl R {
     #[doc = "Bit 31"]
     #[inline(always)]
@@ -224,5 +938,167 @@ impl R {
     #[inline(always)]
     pub fn ep0_in(&self) -> EP0_IN_R {
         EP0_IN_R::new((self.bits & 0x01) != 0)
+    }
+}
+impl W {
+    #[doc = "Bit 31"]
+    #[inline(always)]
+    pub fn ep15_out(&mut self) -> EP15_OUT_W {
+        EP15_OUT_W { w: self }
+    }
+    #[doc = "Bit 30"]
+    #[inline(always)]
+    pub fn ep15_in(&mut self) -> EP15_IN_W {
+        EP15_IN_W { w: self }
+    }
+    #[doc = "Bit 29"]
+    #[inline(always)]
+    pub fn ep14_out(&mut self) -> EP14_OUT_W {
+        EP14_OUT_W { w: self }
+    }
+    #[doc = "Bit 28"]
+    #[inline(always)]
+    pub fn ep14_in(&mut self) -> EP14_IN_W {
+        EP14_IN_W { w: self }
+    }
+    #[doc = "Bit 27"]
+    #[inline(always)]
+    pub fn ep13_out(&mut self) -> EP13_OUT_W {
+        EP13_OUT_W { w: self }
+    }
+    #[doc = "Bit 26"]
+    #[inline(always)]
+    pub fn ep13_in(&mut self) -> EP13_IN_W {
+        EP13_IN_W { w: self }
+    }
+    #[doc = "Bit 25"]
+    #[inline(always)]
+    pub fn ep12_out(&mut self) -> EP12_OUT_W {
+        EP12_OUT_W { w: self }
+    }
+    #[doc = "Bit 24"]
+    #[inline(always)]
+    pub fn ep12_in(&mut self) -> EP12_IN_W {
+        EP12_IN_W { w: self }
+    }
+    #[doc = "Bit 23"]
+    #[inline(always)]
+    pub fn ep11_out(&mut self) -> EP11_OUT_W {
+        EP11_OUT_W { w: self }
+    }
+    #[doc = "Bit 22"]
+    #[inline(always)]
+    pub fn ep11_in(&mut self) -> EP11_IN_W {
+        EP11_IN_W { w: self }
+    }
+    #[doc = "Bit 21"]
+    #[inline(always)]
+    pub fn ep10_out(&mut self) -> EP10_OUT_W {
+        EP10_OUT_W { w: self }
+    }
+    #[doc = "Bit 20"]
+    #[inline(always)]
+    pub fn ep10_in(&mut self) -> EP10_IN_W {
+        EP10_IN_W { w: self }
+    }
+    #[doc = "Bit 19"]
+    #[inline(always)]
+    pub fn ep9_out(&mut self) -> EP9_OUT_W {
+        EP9_OUT_W { w: self }
+    }
+    #[doc = "Bit 18"]
+    #[inline(always)]
+    pub fn ep9_in(&mut self) -> EP9_IN_W {
+        EP9_IN_W { w: self }
+    }
+    #[doc = "Bit 17"]
+    #[inline(always)]
+    pub fn ep8_out(&mut self) -> EP8_OUT_W {
+        EP8_OUT_W { w: self }
+    }
+    #[doc = "Bit 16"]
+    #[inline(always)]
+    pub fn ep8_in(&mut self) -> EP8_IN_W {
+        EP8_IN_W { w: self }
+    }
+    #[doc = "Bit 15"]
+    #[inline(always)]
+    pub fn ep7_out(&mut self) -> EP7_OUT_W {
+        EP7_OUT_W { w: self }
+    }
+    #[doc = "Bit 14"]
+    #[inline(always)]
+    pub fn ep7_in(&mut self) -> EP7_IN_W {
+        EP7_IN_W { w: self }
+    }
+    #[doc = "Bit 13"]
+    #[inline(always)]
+    pub fn ep6_out(&mut self) -> EP6_OUT_W {
+        EP6_OUT_W { w: self }
+    }
+    #[doc = "Bit 12"]
+    #[inline(always)]
+    pub fn ep6_in(&mut self) -> EP6_IN_W {
+        EP6_IN_W { w: self }
+    }
+    #[doc = "Bit 11"]
+    #[inline(always)]
+    pub fn ep5_out(&mut self) -> EP5_OUT_W {
+        EP5_OUT_W { w: self }
+    }
+    #[doc = "Bit 10"]
+    #[inline(always)]
+    pub fn ep5_in(&mut self) -> EP5_IN_W {
+        EP5_IN_W { w: self }
+    }
+    #[doc = "Bit 9"]
+    #[inline(always)]
+    pub fn ep4_out(&mut self) -> EP4_OUT_W {
+        EP4_OUT_W { w: self }
+    }
+    #[doc = "Bit 8"]
+    #[inline(always)]
+    pub fn ep4_in(&mut self) -> EP4_IN_W {
+        EP4_IN_W { w: self }
+    }
+    #[doc = "Bit 7"]
+    #[inline(always)]
+    pub fn ep3_out(&mut self) -> EP3_OUT_W {
+        EP3_OUT_W { w: self }
+    }
+    #[doc = "Bit 6"]
+    #[inline(always)]
+    pub fn ep3_in(&mut self) -> EP3_IN_W {
+        EP3_IN_W { w: self }
+    }
+    #[doc = "Bit 5"]
+    #[inline(always)]
+    pub fn ep2_out(&mut self) -> EP2_OUT_W {
+        EP2_OUT_W { w: self }
+    }
+    #[doc = "Bit 4"]
+    #[inline(always)]
+    pub fn ep2_in(&mut self) -> EP2_IN_W {
+        EP2_IN_W { w: self }
+    }
+    #[doc = "Bit 3"]
+    #[inline(always)]
+    pub fn ep1_out(&mut self) -> EP1_OUT_W {
+        EP1_OUT_W { w: self }
+    }
+    #[doc = "Bit 2"]
+    #[inline(always)]
+    pub fn ep1_in(&mut self) -> EP1_IN_W {
+        EP1_IN_W { w: self }
+    }
+    #[doc = "Bit 1"]
+    #[inline(always)]
+    pub fn ep0_out(&mut self) -> EP0_OUT_W {
+        EP0_OUT_W { w: self }
+    }
+    #[doc = "Bit 0"]
+    #[inline(always)]
+    pub fn ep0_in(&mut self) -> EP0_IN_W {
+        EP0_IN_W { w: self }
     }
 }
