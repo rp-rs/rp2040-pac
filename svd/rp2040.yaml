@@ -19,15 +19,3 @@ PIO0:
       "IRQ*_INTE": {}
       "IRQ*_INTF": {}
       "IRQ*_INTS": {}
-
-IO_BANK0:
-  _cluster:
-    "GPIO%s":
-      "GPIO*_STATUS": {}
-      "GPIO*_CTRL": {}
-
-IO_QSPI:
-  _cluster:
-    "GPIO_QSPI%s":
-      "GPIO_QSPI_*_STATUS": {}
-      "GPIO_QSPI_*_CTRL": {}
