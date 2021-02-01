@@ -1,9 +1,9 @@
-#[doc = "Reader of register GPIO15_CTRL"]
-pub type R = crate::R<u32, super::GPIO15_CTRL>;
-#[doc = "Writer for register GPIO15_CTRL"]
-pub type W = crate::W<u32, super::GPIO15_CTRL>;
-#[doc = "Register GPIO15_CTRL `reset()`'s with value 0x1f"]
-impl crate::ResetValue for super::GPIO15_CTRL {
+#[doc = "Reader of register GPIO_CTRL"]
+pub type R = crate::R<u32, super::GPIO_CTRL>;
+#[doc = "Writer for register GPIO_CTRL"]
+pub type W = crate::W<u32, super::GPIO_CTRL>;
+#[doc = "Register GPIO_CTRL `reset()`'s with value 0x1f"]
+impl crate::ResetValue for super::GPIO_CTRL {
     type Type = u32;
     #[inline(always)]
     fn reset_value() -> Self::Type {
@@ -386,22 +386,22 @@ impl<'a> OUTOVER_W<'a> {
 #[derive(Clone, Copy, Debug, PartialEq)]
 #[repr(u8)]
 pub enum FUNCSEL_A {
+    #[doc = "0: `0`"]
+    JTAG_TCK = 0,
     #[doc = "1: `1`"]
-    SPI1_TX = 1,
+    SPI0_RX = 1,
     #[doc = "2: `10`"]
-    UART0_RTS = 2,
+    UART0_TX = 2,
     #[doc = "3: `11`"]
-    I2C1_SCL = 3,
+    I2C0_SDA = 3,
     #[doc = "4: `100`"]
-    PWM_B_7 = 4,
+    PWM_A_0 = 4,
     #[doc = "5: `101`"]
-    SIO_15 = 5,
+    SIO_0 = 5,
     #[doc = "6: `110`"]
-    PIO0_15 = 6,
+    PIO0_0 = 6,
     #[doc = "7: `111`"]
-    PIO1_15 = 7,
-    #[doc = "8: `1000`"]
-    USB_MUXING_DIGITAL_DP = 8,
+    PIO1_0 = 7,
     #[doc = "9: `1001`"]
     USB_MUXING_OVERCURR_DETECT = 9,
     #[doc = "31: `11111`"]
@@ -421,58 +421,58 @@ impl FUNCSEL_R {
     pub fn variant(&self) -> crate::Variant<u8, FUNCSEL_A> {
         use crate::Variant::*;
         match self.bits {
-            1 => Val(FUNCSEL_A::SPI1_TX),
-            2 => Val(FUNCSEL_A::UART0_RTS),
-            3 => Val(FUNCSEL_A::I2C1_SCL),
-            4 => Val(FUNCSEL_A::PWM_B_7),
-            5 => Val(FUNCSEL_A::SIO_15),
-            6 => Val(FUNCSEL_A::PIO0_15),
-            7 => Val(FUNCSEL_A::PIO1_15),
-            8 => Val(FUNCSEL_A::USB_MUXING_DIGITAL_DP),
+            0 => Val(FUNCSEL_A::JTAG_TCK),
+            1 => Val(FUNCSEL_A::SPI0_RX),
+            2 => Val(FUNCSEL_A::UART0_TX),
+            3 => Val(FUNCSEL_A::I2C0_SDA),
+            4 => Val(FUNCSEL_A::PWM_A_0),
+            5 => Val(FUNCSEL_A::SIO_0),
+            6 => Val(FUNCSEL_A::PIO0_0),
+            7 => Val(FUNCSEL_A::PIO1_0),
             9 => Val(FUNCSEL_A::USB_MUXING_OVERCURR_DETECT),
             31 => Val(FUNCSEL_A::NULL),
             i => Res(i),
         }
     }
-    #[doc = "Checks if the value of the field is `SPI1_TX`"]
+    #[doc = "Checks if the value of the field is `JTAG_TCK`"]
     #[inline(always)]
-    pub fn is_spi1_tx(&self) -> bool {
-        *self == FUNCSEL_A::SPI1_TX
+    pub fn is_jtag_tck(&self) -> bool {
+        *self == FUNCSEL_A::JTAG_TCK
     }
-    #[doc = "Checks if the value of the field is `UART0_RTS`"]
+    #[doc = "Checks if the value of the field is `SPI0_RX`"]
     #[inline(always)]
-    pub fn is_uart0_rts(&self) -> bool {
-        *self == FUNCSEL_A::UART0_RTS
+    pub fn is_spi0_rx(&self) -> bool {
+        *self == FUNCSEL_A::SPI0_RX
     }
-    #[doc = "Checks if the value of the field is `I2C1_SCL`"]
+    #[doc = "Checks if the value of the field is `UART0_TX`"]
     #[inline(always)]
-    pub fn is_i2c1_scl(&self) -> bool {
-        *self == FUNCSEL_A::I2C1_SCL
+    pub fn is_uart0_tx(&self) -> bool {
+        *self == FUNCSEL_A::UART0_TX
     }
-    #[doc = "Checks if the value of the field is `PWM_B_7`"]
+    #[doc = "Checks if the value of the field is `I2C0_SDA`"]
     #[inline(always)]
-    pub fn is_pwm_b_7(&self) -> bool {
-        *self == FUNCSEL_A::PWM_B_7
+    pub fn is_i2c0_sda(&self) -> bool {
+        *self == FUNCSEL_A::I2C0_SDA
     }
-    #[doc = "Checks if the value of the field is `SIO_15`"]
+    #[doc = "Checks if the value of the field is `PWM_A_0`"]
     #[inline(always)]
-    pub fn is_sio_15(&self) -> bool {
-        *self == FUNCSEL_A::SIO_15
+    pub fn is_pwm_a_0(&self) -> bool {
+        *self == FUNCSEL_A::PWM_A_0
     }
-    #[doc = "Checks if the value of the field is `PIO0_15`"]
+    #[doc = "Checks if the value of the field is `SIO_0`"]
     #[inline(always)]
-    pub fn is_pio0_15(&self) -> bool {
-        *self == FUNCSEL_A::PIO0_15
+    pub fn is_sio_0(&self) -> bool {
+        *self == FUNCSEL_A::SIO_0
     }
-    #[doc = "Checks if the value of the field is `PIO1_15`"]
+    #[doc = "Checks if the value of the field is `PIO0_0`"]
     #[inline(always)]
-    pub fn is_pio1_15(&self) -> bool {
-        *self == FUNCSEL_A::PIO1_15
+    pub fn is_pio0_0(&self) -> bool {
+        *self == FUNCSEL_A::PIO0_0
     }
-    #[doc = "Checks if the value of the field is `USB_MUXING_DIGITAL_DP`"]
+    #[doc = "Checks if the value of the field is `PIO1_0`"]
     #[inline(always)]
-    pub fn is_usb_muxing_digital_dp(&self) -> bool {
-        *self == FUNCSEL_A::USB_MUXING_DIGITAL_DP
+    pub fn is_pio1_0(&self) -> bool {
+        *self == FUNCSEL_A::PIO1_0
     }
     #[doc = "Checks if the value of the field is `USB_MUXING_OVERCURR_DETECT`"]
     #[inline(always)]
@@ -495,45 +495,45 @@ impl<'a> FUNCSEL_W<'a> {
     pub fn variant(self, variant: FUNCSEL_A) -> &'a mut W {
         unsafe { self.bits(variant.into()) }
     }
+    #[doc = "`0`"]
+    #[inline(always)]
+    pub fn jtag_tck(self) -> &'a mut W {
+        self.variant(FUNCSEL_A::JTAG_TCK)
+    }
     #[doc = "`1`"]
     #[inline(always)]
-    pub fn spi1_tx(self) -> &'a mut W {
-        self.variant(FUNCSEL_A::SPI1_TX)
+    pub fn spi0_rx(self) -> &'a mut W {
+        self.variant(FUNCSEL_A::SPI0_RX)
     }
     #[doc = "`10`"]
     #[inline(always)]
-    pub fn uart0_rts(self) -> &'a mut W {
-        self.variant(FUNCSEL_A::UART0_RTS)
+    pub fn uart0_tx(self) -> &'a mut W {
+        self.variant(FUNCSEL_A::UART0_TX)
     }
     #[doc = "`11`"]
     #[inline(always)]
-    pub fn i2c1_scl(self) -> &'a mut W {
-        self.variant(FUNCSEL_A::I2C1_SCL)
+    pub fn i2c0_sda(self) -> &'a mut W {
+        self.variant(FUNCSEL_A::I2C0_SDA)
     }
     #[doc = "`100`"]
     #[inline(always)]
-    pub fn pwm_b_7(self) -> &'a mut W {
-        self.variant(FUNCSEL_A::PWM_B_7)
+    pub fn pwm_a_0(self) -> &'a mut W {
+        self.variant(FUNCSEL_A::PWM_A_0)
     }
     #[doc = "`101`"]
     #[inline(always)]
-    pub fn sio_15(self) -> &'a mut W {
-        self.variant(FUNCSEL_A::SIO_15)
+    pub fn sio_0(self) -> &'a mut W {
+        self.variant(FUNCSEL_A::SIO_0)
     }
     #[doc = "`110`"]
     #[inline(always)]
-    pub fn pio0_15(self) -> &'a mut W {
-        self.variant(FUNCSEL_A::PIO0_15)
+    pub fn pio0_0(self) -> &'a mut W {
+        self.variant(FUNCSEL_A::PIO0_0)
     }
     #[doc = "`111`"]
     #[inline(always)]
-    pub fn pio1_15(self) -> &'a mut W {
-        self.variant(FUNCSEL_A::PIO1_15)
-    }
-    #[doc = "`1000`"]
-    #[inline(always)]
-    pub fn usb_muxing_digital_dp(self) -> &'a mut W {
-        self.variant(FUNCSEL_A::USB_MUXING_DIGITAL_DP)
+    pub fn pio1_0(self) -> &'a mut W {
+        self.variant(FUNCSEL_A::PIO1_0)
     }
     #[doc = "`1001`"]
     #[inline(always)]
