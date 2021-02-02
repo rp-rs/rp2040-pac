@@ -31,3 +31,12 @@ IO_QSPI:
     "GPIO_QSPI%s":
       "GPIO_QSPI_*_STATUS": {}
       "GPIO_QSPI_*_CTRL": {}
+
+USBCTRL_REGS:
+  # BUFF_STATUS is read-only in the SVD and datasheet, but used as read-write
+  # in the example code (see https://github.com/raspberrypi/pico-feedback/issues/36).
+  BUFF_STATUS:
+    _modify:
+      "EP*":
+        access: read-write
+

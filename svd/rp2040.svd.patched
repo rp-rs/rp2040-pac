@@ -26788,162 +26788,162 @@
             <field>
               <name>EP15_OUT</name>
             <bitRange>[31:31]</bitRange>
-              <access>read-only</access>
+              <access>read-write</access>
               </field>
             <field>
               <name>EP15_IN</name>
             <bitRange>[30:30]</bitRange>
-              <access>read-only</access>
+              <access>read-write</access>
               </field>
             <field>
               <name>EP14_OUT</name>
             <bitRange>[29:29]</bitRange>
-              <access>read-only</access>
+              <access>read-write</access>
               </field>
             <field>
               <name>EP14_IN</name>
             <bitRange>[28:28]</bitRange>
-              <access>read-only</access>
+              <access>read-write</access>
               </field>
             <field>
               <name>EP13_OUT</name>
             <bitRange>[27:27]</bitRange>
-              <access>read-only</access>
+              <access>read-write</access>
               </field>
             <field>
               <name>EP13_IN</name>
             <bitRange>[26:26]</bitRange>
-              <access>read-only</access>
+              <access>read-write</access>
               </field>
             <field>
               <name>EP12_OUT</name>
             <bitRange>[25:25]</bitRange>
-              <access>read-only</access>
+              <access>read-write</access>
               </field>
             <field>
               <name>EP12_IN</name>
             <bitRange>[24:24]</bitRange>
-              <access>read-only</access>
+              <access>read-write</access>
               </field>
             <field>
               <name>EP11_OUT</name>
             <bitRange>[23:23]</bitRange>
-              <access>read-only</access>
+              <access>read-write</access>
               </field>
             <field>
               <name>EP11_IN</name>
             <bitRange>[22:22]</bitRange>
-              <access>read-only</access>
+              <access>read-write</access>
               </field>
             <field>
               <name>EP10_OUT</name>
             <bitRange>[21:21]</bitRange>
-              <access>read-only</access>
+              <access>read-write</access>
               </field>
             <field>
               <name>EP10_IN</name>
             <bitRange>[20:20]</bitRange>
-              <access>read-only</access>
+              <access>read-write</access>
               </field>
             <field>
               <name>EP9_OUT</name>
             <bitRange>[19:19]</bitRange>
-              <access>read-only</access>
+              <access>read-write</access>
               </field>
             <field>
               <name>EP9_IN</name>
             <bitRange>[18:18]</bitRange>
-              <access>read-only</access>
+              <access>read-write</access>
               </field>
             <field>
               <name>EP8_OUT</name>
             <bitRange>[17:17]</bitRange>
-              <access>read-only</access>
+              <access>read-write</access>
               </field>
             <field>
               <name>EP8_IN</name>
             <bitRange>[16:16]</bitRange>
-              <access>read-only</access>
+              <access>read-write</access>
               </field>
             <field>
               <name>EP7_OUT</name>
             <bitRange>[15:15]</bitRange>
-              <access>read-only</access>
+              <access>read-write</access>
               </field>
             <field>
               <name>EP7_IN</name>
             <bitRange>[14:14]</bitRange>
-              <access>read-only</access>
+              <access>read-write</access>
               </field>
             <field>
               <name>EP6_OUT</name>
             <bitRange>[13:13]</bitRange>
-              <access>read-only</access>
+              <access>read-write</access>
               </field>
             <field>
               <name>EP6_IN</name>
             <bitRange>[12:12]</bitRange>
-              <access>read-only</access>
+              <access>read-write</access>
               </field>
             <field>
               <name>EP5_OUT</name>
             <bitRange>[11:11]</bitRange>
-              <access>read-only</access>
+              <access>read-write</access>
               </field>
             <field>
               <name>EP5_IN</name>
             <bitRange>[10:10]</bitRange>
-              <access>read-only</access>
+              <access>read-write</access>
               </field>
             <field>
               <name>EP4_OUT</name>
             <bitRange>[9:9]</bitRange>
-              <access>read-only</access>
+              <access>read-write</access>
               </field>
             <field>
               <name>EP4_IN</name>
             <bitRange>[8:8]</bitRange>
-              <access>read-only</access>
+              <access>read-write</access>
               </field>
             <field>
               <name>EP3_OUT</name>
             <bitRange>[7:7]</bitRange>
-              <access>read-only</access>
+              <access>read-write</access>
               </field>
             <field>
               <name>EP3_IN</name>
             <bitRange>[6:6]</bitRange>
-              <access>read-only</access>
+              <access>read-write</access>
               </field>
             <field>
               <name>EP2_OUT</name>
             <bitRange>[5:5]</bitRange>
-              <access>read-only</access>
+              <access>read-write</access>
               </field>
             <field>
               <name>EP2_IN</name>
             <bitRange>[4:4]</bitRange>
-              <access>read-only</access>
+              <access>read-write</access>
               </field>
             <field>
               <name>EP1_OUT</name>
             <bitRange>[3:3]</bitRange>
-              <access>read-only</access>
+              <access>read-write</access>
               </field>
             <field>
               <name>EP1_IN</name>
             <bitRange>[2:2]</bitRange>
-              <access>read-only</access>
+              <access>read-write</access>
               </field>
             <field>
               <name>EP0_OUT</name>
             <bitRange>[1:1]</bitRange>
-              <access>read-only</access>
+              <access>read-write</access>
               </field>
             <field>
               <name>EP0_IN</name>
             <bitRange>[0:0]</bitRange>
-              <access>read-only</access>
+              <access>read-write</access>
               </field>
           </fields>
           </register>
