@@ -1,9 +1,9 @@
-#[doc = "Reader of register GPIO1"]
-pub type R = crate::R<u32, super::GPIO1>;
-#[doc = "Writer for register GPIO1"]
-pub type W = crate::W<u32, super::GPIO1>;
-#[doc = "Register GPIO1 `reset()`'s with value 0x56"]
-impl crate::ResetValue for super::GPIO1 {
+#[doc = "Reader of register GPIO%s"]
+pub type R = crate::R<u32, super::GPIO>;
+#[doc = "Writer for register GPIO%s"]
+pub type W = crate::W<u32, super::GPIO>;
+#[doc = "Register GPIO%s `reset()`'s with value 0x56"]
+impl crate::ResetValue for super::GPIO {
     type Type = u32;
     #[inline(always)]
     fn reset_value() -> Self::Type {
