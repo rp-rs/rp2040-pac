@@ -45,4 +45,3 @@ USBCTRL_REGS:
     _modify:
       "EP*":
         access: read-write
-
