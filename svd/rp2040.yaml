@@ -29,8 +29,14 @@ IO_BANK0:
 IO_QSPI:
   _cluster:
     "GPIO_QSPI%s":
-      "GPIO_QSPI_*_STATUS": {}
-      "GPIO_QSPI_*_CTRL": {}
+      "GPIO_QSPI_*_STATUS":
+        name: "GPIO_STATUS"
+      "GPIO_QSPI_*_CTRL":
+        name: "GPIO_CTRL"
+
+PADS_BANK0:
+  _array:
+    "GPIO*": {}
 
 USBCTRL_REGS:
   # BUFF_STATUS is read-only in the SVD and datasheet, but used as read-write
@@ -39,4 +45,3 @@ USBCTRL_REGS:
     _modify:
       "EP*":
         access: read-write
-
