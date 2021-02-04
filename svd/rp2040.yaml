@@ -30,9 +30,9 @@ IO_QSPI:
   _cluster:
     "GPIO_QSPI%s":
       "GPIO_QSPI_*_STATUS":
-        name: "GPIO_QSPI_STATUS"
+        name: "GPIO_STATUS"
       "GPIO_QSPI_*_CTRL":
-        name: "GPIO_QSPI_CTRL"
+        name: "GPIO_CTRL"
 
 PADS_BANK0:
   _array:

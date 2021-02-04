@@ -1,5 +1,5 @@
-#[doc = "Reader of register GPIO_QSPI_STATUS"]
-pub type R = crate::R<u32, super::GPIO_QSPI_STATUS>;
+#[doc = "Reader of register GPIO_STATUS"]
+pub type R = crate::R<u32, super::GPIO_STATUS>;
 #[doc = "Reader of field `IRQTOPROC`"]
 pub type IRQTOPROC_R = crate::R<bool, bool>;
 #[doc = "Reader of field `IRQFROMPAD`"]

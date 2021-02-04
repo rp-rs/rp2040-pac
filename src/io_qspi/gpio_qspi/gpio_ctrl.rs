@@ -1,9 +1,9 @@
-#[doc = "Reader of register GPIO_QSPI_CTRL"]
-pub type R = crate::R<u32, super::GPIO_QSPI_CTRL>;
-#[doc = "Writer for register GPIO_QSPI_CTRL"]
-pub type W = crate::W<u32, super::GPIO_QSPI_CTRL>;
-#[doc = "Register GPIO_QSPI_CTRL `reset()`'s with value 0x1f"]
-impl crate::ResetValue for super::GPIO_QSPI_CTRL {
+#[doc = "Reader of register GPIO_CTRL"]
+pub type R = crate::R<u32, super::GPIO_CTRL>;
+#[doc = "Writer for register GPIO_CTRL"]
+pub type W = crate::W<u32, super::GPIO_CTRL>;
+#[doc = "Register GPIO_CTRL `reset()`'s with value 0x1f"]
+impl crate::ResetValue for super::GPIO_CTRL {
     type Type = u32;
     #[inline(always)]
     fn reset_value() -> Self::Type {

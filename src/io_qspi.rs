@@ -38,9 +38,9 @@ pub struct RegisterBlock {
 #[repr(C)]
 pub struct GPIO_QSPI {
     #[doc = "0x00 - GPIO status"]
-    pub gpio_qspi_status: self::gpio_qspi::GPIO_QSPI_STATUS,
+    pub gpio_status: self::gpio_qspi::GPIO_STATUS,
     #[doc = "0x04 - GPIO control including function select and overrides."]
-    pub gpio_qspi_ctrl: self::gpio_qspi::GPIO_QSPI_CTRL,
+    pub gpio_ctrl: self::gpio_qspi::GPIO_CTRL,
 }
 #[doc = r"Register block"]
 #[doc = "Cluster GPIO_QSPI%s, containing GPIO_QSPI_*_STATUS, GPIO_QSPI_*_CTRL"]

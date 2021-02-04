@@ -10689,7 +10689,7 @@
       </interrupt>
       <registers>
         <cluster><dim>6</dim><dimIncrement>0x8</dimIncrement><dimIndex>SCLK,SS,SD0,SD1,SD2,SD3</dimIndex><name>GPIO_QSPI%s</name><description>Cluster GPIO_QSPI%s, containing GPIO_QSPI_*_STATUS, GPIO_QSPI_*_CTRL</description><addressOffset>0x0</addressOffset><register>
-          <name>GPIO_QSPI_STATUS</name>
+          <name>GPIO_STATUS</name>
           <description>GPIO status</description>
           <addressOffset>0x0</addressOffset>
           <resetValue>0x00000000</resetValue>
@@ -10745,7 +10745,7 @@
           </fields>
           </register>
         <register>
-          <name>GPIO_QSPI_CTRL</name>
+          <name>GPIO_CTRL</name>
           <description>GPIO control including function select and overrides.</description>
           <addressOffset>0x4</addressOffset>
           <resetValue>0x0000001f</resetValue>
