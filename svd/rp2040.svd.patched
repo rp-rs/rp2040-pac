@@ -1,4 +1,8 @@
-<device xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" schemaVersion="1.1" xsi:noNamespaceSchemaLocation="CMSIS-SVD.xsd">
+<!--
+  Copyright (c) 2020 Raspberry Pi (Trading) Ltd.
+
+  SPDX-License-Identifier: BSD-3-Clause
+--><device xmlns:xs="http://www.w3.org/2001/XMLSchema-instance" schemaVersion="1.1" xs:noNamespaceSchemaLocation="CMSIS-SVD.xsd">
   <vendor>Raspberry Pi</vendor>
   <name>RP2040</name>
   <version>0.1</version>
