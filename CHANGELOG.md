@@ -4,6 +4,17 @@
 
 Working on patching the svd for better workflow, using [svdtools](https://pypi.org/project/svdtools/)
 
+## Release 0.1.2
+[Release 0.1.2 on Crates.io](https://crates.io/crates/rp2040-pac/0.1.2)
+
+[Release 0.1.2 on GitHub](https://github.com/rp-rs/rp2040-pac/releases/tag/v0.1.2)
+
+- Switched GPIO for IO_BANK and QSPI_BANK to be arrays instead.
+- Change BUFF_STATUS access to read-write
+- Re-clustered IO_QSPI. Fixed naming to remove double underscore
+- Renamed GPIO_QSPI_[STAT,CTRL] -> GPIO_[STAT,CTRL]
+- Convert DMA chunnels to a list of register clusters
+
 ## Release 0.1.1
 [Release 0.1.1 on Crates.io](https://crates.io/crates/rp2040-pac/0.1.1)
 
