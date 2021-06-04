@@ -23,76 +23,79 @@ pub struct RegisterBlock {
     pub timer0: TIMER0,
     #[doc = "0x424 - Pacing (X/Y) Fractional Timer\\n The pacing timer produces TREQ assertions at a rate set by ((X/Y) * sys_clk). This equation is evaluated every sys_clk cycles and therefore can only generate TREQs at a rate of 1 per sys_clk (i.e. permanent TREQ) or less."]
     pub timer1: TIMER1,
-    _reserved10: [u8; 8usize],
+    #[doc = "0x428 - Pacing (X/Y) Fractional Timer\\n The pacing timer produces TREQ assertions at a rate set by ((X/Y) * sys_clk). This equation is evaluated every sys_clk cycles and therefore can only generate TREQs at a rate of 1 per sys_clk (i.e. permanent TREQ) or less."]
+    pub timer2: TIMER2,
+    #[doc = "0x42c - Pacing (X/Y) Fractional Timer\\n The pacing timer produces TREQ assertions at a rate set by ((X/Y) * sys_clk). This equation is evaluated every sys_clk cycles and therefore can only generate TREQs at a rate of 1 per sys_clk (i.e. permanent TREQ) or less."]
+    pub timer3: TIMER3,
     #[doc = "0x430 - Trigger one or more channels simultaneously"]
     pub multi_chan_trigger: MULTI_CHAN_TRIGGER,
     #[doc = "0x434 - Sniffer Control"]
     pub sniff_ctrl: SNIFF_CTRL,
     #[doc = "0x438 - Data accumulator for sniff hardware\\n Write an initial seed value here before starting a DMA transfer on the channel indicated by SNIFF_CTRL_DMACH. The hardware will update this register each time it observes a read from the indicated channel. Once the channel completes, the final result can be read from this register."]
     pub sniff_data: SNIFF_DATA,
-    _reserved13: [u8; 4usize],
+    _reserved15: [u8; 4usize],
     #[doc = "0x440 - Debug RAF, WAF, TDF levels"]
     pub fifo_levels: FIFO_LEVELS,
     #[doc = "0x444 - Abort an in-progress transfer sequence on one or more channels"]
     pub chan_abort: CHAN_ABORT,
     #[doc = "0x448 - The number of channels this DMA instance is equipped with. This DMA supports up to 16 hardware channels, but can be configured with as few as one, to minimise silicon area."]
     pub n_channels: N_CHANNELS,
-    _reserved16: [u8; 948usize],
+    _reserved18: [u8; 948usize],
     #[doc = "0x800 - Read: get channel DREQ counter (i.e. how many accesses the DMA expects it can perform on the peripheral without overflow/underflow. Write any value: clears the counter, and cause channel to re-initiate DREQ handshake."]
     pub ch0_dbg_ctdreq: CH0_DBG_CTDREQ,
     #[doc = "0x804 - Read to get channel TRANS_COUNT reload value, i.e. the length of the next transfer"]
     pub ch0_dbg_tcr: CH0_DBG_TCR,
-    _reserved18: [u8; 56usize],
+    _reserved20: [u8; 56usize],
     #[doc = "0x840 - Read: get channel DREQ counter (i.e. how many accesses the DMA expects it can perform on the peripheral without overflow/underflow. Write any value: clears the counter, and cause channel to re-initiate DREQ handshake."]
     pub ch1_dbg_ctdreq: CH1_DBG_CTDREQ,
     #[doc = "0x844 - Read to get channel TRANS_COUNT reload value, i.e. the length of the next transfer"]
     pub ch1_dbg_tcr: CH1_DBG_TCR,
-    _reserved20: [u8; 56usize],
+    _reserved22: [u8; 56usize],
     #[doc = "0x880 - Read: get channel DREQ counter (i.e. how many accesses the DMA expects it can perform on the peripheral without overflow/underflow. Write any value: clears the counter, and cause channel to re-initiate DREQ handshake."]
     pub ch2_dbg_ctdreq: CH2_DBG_CTDREQ,
     #[doc = "0x884 - Read to get channel TRANS_COUNT reload value, i.e. the length of the next transfer"]
     pub ch2_dbg_tcr: CH2_DBG_TCR,
-    _reserved22: [u8; 56usize],
+    _reserved24: [u8; 56usize],
     #[doc = "0x8c0 - Read: get channel DREQ counter (i.e. how many accesses the DMA expects it can perform on the peripheral without overflow/underflow. Write any value: clears the counter, and cause channel to re-initiate DREQ handshake."]
     pub ch3_dbg_ctdreq: CH3_DBG_CTDREQ,
     #[doc = "0x8c4 - Read to get channel TRANS_COUNT reload value, i.e. the length of the next transfer"]
     pub ch3_dbg_tcr: CH3_DBG_TCR,
-    _reserved24: [u8; 56usize],
+    _reserved26: [u8; 56usize],
     #[doc = "0x900 - Read: get channel DREQ counter (i.e. how many accesses the DMA expects it can perform on the peripheral without overflow/underflow. Write any value: clears the counter, and cause channel to re-initiate DREQ handshake."]
     pub ch4_dbg_ctdreq: CH4_DBG_CTDREQ,
     #[doc = "0x904 - Read to get channel TRANS_COUNT reload value, i.e. the length of the next transfer"]
     pub ch4_dbg_tcr: CH4_DBG_TCR,
-    _reserved26: [u8; 56usize],
+    _reserved28: [u8; 56usize],
     #[doc = "0x940 - Read: get channel DREQ counter (i.e. how many accesses the DMA expects it can perform on the peripheral without overflow/underflow. Write any value: clears the counter, and cause channel to re-initiate DREQ handshake."]
     pub ch5_dbg_ctdreq: CH5_DBG_CTDREQ,
     #[doc = "0x944 - Read to get channel TRANS_COUNT reload value, i.e. the length of the next transfer"]
     pub ch5_dbg_tcr: CH5_DBG_TCR,
-    _reserved28: [u8; 56usize],
+    _reserved30: [u8; 56usize],
     #[doc = "0x980 - Read: get channel DREQ counter (i.e. how many accesses the DMA expects it can perform on the peripheral without overflow/underflow. Write any value: clears the counter, and cause channel to re-initiate DREQ handshake."]
     pub ch6_dbg_ctdreq: CH6_DBG_CTDREQ,
     #[doc = "0x984 - Read to get channel TRANS_COUNT reload value, i.e. the length of the next transfer"]
     pub ch6_dbg_tcr: CH6_DBG_TCR,
-    _reserved30: [u8; 56usize],
+    _reserved32: [u8; 56usize],
     #[doc = "0x9c0 - Read: get channel DREQ counter (i.e. how many accesses the DMA expects it can perform on the peripheral without overflow/underflow. Write any value: clears the counter, and cause channel to re-initiate DREQ handshake."]
     pub ch7_dbg_ctdreq: CH7_DBG_CTDREQ,
     #[doc = "0x9c4 - Read to get channel TRANS_COUNT reload value, i.e. the length of the next transfer"]
     pub ch7_dbg_tcr: CH7_DBG_TCR,
-    _reserved32: [u8; 56usize],
+    _reserved34: [u8; 56usize],
     #[doc = "0xa00 - Read: get channel DREQ counter (i.e. how many accesses the DMA expects it can perform on the peripheral without overflow/underflow. Write any value: clears the counter, and cause channel to re-initiate DREQ handshake."]
     pub ch8_dbg_ctdreq: CH8_DBG_CTDREQ,
     #[doc = "0xa04 - Read to get channel TRANS_COUNT reload value, i.e. the length of the next transfer"]
     pub ch8_dbg_tcr: CH8_DBG_TCR,
-    _reserved34: [u8; 56usize],
+    _reserved36: [u8; 56usize],
     #[doc = "0xa40 - Read: get channel DREQ counter (i.e. how many accesses the DMA expects it can perform on the peripheral without overflow/underflow. Write any value: clears the counter, and cause channel to re-initiate DREQ handshake."]
     pub ch9_dbg_ctdreq: CH9_DBG_CTDREQ,
     #[doc = "0xa44 - Read to get channel TRANS_COUNT reload value, i.e. the length of the next transfer"]
     pub ch9_dbg_tcr: CH9_DBG_TCR,
-    _reserved36: [u8; 56usize],
+    _reserved38: [u8; 56usize],
     #[doc = "0xa80 - Read: get channel DREQ counter (i.e. how many accesses the DMA expects it can perform on the peripheral without overflow/underflow. Write any value: clears the counter, and cause channel to re-initiate DREQ handshake."]
     pub ch10_dbg_ctdreq: CH10_DBG_CTDREQ,
     #[doc = "0xa84 - Read to get channel TRANS_COUNT reload value, i.e. the length of the next transfer"]
     pub ch10_dbg_tcr: CH10_DBG_TCR,
-    _reserved38: [u8; 56usize],
+    _reserved40: [u8; 56usize],
     #[doc = "0xac0 - Read: get channel DREQ counter (i.e. how many accesses the DMA expects it can perform on the peripheral without overflow/underflow. Write any value: clears the counter, and cause channel to re-initiate DREQ handshake."]
     pub ch11_dbg_ctdreq: CH11_DBG_CTDREQ,
     #[doc = "0xac4 - Read to get channel TRANS_COUNT reload value, i.e. the length of the next transfer"]
@@ -234,6 +237,28 @@ impl crate::Readable for TIMER1 {}
 impl crate::Writable for TIMER1 {}
 #[doc = "Pacing (X/Y) Fractional Timer\\n The pacing timer produces TREQ assertions at a rate set by ((X/Y) * sys_clk). This equation is evaluated every sys_clk cycles and therefore can only generate TREQs at a rate of 1 per sys_clk (i.e. permanent TREQ) or less."]
 pub mod timer1;
+#[doc = "Pacing (X/Y) Fractional Timer\\n The pacing timer produces TREQ assertions at a rate set by ((X/Y) * sys_clk). This equation is evaluated every sys_clk cycles and therefore can only generate TREQs at a rate of 1 per sys_clk (i.e. permanent TREQ) or less.\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [timer2](timer2) module"]
+pub type TIMER2 = crate::Reg<u32, _TIMER2>;
+#[allow(missing_docs)]
+#[doc(hidden)]
+pub struct _TIMER2;
+#[doc = "`read()` method returns [timer2::R](timer2::R) reader structure"]
+impl crate::Readable for TIMER2 {}
+#[doc = "`write(|w| ..)` method takes [timer2::W](timer2::W) writer structure"]
+impl crate::Writable for TIMER2 {}
+#[doc = "Pacing (X/Y) Fractional Timer\\n The pacing timer produces TREQ assertions at a rate set by ((X/Y) * sys_clk). This equation is evaluated every sys_clk cycles and therefore can only generate TREQs at a rate of 1 per sys_clk (i.e. permanent TREQ) or less."]
+pub mod timer2;
+#[doc = "Pacing (X/Y) Fractional Timer\\n The pacing timer produces TREQ assertions at a rate set by ((X/Y) * sys_clk). This equation is evaluated every sys_clk cycles and therefore can only generate TREQs at a rate of 1 per sys_clk (i.e. permanent TREQ) or less.\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [timer3](timer3) module"]
+pub type TIMER3 = crate::Reg<u32, _TIMER3>;
+#[allow(missing_docs)]
+#[doc(hidden)]
+pub struct _TIMER3;
+#[doc = "`read()` method returns [timer3::R](timer3::R) reader structure"]
+impl crate::Readable for TIMER3 {}
+#[doc = "`write(|w| ..)` method takes [timer3::W](timer3::W) writer structure"]
+impl crate::Writable for TIMER3 {}
+#[doc = "Pacing (X/Y) Fractional Timer\\n The pacing timer produces TREQ assertions at a rate set by ((X/Y) * sys_clk). This equation is evaluated every sys_clk cycles and therefore can only generate TREQs at a rate of 1 per sys_clk (i.e. permanent TREQ) or less."]
+pub mod timer3;
 #[doc = "Trigger one or more channels simultaneously\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [multi_chan_trigger](multi_chan_trigger) module"]
 pub type MULTI_CHAN_TRIGGER = crate::Reg<u32, _MULTI_CHAN_TRIGGER>;
 #[allow(missing_docs)]

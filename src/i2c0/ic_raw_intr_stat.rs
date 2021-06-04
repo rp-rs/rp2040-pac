@@ -1,41 +1,5 @@
 #[doc = "Reader of register IC_RAW_INTR_STAT"]
 pub type R = crate::R<u32, super::IC_RAW_INTR_STAT>;
-#[doc = "Indicates whether master is holding the bus and TX FIFO is empty. Enabled only when I2C_DYNAMIC_TAR_UPDATE=1 and IC_EMPTYFIFO_HOLD_MASTER_EN=1.\\n\\n Reset value: 0x0\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
-pub enum MASTER_ON_HOLD_A {
-    #[doc = "0: MASTER_ON_HOLD interrupt is inactive"]
-    INACTIVE = 0,
-    #[doc = "1: MASTER_ON_HOLD interrupt is active"]
-    ACTIVE = 1,
-}
-impl From<MASTER_ON_HOLD_A> for bool {
-    #[inline(always)]
-    fn from(variant: MASTER_ON_HOLD_A) -> Self {
-        variant as u8 != 0
-    }
-}
-#[doc = "Reader of field `MASTER_ON_HOLD`"]
-pub type MASTER_ON_HOLD_R = crate::R<bool, MASTER_ON_HOLD_A>;
-impl MASTER_ON_HOLD_R {
-    #[doc = r"Get enumerated values variant"]
-    #[inline(always)]
-    pub fn variant(&self) -> MASTER_ON_HOLD_A {
-        match self.bits {
-            false => MASTER_ON_HOLD_A::INACTIVE,
-            true => MASTER_ON_HOLD_A::ACTIVE,
-        }
-    }
-    #[doc = "Checks if the value of the field is `INACTIVE`"]
-    #[inline(always)]
-    pub fn is_inactive(&self) -> bool {
-        *self == MASTER_ON_HOLD_A::INACTIVE
-    }
-    #[doc = "Checks if the value of the field is `ACTIVE`"]
-    #[inline(always)]
-    pub fn is_active(&self) -> bool {
-        *self == MASTER_ON_HOLD_A::ACTIVE
-    }
-}
 #[doc = "Indicates whether a RESTART condition has occurred on the I2C interface when DW_apb_i2c is operating in Slave mode and the slave is being addressed. Enabled only when IC_SLV_RESTART_DET_EN=1.\\n\\n Note: However, in high-speed mode or during a START BYTE transfer, the RESTART comes before the address field as per the I2C protocol. In this case, the slave is not the addressed slave when the RESTART is issued, therefore DW_apb_i2c does not generate the RESTART_DET interrupt.\\n\\n Reset value: 0x0\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum RESTART_DET_A {
@@ -506,11 +470,6 @@ impl RX_UNDER_R {
     }
 }
 impl R {
-    #[doc = "Bit 13 - Indicates whether master is holding the bus and TX FIFO is empty. Enabled only when I2C_DYNAMIC_TAR_UPDATE=1 and IC_EMPTYFIFO_HOLD_MASTER_EN=1.\\n\\n Reset value: 0x0"]
-    #[inline(always)]
-    pub fn master_on_hold(&self) -> MASTER_ON_HOLD_R {
-        MASTER_ON_HOLD_R::new(((self.bits >> 13) & 0x01) != 0)
-    }
     #[doc = "Bit 12 - Indicates whether a RESTART condition has occurred on the I2C interface when DW_apb_i2c is operating in Slave mode and the slave is being addressed. Enabled only when IC_SLV_RESTART_DET_EN=1.\\n\\n Note: However, in high-speed mode or during a START BYTE transfer, the RESTART comes before the address field as per the I2C protocol. In this case, the slave is not the addressed slave when the RESTART is issued, therefore DW_apb_i2c does not generate the RESTART_DET interrupt.\\n\\n Reset value: 0x0"]
     #[inline(always)]
     pub fn restart_det(&self) -> RESTART_DET_R {

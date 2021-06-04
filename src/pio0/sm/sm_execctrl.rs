@@ -254,17 +254,17 @@ impl<'a> STATUS_N_W<'a> {
     }
 }
 impl R {
-    #[doc = "Bit 31 - An instruction written to SMx_INSTR is stalled, and latched by the\\n state machine. Will clear once the instruction completes."]
+    #[doc = "Bit 31 - If 1, an instruction written to SMx_INSTR is stalled, and latched by the state machine. Will clear to 0 once this instruction completes."]
     #[inline(always)]
     pub fn exec_stalled(&self) -> EXEC_STALLED_R {
         EXEC_STALLED_R::new(((self.bits >> 31) & 0x01) != 0)
     }
-    #[doc = "Bit 30 - If 1, the delay MSB is used as side-set enable, rather than a\\n side-set data bit. This allows instructions to perform side-set optionally,\\n rather than on every instruction."]
+    #[doc = "Bit 30 - If 1, the MSB of the Delay/Side-set instruction field is used as side-set enable, rather than a side-set data bit. This allows instructions to perform side-set optionally, rather than on every instruction, but the maximum possible side-set width is reduced from 5 to 4. Note that the value of PINCTRL_SIDESET_COUNT is inclusive of this enable bit."]
     #[inline(always)]
     pub fn side_en(&self) -> SIDE_EN_R {
         SIDE_EN_R::new(((self.bits >> 30) & 0x01) != 0)
     }
-    #[doc = "Bit 29 - Side-set data is asserted to pin OEs instead of pin values"]
+    #[doc = "Bit 29 - If 1, side-set data is asserted to pin directions, instead of pin values"]
     #[inline(always)]
     pub fn side_pindir(&self) -> SIDE_PINDIR_R {
         SIDE_PINDIR_R::new(((self.bits >> 29) & 0x01) != 0)
@@ -311,12 +311,12 @@ impl R {
     }
 }
 impl W {
-    #[doc = "Bit 30 - If 1, the delay MSB is used as side-set enable, rather than a\\n side-set data bit. This allows instructions to perform side-set optionally,\\n rather than on every instruction."]
+    #[doc = "Bit 30 - If 1, the MSB of the Delay/Side-set instruction field is used as side-set enable, rather than a side-set data bit. This allows instructions to perform side-set optionally, rather than on every instruction, but the maximum possible side-set width is reduced from 5 to 4. Note that the value of PINCTRL_SIDESET_COUNT is inclusive of this enable bit."]
     #[inline(always)]
     pub fn side_en(&mut self) -> SIDE_EN_W {
         SIDE_EN_W { w: self }
     }
-    #[doc = "Bit 29 - Side-set data is asserted to pin OEs instead of pin values"]
+    #[doc = "Bit 29 - If 1, side-set data is asserted to pin directions, instead of pin values"]
     #[inline(always)]
     pub fn side_pindir(&mut self) -> SIDE_PINDIR_W {
         SIDE_PINDIR_W { w: self }

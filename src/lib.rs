@@ -830,6 +830,27 @@ impl Deref for DMA {
 }
 #[doc = "DMA with separate read and write masters"]
 pub mod dma;
+#[doc = "DPRAM layout for USB device."]
+pub struct USBCTRL_DPRAM {
+    _marker: PhantomData<*const ()>,
+}
+unsafe impl Send for USBCTRL_DPRAM {}
+impl USBCTRL_DPRAM {
+    #[doc = r"Returns a pointer to the register block"]
+    #[inline(always)]
+    pub const fn ptr() -> *const usbctrl_dpram::RegisterBlock {
+        0x5010_0000 as *const _
+    }
+}
+impl Deref for USBCTRL_DPRAM {
+    type Target = usbctrl_dpram::RegisterBlock;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        unsafe { &*USBCTRL_DPRAM::ptr() }
+    }
+}
+#[doc = "DPRAM layout for USB device."]
+pub mod usbctrl_dpram;
 #[doc = "USB FS/LS controller device registers"]
 pub struct USBCTRL_REGS {
     _marker: PhantomData<*const ()>,
@@ -996,6 +1017,8 @@ pub struct Peripherals {
     pub UART0: UART0,
     #[doc = "UART1"]
     pub UART1: UART1,
+    #[doc = "USBCTRL_DPRAM"]
+    pub USBCTRL_DPRAM: USBCTRL_DPRAM,
     #[doc = "USBCTRL_REGS"]
     pub USBCTRL_REGS: USBCTRL_REGS,
     #[doc = "VREG_AND_CHIP_RESET"]
@@ -1114,6 +1137,9 @@ impl Peripherals {
                 _marker: PhantomData,
             },
             DMA: DMA {
+                _marker: PhantomData,
+            },
+            USBCTRL_DPRAM: USBCTRL_DPRAM {
                 _marker: PhantomData,
             },
             USBCTRL_REGS: USBCTRL_REGS {

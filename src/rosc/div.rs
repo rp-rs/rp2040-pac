@@ -10,7 +10,7 @@ impl crate::ResetValue for super::DIV {
         0
     }
 }
-#[doc = "set to 0xaa0 + div where\\n div = 0 divides by 32\\n div = 1-31 divides by div\\n any other value sets div=0 and therefore divides by 32\\n this register resets to div=16\n\nValue on reset: 0"]
+#[doc = "set to 0xaa0 + div where\\n div = 0 divides by 32\\n div = 1-31 divides by div\\n any other value sets div=31\\n this register resets to div=16\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq)]
 #[repr(u16)]
 pub enum DIV_A {
@@ -64,14 +64,14 @@ impl<'a> DIV_W<'a> {
     }
 }
 impl R {
-    #[doc = "Bits 0:11 - set to 0xaa0 + div where\\n div = 0 divides by 32\\n div = 1-31 divides by div\\n any other value sets div=0 and therefore divides by 32\\n this register resets to div=16"]
+    #[doc = "Bits 0:11 - set to 0xaa0 + div where\\n div = 0 divides by 32\\n div = 1-31 divides by div\\n any other value sets div=31\\n this register resets to div=16"]
     #[inline(always)]
     pub fn div(&self) -> DIV_R {
         DIV_R::new((self.bits & 0x0fff) as u16)
     }
 }
 impl W {
-    #[doc = "Bits 0:11 - set to 0xaa0 + div where\\n div = 0 divides by 32\\n div = 1-31 divides by div\\n any other value sets div=0 and therefore divides by 32\\n this register resets to div=16"]
+    #[doc = "Bits 0:11 - set to 0xaa0 + div where\\n div = 0 divides by 32\\n div = 1-31 divides by div\\n any other value sets div=31\\n this register resets to div=16"]
     #[inline(always)]
     pub fn div(&mut self) -> DIV_W {
         DIV_W { w: self }

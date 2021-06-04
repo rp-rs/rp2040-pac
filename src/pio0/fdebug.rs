@@ -67,44 +67,44 @@ impl<'a> RXSTALL_W<'a> {
     }
 }
 impl R {
-    #[doc = "Bits 24:27 - State machine has stalled on empty TX FIFO. Write 1 to clear."]
+    #[doc = "Bits 24:27 - State machine has stalled on empty TX FIFO during a blocking PULL, or an OUT with autopull enabled. Write 1 to clear."]
     #[inline(always)]
     pub fn txstall(&self) -> TXSTALL_R {
         TXSTALL_R::new(((self.bits >> 24) & 0x0f) as u8)
     }
-    #[doc = "Bits 16:19 - TX FIFO overflow has occurred. Write 1 to clear."]
+    #[doc = "Bits 16:19 - TX FIFO overflow (i.e. write-on-full by the system) has occurred. Write 1 to clear. Note that write-on-full does not alter the state or contents of the FIFO in any way, but the data that the system attempted to write is dropped, so if this flag is set, your software has quite likely dropped some data on the floor."]
     #[inline(always)]
     pub fn txover(&self) -> TXOVER_R {
         TXOVER_R::new(((self.bits >> 16) & 0x0f) as u8)
     }
-    #[doc = "Bits 8:11 - RX FIFO underflow has occurred. Write 1 to clear."]
+    #[doc = "Bits 8:11 - RX FIFO underflow (i.e. read-on-empty by the system) has occurred. Write 1 to clear. Note that read-on-empty does not perturb the state of the FIFO in any way, but the data returned by reading from an empty FIFO is undefined, so this flag generally only becomes set due to some kind of software error."]
     #[inline(always)]
     pub fn rxunder(&self) -> RXUNDER_R {
         RXUNDER_R::new(((self.bits >> 8) & 0x0f) as u8)
     }
-    #[doc = "Bits 0:3 - State machine has stalled on full RX FIFO. Write 1 to clear."]
+    #[doc = "Bits 0:3 - State machine has stalled on full RX FIFO during a blocking PUSH, or an IN with autopush enabled. This flag is also set when a nonblocking PUSH to a full FIFO took place, in which case the state machine has dropped data. Write 1 to clear."]
     #[inline(always)]
     pub fn rxstall(&self) -> RXSTALL_R {
         RXSTALL_R::new((self.bits & 0x0f) as u8)
     }
 }
 impl W {
-    #[doc = "Bits 24:27 - State machine has stalled on empty TX FIFO. Write 1 to clear."]
+    #[doc = "Bits 24:27 - State machine has stalled on empty TX FIFO during a blocking PULL, or an OUT with autopull enabled. Write 1 to clear."]
     #[inline(always)]
     pub fn txstall(&mut self) -> TXSTALL_W {
         TXSTALL_W { w: self }
     }
-    #[doc = "Bits 16:19 - TX FIFO overflow has occurred. Write 1 to clear."]
+    #[doc = "Bits 16:19 - TX FIFO overflow (i.e. write-on-full by the system) has occurred. Write 1 to clear. Note that write-on-full does not alter the state or contents of the FIFO in any way, but the data that the system attempted to write is dropped, so if this flag is set, your software has quite likely dropped some data on the floor."]
     #[inline(always)]
     pub fn txover(&mut self) -> TXOVER_W {
         TXOVER_W { w: self }
     }
-    #[doc = "Bits 8:11 - RX FIFO underflow has occurred. Write 1 to clear."]
+    #[doc = "Bits 8:11 - RX FIFO underflow (i.e. read-on-empty by the system) has occurred. Write 1 to clear. Note that read-on-empty does not perturb the state of the FIFO in any way, but the data returned by reading from an empty FIFO is undefined, so this flag generally only becomes set due to some kind of software error."]
     #[inline(always)]
     pub fn rxunder(&mut self) -> RXUNDER_W {
         RXUNDER_W { w: self }
     }
-    #[doc = "Bits 0:3 - State machine has stalled on full RX FIFO. Write 1 to clear."]
+    #[doc = "Bits 0:3 - State machine has stalled on full RX FIFO during a blocking PUSH, or an IN with autopush enabled. This flag is also set when a nonblocking PUSH to a full FIFO took place, in which case the state machine has dropped data. Write 1 to clear."]
     #[inline(always)]
     pub fn rxstall(&mut self) -> RXSTALL_W {
         RXSTALL_W { w: self }
