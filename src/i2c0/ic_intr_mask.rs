@@ -10,42 +10,6 @@ impl crate::ResetValue for super::IC_INTR_MASK {
         0x08ff
     }
 }
-#[doc = "This M_MASTER_ON_HOLD_read_only bit masks the R_MASTER_ON_HOLD interrupt in IC_INTR_STAT register.\\n\\n Reset value: 0x0\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
-pub enum M_MASTER_ON_HOLD_READ_ONLY_A {
-    #[doc = "0: MASTER_ON_HOLD interrupt is masked"]
-    ENABLED = 0,
-    #[doc = "1: MASTER_ON_HOLD interrupt is unmasked"]
-    DISABLED = 1,
-}
-impl From<M_MASTER_ON_HOLD_READ_ONLY_A> for bool {
-    #[inline(always)]
-    fn from(variant: M_MASTER_ON_HOLD_READ_ONLY_A) -> Self {
-        variant as u8 != 0
-    }
-}
-#[doc = "Reader of field `M_MASTER_ON_HOLD_READ_ONLY`"]
-pub type M_MASTER_ON_HOLD_READ_ONLY_R = crate::R<bool, M_MASTER_ON_HOLD_READ_ONLY_A>;
-impl M_MASTER_ON_HOLD_READ_ONLY_R {
-    #[doc = r"Get enumerated values variant"]
-    #[inline(always)]
-    pub fn variant(&self) -> M_MASTER_ON_HOLD_READ_ONLY_A {
-        match self.bits {
-            false => M_MASTER_ON_HOLD_READ_ONLY_A::ENABLED,
-            true => M_MASTER_ON_HOLD_READ_ONLY_A::DISABLED,
-        }
-    }
-    #[doc = "Checks if the value of the field is `ENABLED`"]
-    #[inline(always)]
-    pub fn is_enabled(&self) -> bool {
-        *self == M_MASTER_ON_HOLD_READ_ONLY_A::ENABLED
-    }
-    #[doc = "Checks if the value of the field is `DISABLED`"]
-    #[inline(always)]
-    pub fn is_disabled(&self) -> bool {
-        *self == M_MASTER_ON_HOLD_READ_ONLY_A::DISABLED
-    }
-}
 #[doc = "This bit masks the R_RESTART_DET interrupt in IC_INTR_STAT register.\\n\\n Reset value: 0x0\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum M_RESTART_DET_A {
@@ -1022,11 +986,6 @@ impl<'a> M_RX_UNDER_W<'a> {
     }
 }
 impl R {
-    #[doc = "Bit 13 - This M_MASTER_ON_HOLD_read_only bit masks the R_MASTER_ON_HOLD interrupt in IC_INTR_STAT register.\\n\\n Reset value: 0x0"]
-    #[inline(always)]
-    pub fn m_master_on_hold_read_only(&self) -> M_MASTER_ON_HOLD_READ_ONLY_R {
-        M_MASTER_ON_HOLD_READ_ONLY_R::new(((self.bits >> 13) & 0x01) != 0)
-    }
     #[doc = "Bit 12 - This bit masks the R_RESTART_DET interrupt in IC_INTR_STAT register.\\n\\n Reset value: 0x0"]
     #[inline(always)]
     pub fn m_restart_det(&self) -> M_RESTART_DET_R {

@@ -46,7 +46,7 @@ impl R {
     pub fn stable(&self) -> STABLE_R {
         STABLE_R::new(((self.bits >> 31) & 0x01) != 0)
     }
-    #[doc = "Bit 24 - An invalid value has been written to CTRL_ENABLE or CTRL_FREQ_RANGE or FRFEQA or FREQB or DORMANT"]
+    #[doc = "Bit 24 - An invalid value has been written to CTRL_ENABLE or CTRL_FREQ_RANGE or FREQA or FREQB or DIV or PHASE or DORMANT"]
     #[inline(always)]
     pub fn badwrite(&self) -> BADWRITE_R {
         BADWRITE_R::new(((self.bits >> 24) & 0x01) != 0)
@@ -63,7 +63,7 @@ impl R {
     }
 }
 impl W {
-    #[doc = "Bit 24 - An invalid value has been written to CTRL_ENABLE or CTRL_FREQ_RANGE or FRFEQA or FREQB or DORMANT"]
+    #[doc = "Bit 24 - An invalid value has been written to CTRL_ENABLE or CTRL_FREQ_RANGE or FREQA or FREQB or DIV or PHASE or DORMANT"]
     #[inline(always)]
     pub fn badwrite(&mut self) -> BADWRITE_W {
         BADWRITE_W { w: self }

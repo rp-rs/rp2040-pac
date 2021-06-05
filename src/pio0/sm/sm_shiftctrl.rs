@@ -193,12 +193,12 @@ impl R {
     pub fn fjoin_tx(&self) -> FJOIN_TX_R {
         FJOIN_TX_R::new(((self.bits >> 30) & 0x01) != 0)
     }
-    #[doc = "Bits 25:29 - Number of bits shifted out of TXSR before autopull or conditional pull.\\n Write 0 for value of 32."]
+    #[doc = "Bits 25:29 - Number of bits shifted out of OSR before autopull, or conditional pull (PULL IFEMPTY), will take place.\\n Write 0 for value of 32."]
     #[inline(always)]
     pub fn pull_thresh(&self) -> PULL_THRESH_R {
         PULL_THRESH_R::new(((self.bits >> 25) & 0x1f) as u8)
     }
-    #[doc = "Bits 20:24 - Number of bits shifted into RXSR before autopush or conditional push.\\n Write 0 for value of 32."]
+    #[doc = "Bits 20:24 - Number of bits shifted into ISR before autopush, or conditional push (PUSH IFFULL), will take place.\\n Write 0 for value of 32."]
     #[inline(always)]
     pub fn push_thresh(&self) -> PUSH_THRESH_R {
         PUSH_THRESH_R::new(((self.bits >> 20) & 0x1f) as u8)
@@ -213,12 +213,12 @@ impl R {
     pub fn in_shiftdir(&self) -> IN_SHIFTDIR_R {
         IN_SHIFTDIR_R::new(((self.bits >> 18) & 0x01) != 0)
     }
-    #[doc = "Bit 17 - Pull automatically when the output shift register is emptied"]
+    #[doc = "Bit 17 - Pull automatically when the output shift register is emptied, i.e. on or following an OUT instruction which causes the output shift counter to reach or exceed PULL_THRESH."]
     #[inline(always)]
     pub fn autopull(&self) -> AUTOPULL_R {
         AUTOPULL_R::new(((self.bits >> 17) & 0x01) != 0)
     }
-    #[doc = "Bit 16 - Push automatically when the input shift register is filled"]
+    #[doc = "Bit 16 - Push automatically when the input shift register is filled, i.e. on an IN instruction which causes the input shift counter to reach or exceed PUSH_THRESH."]
     #[inline(always)]
     pub fn autopush(&self) -> AUTOPUSH_R {
         AUTOPUSH_R::new(((self.bits >> 16) & 0x01) != 0)
@@ -235,12 +235,12 @@ impl W {
     pub fn fjoin_tx(&mut self) -> FJOIN_TX_W {
         FJOIN_TX_W { w: self }
     }
-    #[doc = "Bits 25:29 - Number of bits shifted out of TXSR before autopull or conditional pull.\\n Write 0 for value of 32."]
+    #[doc = "Bits 25:29 - Number of bits shifted out of OSR before autopull, or conditional pull (PULL IFEMPTY), will take place.\\n Write 0 for value of 32."]
     #[inline(always)]
     pub fn pull_thresh(&mut self) -> PULL_THRESH_W {
         PULL_THRESH_W { w: self }
     }
-    #[doc = "Bits 20:24 - Number of bits shifted into RXSR before autopush or conditional push.\\n Write 0 for value of 32."]
+    #[doc = "Bits 20:24 - Number of bits shifted into ISR before autopush, or conditional push (PUSH IFFULL), will take place.\\n Write 0 for value of 32."]
     #[inline(always)]
     pub fn push_thresh(&mut self) -> PUSH_THRESH_W {
         PUSH_THRESH_W { w: self }
@@ -255,12 +255,12 @@ impl W {
     pub fn in_shiftdir(&mut self) -> IN_SHIFTDIR_W {
         IN_SHIFTDIR_W { w: self }
     }
-    #[doc = "Bit 17 - Pull automatically when the output shift register is emptied"]
+    #[doc = "Bit 17 - Pull automatically when the output shift register is emptied, i.e. on or following an OUT instruction which causes the output shift counter to reach or exceed PULL_THRESH."]
     #[inline(always)]
     pub fn autopull(&mut self) -> AUTOPULL_W {
         AUTOPULL_W { w: self }
     }
-    #[doc = "Bit 16 - Push automatically when the input shift register is filled"]
+    #[doc = "Bit 16 - Push automatically when the input shift register is filled, i.e. on an IN instruction which causes the input shift counter to reach or exceed PUSH_THRESH."]
     #[inline(always)]
     pub fn autopush(&mut self) -> AUTOPUSH_W {
         AUTOPUSH_W { w: self }

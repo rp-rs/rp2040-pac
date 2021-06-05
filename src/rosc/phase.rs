@@ -87,7 +87,7 @@ impl<'a> SHIFT_W<'a> {
     }
 }
 impl R {
-    #[doc = "Bits 4:11 - set to 0xaa0\\n any other value enables the output with shift=0"]
+    #[doc = "Bits 4:11 - set to 0xaa\\n any other value enables the output with shift=0"]
     #[inline(always)]
     pub fn passwd(&self) -> PASSWD_R {
         PASSWD_R::new(((self.bits >> 4) & 0xff) as u8)
@@ -109,7 +109,7 @@ impl R {
     }
 }
 impl W {
-    #[doc = "Bits 4:11 - set to 0xaa0\\n any other value enables the output with shift=0"]
+    #[doc = "Bits 4:11 - set to 0xaa\\n any other value enables the output with shift=0"]
     #[inline(always)]
     pub fn passwd(&mut self) -> PASSWD_W {
         PASSWD_W { w: self }

@@ -1,41 +1,5 @@
 #[doc = "Reader of register IC_INTR_STAT"]
 pub type R = crate::R<u32, super::IC_INTR_STAT>;
-#[doc = "See IC_RAW_INTR_STAT for a detailed description of R_MASTER_ON_HOLD bit.\\n\\n Reset value: 0x0\n\nValue on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
-pub enum R_MASTER_ON_HOLD_A {
-    #[doc = "0: R_MASTER_ON_HOLD interrupt is inactive"]
-    INACTIVE = 0,
-    #[doc = "1: R_MASTER_ON_HOLD interrupt is active"]
-    ACTIVE = 1,
-}
-impl From<R_MASTER_ON_HOLD_A> for bool {
-    #[inline(always)]
-    fn from(variant: R_MASTER_ON_HOLD_A) -> Self {
-        variant as u8 != 0
-    }
-}
-#[doc = "Reader of field `R_MASTER_ON_HOLD`"]
-pub type R_MASTER_ON_HOLD_R = crate::R<bool, R_MASTER_ON_HOLD_A>;
-impl R_MASTER_ON_HOLD_R {
-    #[doc = r"Get enumerated values variant"]
-    #[inline(always)]
-    pub fn variant(&self) -> R_MASTER_ON_HOLD_A {
-        match self.bits {
-            false => R_MASTER_ON_HOLD_A::INACTIVE,
-            true => R_MASTER_ON_HOLD_A::ACTIVE,
-        }
-    }
-    #[doc = "Checks if the value of the field is `INACTIVE`"]
-    #[inline(always)]
-    pub fn is_inactive(&self) -> bool {
-        *self == R_MASTER_ON_HOLD_A::INACTIVE
-    }
-    #[doc = "Checks if the value of the field is `ACTIVE`"]
-    #[inline(always)]
-    pub fn is_active(&self) -> bool {
-        *self == R_MASTER_ON_HOLD_A::ACTIVE
-    }
-}
 #[doc = "See IC_RAW_INTR_STAT for a detailed description of R_RESTART_DET bit.\\n\\n Reset value: 0x0\n\nValue on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum R_RESTART_DET_A {
@@ -505,11 +469,6 @@ impl R_RX_UNDER_R {
     }
 }
 impl R {
-    #[doc = "Bit 13 - See IC_RAW_INTR_STAT for a detailed description of R_MASTER_ON_HOLD bit.\\n\\n Reset value: 0x0"]
-    #[inline(always)]
-    pub fn r_master_on_hold(&self) -> R_MASTER_ON_HOLD_R {
-        R_MASTER_ON_HOLD_R::new(((self.bits >> 13) & 0x01) != 0)
-    }
     #[doc = "Bit 12 - See IC_RAW_INTR_STAT for a detailed description of R_RESTART_DET bit.\\n\\n Reset value: 0x0"]
     #[inline(always)]
     pub fn r_restart_det(&self) -> R_RESTART_DET_R {

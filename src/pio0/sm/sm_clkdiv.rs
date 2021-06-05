@@ -39,24 +39,24 @@ impl<'a> FRAC_W<'a> {
     }
 }
 impl R {
-    #[doc = "Bits 16:31 - Effective frequency is sysclk/int.\\n Value of 0 is interpreted as max possible value"]
+    #[doc = "Bits 16:31 - Effective frequency is sysclk/(int + frac/256).\\n Value of 0 is interpreted as 65536. If INT is 0, FRAC must also be 0."]
     #[inline(always)]
     pub fn int(&self) -> INT_R {
         INT_R::new(((self.bits >> 16) & 0xffff) as u16)
     }
-    #[doc = "Bits 8:15 - Fractional part of clock divider"]
+    #[doc = "Bits 8:15 - Fractional part of clock divisor"]
     #[inline(always)]
     pub fn frac(&self) -> FRAC_R {
         FRAC_R::new(((self.bits >> 8) & 0xff) as u8)
     }
 }
 impl W {
-    #[doc = "Bits 16:31 - Effective frequency is sysclk/int.\\n Value of 0 is interpreted as max possible value"]
+    #[doc = "Bits 16:31 - Effective frequency is sysclk/(int + frac/256).\\n Value of 0 is interpreted as 65536. If INT is 0, FRAC must also be 0."]
     #[inline(always)]
     pub fn int(&mut self) -> INT_W {
         INT_W { w: self }
     }
-    #[doc = "Bits 8:15 - Fractional part of clock divider"]
+    #[doc = "Bits 8:15 - Fractional part of clock divisor"]
     #[inline(always)]
     pub fn frac(&mut self) -> FRAC_W {
         FRAC_W { w: self }
