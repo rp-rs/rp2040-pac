@@ -1,8 +1,8 @@
-#[doc = "Reader of register ctr"]
+#[doc = "Reader of register CTR"]
 pub type R = crate::R<u32, super::CTR>;
-#[doc = "Writer for register ctr"]
+#[doc = "Writer for register CTR"]
 pub type W = crate::W<u32, super::CTR>;
-#[doc = "Register ctr `reset()`'s with value 0"]
+#[doc = "Register CTR `reset()`'s with value 0"]
 impl crate::ResetValue for super::CTR {
     type Type = u32;
     #[inline(always)]

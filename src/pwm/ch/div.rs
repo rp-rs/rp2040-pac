@@ -1,8 +1,8 @@
-#[doc = "Reader of register div"]
+#[doc = "Reader of register DIV"]
 pub type R = crate::R<u32, super::DIV>;
-#[doc = "Writer for register div"]
+#[doc = "Writer for register DIV"]
 pub type W = crate::W<u32, super::DIV>;
-#[doc = "Register div `reset()`'s with value 0x10"]
+#[doc = "Register DIV `reset()`'s with value 0x10"]
 impl crate::ResetValue for super::DIV {
     type Type = u32;
     #[inline(always)]

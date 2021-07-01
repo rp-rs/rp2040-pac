@@ -17582,7 +17582,7 @@
       </interrupt>
       <registers>
         <cluster><dim>8</dim><dimIncrement>0x14</dimIncrement><dimIndex>0,1,2,3,4,5,6,7</dimIndex><name>CH%s</name><description>Cluster CH%s, containing CH*_CC, CH*_CSR, CH*_CTR, CH*_DIV, CH*_TOP</description><addressOffset>0x0</addressOffset><register>
-          <name>cc</name>
+          <name>CC</name>
           <description>Counter compare values</description>
           <addressOffset>0xc</addressOffset>
           <resetValue>0x00000000</resetValue>
@@ -17600,7 +17600,7 @@
           </fields>
           </register>
         <register>
-          <name>csr</name>
+          <name>CSR</name>
           <description>Control and status register</description>
           <addressOffset>0x0</addressOffset>
           <resetValue>0x00000000</resetValue>
@@ -17676,7 +17676,7 @@
           </fields>
           </register>
         <register>
-          <name>ctr</name>
+          <name>CTR</name>
           <description>Direct access to the PWM counter</description>
           <addressOffset>0x8</addressOffset>
           <resetValue>0x00000000</resetValue>
@@ -17689,7 +17689,7 @@
           </fields>
           </register>
         <register>
-          <name>div</name>
+          <name>DIV</name>
           <description>INT and FRAC form a fixed-point fractional number.\n
             Counting rate is system clock frequency divided by this number.\n
             Fractional division uses simple 1st-order sigma-delta.</description>
@@ -17709,7 +17709,7 @@
           </fields>
           </register>
         <register>
-          <name>top</name>
+          <name>TOP</name>
           <description>Counter wrap value</description>
           <addressOffset>0x10</addressOffset>
           <resetValue>0x0000ffff</resetValue>

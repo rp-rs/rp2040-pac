@@ -1,8 +1,8 @@
-#[doc = "Reader of register top"]
+#[doc = "Reader of register TOP"]
 pub type R = crate::R<u32, super::TOP>;
-#[doc = "Writer for register top"]
+#[doc = "Writer for register TOP"]
 pub type W = crate::W<u32, super::TOP>;
-#[doc = "Register top `reset()`'s with value 0xffff"]
+#[doc = "Register TOP `reset()`'s with value 0xffff"]
 impl crate::ResetValue for super::TOP {
     type Type = u32;
     #[inline(always)]

@@ -54,15 +54,15 @@ PWM:
   _cluster:
     "CH%s":
       "CH*_CC":
-        name: "cc"
+        name: "CC"
       "CH*_CSR":
-        name: "csr"
+        name: "CSR"
       "CH*_CTR":
-        name: "ctr"
+        name: "CTR"
       "CH*_DIV":
-        name: "div"
+        name: "DIV"
       "CH*_TOP":
-        name: "top"
+        name: "TOP"
 
 IO_BANK0:
   _cluster:

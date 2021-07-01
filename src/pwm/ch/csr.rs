@@ -1,8 +1,8 @@
-#[doc = "Reader of register csr"]
+#[doc = "Reader of register CSR"]
 pub type R = crate::R<u32, super::CSR>;
-#[doc = "Writer for register csr"]
+#[doc = "Writer for register CSR"]
 pub type W = crate::W<u32, super::CSR>;
-#[doc = "Register csr `reset()`'s with value 0"]
+#[doc = "Register CSR `reset()`'s with value 0"]
 impl crate::ResetValue for super::CSR {
     type Type = u32;
     #[inline(always)]
