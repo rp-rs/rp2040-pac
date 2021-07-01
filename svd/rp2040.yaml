@@ -40,6 +40,30 @@ PIO0:
       "IRQ*_INTF": {}
       "IRQ*_INTS": {}
 
+PWM:
+  "CH*_TOP":
+    _modify:
+      "CH0_TOP":
+        name: "TOP"
+
+  "CH*_CTR":
+    _modify:
+      "CH0_CTR":
+        name: "CTR"
+
+  _cluster:
+    "CH%s":
+      "CH*_CC":
+        name: "CC"
+      "CH*_CSR":
+        name: "CSR"
+      "CH*_CTR":
+        name: "CTR"
+      "CH*_DIV":
+        name: "DIV"
+      "CH*_TOP":
+        name: "TOP"
+
 IO_BANK0:
   _cluster:
     "GPIO%s":

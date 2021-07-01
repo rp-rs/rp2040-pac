@@ -1,9 +1,9 @@
-#[doc = "Reader of register CH4_DIV"]
-pub type R = crate::R<u32, super::CH4_DIV>;
-#[doc = "Writer for register CH4_DIV"]
-pub type W = crate::W<u32, super::CH4_DIV>;
-#[doc = "Register CH4_DIV `reset()`'s with value 0x10"]
-impl crate::ResetValue for super::CH4_DIV {
+#[doc = "Reader of register DIV"]
+pub type R = crate::R<u32, super::DIV>;
+#[doc = "Writer for register DIV"]
+pub type W = crate::W<u32, super::DIV>;
+#[doc = "Register DIV `reset()`'s with value 0x10"]
+impl crate::ResetValue for super::DIV {
     type Type = u32;
     #[inline(always)]
     fn reset_value() -> Self::Type {

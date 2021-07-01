@@ -1,9 +1,9 @@
-#[doc = "Reader of register CH3_CSR"]
-pub type R = crate::R<u32, super::CH3_CSR>;
-#[doc = "Writer for register CH3_CSR"]
-pub type W = crate::W<u32, super::CH3_CSR>;
-#[doc = "Register CH3_CSR `reset()`'s with value 0"]
-impl crate::ResetValue for super::CH3_CSR {
+#[doc = "Reader of register CSR"]
+pub type R = crate::R<u32, super::CSR>;
+#[doc = "Writer for register CSR"]
+pub type W = crate::W<u32, super::CSR>;
+#[doc = "Register CSR `reset()`'s with value 0"]
+impl crate::ResetValue for super::CSR {
     type Type = u32;
     #[inline(always)]
     fn reset_value() -> Self::Type {
