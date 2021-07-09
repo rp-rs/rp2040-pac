@@ -8,7 +8,7 @@ description = "A Peripheral Access Crate for the Raspberry Pi RP2040 SoC"
 license-file = "svd/rp2040.svd"
 
 [dependencies]
-cortex-m = "0.7.1"
+cortex-m = "0.7.3"
 vcell = "0.1.0"
 
 [dependencies.cortex-m-rt]
