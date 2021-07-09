@@ -4,6 +4,15 @@
 
 Working on patching the svd for better workflow, using [svdtools](https://pypi.org/project/svdtools/)
 
+## Release 0.1.3
+[Release 0.1.3 on Crates.io](https://crates.io/crates/rp2040-pac/0.1.3)
+
+[Release 0.1.3 on GitHub](https://github.com/rp-rs/rp2040-pac/releases/tag/v0.1.3)
+
+- Update source SVD to pico-sdk 1.2.0
+- Cluster PWM channels
+- Bump cortex-m dep to 0.7.3
+
 ## Release 0.1.2
 [Release 0.1.2 on Crates.io](https://crates.io/crates/rp2040-pac/0.1.2)
 
