@@ -17,8 +17,6 @@ pub struct RegisterBlock {
     pub status: STATUS,
     #[doc = "0x1c - This just reads the state of the oscillator output so randomness is compromised if the ring oscillator is stopped or run at a harmonic of the bus frequency"]
     pub randombit: RANDOMBIT,
-    #[doc = "0x20 - A down counter running at the ROSC frequency which counts to zero and stops.\\n To start the counter write a non-zero value.\\n Can be used for short software pauses when setting up time sensitive hardware."]
-    pub count: COUNT,
 }
 #[doc = "Ring Oscillator control\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [ctrl](ctrl) module"]
 pub type CTRL = crate::Reg<u32, _CTRL>;
@@ -86,17 +84,6 @@ impl crate::Readable for PHASE {}
 impl crate::Writable for PHASE {}
 #[doc = "Controls the phase shifted output"]
 pub mod phase;
-#[doc = "Ring Oscillator Status\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [status](status) module"]
-pub type STATUS = crate::Reg<u32, _STATUS>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _STATUS;
-#[doc = "`read()` method returns [status::R](status::R) reader structure"]
-impl crate::Readable for STATUS {}
-#[doc = "`write(|w| ..)` method takes [status::W](status::W) writer structure"]
-impl crate::Writable for STATUS {}
-#[doc = "Ring Oscillator Status"]
-pub mod status;
 #[doc = "This just reads the state of the oscillator output so randomness is compromised if the ring oscillator is stopped or run at a harmonic of the bus frequency\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [randombit](randombit) module"]
 pub type RANDOMBIT = crate::Reg<u32, _RANDOMBIT>;
 #[allow(missing_docs)]
@@ -106,14 +93,12 @@ pub struct _RANDOMBIT;
 impl crate::Readable for RANDOMBIT {}
 #[doc = "This just reads the state of the oscillator output so randomness is compromised if the ring oscillator is stopped or run at a harmonic of the bus frequency"]
 pub mod randombit;
-#[doc = "A down counter running at the ROSC frequency which counts to zero and stops.\\n To start the counter write a non-zero value.\\n Can be used for short software pauses when setting up time sensitive hardware.\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [count](count) module"]
-pub type COUNT = crate::Reg<u32, _COUNT>;
+#[doc = "Ring Oscillator Status\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [status](status) module"]
+pub type STATUS = crate::Reg<u32, _STATUS>;
 #[allow(missing_docs)]
 #[doc(hidden)]
-pub struct _COUNT;
-#[doc = "`read()` method returns [count::R](count::R) reader structure"]
-impl crate::Readable for COUNT {}
-#[doc = "`write(|w| ..)` method takes [count::W](count::W) writer structure"]
-impl crate::Writable for COUNT {}
-#[doc = "A down counter running at the ROSC frequency which counts to zero and stops.\\n To start the counter write a non-zero value.\\n Can be used for short software pauses when setting up time sensitive hardware."]
-pub mod count;
+pub struct _STATUS;
+#[doc = "`read()` method returns [status::R](status::R) reader structure"]
+impl crate::Readable for STATUS {}
+#[doc = "Ring Oscillator Status"]
+pub mod status;
