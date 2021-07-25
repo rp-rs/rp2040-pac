@@ -9,9 +9,6 @@ pub struct RegisterBlock {
     pub dormant: DORMANT,
     #[doc = "0x0c - Controls the startup delay"]
     pub startup: STARTUP,
-    _reserved4: [u8; 12usize],
-    #[doc = "0x1c - A down counter running at the xosc frequency which counts to zero and stops.\\n To start the counter write a non-zero value.\\n Can be used for short software pauses when setting up time sensitive hardware."]
-    pub count: COUNT,
 }
 #[doc = "Crystal Oscillator Control\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [ctrl](ctrl) module"]
 pub type CTRL = crate::Reg<u32, _CTRL>;
@@ -57,14 +54,3 @@ impl crate::Readable for STARTUP {}
 impl crate::Writable for STARTUP {}
 #[doc = "Controls the startup delay"]
 pub mod startup;
-#[doc = "A down counter running at the xosc frequency which counts to zero and stops.\\n To start the counter write a non-zero value.\\n Can be used for short software pauses when setting up time sensitive hardware.\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [count](count) module"]
-pub type COUNT = crate::Reg<u32, _COUNT>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _COUNT;
-#[doc = "`read()` method returns [count::R](count::R) reader structure"]
-impl crate::Readable for COUNT {}
-#[doc = "`write(|w| ..)` method takes [count::W](count::W) writer structure"]
-impl crate::Writable for COUNT {}
-#[doc = "A down counter running at the xosc frequency which counts to zero and stops.\\n To start the counter write a non-zero value.\\n Can be used for short software pauses when setting up time sensitive hardware."]
-pub mod count;

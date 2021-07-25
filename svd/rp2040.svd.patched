@@ -13023,22 +13023,7 @@
               </field>
           </fields>
           </register>
-        <register>
-          <name>COUNT</name>
-          <description>A down counter running at the xosc frequency which counts to zero and stops.\n
-            To start the counter write a non-zero value.\n
-            Can be used for short software pauses when setting up time sensitive hardware.</description>
-          <addressOffset>0x001c</addressOffset>
-          <resetValue>0x00000000</resetValue>
-        <fields>
-            <field>
-              <name>COUNT</name>
-            <bitRange>[7:0]</bitRange>
-              <access>read-write</access>
-              </field>
-          </fields>
-          </register>
-      </registers>
+        </registers>
       </peripheral>
     <peripheral>
       <name>PLL_SYS</name>
@@ -19026,41 +19011,6 @@
           </fields>
           </register>
         <register>
-          <name>STATUS</name>
-          <description>Ring Oscillator Status</description>
-          <addressOffset>0x0018</addressOffset>
-          <resetValue>0x00000000</resetValue>
-        <fields>
-            <field>
-              <name>STABLE</name>
-            <description>Oscillator is running and stable</description>
-              <bitRange>[31:31]</bitRange>
-              <access>read-only</access>
-              </field>
-            <field>
-              <name>BADWRITE</name>
-            <description>An invalid value has been written to CTRL_ENABLE or CTRL_FREQ_RANGE or FREQA or FREQB or DIV or PHASE or DORMANT</description>
-              <bitRange>[24:24]</bitRange>
-              <access>read-write</access>
-              <modifiedWriteValues>oneToClear</modifiedWriteValues>
-              </field>
-            <field>
-              <name>DIV_RUNNING</name>
-            <description>post-divider is running\n
-                this resets to 0 but transitions to 1 during chip startup</description>
-              <bitRange>[16:16]</bitRange>
-              <access>read-only</access>
-              </field>
-            <field>
-              <name>ENABLED</name>
-            <description>Oscillator is enabled but not necessarily running and stable\n
-                this resets to 0 but transitions to 1 during chip startup</description>
-              <bitRange>[12:12]</bitRange>
-              <access>read-only</access>
-              </field>
-          </fields>
-          </register>
-        <register>
           <name>RANDOMBIT</name>
           <description>This just reads the state of the oscillator output so randomness is compromised if the ring oscillator is stopped or run at a harmonic of the bus frequency</description>
           <addressOffset>0x001c</addressOffset>
@@ -19073,22 +19023,11 @@
               </field>
           </fields>
           </register>
-        <register>
-          <name>COUNT</name>
-          <description>A down counter running at the ROSC frequency which counts to zero and stops.\n
-            To start the counter write a non-zero value.\n
-            Can be used for short software pauses when setting up time sensitive hardware.</description>
-          <addressOffset>0x0020</addressOffset>
-          <resetValue>0x00000000</resetValue>
-        <fields>
-            <field>
-              <name>COUNT</name>
-            <bitRange>[7:0]</bitRange>
-              <access>read-write</access>
-              </field>
-          </fields>
-          </register>
-      </registers>
+        <register><name>STATUS</name><description>Ring Oscillator Status</description><addressOffset>24</addressOffset><resetValue>0</resetValue><fields><field><name>STABLE</name><description>Oscillator is running and stable</description><bitOffset>31</bitOffset><bitWidth>1</bitWidth><access>read-only</access></field>
+            <field><name>DIV_RUNNING</name><description>post-divider is running\n this resets to 0 but transitions to 1 during chip startup</description><bitOffset>16</bitOffset><bitWidth>1</bitWidth><access>read-only</access></field>
+            <field><name>ENABLED</name><description>Oscillator is enabled but not necessarily running and stable\n this resets to 0 but transitions to 1 during chip startup</description><bitOffset>12</bitOffset><bitWidth>1</bitWidth><access>read-only</access></field>
+            </fields></register>
+        </registers>
       </peripheral>
     <peripheral>
       <name>VREG_AND_CHIP_RESET</name>
