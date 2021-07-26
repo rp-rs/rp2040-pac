@@ -111,12 +111,12 @@ ROSC:
           bitWidth: 1
           access: "read-only"
         "DIV_RUNNING":
-          description: "post-divider is running\\n this resets to 0 but transitions to 1 during chip startup"
+          description: "post-divider is running\n this resets to 0 but transitions to 1 during chip startup"
           bitOffset: 16
           bitWidth: 1
           access: "read-only"
         "ENABLED":
-          description: "Oscillator is enabled but not necessarily running and stable\\n this resets to 0 but transitions to 1 during chip startup"
+          description: "Oscillator is enabled but not necessarily running and stable\n this resets to 0 but transitions to 1 during chip startup"
           bitOffset: 12
           bitWidth: 1
           access: "read-only"
