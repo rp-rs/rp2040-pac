@@ -2,157 +2,63 @@
 #[repr(C)]
 pub struct RegisterBlock {
     #[doc = "0x00 - ADC Control and Status"]
-    pub cs: CS,
+    pub cs: crate::Reg<cs::CS_SPEC>,
     #[doc = "0x04 - Result of most recent ADC conversion"]
-    pub result: RESULT,
+    pub result: crate::Reg<result::RESULT_SPEC>,
     #[doc = "0x08 - FIFO control and status"]
-    pub fcs: FCS,
+    pub fcs: crate::Reg<fcs::FCS_SPEC>,
     #[doc = "0x0c - Conversion result FIFO"]
-    pub fifo: FIFO,
+    pub fifo: crate::Reg<fifo::FIFO_SPEC>,
     #[doc = "0x10 - Clock divider. If non-zero, CS_START_MANY will start conversions  
  at regular intervals rather than back-to-back.  
  The divider is reset when either of these fields are written.  
  Total period is 1 + INT + FRAC / 256"]
-    pub div: DIV,
+    pub div: crate::Reg<div::DIV_SPEC>,
     #[doc = "0x14 - Raw Interrupts"]
-    pub intr: INTR,
+    pub intr: crate::Reg<intr::INTR_SPEC>,
     #[doc = "0x18 - Interrupt Enable"]
-    pub inte: INTE,
+    pub inte: crate::Reg<inte::INTE_SPEC>,
     #[doc = "0x1c - Interrupt Force"]
-    pub intf: INTF,
+    pub intf: crate::Reg<intf::INTF_SPEC>,
     #[doc = "0x20 - Interrupt status after masking & forcing"]
-    pub ints: INTS,
+    pub ints: crate::Reg<ints::INTS_SPEC>,
 }
-#[doc = "ADC Control and Status  
-
-This register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
-
-For information about available fields see [cs](cs) module"]
-pub type CS = crate::Reg<u32, _CS>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CS;
-#[doc = "`read()` method returns [cs::R](cs::R) reader structure"]
-impl crate::Readable for CS {}
-#[doc = "`write(|w| ..)` method takes [cs::W](cs::W) writer structure"]
-impl crate::Writable for CS {}
+#[doc = "CS register accessor: an alias for `Reg<CS_SPEC>`"]
+pub type CS = crate::Reg<cs::CS_SPEC>;
 #[doc = "ADC Control and Status"]
 pub mod cs;
-#[doc = "Result of most recent ADC conversion  
-
-This register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
-
-For information about available fields see [result](result) module"]
-pub type RESULT = crate::Reg<u32, _RESULT>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _RESULT;
-#[doc = "`read()` method returns [result::R](result::R) reader structure"]
-impl crate::Readable for RESULT {}
+#[doc = "RESULT register accessor: an alias for `Reg<RESULT_SPEC>`"]
+pub type RESULT = crate::Reg<result::RESULT_SPEC>;
 #[doc = "Result of most recent ADC conversion"]
 pub mod result;
-#[doc = "FIFO control and status  
-
-This register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
-
-For information about available fields see [fcs](fcs) module"]
-pub type FCS = crate::Reg<u32, _FCS>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _FCS;
-#[doc = "`read()` method returns [fcs::R](fcs::R) reader structure"]
-impl crate::Readable for FCS {}
-#[doc = "`write(|w| ..)` method takes [fcs::W](fcs::W) writer structure"]
-impl crate::Writable for FCS {}
+#[doc = "FCS register accessor: an alias for `Reg<FCS_SPEC>`"]
+pub type FCS = crate::Reg<fcs::FCS_SPEC>;
 #[doc = "FIFO control and status"]
 pub mod fcs;
-#[doc = "Conversion result FIFO  
-
-This register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
-
-For information about available fields see [fifo](fifo) module"]
-pub type FIFO = crate::Reg<u32, _FIFO>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _FIFO;
-#[doc = "`read()` method returns [fifo::R](fifo::R) reader structure"]
-impl crate::Readable for FIFO {}
+#[doc = "FIFO register accessor: an alias for `Reg<FIFO_SPEC>`"]
+pub type FIFO = crate::Reg<fifo::FIFO_SPEC>;
 #[doc = "Conversion result FIFO"]
 pub mod fifo;
-#[doc = "Clock divider. If non-zero, CS_START_MANY will start conversions  
- at regular intervals rather than back-to-back.  
- The divider is reset when either of these fields are written.  
- Total period is 1 + INT + FRAC / 256  
-
-This register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
-
-For information about available fields see [div](div) module"]
-pub type DIV = crate::Reg<u32, _DIV>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _DIV;
-#[doc = "`read()` method returns [div::R](div::R) reader structure"]
-impl crate::Readable for DIV {}
-#[doc = "`write(|w| ..)` method takes [div::W](div::W) writer structure"]
-impl crate::Writable for DIV {}
+#[doc = "DIV register accessor: an alias for `Reg<DIV_SPEC>`"]
+pub type DIV = crate::Reg<div::DIV_SPEC>;
 #[doc = "Clock divider. If non-zero, CS_START_MANY will start conversions  
  at regular intervals rather than back-to-back.  
  The divider is reset when either of these fields are written.  
  Total period is 1 + INT + FRAC / 256"]
 pub mod div;
-#[doc = "Raw Interrupts  
-
-This register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
-
-For information about available fields see [intr](intr) module"]
-pub type INTR = crate::Reg<u32, _INTR>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _INTR;
-#[doc = "`read()` method returns [intr::R](intr::R) reader structure"]
-impl crate::Readable for INTR {}
+#[doc = "INTR register accessor: an alias for `Reg<INTR_SPEC>`"]
+pub type INTR = crate::Reg<intr::INTR_SPEC>;
 #[doc = "Raw Interrupts"]
 pub mod intr;
-#[doc = "Interrupt Enable  
-
-This register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
-
-For information about available fields see [inte](inte) module"]
-pub type INTE = crate::Reg<u32, _INTE>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _INTE;
-#[doc = "`read()` method returns [inte::R](inte::R) reader structure"]
-impl crate::Readable for INTE {}
-#[doc = "`write(|w| ..)` method takes [inte::W](inte::W) writer structure"]
-impl crate::Writable for INTE {}
+#[doc = "INTE register accessor: an alias for `Reg<INTE_SPEC>`"]
+pub type INTE = crate::Reg<inte::INTE_SPEC>;
 #[doc = "Interrupt Enable"]
 pub mod inte;
-#[doc = "Interrupt Force  
-
-This register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
-
-For information about available fields see [intf](intf) module"]
-pub type INTF = crate::Reg<u32, _INTF>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _INTF;
-#[doc = "`read()` method returns [intf::R](intf::R) reader structure"]
-impl crate::Readable for INTF {}
-#[doc = "`write(|w| ..)` method takes [intf::W](intf::W) writer structure"]
-impl crate::Writable for INTF {}
+#[doc = "INTF register accessor: an alias for `Reg<INTF_SPEC>`"]
+pub type INTF = crate::Reg<intf::INTF_SPEC>;
 #[doc = "Interrupt Force"]
 pub mod intf;
-#[doc = "Interrupt status after masking & forcing  
-
-This register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
-
-For information about available fields see [ints](ints) module"]
-pub type INTS = crate::Reg<u32, _INTS>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _INTS;
-#[doc = "`read()` method returns [ints::R](ints::R) reader structure"]
-impl crate::Readable for INTS {}
+#[doc = "INTS register accessor: an alias for `Reg<INTS_SPEC>`"]
+pub type INTS = crate::Reg<ints::INTS_SPEC>;
 #[doc = "Interrupt status after masking & forcing"]
 pub mod ints;

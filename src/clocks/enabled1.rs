@@ -1,35 +1,228 @@
-#[doc = "Reader of register ENABLED1"]
-pub type R = crate::R<u32, super::ENABLED1>;
-#[doc = "Reader of field `clk_sys_xosc`"]
-pub type CLK_SYS_XOSC_R = crate::R<bool, bool>;
-#[doc = "Reader of field `clk_sys_xip`"]
-pub type CLK_SYS_XIP_R = crate::R<bool, bool>;
-#[doc = "Reader of field `clk_sys_watchdog`"]
-pub type CLK_SYS_WATCHDOG_R = crate::R<bool, bool>;
-#[doc = "Reader of field `clk_usb_usbctrl`"]
-pub type CLK_USB_USBCTRL_R = crate::R<bool, bool>;
-#[doc = "Reader of field `clk_sys_usbctrl`"]
-pub type CLK_SYS_USBCTRL_R = crate::R<bool, bool>;
-#[doc = "Reader of field `clk_sys_uart1`"]
-pub type CLK_SYS_UART1_R = crate::R<bool, bool>;
-#[doc = "Reader of field `clk_peri_uart1`"]
-pub type CLK_PERI_UART1_R = crate::R<bool, bool>;
-#[doc = "Reader of field `clk_sys_uart0`"]
-pub type CLK_SYS_UART0_R = crate::R<bool, bool>;
-#[doc = "Reader of field `clk_peri_uart0`"]
-pub type CLK_PERI_UART0_R = crate::R<bool, bool>;
-#[doc = "Reader of field `clk_sys_timer`"]
-pub type CLK_SYS_TIMER_R = crate::R<bool, bool>;
-#[doc = "Reader of field `clk_sys_tbman`"]
-pub type CLK_SYS_TBMAN_R = crate::R<bool, bool>;
-#[doc = "Reader of field `clk_sys_sysinfo`"]
-pub type CLK_SYS_SYSINFO_R = crate::R<bool, bool>;
-#[doc = "Reader of field `clk_sys_syscfg`"]
-pub type CLK_SYS_SYSCFG_R = crate::R<bool, bool>;
-#[doc = "Reader of field `clk_sys_sram5`"]
-pub type CLK_SYS_SRAM5_R = crate::R<bool, bool>;
-#[doc = "Reader of field `clk_sys_sram4`"]
-pub type CLK_SYS_SRAM4_R = crate::R<bool, bool>;
+#[doc = "Register `ENABLED1` reader"]
+pub struct R(crate::R<ENABLED1_SPEC>);
+impl core::ops::Deref for R {
+    type Target = crate::R<ENABLED1_SPEC>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+impl From<crate::R<ENABLED1_SPEC>> for R {
+    #[inline(always)]
+    fn from(reader: crate::R<ENABLED1_SPEC>) -> Self {
+        R(reader)
+    }
+}
+#[doc = "Field `clk_sys_xosc` reader - "]
+pub struct CLK_SYS_XOSC_R(crate::FieldReader<bool, bool>);
+impl CLK_SYS_XOSC_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        CLK_SYS_XOSC_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for CLK_SYS_XOSC_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `clk_sys_xip` reader - "]
+pub struct CLK_SYS_XIP_R(crate::FieldReader<bool, bool>);
+impl CLK_SYS_XIP_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        CLK_SYS_XIP_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for CLK_SYS_XIP_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `clk_sys_watchdog` reader - "]
+pub struct CLK_SYS_WATCHDOG_R(crate::FieldReader<bool, bool>);
+impl CLK_SYS_WATCHDOG_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        CLK_SYS_WATCHDOG_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for CLK_SYS_WATCHDOG_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `clk_usb_usbctrl` reader - "]
+pub struct CLK_USB_USBCTRL_R(crate::FieldReader<bool, bool>);
+impl CLK_USB_USBCTRL_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        CLK_USB_USBCTRL_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for CLK_USB_USBCTRL_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `clk_sys_usbctrl` reader - "]
+pub struct CLK_SYS_USBCTRL_R(crate::FieldReader<bool, bool>);
+impl CLK_SYS_USBCTRL_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        CLK_SYS_USBCTRL_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for CLK_SYS_USBCTRL_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `clk_sys_uart1` reader - "]
+pub struct CLK_SYS_UART1_R(crate::FieldReader<bool, bool>);
+impl CLK_SYS_UART1_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        CLK_SYS_UART1_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for CLK_SYS_UART1_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `clk_peri_uart1` reader - "]
+pub struct CLK_PERI_UART1_R(crate::FieldReader<bool, bool>);
+impl CLK_PERI_UART1_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        CLK_PERI_UART1_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for CLK_PERI_UART1_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `clk_sys_uart0` reader - "]
+pub struct CLK_SYS_UART0_R(crate::FieldReader<bool, bool>);
+impl CLK_SYS_UART0_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        CLK_SYS_UART0_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for CLK_SYS_UART0_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `clk_peri_uart0` reader - "]
+pub struct CLK_PERI_UART0_R(crate::FieldReader<bool, bool>);
+impl CLK_PERI_UART0_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        CLK_PERI_UART0_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for CLK_PERI_UART0_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `clk_sys_timer` reader - "]
+pub struct CLK_SYS_TIMER_R(crate::FieldReader<bool, bool>);
+impl CLK_SYS_TIMER_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        CLK_SYS_TIMER_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for CLK_SYS_TIMER_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `clk_sys_tbman` reader - "]
+pub struct CLK_SYS_TBMAN_R(crate::FieldReader<bool, bool>);
+impl CLK_SYS_TBMAN_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        CLK_SYS_TBMAN_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for CLK_SYS_TBMAN_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `clk_sys_sysinfo` reader - "]
+pub struct CLK_SYS_SYSINFO_R(crate::FieldReader<bool, bool>);
+impl CLK_SYS_SYSINFO_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        CLK_SYS_SYSINFO_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for CLK_SYS_SYSINFO_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `clk_sys_syscfg` reader - "]
+pub struct CLK_SYS_SYSCFG_R(crate::FieldReader<bool, bool>);
+impl CLK_SYS_SYSCFG_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        CLK_SYS_SYSCFG_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for CLK_SYS_SYSCFG_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `clk_sys_sram5` reader - "]
+pub struct CLK_SYS_SRAM5_R(crate::FieldReader<bool, bool>);
+impl CLK_SYS_SRAM5_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        CLK_SYS_SRAM5_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for CLK_SYS_SRAM5_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `clk_sys_sram4` reader - "]
+pub struct CLK_SYS_SRAM4_R(crate::FieldReader<bool, bool>);
+impl CLK_SYS_SRAM4_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        CLK_SYS_SRAM4_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for CLK_SYS_SRAM4_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
 impl R {
     #[doc = "Bit 14"]
     #[inline(always)]
@@ -105,5 +298,25 @@ impl R {
     #[inline(always)]
     pub fn clk_sys_sram4(&self) -> CLK_SYS_SRAM4_R {
         CLK_SYS_SRAM4_R::new((self.bits & 0x01) != 0)
+    }
+}
+#[doc = "indicates the state of the clock enable  
+
+This register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+
+For information about available fields see [enabled1](index.html) module"]
+pub struct ENABLED1_SPEC;
+impl crate::RegisterSpec for ENABLED1_SPEC {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [enabled1::R](R) reader structure"]
+impl crate::Readable for ENABLED1_SPEC {
+    type Reader = R;
+}
+#[doc = "`reset()` method sets ENABLED1 to value 0"]
+impl crate::Resettable for ENABLED1_SPEC {
+    #[inline(always)]
+    fn reset_value() -> Self::Ux {
+        0
     }
 }

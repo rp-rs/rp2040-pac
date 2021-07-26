@@ -1,53 +1,354 @@
-#[doc = "Reader of register PROC1_INTS"]
-pub type R = crate::R<u32, super::PROC1_INTS>;
-#[doc = "Reader of field `GPIO_QSPI_SD3_EDGE_HIGH`"]
-pub type GPIO_QSPI_SD3_EDGE_HIGH_R = crate::R<bool, bool>;
-#[doc = "Reader of field `GPIO_QSPI_SD3_EDGE_LOW`"]
-pub type GPIO_QSPI_SD3_EDGE_LOW_R = crate::R<bool, bool>;
-#[doc = "Reader of field `GPIO_QSPI_SD3_LEVEL_HIGH`"]
-pub type GPIO_QSPI_SD3_LEVEL_HIGH_R = crate::R<bool, bool>;
-#[doc = "Reader of field `GPIO_QSPI_SD3_LEVEL_LOW`"]
-pub type GPIO_QSPI_SD3_LEVEL_LOW_R = crate::R<bool, bool>;
-#[doc = "Reader of field `GPIO_QSPI_SD2_EDGE_HIGH`"]
-pub type GPIO_QSPI_SD2_EDGE_HIGH_R = crate::R<bool, bool>;
-#[doc = "Reader of field `GPIO_QSPI_SD2_EDGE_LOW`"]
-pub type GPIO_QSPI_SD2_EDGE_LOW_R = crate::R<bool, bool>;
-#[doc = "Reader of field `GPIO_QSPI_SD2_LEVEL_HIGH`"]
-pub type GPIO_QSPI_SD2_LEVEL_HIGH_R = crate::R<bool, bool>;
-#[doc = "Reader of field `GPIO_QSPI_SD2_LEVEL_LOW`"]
-pub type GPIO_QSPI_SD2_LEVEL_LOW_R = crate::R<bool, bool>;
-#[doc = "Reader of field `GPIO_QSPI_SD1_EDGE_HIGH`"]
-pub type GPIO_QSPI_SD1_EDGE_HIGH_R = crate::R<bool, bool>;
-#[doc = "Reader of field `GPIO_QSPI_SD1_EDGE_LOW`"]
-pub type GPIO_QSPI_SD1_EDGE_LOW_R = crate::R<bool, bool>;
-#[doc = "Reader of field `GPIO_QSPI_SD1_LEVEL_HIGH`"]
-pub type GPIO_QSPI_SD1_LEVEL_HIGH_R = crate::R<bool, bool>;
-#[doc = "Reader of field `GPIO_QSPI_SD1_LEVEL_LOW`"]
-pub type GPIO_QSPI_SD1_LEVEL_LOW_R = crate::R<bool, bool>;
-#[doc = "Reader of field `GPIO_QSPI_SD0_EDGE_HIGH`"]
-pub type GPIO_QSPI_SD0_EDGE_HIGH_R = crate::R<bool, bool>;
-#[doc = "Reader of field `GPIO_QSPI_SD0_EDGE_LOW`"]
-pub type GPIO_QSPI_SD0_EDGE_LOW_R = crate::R<bool, bool>;
-#[doc = "Reader of field `GPIO_QSPI_SD0_LEVEL_HIGH`"]
-pub type GPIO_QSPI_SD0_LEVEL_HIGH_R = crate::R<bool, bool>;
-#[doc = "Reader of field `GPIO_QSPI_SD0_LEVEL_LOW`"]
-pub type GPIO_QSPI_SD0_LEVEL_LOW_R = crate::R<bool, bool>;
-#[doc = "Reader of field `GPIO_QSPI_SS_EDGE_HIGH`"]
-pub type GPIO_QSPI_SS_EDGE_HIGH_R = crate::R<bool, bool>;
-#[doc = "Reader of field `GPIO_QSPI_SS_EDGE_LOW`"]
-pub type GPIO_QSPI_SS_EDGE_LOW_R = crate::R<bool, bool>;
-#[doc = "Reader of field `GPIO_QSPI_SS_LEVEL_HIGH`"]
-pub type GPIO_QSPI_SS_LEVEL_HIGH_R = crate::R<bool, bool>;
-#[doc = "Reader of field `GPIO_QSPI_SS_LEVEL_LOW`"]
-pub type GPIO_QSPI_SS_LEVEL_LOW_R = crate::R<bool, bool>;
-#[doc = "Reader of field `GPIO_QSPI_SCLK_EDGE_HIGH`"]
-pub type GPIO_QSPI_SCLK_EDGE_HIGH_R = crate::R<bool, bool>;
-#[doc = "Reader of field `GPIO_QSPI_SCLK_EDGE_LOW`"]
-pub type GPIO_QSPI_SCLK_EDGE_LOW_R = crate::R<bool, bool>;
-#[doc = "Reader of field `GPIO_QSPI_SCLK_LEVEL_HIGH`"]
-pub type GPIO_QSPI_SCLK_LEVEL_HIGH_R = crate::R<bool, bool>;
-#[doc = "Reader of field `GPIO_QSPI_SCLK_LEVEL_LOW`"]
-pub type GPIO_QSPI_SCLK_LEVEL_LOW_R = crate::R<bool, bool>;
+#[doc = "Register `PROC1_INTS` reader"]
+pub struct R(crate::R<PROC1_INTS_SPEC>);
+impl core::ops::Deref for R {
+    type Target = crate::R<PROC1_INTS_SPEC>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+impl From<crate::R<PROC1_INTS_SPEC>> for R {
+    #[inline(always)]
+    fn from(reader: crate::R<PROC1_INTS_SPEC>) -> Self {
+        R(reader)
+    }
+}
+#[doc = "Field `GPIO_QSPI_SD3_EDGE_HIGH` reader - "]
+pub struct GPIO_QSPI_SD3_EDGE_HIGH_R(crate::FieldReader<bool, bool>);
+impl GPIO_QSPI_SD3_EDGE_HIGH_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        GPIO_QSPI_SD3_EDGE_HIGH_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for GPIO_QSPI_SD3_EDGE_HIGH_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `GPIO_QSPI_SD3_EDGE_LOW` reader - "]
+pub struct GPIO_QSPI_SD3_EDGE_LOW_R(crate::FieldReader<bool, bool>);
+impl GPIO_QSPI_SD3_EDGE_LOW_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        GPIO_QSPI_SD3_EDGE_LOW_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for GPIO_QSPI_SD3_EDGE_LOW_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `GPIO_QSPI_SD3_LEVEL_HIGH` reader - "]
+pub struct GPIO_QSPI_SD3_LEVEL_HIGH_R(crate::FieldReader<bool, bool>);
+impl GPIO_QSPI_SD3_LEVEL_HIGH_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        GPIO_QSPI_SD3_LEVEL_HIGH_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for GPIO_QSPI_SD3_LEVEL_HIGH_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `GPIO_QSPI_SD3_LEVEL_LOW` reader - "]
+pub struct GPIO_QSPI_SD3_LEVEL_LOW_R(crate::FieldReader<bool, bool>);
+impl GPIO_QSPI_SD3_LEVEL_LOW_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        GPIO_QSPI_SD3_LEVEL_LOW_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for GPIO_QSPI_SD3_LEVEL_LOW_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `GPIO_QSPI_SD2_EDGE_HIGH` reader - "]
+pub struct GPIO_QSPI_SD2_EDGE_HIGH_R(crate::FieldReader<bool, bool>);
+impl GPIO_QSPI_SD2_EDGE_HIGH_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        GPIO_QSPI_SD2_EDGE_HIGH_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for GPIO_QSPI_SD2_EDGE_HIGH_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `GPIO_QSPI_SD2_EDGE_LOW` reader - "]
+pub struct GPIO_QSPI_SD2_EDGE_LOW_R(crate::FieldReader<bool, bool>);
+impl GPIO_QSPI_SD2_EDGE_LOW_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        GPIO_QSPI_SD2_EDGE_LOW_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for GPIO_QSPI_SD2_EDGE_LOW_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `GPIO_QSPI_SD2_LEVEL_HIGH` reader - "]
+pub struct GPIO_QSPI_SD2_LEVEL_HIGH_R(crate::FieldReader<bool, bool>);
+impl GPIO_QSPI_SD2_LEVEL_HIGH_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        GPIO_QSPI_SD2_LEVEL_HIGH_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for GPIO_QSPI_SD2_LEVEL_HIGH_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `GPIO_QSPI_SD2_LEVEL_LOW` reader - "]
+pub struct GPIO_QSPI_SD2_LEVEL_LOW_R(crate::FieldReader<bool, bool>);
+impl GPIO_QSPI_SD2_LEVEL_LOW_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        GPIO_QSPI_SD2_LEVEL_LOW_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for GPIO_QSPI_SD2_LEVEL_LOW_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `GPIO_QSPI_SD1_EDGE_HIGH` reader - "]
+pub struct GPIO_QSPI_SD1_EDGE_HIGH_R(crate::FieldReader<bool, bool>);
+impl GPIO_QSPI_SD1_EDGE_HIGH_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        GPIO_QSPI_SD1_EDGE_HIGH_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for GPIO_QSPI_SD1_EDGE_HIGH_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `GPIO_QSPI_SD1_EDGE_LOW` reader - "]
+pub struct GPIO_QSPI_SD1_EDGE_LOW_R(crate::FieldReader<bool, bool>);
+impl GPIO_QSPI_SD1_EDGE_LOW_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        GPIO_QSPI_SD1_EDGE_LOW_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for GPIO_QSPI_SD1_EDGE_LOW_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `GPIO_QSPI_SD1_LEVEL_HIGH` reader - "]
+pub struct GPIO_QSPI_SD1_LEVEL_HIGH_R(crate::FieldReader<bool, bool>);
+impl GPIO_QSPI_SD1_LEVEL_HIGH_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        GPIO_QSPI_SD1_LEVEL_HIGH_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for GPIO_QSPI_SD1_LEVEL_HIGH_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `GPIO_QSPI_SD1_LEVEL_LOW` reader - "]
+pub struct GPIO_QSPI_SD1_LEVEL_LOW_R(crate::FieldReader<bool, bool>);
+impl GPIO_QSPI_SD1_LEVEL_LOW_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        GPIO_QSPI_SD1_LEVEL_LOW_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for GPIO_QSPI_SD1_LEVEL_LOW_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `GPIO_QSPI_SD0_EDGE_HIGH` reader - "]
+pub struct GPIO_QSPI_SD0_EDGE_HIGH_R(crate::FieldReader<bool, bool>);
+impl GPIO_QSPI_SD0_EDGE_HIGH_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        GPIO_QSPI_SD0_EDGE_HIGH_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for GPIO_QSPI_SD0_EDGE_HIGH_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `GPIO_QSPI_SD0_EDGE_LOW` reader - "]
+pub struct GPIO_QSPI_SD0_EDGE_LOW_R(crate::FieldReader<bool, bool>);
+impl GPIO_QSPI_SD0_EDGE_LOW_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        GPIO_QSPI_SD0_EDGE_LOW_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for GPIO_QSPI_SD0_EDGE_LOW_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `GPIO_QSPI_SD0_LEVEL_HIGH` reader - "]
+pub struct GPIO_QSPI_SD0_LEVEL_HIGH_R(crate::FieldReader<bool, bool>);
+impl GPIO_QSPI_SD0_LEVEL_HIGH_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        GPIO_QSPI_SD0_LEVEL_HIGH_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for GPIO_QSPI_SD0_LEVEL_HIGH_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `GPIO_QSPI_SD0_LEVEL_LOW` reader - "]
+pub struct GPIO_QSPI_SD0_LEVEL_LOW_R(crate::FieldReader<bool, bool>);
+impl GPIO_QSPI_SD0_LEVEL_LOW_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        GPIO_QSPI_SD0_LEVEL_LOW_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for GPIO_QSPI_SD0_LEVEL_LOW_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `GPIO_QSPI_SS_EDGE_HIGH` reader - "]
+pub struct GPIO_QSPI_SS_EDGE_HIGH_R(crate::FieldReader<bool, bool>);
+impl GPIO_QSPI_SS_EDGE_HIGH_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        GPIO_QSPI_SS_EDGE_HIGH_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for GPIO_QSPI_SS_EDGE_HIGH_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `GPIO_QSPI_SS_EDGE_LOW` reader - "]
+pub struct GPIO_QSPI_SS_EDGE_LOW_R(crate::FieldReader<bool, bool>);
+impl GPIO_QSPI_SS_EDGE_LOW_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        GPIO_QSPI_SS_EDGE_LOW_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for GPIO_QSPI_SS_EDGE_LOW_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `GPIO_QSPI_SS_LEVEL_HIGH` reader - "]
+pub struct GPIO_QSPI_SS_LEVEL_HIGH_R(crate::FieldReader<bool, bool>);
+impl GPIO_QSPI_SS_LEVEL_HIGH_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        GPIO_QSPI_SS_LEVEL_HIGH_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for GPIO_QSPI_SS_LEVEL_HIGH_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `GPIO_QSPI_SS_LEVEL_LOW` reader - "]
+pub struct GPIO_QSPI_SS_LEVEL_LOW_R(crate::FieldReader<bool, bool>);
+impl GPIO_QSPI_SS_LEVEL_LOW_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        GPIO_QSPI_SS_LEVEL_LOW_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for GPIO_QSPI_SS_LEVEL_LOW_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `GPIO_QSPI_SCLK_EDGE_HIGH` reader - "]
+pub struct GPIO_QSPI_SCLK_EDGE_HIGH_R(crate::FieldReader<bool, bool>);
+impl GPIO_QSPI_SCLK_EDGE_HIGH_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        GPIO_QSPI_SCLK_EDGE_HIGH_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for GPIO_QSPI_SCLK_EDGE_HIGH_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `GPIO_QSPI_SCLK_EDGE_LOW` reader - "]
+pub struct GPIO_QSPI_SCLK_EDGE_LOW_R(crate::FieldReader<bool, bool>);
+impl GPIO_QSPI_SCLK_EDGE_LOW_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        GPIO_QSPI_SCLK_EDGE_LOW_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for GPIO_QSPI_SCLK_EDGE_LOW_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `GPIO_QSPI_SCLK_LEVEL_HIGH` reader - "]
+pub struct GPIO_QSPI_SCLK_LEVEL_HIGH_R(crate::FieldReader<bool, bool>);
+impl GPIO_QSPI_SCLK_LEVEL_HIGH_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        GPIO_QSPI_SCLK_LEVEL_HIGH_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for GPIO_QSPI_SCLK_LEVEL_HIGH_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `GPIO_QSPI_SCLK_LEVEL_LOW` reader - "]
+pub struct GPIO_QSPI_SCLK_LEVEL_LOW_R(crate::FieldReader<bool, bool>);
+impl GPIO_QSPI_SCLK_LEVEL_LOW_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        GPIO_QSPI_SCLK_LEVEL_LOW_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for GPIO_QSPI_SCLK_LEVEL_LOW_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
 impl R {
     #[doc = "Bit 23"]
     #[inline(always)]
@@ -168,5 +469,25 @@ impl R {
     #[inline(always)]
     pub fn gpio_qspi_sclk_level_low(&self) -> GPIO_QSPI_SCLK_LEVEL_LOW_R {
         GPIO_QSPI_SCLK_LEVEL_LOW_R::new((self.bits & 0x01) != 0)
+    }
+}
+#[doc = "Interrupt status after masking & forcing for proc1  
+
+This register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+
+For information about available fields see [proc1_ints](index.html) module"]
+pub struct PROC1_INTS_SPEC;
+impl crate::RegisterSpec for PROC1_INTS_SPEC {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [proc1_ints::R](R) reader structure"]
+impl crate::Readable for PROC1_INTS_SPEC {
+    type Reader = R;
+}
+#[doc = "`reset()` method sets PROC1_INTS to value 0"]
+impl crate::Resettable for PROC1_INTS_SPEC {
+    #[inline(always)]
+    fn reset_value() -> Self::Ux {
+        0
     }
 }

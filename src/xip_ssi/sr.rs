@@ -1,19 +1,116 @@
-#[doc = "Reader of register SR"]
-pub type R = crate::R<u32, super::SR>;
-#[doc = "Reader of field `DCOL`"]
-pub type DCOL_R = crate::R<bool, bool>;
-#[doc = "Reader of field `TXE`"]
-pub type TXE_R = crate::R<bool, bool>;
-#[doc = "Reader of field `RFF`"]
-pub type RFF_R = crate::R<bool, bool>;
-#[doc = "Reader of field `RFNE`"]
-pub type RFNE_R = crate::R<bool, bool>;
-#[doc = "Reader of field `TFE`"]
-pub type TFE_R = crate::R<bool, bool>;
-#[doc = "Reader of field `TFNF`"]
-pub type TFNF_R = crate::R<bool, bool>;
-#[doc = "Reader of field `BUSY`"]
-pub type BUSY_R = crate::R<bool, bool>;
+#[doc = "Register `SR` reader"]
+pub struct R(crate::R<SR_SPEC>);
+impl core::ops::Deref for R {
+    type Target = crate::R<SR_SPEC>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+impl From<crate::R<SR_SPEC>> for R {
+    #[inline(always)]
+    fn from(reader: crate::R<SR_SPEC>) -> Self {
+        R(reader)
+    }
+}
+#[doc = "Field `DCOL` reader - Data collision error"]
+pub struct DCOL_R(crate::FieldReader<bool, bool>);
+impl DCOL_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        DCOL_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for DCOL_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `TXE` reader - Transmission error"]
+pub struct TXE_R(crate::FieldReader<bool, bool>);
+impl TXE_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        TXE_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for TXE_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `RFF` reader - Receive FIFO full"]
+pub struct RFF_R(crate::FieldReader<bool, bool>);
+impl RFF_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        RFF_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for RFF_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `RFNE` reader - Receive FIFO not empty"]
+pub struct RFNE_R(crate::FieldReader<bool, bool>);
+impl RFNE_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        RFNE_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for RFNE_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `TFE` reader - Transmit FIFO empty"]
+pub struct TFE_R(crate::FieldReader<bool, bool>);
+impl TFE_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        TFE_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for TFE_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `TFNF` reader - Transmit FIFO not full"]
+pub struct TFNF_R(crate::FieldReader<bool, bool>);
+impl TFNF_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        TFNF_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for TFNF_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `BUSY` reader - SSI busy flag"]
+pub struct BUSY_R(crate::FieldReader<bool, bool>);
+impl BUSY_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        BUSY_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for BUSY_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
 impl R {
     #[doc = "Bit 6 - Data collision error"]
     #[inline(always)]
@@ -49,5 +146,25 @@ impl R {
     #[inline(always)]
     pub fn busy(&self) -> BUSY_R {
         BUSY_R::new((self.bits & 0x01) != 0)
+    }
+}
+#[doc = "Status register  
+
+This register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+
+For information about available fields see [sr](index.html) module"]
+pub struct SR_SPEC;
+impl crate::RegisterSpec for SR_SPEC {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [sr::R](R) reader structure"]
+impl crate::Readable for SR_SPEC {
+    type Reader = R;
+}
+#[doc = "`reset()` method sets SR to value 0"]
+impl crate::Resettable for SR_SPEC {
+    #[inline(always)]
+    fn reset_value() -> Self::Ux {
+        0
     }
 }
