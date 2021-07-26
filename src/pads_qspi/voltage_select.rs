@@ -10,7 +10,9 @@ impl crate::ResetValue for super::VOLTAGE_SELECT {
         0
     }
 }
-#[doc = "\n\nValue on reset: 0"]
+#[doc = "  
+
+Value on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum VOLTAGE_SELECT_A {
     #[doc = "0: Set voltage to 3.3V (DVDD >= 2V5)"]

@@ -1,4 +1,8 @@
-#[doc = "Counter compare values\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cc](cc) module"]
+#[doc = "Counter compare values  
+
+This register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+
+For information about available fields see [cc](cc) module"]
 pub type CC = crate::Reg<u32, _CC>;
 #[allow(missing_docs)]
 #[doc(hidden)]
@@ -9,7 +13,11 @@ impl crate::Readable for CC {}
 impl crate::Writable for CC {}
 #[doc = "Counter compare values"]
 pub mod cc;
-#[doc = "Control and status register\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [csr](csr) module"]
+#[doc = "Control and status register  
+
+This register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+
+For information about available fields see [csr](csr) module"]
 pub type CSR = crate::Reg<u32, _CSR>;
 #[allow(missing_docs)]
 #[doc(hidden)]
@@ -20,7 +28,11 @@ impl crate::Readable for CSR {}
 impl crate::Writable for CSR {}
 #[doc = "Control and status register"]
 pub mod csr;
-#[doc = "Direct access to the PWM counter\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [ctr](ctr) module"]
+#[doc = "Direct access to the PWM counter  
+
+This register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+
+For information about available fields see [ctr](ctr) module"]
 pub type CTR = crate::Reg<u32, _CTR>;
 #[allow(missing_docs)]
 #[doc(hidden)]
@@ -31,7 +43,13 @@ impl crate::Readable for CTR {}
 impl crate::Writable for CTR {}
 #[doc = "Direct access to the PWM counter"]
 pub mod ctr;
-#[doc = "INT and FRAC form a fixed-point fractional number.\\n Counting rate is system clock frequency divided by this number.\\n Fractional division uses simple 1st-order sigma-delta.\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [div](div) module"]
+#[doc = "INT and FRAC form a fixed-point fractional number.  
+ Counting rate is system clock frequency divided by this number.  
+ Fractional division uses simple 1st-order sigma-delta.  
+
+This register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+
+For information about available fields see [div](div) module"]
 pub type DIV = crate::Reg<u32, _DIV>;
 #[allow(missing_docs)]
 #[doc(hidden)]
@@ -40,9 +58,15 @@ pub struct _DIV;
 impl crate::Readable for DIV {}
 #[doc = "`write(|w| ..)` method takes [div::W](div::W) writer structure"]
 impl crate::Writable for DIV {}
-#[doc = "INT and FRAC form a fixed-point fractional number.\\n Counting rate is system clock frequency divided by this number.\\n Fractional division uses simple 1st-order sigma-delta."]
+#[doc = "INT and FRAC form a fixed-point fractional number.  
+ Counting rate is system clock frequency divided by this number.  
+ Fractional division uses simple 1st-order sigma-delta."]
 pub mod div;
-#[doc = "Counter wrap value\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [top](top) module"]
+#[doc = "Counter wrap value  
+
+This register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+
+For information about available fields see [top](top) module"]
 pub type TOP = crate::Reg<u32, _TOP>;
 #[allow(missing_docs)]
 #[doc(hidden)]

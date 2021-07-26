@@ -396,12 +396,14 @@ impl R {
     pub fn rx_dd(&self) -> RX_DD_R {
         RX_DD_R::new(((self.bits >> 16) & 0x01) != 0)
     }
-    #[doc = "Bit 15 - TX_DIFFMODE=0: Single ended mode\\n TX_DIFFMODE=1: Differential drive mode (TX_DM, TX_DM_OE ignored)"]
+    #[doc = "Bit 15 - TX_DIFFMODE=0: Single ended mode  
+ TX_DIFFMODE=1: Differential drive mode (TX_DM, TX_DM_OE ignored)"]
     #[inline(always)]
     pub fn tx_diffmode(&self) -> TX_DIFFMODE_R {
         TX_DIFFMODE_R::new(((self.bits >> 15) & 0x01) != 0)
     }
-    #[doc = "Bit 14 - TX_FSSLEW=0: Low speed slew rate\\n TX_FSSLEW=1: Full speed slew rate"]
+    #[doc = "Bit 14 - TX_FSSLEW=0: Low speed slew rate  
+ TX_FSSLEW=1: Full speed slew rate"]
     #[inline(always)]
     pub fn tx_fsslew(&self) -> TX_FSSLEW_R {
         TX_FSSLEW_R::new(((self.bits >> 14) & 0x01) != 0)
@@ -416,22 +418,26 @@ impl R {
     pub fn rx_pd(&self) -> RX_PD_R {
         RX_PD_R::new(((self.bits >> 12) & 0x01) != 0)
     }
-    #[doc = "Bit 11 - Output data. TX_DIFFMODE=1, Ignored\\n TX_DIFFMODE=0, Drives DPM only. TX_DM_OE=1 to enable drive. DPM=TX_DM"]
+    #[doc = "Bit 11 - Output data. TX_DIFFMODE=1, Ignored  
+ TX_DIFFMODE=0, Drives DPM only. TX_DM_OE=1 to enable drive. DPM=TX_DM"]
     #[inline(always)]
     pub fn tx_dm(&self) -> TX_DM_R {
         TX_DM_R::new(((self.bits >> 11) & 0x01) != 0)
     }
-    #[doc = "Bit 10 - Output data. If TX_DIFFMODE=1, Drives DPP/DPM diff pair. TX_DP_OE=1 to enable drive. DPP=TX_DP, DPM=~TX_DP\\n If TX_DIFFMODE=0, Drives DPP only. TX_DP_OE=1 to enable drive. DPP=TX_DP"]
+    #[doc = "Bit 10 - Output data. If TX_DIFFMODE=1, Drives DPP/DPM diff pair. TX_DP_OE=1 to enable drive. DPP=TX_DP, DPM=~TX_DP  
+ If TX_DIFFMODE=0, Drives DPP only. TX_DP_OE=1 to enable drive. DPP=TX_DP"]
     #[inline(always)]
     pub fn tx_dp(&self) -> TX_DP_R {
         TX_DP_R::new(((self.bits >> 10) & 0x01) != 0)
     }
-    #[doc = "Bit 9 - Output enable. If TX_DIFFMODE=1, Ignored.\\n If TX_DIFFMODE=0, OE for DPM only. 0 - DPM in Hi-Z state; 1 - DPM driving"]
+    #[doc = "Bit 9 - Output enable. If TX_DIFFMODE=1, Ignored.  
+ If TX_DIFFMODE=0, OE for DPM only. 0 - DPM in Hi-Z state; 1 - DPM driving"]
     #[inline(always)]
     pub fn tx_dm_oe(&self) -> TX_DM_OE_R {
         TX_DM_OE_R::new(((self.bits >> 9) & 0x01) != 0)
     }
-    #[doc = "Bit 8 - Output enable. If TX_DIFFMODE=1, OE for DPP/DPM diff pair. 0 - DPP/DPM in Hi-Z state; 1 - DPP/DPM driving\\n If TX_DIFFMODE=0, OE for DPP only. 0 - DPP in Hi-Z state; 1 - DPP driving"]
+    #[doc = "Bit 8 - Output enable. If TX_DIFFMODE=1, OE for DPP/DPM diff pair. 0 - DPP/DPM in Hi-Z state; 1 - DPP/DPM driving  
+ If TX_DIFFMODE=0, OE for DPP only. 0 - DPP in Hi-Z state; 1 - DPP driving"]
     #[inline(always)]
     pub fn tx_dp_oe(&self) -> TX_DP_OE_R {
         TX_DP_OE_R::new(((self.bits >> 8) & 0x01) != 0)
@@ -468,12 +474,14 @@ impl R {
     }
 }
 impl W {
-    #[doc = "Bit 15 - TX_DIFFMODE=0: Single ended mode\\n TX_DIFFMODE=1: Differential drive mode (TX_DM, TX_DM_OE ignored)"]
+    #[doc = "Bit 15 - TX_DIFFMODE=0: Single ended mode  
+ TX_DIFFMODE=1: Differential drive mode (TX_DM, TX_DM_OE ignored)"]
     #[inline(always)]
     pub fn tx_diffmode(&mut self) -> TX_DIFFMODE_W {
         TX_DIFFMODE_W { w: self }
     }
-    #[doc = "Bit 14 - TX_FSSLEW=0: Low speed slew rate\\n TX_FSSLEW=1: Full speed slew rate"]
+    #[doc = "Bit 14 - TX_FSSLEW=0: Low speed slew rate  
+ TX_FSSLEW=1: Full speed slew rate"]
     #[inline(always)]
     pub fn tx_fsslew(&mut self) -> TX_FSSLEW_W {
         TX_FSSLEW_W { w: self }
@@ -488,22 +496,26 @@ impl W {
     pub fn rx_pd(&mut self) -> RX_PD_W {
         RX_PD_W { w: self }
     }
-    #[doc = "Bit 11 - Output data. TX_DIFFMODE=1, Ignored\\n TX_DIFFMODE=0, Drives DPM only. TX_DM_OE=1 to enable drive. DPM=TX_DM"]
+    #[doc = "Bit 11 - Output data. TX_DIFFMODE=1, Ignored  
+ TX_DIFFMODE=0, Drives DPM only. TX_DM_OE=1 to enable drive. DPM=TX_DM"]
     #[inline(always)]
     pub fn tx_dm(&mut self) -> TX_DM_W {
         TX_DM_W { w: self }
     }
-    #[doc = "Bit 10 - Output data. If TX_DIFFMODE=1, Drives DPP/DPM diff pair. TX_DP_OE=1 to enable drive. DPP=TX_DP, DPM=~TX_DP\\n If TX_DIFFMODE=0, Drives DPP only. TX_DP_OE=1 to enable drive. DPP=TX_DP"]
+    #[doc = "Bit 10 - Output data. If TX_DIFFMODE=1, Drives DPP/DPM diff pair. TX_DP_OE=1 to enable drive. DPP=TX_DP, DPM=~TX_DP  
+ If TX_DIFFMODE=0, Drives DPP only. TX_DP_OE=1 to enable drive. DPP=TX_DP"]
     #[inline(always)]
     pub fn tx_dp(&mut self) -> TX_DP_W {
         TX_DP_W { w: self }
     }
-    #[doc = "Bit 9 - Output enable. If TX_DIFFMODE=1, Ignored.\\n If TX_DIFFMODE=0, OE for DPM only. 0 - DPM in Hi-Z state; 1 - DPM driving"]
+    #[doc = "Bit 9 - Output enable. If TX_DIFFMODE=1, Ignored.  
+ If TX_DIFFMODE=0, OE for DPM only. 0 - DPM in Hi-Z state; 1 - DPM driving"]
     #[inline(always)]
     pub fn tx_dm_oe(&mut self) -> TX_DM_OE_W {
         TX_DM_OE_W { w: self }
     }
-    #[doc = "Bit 8 - Output enable. If TX_DIFFMODE=1, OE for DPP/DPM diff pair. 0 - DPP/DPM in Hi-Z state; 1 - DPP/DPM driving\\n If TX_DIFFMODE=0, OE for DPP only. 0 - DPP in Hi-Z state; 1 - DPP driving"]
+    #[doc = "Bit 8 - Output enable. If TX_DIFFMODE=1, OE for DPP/DPM diff pair. 0 - DPP/DPM in Hi-Z state; 1 - DPP/DPM driving  
+ If TX_DIFFMODE=0, OE for DPP only. 0 - DPP in Hi-Z state; 1 - DPP driving"]
     #[inline(always)]
     pub fn tx_dp_oe(&mut self) -> TX_DP_OE_W {
         TX_DP_OE_W { w: self }

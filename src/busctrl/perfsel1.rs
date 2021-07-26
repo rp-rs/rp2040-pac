@@ -10,7 +10,9 @@ impl crate::ResetValue for super::PERFSEL1 {
         0x1f
     }
 }
-#[doc = "Select an event for PERFCTR1. Count either contested accesses, or all accesses, on a downstream port of the main crossbar.\n\nValue on reset: 31"]
+#[doc = "Select an event for PERFCTR1. Count either contested accesses, or all accesses, on a downstream port of the main crossbar.  
+
+Value on reset: 31"]
 #[derive(Clone, Copy, Debug, PartialEq)]
 #[repr(u8)]
 pub enum PERFSEL1_A {

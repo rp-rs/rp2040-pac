@@ -25,14 +25,26 @@ impl<'a> SETENA_W<'a> {
     }
 }
 impl R {
-    #[doc = "Bits 0:31 - Interrupt set-enable bits.\\n Write:\\n 0 = No effect.\\n 1 = Enable interrupt.\\n Read:\\n 0 = Interrupt disabled.\\n 1 = Interrupt enabled."]
+    #[doc = "Bits 0:31 - Interrupt set-enable bits.  
+ Write:  
+ 0 = No effect.  
+ 1 = Enable interrupt.  
+ Read:  
+ 0 = Interrupt disabled.  
+ 1 = Interrupt enabled."]
     #[inline(always)]
     pub fn setena(&self) -> SETENA_R {
         SETENA_R::new((self.bits & 0xffff_ffff) as u32)
     }
 }
 impl W {
-    #[doc = "Bits 0:31 - Interrupt set-enable bits.\\n Write:\\n 0 = No effect.\\n 1 = Enable interrupt.\\n Read:\\n 0 = Interrupt disabled.\\n 1 = Interrupt enabled."]
+    #[doc = "Bits 0:31 - Interrupt set-enable bits.  
+ Write:  
+ 0 = No effect.  
+ 1 = Enable interrupt.  
+ Read:  
+ 0 = Interrupt disabled.  
+ 1 = Interrupt enabled."]
     #[inline(always)]
     pub fn setena(&mut self) -> SETENA_W {
         SETENA_W { w: self }

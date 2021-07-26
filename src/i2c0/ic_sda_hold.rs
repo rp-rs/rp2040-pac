@@ -39,24 +39,32 @@ impl<'a> IC_SDA_TX_HOLD_W<'a> {
     }
 }
 impl R {
-    #[doc = "Bits 16:23 - Sets the required SDA hold time in units of ic_clk period, when DW_apb_i2c acts as a receiver.\\n\\n Reset value: IC_DEFAULT_SDA_HOLD\\[23:16\\]."]
+    #[doc = "Bits 16:23 - Sets the required SDA hold time in units of ic_clk period, when DW_apb_i2c acts as a receiver.  
+
+ Reset value: IC_DEFAULT_SDA_HOLD\\[23:16\\]."]
     #[inline(always)]
     pub fn ic_sda_rx_hold(&self) -> IC_SDA_RX_HOLD_R {
         IC_SDA_RX_HOLD_R::new(((self.bits >> 16) & 0xff) as u8)
     }
-    #[doc = "Bits 0:15 - Sets the required SDA hold time in units of ic_clk period, when DW_apb_i2c acts as a transmitter.\\n\\n Reset value: IC_DEFAULT_SDA_HOLD\\[15:0\\]."]
+    #[doc = "Bits 0:15 - Sets the required SDA hold time in units of ic_clk period, when DW_apb_i2c acts as a transmitter.  
+
+ Reset value: IC_DEFAULT_SDA_HOLD\\[15:0\\]."]
     #[inline(always)]
     pub fn ic_sda_tx_hold(&self) -> IC_SDA_TX_HOLD_R {
         IC_SDA_TX_HOLD_R::new((self.bits & 0xffff) as u16)
     }
 }
 impl W {
-    #[doc = "Bits 16:23 - Sets the required SDA hold time in units of ic_clk period, when DW_apb_i2c acts as a receiver.\\n\\n Reset value: IC_DEFAULT_SDA_HOLD\\[23:16\\]."]
+    #[doc = "Bits 16:23 - Sets the required SDA hold time in units of ic_clk period, when DW_apb_i2c acts as a receiver.  
+
+ Reset value: IC_DEFAULT_SDA_HOLD\\[23:16\\]."]
     #[inline(always)]
     pub fn ic_sda_rx_hold(&mut self) -> IC_SDA_RX_HOLD_W {
         IC_SDA_RX_HOLD_W { w: self }
     }
-    #[doc = "Bits 0:15 - Sets the required SDA hold time in units of ic_clk period, when DW_apb_i2c acts as a transmitter.\\n\\n Reset value: IC_DEFAULT_SDA_HOLD\\[15:0\\]."]
+    #[doc = "Bits 0:15 - Sets the required SDA hold time in units of ic_clk period, when DW_apb_i2c acts as a transmitter.  
+
+ Reset value: IC_DEFAULT_SDA_HOLD\\[15:0\\]."]
     #[inline(always)]
     pub fn ic_sda_tx_hold(&mut self) -> IC_SDA_TX_HOLD_W {
         IC_SDA_TX_HOLD_W { w: self }

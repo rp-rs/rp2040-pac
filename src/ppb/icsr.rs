@@ -139,27 +139,58 @@ pub type VECTPENDING_R = crate::R<u16, u16>;
 #[doc = "Reader of field `VECTACTIVE`"]
 pub type VECTACTIVE_R = crate::R<u16, u16>;
 impl R {
-    #[doc = "Bit 31 - Setting this bit will activate an NMI. Since NMI is the highest priority exception, it will activate as soon as it is registered.\\n NMI set-pending bit.\\n Write:\\n 0 = No effect.\\n 1 = Changes NMI exception state to pending.\\n Read:\\n 0 = NMI exception is not pending.\\n 1 = NMI exception is pending.\\n Because NMI is the highest-priority exception, normally the processor enters the NMI\\n exception handler as soon as it detects a write of 1 to this bit. Entering the handler then clears\\n this bit to 0. This means a read of this bit by the NMI exception handler returns 1 only if the\\n NMI signal is reasserted while the processor is executing that handler."]
+    #[doc = "Bit 31 - Setting this bit will activate an NMI. Since NMI is the highest priority exception, it will activate as soon as it is registered.  
+ NMI set-pending bit.  
+ Write:  
+ 0 = No effect.  
+ 1 = Changes NMI exception state to pending.  
+ Read:  
+ 0 = NMI exception is not pending.  
+ 1 = NMI exception is pending.  
+ Because NMI is the highest-priority exception, normally the processor enters the NMI  
+ exception handler as soon as it detects a write of 1 to this bit. Entering the handler then clears  
+ this bit to 0. This means a read of this bit by the NMI exception handler returns 1 only if the  
+ NMI signal is reasserted while the processor is executing that handler."]
     #[inline(always)]
     pub fn nmipendset(&self) -> NMIPENDSET_R {
         NMIPENDSET_R::new(((self.bits >> 31) & 0x01) != 0)
     }
-    #[doc = "Bit 28 - PendSV set-pending bit.\\n Write:\\n 0 = No effect.\\n 1 = Changes PendSV exception state to pending.\\n Read:\\n 0 = PendSV exception is not pending.\\n 1 = PendSV exception is pending.\\n Writing 1 to this bit is the only way to set the PendSV exception state to pending."]
+    #[doc = "Bit 28 - PendSV set-pending bit.  
+ Write:  
+ 0 = No effect.  
+ 1 = Changes PendSV exception state to pending.  
+ Read:  
+ 0 = PendSV exception is not pending.  
+ 1 = PendSV exception is pending.  
+ Writing 1 to this bit is the only way to set the PendSV exception state to pending."]
     #[inline(always)]
     pub fn pendsvset(&self) -> PENDSVSET_R {
         PENDSVSET_R::new(((self.bits >> 28) & 0x01) != 0)
     }
-    #[doc = "Bit 27 - PendSV clear-pending bit.\\n Write:\\n 0 = No effect.\\n 1 = Removes the pending state from the PendSV exception."]
+    #[doc = "Bit 27 - PendSV clear-pending bit.  
+ Write:  
+ 0 = No effect.  
+ 1 = Removes the pending state from the PendSV exception."]
     #[inline(always)]
     pub fn pendsvclr(&self) -> PENDSVCLR_R {
         PENDSVCLR_R::new(((self.bits >> 27) & 0x01) != 0)
     }
-    #[doc = "Bit 26 - SysTick exception set-pending bit.\\n Write:\\n 0 = No effect.\\n 1 = Changes SysTick exception state to pending.\\n Read:\\n 0 = SysTick exception is not pending.\\n 1 = SysTick exception is pending."]
+    #[doc = "Bit 26 - SysTick exception set-pending bit.  
+ Write:  
+ 0 = No effect.  
+ 1 = Changes SysTick exception state to pending.  
+ Read:  
+ 0 = SysTick exception is not pending.  
+ 1 = SysTick exception is pending."]
     #[inline(always)]
     pub fn pendstset(&self) -> PENDSTSET_R {
         PENDSTSET_R::new(((self.bits >> 26) & 0x01) != 0)
     }
-    #[doc = "Bit 25 - SysTick exception clear-pending bit.\\n Write:\\n 0 = No effect.\\n 1 = Removes the pending state from the SysTick exception.\\n This bit is WO. On a register read its value is Unknown."]
+    #[doc = "Bit 25 - SysTick exception clear-pending bit.  
+ Write:  
+ 0 = No effect.  
+ 1 = Removes the pending state from the SysTick exception.  
+ This bit is WO. On a register read its value is Unknown."]
     #[inline(always)]
     pub fn pendstclr(&self) -> PENDSTCLR_R {
         PENDSTCLR_R::new(((self.bits >> 25) & 0x01) != 0)
@@ -186,27 +217,58 @@ impl R {
     }
 }
 impl W {
-    #[doc = "Bit 31 - Setting this bit will activate an NMI. Since NMI is the highest priority exception, it will activate as soon as it is registered.\\n NMI set-pending bit.\\n Write:\\n 0 = No effect.\\n 1 = Changes NMI exception state to pending.\\n Read:\\n 0 = NMI exception is not pending.\\n 1 = NMI exception is pending.\\n Because NMI is the highest-priority exception, normally the processor enters the NMI\\n exception handler as soon as it detects a write of 1 to this bit. Entering the handler then clears\\n this bit to 0. This means a read of this bit by the NMI exception handler returns 1 only if the\\n NMI signal is reasserted while the processor is executing that handler."]
+    #[doc = "Bit 31 - Setting this bit will activate an NMI. Since NMI is the highest priority exception, it will activate as soon as it is registered.  
+ NMI set-pending bit.  
+ Write:  
+ 0 = No effect.  
+ 1 = Changes NMI exception state to pending.  
+ Read:  
+ 0 = NMI exception is not pending.  
+ 1 = NMI exception is pending.  
+ Because NMI is the highest-priority exception, normally the processor enters the NMI  
+ exception handler as soon as it detects a write of 1 to this bit. Entering the handler then clears  
+ this bit to 0. This means a read of this bit by the NMI exception handler returns 1 only if the  
+ NMI signal is reasserted while the processor is executing that handler."]
     #[inline(always)]
     pub fn nmipendset(&mut self) -> NMIPENDSET_W {
         NMIPENDSET_W { w: self }
     }
-    #[doc = "Bit 28 - PendSV set-pending bit.\\n Write:\\n 0 = No effect.\\n 1 = Changes PendSV exception state to pending.\\n Read:\\n 0 = PendSV exception is not pending.\\n 1 = PendSV exception is pending.\\n Writing 1 to this bit is the only way to set the PendSV exception state to pending."]
+    #[doc = "Bit 28 - PendSV set-pending bit.  
+ Write:  
+ 0 = No effect.  
+ 1 = Changes PendSV exception state to pending.  
+ Read:  
+ 0 = PendSV exception is not pending.  
+ 1 = PendSV exception is pending.  
+ Writing 1 to this bit is the only way to set the PendSV exception state to pending."]
     #[inline(always)]
     pub fn pendsvset(&mut self) -> PENDSVSET_W {
         PENDSVSET_W { w: self }
     }
-    #[doc = "Bit 27 - PendSV clear-pending bit.\\n Write:\\n 0 = No effect.\\n 1 = Removes the pending state from the PendSV exception."]
+    #[doc = "Bit 27 - PendSV clear-pending bit.  
+ Write:  
+ 0 = No effect.  
+ 1 = Removes the pending state from the PendSV exception."]
     #[inline(always)]
     pub fn pendsvclr(&mut self) -> PENDSVCLR_W {
         PENDSVCLR_W { w: self }
     }
-    #[doc = "Bit 26 - SysTick exception set-pending bit.\\n Write:\\n 0 = No effect.\\n 1 = Changes SysTick exception state to pending.\\n Read:\\n 0 = SysTick exception is not pending.\\n 1 = SysTick exception is pending."]
+    #[doc = "Bit 26 - SysTick exception set-pending bit.  
+ Write:  
+ 0 = No effect.  
+ 1 = Changes SysTick exception state to pending.  
+ Read:  
+ 0 = SysTick exception is not pending.  
+ 1 = SysTick exception is pending."]
     #[inline(always)]
     pub fn pendstset(&mut self) -> PENDSTSET_W {
         PENDSTSET_W { w: self }
     }
-    #[doc = "Bit 25 - SysTick exception clear-pending bit.\\n Write:\\n 0 = No effect.\\n 1 = Removes the pending state from the SysTick exception.\\n This bit is WO. On a register read its value is Unknown."]
+    #[doc = "Bit 25 - SysTick exception clear-pending bit.  
+ Write:  
+ 0 = No effect.  
+ 1 = Removes the pending state from the SysTick exception.  
+ This bit is WO. On a register read its value is Unknown."]
     #[inline(always)]
     pub fn pendstclr(&mut self) -> PENDSTCLR_W {
         PENDSTCLR_W { w: self }

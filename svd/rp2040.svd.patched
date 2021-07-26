@@ -19024,8 +19024,10 @@
           </fields>
           </register>
         <register><name>STATUS</name><description>Ring Oscillator Status</description><addressOffset>24</addressOffset><resetValue>0</resetValue><fields><field><name>STABLE</name><description>Oscillator is running and stable</description><bitOffset>31</bitOffset><bitWidth>1</bitWidth><access>read-only</access></field>
-            <field><name>DIV_RUNNING</name><description>post-divider is running\n this resets to 0 but transitions to 1 during chip startup</description><bitOffset>16</bitOffset><bitWidth>1</bitWidth><access>read-only</access></field>
-            <field><name>ENABLED</name><description>Oscillator is enabled but not necessarily running and stable\n this resets to 0 but transitions to 1 during chip startup</description><bitOffset>12</bitOffset><bitWidth>1</bitWidth><access>read-only</access></field>
+            <field><name>DIV_RUNNING</name><description>post-divider is running
+ this resets to 0 but transitions to 1 during chip startup</description><bitOffset>16</bitOffset><bitWidth>1</bitWidth><access>read-only</access></field>
+            <field><name>ENABLED</name><description>Oscillator is enabled but not necessarily running and stable
+ this resets to 0 but transitions to 1 during chip startup</description><bitOffset>12</bitOffset><bitWidth>1</bitWidth><access>read-only</access></field>
             </fields></register>
         </registers>
       </peripheral>

@@ -106,7 +106,9 @@ impl<'a> INTERRUPT_PER_DOUBLE_BUFF_W<'a> {
         self.w
     }
 }
-#[doc = "\n\nValue on reset: 0"]
+#[doc = "  
+
+Value on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq)]
 #[repr(u8)]
 pub enum ENDPOINT_TYPE_A {

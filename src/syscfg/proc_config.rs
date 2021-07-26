@@ -43,12 +43,16 @@ pub type PROC1_HALTED_R = crate::R<bool, bool>;
 #[doc = "Reader of field `PROC0_HALTED`"]
 pub type PROC0_HALTED_R = crate::R<bool, bool>;
 impl R {
-    #[doc = "Bits 28:31 - Configure proc1 DAP instance ID.\\n Recommend that this is NOT changed until you require debug access in multi-chip environment\\n WARNING: do not set to 15 as this is reserved for RescueDP"]
+    #[doc = "Bits 28:31 - Configure proc1 DAP instance ID.  
+ Recommend that this is NOT changed until you require debug access in multi-chip environment  
+ WARNING: do not set to 15 as this is reserved for RescueDP"]
     #[inline(always)]
     pub fn proc1_dap_instid(&self) -> PROC1_DAP_INSTID_R {
         PROC1_DAP_INSTID_R::new(((self.bits >> 28) & 0x0f) as u8)
     }
-    #[doc = "Bits 24:27 - Configure proc0 DAP instance ID.\\n Recommend that this is NOT changed until you require debug access in multi-chip environment\\n WARNING: do not set to 15 as this is reserved for RescueDP"]
+    #[doc = "Bits 24:27 - Configure proc0 DAP instance ID.  
+ Recommend that this is NOT changed until you require debug access in multi-chip environment  
+ WARNING: do not set to 15 as this is reserved for RescueDP"]
     #[inline(always)]
     pub fn proc0_dap_instid(&self) -> PROC0_DAP_INSTID_R {
         PROC0_DAP_INSTID_R::new(((self.bits >> 24) & 0x0f) as u8)
@@ -65,12 +69,16 @@ impl R {
     }
 }
 impl W {
-    #[doc = "Bits 28:31 - Configure proc1 DAP instance ID.\\n Recommend that this is NOT changed until you require debug access in multi-chip environment\\n WARNING: do not set to 15 as this is reserved for RescueDP"]
+    #[doc = "Bits 28:31 - Configure proc1 DAP instance ID.  
+ Recommend that this is NOT changed until you require debug access in multi-chip environment  
+ WARNING: do not set to 15 as this is reserved for RescueDP"]
     #[inline(always)]
     pub fn proc1_dap_instid(&mut self) -> PROC1_DAP_INSTID_W {
         PROC1_DAP_INSTID_W { w: self }
     }
-    #[doc = "Bits 24:27 - Configure proc0 DAP instance ID.\\n Recommend that this is NOT changed until you require debug access in multi-chip environment\\n WARNING: do not set to 15 as this is reserved for RescueDP"]
+    #[doc = "Bits 24:27 - Configure proc0 DAP instance ID.  
+ Recommend that this is NOT changed until you require debug access in multi-chip environment  
+ WARNING: do not set to 15 as this is reserved for RescueDP"]
     #[inline(always)]
     pub fn proc0_dap_instid(&mut self) -> PROC0_DAP_INSTID_W {
         PROC0_DAP_INSTID_W { w: self }

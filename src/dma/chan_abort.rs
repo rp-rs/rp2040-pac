@@ -25,14 +25,18 @@ impl<'a> CHAN_ABORT_W<'a> {
     }
 }
 impl R {
-    #[doc = "Bits 0:15 - Each bit corresponds to a channel. Writing a 1 aborts whatever transfer sequence is in progress on that channel. The bit will remain high until any in-flight transfers have been flushed through the address and data FIFOs.\\n\\n After writing, this register must be polled until it returns all-zero. Until this point, it is unsafe to restart the channel."]
+    #[doc = "Bits 0:15 - Each bit corresponds to a channel. Writing a 1 aborts whatever transfer sequence is in progress on that channel. The bit will remain high until any in-flight transfers have been flushed through the address and data FIFOs.  
+
+ After writing, this register must be polled until it returns all-zero. Until this point, it is unsafe to restart the channel."]
     #[inline(always)]
     pub fn chan_abort(&self) -> CHAN_ABORT_R {
         CHAN_ABORT_R::new((self.bits & 0xffff) as u16)
     }
 }
 impl W {
-    #[doc = "Bits 0:15 - Each bit corresponds to a channel. Writing a 1 aborts whatever transfer sequence is in progress on that channel. The bit will remain high until any in-flight transfers have been flushed through the address and data FIFOs.\\n\\n After writing, this register must be polled until it returns all-zero. Until this point, it is unsafe to restart the channel."]
+    #[doc = "Bits 0:15 - Each bit corresponds to a channel. Writing a 1 aborts whatever transfer sequence is in progress on that channel. The bit will remain high until any in-flight transfers have been flushed through the address and data FIFOs.  
+
+ After writing, this register must be polled until it returns all-zero. Until this point, it is unsafe to restart the channel."]
     #[inline(always)]
     pub fn chan_abort(&mut self) -> CHAN_ABORT_W {
         CHAN_ABORT_W { w: self }

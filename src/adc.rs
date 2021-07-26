@@ -9,7 +9,10 @@ pub struct RegisterBlock {
     pub fcs: FCS,
     #[doc = "0x0c - Conversion result FIFO"]
     pub fifo: FIFO,
-    #[doc = "0x10 - Clock divider. If non-zero, CS_START_MANY will start conversions\\n at regular intervals rather than back-to-back.\\n The divider is reset when either of these fields are written.\\n Total period is 1 + INT + FRAC / 256"]
+    #[doc = "0x10 - Clock divider. If non-zero, CS_START_MANY will start conversions  
+ at regular intervals rather than back-to-back.  
+ The divider is reset when either of these fields are written.  
+ Total period is 1 + INT + FRAC / 256"]
     pub div: DIV,
     #[doc = "0x14 - Raw Interrupts"]
     pub intr: INTR,
@@ -20,7 +23,11 @@ pub struct RegisterBlock {
     #[doc = "0x20 - Interrupt status after masking & forcing"]
     pub ints: INTS,
 }
-#[doc = "ADC Control and Status\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cs](cs) module"]
+#[doc = "ADC Control and Status  
+
+This register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+
+For information about available fields see [cs](cs) module"]
 pub type CS = crate::Reg<u32, _CS>;
 #[allow(missing_docs)]
 #[doc(hidden)]
@@ -31,7 +38,11 @@ impl crate::Readable for CS {}
 impl crate::Writable for CS {}
 #[doc = "ADC Control and Status"]
 pub mod cs;
-#[doc = "Result of most recent ADC conversion\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [result](result) module"]
+#[doc = "Result of most recent ADC conversion  
+
+This register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+
+For information about available fields see [result](result) module"]
 pub type RESULT = crate::Reg<u32, _RESULT>;
 #[allow(missing_docs)]
 #[doc(hidden)]
@@ -40,7 +51,11 @@ pub struct _RESULT;
 impl crate::Readable for RESULT {}
 #[doc = "Result of most recent ADC conversion"]
 pub mod result;
-#[doc = "FIFO control and status\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [fcs](fcs) module"]
+#[doc = "FIFO control and status  
+
+This register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+
+For information about available fields see [fcs](fcs) module"]
 pub type FCS = crate::Reg<u32, _FCS>;
 #[allow(missing_docs)]
 #[doc(hidden)]
@@ -51,7 +66,11 @@ impl crate::Readable for FCS {}
 impl crate::Writable for FCS {}
 #[doc = "FIFO control and status"]
 pub mod fcs;
-#[doc = "Conversion result FIFO\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [fifo](fifo) module"]
+#[doc = "Conversion result FIFO  
+
+This register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+
+For information about available fields see [fifo](fifo) module"]
 pub type FIFO = crate::Reg<u32, _FIFO>;
 #[allow(missing_docs)]
 #[doc(hidden)]
@@ -60,7 +79,14 @@ pub struct _FIFO;
 impl crate::Readable for FIFO {}
 #[doc = "Conversion result FIFO"]
 pub mod fifo;
-#[doc = "Clock divider. If non-zero, CS_START_MANY will start conversions\\n at regular intervals rather than back-to-back.\\n The divider is reset when either of these fields are written.\\n Total period is 1 + INT + FRAC / 256\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [div](div) module"]
+#[doc = "Clock divider. If non-zero, CS_START_MANY will start conversions  
+ at regular intervals rather than back-to-back.  
+ The divider is reset when either of these fields are written.  
+ Total period is 1 + INT + FRAC / 256  
+
+This register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+
+For information about available fields see [div](div) module"]
 pub type DIV = crate::Reg<u32, _DIV>;
 #[allow(missing_docs)]
 #[doc(hidden)]
@@ -69,9 +95,16 @@ pub struct _DIV;
 impl crate::Readable for DIV {}
 #[doc = "`write(|w| ..)` method takes [div::W](div::W) writer structure"]
 impl crate::Writable for DIV {}
-#[doc = "Clock divider. If non-zero, CS_START_MANY will start conversions\\n at regular intervals rather than back-to-back.\\n The divider is reset when either of these fields are written.\\n Total period is 1 + INT + FRAC / 256"]
+#[doc = "Clock divider. If non-zero, CS_START_MANY will start conversions  
+ at regular intervals rather than back-to-back.  
+ The divider is reset when either of these fields are written.  
+ Total period is 1 + INT + FRAC / 256"]
 pub mod div;
-#[doc = "Raw Interrupts\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [intr](intr) module"]
+#[doc = "Raw Interrupts  
+
+This register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+
+For information about available fields see [intr](intr) module"]
 pub type INTR = crate::Reg<u32, _INTR>;
 #[allow(missing_docs)]
 #[doc(hidden)]
@@ -80,7 +113,11 @@ pub struct _INTR;
 impl crate::Readable for INTR {}
 #[doc = "Raw Interrupts"]
 pub mod intr;
-#[doc = "Interrupt Enable\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [inte](inte) module"]
+#[doc = "Interrupt Enable  
+
+This register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+
+For information about available fields see [inte](inte) module"]
 pub type INTE = crate::Reg<u32, _INTE>;
 #[allow(missing_docs)]
 #[doc(hidden)]
@@ -91,7 +128,11 @@ impl crate::Readable for INTE {}
 impl crate::Writable for INTE {}
 #[doc = "Interrupt Enable"]
 pub mod inte;
-#[doc = "Interrupt Force\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [intf](intf) module"]
+#[doc = "Interrupt Force  
+
+This register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+
+For information about available fields see [intf](intf) module"]
 pub type INTF = crate::Reg<u32, _INTF>;
 #[allow(missing_docs)]
 #[doc(hidden)]
@@ -102,7 +143,11 @@ impl crate::Readable for INTF {}
 impl crate::Writable for INTF {}
 #[doc = "Interrupt Force"]
 pub mod intf;
-#[doc = "Interrupt status after masking & forcing\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [ints](ints) module"]
+#[doc = "Interrupt status after masking & forcing  
+
+This register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+
+For information about available fields see [ints](ints) module"]
 pub type INTS = crate::Reg<u32, _INTS>;
 #[allow(missing_docs)]
 #[doc(hidden)]

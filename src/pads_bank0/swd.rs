@@ -58,7 +58,9 @@ impl<'a> IE_W<'a> {
         self.w
     }
 }
-#[doc = "Drive strength.\n\nValue on reset: 1"]
+#[doc = "Drive strength.  
+
+Value on reset: 1"]
 #[derive(Clone, Copy, Debug, PartialEq)]
 #[repr(u8)]
 pub enum DRIVE_A {

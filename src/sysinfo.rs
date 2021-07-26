@@ -9,7 +9,11 @@ pub struct RegisterBlock {
     #[doc = "0x40 - Git hash of the chip source. Used to identify chip version."]
     pub gitref_rp2040: GITREF_RP2040,
 }
-#[doc = "JEDEC JEP-106 compliant chip identifier.\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [chip_id](chip_id) module"]
+#[doc = "JEDEC JEP-106 compliant chip identifier.  
+
+This register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+
+For information about available fields see [chip_id](chip_id) module"]
 pub type CHIP_ID = crate::Reg<u32, _CHIP_ID>;
 #[allow(missing_docs)]
 #[doc(hidden)]
@@ -18,7 +22,11 @@ pub struct _CHIP_ID;
 impl crate::Readable for CHIP_ID {}
 #[doc = "JEDEC JEP-106 compliant chip identifier."]
 pub mod chip_id;
-#[doc = "Platform register. Allows software to know what environment it is running in.\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [platform](platform) module"]
+#[doc = "Platform register. Allows software to know what environment it is running in.  
+
+This register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+
+For information about available fields see [platform](platform) module"]
 pub type PLATFORM = crate::Reg<u32, _PLATFORM>;
 #[allow(missing_docs)]
 #[doc(hidden)]
@@ -27,7 +35,11 @@ pub struct _PLATFORM;
 impl crate::Readable for PLATFORM {}
 #[doc = "Platform register. Allows software to know what environment it is running in."]
 pub mod platform;
-#[doc = "Git hash of the chip source. Used to identify chip version.\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [gitref_rp2040](gitref_rp2040) module"]
+#[doc = "Git hash of the chip source. Used to identify chip version.  
+
+This register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+
+For information about available fields see [gitref_rp2040](gitref_rp2040) module"]
 pub type GITREF_RP2040 = crate::Reg<u32, _GITREF_RP2040>;
 #[allow(missing_docs)]
 #[doc(hidden)]

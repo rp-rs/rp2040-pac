@@ -45,7 +45,11 @@ pub struct GPIO_QSPI {
 #[doc = r"Register block"]
 #[doc = "Cluster GPIO_QSPI%s, containing GPIO_QSPI_*_STATUS, GPIO_QSPI_*_CTRL"]
 pub mod gpio_qspi;
-#[doc = "Raw Interrupts\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [intr](intr) module"]
+#[doc = "Raw Interrupts  
+
+This register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+
+For information about available fields see [intr](intr) module"]
 pub type INTR = crate::Reg<u32, _INTR>;
 #[allow(missing_docs)]
 #[doc(hidden)]
@@ -56,7 +60,11 @@ impl crate::Readable for INTR {}
 impl crate::Writable for INTR {}
 #[doc = "Raw Interrupts"]
 pub mod intr;
-#[doc = "Interrupt Enable for proc0\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [proc0_inte](proc0_inte) module"]
+#[doc = "Interrupt Enable for proc0  
+
+This register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+
+For information about available fields see [proc0_inte](proc0_inte) module"]
 pub type PROC0_INTE = crate::Reg<u32, _PROC0_INTE>;
 #[allow(missing_docs)]
 #[doc(hidden)]
@@ -67,7 +75,11 @@ impl crate::Readable for PROC0_INTE {}
 impl crate::Writable for PROC0_INTE {}
 #[doc = "Interrupt Enable for proc0"]
 pub mod proc0_inte;
-#[doc = "Interrupt Force for proc0\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [proc0_intf](proc0_intf) module"]
+#[doc = "Interrupt Force for proc0  
+
+This register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+
+For information about available fields see [proc0_intf](proc0_intf) module"]
 pub type PROC0_INTF = crate::Reg<u32, _PROC0_INTF>;
 #[allow(missing_docs)]
 #[doc(hidden)]
@@ -78,7 +90,11 @@ impl crate::Readable for PROC0_INTF {}
 impl crate::Writable for PROC0_INTF {}
 #[doc = "Interrupt Force for proc0"]
 pub mod proc0_intf;
-#[doc = "Interrupt status after masking & forcing for proc0\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [proc0_ints](proc0_ints) module"]
+#[doc = "Interrupt status after masking & forcing for proc0  
+
+This register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+
+For information about available fields see [proc0_ints](proc0_ints) module"]
 pub type PROC0_INTS = crate::Reg<u32, _PROC0_INTS>;
 #[allow(missing_docs)]
 #[doc(hidden)]
@@ -87,7 +103,11 @@ pub struct _PROC0_INTS;
 impl crate::Readable for PROC0_INTS {}
 #[doc = "Interrupt status after masking & forcing for proc0"]
 pub mod proc0_ints;
-#[doc = "Interrupt Enable for proc1\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [proc1_inte](proc1_inte) module"]
+#[doc = "Interrupt Enable for proc1  
+
+This register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+
+For information about available fields see [proc1_inte](proc1_inte) module"]
 pub type PROC1_INTE = crate::Reg<u32, _PROC1_INTE>;
 #[allow(missing_docs)]
 #[doc(hidden)]
@@ -98,7 +118,11 @@ impl crate::Readable for PROC1_INTE {}
 impl crate::Writable for PROC1_INTE {}
 #[doc = "Interrupt Enable for proc1"]
 pub mod proc1_inte;
-#[doc = "Interrupt Force for proc1\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [proc1_intf](proc1_intf) module"]
+#[doc = "Interrupt Force for proc1  
+
+This register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+
+For information about available fields see [proc1_intf](proc1_intf) module"]
 pub type PROC1_INTF = crate::Reg<u32, _PROC1_INTF>;
 #[allow(missing_docs)]
 #[doc(hidden)]
@@ -109,7 +133,11 @@ impl crate::Readable for PROC1_INTF {}
 impl crate::Writable for PROC1_INTF {}
 #[doc = "Interrupt Force for proc1"]
 pub mod proc1_intf;
-#[doc = "Interrupt status after masking & forcing for proc1\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [proc1_ints](proc1_ints) module"]
+#[doc = "Interrupt status after masking & forcing for proc1  
+
+This register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+
+For information about available fields see [proc1_ints](proc1_ints) module"]
 pub type PROC1_INTS = crate::Reg<u32, _PROC1_INTS>;
 #[allow(missing_docs)]
 #[doc(hidden)]
@@ -118,7 +146,11 @@ pub struct _PROC1_INTS;
 impl crate::Readable for PROC1_INTS {}
 #[doc = "Interrupt status after masking & forcing for proc1"]
 pub mod proc1_ints;
-#[doc = "Interrupt Enable for dormant_wake\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [dormant_wake_inte](dormant_wake_inte) module"]
+#[doc = "Interrupt Enable for dormant_wake  
+
+This register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+
+For information about available fields see [dormant_wake_inte](dormant_wake_inte) module"]
 pub type DORMANT_WAKE_INTE = crate::Reg<u32, _DORMANT_WAKE_INTE>;
 #[allow(missing_docs)]
 #[doc(hidden)]
@@ -129,7 +161,11 @@ impl crate::Readable for DORMANT_WAKE_INTE {}
 impl crate::Writable for DORMANT_WAKE_INTE {}
 #[doc = "Interrupt Enable for dormant_wake"]
 pub mod dormant_wake_inte;
-#[doc = "Interrupt Force for dormant_wake\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [dormant_wake_intf](dormant_wake_intf) module"]
+#[doc = "Interrupt Force for dormant_wake  
+
+This register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+
+For information about available fields see [dormant_wake_intf](dormant_wake_intf) module"]
 pub type DORMANT_WAKE_INTF = crate::Reg<u32, _DORMANT_WAKE_INTF>;
 #[allow(missing_docs)]
 #[doc(hidden)]
@@ -140,7 +176,11 @@ impl crate::Readable for DORMANT_WAKE_INTF {}
 impl crate::Writable for DORMANT_WAKE_INTF {}
 #[doc = "Interrupt Force for dormant_wake"]
 pub mod dormant_wake_intf;
-#[doc = "Interrupt status after masking & forcing for dormant_wake\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [dormant_wake_ints](dormant_wake_ints) module"]
+#[doc = "Interrupt status after masking & forcing for dormant_wake  
+
+This register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+
+For information about available fields see [dormant_wake_ints](dormant_wake_ints) module"]
 pub type DORMANT_WAKE_INTS = crate::Reg<u32, _DORMANT_WAKE_INTS>;
 #[allow(missing_docs)]
 #[doc(hidden)]

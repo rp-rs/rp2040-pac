@@ -163,7 +163,10 @@ impl<'a> EN_W<'a> {
     }
 }
 impl R {
-    #[doc = "Bits 16:20 - Round-robin sampling. 1 bit per channel. Set all bits to 0 to disable.\\n Otherwise, the ADC will cycle through each enabled channel in a round-robin fashion.\\n The first channel to be sampled will be the one currently indicated by AINSEL.\\n AINSEL will be updated after each conversion with the newly-selected channel."]
+    #[doc = "Bits 16:20 - Round-robin sampling. 1 bit per channel. Set all bits to 0 to disable.  
+ Otherwise, the ADC will cycle through each enabled channel in a round-robin fashion.  
+ The first channel to be sampled will be the one currently indicated by AINSEL.  
+ AINSEL will be updated after each conversion with the newly-selected channel."]
     #[inline(always)]
     pub fn rrobin(&self) -> RROBIN_R {
         RROBIN_R::new(((self.bits >> 16) & 0x1f) as u8)
@@ -183,7 +186,8 @@ impl R {
     pub fn err(&self) -> ERR_R {
         ERR_R::new(((self.bits >> 9) & 0x01) != 0)
     }
-    #[doc = "Bit 8 - 1 if the ADC is ready to start a new conversion. Implies any previous conversion has completed.\\n 0 whilst conversion in progress."]
+    #[doc = "Bit 8 - 1 if the ADC is ready to start a new conversion. Implies any previous conversion has completed.  
+ 0 whilst conversion in progress."]
     #[inline(always)]
     pub fn ready(&self) -> READY_R {
         READY_R::new(((self.bits >> 8) & 0x01) != 0)
@@ -203,14 +207,18 @@ impl R {
     pub fn ts_en(&self) -> TS_EN_R {
         TS_EN_R::new(((self.bits >> 1) & 0x01) != 0)
     }
-    #[doc = "Bit 0 - Power on ADC and enable its clock.\\n 1 - enabled. 0 - disabled."]
+    #[doc = "Bit 0 - Power on ADC and enable its clock.  
+ 1 - enabled. 0 - disabled."]
     #[inline(always)]
     pub fn en(&self) -> EN_R {
         EN_R::new((self.bits & 0x01) != 0)
     }
 }
 impl W {
-    #[doc = "Bits 16:20 - Round-robin sampling. 1 bit per channel. Set all bits to 0 to disable.\\n Otherwise, the ADC will cycle through each enabled channel in a round-robin fashion.\\n The first channel to be sampled will be the one currently indicated by AINSEL.\\n AINSEL will be updated after each conversion with the newly-selected channel."]
+    #[doc = "Bits 16:20 - Round-robin sampling. 1 bit per channel. Set all bits to 0 to disable.  
+ Otherwise, the ADC will cycle through each enabled channel in a round-robin fashion.  
+ The first channel to be sampled will be the one currently indicated by AINSEL.  
+ AINSEL will be updated after each conversion with the newly-selected channel."]
     #[inline(always)]
     pub fn rrobin(&mut self) -> RROBIN_W {
         RROBIN_W { w: self }
@@ -240,7 +248,8 @@ impl W {
     pub fn ts_en(&mut self) -> TS_EN_W {
         TS_EN_W { w: self }
     }
-    #[doc = "Bit 0 - Power on ADC and enable its clock.\\n 1 - enabled. 0 - disabled."]
+    #[doc = "Bit 0 - Power on ADC and enable its clock.  
+ 1 - enabled. 0 - disabled."]
     #[inline(always)]
     pub fn en(&mut self) -> EN_W {
         EN_W { w: self }

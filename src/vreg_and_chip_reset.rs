@@ -8,7 +8,11 @@ pub struct RegisterBlock {
     #[doc = "0x08 - Chip reset control and status"]
     pub chip_reset: CHIP_RESET,
 }
-#[doc = "Voltage regulator control and status\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [vreg](vreg) module"]
+#[doc = "Voltage regulator control and status  
+
+This register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+
+For information about available fields see [vreg](vreg) module"]
 pub type VREG = crate::Reg<u32, _VREG>;
 #[allow(missing_docs)]
 #[doc(hidden)]
@@ -19,7 +23,11 @@ impl crate::Readable for VREG {}
 impl crate::Writable for VREG {}
 #[doc = "Voltage regulator control and status"]
 pub mod vreg;
-#[doc = "brown-out detection control\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [bod](bod) module"]
+#[doc = "brown-out detection control  
+
+This register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+
+For information about available fields see [bod](bod) module"]
 pub type BOD = crate::Reg<u32, _BOD>;
 #[allow(missing_docs)]
 #[doc(hidden)]
@@ -30,7 +38,11 @@ impl crate::Readable for BOD {}
 impl crate::Writable for BOD {}
 #[doc = "brown-out detection control"]
 pub mod bod;
-#[doc = "Chip reset control and status\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [chip_reset](chip_reset) module"]
+#[doc = "Chip reset control and status  
+
+This register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+
+For information about available fields see [chip_reset](chip_reset) module"]
 pub type CHIP_RESET = crate::Reg<u32, _CHIP_RESET>;
 #[allow(missing_docs)]
 #[doc(hidden)]

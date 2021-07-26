@@ -183,22 +183,28 @@ impl<'a> AUTOPUSH_W<'a> {
     }
 }
 impl R {
-    #[doc = "Bit 31 - When 1, RX FIFO steals the TX FIFO's storage, and becomes twice as deep.\\n TX FIFO is disabled as a result (always reads as both full and empty).\\n FIFOs are flushed when this bit is changed."]
+    #[doc = "Bit 31 - When 1, RX FIFO steals the TX FIFO's storage, and becomes twice as deep.  
+ TX FIFO is disabled as a result (always reads as both full and empty).  
+ FIFOs are flushed when this bit is changed."]
     #[inline(always)]
     pub fn fjoin_rx(&self) -> FJOIN_RX_R {
         FJOIN_RX_R::new(((self.bits >> 31) & 0x01) != 0)
     }
-    #[doc = "Bit 30 - When 1, TX FIFO steals the RX FIFO's storage, and becomes twice as deep.\\n RX FIFO is disabled as a result (always reads as both full and empty).\\n FIFOs are flushed when this bit is changed."]
+    #[doc = "Bit 30 - When 1, TX FIFO steals the RX FIFO's storage, and becomes twice as deep.  
+ RX FIFO is disabled as a result (always reads as both full and empty).  
+ FIFOs are flushed when this bit is changed."]
     #[inline(always)]
     pub fn fjoin_tx(&self) -> FJOIN_TX_R {
         FJOIN_TX_R::new(((self.bits >> 30) & 0x01) != 0)
     }
-    #[doc = "Bits 25:29 - Number of bits shifted out of OSR before autopull, or conditional pull (PULL IFEMPTY), will take place.\\n Write 0 for value of 32."]
+    #[doc = "Bits 25:29 - Number of bits shifted out of OSR before autopull, or conditional pull (PULL IFEMPTY), will take place.  
+ Write 0 for value of 32."]
     #[inline(always)]
     pub fn pull_thresh(&self) -> PULL_THRESH_R {
         PULL_THRESH_R::new(((self.bits >> 25) & 0x1f) as u8)
     }
-    #[doc = "Bits 20:24 - Number of bits shifted into ISR before autopush, or conditional push (PUSH IFFULL), will take place.\\n Write 0 for value of 32."]
+    #[doc = "Bits 20:24 - Number of bits shifted into ISR before autopush, or conditional push (PUSH IFFULL), will take place.  
+ Write 0 for value of 32."]
     #[inline(always)]
     pub fn push_thresh(&self) -> PUSH_THRESH_R {
         PUSH_THRESH_R::new(((self.bits >> 20) & 0x1f) as u8)
@@ -225,22 +231,28 @@ impl R {
     }
 }
 impl W {
-    #[doc = "Bit 31 - When 1, RX FIFO steals the TX FIFO's storage, and becomes twice as deep.\\n TX FIFO is disabled as a result (always reads as both full and empty).\\n FIFOs are flushed when this bit is changed."]
+    #[doc = "Bit 31 - When 1, RX FIFO steals the TX FIFO's storage, and becomes twice as deep.  
+ TX FIFO is disabled as a result (always reads as both full and empty).  
+ FIFOs are flushed when this bit is changed."]
     #[inline(always)]
     pub fn fjoin_rx(&mut self) -> FJOIN_RX_W {
         FJOIN_RX_W { w: self }
     }
-    #[doc = "Bit 30 - When 1, TX FIFO steals the RX FIFO's storage, and becomes twice as deep.\\n RX FIFO is disabled as a result (always reads as both full and empty).\\n FIFOs are flushed when this bit is changed."]
+    #[doc = "Bit 30 - When 1, TX FIFO steals the RX FIFO's storage, and becomes twice as deep.  
+ RX FIFO is disabled as a result (always reads as both full and empty).  
+ FIFOs are flushed when this bit is changed."]
     #[inline(always)]
     pub fn fjoin_tx(&mut self) -> FJOIN_TX_W {
         FJOIN_TX_W { w: self }
     }
-    #[doc = "Bits 25:29 - Number of bits shifted out of OSR before autopull, or conditional pull (PULL IFEMPTY), will take place.\\n Write 0 for value of 32."]
+    #[doc = "Bits 25:29 - Number of bits shifted out of OSR before autopull, or conditional pull (PULL IFEMPTY), will take place.  
+ Write 0 for value of 32."]
     #[inline(always)]
     pub fn pull_thresh(&mut self) -> PULL_THRESH_W {
         PULL_THRESH_W { w: self }
     }
-    #[doc = "Bits 20:24 - Number of bits shifted into ISR before autopush, or conditional push (PUSH IFFULL), will take place.\\n Write 0 for value of 32."]
+    #[doc = "Bits 20:24 - Number of bits shifted into ISR before autopush, or conditional push (PUSH IFFULL), will take place.  
+ Write 0 for value of 32."]
     #[inline(always)]
     pub fn push_thresh(&mut self) -> PUSH_THRESH_W {
         PUSH_THRESH_W { w: self }

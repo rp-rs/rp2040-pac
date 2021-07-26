@@ -311,7 +311,15 @@ pub type LINE_STATE_R = crate::R<u8, u8>;
 #[doc = "Reader of field `VBUS_DETECTED`"]
 pub type VBUS_DETECTED_R = crate::R<bool, bool>;
 impl R {
-    #[doc = "Bit 31 - Data Sequence Error.\\n\\n The device can raise a sequence error in the following conditions:\\n\\n * A SETUP packet is received followed by a DATA1 packet (data phase should always be DATA0) * An OUT packet is received from the host but doesn't match the data pid in the buffer control register read from DPSRAM\\n\\n The host can raise a data sequence error in the following conditions:\\n\\n * An IN packet from the device has the wrong data PID"]
+    #[doc = "Bit 31 - Data Sequence Error.  
+
+ The device can raise a sequence error in the following conditions:  
+
+ * A SETUP packet is received followed by a DATA1 packet (data phase should always be DATA0) * An OUT packet is received from the host but doesn't match the data pid in the buffer control register read from DPSRAM  
+
+ The host can raise a data sequence error in the following conditions:  
+
+ * An IN packet from the device has the wrong data PID"]
     #[inline(always)]
     pub fn data_seq_error(&self) -> DATA_SEQ_ERROR_R {
         DATA_SEQ_ERROR_R::new(((self.bits >> 31) & 0x01) != 0)
@@ -356,7 +364,15 @@ impl R {
     pub fn bus_reset(&self) -> BUS_RESET_R {
         BUS_RESET_R::new(((self.bits >> 19) & 0x01) != 0)
     }
-    #[doc = "Bit 18 - Transaction complete.\\n\\n Raised by device if:\\n\\n * An IN or OUT packet is sent with the `LAST_BUFF` bit set in the buffer control register\\n\\n Raised by host if:\\n\\n * A setup packet is sent when no data in or data out transaction follows * An IN packet is received and the `LAST_BUFF` bit is set in the buffer control register * An IN packet is received with zero length * An OUT packet is sent and the `LAST_BUFF` bit is set"]
+    #[doc = "Bit 18 - Transaction complete.  
+
+ Raised by device if:  
+
+ * An IN or OUT packet is sent with the `LAST_BUFF` bit set in the buffer control register  
+
+ Raised by host if:  
+
+ * A setup packet is sent when no data in or data out transaction follows * An IN packet is received and the `LAST_BUFF` bit is set in the buffer control register * An IN packet is received with zero length * An OUT packet is sent and the `LAST_BUFF` bit is set"]
     #[inline(always)]
     pub fn trans_complete(&self) -> TRANS_COMPLETE_R {
         TRANS_COMPLETE_R::new(((self.bits >> 18) & 0x01) != 0)
@@ -403,7 +419,15 @@ impl R {
     }
 }
 impl W {
-    #[doc = "Bit 31 - Data Sequence Error.\\n\\n The device can raise a sequence error in the following conditions:\\n\\n * A SETUP packet is received followed by a DATA1 packet (data phase should always be DATA0) * An OUT packet is received from the host but doesn't match the data pid in the buffer control register read from DPSRAM\\n\\n The host can raise a data sequence error in the following conditions:\\n\\n * An IN packet from the device has the wrong data PID"]
+    #[doc = "Bit 31 - Data Sequence Error.  
+
+ The device can raise a sequence error in the following conditions:  
+
+ * A SETUP packet is received followed by a DATA1 packet (data phase should always be DATA0) * An OUT packet is received from the host but doesn't match the data pid in the buffer control register read from DPSRAM  
+
+ The host can raise a data sequence error in the following conditions:  
+
+ * An IN packet from the device has the wrong data PID"]
     #[inline(always)]
     pub fn data_seq_error(&mut self) -> DATA_SEQ_ERROR_W {
         DATA_SEQ_ERROR_W { w: self }
@@ -448,7 +472,15 @@ impl W {
     pub fn bus_reset(&mut self) -> BUS_RESET_W {
         BUS_RESET_W { w: self }
     }
-    #[doc = "Bit 18 - Transaction complete.\\n\\n Raised by device if:\\n\\n * An IN or OUT packet is sent with the `LAST_BUFF` bit set in the buffer control register\\n\\n Raised by host if:\\n\\n * A setup packet is sent when no data in or data out transaction follows * An IN packet is received and the `LAST_BUFF` bit is set in the buffer control register * An IN packet is received with zero length * An OUT packet is sent and the `LAST_BUFF` bit is set"]
+    #[doc = "Bit 18 - Transaction complete.  
+
+ Raised by device if:  
+
+ * An IN or OUT packet is sent with the `LAST_BUFF` bit set in the buffer control register  
+
+ Raised by host if:  
+
+ * A setup packet is sent when no data in or data out transaction follows * An IN packet is received and the `LAST_BUFF` bit is set in the buffer control register * An IN packet is received with zero length * An OUT packet is sent and the `LAST_BUFF` bit is set"]
     #[inline(always)]
     pub fn trans_complete(&mut self) -> TRANS_COMPLETE_W {
         TRANS_COMPLETE_W { w: self }

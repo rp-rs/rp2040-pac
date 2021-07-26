@@ -38,7 +38,9 @@ impl<'a> BADWRITE_W<'a> {
 }
 #[doc = "Reader of field `ENABLED`"]
 pub type ENABLED_R = crate::R<bool, bool>;
-#[doc = "The current frequency range setting, always reads 0\n\nValue on reset: 0"]
+#[doc = "The current frequency range setting, always reads 0  
+
+Value on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq)]
 #[repr(u8)]
 pub enum FREQ_RANGE_A {

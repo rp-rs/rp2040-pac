@@ -25,14 +25,28 @@ impl<'a> STREAM_CTR_W<'a> {
     }
 }
 impl R {
-    #[doc = "Bits 0:21 - Write a nonzero value to start a streaming read. This will then\\n progress in the background, using flash idle cycles to transfer\\n a linear data block from flash to the streaming FIFO.\\n Decrements automatically (1 at a time) as the stream\\n progresses, and halts on reaching 0.\\n Write 0 to halt an in-progress stream, and discard any in-flight\\n read, so that a new stream can immediately be started (after\\n draining the FIFO and reinitialising STREAM_ADDR)"]
+    #[doc = "Bits 0:21 - Write a nonzero value to start a streaming read. This will then  
+ progress in the background, using flash idle cycles to transfer  
+ a linear data block from flash to the streaming FIFO.  
+ Decrements automatically (1 at a time) as the stream  
+ progresses, and halts on reaching 0.  
+ Write 0 to halt an in-progress stream, and discard any in-flight  
+ read, so that a new stream can immediately be started (after  
+ draining the FIFO and reinitialising STREAM_ADDR)"]
     #[inline(always)]
     pub fn stream_ctr(&self) -> STREAM_CTR_R {
         STREAM_CTR_R::new((self.bits & 0x003f_ffff) as u32)
     }
 }
 impl W {
-    #[doc = "Bits 0:21 - Write a nonzero value to start a streaming read. This will then\\n progress in the background, using flash idle cycles to transfer\\n a linear data block from flash to the streaming FIFO.\\n Decrements automatically (1 at a time) as the stream\\n progresses, and halts on reaching 0.\\n Write 0 to halt an in-progress stream, and discard any in-flight\\n read, so that a new stream can immediately be started (after\\n draining the FIFO and reinitialising STREAM_ADDR)"]
+    #[doc = "Bits 0:21 - Write a nonzero value to start a streaming read. This will then  
+ progress in the background, using flash idle cycles to transfer  
+ a linear data block from flash to the streaming FIFO.  
+ Decrements automatically (1 at a time) as the stream  
+ progresses, and halts on reaching 0.  
+ Write 0 to halt an in-progress stream, and discard any in-flight  
+ read, so that a new stream can immediately be started (after  
+ draining the FIFO and reinitialising STREAM_ADDR)"]
     #[inline(always)]
     pub fn stream_ctr(&mut self) -> STREAM_CTR_W {
         STREAM_CTR_W { w: self }

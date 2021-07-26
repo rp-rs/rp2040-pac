@@ -49,7 +49,11 @@ pub struct RegisterBlock {
     #[doc = "0xffc - UARTPCellID3 Register"]
     pub uartpcellid3: UARTPCELLID3,
 }
-#[doc = "Data Register, UARTDR\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [uartdr](uartdr) module"]
+#[doc = "Data Register, UARTDR  
+
+This register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+
+For information about available fields see [uartdr](uartdr) module"]
 pub type UARTDR = crate::Reg<u32, _UARTDR>;
 #[allow(missing_docs)]
 #[doc(hidden)]
@@ -60,7 +64,11 @@ impl crate::Readable for UARTDR {}
 impl crate::Writable for UARTDR {}
 #[doc = "Data Register, UARTDR"]
 pub mod uartdr;
-#[doc = "Receive Status Register/Error Clear Register, UARTRSR/UARTECR\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [uartrsr](uartrsr) module"]
+#[doc = "Receive Status Register/Error Clear Register, UARTRSR/UARTECR  
+
+This register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+
+For information about available fields see [uartrsr](uartrsr) module"]
 pub type UARTRSR = crate::Reg<u32, _UARTRSR>;
 #[allow(missing_docs)]
 #[doc(hidden)]
@@ -71,7 +79,11 @@ impl crate::Readable for UARTRSR {}
 impl crate::Writable for UARTRSR {}
 #[doc = "Receive Status Register/Error Clear Register, UARTRSR/UARTECR"]
 pub mod uartrsr;
-#[doc = "Flag Register, UARTFR\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [uartfr](uartfr) module"]
+#[doc = "Flag Register, UARTFR  
+
+This register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+
+For information about available fields see [uartfr](uartfr) module"]
 pub type UARTFR = crate::Reg<u32, _UARTFR>;
 #[allow(missing_docs)]
 #[doc(hidden)]
@@ -80,7 +92,11 @@ pub struct _UARTFR;
 impl crate::Readable for UARTFR {}
 #[doc = "Flag Register, UARTFR"]
 pub mod uartfr;
-#[doc = "IrDA Low-Power Counter Register, UARTILPR\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [uartilpr](uartilpr) module"]
+#[doc = "IrDA Low-Power Counter Register, UARTILPR  
+
+This register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+
+For information about available fields see [uartilpr](uartilpr) module"]
 pub type UARTILPR = crate::Reg<u32, _UARTILPR>;
 #[allow(missing_docs)]
 #[doc(hidden)]
@@ -91,7 +107,11 @@ impl crate::Readable for UARTILPR {}
 impl crate::Writable for UARTILPR {}
 #[doc = "IrDA Low-Power Counter Register, UARTILPR"]
 pub mod uartilpr;
-#[doc = "Integer Baud Rate Register, UARTIBRD\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [uartibrd](uartibrd) module"]
+#[doc = "Integer Baud Rate Register, UARTIBRD  
+
+This register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+
+For information about available fields see [uartibrd](uartibrd) module"]
 pub type UARTIBRD = crate::Reg<u32, _UARTIBRD>;
 #[allow(missing_docs)]
 #[doc(hidden)]
@@ -102,7 +122,11 @@ impl crate::Readable for UARTIBRD {}
 impl crate::Writable for UARTIBRD {}
 #[doc = "Integer Baud Rate Register, UARTIBRD"]
 pub mod uartibrd;
-#[doc = "Fractional Baud Rate Register, UARTFBRD\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [uartfbrd](uartfbrd) module"]
+#[doc = "Fractional Baud Rate Register, UARTFBRD  
+
+This register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+
+For information about available fields see [uartfbrd](uartfbrd) module"]
 pub type UARTFBRD = crate::Reg<u32, _UARTFBRD>;
 #[allow(missing_docs)]
 #[doc(hidden)]
@@ -113,7 +137,11 @@ impl crate::Readable for UARTFBRD {}
 impl crate::Writable for UARTFBRD {}
 #[doc = "Fractional Baud Rate Register, UARTFBRD"]
 pub mod uartfbrd;
-#[doc = "Line Control Register, UARTLCR_H\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [uartlcr_h](uartlcr_h) module"]
+#[doc = "Line Control Register, UARTLCR_H  
+
+This register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+
+For information about available fields see [uartlcr_h](uartlcr_h) module"]
 pub type UARTLCR_H = crate::Reg<u32, _UARTLCR_H>;
 #[allow(missing_docs)]
 #[doc(hidden)]
@@ -124,7 +152,11 @@ impl crate::Readable for UARTLCR_H {}
 impl crate::Writable for UARTLCR_H {}
 #[doc = "Line Control Register, UARTLCR_H"]
 pub mod uartlcr_h;
-#[doc = "Control Register, UARTCR\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [uartcr](uartcr) module"]
+#[doc = "Control Register, UARTCR  
+
+This register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+
+For information about available fields see [uartcr](uartcr) module"]
 pub type UARTCR = crate::Reg<u32, _UARTCR>;
 #[allow(missing_docs)]
 #[doc(hidden)]
@@ -135,7 +167,11 @@ impl crate::Readable for UARTCR {}
 impl crate::Writable for UARTCR {}
 #[doc = "Control Register, UARTCR"]
 pub mod uartcr;
-#[doc = "Interrupt FIFO Level Select Register, UARTIFLS\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [uartifls](uartifls) module"]
+#[doc = "Interrupt FIFO Level Select Register, UARTIFLS  
+
+This register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+
+For information about available fields see [uartifls](uartifls) module"]
 pub type UARTIFLS = crate::Reg<u32, _UARTIFLS>;
 #[allow(missing_docs)]
 #[doc(hidden)]
@@ -146,7 +182,11 @@ impl crate::Readable for UARTIFLS {}
 impl crate::Writable for UARTIFLS {}
 #[doc = "Interrupt FIFO Level Select Register, UARTIFLS"]
 pub mod uartifls;
-#[doc = "Interrupt Mask Set/Clear Register, UARTIMSC\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [uartimsc](uartimsc) module"]
+#[doc = "Interrupt Mask Set/Clear Register, UARTIMSC  
+
+This register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+
+For information about available fields see [uartimsc](uartimsc) module"]
 pub type UARTIMSC = crate::Reg<u32, _UARTIMSC>;
 #[allow(missing_docs)]
 #[doc(hidden)]
@@ -157,7 +197,11 @@ impl crate::Readable for UARTIMSC {}
 impl crate::Writable for UARTIMSC {}
 #[doc = "Interrupt Mask Set/Clear Register, UARTIMSC"]
 pub mod uartimsc;
-#[doc = "Raw Interrupt Status Register, UARTRIS\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [uartris](uartris) module"]
+#[doc = "Raw Interrupt Status Register, UARTRIS  
+
+This register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+
+For information about available fields see [uartris](uartris) module"]
 pub type UARTRIS = crate::Reg<u32, _UARTRIS>;
 #[allow(missing_docs)]
 #[doc(hidden)]
@@ -166,7 +210,11 @@ pub struct _UARTRIS;
 impl crate::Readable for UARTRIS {}
 #[doc = "Raw Interrupt Status Register, UARTRIS"]
 pub mod uartris;
-#[doc = "Masked Interrupt Status Register, UARTMIS\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [uartmis](uartmis) module"]
+#[doc = "Masked Interrupt Status Register, UARTMIS  
+
+This register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+
+For information about available fields see [uartmis](uartmis) module"]
 pub type UARTMIS = crate::Reg<u32, _UARTMIS>;
 #[allow(missing_docs)]
 #[doc(hidden)]
@@ -175,7 +223,11 @@ pub struct _UARTMIS;
 impl crate::Readable for UARTMIS {}
 #[doc = "Masked Interrupt Status Register, UARTMIS"]
 pub mod uartmis;
-#[doc = "Interrupt Clear Register, UARTICR\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [uarticr](uarticr) module"]
+#[doc = "Interrupt Clear Register, UARTICR  
+
+This register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+
+For information about available fields see [uarticr](uarticr) module"]
 pub type UARTICR = crate::Reg<u32, _UARTICR>;
 #[allow(missing_docs)]
 #[doc(hidden)]
@@ -186,7 +238,11 @@ impl crate::Readable for UARTICR {}
 impl crate::Writable for UARTICR {}
 #[doc = "Interrupt Clear Register, UARTICR"]
 pub mod uarticr;
-#[doc = "DMA Control Register, UARTDMACR\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [uartdmacr](uartdmacr) module"]
+#[doc = "DMA Control Register, UARTDMACR  
+
+This register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+
+For information about available fields see [uartdmacr](uartdmacr) module"]
 pub type UARTDMACR = crate::Reg<u32, _UARTDMACR>;
 #[allow(missing_docs)]
 #[doc(hidden)]
@@ -197,7 +253,11 @@ impl crate::Readable for UARTDMACR {}
 impl crate::Writable for UARTDMACR {}
 #[doc = "DMA Control Register, UARTDMACR"]
 pub mod uartdmacr;
-#[doc = "UARTPeriphID0 Register\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [uartperiphid0](uartperiphid0) module"]
+#[doc = "UARTPeriphID0 Register  
+
+This register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+
+For information about available fields see [uartperiphid0](uartperiphid0) module"]
 pub type UARTPERIPHID0 = crate::Reg<u32, _UARTPERIPHID0>;
 #[allow(missing_docs)]
 #[doc(hidden)]
@@ -206,7 +266,11 @@ pub struct _UARTPERIPHID0;
 impl crate::Readable for UARTPERIPHID0 {}
 #[doc = "UARTPeriphID0 Register"]
 pub mod uartperiphid0;
-#[doc = "UARTPeriphID1 Register\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [uartperiphid1](uartperiphid1) module"]
+#[doc = "UARTPeriphID1 Register  
+
+This register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+
+For information about available fields see [uartperiphid1](uartperiphid1) module"]
 pub type UARTPERIPHID1 = crate::Reg<u32, _UARTPERIPHID1>;
 #[allow(missing_docs)]
 #[doc(hidden)]
@@ -215,7 +279,11 @@ pub struct _UARTPERIPHID1;
 impl crate::Readable for UARTPERIPHID1 {}
 #[doc = "UARTPeriphID1 Register"]
 pub mod uartperiphid1;
-#[doc = "UARTPeriphID2 Register\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [uartperiphid2](uartperiphid2) module"]
+#[doc = "UARTPeriphID2 Register  
+
+This register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+
+For information about available fields see [uartperiphid2](uartperiphid2) module"]
 pub type UARTPERIPHID2 = crate::Reg<u32, _UARTPERIPHID2>;
 #[allow(missing_docs)]
 #[doc(hidden)]
@@ -224,7 +292,11 @@ pub struct _UARTPERIPHID2;
 impl crate::Readable for UARTPERIPHID2 {}
 #[doc = "UARTPeriphID2 Register"]
 pub mod uartperiphid2;
-#[doc = "UARTPeriphID3 Register\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [uartperiphid3](uartperiphid3) module"]
+#[doc = "UARTPeriphID3 Register  
+
+This register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+
+For information about available fields see [uartperiphid3](uartperiphid3) module"]
 pub type UARTPERIPHID3 = crate::Reg<u32, _UARTPERIPHID3>;
 #[allow(missing_docs)]
 #[doc(hidden)]
@@ -233,7 +305,11 @@ pub struct _UARTPERIPHID3;
 impl crate::Readable for UARTPERIPHID3 {}
 #[doc = "UARTPeriphID3 Register"]
 pub mod uartperiphid3;
-#[doc = "UARTPCellID0 Register\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [uartpcellid0](uartpcellid0) module"]
+#[doc = "UARTPCellID0 Register  
+
+This register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+
+For information about available fields see [uartpcellid0](uartpcellid0) module"]
 pub type UARTPCELLID0 = crate::Reg<u32, _UARTPCELLID0>;
 #[allow(missing_docs)]
 #[doc(hidden)]
@@ -242,7 +318,11 @@ pub struct _UARTPCELLID0;
 impl crate::Readable for UARTPCELLID0 {}
 #[doc = "UARTPCellID0 Register"]
 pub mod uartpcellid0;
-#[doc = "UARTPCellID1 Register\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [uartpcellid1](uartpcellid1) module"]
+#[doc = "UARTPCellID1 Register  
+
+This register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+
+For information about available fields see [uartpcellid1](uartpcellid1) module"]
 pub type UARTPCELLID1 = crate::Reg<u32, _UARTPCELLID1>;
 #[allow(missing_docs)]
 #[doc(hidden)]
@@ -251,7 +331,11 @@ pub struct _UARTPCELLID1;
 impl crate::Readable for UARTPCELLID1 {}
 #[doc = "UARTPCellID1 Register"]
 pub mod uartpcellid1;
-#[doc = "UARTPCellID2 Register\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [uartpcellid2](uartpcellid2) module"]
+#[doc = "UARTPCellID2 Register  
+
+This register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+
+For information about available fields see [uartpcellid2](uartpcellid2) module"]
 pub type UARTPCELLID2 = crate::Reg<u32, _UARTPCELLID2>;
 #[allow(missing_docs)]
 #[doc(hidden)]
@@ -260,7 +344,11 @@ pub struct _UARTPCELLID2;
 impl crate::Readable for UARTPCELLID2 {}
 #[doc = "UARTPCellID2 Register"]
 pub mod uartpcellid2;
-#[doc = "UARTPCellID3 Register\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [uartpcellid3](uartpcellid3) module"]
+#[doc = "UARTPCellID3 Register  
+
+This register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+
+For information about available fields see [uartpcellid3](uartpcellid3) module"]
 pub type UARTPCELLID3 = crate::Reg<u32, _UARTPCELLID3>;
 #[allow(missing_docs)]
 #[doc(hidden)]

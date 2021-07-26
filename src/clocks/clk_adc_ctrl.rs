@@ -96,7 +96,9 @@ impl<'a> KILL_W<'a> {
         self.w
     }
 }
-#[doc = "Selects the auxiliary clock source, will glitch when switching\n\nValue on reset: 0"]
+#[doc = "Selects the auxiliary clock source, will glitch when switching  
+
+Value on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq)]
 #[repr(u8)]
 pub enum AUXSRC_A {
@@ -215,12 +217,14 @@ impl<'a> AUXSRC_W<'a> {
     }
 }
 impl R {
-    #[doc = "Bit 20 - An edge on this signal shifts the phase of the output by 1 cycle of the input clock\\n This can be done at any time"]
+    #[doc = "Bit 20 - An edge on this signal shifts the phase of the output by 1 cycle of the input clock  
+ This can be done at any time"]
     #[inline(always)]
     pub fn nudge(&self) -> NUDGE_R {
         NUDGE_R::new(((self.bits >> 20) & 0x01) != 0)
     }
-    #[doc = "Bits 16:17 - This delays the enable signal by up to 3 cycles of the input clock\\n This must be set before the clock is enabled to have any effect"]
+    #[doc = "Bits 16:17 - This delays the enable signal by up to 3 cycles of the input clock  
+ This must be set before the clock is enabled to have any effect"]
     #[inline(always)]
     pub fn phase(&self) -> PHASE_R {
         PHASE_R::new(((self.bits >> 16) & 0x03) as u8)
@@ -242,12 +246,14 @@ impl R {
     }
 }
 impl W {
-    #[doc = "Bit 20 - An edge on this signal shifts the phase of the output by 1 cycle of the input clock\\n This can be done at any time"]
+    #[doc = "Bit 20 - An edge on this signal shifts the phase of the output by 1 cycle of the input clock  
+ This can be done at any time"]
     #[inline(always)]
     pub fn nudge(&mut self) -> NUDGE_W {
         NUDGE_W { w: self }
     }
-    #[doc = "Bits 16:17 - This delays the enable signal by up to 3 cycles of the input clock\\n This must be set before the clock is enabled to have any effect"]
+    #[doc = "Bits 16:17 - This delays the enable signal by up to 3 cycles of the input clock  
+ This must be set before the clock is enabled to have any effect"]
     #[inline(always)]
     pub fn phase(&mut self) -> PHASE_W {
         PHASE_W { w: self }

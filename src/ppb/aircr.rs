@@ -75,12 +75,15 @@ impl<'a> VECTCLRACTIVE_W<'a> {
     }
 }
 impl R {
-    #[doc = "Bits 16:31 - Register key:\\n Reads as Unknown\\n On writes, write 0x05FA to VECTKEY, otherwise the write is ignored."]
+    #[doc = "Bits 16:31 - Register key:  
+ Reads as Unknown  
+ On writes, write 0x05FA to VECTKEY, otherwise the write is ignored."]
     #[inline(always)]
     pub fn vectkey(&self) -> VECTKEY_R {
         VECTKEY_R::new(((self.bits >> 16) & 0xffff) as u16)
     }
-    #[doc = "Bit 15 - Data endianness implemented:\\n 0 = Little-endian."]
+    #[doc = "Bit 15 - Data endianness implemented:  
+ 0 = Little-endian."]
     #[inline(always)]
     pub fn endianess(&self) -> ENDIANESS_R {
         ENDIANESS_R::new(((self.bits >> 15) & 0x01) != 0)
@@ -97,7 +100,9 @@ impl R {
     }
 }
 impl W {
-    #[doc = "Bits 16:31 - Register key:\\n Reads as Unknown\\n On writes, write 0x05FA to VECTKEY, otherwise the write is ignored."]
+    #[doc = "Bits 16:31 - Register key:  
+ Reads as Unknown  
+ On writes, write 0x05FA to VECTKEY, otherwise the write is ignored."]
     #[inline(always)]
     pub fn vectkey(&mut self) -> VECTKEY_W {
         VECTKEY_W { w: self }

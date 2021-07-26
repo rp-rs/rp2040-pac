@@ -10,7 +10,11 @@ pub struct RegisterBlock {
     #[doc = "0x80 - Pad control register"]
     pub swd: SWD,
 }
-#[doc = "Voltage select. Per bank control\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [voltage_select](voltage_select) module"]
+#[doc = "Voltage select. Per bank control  
+
+This register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+
+For information about available fields see [voltage_select](voltage_select) module"]
 pub type VOLTAGE_SELECT = crate::Reg<u32, _VOLTAGE_SELECT>;
 #[allow(missing_docs)]
 #[doc(hidden)]
@@ -21,7 +25,11 @@ impl crate::Readable for VOLTAGE_SELECT {}
 impl crate::Writable for VOLTAGE_SELECT {}
 #[doc = "Voltage select. Per bank control"]
 pub mod voltage_select;
-#[doc = "Pad control register\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [gpio](gpio) module"]
+#[doc = "Pad control register  
+
+This register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+
+For information about available fields see [gpio](gpio) module"]
 pub type GPIO = crate::Reg<u32, _GPIO>;
 #[allow(missing_docs)]
 #[doc(hidden)]
@@ -32,7 +40,11 @@ impl crate::Readable for GPIO {}
 impl crate::Writable for GPIO {}
 #[doc = "Pad control register"]
 pub mod gpio;
-#[doc = "Pad control register\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [swclk](swclk) module"]
+#[doc = "Pad control register  
+
+This register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+
+For information about available fields see [swclk](swclk) module"]
 pub type SWCLK = crate::Reg<u32, _SWCLK>;
 #[allow(missing_docs)]
 #[doc(hidden)]
@@ -43,7 +55,11 @@ impl crate::Readable for SWCLK {}
 impl crate::Writable for SWCLK {}
 #[doc = "Pad control register"]
 pub mod swclk;
-#[doc = "Pad control register\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [swd](swd) module"]
+#[doc = "Pad control register  
+
+This register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+
+For information about available fields see [swd](swd) module"]
 pub type SWD = crate::Reg<u32, _SWD>;
 #[allow(missing_docs)]
 #[doc(hidden)]

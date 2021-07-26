@@ -79,7 +79,11 @@ pub struct RegisterBlock {
     #[doc = "0x98 - Interrupt status after masking & forcing"]
     pub ints: INTS,
 }
-#[doc = "Device address and endpoint control\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [addr_endp](addr_endp) module"]
+#[doc = "Device address and endpoint control  
+
+This register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+
+For information about available fields see [addr_endp](addr_endp) module"]
 pub type ADDR_ENDP = crate::Reg<u32, _ADDR_ENDP>;
 #[allow(missing_docs)]
 #[doc(hidden)]
@@ -90,7 +94,11 @@ impl crate::Readable for ADDR_ENDP {}
 impl crate::Writable for ADDR_ENDP {}
 #[doc = "Device address and endpoint control"]
 pub mod addr_endp;
-#[doc = "Interrupt endpoint 1. Only valid for HOST mode.\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [addr_endp1](addr_endp1) module"]
+#[doc = "Interrupt endpoint 1. Only valid for HOST mode.  
+
+This register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+
+For information about available fields see [addr_endp1](addr_endp1) module"]
 pub type ADDR_ENDP1 = crate::Reg<u32, _ADDR_ENDP1>;
 #[allow(missing_docs)]
 #[doc(hidden)]
@@ -101,7 +109,11 @@ impl crate::Readable for ADDR_ENDP1 {}
 impl crate::Writable for ADDR_ENDP1 {}
 #[doc = "Interrupt endpoint 1. Only valid for HOST mode."]
 pub mod addr_endp1;
-#[doc = "Interrupt endpoint 2. Only valid for HOST mode.\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [addr_endp2](addr_endp2) module"]
+#[doc = "Interrupt endpoint 2. Only valid for HOST mode.  
+
+This register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+
+For information about available fields see [addr_endp2](addr_endp2) module"]
 pub type ADDR_ENDP2 = crate::Reg<u32, _ADDR_ENDP2>;
 #[allow(missing_docs)]
 #[doc(hidden)]
@@ -112,7 +124,11 @@ impl crate::Readable for ADDR_ENDP2 {}
 impl crate::Writable for ADDR_ENDP2 {}
 #[doc = "Interrupt endpoint 2. Only valid for HOST mode."]
 pub mod addr_endp2;
-#[doc = "Interrupt endpoint 3. Only valid for HOST mode.\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [addr_endp3](addr_endp3) module"]
+#[doc = "Interrupt endpoint 3. Only valid for HOST mode.  
+
+This register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+
+For information about available fields see [addr_endp3](addr_endp3) module"]
 pub type ADDR_ENDP3 = crate::Reg<u32, _ADDR_ENDP3>;
 #[allow(missing_docs)]
 #[doc(hidden)]
@@ -123,7 +139,11 @@ impl crate::Readable for ADDR_ENDP3 {}
 impl crate::Writable for ADDR_ENDP3 {}
 #[doc = "Interrupt endpoint 3. Only valid for HOST mode."]
 pub mod addr_endp3;
-#[doc = "Interrupt endpoint 4. Only valid for HOST mode.\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [addr_endp4](addr_endp4) module"]
+#[doc = "Interrupt endpoint 4. Only valid for HOST mode.  
+
+This register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+
+For information about available fields see [addr_endp4](addr_endp4) module"]
 pub type ADDR_ENDP4 = crate::Reg<u32, _ADDR_ENDP4>;
 #[allow(missing_docs)]
 #[doc(hidden)]
@@ -134,7 +154,11 @@ impl crate::Readable for ADDR_ENDP4 {}
 impl crate::Writable for ADDR_ENDP4 {}
 #[doc = "Interrupt endpoint 4. Only valid for HOST mode."]
 pub mod addr_endp4;
-#[doc = "Interrupt endpoint 5. Only valid for HOST mode.\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [addr_endp5](addr_endp5) module"]
+#[doc = "Interrupt endpoint 5. Only valid for HOST mode.  
+
+This register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+
+For information about available fields see [addr_endp5](addr_endp5) module"]
 pub type ADDR_ENDP5 = crate::Reg<u32, _ADDR_ENDP5>;
 #[allow(missing_docs)]
 #[doc(hidden)]
@@ -145,7 +169,11 @@ impl crate::Readable for ADDR_ENDP5 {}
 impl crate::Writable for ADDR_ENDP5 {}
 #[doc = "Interrupt endpoint 5. Only valid for HOST mode."]
 pub mod addr_endp5;
-#[doc = "Interrupt endpoint 6. Only valid for HOST mode.\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [addr_endp6](addr_endp6) module"]
+#[doc = "Interrupt endpoint 6. Only valid for HOST mode.  
+
+This register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+
+For information about available fields see [addr_endp6](addr_endp6) module"]
 pub type ADDR_ENDP6 = crate::Reg<u32, _ADDR_ENDP6>;
 #[allow(missing_docs)]
 #[doc(hidden)]
@@ -156,7 +184,11 @@ impl crate::Readable for ADDR_ENDP6 {}
 impl crate::Writable for ADDR_ENDP6 {}
 #[doc = "Interrupt endpoint 6. Only valid for HOST mode."]
 pub mod addr_endp6;
-#[doc = "Interrupt endpoint 7. Only valid for HOST mode.\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [addr_endp7](addr_endp7) module"]
+#[doc = "Interrupt endpoint 7. Only valid for HOST mode.  
+
+This register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+
+For information about available fields see [addr_endp7](addr_endp7) module"]
 pub type ADDR_ENDP7 = crate::Reg<u32, _ADDR_ENDP7>;
 #[allow(missing_docs)]
 #[doc(hidden)]
@@ -167,7 +199,11 @@ impl crate::Readable for ADDR_ENDP7 {}
 impl crate::Writable for ADDR_ENDP7 {}
 #[doc = "Interrupt endpoint 7. Only valid for HOST mode."]
 pub mod addr_endp7;
-#[doc = "Interrupt endpoint 8. Only valid for HOST mode.\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [addr_endp8](addr_endp8) module"]
+#[doc = "Interrupt endpoint 8. Only valid for HOST mode.  
+
+This register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+
+For information about available fields see [addr_endp8](addr_endp8) module"]
 pub type ADDR_ENDP8 = crate::Reg<u32, _ADDR_ENDP8>;
 #[allow(missing_docs)]
 #[doc(hidden)]
@@ -178,7 +214,11 @@ impl crate::Readable for ADDR_ENDP8 {}
 impl crate::Writable for ADDR_ENDP8 {}
 #[doc = "Interrupt endpoint 8. Only valid for HOST mode."]
 pub mod addr_endp8;
-#[doc = "Interrupt endpoint 9. Only valid for HOST mode.\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [addr_endp9](addr_endp9) module"]
+#[doc = "Interrupt endpoint 9. Only valid for HOST mode.  
+
+This register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+
+For information about available fields see [addr_endp9](addr_endp9) module"]
 pub type ADDR_ENDP9 = crate::Reg<u32, _ADDR_ENDP9>;
 #[allow(missing_docs)]
 #[doc(hidden)]
@@ -189,7 +229,11 @@ impl crate::Readable for ADDR_ENDP9 {}
 impl crate::Writable for ADDR_ENDP9 {}
 #[doc = "Interrupt endpoint 9. Only valid for HOST mode."]
 pub mod addr_endp9;
-#[doc = "Interrupt endpoint 10. Only valid for HOST mode.\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [addr_endp10](addr_endp10) module"]
+#[doc = "Interrupt endpoint 10. Only valid for HOST mode.  
+
+This register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+
+For information about available fields see [addr_endp10](addr_endp10) module"]
 pub type ADDR_ENDP10 = crate::Reg<u32, _ADDR_ENDP10>;
 #[allow(missing_docs)]
 #[doc(hidden)]
@@ -200,7 +244,11 @@ impl crate::Readable for ADDR_ENDP10 {}
 impl crate::Writable for ADDR_ENDP10 {}
 #[doc = "Interrupt endpoint 10. Only valid for HOST mode."]
 pub mod addr_endp10;
-#[doc = "Interrupt endpoint 11. Only valid for HOST mode.\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [addr_endp11](addr_endp11) module"]
+#[doc = "Interrupt endpoint 11. Only valid for HOST mode.  
+
+This register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+
+For information about available fields see [addr_endp11](addr_endp11) module"]
 pub type ADDR_ENDP11 = crate::Reg<u32, _ADDR_ENDP11>;
 #[allow(missing_docs)]
 #[doc(hidden)]
@@ -211,7 +259,11 @@ impl crate::Readable for ADDR_ENDP11 {}
 impl crate::Writable for ADDR_ENDP11 {}
 #[doc = "Interrupt endpoint 11. Only valid for HOST mode."]
 pub mod addr_endp11;
-#[doc = "Interrupt endpoint 12. Only valid for HOST mode.\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [addr_endp12](addr_endp12) module"]
+#[doc = "Interrupt endpoint 12. Only valid for HOST mode.  
+
+This register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+
+For information about available fields see [addr_endp12](addr_endp12) module"]
 pub type ADDR_ENDP12 = crate::Reg<u32, _ADDR_ENDP12>;
 #[allow(missing_docs)]
 #[doc(hidden)]
@@ -222,7 +274,11 @@ impl crate::Readable for ADDR_ENDP12 {}
 impl crate::Writable for ADDR_ENDP12 {}
 #[doc = "Interrupt endpoint 12. Only valid for HOST mode."]
 pub mod addr_endp12;
-#[doc = "Interrupt endpoint 13. Only valid for HOST mode.\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [addr_endp13](addr_endp13) module"]
+#[doc = "Interrupt endpoint 13. Only valid for HOST mode.  
+
+This register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+
+For information about available fields see [addr_endp13](addr_endp13) module"]
 pub type ADDR_ENDP13 = crate::Reg<u32, _ADDR_ENDP13>;
 #[allow(missing_docs)]
 #[doc(hidden)]
@@ -233,7 +289,11 @@ impl crate::Readable for ADDR_ENDP13 {}
 impl crate::Writable for ADDR_ENDP13 {}
 #[doc = "Interrupt endpoint 13. Only valid for HOST mode."]
 pub mod addr_endp13;
-#[doc = "Interrupt endpoint 14. Only valid for HOST mode.\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [addr_endp14](addr_endp14) module"]
+#[doc = "Interrupt endpoint 14. Only valid for HOST mode.  
+
+This register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+
+For information about available fields see [addr_endp14](addr_endp14) module"]
 pub type ADDR_ENDP14 = crate::Reg<u32, _ADDR_ENDP14>;
 #[allow(missing_docs)]
 #[doc(hidden)]
@@ -244,7 +304,11 @@ impl crate::Readable for ADDR_ENDP14 {}
 impl crate::Writable for ADDR_ENDP14 {}
 #[doc = "Interrupt endpoint 14. Only valid for HOST mode."]
 pub mod addr_endp14;
-#[doc = "Interrupt endpoint 15. Only valid for HOST mode.\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [addr_endp15](addr_endp15) module"]
+#[doc = "Interrupt endpoint 15. Only valid for HOST mode.  
+
+This register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+
+For information about available fields see [addr_endp15](addr_endp15) module"]
 pub type ADDR_ENDP15 = crate::Reg<u32, _ADDR_ENDP15>;
 #[allow(missing_docs)]
 #[doc(hidden)]
@@ -255,7 +319,11 @@ impl crate::Readable for ADDR_ENDP15 {}
 impl crate::Writable for ADDR_ENDP15 {}
 #[doc = "Interrupt endpoint 15. Only valid for HOST mode."]
 pub mod addr_endp15;
-#[doc = "Main control register\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [main_ctrl](main_ctrl) module"]
+#[doc = "Main control register  
+
+This register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+
+For information about available fields see [main_ctrl](main_ctrl) module"]
 pub type MAIN_CTRL = crate::Reg<u32, _MAIN_CTRL>;
 #[allow(missing_docs)]
 #[doc(hidden)]
@@ -266,7 +334,11 @@ impl crate::Readable for MAIN_CTRL {}
 impl crate::Writable for MAIN_CTRL {}
 #[doc = "Main control register"]
 pub mod main_ctrl;
-#[doc = "Set the SOF (Start of Frame) frame number in the host controller. The SOF packet is sent every 1ms and the host will increment the frame number by 1 each time.\n\nThis register you can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [sof_wr](sof_wr) module"]
+#[doc = "Set the SOF (Start of Frame) frame number in the host controller. The SOF packet is sent every 1ms and the host will increment the frame number by 1 each time.  
+
+This register you can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+
+For information about available fields see [sof_wr](sof_wr) module"]
 pub type SOF_WR = crate::Reg<u32, _SOF_WR>;
 #[allow(missing_docs)]
 #[doc(hidden)]
@@ -275,7 +347,11 @@ pub struct _SOF_WR;
 impl crate::Writable for SOF_WR {}
 #[doc = "Set the SOF (Start of Frame) frame number in the host controller. The SOF packet is sent every 1ms and the host will increment the frame number by 1 each time."]
 pub mod sof_wr;
-#[doc = "Read the last SOF (Start of Frame) frame number seen. In device mode the last SOF received from the host. In host mode the last SOF sent by the host.\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [sof_rd](sof_rd) module"]
+#[doc = "Read the last SOF (Start of Frame) frame number seen. In device mode the last SOF received from the host. In host mode the last SOF sent by the host.  
+
+This register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+
+For information about available fields see [sof_rd](sof_rd) module"]
 pub type SOF_RD = crate::Reg<u32, _SOF_RD>;
 #[allow(missing_docs)]
 #[doc(hidden)]
@@ -284,7 +360,11 @@ pub struct _SOF_RD;
 impl crate::Readable for SOF_RD {}
 #[doc = "Read the last SOF (Start of Frame) frame number seen. In device mode the last SOF received from the host. In host mode the last SOF sent by the host."]
 pub mod sof_rd;
-#[doc = "SIE control register\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [sie_ctrl](sie_ctrl) module"]
+#[doc = "SIE control register  
+
+This register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+
+For information about available fields see [sie_ctrl](sie_ctrl) module"]
 pub type SIE_CTRL = crate::Reg<u32, _SIE_CTRL>;
 #[allow(missing_docs)]
 #[doc(hidden)]
@@ -295,7 +375,11 @@ impl crate::Readable for SIE_CTRL {}
 impl crate::Writable for SIE_CTRL {}
 #[doc = "SIE control register"]
 pub mod sie_ctrl;
-#[doc = "SIE status register\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [sie_status](sie_status) module"]
+#[doc = "SIE status register  
+
+This register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+
+For information about available fields see [sie_status](sie_status) module"]
 pub type SIE_STATUS = crate::Reg<u32, _SIE_STATUS>;
 #[allow(missing_docs)]
 #[doc(hidden)]
@@ -306,7 +390,11 @@ impl crate::Readable for SIE_STATUS {}
 impl crate::Writable for SIE_STATUS {}
 #[doc = "SIE status register"]
 pub mod sie_status;
-#[doc = "interrupt endpoint control register\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [int_ep_ctrl](int_ep_ctrl) module"]
+#[doc = "interrupt endpoint control register  
+
+This register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+
+For information about available fields see [int_ep_ctrl](int_ep_ctrl) module"]
 pub type INT_EP_CTRL = crate::Reg<u32, _INT_EP_CTRL>;
 #[allow(missing_docs)]
 #[doc(hidden)]
@@ -317,7 +405,11 @@ impl crate::Readable for INT_EP_CTRL {}
 impl crate::Writable for INT_EP_CTRL {}
 #[doc = "interrupt endpoint control register"]
 pub mod int_ep_ctrl;
-#[doc = "Buffer status register. A bit set here indicates that a buffer has completed on the endpoint (if the buffer interrupt is enabled). It is possible for 2 buffers to be completed, so clearing the buffer status bit may instantly re set it on the next clock cycle.\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [buff_status](buff_status) module"]
+#[doc = "Buffer status register. A bit set here indicates that a buffer has completed on the endpoint (if the buffer interrupt is enabled). It is possible for 2 buffers to be completed, so clearing the buffer status bit may instantly re set it on the next clock cycle.  
+
+This register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+
+For information about available fields see [buff_status](buff_status) module"]
 pub type BUFF_STATUS = crate::Reg<u32, _BUFF_STATUS>;
 #[allow(missing_docs)]
 #[doc(hidden)]
@@ -328,7 +420,11 @@ impl crate::Readable for BUFF_STATUS {}
 impl crate::Writable for BUFF_STATUS {}
 #[doc = "Buffer status register. A bit set here indicates that a buffer has completed on the endpoint (if the buffer interrupt is enabled). It is possible for 2 buffers to be completed, so clearing the buffer status bit may instantly re set it on the next clock cycle."]
 pub mod buff_status;
-#[doc = "Which of the double buffers should be handled. Only valid if using an interrupt per buffer (i.e. not per 2 buffers). Not valid for host interrupt endpoint polling because they are only single buffered.\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [buff_cpu_should_handle](buff_cpu_should_handle) module"]
+#[doc = "Which of the double buffers should be handled. Only valid if using an interrupt per buffer (i.e. not per 2 buffers). Not valid for host interrupt endpoint polling because they are only single buffered.  
+
+This register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+
+For information about available fields see [buff_cpu_should_handle](buff_cpu_should_handle) module"]
 pub type BUFF_CPU_SHOULD_HANDLE = crate::Reg<u32, _BUFF_CPU_SHOULD_HANDLE>;
 #[allow(missing_docs)]
 #[doc(hidden)]
@@ -337,7 +433,11 @@ pub struct _BUFF_CPU_SHOULD_HANDLE;
 impl crate::Readable for BUFF_CPU_SHOULD_HANDLE {}
 #[doc = "Which of the double buffers should be handled. Only valid if using an interrupt per buffer (i.e. not per 2 buffers). Not valid for host interrupt endpoint polling because they are only single buffered."]
 pub mod buff_cpu_should_handle;
-#[doc = "Device only: Can be set to ignore the buffer control register for this endpoint in case you would like to revoke a buffer. A NAK will be sent for every access to the endpoint until this bit is cleared. A corresponding bit in `EP_ABORT_DONE` is set when it is safe to modify the buffer control register.\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [ep_abort](ep_abort) module"]
+#[doc = "Device only: Can be set to ignore the buffer control register for this endpoint in case you would like to revoke a buffer. A NAK will be sent for every access to the endpoint until this bit is cleared. A corresponding bit in `EP_ABORT_DONE` is set when it is safe to modify the buffer control register.  
+
+This register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+
+For information about available fields see [ep_abort](ep_abort) module"]
 pub type EP_ABORT = crate::Reg<u32, _EP_ABORT>;
 #[allow(missing_docs)]
 #[doc(hidden)]
@@ -348,7 +448,11 @@ impl crate::Readable for EP_ABORT {}
 impl crate::Writable for EP_ABORT {}
 #[doc = "Device only: Can be set to ignore the buffer control register for this endpoint in case you would like to revoke a buffer. A NAK will be sent for every access to the endpoint until this bit is cleared. A corresponding bit in `EP_ABORT_DONE` is set when it is safe to modify the buffer control register."]
 pub mod ep_abort;
-#[doc = "Device only: Used in conjunction with `EP_ABORT`. Set once an endpoint is idle so the programmer knows it is safe to modify the buffer control register.\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [ep_abort_done](ep_abort_done) module"]
+#[doc = "Device only: Used in conjunction with `EP_ABORT`. Set once an endpoint is idle so the programmer knows it is safe to modify the buffer control register.  
+
+This register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+
+For information about available fields see [ep_abort_done](ep_abort_done) module"]
 pub type EP_ABORT_DONE = crate::Reg<u32, _EP_ABORT_DONE>;
 #[allow(missing_docs)]
 #[doc(hidden)]
@@ -359,7 +463,11 @@ impl crate::Readable for EP_ABORT_DONE {}
 impl crate::Writable for EP_ABORT_DONE {}
 #[doc = "Device only: Used in conjunction with `EP_ABORT`. Set once an endpoint is idle so the programmer knows it is safe to modify the buffer control register."]
 pub mod ep_abort_done;
-#[doc = "Device: this bit must be set in conjunction with the `STALL` bit in the buffer control register to send a STALL on EP0. The device controller clears these bits when a SETUP packet is received because the USB spec requires that a STALL condition is cleared when a SETUP packet is received.\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [ep_stall_arm](ep_stall_arm) module"]
+#[doc = "Device: this bit must be set in conjunction with the `STALL` bit in the buffer control register to send a STALL on EP0. The device controller clears these bits when a SETUP packet is received because the USB spec requires that a STALL condition is cleared when a SETUP packet is received.  
+
+This register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+
+For information about available fields see [ep_stall_arm](ep_stall_arm) module"]
 pub type EP_STALL_ARM = crate::Reg<u32, _EP_STALL_ARM>;
 #[allow(missing_docs)]
 #[doc(hidden)]
@@ -370,7 +478,11 @@ impl crate::Readable for EP_STALL_ARM {}
 impl crate::Writable for EP_STALL_ARM {}
 #[doc = "Device: this bit must be set in conjunction with the `STALL` bit in the buffer control register to send a STALL on EP0. The device controller clears these bits when a SETUP packet is received because the USB spec requires that a STALL condition is cleared when a SETUP packet is received."]
 pub mod ep_stall_arm;
-#[doc = "Used by the host controller. Sets the wait time in microseconds before trying again if the device replies with a NAK.\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [nak_poll](nak_poll) module"]
+#[doc = "Used by the host controller. Sets the wait time in microseconds before trying again if the device replies with a NAK.  
+
+This register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+
+For information about available fields see [nak_poll](nak_poll) module"]
 pub type NAK_POLL = crate::Reg<u32, _NAK_POLL>;
 #[allow(missing_docs)]
 #[doc(hidden)]
@@ -381,7 +493,11 @@ impl crate::Readable for NAK_POLL {}
 impl crate::Writable for NAK_POLL {}
 #[doc = "Used by the host controller. Sets the wait time in microseconds before trying again if the device replies with a NAK."]
 pub mod nak_poll;
-#[doc = "Device: bits are set when the `IRQ_ON_NAK` or `IRQ_ON_STALL` bits are set. For EP0 this comes from `SIE_CTRL`. For all other endpoints it comes from the endpoint control register.\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [ep_status_stall_nak](ep_status_stall_nak) module"]
+#[doc = "Device: bits are set when the `IRQ_ON_NAK` or `IRQ_ON_STALL` bits are set. For EP0 this comes from `SIE_CTRL`. For all other endpoints it comes from the endpoint control register.  
+
+This register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+
+For information about available fields see [ep_status_stall_nak](ep_status_stall_nak) module"]
 pub type EP_STATUS_STALL_NAK = crate::Reg<u32, _EP_STATUS_STALL_NAK>;
 #[allow(missing_docs)]
 #[doc(hidden)]
@@ -392,7 +508,11 @@ impl crate::Readable for EP_STATUS_STALL_NAK {}
 impl crate::Writable for EP_STATUS_STALL_NAK {}
 #[doc = "Device: bits are set when the `IRQ_ON_NAK` or `IRQ_ON_STALL` bits are set. For EP0 this comes from `SIE_CTRL`. For all other endpoints it comes from the endpoint control register."]
 pub mod ep_status_stall_nak;
-#[doc = "Where to connect the USB controller. Should be to_phy by default.\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [usb_muxing](usb_muxing) module"]
+#[doc = "Where to connect the USB controller. Should be to_phy by default.  
+
+This register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+
+For information about available fields see [usb_muxing](usb_muxing) module"]
 pub type USB_MUXING = crate::Reg<u32, _USB_MUXING>;
 #[allow(missing_docs)]
 #[doc(hidden)]
@@ -403,7 +523,11 @@ impl crate::Readable for USB_MUXING {}
 impl crate::Writable for USB_MUXING {}
 #[doc = "Where to connect the USB controller. Should be to_phy by default."]
 pub mod usb_muxing;
-#[doc = "Overrides for the power signals in the event that the VBUS signals are not hooked up to GPIO. Set the value of the override and then the override enable to switch over to the override value.\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [usb_pwr](usb_pwr) module"]
+#[doc = "Overrides for the power signals in the event that the VBUS signals are not hooked up to GPIO. Set the value of the override and then the override enable to switch over to the override value.  
+
+This register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+
+For information about available fields see [usb_pwr](usb_pwr) module"]
 pub type USB_PWR = crate::Reg<u32, _USB_PWR>;
 #[allow(missing_docs)]
 #[doc(hidden)]
@@ -414,7 +538,11 @@ impl crate::Readable for USB_PWR {}
 impl crate::Writable for USB_PWR {}
 #[doc = "Overrides for the power signals in the event that the VBUS signals are not hooked up to GPIO. Set the value of the override and then the override enable to switch over to the override value."]
 pub mod usb_pwr;
-#[doc = "This register allows for direct control of the USB phy. Use in conjunction with usbphy_direct_override register to enable each override bit.\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [usbphy_direct](usbphy_direct) module"]
+#[doc = "This register allows for direct control of the USB phy. Use in conjunction with usbphy_direct_override register to enable each override bit.  
+
+This register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+
+For information about available fields see [usbphy_direct](usbphy_direct) module"]
 pub type USBPHY_DIRECT = crate::Reg<u32, _USBPHY_DIRECT>;
 #[allow(missing_docs)]
 #[doc(hidden)]
@@ -425,7 +553,11 @@ impl crate::Readable for USBPHY_DIRECT {}
 impl crate::Writable for USBPHY_DIRECT {}
 #[doc = "This register allows for direct control of the USB phy. Use in conjunction with usbphy_direct_override register to enable each override bit."]
 pub mod usbphy_direct;
-#[doc = "Override enable for each control in usbphy_direct\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [usbphy_direct_override](usbphy_direct_override) module"]
+#[doc = "Override enable for each control in usbphy_direct  
+
+This register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+
+For information about available fields see [usbphy_direct_override](usbphy_direct_override) module"]
 pub type USBPHY_DIRECT_OVERRIDE = crate::Reg<u32, _USBPHY_DIRECT_OVERRIDE>;
 #[allow(missing_docs)]
 #[doc(hidden)]
@@ -436,7 +568,11 @@ impl crate::Readable for USBPHY_DIRECT_OVERRIDE {}
 impl crate::Writable for USBPHY_DIRECT_OVERRIDE {}
 #[doc = "Override enable for each control in usbphy_direct"]
 pub mod usbphy_direct_override;
-#[doc = "Used to adjust trim values of USB phy pull down resistors.\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [usbphy_trim](usbphy_trim) module"]
+#[doc = "Used to adjust trim values of USB phy pull down resistors.  
+
+This register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+
+For information about available fields see [usbphy_trim](usbphy_trim) module"]
 pub type USBPHY_TRIM = crate::Reg<u32, _USBPHY_TRIM>;
 #[allow(missing_docs)]
 #[doc(hidden)]
@@ -447,7 +583,11 @@ impl crate::Readable for USBPHY_TRIM {}
 impl crate::Writable for USBPHY_TRIM {}
 #[doc = "Used to adjust trim values of USB phy pull down resistors."]
 pub mod usbphy_trim;
-#[doc = "Raw Interrupts\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [intr](intr) module"]
+#[doc = "Raw Interrupts  
+
+This register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+
+For information about available fields see [intr](intr) module"]
 pub type INTR = crate::Reg<u32, _INTR>;
 #[allow(missing_docs)]
 #[doc(hidden)]
@@ -456,7 +596,11 @@ pub struct _INTR;
 impl crate::Readable for INTR {}
 #[doc = "Raw Interrupts"]
 pub mod intr;
-#[doc = "Interrupt Enable\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [inte](inte) module"]
+#[doc = "Interrupt Enable  
+
+This register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+
+For information about available fields see [inte](inte) module"]
 pub type INTE = crate::Reg<u32, _INTE>;
 #[allow(missing_docs)]
 #[doc(hidden)]
@@ -467,7 +611,11 @@ impl crate::Readable for INTE {}
 impl crate::Writable for INTE {}
 #[doc = "Interrupt Enable"]
 pub mod inte;
-#[doc = "Interrupt Force\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [intf](intf) module"]
+#[doc = "Interrupt Force  
+
+This register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+
+For information about available fields see [intf](intf) module"]
 pub type INTF = crate::Reg<u32, _INTF>;
 #[allow(missing_docs)]
 #[doc(hidden)]
@@ -478,7 +626,11 @@ impl crate::Readable for INTF {}
 impl crate::Writable for INTF {}
 #[doc = "Interrupt Force"]
 pub mod intf;
-#[doc = "Interrupt status after masking & forcing\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [ints](ints) module"]
+#[doc = "Interrupt status after masking & forcing  
+
+This register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+
+For information about available fields see [ints](ints) module"]
 pub type INTS = crate::Reg<u32, _INTS>;
 #[allow(missing_docs)]
 #[doc(hidden)]

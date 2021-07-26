@@ -39,7 +39,8 @@ impl<'a> FRAC_W<'a> {
     }
 }
 impl R {
-    #[doc = "Bits 16:31 - Effective frequency is sysclk/(int + frac/256).\\n Value of 0 is interpreted as 65536. If INT is 0, FRAC must also be 0."]
+    #[doc = "Bits 16:31 - Effective frequency is sysclk/(int + frac/256).  
+ Value of 0 is interpreted as 65536. If INT is 0, FRAC must also be 0."]
     #[inline(always)]
     pub fn int(&self) -> INT_R {
         INT_R::new(((self.bits >> 16) & 0xffff) as u16)
@@ -51,7 +52,8 @@ impl R {
     }
 }
 impl W {
-    #[doc = "Bits 16:31 - Effective frequency is sysclk/(int + frac/256).\\n Value of 0 is interpreted as 65536. If INT is 0, FRAC must also be 0."]
+    #[doc = "Bits 16:31 - Effective frequency is sysclk/(int + frac/256).  
+ Value of 0 is interpreted as 65536. If INT is 0, FRAC must also be 0."]
     #[inline(always)]
     pub fn int(&mut self) -> INT_W {
         INT_W { w: self }

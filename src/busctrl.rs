@@ -22,7 +22,11 @@ pub struct RegisterBlock {
     #[doc = "0x24 - Bus fabric performance event select for PERFCTR3"]
     pub perfsel3: PERFSEL3,
 }
-#[doc = "Set the priority of each master for bus arbitration.\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [bus_priority](bus_priority) module"]
+#[doc = "Set the priority of each master for bus arbitration.  
+
+This register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+
+For information about available fields see [bus_priority](bus_priority) module"]
 pub type BUS_PRIORITY = crate::Reg<u32, _BUS_PRIORITY>;
 #[allow(missing_docs)]
 #[doc(hidden)]
@@ -33,7 +37,11 @@ impl crate::Readable for BUS_PRIORITY {}
 impl crate::Writable for BUS_PRIORITY {}
 #[doc = "Set the priority of each master for bus arbitration."]
 pub mod bus_priority;
-#[doc = "Bus priority acknowledge\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [bus_priority_ack](bus_priority_ack) module"]
+#[doc = "Bus priority acknowledge  
+
+This register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+
+For information about available fields see [bus_priority_ack](bus_priority_ack) module"]
 pub type BUS_PRIORITY_ACK = crate::Reg<u32, _BUS_PRIORITY_ACK>;
 #[allow(missing_docs)]
 #[doc(hidden)]
@@ -42,7 +50,11 @@ pub struct _BUS_PRIORITY_ACK;
 impl crate::Readable for BUS_PRIORITY_ACK {}
 #[doc = "Bus priority acknowledge"]
 pub mod bus_priority_ack;
-#[doc = "Bus fabric performance counter 0\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [perfctr0](perfctr0) module"]
+#[doc = "Bus fabric performance counter 0  
+
+This register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+
+For information about available fields see [perfctr0](perfctr0) module"]
 pub type PERFCTR0 = crate::Reg<u32, _PERFCTR0>;
 #[allow(missing_docs)]
 #[doc(hidden)]
@@ -53,7 +65,11 @@ impl crate::Readable for PERFCTR0 {}
 impl crate::Writable for PERFCTR0 {}
 #[doc = "Bus fabric performance counter 0"]
 pub mod perfctr0;
-#[doc = "Bus fabric performance event select for PERFCTR0\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [perfsel0](perfsel0) module"]
+#[doc = "Bus fabric performance event select for PERFCTR0  
+
+This register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+
+For information about available fields see [perfsel0](perfsel0) module"]
 pub type PERFSEL0 = crate::Reg<u32, _PERFSEL0>;
 #[allow(missing_docs)]
 #[doc(hidden)]
@@ -64,7 +80,11 @@ impl crate::Readable for PERFSEL0 {}
 impl crate::Writable for PERFSEL0 {}
 #[doc = "Bus fabric performance event select for PERFCTR0"]
 pub mod perfsel0;
-#[doc = "Bus fabric performance counter 1\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [perfctr1](perfctr1) module"]
+#[doc = "Bus fabric performance counter 1  
+
+This register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+
+For information about available fields see [perfctr1](perfctr1) module"]
 pub type PERFCTR1 = crate::Reg<u32, _PERFCTR1>;
 #[allow(missing_docs)]
 #[doc(hidden)]
@@ -75,7 +95,11 @@ impl crate::Readable for PERFCTR1 {}
 impl crate::Writable for PERFCTR1 {}
 #[doc = "Bus fabric performance counter 1"]
 pub mod perfctr1;
-#[doc = "Bus fabric performance event select for PERFCTR1\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [perfsel1](perfsel1) module"]
+#[doc = "Bus fabric performance event select for PERFCTR1  
+
+This register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+
+For information about available fields see [perfsel1](perfsel1) module"]
 pub type PERFSEL1 = crate::Reg<u32, _PERFSEL1>;
 #[allow(missing_docs)]
 #[doc(hidden)]
@@ -86,7 +110,11 @@ impl crate::Readable for PERFSEL1 {}
 impl crate::Writable for PERFSEL1 {}
 #[doc = "Bus fabric performance event select for PERFCTR1"]
 pub mod perfsel1;
-#[doc = "Bus fabric performance counter 2\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [perfctr2](perfctr2) module"]
+#[doc = "Bus fabric performance counter 2  
+
+This register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+
+For information about available fields see [perfctr2](perfctr2) module"]
 pub type PERFCTR2 = crate::Reg<u32, _PERFCTR2>;
 #[allow(missing_docs)]
 #[doc(hidden)]
@@ -97,7 +125,11 @@ impl crate::Readable for PERFCTR2 {}
 impl crate::Writable for PERFCTR2 {}
 #[doc = "Bus fabric performance counter 2"]
 pub mod perfctr2;
-#[doc = "Bus fabric performance event select for PERFCTR2\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [perfsel2](perfsel2) module"]
+#[doc = "Bus fabric performance event select for PERFCTR2  
+
+This register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+
+For information about available fields see [perfsel2](perfsel2) module"]
 pub type PERFSEL2 = crate::Reg<u32, _PERFSEL2>;
 #[allow(missing_docs)]
 #[doc(hidden)]
@@ -108,7 +140,11 @@ impl crate::Readable for PERFSEL2 {}
 impl crate::Writable for PERFSEL2 {}
 #[doc = "Bus fabric performance event select for PERFCTR2"]
 pub mod perfsel2;
-#[doc = "Bus fabric performance counter 3\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [perfctr3](perfctr3) module"]
+#[doc = "Bus fabric performance counter 3  
+
+This register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+
+For information about available fields see [perfctr3](perfctr3) module"]
 pub type PERFCTR3 = crate::Reg<u32, _PERFCTR3>;
 #[allow(missing_docs)]
 #[doc(hidden)]
@@ -119,7 +155,11 @@ impl crate::Readable for PERFCTR3 {}
 impl crate::Writable for PERFCTR3 {}
 #[doc = "Bus fabric performance counter 3"]
 pub mod perfctr3;
-#[doc = "Bus fabric performance event select for PERFCTR3\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [perfsel3](perfsel3) module"]
+#[doc = "Bus fabric performance event select for PERFCTR3  
+
+This register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+
+For information about available fields see [perfsel3](perfsel3) module"]
 pub type PERFSEL3 = crate::Reg<u32, _PERFSEL3>;
 #[allow(missing_docs)]
 #[doc(hidden)]

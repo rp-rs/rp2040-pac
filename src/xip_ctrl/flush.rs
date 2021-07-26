@@ -35,14 +35,22 @@ impl<'a> FLUSH_W<'a> {
     }
 }
 impl R {
-    #[doc = "Bit 0 - Write 1 to flush the cache. This clears the tag memory, but\\n the data memory retains its contents. (This means cache-as-SRAM\\n contents is not affected by flush or reset.)\\n Reading will hold the bus (stall the processor) until the flush\\n completes. Alternatively STAT can be polled until completion."]
+    #[doc = "Bit 0 - Write 1 to flush the cache. This clears the tag memory, but  
+ the data memory retains its contents. (This means cache-as-SRAM  
+ contents is not affected by flush or reset.)  
+ Reading will hold the bus (stall the processor) until the flush  
+ completes. Alternatively STAT can be polled until completion."]
     #[inline(always)]
     pub fn flush(&self) -> FLUSH_R {
         FLUSH_R::new((self.bits & 0x01) != 0)
     }
 }
 impl W {
-    #[doc = "Bit 0 - Write 1 to flush the cache. This clears the tag memory, but\\n the data memory retains its contents. (This means cache-as-SRAM\\n contents is not affected by flush or reset.)\\n Reading will hold the bus (stall the processor) until the flush\\n completes. Alternatively STAT can be polled until completion."]
+    #[doc = "Bit 0 - Write 1 to flush the cache. This clears the tag memory, but  
+ the data memory retains its contents. (This means cache-as-SRAM  
+ contents is not affected by flush or reset.)  
+ Reading will hold the bus (stall the processor) until the flush  
+ completes. Alternatively STAT can be polled until completion."]
     #[inline(always)]
     pub fn flush(&mut self) -> FLUSH_W {
         FLUSH_W { w: self }

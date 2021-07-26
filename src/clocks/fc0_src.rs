@@ -10,7 +10,9 @@ impl crate::ResetValue for super::FC0_SRC {
         0
     }
 }
-#[doc = "\n\nValue on reset: 0"]
+#[doc = "  
+
+Value on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq)]
 #[repr(u8)]
 pub enum FC0_SRC_A {

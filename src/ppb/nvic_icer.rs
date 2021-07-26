@@ -25,14 +25,26 @@ impl<'a> CLRENA_W<'a> {
     }
 }
 impl R {
-    #[doc = "Bits 0:31 - Interrupt clear-enable bits.\\n Write:\\n 0 = No effect.\\n 1 = Disable interrupt.\\n Read:\\n 0 = Interrupt disabled.\\n 1 = Interrupt enabled."]
+    #[doc = "Bits 0:31 - Interrupt clear-enable bits.  
+ Write:  
+ 0 = No effect.  
+ 1 = Disable interrupt.  
+ Read:  
+ 0 = Interrupt disabled.  
+ 1 = Interrupt enabled."]
     #[inline(always)]
     pub fn clrena(&self) -> CLRENA_R {
         CLRENA_R::new((self.bits & 0xffff_ffff) as u32)
     }
 }
 impl W {
-    #[doc = "Bits 0:31 - Interrupt clear-enable bits.\\n Write:\\n 0 = No effect.\\n 1 = Disable interrupt.\\n Read:\\n 0 = Interrupt disabled.\\n 1 = Interrupt enabled."]
+    #[doc = "Bits 0:31 - Interrupt clear-enable bits.  
+ Write:  
+ 0 = No effect.  
+ 1 = Disable interrupt.  
+ Read:  
+ 0 = Interrupt disabled.  
+ 1 = Interrupt enabled."]
     #[inline(always)]
     pub fn clrena(&mut self) -> CLRENA_W {
         CLRENA_W { w: self }

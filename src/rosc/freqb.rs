@@ -10,7 +10,10 @@ impl crate::ResetValue for super::FREQB {
         0
     }
 }
-#[doc = "Set to 0x9696 to apply the settings\\n Any other value in this field will set all drive strengths to 0\n\nValue on reset: 0"]
+#[doc = "Set to 0x9696 to apply the settings  
+ Any other value in this field will set all drive strengths to 0  
+
+Value on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq)]
 #[repr(u16)]
 pub enum PASSWD_A {
@@ -120,7 +123,8 @@ impl<'a> DS4_W<'a> {
     }
 }
 impl R {
-    #[doc = "Bits 16:31 - Set to 0x9696 to apply the settings\\n Any other value in this field will set all drive strengths to 0"]
+    #[doc = "Bits 16:31 - Set to 0x9696 to apply the settings  
+ Any other value in this field will set all drive strengths to 0"]
     #[inline(always)]
     pub fn passwd(&self) -> PASSWD_R {
         PASSWD_R::new(((self.bits >> 16) & 0xffff) as u16)
@@ -147,7 +151,8 @@ impl R {
     }
 }
 impl W {
-    #[doc = "Bits 16:31 - Set to 0x9696 to apply the settings\\n Any other value in this field will set all drive strengths to 0"]
+    #[doc = "Bits 16:31 - Set to 0x9696 to apply the settings  
+ Any other value in this field will set all drive strengths to 0"]
     #[inline(always)]
     pub fn passwd(&mut self) -> PASSWD_W {
         PASSWD_W { w: self }

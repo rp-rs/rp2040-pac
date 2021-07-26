@@ -61,7 +61,9 @@ impl R {
     pub fn bypass(&self) -> BYPASS_R {
         BYPASS_R::new(((self.bits >> 8) & 0x01) != 0)
     }
-    #[doc = "Bits 0:5 - Divides the PLL input reference clock.\\n Behaviour is undefined for div=0.\\n PLL output will be unpredictable during refdiv changes, wait for lock=1 before using it."]
+    #[doc = "Bits 0:5 - Divides the PLL input reference clock.  
+ Behaviour is undefined for div=0.  
+ PLL output will be unpredictable during refdiv changes, wait for lock=1 before using it."]
     #[inline(always)]
     pub fn refdiv(&self) -> REFDIV_R {
         REFDIV_R::new((self.bits & 0x3f) as u8)
@@ -73,7 +75,9 @@ impl W {
     pub fn bypass(&mut self) -> BYPASS_W {
         BYPASS_W { w: self }
     }
-    #[doc = "Bits 0:5 - Divides the PLL input reference clock.\\n Behaviour is undefined for div=0.\\n PLL output will be unpredictable during refdiv changes, wait for lock=1 before using it."]
+    #[doc = "Bits 0:5 - Divides the PLL input reference clock.  
+ Behaviour is undefined for div=0.  
+ PLL output will be unpredictable during refdiv changes, wait for lock=1 before using it."]
     #[inline(always)]
     pub fn refdiv(&mut self) -> REFDIV_W {
         REFDIV_W { w: self }

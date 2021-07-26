@@ -4,14 +4,16 @@ pub struct RegisterBlock {
     _reserved0: [u8; 57360usize],
     #[doc = "0xe010 - Use the SysTick Control and Status Register to enable the SysTick features."]
     pub syst_csr: SYST_CSR,
-    #[doc = "0xe014 - Use the SysTick Reload Value Register to specify the start value to load into the current value register when the counter reaches 0. It can be any value between 0 and 0x00FFFFFF. A start value of 0 is possible, but has no effect because the SysTick interrupt and COUNTFLAG are activated when counting from 1 to 0. The reset value of this register is UNKNOWN.\\n To generate a multi-shot timer with a period of N processor clock cycles, use a RELOAD value of N-1. For example, if the SysTick interrupt is required every 100 clock pulses, set RELOAD to 99."]
+    #[doc = "0xe014 - Use the SysTick Reload Value Register to specify the start value to load into the current value register when the counter reaches 0. It can be any value between 0 and 0x00FFFFFF. A start value of 0 is possible, but has no effect because the SysTick interrupt and COUNTFLAG are activated when counting from 1 to 0. The reset value of this register is UNKNOWN.  
+ To generate a multi-shot timer with a period of N processor clock cycles, use a RELOAD value of N-1. For example, if the SysTick interrupt is required every 100 clock pulses, set RELOAD to 99."]
     pub syst_rvr: SYST_RVR,
     #[doc = "0xe018 - Use the SysTick Current Value Register to find the current value in the register. The reset value of this register is UNKNOWN."]
     pub syst_cvr: SYST_CVR,
     #[doc = "0xe01c - Use the SysTick Calibration Value Register to enable software to scale to any required speed using divide and multiply."]
     pub syst_calib: SYST_CALIB,
     _reserved4: [u8; 224usize],
-    #[doc = "0xe100 - Use the Interrupt Set-Enable Register to enable interrupts and determine which interrupts are currently enabled.\\n If a pending interrupt is enabled, the NVIC activates the interrupt based on its priority. If an interrupt is not enabled, asserting its interrupt signal changes the interrupt state to pending, but the NVIC never activates the interrupt, regardless of its priority."]
+    #[doc = "0xe100 - Use the Interrupt Set-Enable Register to enable interrupts and determine which interrupts are currently enabled.  
+ If a pending interrupt is enabled, the NVIC activates the interrupt based on its priority. If an interrupt is not enabled, asserting its interrupt signal changes the interrupt state to pending, but the NVIC never activates the interrupt, regardless of its priority."]
     pub nvic_iser: NVIC_ISER,
     _reserved5: [u8; 124usize],
     #[doc = "0xe180 - Use the Interrupt Clear-Enable Registers to disable interrupts and determine which interrupts are currently enabled."]
@@ -23,7 +25,9 @@ pub struct RegisterBlock {
     #[doc = "0xe280 - Use the Interrupt Clear-Pending Register to clear pending interrupts and determine which interrupts are currently pending."]
     pub nvic_icpr: NVIC_ICPR,
     _reserved8: [u8; 380usize],
-    #[doc = "0xe400 - Use the Interrupt Priority Registers to assign a priority from 0 to 3 to each of the available interrupts. 0 is the highest priority, and 3 is the lowest.\\n Note: Writing 1 to an NVIC_ICPR bit does not affect the active state of the corresponding interrupt.\\n These registers are only word-accessible"]
+    #[doc = "0xe400 - Use the Interrupt Priority Registers to assign a priority from 0 to 3 to each of the available interrupts. 0 is the highest priority, and 3 is the lowest.  
+ Note: Writing 1 to an NVIC_ICPR bit does not affect the active state of the corresponding interrupt.  
+ These registers are only word-accessible"]
     pub nvic_ipr0: NVIC_IPR0,
     #[doc = "0xe404 - Use the Interrupt Priority Registers to assign a priority from 0 to 3 to each of the available interrupts. 0 is the highest priority, and 3 is the lowest."]
     pub nvic_ipr1: NVIC_IPR1,
@@ -71,7 +75,11 @@ pub struct RegisterBlock {
     #[doc = "0xeda0 - Use the MPU Region Attribute and Size Register to define the size, access behaviour and memory type of the region identified by MPU_RNR, and enable that region."]
     pub mpu_rasr: MPU_RASR,
 }
-#[doc = "Use the SysTick Control and Status Register to enable the SysTick features.\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [syst_csr](syst_csr) module"]
+#[doc = "Use the SysTick Control and Status Register to enable the SysTick features.  
+
+This register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+
+For information about available fields see [syst_csr](syst_csr) module"]
 pub type SYST_CSR = crate::Reg<u32, _SYST_CSR>;
 #[allow(missing_docs)]
 #[doc(hidden)]
@@ -82,7 +90,12 @@ impl crate::Readable for SYST_CSR {}
 impl crate::Writable for SYST_CSR {}
 #[doc = "Use the SysTick Control and Status Register to enable the SysTick features."]
 pub mod syst_csr;
-#[doc = "Use the SysTick Reload Value Register to specify the start value to load into the current value register when the counter reaches 0. It can be any value between 0 and 0x00FFFFFF. A start value of 0 is possible, but has no effect because the SysTick interrupt and COUNTFLAG are activated when counting from 1 to 0. The reset value of this register is UNKNOWN.\\n To generate a multi-shot timer with a period of N processor clock cycles, use a RELOAD value of N-1. For example, if the SysTick interrupt is required every 100 clock pulses, set RELOAD to 99.\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [syst_rvr](syst_rvr) module"]
+#[doc = "Use the SysTick Reload Value Register to specify the start value to load into the current value register when the counter reaches 0. It can be any value between 0 and 0x00FFFFFF. A start value of 0 is possible, but has no effect because the SysTick interrupt and COUNTFLAG are activated when counting from 1 to 0. The reset value of this register is UNKNOWN.  
+ To generate a multi-shot timer with a period of N processor clock cycles, use a RELOAD value of N-1. For example, if the SysTick interrupt is required every 100 clock pulses, set RELOAD to 99.  
+
+This register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+
+For information about available fields see [syst_rvr](syst_rvr) module"]
 pub type SYST_RVR = crate::Reg<u32, _SYST_RVR>;
 #[allow(missing_docs)]
 #[doc(hidden)]
@@ -91,9 +104,14 @@ pub struct _SYST_RVR;
 impl crate::Readable for SYST_RVR {}
 #[doc = "`write(|w| ..)` method takes [syst_rvr::W](syst_rvr::W) writer structure"]
 impl crate::Writable for SYST_RVR {}
-#[doc = "Use the SysTick Reload Value Register to specify the start value to load into the current value register when the counter reaches 0. It can be any value between 0 and 0x00FFFFFF. A start value of 0 is possible, but has no effect because the SysTick interrupt and COUNTFLAG are activated when counting from 1 to 0. The reset value of this register is UNKNOWN.\\n To generate a multi-shot timer with a period of N processor clock cycles, use a RELOAD value of N-1. For example, if the SysTick interrupt is required every 100 clock pulses, set RELOAD to 99."]
+#[doc = "Use the SysTick Reload Value Register to specify the start value to load into the current value register when the counter reaches 0. It can be any value between 0 and 0x00FFFFFF. A start value of 0 is possible, but has no effect because the SysTick interrupt and COUNTFLAG are activated when counting from 1 to 0. The reset value of this register is UNKNOWN.  
+ To generate a multi-shot timer with a period of N processor clock cycles, use a RELOAD value of N-1. For example, if the SysTick interrupt is required every 100 clock pulses, set RELOAD to 99."]
 pub mod syst_rvr;
-#[doc = "Use the SysTick Current Value Register to find the current value in the register. The reset value of this register is UNKNOWN.\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [syst_cvr](syst_cvr) module"]
+#[doc = "Use the SysTick Current Value Register to find the current value in the register. The reset value of this register is UNKNOWN.  
+
+This register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+
+For information about available fields see [syst_cvr](syst_cvr) module"]
 pub type SYST_CVR = crate::Reg<u32, _SYST_CVR>;
 #[allow(missing_docs)]
 #[doc(hidden)]
@@ -104,7 +122,11 @@ impl crate::Readable for SYST_CVR {}
 impl crate::Writable for SYST_CVR {}
 #[doc = "Use the SysTick Current Value Register to find the current value in the register. The reset value of this register is UNKNOWN."]
 pub mod syst_cvr;
-#[doc = "Use the SysTick Calibration Value Register to enable software to scale to any required speed using divide and multiply.\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [syst_calib](syst_calib) module"]
+#[doc = "Use the SysTick Calibration Value Register to enable software to scale to any required speed using divide and multiply.  
+
+This register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+
+For information about available fields see [syst_calib](syst_calib) module"]
 pub type SYST_CALIB = crate::Reg<u32, _SYST_CALIB>;
 #[allow(missing_docs)]
 #[doc(hidden)]
@@ -113,7 +135,12 @@ pub struct _SYST_CALIB;
 impl crate::Readable for SYST_CALIB {}
 #[doc = "Use the SysTick Calibration Value Register to enable software to scale to any required speed using divide and multiply."]
 pub mod syst_calib;
-#[doc = "Use the Interrupt Set-Enable Register to enable interrupts and determine which interrupts are currently enabled.\\n If a pending interrupt is enabled, the NVIC activates the interrupt based on its priority. If an interrupt is not enabled, asserting its interrupt signal changes the interrupt state to pending, but the NVIC never activates the interrupt, regardless of its priority.\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [nvic_iser](nvic_iser) module"]
+#[doc = "Use the Interrupt Set-Enable Register to enable interrupts and determine which interrupts are currently enabled.  
+ If a pending interrupt is enabled, the NVIC activates the interrupt based on its priority. If an interrupt is not enabled, asserting its interrupt signal changes the interrupt state to pending, but the NVIC never activates the interrupt, regardless of its priority.  
+
+This register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+
+For information about available fields see [nvic_iser](nvic_iser) module"]
 pub type NVIC_ISER = crate::Reg<u32, _NVIC_ISER>;
 #[allow(missing_docs)]
 #[doc(hidden)]
@@ -122,9 +149,14 @@ pub struct _NVIC_ISER;
 impl crate::Readable for NVIC_ISER {}
 #[doc = "`write(|w| ..)` method takes [nvic_iser::W](nvic_iser::W) writer structure"]
 impl crate::Writable for NVIC_ISER {}
-#[doc = "Use the Interrupt Set-Enable Register to enable interrupts and determine which interrupts are currently enabled.\\n If a pending interrupt is enabled, the NVIC activates the interrupt based on its priority. If an interrupt is not enabled, asserting its interrupt signal changes the interrupt state to pending, but the NVIC never activates the interrupt, regardless of its priority."]
+#[doc = "Use the Interrupt Set-Enable Register to enable interrupts and determine which interrupts are currently enabled.  
+ If a pending interrupt is enabled, the NVIC activates the interrupt based on its priority. If an interrupt is not enabled, asserting its interrupt signal changes the interrupt state to pending, but the NVIC never activates the interrupt, regardless of its priority."]
 pub mod nvic_iser;
-#[doc = "Use the Interrupt Clear-Enable Registers to disable interrupts and determine which interrupts are currently enabled.\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [nvic_icer](nvic_icer) module"]
+#[doc = "Use the Interrupt Clear-Enable Registers to disable interrupts and determine which interrupts are currently enabled.  
+
+This register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+
+For information about available fields see [nvic_icer](nvic_icer) module"]
 pub type NVIC_ICER = crate::Reg<u32, _NVIC_ICER>;
 #[allow(missing_docs)]
 #[doc(hidden)]
@@ -135,7 +167,11 @@ impl crate::Readable for NVIC_ICER {}
 impl crate::Writable for NVIC_ICER {}
 #[doc = "Use the Interrupt Clear-Enable Registers to disable interrupts and determine which interrupts are currently enabled."]
 pub mod nvic_icer;
-#[doc = "The NVIC_ISPR forces interrupts into the pending state, and shows which interrupts are pending.\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [nvic_ispr](nvic_ispr) module"]
+#[doc = "The NVIC_ISPR forces interrupts into the pending state, and shows which interrupts are pending.  
+
+This register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+
+For information about available fields see [nvic_ispr](nvic_ispr) module"]
 pub type NVIC_ISPR = crate::Reg<u32, _NVIC_ISPR>;
 #[allow(missing_docs)]
 #[doc(hidden)]
@@ -146,7 +182,11 @@ impl crate::Readable for NVIC_ISPR {}
 impl crate::Writable for NVIC_ISPR {}
 #[doc = "The NVIC_ISPR forces interrupts into the pending state, and shows which interrupts are pending."]
 pub mod nvic_ispr;
-#[doc = "Use the Interrupt Clear-Pending Register to clear pending interrupts and determine which interrupts are currently pending.\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [nvic_icpr](nvic_icpr) module"]
+#[doc = "Use the Interrupt Clear-Pending Register to clear pending interrupts and determine which interrupts are currently pending.  
+
+This register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+
+For information about available fields see [nvic_icpr](nvic_icpr) module"]
 pub type NVIC_ICPR = crate::Reg<u32, _NVIC_ICPR>;
 #[allow(missing_docs)]
 #[doc(hidden)]
@@ -157,7 +197,13 @@ impl crate::Readable for NVIC_ICPR {}
 impl crate::Writable for NVIC_ICPR {}
 #[doc = "Use the Interrupt Clear-Pending Register to clear pending interrupts and determine which interrupts are currently pending."]
 pub mod nvic_icpr;
-#[doc = "Use the Interrupt Priority Registers to assign a priority from 0 to 3 to each of the available interrupts. 0 is the highest priority, and 3 is the lowest.\\n Note: Writing 1 to an NVIC_ICPR bit does not affect the active state of the corresponding interrupt.\\n These registers are only word-accessible\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [nvic_ipr0](nvic_ipr0) module"]
+#[doc = "Use the Interrupt Priority Registers to assign a priority from 0 to 3 to each of the available interrupts. 0 is the highest priority, and 3 is the lowest.  
+ Note: Writing 1 to an NVIC_ICPR bit does not affect the active state of the corresponding interrupt.  
+ These registers are only word-accessible  
+
+This register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+
+For information about available fields see [nvic_ipr0](nvic_ipr0) module"]
 pub type NVIC_IPR0 = crate::Reg<u32, _NVIC_IPR0>;
 #[allow(missing_docs)]
 #[doc(hidden)]
@@ -166,9 +212,15 @@ pub struct _NVIC_IPR0;
 impl crate::Readable for NVIC_IPR0 {}
 #[doc = "`write(|w| ..)` method takes [nvic_ipr0::W](nvic_ipr0::W) writer structure"]
 impl crate::Writable for NVIC_IPR0 {}
-#[doc = "Use the Interrupt Priority Registers to assign a priority from 0 to 3 to each of the available interrupts. 0 is the highest priority, and 3 is the lowest.\\n Note: Writing 1 to an NVIC_ICPR bit does not affect the active state of the corresponding interrupt.\\n These registers are only word-accessible"]
+#[doc = "Use the Interrupt Priority Registers to assign a priority from 0 to 3 to each of the available interrupts. 0 is the highest priority, and 3 is the lowest.  
+ Note: Writing 1 to an NVIC_ICPR bit does not affect the active state of the corresponding interrupt.  
+ These registers are only word-accessible"]
 pub mod nvic_ipr0;
-#[doc = "Use the Interrupt Priority Registers to assign a priority from 0 to 3 to each of the available interrupts. 0 is the highest priority, and 3 is the lowest.\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [nvic_ipr1](nvic_ipr1) module"]
+#[doc = "Use the Interrupt Priority Registers to assign a priority from 0 to 3 to each of the available interrupts. 0 is the highest priority, and 3 is the lowest.  
+
+This register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+
+For information about available fields see [nvic_ipr1](nvic_ipr1) module"]
 pub type NVIC_IPR1 = crate::Reg<u32, _NVIC_IPR1>;
 #[allow(missing_docs)]
 #[doc(hidden)]
@@ -179,7 +231,11 @@ impl crate::Readable for NVIC_IPR1 {}
 impl crate::Writable for NVIC_IPR1 {}
 #[doc = "Use the Interrupt Priority Registers to assign a priority from 0 to 3 to each of the available interrupts. 0 is the highest priority, and 3 is the lowest."]
 pub mod nvic_ipr1;
-#[doc = "Use the Interrupt Priority Registers to assign a priority from 0 to 3 to each of the available interrupts. 0 is the highest priority, and 3 is the lowest.\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [nvic_ipr2](nvic_ipr2) module"]
+#[doc = "Use the Interrupt Priority Registers to assign a priority from 0 to 3 to each of the available interrupts. 0 is the highest priority, and 3 is the lowest.  
+
+This register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+
+For information about available fields see [nvic_ipr2](nvic_ipr2) module"]
 pub type NVIC_IPR2 = crate::Reg<u32, _NVIC_IPR2>;
 #[allow(missing_docs)]
 #[doc(hidden)]
@@ -190,7 +246,11 @@ impl crate::Readable for NVIC_IPR2 {}
 impl crate::Writable for NVIC_IPR2 {}
 #[doc = "Use the Interrupt Priority Registers to assign a priority from 0 to 3 to each of the available interrupts. 0 is the highest priority, and 3 is the lowest."]
 pub mod nvic_ipr2;
-#[doc = "Use the Interrupt Priority Registers to assign a priority from 0 to 3 to each of the available interrupts. 0 is the highest priority, and 3 is the lowest.\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [nvic_ipr3](nvic_ipr3) module"]
+#[doc = "Use the Interrupt Priority Registers to assign a priority from 0 to 3 to each of the available interrupts. 0 is the highest priority, and 3 is the lowest.  
+
+This register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+
+For information about available fields see [nvic_ipr3](nvic_ipr3) module"]
 pub type NVIC_IPR3 = crate::Reg<u32, _NVIC_IPR3>;
 #[allow(missing_docs)]
 #[doc(hidden)]
@@ -201,7 +261,11 @@ impl crate::Readable for NVIC_IPR3 {}
 impl crate::Writable for NVIC_IPR3 {}
 #[doc = "Use the Interrupt Priority Registers to assign a priority from 0 to 3 to each of the available interrupts. 0 is the highest priority, and 3 is the lowest."]
 pub mod nvic_ipr3;
-#[doc = "Use the Interrupt Priority Registers to assign a priority from 0 to 3 to each of the available interrupts. 0 is the highest priority, and 3 is the lowest.\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [nvic_ipr4](nvic_ipr4) module"]
+#[doc = "Use the Interrupt Priority Registers to assign a priority from 0 to 3 to each of the available interrupts. 0 is the highest priority, and 3 is the lowest.  
+
+This register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+
+For information about available fields see [nvic_ipr4](nvic_ipr4) module"]
 pub type NVIC_IPR4 = crate::Reg<u32, _NVIC_IPR4>;
 #[allow(missing_docs)]
 #[doc(hidden)]
@@ -212,7 +276,11 @@ impl crate::Readable for NVIC_IPR4 {}
 impl crate::Writable for NVIC_IPR4 {}
 #[doc = "Use the Interrupt Priority Registers to assign a priority from 0 to 3 to each of the available interrupts. 0 is the highest priority, and 3 is the lowest."]
 pub mod nvic_ipr4;
-#[doc = "Use the Interrupt Priority Registers to assign a priority from 0 to 3 to each of the available interrupts. 0 is the highest priority, and 3 is the lowest.\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [nvic_ipr5](nvic_ipr5) module"]
+#[doc = "Use the Interrupt Priority Registers to assign a priority from 0 to 3 to each of the available interrupts. 0 is the highest priority, and 3 is the lowest.  
+
+This register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+
+For information about available fields see [nvic_ipr5](nvic_ipr5) module"]
 pub type NVIC_IPR5 = crate::Reg<u32, _NVIC_IPR5>;
 #[allow(missing_docs)]
 #[doc(hidden)]
@@ -223,7 +291,11 @@ impl crate::Readable for NVIC_IPR5 {}
 impl crate::Writable for NVIC_IPR5 {}
 #[doc = "Use the Interrupt Priority Registers to assign a priority from 0 to 3 to each of the available interrupts. 0 is the highest priority, and 3 is the lowest."]
 pub mod nvic_ipr5;
-#[doc = "Use the Interrupt Priority Registers to assign a priority from 0 to 3 to each of the available interrupts. 0 is the highest priority, and 3 is the lowest.\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [nvic_ipr6](nvic_ipr6) module"]
+#[doc = "Use the Interrupt Priority Registers to assign a priority from 0 to 3 to each of the available interrupts. 0 is the highest priority, and 3 is the lowest.  
+
+This register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+
+For information about available fields see [nvic_ipr6](nvic_ipr6) module"]
 pub type NVIC_IPR6 = crate::Reg<u32, _NVIC_IPR6>;
 #[allow(missing_docs)]
 #[doc(hidden)]
@@ -234,7 +306,11 @@ impl crate::Readable for NVIC_IPR6 {}
 impl crate::Writable for NVIC_IPR6 {}
 #[doc = "Use the Interrupt Priority Registers to assign a priority from 0 to 3 to each of the available interrupts. 0 is the highest priority, and 3 is the lowest."]
 pub mod nvic_ipr6;
-#[doc = "Use the Interrupt Priority Registers to assign a priority from 0 to 3 to each of the available interrupts. 0 is the highest priority, and 3 is the lowest.\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [nvic_ipr7](nvic_ipr7) module"]
+#[doc = "Use the Interrupt Priority Registers to assign a priority from 0 to 3 to each of the available interrupts. 0 is the highest priority, and 3 is the lowest.  
+
+This register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+
+For information about available fields see [nvic_ipr7](nvic_ipr7) module"]
 pub type NVIC_IPR7 = crate::Reg<u32, _NVIC_IPR7>;
 #[allow(missing_docs)]
 #[doc(hidden)]
@@ -245,7 +321,11 @@ impl crate::Readable for NVIC_IPR7 {}
 impl crate::Writable for NVIC_IPR7 {}
 #[doc = "Use the Interrupt Priority Registers to assign a priority from 0 to 3 to each of the available interrupts. 0 is the highest priority, and 3 is the lowest."]
 pub mod nvic_ipr7;
-#[doc = "Read the CPU ID Base Register to determine: the ID number of the processor core, the version number of the processor core, the implementation details of the processor core.\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [cpuid](cpuid) module"]
+#[doc = "Read the CPU ID Base Register to determine: the ID number of the processor core, the version number of the processor core, the implementation details of the processor core.  
+
+This register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+
+For information about available fields see [cpuid](cpuid) module"]
 pub type CPUID = crate::Reg<u32, _CPUID>;
 #[allow(missing_docs)]
 #[doc(hidden)]
@@ -254,7 +334,11 @@ pub struct _CPUID;
 impl crate::Readable for CPUID {}
 #[doc = "Read the CPU ID Base Register to determine: the ID number of the processor core, the version number of the processor core, the implementation details of the processor core."]
 pub mod cpuid;
-#[doc = "Use the Interrupt Control State Register to set a pending Non-Maskable Interrupt (NMI), set or clear a pending PendSV, set or clear a pending SysTick, check for pending exceptions, check the vector number of the highest priority pended exception, check the vector number of the active exception.\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [icsr](icsr) module"]
+#[doc = "Use the Interrupt Control State Register to set a pending Non-Maskable Interrupt (NMI), set or clear a pending PendSV, set or clear a pending SysTick, check for pending exceptions, check the vector number of the highest priority pended exception, check the vector number of the active exception.  
+
+This register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+
+For information about available fields see [icsr](icsr) module"]
 pub type ICSR = crate::Reg<u32, _ICSR>;
 #[allow(missing_docs)]
 #[doc(hidden)]
@@ -265,7 +349,11 @@ impl crate::Readable for ICSR {}
 impl crate::Writable for ICSR {}
 #[doc = "Use the Interrupt Control State Register to set a pending Non-Maskable Interrupt (NMI), set or clear a pending PendSV, set or clear a pending SysTick, check for pending exceptions, check the vector number of the highest priority pended exception, check the vector number of the active exception."]
 pub mod icsr;
-#[doc = "The VTOR holds the vector table offset address.\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [vtor](vtor) module"]
+#[doc = "The VTOR holds the vector table offset address.  
+
+This register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+
+For information about available fields see [vtor](vtor) module"]
 pub type VTOR = crate::Reg<u32, _VTOR>;
 #[allow(missing_docs)]
 #[doc(hidden)]
@@ -276,7 +364,11 @@ impl crate::Readable for VTOR {}
 impl crate::Writable for VTOR {}
 #[doc = "The VTOR holds the vector table offset address."]
 pub mod vtor;
-#[doc = "Use the Application Interrupt and Reset Control Register to: determine data endianness, clear all active state information from debug halt mode, request a system reset.\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [aircr](aircr) module"]
+#[doc = "Use the Application Interrupt and Reset Control Register to: determine data endianness, clear all active state information from debug halt mode, request a system reset.  
+
+This register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+
+For information about available fields see [aircr](aircr) module"]
 pub type AIRCR = crate::Reg<u32, _AIRCR>;
 #[allow(missing_docs)]
 #[doc(hidden)]
@@ -287,7 +379,11 @@ impl crate::Readable for AIRCR {}
 impl crate::Writable for AIRCR {}
 #[doc = "Use the Application Interrupt and Reset Control Register to: determine data endianness, clear all active state information from debug halt mode, request a system reset."]
 pub mod aircr;
-#[doc = "System Control Register. Use the System Control Register for power-management functions: signal to the system when the processor can enter a low power state, control how the processor enters and exits low power states.\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [scr](scr) module"]
+#[doc = "System Control Register. Use the System Control Register for power-management functions: signal to the system when the processor can enter a low power state, control how the processor enters and exits low power states.  
+
+This register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+
+For information about available fields see [scr](scr) module"]
 pub type SCR = crate::Reg<u32, _SCR>;
 #[allow(missing_docs)]
 #[doc(hidden)]
@@ -298,7 +394,11 @@ impl crate::Readable for SCR {}
 impl crate::Writable for SCR {}
 #[doc = "System Control Register. Use the System Control Register for power-management functions: signal to the system when the processor can enter a low power state, control how the processor enters and exits low power states."]
 pub mod scr;
-#[doc = "The Configuration and Control Register permanently enables stack alignment and causes unaligned accesses to result in a Hard Fault.\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [ccr](ccr) module"]
+#[doc = "The Configuration and Control Register permanently enables stack alignment and causes unaligned accesses to result in a Hard Fault.  
+
+This register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+
+For information about available fields see [ccr](ccr) module"]
 pub type CCR = crate::Reg<u32, _CCR>;
 #[allow(missing_docs)]
 #[doc(hidden)]
@@ -307,7 +407,11 @@ pub struct _CCR;
 impl crate::Readable for CCR {}
 #[doc = "The Configuration and Control Register permanently enables stack alignment and causes unaligned accesses to result in a Hard Fault."]
 pub mod ccr;
-#[doc = "System handlers are a special class of exception handler that can have their priority set to any of the priority levels. Use the System Handler Priority Register 2 to set the priority of SVCall.\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [shpr2](shpr2) module"]
+#[doc = "System handlers are a special class of exception handler that can have their priority set to any of the priority levels. Use the System Handler Priority Register 2 to set the priority of SVCall.  
+
+This register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+
+For information about available fields see [shpr2](shpr2) module"]
 pub type SHPR2 = crate::Reg<u32, _SHPR2>;
 #[allow(missing_docs)]
 #[doc(hidden)]
@@ -318,7 +422,11 @@ impl crate::Readable for SHPR2 {}
 impl crate::Writable for SHPR2 {}
 #[doc = "System handlers are a special class of exception handler that can have their priority set to any of the priority levels. Use the System Handler Priority Register 2 to set the priority of SVCall."]
 pub mod shpr2;
-#[doc = "System handlers are a special class of exception handler that can have their priority set to any of the priority levels. Use the System Handler Priority Register 3 to set the priority of PendSV and SysTick.\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [shpr3](shpr3) module"]
+#[doc = "System handlers are a special class of exception handler that can have their priority set to any of the priority levels. Use the System Handler Priority Register 3 to set the priority of PendSV and SysTick.  
+
+This register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+
+For information about available fields see [shpr3](shpr3) module"]
 pub type SHPR3 = crate::Reg<u32, _SHPR3>;
 #[allow(missing_docs)]
 #[doc(hidden)]
@@ -329,7 +437,11 @@ impl crate::Readable for SHPR3 {}
 impl crate::Writable for SHPR3 {}
 #[doc = "System handlers are a special class of exception handler that can have their priority set to any of the priority levels. Use the System Handler Priority Register 3 to set the priority of PendSV and SysTick."]
 pub mod shpr3;
-#[doc = "Use the System Handler Control and State Register to determine or clear the pending status of SVCall.\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [shcsr](shcsr) module"]
+#[doc = "Use the System Handler Control and State Register to determine or clear the pending status of SVCall.  
+
+This register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+
+For information about available fields see [shcsr](shcsr) module"]
 pub type SHCSR = crate::Reg<u32, _SHCSR>;
 #[allow(missing_docs)]
 #[doc(hidden)]
@@ -340,7 +452,11 @@ impl crate::Readable for SHCSR {}
 impl crate::Writable for SHCSR {}
 #[doc = "Use the System Handler Control and State Register to determine or clear the pending status of SVCall."]
 pub mod shcsr;
-#[doc = "Read the MPU Type Register to determine if the processor implements an MPU, and how many regions the MPU supports.\n\nThis register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [mpu_type](mpu_type) module"]
+#[doc = "Read the MPU Type Register to determine if the processor implements an MPU, and how many regions the MPU supports.  
+
+This register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+
+For information about available fields see [mpu_type](mpu_type) module"]
 pub type MPU_TYPE = crate::Reg<u32, _MPU_TYPE>;
 #[allow(missing_docs)]
 #[doc(hidden)]
@@ -349,7 +465,11 @@ pub struct _MPU_TYPE;
 impl crate::Readable for MPU_TYPE {}
 #[doc = "Read the MPU Type Register to determine if the processor implements an MPU, and how many regions the MPU supports."]
 pub mod mpu_type;
-#[doc = "Use the MPU Control Register to enable and disable the MPU, and to control whether the default memory map is enabled as a background region for privileged accesses, and whether the MPU is enabled for HardFaults and NMIs.\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [mpu_ctrl](mpu_ctrl) module"]
+#[doc = "Use the MPU Control Register to enable and disable the MPU, and to control whether the default memory map is enabled as a background region for privileged accesses, and whether the MPU is enabled for HardFaults and NMIs.  
+
+This register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+
+For information about available fields see [mpu_ctrl](mpu_ctrl) module"]
 pub type MPU_CTRL = crate::Reg<u32, _MPU_CTRL>;
 #[allow(missing_docs)]
 #[doc(hidden)]
@@ -360,7 +480,11 @@ impl crate::Readable for MPU_CTRL {}
 impl crate::Writable for MPU_CTRL {}
 #[doc = "Use the MPU Control Register to enable and disable the MPU, and to control whether the default memory map is enabled as a background region for privileged accesses, and whether the MPU is enabled for HardFaults and NMIs."]
 pub mod mpu_ctrl;
-#[doc = "Use the MPU Region Number Register to select the region currently accessed by MPU_RBAR and MPU_RASR.\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [mpu_rnr](mpu_rnr) module"]
+#[doc = "Use the MPU Region Number Register to select the region currently accessed by MPU_RBAR and MPU_RASR.  
+
+This register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+
+For information about available fields see [mpu_rnr](mpu_rnr) module"]
 pub type MPU_RNR = crate::Reg<u32, _MPU_RNR>;
 #[allow(missing_docs)]
 #[doc(hidden)]
@@ -371,7 +495,11 @@ impl crate::Readable for MPU_RNR {}
 impl crate::Writable for MPU_RNR {}
 #[doc = "Use the MPU Region Number Register to select the region currently accessed by MPU_RBAR and MPU_RASR."]
 pub mod mpu_rnr;
-#[doc = "Read the MPU Region Base Address Register to determine the base address of the region identified by MPU_RNR. Write to update the base address of said region or that of a specified region, with whose number MPU_RNR will also be updated.\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [mpu_rbar](mpu_rbar) module"]
+#[doc = "Read the MPU Region Base Address Register to determine the base address of the region identified by MPU_RNR. Write to update the base address of said region or that of a specified region, with whose number MPU_RNR will also be updated.  
+
+This register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+
+For information about available fields see [mpu_rbar](mpu_rbar) module"]
 pub type MPU_RBAR = crate::Reg<u32, _MPU_RBAR>;
 #[allow(missing_docs)]
 #[doc(hidden)]
@@ -382,7 +510,11 @@ impl crate::Readable for MPU_RBAR {}
 impl crate::Writable for MPU_RBAR {}
 #[doc = "Read the MPU Region Base Address Register to determine the base address of the region identified by MPU_RNR. Write to update the base address of said region or that of a specified region, with whose number MPU_RNR will also be updated."]
 pub mod mpu_rbar;
-#[doc = "Use the MPU Region Attribute and Size Register to define the size, access behaviour and memory type of the region identified by MPU_RNR, and enable that region.\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [mpu_rasr](mpu_rasr) module"]
+#[doc = "Use the MPU Region Attribute and Size Register to define the size, access behaviour and memory type of the region identified by MPU_RNR, and enable that region.  
+
+This register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+
+For information about available fields see [mpu_rasr](mpu_rasr) module"]
 pub type MPU_RASR = crate::Reg<u32, _MPU_RASR>;
 #[allow(missing_docs)]
 #[doc(hidden)]

@@ -164,7 +164,9 @@ impl<'a> WRAP_BOTTOM_W<'a> {
         self.w
     }
 }
-#[doc = "Comparison used for the MOV x, STATUS instruction.\n\nValue on reset: 0"]
+#[doc = "Comparison used for the MOV x, STATUS instruction.  
+
+Value on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum STATUS_SEL_A {
     #[doc = "0: All-ones if TX FIFO level < N, otherwise all-zeroes"]
@@ -279,7 +281,10 @@ impl R {
     pub fn out_en_sel(&self) -> OUT_EN_SEL_R {
         OUT_EN_SEL_R::new(((self.bits >> 19) & 0x1f) as u8)
     }
-    #[doc = "Bit 18 - If 1, use a bit of OUT data as an auxiliary write enable\\n When used in conjunction with OUT_STICKY, writes with an enable of 0 will\\n deassert the latest pin write. This can create useful masking/override behaviour\\n due to the priority ordering of state machine pin writes (SM0 < SM1 < ...)"]
+    #[doc = "Bit 18 - If 1, use a bit of OUT data as an auxiliary write enable  
+ When used in conjunction with OUT_STICKY, writes with an enable of 0 will  
+ deassert the latest pin write. This can create useful masking/override behaviour  
+ due to the priority ordering of state machine pin writes (SM0 < SM1 < ...)"]
     #[inline(always)]
     pub fn inline_out_en(&self) -> INLINE_OUT_EN_R {
         INLINE_OUT_EN_R::new(((self.bits >> 18) & 0x01) != 0)
@@ -289,7 +294,8 @@ impl R {
     pub fn out_sticky(&self) -> OUT_STICKY_R {
         OUT_STICKY_R::new(((self.bits >> 17) & 0x01) != 0)
     }
-    #[doc = "Bits 12:16 - After reaching this address, execution is wrapped to wrap_bottom.\\n If the instruction is a jump, and the jump condition is true, the jump takes priority."]
+    #[doc = "Bits 12:16 - After reaching this address, execution is wrapped to wrap_bottom.  
+ If the instruction is a jump, and the jump condition is true, the jump takes priority."]
     #[inline(always)]
     pub fn wrap_top(&self) -> WRAP_TOP_R {
         WRAP_TOP_R::new(((self.bits >> 12) & 0x1f) as u8)
@@ -331,7 +337,10 @@ impl W {
     pub fn out_en_sel(&mut self) -> OUT_EN_SEL_W {
         OUT_EN_SEL_W { w: self }
     }
-    #[doc = "Bit 18 - If 1, use a bit of OUT data as an auxiliary write enable\\n When used in conjunction with OUT_STICKY, writes with an enable of 0 will\\n deassert the latest pin write. This can create useful masking/override behaviour\\n due to the priority ordering of state machine pin writes (SM0 < SM1 < ...)"]
+    #[doc = "Bit 18 - If 1, use a bit of OUT data as an auxiliary write enable  
+ When used in conjunction with OUT_STICKY, writes with an enable of 0 will  
+ deassert the latest pin write. This can create useful masking/override behaviour  
+ due to the priority ordering of state machine pin writes (SM0 < SM1 < ...)"]
     #[inline(always)]
     pub fn inline_out_en(&mut self) -> INLINE_OUT_EN_W {
         INLINE_OUT_EN_W { w: self }
@@ -341,7 +350,8 @@ impl W {
     pub fn out_sticky(&mut self) -> OUT_STICKY_W {
         OUT_STICKY_W { w: self }
     }
-    #[doc = "Bits 12:16 - After reaching this address, execution is wrapped to wrap_bottom.\\n If the instruction is a jump, and the jump condition is true, the jump takes priority."]
+    #[doc = "Bits 12:16 - After reaching this address, execution is wrapped to wrap_bottom.  
+ If the instruction is a jump, and the jump condition is true, the jump takes priority."]
     #[inline(always)]
     pub fn wrap_top(&mut self) -> WRAP_TOP_W {
         WRAP_TOP_W { w: self }
