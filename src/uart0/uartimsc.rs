@@ -1,18 +1,54 @@
-#[doc = "Reader of register UARTIMSC"]
-pub type R = crate::R<u32, super::UARTIMSC>;
-#[doc = "Writer for register UARTIMSC"]
-pub type W = crate::W<u32, super::UARTIMSC>;
-#[doc = "Register UARTIMSC `reset()`'s with value 0"]
-impl crate::ResetValue for super::UARTIMSC {
-    type Type = u32;
+#[doc = "Register `UARTIMSC` reader"]
+pub struct R(crate::R<UARTIMSC_SPEC>);
+impl core::ops::Deref for R {
+    type Target = crate::R<UARTIMSC_SPEC>;
     #[inline(always)]
-    fn reset_value() -> Self::Type {
-        0
+    fn deref(&self) -> &Self::Target {
+        &self.0
     }
 }
-#[doc = "Reader of field `OEIM`"]
-pub type OEIM_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `OEIM`"]
+impl From<crate::R<UARTIMSC_SPEC>> for R {
+    #[inline(always)]
+    fn from(reader: crate::R<UARTIMSC_SPEC>) -> Self {
+        R(reader)
+    }
+}
+#[doc = "Register `UARTIMSC` writer"]
+pub struct W(crate::W<UARTIMSC_SPEC>);
+impl core::ops::Deref for W {
+    type Target = crate::W<UARTIMSC_SPEC>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+impl core::ops::DerefMut for W {
+    #[inline(always)]
+    fn deref_mut(&mut self) -> &mut Self::Target {
+        &mut self.0
+    }
+}
+impl From<crate::W<UARTIMSC_SPEC>> for W {
+    #[inline(always)]
+    fn from(writer: crate::W<UARTIMSC_SPEC>) -> Self {
+        W(writer)
+    }
+}
+#[doc = "Field `OEIM` reader - Overrun error interrupt mask. A read returns the current mask for the UARTOEINTR interrupt. On a write of 1, the mask of the UARTOEINTR interrupt is set. A write of 0 clears the mask."]
+pub struct OEIM_R(crate::FieldReader<bool, bool>);
+impl OEIM_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        OEIM_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for OEIM_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `OEIM` writer - Overrun error interrupt mask. A read returns the current mask for the UARTOEINTR interrupt. On a write of 1, the mask of the UARTOEINTR interrupt is set. A write of 0 clears the mask."]
 pub struct OEIM_W<'a> {
     w: &'a mut W,
 }
@@ -30,13 +66,25 @@ impl<'a> OEIM_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 10)) | (((value as u32) & 0x01) << 10);
+        self.w.bits = (self.w.bits & !(0x01 << 10)) | ((value as u32 & 0x01) << 10);
         self.w
     }
 }
-#[doc = "Reader of field `BEIM`"]
-pub type BEIM_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `BEIM`"]
+#[doc = "Field `BEIM` reader - Break error interrupt mask. A read returns the current mask for the UARTBEINTR interrupt. On a write of 1, the mask of the UARTBEINTR interrupt is set. A write of 0 clears the mask."]
+pub struct BEIM_R(crate::FieldReader<bool, bool>);
+impl BEIM_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        BEIM_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for BEIM_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `BEIM` writer - Break error interrupt mask. A read returns the current mask for the UARTBEINTR interrupt. On a write of 1, the mask of the UARTBEINTR interrupt is set. A write of 0 clears the mask."]
 pub struct BEIM_W<'a> {
     w: &'a mut W,
 }
@@ -54,13 +102,25 @@ impl<'a> BEIM_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 9)) | (((value as u32) & 0x01) << 9);
+        self.w.bits = (self.w.bits & !(0x01 << 9)) | ((value as u32 & 0x01) << 9);
         self.w
     }
 }
-#[doc = "Reader of field `PEIM`"]
-pub type PEIM_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `PEIM`"]
+#[doc = "Field `PEIM` reader - Parity error interrupt mask. A read returns the current mask for the UARTPEINTR interrupt. On a write of 1, the mask of the UARTPEINTR interrupt is set. A write of 0 clears the mask."]
+pub struct PEIM_R(crate::FieldReader<bool, bool>);
+impl PEIM_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        PEIM_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for PEIM_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `PEIM` writer - Parity error interrupt mask. A read returns the current mask for the UARTPEINTR interrupt. On a write of 1, the mask of the UARTPEINTR interrupt is set. A write of 0 clears the mask."]
 pub struct PEIM_W<'a> {
     w: &'a mut W,
 }
@@ -78,13 +138,25 @@ impl<'a> PEIM_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 8)) | (((value as u32) & 0x01) << 8);
+        self.w.bits = (self.w.bits & !(0x01 << 8)) | ((value as u32 & 0x01) << 8);
         self.w
     }
 }
-#[doc = "Reader of field `FEIM`"]
-pub type FEIM_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `FEIM`"]
+#[doc = "Field `FEIM` reader - Framing error interrupt mask. A read returns the current mask for the UARTFEINTR interrupt. On a write of 1, the mask of the UARTFEINTR interrupt is set. A write of 0 clears the mask."]
+pub struct FEIM_R(crate::FieldReader<bool, bool>);
+impl FEIM_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        FEIM_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for FEIM_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `FEIM` writer - Framing error interrupt mask. A read returns the current mask for the UARTFEINTR interrupt. On a write of 1, the mask of the UARTFEINTR interrupt is set. A write of 0 clears the mask."]
 pub struct FEIM_W<'a> {
     w: &'a mut W,
 }
@@ -102,13 +174,25 @@ impl<'a> FEIM_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 7)) | (((value as u32) & 0x01) << 7);
+        self.w.bits = (self.w.bits & !(0x01 << 7)) | ((value as u32 & 0x01) << 7);
         self.w
     }
 }
-#[doc = "Reader of field `RTIM`"]
-pub type RTIM_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `RTIM`"]
+#[doc = "Field `RTIM` reader - Receive timeout interrupt mask. A read returns the current mask for the UARTRTINTR interrupt. On a write of 1, the mask of the UARTRTINTR interrupt is set. A write of 0 clears the mask."]
+pub struct RTIM_R(crate::FieldReader<bool, bool>);
+impl RTIM_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        RTIM_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for RTIM_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `RTIM` writer - Receive timeout interrupt mask. A read returns the current mask for the UARTRTINTR interrupt. On a write of 1, the mask of the UARTRTINTR interrupt is set. A write of 0 clears the mask."]
 pub struct RTIM_W<'a> {
     w: &'a mut W,
 }
@@ -126,13 +210,25 @@ impl<'a> RTIM_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 6)) | (((value as u32) & 0x01) << 6);
+        self.w.bits = (self.w.bits & !(0x01 << 6)) | ((value as u32 & 0x01) << 6);
         self.w
     }
 }
-#[doc = "Reader of field `TXIM`"]
-pub type TXIM_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `TXIM`"]
+#[doc = "Field `TXIM` reader - Transmit interrupt mask. A read returns the current mask for the UARTTXINTR interrupt. On a write of 1, the mask of the UARTTXINTR interrupt is set. A write of 0 clears the mask."]
+pub struct TXIM_R(crate::FieldReader<bool, bool>);
+impl TXIM_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        TXIM_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for TXIM_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `TXIM` writer - Transmit interrupt mask. A read returns the current mask for the UARTTXINTR interrupt. On a write of 1, the mask of the UARTTXINTR interrupt is set. A write of 0 clears the mask."]
 pub struct TXIM_W<'a> {
     w: &'a mut W,
 }
@@ -150,13 +246,25 @@ impl<'a> TXIM_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 5)) | (((value as u32) & 0x01) << 5);
+        self.w.bits = (self.w.bits & !(0x01 << 5)) | ((value as u32 & 0x01) << 5);
         self.w
     }
 }
-#[doc = "Reader of field `RXIM`"]
-pub type RXIM_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `RXIM`"]
+#[doc = "Field `RXIM` reader - Receive interrupt mask. A read returns the current mask for the UARTRXINTR interrupt. On a write of 1, the mask of the UARTRXINTR interrupt is set. A write of 0 clears the mask."]
+pub struct RXIM_R(crate::FieldReader<bool, bool>);
+impl RXIM_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        RXIM_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for RXIM_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `RXIM` writer - Receive interrupt mask. A read returns the current mask for the UARTRXINTR interrupt. On a write of 1, the mask of the UARTRXINTR interrupt is set. A write of 0 clears the mask."]
 pub struct RXIM_W<'a> {
     w: &'a mut W,
 }
@@ -174,13 +282,25 @@ impl<'a> RXIM_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 4)) | (((value as u32) & 0x01) << 4);
+        self.w.bits = (self.w.bits & !(0x01 << 4)) | ((value as u32 & 0x01) << 4);
         self.w
     }
 }
-#[doc = "Reader of field `DSRMIM`"]
-pub type DSRMIM_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `DSRMIM`"]
+#[doc = "Field `DSRMIM` reader - nUARTDSR modem interrupt mask. A read returns the current mask for the UARTDSRINTR interrupt. On a write of 1, the mask of the UARTDSRINTR interrupt is set. A write of 0 clears the mask."]
+pub struct DSRMIM_R(crate::FieldReader<bool, bool>);
+impl DSRMIM_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        DSRMIM_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for DSRMIM_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `DSRMIM` writer - nUARTDSR modem interrupt mask. A read returns the current mask for the UARTDSRINTR interrupt. On a write of 1, the mask of the UARTDSRINTR interrupt is set. A write of 0 clears the mask."]
 pub struct DSRMIM_W<'a> {
     w: &'a mut W,
 }
@@ -198,13 +318,25 @@ impl<'a> DSRMIM_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 3)) | (((value as u32) & 0x01) << 3);
+        self.w.bits = (self.w.bits & !(0x01 << 3)) | ((value as u32 & 0x01) << 3);
         self.w
     }
 }
-#[doc = "Reader of field `DCDMIM`"]
-pub type DCDMIM_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `DCDMIM`"]
+#[doc = "Field `DCDMIM` reader - nUARTDCD modem interrupt mask. A read returns the current mask for the UARTDCDINTR interrupt. On a write of 1, the mask of the UARTDCDINTR interrupt is set. A write of 0 clears the mask."]
+pub struct DCDMIM_R(crate::FieldReader<bool, bool>);
+impl DCDMIM_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        DCDMIM_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for DCDMIM_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `DCDMIM` writer - nUARTDCD modem interrupt mask. A read returns the current mask for the UARTDCDINTR interrupt. On a write of 1, the mask of the UARTDCDINTR interrupt is set. A write of 0 clears the mask."]
 pub struct DCDMIM_W<'a> {
     w: &'a mut W,
 }
@@ -222,13 +354,25 @@ impl<'a> DCDMIM_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 2)) | (((value as u32) & 0x01) << 2);
+        self.w.bits = (self.w.bits & !(0x01 << 2)) | ((value as u32 & 0x01) << 2);
         self.w
     }
 }
-#[doc = "Reader of field `CTSMIM`"]
-pub type CTSMIM_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `CTSMIM`"]
+#[doc = "Field `CTSMIM` reader - nUARTCTS modem interrupt mask. A read returns the current mask for the UARTCTSINTR interrupt. On a write of 1, the mask of the UARTCTSINTR interrupt is set. A write of 0 clears the mask."]
+pub struct CTSMIM_R(crate::FieldReader<bool, bool>);
+impl CTSMIM_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        CTSMIM_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for CTSMIM_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `CTSMIM` writer - nUARTCTS modem interrupt mask. A read returns the current mask for the UARTCTSINTR interrupt. On a write of 1, the mask of the UARTCTSINTR interrupt is set. A write of 0 clears the mask."]
 pub struct CTSMIM_W<'a> {
     w: &'a mut W,
 }
@@ -246,13 +390,25 @@ impl<'a> CTSMIM_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | (((value as u32) & 0x01) << 1);
+        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u32 & 0x01) << 1);
         self.w
     }
 }
-#[doc = "Reader of field `RIMIM`"]
-pub type RIMIM_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `RIMIM`"]
+#[doc = "Field `RIMIM` reader - nUARTRI modem interrupt mask. A read returns the current mask for the UARTRIINTR interrupt. On a write of 1, the mask of the UARTRIINTR interrupt is set. A write of 0 clears the mask."]
+pub struct RIMIM_R(crate::FieldReader<bool, bool>);
+impl RIMIM_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        RIMIM_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for RIMIM_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `RIMIM` writer - nUARTRI modem interrupt mask. A read returns the current mask for the UARTRIINTR interrupt. On a write of 1, the mask of the UARTRIINTR interrupt is set. A write of 0 clears the mask."]
 pub struct RIMIM_W<'a> {
     w: &'a mut W,
 }
@@ -270,7 +426,7 @@ impl<'a> RIMIM_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | ((value as u32) & 0x01);
+        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
         self.w
     }
 }
@@ -386,5 +542,35 @@ impl W {
     #[inline(always)]
     pub fn rimim(&mut self) -> RIMIM_W {
         RIMIM_W { w: self }
+    }
+    #[doc = "Writes raw bits to the register."]
+    #[inline(always)]
+    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
+        self.0.bits(bits);
+        self
+    }
+}
+#[doc = "Interrupt Mask Set/Clear Register, UARTIMSC  
+
+This register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+
+For information about available fields see [uartimsc](index.html) module"]
+pub struct UARTIMSC_SPEC;
+impl crate::RegisterSpec for UARTIMSC_SPEC {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [uartimsc::R](R) reader structure"]
+impl crate::Readable for UARTIMSC_SPEC {
+    type Reader = R;
+}
+#[doc = "`write(|w| ..)` method takes [uartimsc::W](W) writer structure"]
+impl crate::Writable for UARTIMSC_SPEC {
+    type Writer = W;
+}
+#[doc = "`reset()` method sets UARTIMSC to value 0"]
+impl crate::Resettable for UARTIMSC_SPEC {
+    #[inline(always)]
+    fn reset_value() -> Self::Ux {
+        0
     }
 }

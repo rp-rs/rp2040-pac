@@ -2,42 +2,42 @@
 #[repr(C)]
 pub struct RegisterBlock {
     #[doc = "0x00 - PIO control register"]
-    pub ctrl: CTRL,
+    pub ctrl: crate::Reg<ctrl::CTRL_SPEC>,
     #[doc = "0x04 - FIFO status register"]
-    pub fstat: FSTAT,
+    pub fstat: crate::Reg<fstat::FSTAT_SPEC>,
     #[doc = "0x08 - FIFO debug register"]
-    pub fdebug: FDEBUG,
+    pub fdebug: crate::Reg<fdebug::FDEBUG_SPEC>,
     #[doc = "0x0c - FIFO levels"]
-    pub flevel: FLEVEL,
-    #[doc = "0x10 - Direct write access to the TX FIFO for this state machine. Each write pushes one word to the FIFO. Attempting to write to a full FIFO has no effect on the FIFO state or contents, and sets the sticky FDEBUG_TXOVER error flag for this FIFO."]
-    pub txf: [TXF; 4],
-    #[doc = "0x20 - Direct read access to the RX FIFO for this state machine. Each read pops one word from the FIFO. Attempting to read from an empty FIFO has no effect on the FIFO state, and sets the sticky FDEBUG_RXUNDER error flag for this FIFO. The data returned to the system on a read from an empty FIFO is undefined."]
-    pub rxf: [RXF; 4],
+    pub flevel: crate::Reg<flevel::FLEVEL_SPEC>,
+    #[doc = "0x10..0x20 - Direct write access to the TX FIFO for this state machine. Each write pushes one word to the FIFO. Attempting to write to a full FIFO has no effect on the FIFO state or contents, and sets the sticky FDEBUG_TXOVER error flag for this FIFO."]
+    pub txf: [crate::Reg<txf::TXF_SPEC>; 4],
+    #[doc = "0x20..0x30 - Direct read access to the RX FIFO for this state machine. Each read pops one word from the FIFO. Attempting to read from an empty FIFO has no effect on the FIFO state, and sets the sticky FDEBUG_RXUNDER error flag for this FIFO. The data returned to the system on a read from an empty FIFO is undefined."]
+    pub rxf: [crate::Reg<rxf::RXF_SPEC>; 4],
     #[doc = "0x30 - State machine IRQ flags register. Write 1 to clear. There are 8 state machine IRQ flags, which can be set, cleared, and waited on by the state machines. There's no fixed association between flags and state machines -- any state machine can use any flag.  
 
  Any of the 8 flags can be used for timing synchronisation between state machines, using IRQ and WAIT instructions. The lower four of these flags are also routed out to system-level interrupt requests, alongside FIFO status interrupts -- see e.g. IRQ0_INTE."]
-    pub irq: IRQ,
+    pub irq: crate::Reg<irq::IRQ_SPEC>,
     #[doc = "0x34 - Writing a 1 to each of these bits will forcibly assert the corresponding IRQ. Note this is different to the INTF register: writing here affects PIO internal state. INTF just asserts the processor-facing IRQ signal for testing ISRs, and is not visible to the state machines."]
-    pub irq_force: IRQ_FORCE,
+    pub irq_force: crate::Reg<irq_force::IRQ_FORCE_SPEC>,
     #[doc = "0x38 - There is a 2-flipflop synchronizer on each GPIO input, which protects PIO logic from metastabilities. This increases input delay, and for fast synchronous IO (e.g. SPI) these synchronizers may need to be bypassed. Each bit in this register corresponds to one GPIO.  
  0 -> input is synchronized (default)  
  1 -> synchronizer is bypassed  
  If in doubt, leave this register as all zeroes."]
-    pub input_sync_bypass: INPUT_SYNC_BYPASS,
+    pub input_sync_bypass: crate::Reg<input_sync_bypass::INPUT_SYNC_BYPASS_SPEC>,
     #[doc = "0x3c - Read to sample the pad output values PIO is currently driving to the GPIOs."]
-    pub dbg_padout: DBG_PADOUT,
+    pub dbg_padout: crate::Reg<dbg_padout::DBG_PADOUT_SPEC>,
     #[doc = "0x40 - Read to sample the pad output enables (direction) PIO is currently driving to the GPIOs."]
-    pub dbg_padoe: DBG_PADOE,
+    pub dbg_padoe: crate::Reg<dbg_padoe::DBG_PADOE_SPEC>,
     #[doc = "0x44 - The PIO hardware has some free parameters that may vary between chip products.  
  These should be provided in the chip datasheet, but are also exposed here."]
-    pub dbg_cfginfo: DBG_CFGINFO,
-    #[doc = "0x48 - Write-only access to instruction memory location %s"]
-    pub instr_mem: [INSTR_MEM; 32],
-    #[doc = "0xc8 - Cluster SM%s, containing SM*_CLKDIV, SM*_EXECCTRL, SM*_SHIFTCTRL, SM*_ADDR, SM*_INSTR, SM*_PINCTRL"]
+    pub dbg_cfginfo: crate::Reg<dbg_cfginfo::DBG_CFGINFO_SPEC>,
+    #[doc = "0x48..0xc8 - Write-only access to instruction memory location %s"]
+    pub instr_mem: [crate::Reg<instr_mem::INSTR_MEM_SPEC>; 32],
+    #[doc = "0xc8..0x128 - Cluster SM%s, containing SM*_CLKDIV, SM*_EXECCTRL, SM*_SHIFTCTRL, SM*_ADDR, SM*_INSTR, SM*_PINCTRL"]
     pub sm: [SM; 4],
     #[doc = "0x128 - Raw Interrupts"]
-    pub intr: INTR,
-    #[doc = "0x12c - Cluster SM_IRQ%s, containing IRQ*_INTE, IRQ*_INTF, IRQ*_INTS"]
+    pub intr: crate::Reg<intr::INTR_SPEC>,
+    #[doc = "0x12c..0x144 - Cluster SM_IRQ%s, containing IRQ*_INTE, IRQ*_INTF, IRQ*_INTS"]
     pub sm_irq: [SM_IRQ; 2],
 }
 #[doc = r"Register block"]
@@ -45,18 +45,18 @@ pub struct RegisterBlock {
 pub struct SM {
     #[doc = "0x00 - Clock divisor register for state machine 0  
  Frequency = clock freq / (CLKDIV_INT + CLKDIV_FRAC / 256)"]
-    pub sm_clkdiv: self::sm::SM_CLKDIV,
+    pub sm_clkdiv: crate::Reg<self::sm::sm_clkdiv::SM_CLKDIV_SPEC>,
     #[doc = "0x04 - Execution/behavioural settings for state machine 0"]
-    pub sm_execctrl: self::sm::SM_EXECCTRL,
+    pub sm_execctrl: crate::Reg<self::sm::sm_execctrl::SM_EXECCTRL_SPEC>,
     #[doc = "0x08 - Control behaviour of the input/output shift registers for state machine 0"]
-    pub sm_shiftctrl: self::sm::SM_SHIFTCTRL,
+    pub sm_shiftctrl: crate::Reg<self::sm::sm_shiftctrl::SM_SHIFTCTRL_SPEC>,
     #[doc = "0x0c - Current instruction address of state machine 0"]
-    pub sm_addr: self::sm::SM_ADDR,
+    pub sm_addr: crate::Reg<self::sm::sm_addr::SM_ADDR_SPEC>,
     #[doc = "0x10 - Read to see the instruction currently addressed by state machine 0's program counter  
  Write to execute an instruction immediately (including jumps) and then resume execution."]
-    pub sm_instr: self::sm::SM_INSTR,
+    pub sm_instr: crate::Reg<self::sm::sm_instr::SM_INSTR_SPEC>,
     #[doc = "0x14 - State machine pin control"]
-    pub sm_pinctrl: self::sm::SM_PINCTRL,
+    pub sm_pinctrl: crate::Reg<self::sm::sm_pinctrl::SM_PINCTRL_SPEC>,
 }
 #[doc = r"Register block"]
 #[doc = "Cluster SM%s, containing SM*_CLKDIV, SM*_EXECCTRL, SM*_SHIFTCTRL, SM*_ADDR, SM*_INSTR, SM*_PINCTRL"]
@@ -65,216 +65,74 @@ pub mod sm;
 #[repr(C)]
 pub struct SM_IRQ {
     #[doc = "0x00 - Interrupt Enable for irq0"]
-    pub irq_inte: self::sm_irq::IRQ_INTE,
+    pub irq_inte: crate::Reg<self::sm_irq::irq_inte::IRQ_INTE_SPEC>,
     #[doc = "0x04 - Interrupt Force for irq0"]
-    pub irq_intf: self::sm_irq::IRQ_INTF,
+    pub irq_intf: crate::Reg<self::sm_irq::irq_intf::IRQ_INTF_SPEC>,
     #[doc = "0x08 - Interrupt status after masking & forcing for irq0"]
-    pub irq_ints: self::sm_irq::IRQ_INTS,
+    pub irq_ints: crate::Reg<self::sm_irq::irq_ints::IRQ_INTS_SPEC>,
 }
 #[doc = r"Register block"]
 #[doc = "Cluster SM_IRQ%s, containing IRQ*_INTE, IRQ*_INTF, IRQ*_INTS"]
 pub mod sm_irq;
-#[doc = "PIO control register  
-
-This register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
-
-For information about available fields see [ctrl](ctrl) module"]
-pub type CTRL = crate::Reg<u32, _CTRL>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CTRL;
-#[doc = "`read()` method returns [ctrl::R](ctrl::R) reader structure"]
-impl crate::Readable for CTRL {}
-#[doc = "`write(|w| ..)` method takes [ctrl::W](ctrl::W) writer structure"]
-impl crate::Writable for CTRL {}
+#[doc = "CTRL register accessor: an alias for `Reg<CTRL_SPEC>`"]
+pub type CTRL = crate::Reg<ctrl::CTRL_SPEC>;
 #[doc = "PIO control register"]
 pub mod ctrl;
-#[doc = "FIFO status register  
-
-This register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
-
-For information about available fields see [fstat](fstat) module"]
-pub type FSTAT = crate::Reg<u32, _FSTAT>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _FSTAT;
-#[doc = "`read()` method returns [fstat::R](fstat::R) reader structure"]
-impl crate::Readable for FSTAT {}
+#[doc = "FSTAT register accessor: an alias for `Reg<FSTAT_SPEC>`"]
+pub type FSTAT = crate::Reg<fstat::FSTAT_SPEC>;
 #[doc = "FIFO status register"]
 pub mod fstat;
-#[doc = "FIFO debug register  
-
-This register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
-
-For information about available fields see [fdebug](fdebug) module"]
-pub type FDEBUG = crate::Reg<u32, _FDEBUG>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _FDEBUG;
-#[doc = "`read()` method returns [fdebug::R](fdebug::R) reader structure"]
-impl crate::Readable for FDEBUG {}
-#[doc = "`write(|w| ..)` method takes [fdebug::W](fdebug::W) writer structure"]
-impl crate::Writable for FDEBUG {}
+#[doc = "FDEBUG register accessor: an alias for `Reg<FDEBUG_SPEC>`"]
+pub type FDEBUG = crate::Reg<fdebug::FDEBUG_SPEC>;
 #[doc = "FIFO debug register"]
 pub mod fdebug;
-#[doc = "FIFO levels  
-
-This register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
-
-For information about available fields see [flevel](flevel) module"]
-pub type FLEVEL = crate::Reg<u32, _FLEVEL>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _FLEVEL;
-#[doc = "`read()` method returns [flevel::R](flevel::R) reader structure"]
-impl crate::Readable for FLEVEL {}
+#[doc = "FLEVEL register accessor: an alias for `Reg<FLEVEL_SPEC>`"]
+pub type FLEVEL = crate::Reg<flevel::FLEVEL_SPEC>;
 #[doc = "FIFO levels"]
 pub mod flevel;
-#[doc = "Direct write access to the TX FIFO for this state machine. Each write pushes one word to the FIFO. Attempting to write to a full FIFO has no effect on the FIFO state or contents, and sets the sticky FDEBUG_TXOVER error flag for this FIFO.  
-
-This register you can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
-
-For information about available fields see [txf](txf) module"]
-pub type TXF = crate::Reg<u32, _TXF>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _TXF;
-#[doc = "`write(|w| ..)` method takes [txf::W](txf::W) writer structure"]
-impl crate::Writable for TXF {}
+#[doc = "TXF register accessor: an alias for `Reg<TXF_SPEC>`"]
+pub type TXF = crate::Reg<txf::TXF_SPEC>;
 #[doc = "Direct write access to the TX FIFO for this state machine. Each write pushes one word to the FIFO. Attempting to write to a full FIFO has no effect on the FIFO state or contents, and sets the sticky FDEBUG_TXOVER error flag for this FIFO."]
 pub mod txf;
-#[doc = "Direct read access to the RX FIFO for this state machine. Each read pops one word from the FIFO. Attempting to read from an empty FIFO has no effect on the FIFO state, and sets the sticky FDEBUG_RXUNDER error flag for this FIFO. The data returned to the system on a read from an empty FIFO is undefined.  
-
-This register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
-
-For information about available fields see [rxf](rxf) module"]
-pub type RXF = crate::Reg<u32, _RXF>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _RXF;
-#[doc = "`read()` method returns [rxf::R](rxf::R) reader structure"]
-impl crate::Readable for RXF {}
+#[doc = "RXF register accessor: an alias for `Reg<RXF_SPEC>`"]
+pub type RXF = crate::Reg<rxf::RXF_SPEC>;
 #[doc = "Direct read access to the RX FIFO for this state machine. Each read pops one word from the FIFO. Attempting to read from an empty FIFO has no effect on the FIFO state, and sets the sticky FDEBUG_RXUNDER error flag for this FIFO. The data returned to the system on a read from an empty FIFO is undefined."]
 pub mod rxf;
-#[doc = "State machine IRQ flags register. Write 1 to clear. There are 8 state machine IRQ flags, which can be set, cleared, and waited on by the state machines. There's no fixed association between flags and state machines -- any state machine can use any flag.  
-
- Any of the 8 flags can be used for timing synchronisation between state machines, using IRQ and WAIT instructions. The lower four of these flags are also routed out to system-level interrupt requests, alongside FIFO status interrupts -- see e.g. IRQ0_INTE.  
-
-This register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
-
-For information about available fields see [irq](irq) module"]
-pub type IRQ = crate::Reg<u32, _IRQ>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _IRQ;
-#[doc = "`read()` method returns [irq::R](irq::R) reader structure"]
-impl crate::Readable for IRQ {}
-#[doc = "`write(|w| ..)` method takes [irq::W](irq::W) writer structure"]
-impl crate::Writable for IRQ {}
+#[doc = "IRQ register accessor: an alias for `Reg<IRQ_SPEC>`"]
+pub type IRQ = crate::Reg<irq::IRQ_SPEC>;
 #[doc = "State machine IRQ flags register. Write 1 to clear. There are 8 state machine IRQ flags, which can be set, cleared, and waited on by the state machines. There's no fixed association between flags and state machines -- any state machine can use any flag.  
 
  Any of the 8 flags can be used for timing synchronisation between state machines, using IRQ and WAIT instructions. The lower four of these flags are also routed out to system-level interrupt requests, alongside FIFO status interrupts -- see e.g. IRQ0_INTE."]
 pub mod irq;
-#[doc = "Writing a 1 to each of these bits will forcibly assert the corresponding IRQ. Note this is different to the INTF register: writing here affects PIO internal state. INTF just asserts the processor-facing IRQ signal for testing ISRs, and is not visible to the state machines.  
-
-This register you can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
-
-For information about available fields see [irq_force](irq_force) module"]
-pub type IRQ_FORCE = crate::Reg<u32, _IRQ_FORCE>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _IRQ_FORCE;
-#[doc = "`write(|w| ..)` method takes [irq_force::W](irq_force::W) writer structure"]
-impl crate::Writable for IRQ_FORCE {}
+#[doc = "IRQ_FORCE register accessor: an alias for `Reg<IRQ_FORCE_SPEC>`"]
+pub type IRQ_FORCE = crate::Reg<irq_force::IRQ_FORCE_SPEC>;
 #[doc = "Writing a 1 to each of these bits will forcibly assert the corresponding IRQ. Note this is different to the INTF register: writing here affects PIO internal state. INTF just asserts the processor-facing IRQ signal for testing ISRs, and is not visible to the state machines."]
 pub mod irq_force;
-#[doc = "There is a 2-flipflop synchronizer on each GPIO input, which protects PIO logic from metastabilities. This increases input delay, and for fast synchronous IO (e.g. SPI) these synchronizers may need to be bypassed. Each bit in this register corresponds to one GPIO.  
- 0 -> input is synchronized (default)  
- 1 -> synchronizer is bypassed  
- If in doubt, leave this register as all zeroes.  
-
-This register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
-
-For information about available fields see [input_sync_bypass](input_sync_bypass) module"]
-pub type INPUT_SYNC_BYPASS = crate::Reg<u32, _INPUT_SYNC_BYPASS>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _INPUT_SYNC_BYPASS;
-#[doc = "`read()` method returns [input_sync_bypass::R](input_sync_bypass::R) reader structure"]
-impl crate::Readable for INPUT_SYNC_BYPASS {}
-#[doc = "`write(|w| ..)` method takes [input_sync_bypass::W](input_sync_bypass::W) writer structure"]
-impl crate::Writable for INPUT_SYNC_BYPASS {}
+#[doc = "INPUT_SYNC_BYPASS register accessor: an alias for `Reg<INPUT_SYNC_BYPASS_SPEC>`"]
+pub type INPUT_SYNC_BYPASS = crate::Reg<input_sync_bypass::INPUT_SYNC_BYPASS_SPEC>;
 #[doc = "There is a 2-flipflop synchronizer on each GPIO input, which protects PIO logic from metastabilities. This increases input delay, and for fast synchronous IO (e.g. SPI) these synchronizers may need to be bypassed. Each bit in this register corresponds to one GPIO.  
  0 -> input is synchronized (default)  
  1 -> synchronizer is bypassed  
  If in doubt, leave this register as all zeroes."]
 pub mod input_sync_bypass;
-#[doc = "Read to sample the pad output values PIO is currently driving to the GPIOs.  
-
-This register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
-
-For information about available fields see [dbg_padout](dbg_padout) module"]
-pub type DBG_PADOUT = crate::Reg<u32, _DBG_PADOUT>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _DBG_PADOUT;
-#[doc = "`read()` method returns [dbg_padout::R](dbg_padout::R) reader structure"]
-impl crate::Readable for DBG_PADOUT {}
+#[doc = "DBG_PADOUT register accessor: an alias for `Reg<DBG_PADOUT_SPEC>`"]
+pub type DBG_PADOUT = crate::Reg<dbg_padout::DBG_PADOUT_SPEC>;
 #[doc = "Read to sample the pad output values PIO is currently driving to the GPIOs."]
 pub mod dbg_padout;
-#[doc = "Read to sample the pad output enables (direction) PIO is currently driving to the GPIOs.  
-
-This register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
-
-For information about available fields see [dbg_padoe](dbg_padoe) module"]
-pub type DBG_PADOE = crate::Reg<u32, _DBG_PADOE>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _DBG_PADOE;
-#[doc = "`read()` method returns [dbg_padoe::R](dbg_padoe::R) reader structure"]
-impl crate::Readable for DBG_PADOE {}
+#[doc = "DBG_PADOE register accessor: an alias for `Reg<DBG_PADOE_SPEC>`"]
+pub type DBG_PADOE = crate::Reg<dbg_padoe::DBG_PADOE_SPEC>;
 #[doc = "Read to sample the pad output enables (direction) PIO is currently driving to the GPIOs."]
 pub mod dbg_padoe;
-#[doc = "The PIO hardware has some free parameters that may vary between chip products.  
- These should be provided in the chip datasheet, but are also exposed here.  
-
-This register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
-
-For information about available fields see [dbg_cfginfo](dbg_cfginfo) module"]
-pub type DBG_CFGINFO = crate::Reg<u32, _DBG_CFGINFO>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _DBG_CFGINFO;
-#[doc = "`read()` method returns [dbg_cfginfo::R](dbg_cfginfo::R) reader structure"]
-impl crate::Readable for DBG_CFGINFO {}
+#[doc = "DBG_CFGINFO register accessor: an alias for `Reg<DBG_CFGINFO_SPEC>`"]
+pub type DBG_CFGINFO = crate::Reg<dbg_cfginfo::DBG_CFGINFO_SPEC>;
 #[doc = "The PIO hardware has some free parameters that may vary between chip products.  
  These should be provided in the chip datasheet, but are also exposed here."]
 pub mod dbg_cfginfo;
-#[doc = "Write-only access to instruction memory location %s  
-
-This register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
-
-For information about available fields see [instr_mem](instr_mem) module"]
-pub type INSTR_MEM = crate::Reg<u32, _INSTR_MEM>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _INSTR_MEM;
-#[doc = "`read()` method returns [instr_mem::R](instr_mem::R) reader structure"]
-impl crate::Readable for INSTR_MEM {}
-#[doc = "`write(|w| ..)` method takes [instr_mem::W](instr_mem::W) writer structure"]
-impl crate::Writable for INSTR_MEM {}
+#[doc = "INSTR_MEM register accessor: an alias for `Reg<INSTR_MEM_SPEC>`"]
+pub type INSTR_MEM = crate::Reg<instr_mem::INSTR_MEM_SPEC>;
 #[doc = "Write-only access to instruction memory location %s"]
 pub mod instr_mem;
-#[doc = "Raw Interrupts  
-
-This register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
-
-For information about available fields see [intr](intr) module"]
-pub type INTR = crate::Reg<u32, _INTR>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _INTR;
-#[doc = "`read()` method returns [intr::R](intr::R) reader structure"]
-impl crate::Readable for INTR {}
+#[doc = "INTR register accessor: an alias for `Reg<INTR_SPEC>`"]
+pub type INTR = crate::Reg<intr::INTR_SPEC>;
 #[doc = "Raw Interrupts"]
 pub mod intr;

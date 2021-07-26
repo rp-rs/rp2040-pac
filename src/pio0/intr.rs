@@ -1,29 +1,186 @@
-#[doc = "Reader of register INTR"]
-pub type R = crate::R<u32, super::INTR>;
-#[doc = "Reader of field `SM3`"]
-pub type SM3_R = crate::R<bool, bool>;
-#[doc = "Reader of field `SM2`"]
-pub type SM2_R = crate::R<bool, bool>;
-#[doc = "Reader of field `SM1`"]
-pub type SM1_R = crate::R<bool, bool>;
-#[doc = "Reader of field `SM0`"]
-pub type SM0_R = crate::R<bool, bool>;
-#[doc = "Reader of field `SM3_TXNFULL`"]
-pub type SM3_TXNFULL_R = crate::R<bool, bool>;
-#[doc = "Reader of field `SM2_TXNFULL`"]
-pub type SM2_TXNFULL_R = crate::R<bool, bool>;
-#[doc = "Reader of field `SM1_TXNFULL`"]
-pub type SM1_TXNFULL_R = crate::R<bool, bool>;
-#[doc = "Reader of field `SM0_TXNFULL`"]
-pub type SM0_TXNFULL_R = crate::R<bool, bool>;
-#[doc = "Reader of field `SM3_RXNEMPTY`"]
-pub type SM3_RXNEMPTY_R = crate::R<bool, bool>;
-#[doc = "Reader of field `SM2_RXNEMPTY`"]
-pub type SM2_RXNEMPTY_R = crate::R<bool, bool>;
-#[doc = "Reader of field `SM1_RXNEMPTY`"]
-pub type SM1_RXNEMPTY_R = crate::R<bool, bool>;
-#[doc = "Reader of field `SM0_RXNEMPTY`"]
-pub type SM0_RXNEMPTY_R = crate::R<bool, bool>;
+#[doc = "Register `INTR` reader"]
+pub struct R(crate::R<INTR_SPEC>);
+impl core::ops::Deref for R {
+    type Target = crate::R<INTR_SPEC>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+impl From<crate::R<INTR_SPEC>> for R {
+    #[inline(always)]
+    fn from(reader: crate::R<INTR_SPEC>) -> Self {
+        R(reader)
+    }
+}
+#[doc = "Field `SM3` reader - "]
+pub struct SM3_R(crate::FieldReader<bool, bool>);
+impl SM3_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        SM3_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for SM3_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `SM2` reader - "]
+pub struct SM2_R(crate::FieldReader<bool, bool>);
+impl SM2_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        SM2_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for SM2_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `SM1` reader - "]
+pub struct SM1_R(crate::FieldReader<bool, bool>);
+impl SM1_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        SM1_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for SM1_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `SM0` reader - "]
+pub struct SM0_R(crate::FieldReader<bool, bool>);
+impl SM0_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        SM0_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for SM0_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `SM3_TXNFULL` reader - "]
+pub struct SM3_TXNFULL_R(crate::FieldReader<bool, bool>);
+impl SM3_TXNFULL_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        SM3_TXNFULL_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for SM3_TXNFULL_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `SM2_TXNFULL` reader - "]
+pub struct SM2_TXNFULL_R(crate::FieldReader<bool, bool>);
+impl SM2_TXNFULL_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        SM2_TXNFULL_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for SM2_TXNFULL_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `SM1_TXNFULL` reader - "]
+pub struct SM1_TXNFULL_R(crate::FieldReader<bool, bool>);
+impl SM1_TXNFULL_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        SM1_TXNFULL_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for SM1_TXNFULL_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `SM0_TXNFULL` reader - "]
+pub struct SM0_TXNFULL_R(crate::FieldReader<bool, bool>);
+impl SM0_TXNFULL_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        SM0_TXNFULL_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for SM0_TXNFULL_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `SM3_RXNEMPTY` reader - "]
+pub struct SM3_RXNEMPTY_R(crate::FieldReader<bool, bool>);
+impl SM3_RXNEMPTY_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        SM3_RXNEMPTY_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for SM3_RXNEMPTY_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `SM2_RXNEMPTY` reader - "]
+pub struct SM2_RXNEMPTY_R(crate::FieldReader<bool, bool>);
+impl SM2_RXNEMPTY_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        SM2_RXNEMPTY_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for SM2_RXNEMPTY_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `SM1_RXNEMPTY` reader - "]
+pub struct SM1_RXNEMPTY_R(crate::FieldReader<bool, bool>);
+impl SM1_RXNEMPTY_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        SM1_RXNEMPTY_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for SM1_RXNEMPTY_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `SM0_RXNEMPTY` reader - "]
+pub struct SM0_RXNEMPTY_R(crate::FieldReader<bool, bool>);
+impl SM0_RXNEMPTY_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        SM0_RXNEMPTY_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for SM0_RXNEMPTY_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
 impl R {
     #[doc = "Bit 11"]
     #[inline(always)]
@@ -84,5 +241,25 @@ impl R {
     #[inline(always)]
     pub fn sm0_rxnempty(&self) -> SM0_RXNEMPTY_R {
         SM0_RXNEMPTY_R::new((self.bits & 0x01) != 0)
+    }
+}
+#[doc = "Raw Interrupts  
+
+This register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+
+For information about available fields see [intr](index.html) module"]
+pub struct INTR_SPEC;
+impl crate::RegisterSpec for INTR_SPEC {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [intr::R](R) reader structure"]
+impl crate::Readable for INTR_SPEC {
+    type Reader = R;
+}
+#[doc = "`reset()` method sets INTR to value 0"]
+impl crate::Resettable for INTR_SPEC {
+    #[inline(always)]
+    fn reset_value() -> Self::Ux {
+        0
     }
 }

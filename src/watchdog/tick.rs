@@ -1,22 +1,82 @@
-#[doc = "Reader of register TICK"]
-pub type R = crate::R<u32, super::TICK>;
-#[doc = "Writer for register TICK"]
-pub type W = crate::W<u32, super::TICK>;
-#[doc = "Register TICK `reset()`'s with value 0x0200"]
-impl crate::ResetValue for super::TICK {
-    type Type = u32;
+#[doc = "Register `TICK` reader"]
+pub struct R(crate::R<TICK_SPEC>);
+impl core::ops::Deref for R {
+    type Target = crate::R<TICK_SPEC>;
     #[inline(always)]
-    fn reset_value() -> Self::Type {
-        0x0200
+    fn deref(&self) -> &Self::Target {
+        &self.0
     }
 }
-#[doc = "Reader of field `COUNT`"]
-pub type COUNT_R = crate::R<u16, u16>;
-#[doc = "Reader of field `RUNNING`"]
-pub type RUNNING_R = crate::R<bool, bool>;
-#[doc = "Reader of field `ENABLE`"]
-pub type ENABLE_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `ENABLE`"]
+impl From<crate::R<TICK_SPEC>> for R {
+    #[inline(always)]
+    fn from(reader: crate::R<TICK_SPEC>) -> Self {
+        R(reader)
+    }
+}
+#[doc = "Register `TICK` writer"]
+pub struct W(crate::W<TICK_SPEC>);
+impl core::ops::Deref for W {
+    type Target = crate::W<TICK_SPEC>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+impl core::ops::DerefMut for W {
+    #[inline(always)]
+    fn deref_mut(&mut self) -> &mut Self::Target {
+        &mut self.0
+    }
+}
+impl From<crate::W<TICK_SPEC>> for W {
+    #[inline(always)]
+    fn from(writer: crate::W<TICK_SPEC>) -> Self {
+        W(writer)
+    }
+}
+#[doc = "Field `COUNT` reader - Count down timer: the remaining number clk_tick cycles before the next tick is generated."]
+pub struct COUNT_R(crate::FieldReader<u16, u16>);
+impl COUNT_R {
+    pub(crate) fn new(bits: u16) -> Self {
+        COUNT_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for COUNT_R {
+    type Target = crate::FieldReader<u16, u16>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `RUNNING` reader - Is the tick generator running?"]
+pub struct RUNNING_R(crate::FieldReader<bool, bool>);
+impl RUNNING_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        RUNNING_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for RUNNING_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `ENABLE` reader - start / stop tick generation"]
+pub struct ENABLE_R(crate::FieldReader<bool, bool>);
+impl ENABLE_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        ENABLE_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for ENABLE_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `ENABLE` writer - start / stop tick generation"]
 pub struct ENABLE_W<'a> {
     w: &'a mut W,
 }
@@ -34,13 +94,25 @@ impl<'a> ENABLE_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 9)) | (((value as u32) & 0x01) << 9);
+        self.w.bits = (self.w.bits & !(0x01 << 9)) | ((value as u32 & 0x01) << 9);
         self.w
     }
 }
-#[doc = "Reader of field `CYCLES`"]
-pub type CYCLES_R = crate::R<u16, u16>;
-#[doc = "Write proxy for field `CYCLES`"]
+#[doc = "Field `CYCLES` reader - Total number of clk_tick cycles before the next tick."]
+pub struct CYCLES_R(crate::FieldReader<u16, u16>);
+impl CYCLES_R {
+    pub(crate) fn new(bits: u16) -> Self {
+        CYCLES_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for CYCLES_R {
+    type Target = crate::FieldReader<u16, u16>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `CYCLES` writer - Total number of clk_tick cycles before the next tick."]
 pub struct CYCLES_W<'a> {
     w: &'a mut W,
 }
@@ -48,7 +120,7 @@ impl<'a> CYCLES_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u16) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01ff) | ((value as u32) & 0x01ff);
+        self.w.bits = (self.w.bits & !0x01ff) | (value as u32 & 0x01ff);
         self.w
     }
 }
@@ -84,5 +156,35 @@ impl W {
     #[inline(always)]
     pub fn cycles(&mut self) -> CYCLES_W {
         CYCLES_W { w: self }
+    }
+    #[doc = "Writes raw bits to the register."]
+    #[inline(always)]
+    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
+        self.0.bits(bits);
+        self
+    }
+}
+#[doc = "Controls the tick generator  
+
+This register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+
+For information about available fields see [tick](index.html) module"]
+pub struct TICK_SPEC;
+impl crate::RegisterSpec for TICK_SPEC {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [tick::R](R) reader structure"]
+impl crate::Readable for TICK_SPEC {
+    type Reader = R;
+}
+#[doc = "`write(|w| ..)` method takes [tick::W](W) writer structure"]
+impl crate::Writable for TICK_SPEC {
+    type Writer = W;
+}
+#[doc = "`reset()` method sets TICK to value 0x0200"]
+impl crate::Resettable for TICK_SPEC {
+    #[inline(always)]
+    fn reset_value() -> Self::Ux {
+        0x0200
     }
 }

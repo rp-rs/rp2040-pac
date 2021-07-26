@@ -1,55 +1,368 @@
-#[doc = "Reader of register RESET_DONE"]
-pub type R = crate::R<u32, super::RESET_DONE>;
-#[doc = "Reader of field `usbctrl`"]
-pub type USBCTRL_R = crate::R<bool, bool>;
-#[doc = "Reader of field `uart1`"]
-pub type UART1_R = crate::R<bool, bool>;
-#[doc = "Reader of field `uart0`"]
-pub type UART0_R = crate::R<bool, bool>;
-#[doc = "Reader of field `timer`"]
-pub type TIMER_R = crate::R<bool, bool>;
-#[doc = "Reader of field `tbman`"]
-pub type TBMAN_R = crate::R<bool, bool>;
-#[doc = "Reader of field `sysinfo`"]
-pub type SYSINFO_R = crate::R<bool, bool>;
-#[doc = "Reader of field `syscfg`"]
-pub type SYSCFG_R = crate::R<bool, bool>;
-#[doc = "Reader of field `spi1`"]
-pub type SPI1_R = crate::R<bool, bool>;
-#[doc = "Reader of field `spi0`"]
-pub type SPI0_R = crate::R<bool, bool>;
-#[doc = "Reader of field `rtc`"]
-pub type RTC_R = crate::R<bool, bool>;
-#[doc = "Reader of field `pwm`"]
-pub type PWM_R = crate::R<bool, bool>;
-#[doc = "Reader of field `pll_usb`"]
-pub type PLL_USB_R = crate::R<bool, bool>;
-#[doc = "Reader of field `pll_sys`"]
-pub type PLL_SYS_R = crate::R<bool, bool>;
-#[doc = "Reader of field `pio1`"]
-pub type PIO1_R = crate::R<bool, bool>;
-#[doc = "Reader of field `pio0`"]
-pub type PIO0_R = crate::R<bool, bool>;
-#[doc = "Reader of field `pads_qspi`"]
-pub type PADS_QSPI_R = crate::R<bool, bool>;
-#[doc = "Reader of field `pads_bank0`"]
-pub type PADS_BANK0_R = crate::R<bool, bool>;
-#[doc = "Reader of field `jtag`"]
-pub type JTAG_R = crate::R<bool, bool>;
-#[doc = "Reader of field `io_qspi`"]
-pub type IO_QSPI_R = crate::R<bool, bool>;
-#[doc = "Reader of field `io_bank0`"]
-pub type IO_BANK0_R = crate::R<bool, bool>;
-#[doc = "Reader of field `i2c1`"]
-pub type I2C1_R = crate::R<bool, bool>;
-#[doc = "Reader of field `i2c0`"]
-pub type I2C0_R = crate::R<bool, bool>;
-#[doc = "Reader of field `dma`"]
-pub type DMA_R = crate::R<bool, bool>;
-#[doc = "Reader of field `busctrl`"]
-pub type BUSCTRL_R = crate::R<bool, bool>;
-#[doc = "Reader of field `adc`"]
-pub type ADC_R = crate::R<bool, bool>;
+#[doc = "Register `RESET_DONE` reader"]
+pub struct R(crate::R<RESET_DONE_SPEC>);
+impl core::ops::Deref for R {
+    type Target = crate::R<RESET_DONE_SPEC>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+impl From<crate::R<RESET_DONE_SPEC>> for R {
+    #[inline(always)]
+    fn from(reader: crate::R<RESET_DONE_SPEC>) -> Self {
+        R(reader)
+    }
+}
+#[doc = "Field `usbctrl` reader - "]
+pub struct USBCTRL_R(crate::FieldReader<bool, bool>);
+impl USBCTRL_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        USBCTRL_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for USBCTRL_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `uart1` reader - "]
+pub struct UART1_R(crate::FieldReader<bool, bool>);
+impl UART1_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        UART1_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for UART1_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `uart0` reader - "]
+pub struct UART0_R(crate::FieldReader<bool, bool>);
+impl UART0_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        UART0_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for UART0_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `timer` reader - "]
+pub struct TIMER_R(crate::FieldReader<bool, bool>);
+impl TIMER_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        TIMER_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for TIMER_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `tbman` reader - "]
+pub struct TBMAN_R(crate::FieldReader<bool, bool>);
+impl TBMAN_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        TBMAN_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for TBMAN_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `sysinfo` reader - "]
+pub struct SYSINFO_R(crate::FieldReader<bool, bool>);
+impl SYSINFO_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        SYSINFO_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for SYSINFO_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `syscfg` reader - "]
+pub struct SYSCFG_R(crate::FieldReader<bool, bool>);
+impl SYSCFG_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        SYSCFG_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for SYSCFG_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `spi1` reader - "]
+pub struct SPI1_R(crate::FieldReader<bool, bool>);
+impl SPI1_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        SPI1_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for SPI1_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `spi0` reader - "]
+pub struct SPI0_R(crate::FieldReader<bool, bool>);
+impl SPI0_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        SPI0_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for SPI0_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `rtc` reader - "]
+pub struct RTC_R(crate::FieldReader<bool, bool>);
+impl RTC_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        RTC_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for RTC_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `pwm` reader - "]
+pub struct PWM_R(crate::FieldReader<bool, bool>);
+impl PWM_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        PWM_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for PWM_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `pll_usb` reader - "]
+pub struct PLL_USB_R(crate::FieldReader<bool, bool>);
+impl PLL_USB_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        PLL_USB_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for PLL_USB_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `pll_sys` reader - "]
+pub struct PLL_SYS_R(crate::FieldReader<bool, bool>);
+impl PLL_SYS_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        PLL_SYS_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for PLL_SYS_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `pio1` reader - "]
+pub struct PIO1_R(crate::FieldReader<bool, bool>);
+impl PIO1_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        PIO1_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for PIO1_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `pio0` reader - "]
+pub struct PIO0_R(crate::FieldReader<bool, bool>);
+impl PIO0_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        PIO0_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for PIO0_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `pads_qspi` reader - "]
+pub struct PADS_QSPI_R(crate::FieldReader<bool, bool>);
+impl PADS_QSPI_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        PADS_QSPI_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for PADS_QSPI_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `pads_bank0` reader - "]
+pub struct PADS_BANK0_R(crate::FieldReader<bool, bool>);
+impl PADS_BANK0_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        PADS_BANK0_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for PADS_BANK0_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `jtag` reader - "]
+pub struct JTAG_R(crate::FieldReader<bool, bool>);
+impl JTAG_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        JTAG_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for JTAG_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `io_qspi` reader - "]
+pub struct IO_QSPI_R(crate::FieldReader<bool, bool>);
+impl IO_QSPI_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        IO_QSPI_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for IO_QSPI_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `io_bank0` reader - "]
+pub struct IO_BANK0_R(crate::FieldReader<bool, bool>);
+impl IO_BANK0_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        IO_BANK0_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for IO_BANK0_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `i2c1` reader - "]
+pub struct I2C1_R(crate::FieldReader<bool, bool>);
+impl I2C1_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        I2C1_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for I2C1_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `i2c0` reader - "]
+pub struct I2C0_R(crate::FieldReader<bool, bool>);
+impl I2C0_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        I2C0_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for I2C0_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `dma` reader - "]
+pub struct DMA_R(crate::FieldReader<bool, bool>);
+impl DMA_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        DMA_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for DMA_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `busctrl` reader - "]
+pub struct BUSCTRL_R(crate::FieldReader<bool, bool>);
+impl BUSCTRL_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        BUSCTRL_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for BUSCTRL_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `adc` reader - "]
+pub struct ADC_R(crate::FieldReader<bool, bool>);
+impl ADC_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        ADC_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for ADC_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
 impl R {
     #[doc = "Bit 24"]
     #[inline(always)]
@@ -175,5 +488,25 @@ impl R {
     #[inline(always)]
     pub fn adc(&self) -> ADC_R {
         ADC_R::new((self.bits & 0x01) != 0)
+    }
+}
+#[doc = "Reset done. If a bit is set then a reset done signal has been returned by the peripheral. This indicates that the peripheral's registers are ready to be accessed.  
+
+This register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+
+For information about available fields see [reset_done](index.html) module"]
+pub struct RESET_DONE_SPEC;
+impl crate::RegisterSpec for RESET_DONE_SPEC {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [reset_done::R](R) reader structure"]
+impl crate::Readable for RESET_DONE_SPEC {
+    type Reader = R;
+}
+#[doc = "`reset()` method sets RESET_DONE to value 0"]
+impl crate::Resettable for RESET_DONE_SPEC {
+    #[inline(always)]
+    fn reset_value() -> Self::Ux {
+        0
     }
 }

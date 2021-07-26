@@ -1,13 +1,37 @@
-#[doc = "Reader of register GPIO_CTRL"]
-pub type R = crate::R<u32, super::GPIO_CTRL>;
-#[doc = "Writer for register GPIO_CTRL"]
-pub type W = crate::W<u32, super::GPIO_CTRL>;
-#[doc = "Register GPIO_CTRL `reset()`'s with value 0x1f"]
-impl crate::ResetValue for super::GPIO_CTRL {
-    type Type = u32;
+#[doc = "Register `GPIO_CTRL` reader"]
+pub struct R(crate::R<GPIO_CTRL_SPEC>);
+impl core::ops::Deref for R {
+    type Target = crate::R<GPIO_CTRL_SPEC>;
     #[inline(always)]
-    fn reset_value() -> Self::Type {
-        0x1f
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+impl From<crate::R<GPIO_CTRL_SPEC>> for R {
+    #[inline(always)]
+    fn from(reader: crate::R<GPIO_CTRL_SPEC>) -> Self {
+        R(reader)
+    }
+}
+#[doc = "Register `GPIO_CTRL` writer"]
+pub struct W(crate::W<GPIO_CTRL_SPEC>);
+impl core::ops::Deref for W {
+    type Target = crate::W<GPIO_CTRL_SPEC>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+impl core::ops::DerefMut for W {
+    #[inline(always)]
+    fn deref_mut(&mut self) -> &mut Self::Target {
+        &mut self.0
+    }
+}
+impl From<crate::W<GPIO_CTRL_SPEC>> for W {
+    #[inline(always)]
+    fn from(writer: crate::W<GPIO_CTRL_SPEC>) -> Self {
+        W(writer)
     }
 }
 #[doc = "  
@@ -31,9 +55,12 @@ impl From<IRQOVER_A> for u8 {
         variant as _
     }
 }
-#[doc = "Reader of field `IRQOVER`"]
-pub type IRQOVER_R = crate::R<u8, IRQOVER_A>;
+#[doc = "Field `IRQOVER` reader - "]
+pub struct IRQOVER_R(crate::FieldReader<u8, IRQOVER_A>);
 impl IRQOVER_R {
+    pub(crate) fn new(bits: u8) -> Self {
+        IRQOVER_R(crate::FieldReader::new(bits))
+    }
     #[doc = r"Get enumerated values variant"]
     #[inline(always)]
     pub fn variant(&self) -> IRQOVER_A {
@@ -48,25 +75,32 @@ impl IRQOVER_R {
     #[doc = "Checks if the value of the field is `NORMAL`"]
     #[inline(always)]
     pub fn is_normal(&self) -> bool {
-        *self == IRQOVER_A::NORMAL
+        **self == IRQOVER_A::NORMAL
     }
     #[doc = "Checks if the value of the field is `INVERT`"]
     #[inline(always)]
     pub fn is_invert(&self) -> bool {
-        *self == IRQOVER_A::INVERT
+        **self == IRQOVER_A::INVERT
     }
     #[doc = "Checks if the value of the field is `LOW`"]
     #[inline(always)]
     pub fn is_low(&self) -> bool {
-        *self == IRQOVER_A::LOW
+        **self == IRQOVER_A::LOW
     }
     #[doc = "Checks if the value of the field is `HIGH`"]
     #[inline(always)]
     pub fn is_high(&self) -> bool {
-        *self == IRQOVER_A::HIGH
+        **self == IRQOVER_A::HIGH
     }
 }
-#[doc = "Write proxy for field `IRQOVER`"]
+impl core::ops::Deref for IRQOVER_R {
+    type Target = crate::FieldReader<u8, IRQOVER_A>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `IRQOVER` writer - "]
 pub struct IRQOVER_W<'a> {
     w: &'a mut W,
 }
@@ -74,9 +108,7 @@ impl<'a> IRQOVER_W<'a> {
     #[doc = r"Writes `variant` to the field"]
     #[inline(always)]
     pub fn variant(self, variant: IRQOVER_A) -> &'a mut W {
-        {
-            self.bits(variant.into())
-        }
+        self.bits(variant.into())
     }
     #[doc = "don't invert the interrupt"]
     #[inline(always)]
@@ -101,7 +133,7 @@ impl<'a> IRQOVER_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 28)) | (((value as u32) & 0x03) << 28);
+        self.w.bits = (self.w.bits & !(0x03 << 28)) | ((value as u32 & 0x03) << 28);
         self.w
     }
 }
@@ -126,9 +158,12 @@ impl From<INOVER_A> for u8 {
         variant as _
     }
 }
-#[doc = "Reader of field `INOVER`"]
-pub type INOVER_R = crate::R<u8, INOVER_A>;
+#[doc = "Field `INOVER` reader - "]
+pub struct INOVER_R(crate::FieldReader<u8, INOVER_A>);
 impl INOVER_R {
+    pub(crate) fn new(bits: u8) -> Self {
+        INOVER_R(crate::FieldReader::new(bits))
+    }
     #[doc = r"Get enumerated values variant"]
     #[inline(always)]
     pub fn variant(&self) -> INOVER_A {
@@ -143,25 +178,32 @@ impl INOVER_R {
     #[doc = "Checks if the value of the field is `NORMAL`"]
     #[inline(always)]
     pub fn is_normal(&self) -> bool {
-        *self == INOVER_A::NORMAL
+        **self == INOVER_A::NORMAL
     }
     #[doc = "Checks if the value of the field is `INVERT`"]
     #[inline(always)]
     pub fn is_invert(&self) -> bool {
-        *self == INOVER_A::INVERT
+        **self == INOVER_A::INVERT
     }
     #[doc = "Checks if the value of the field is `LOW`"]
     #[inline(always)]
     pub fn is_low(&self) -> bool {
-        *self == INOVER_A::LOW
+        **self == INOVER_A::LOW
     }
     #[doc = "Checks if the value of the field is `HIGH`"]
     #[inline(always)]
     pub fn is_high(&self) -> bool {
-        *self == INOVER_A::HIGH
+        **self == INOVER_A::HIGH
     }
 }
-#[doc = "Write proxy for field `INOVER`"]
+impl core::ops::Deref for INOVER_R {
+    type Target = crate::FieldReader<u8, INOVER_A>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `INOVER` writer - "]
 pub struct INOVER_W<'a> {
     w: &'a mut W,
 }
@@ -169,9 +211,7 @@ impl<'a> INOVER_W<'a> {
     #[doc = r"Writes `variant` to the field"]
     #[inline(always)]
     pub fn variant(self, variant: INOVER_A) -> &'a mut W {
-        {
-            self.bits(variant.into())
-        }
+        self.bits(variant.into())
     }
     #[doc = "don't invert the peri input"]
     #[inline(always)]
@@ -196,7 +236,7 @@ impl<'a> INOVER_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 16)) | (((value as u32) & 0x03) << 16);
+        self.w.bits = (self.w.bits & !(0x03 << 16)) | ((value as u32 & 0x03) << 16);
         self.w
     }
 }
@@ -221,9 +261,12 @@ impl From<OEOVER_A> for u8 {
         variant as _
     }
 }
-#[doc = "Reader of field `OEOVER`"]
-pub type OEOVER_R = crate::R<u8, OEOVER_A>;
+#[doc = "Field `OEOVER` reader - "]
+pub struct OEOVER_R(crate::FieldReader<u8, OEOVER_A>);
 impl OEOVER_R {
+    pub(crate) fn new(bits: u8) -> Self {
+        OEOVER_R(crate::FieldReader::new(bits))
+    }
     #[doc = r"Get enumerated values variant"]
     #[inline(always)]
     pub fn variant(&self) -> OEOVER_A {
@@ -238,25 +281,32 @@ impl OEOVER_R {
     #[doc = "Checks if the value of the field is `NORMAL`"]
     #[inline(always)]
     pub fn is_normal(&self) -> bool {
-        *self == OEOVER_A::NORMAL
+        **self == OEOVER_A::NORMAL
     }
     #[doc = "Checks if the value of the field is `INVERT`"]
     #[inline(always)]
     pub fn is_invert(&self) -> bool {
-        *self == OEOVER_A::INVERT
+        **self == OEOVER_A::INVERT
     }
     #[doc = "Checks if the value of the field is `DISABLE`"]
     #[inline(always)]
     pub fn is_disable(&self) -> bool {
-        *self == OEOVER_A::DISABLE
+        **self == OEOVER_A::DISABLE
     }
     #[doc = "Checks if the value of the field is `ENABLE`"]
     #[inline(always)]
     pub fn is_enable(&self) -> bool {
-        *self == OEOVER_A::ENABLE
+        **self == OEOVER_A::ENABLE
     }
 }
-#[doc = "Write proxy for field `OEOVER`"]
+impl core::ops::Deref for OEOVER_R {
+    type Target = crate::FieldReader<u8, OEOVER_A>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `OEOVER` writer - "]
 pub struct OEOVER_W<'a> {
     w: &'a mut W,
 }
@@ -264,9 +314,7 @@ impl<'a> OEOVER_W<'a> {
     #[doc = r"Writes `variant` to the field"]
     #[inline(always)]
     pub fn variant(self, variant: OEOVER_A) -> &'a mut W {
-        {
-            self.bits(variant.into())
-        }
+        self.bits(variant.into())
     }
     #[doc = "drive output enable from peripheral signal selected by funcsel"]
     #[inline(always)]
@@ -291,7 +339,7 @@ impl<'a> OEOVER_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 12)) | (((value as u32) & 0x03) << 12);
+        self.w.bits = (self.w.bits & !(0x03 << 12)) | ((value as u32 & 0x03) << 12);
         self.w
     }
 }
@@ -316,9 +364,12 @@ impl From<OUTOVER_A> for u8 {
         variant as _
     }
 }
-#[doc = "Reader of field `OUTOVER`"]
-pub type OUTOVER_R = crate::R<u8, OUTOVER_A>;
+#[doc = "Field `OUTOVER` reader - "]
+pub struct OUTOVER_R(crate::FieldReader<u8, OUTOVER_A>);
 impl OUTOVER_R {
+    pub(crate) fn new(bits: u8) -> Self {
+        OUTOVER_R(crate::FieldReader::new(bits))
+    }
     #[doc = r"Get enumerated values variant"]
     #[inline(always)]
     pub fn variant(&self) -> OUTOVER_A {
@@ -333,25 +384,32 @@ impl OUTOVER_R {
     #[doc = "Checks if the value of the field is `NORMAL`"]
     #[inline(always)]
     pub fn is_normal(&self) -> bool {
-        *self == OUTOVER_A::NORMAL
+        **self == OUTOVER_A::NORMAL
     }
     #[doc = "Checks if the value of the field is `INVERT`"]
     #[inline(always)]
     pub fn is_invert(&self) -> bool {
-        *self == OUTOVER_A::INVERT
+        **self == OUTOVER_A::INVERT
     }
     #[doc = "Checks if the value of the field is `LOW`"]
     #[inline(always)]
     pub fn is_low(&self) -> bool {
-        *self == OUTOVER_A::LOW
+        **self == OUTOVER_A::LOW
     }
     #[doc = "Checks if the value of the field is `HIGH`"]
     #[inline(always)]
     pub fn is_high(&self) -> bool {
-        *self == OUTOVER_A::HIGH
+        **self == OUTOVER_A::HIGH
     }
 }
-#[doc = "Write proxy for field `OUTOVER`"]
+impl core::ops::Deref for OUTOVER_R {
+    type Target = crate::FieldReader<u8, OUTOVER_A>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `OUTOVER` writer - "]
 pub struct OUTOVER_W<'a> {
     w: &'a mut W,
 }
@@ -359,9 +417,7 @@ impl<'a> OUTOVER_W<'a> {
     #[doc = r"Writes `variant` to the field"]
     #[inline(always)]
     pub fn variant(self, variant: OUTOVER_A) -> &'a mut W {
-        {
-            self.bits(variant.into())
-        }
+        self.bits(variant.into())
     }
     #[doc = "drive output from peripheral signal selected by funcsel"]
     #[inline(always)]
@@ -386,7 +442,7 @@ impl<'a> OUTOVER_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 8)) | (((value as u32) & 0x03) << 8);
+        self.w.bits = (self.w.bits & !(0x03 << 8)) | ((value as u32 & 0x03) << 8);
         self.w
     }
 }
@@ -410,37 +466,48 @@ impl From<FUNCSEL_A> for u8 {
         variant as _
     }
 }
-#[doc = "Reader of field `FUNCSEL`"]
-pub type FUNCSEL_R = crate::R<u8, FUNCSEL_A>;
+#[doc = "Field `FUNCSEL` reader - 0-31 -> selects pin function according to the gpio table  
+ 31 == NULL"]
+pub struct FUNCSEL_R(crate::FieldReader<u8, FUNCSEL_A>);
 impl FUNCSEL_R {
+    pub(crate) fn new(bits: u8) -> Self {
+        FUNCSEL_R(crate::FieldReader::new(bits))
+    }
     #[doc = r"Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> crate::Variant<u8, FUNCSEL_A> {
-        use crate::Variant::*;
+    pub fn variant(&self) -> Option<FUNCSEL_A> {
         match self.bits {
-            0 => Val(FUNCSEL_A::XIP_SCLK),
-            5 => Val(FUNCSEL_A::SIO_30),
-            31 => Val(FUNCSEL_A::NULL),
-            i => Res(i),
+            0 => Some(FUNCSEL_A::XIP_SCLK),
+            5 => Some(FUNCSEL_A::SIO_30),
+            31 => Some(FUNCSEL_A::NULL),
+            _ => None,
         }
     }
     #[doc = "Checks if the value of the field is `XIP_SCLK`"]
     #[inline(always)]
     pub fn is_xip_sclk(&self) -> bool {
-        *self == FUNCSEL_A::XIP_SCLK
+        **self == FUNCSEL_A::XIP_SCLK
     }
     #[doc = "Checks if the value of the field is `SIO_30`"]
     #[inline(always)]
     pub fn is_sio_30(&self) -> bool {
-        *self == FUNCSEL_A::SIO_30
+        **self == FUNCSEL_A::SIO_30
     }
     #[doc = "Checks if the value of the field is `NULL`"]
     #[inline(always)]
     pub fn is_null(&self) -> bool {
-        *self == FUNCSEL_A::NULL
+        **self == FUNCSEL_A::NULL
     }
 }
-#[doc = "Write proxy for field `FUNCSEL`"]
+impl core::ops::Deref for FUNCSEL_R {
+    type Target = crate::FieldReader<u8, FUNCSEL_A>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `FUNCSEL` writer - 0-31 -> selects pin function according to the gpio table  
+ 31 == NULL"]
 pub struct FUNCSEL_W<'a> {
     w: &'a mut W,
 }
@@ -468,7 +535,7 @@ impl<'a> FUNCSEL_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x1f) | ((value as u32) & 0x1f);
+        self.w.bits = (self.w.bits & !0x1f) | (value as u32 & 0x1f);
         self.w
     }
 }
@@ -493,8 +560,7 @@ impl R {
     pub fn outover(&self) -> OUTOVER_R {
         OUTOVER_R::new(((self.bits >> 8) & 0x03) as u8)
     }
-    #[doc = "Bits 0:4 - 0-31 -> selects pin function according to the gpio table  
- 31 == NULL"]
+    #[doc = "Bits 0:4 - 0-31 -> selects pin function according to the gpio table 31 == NULL"]
     #[inline(always)]
     pub fn funcsel(&self) -> FUNCSEL_R {
         FUNCSEL_R::new((self.bits & 0x1f) as u8)
@@ -521,10 +587,39 @@ impl W {
     pub fn outover(&mut self) -> OUTOVER_W {
         OUTOVER_W { w: self }
     }
-    #[doc = "Bits 0:4 - 0-31 -> selects pin function according to the gpio table  
- 31 == NULL"]
+    #[doc = "Bits 0:4 - 0-31 -> selects pin function according to the gpio table 31 == NULL"]
     #[inline(always)]
     pub fn funcsel(&mut self) -> FUNCSEL_W {
         FUNCSEL_W { w: self }
+    }
+    #[doc = "Writes raw bits to the register."]
+    #[inline(always)]
+    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
+        self.0.bits(bits);
+        self
+    }
+}
+#[doc = "GPIO control including function select and overrides.  
+
+This register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+
+For information about available fields see [gpio_ctrl](index.html) module"]
+pub struct GPIO_CTRL_SPEC;
+impl crate::RegisterSpec for GPIO_CTRL_SPEC {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [gpio_ctrl::R](R) reader structure"]
+impl crate::Readable for GPIO_CTRL_SPEC {
+    type Reader = R;
+}
+#[doc = "`write(|w| ..)` method takes [gpio_ctrl::W](W) writer structure"]
+impl crate::Writable for GPIO_CTRL_SPEC {
+    type Writer = W;
+}
+#[doc = "`reset()` method sets GPIO_CTRL to value 0x1f"]
+impl crate::Resettable for GPIO_CTRL_SPEC {
+    #[inline(always)]
+    fn reset_value() -> Self::Ux {
+        0x1f
     }
 }

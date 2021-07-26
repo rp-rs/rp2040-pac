@@ -1,17 +1,102 @@
-#[doc = "Reader of register RISR"]
-pub type R = crate::R<u32, super::RISR>;
-#[doc = "Reader of field `MSTIR`"]
-pub type MSTIR_R = crate::R<bool, bool>;
-#[doc = "Reader of field `RXFIR`"]
-pub type RXFIR_R = crate::R<bool, bool>;
-#[doc = "Reader of field `RXOIR`"]
-pub type RXOIR_R = crate::R<bool, bool>;
-#[doc = "Reader of field `RXUIR`"]
-pub type RXUIR_R = crate::R<bool, bool>;
-#[doc = "Reader of field `TXOIR`"]
-pub type TXOIR_R = crate::R<bool, bool>;
-#[doc = "Reader of field `TXEIR`"]
-pub type TXEIR_R = crate::R<bool, bool>;
+#[doc = "Register `RISR` reader"]
+pub struct R(crate::R<RISR_SPEC>);
+impl core::ops::Deref for R {
+    type Target = crate::R<RISR_SPEC>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+impl From<crate::R<RISR_SPEC>> for R {
+    #[inline(always)]
+    fn from(reader: crate::R<RISR_SPEC>) -> Self {
+        R(reader)
+    }
+}
+#[doc = "Field `MSTIR` reader - Multi-master contention raw interrupt status"]
+pub struct MSTIR_R(crate::FieldReader<bool, bool>);
+impl MSTIR_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        MSTIR_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for MSTIR_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `RXFIR` reader - Receive FIFO full raw interrupt status"]
+pub struct RXFIR_R(crate::FieldReader<bool, bool>);
+impl RXFIR_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        RXFIR_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for RXFIR_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `RXOIR` reader - Receive FIFO overflow raw interrupt status"]
+pub struct RXOIR_R(crate::FieldReader<bool, bool>);
+impl RXOIR_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        RXOIR_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for RXOIR_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `RXUIR` reader - Receive FIFO underflow raw interrupt status"]
+pub struct RXUIR_R(crate::FieldReader<bool, bool>);
+impl RXUIR_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        RXUIR_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for RXUIR_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `TXOIR` reader - Transmit FIFO overflow raw interrupt status"]
+pub struct TXOIR_R(crate::FieldReader<bool, bool>);
+impl TXOIR_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        TXOIR_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for TXOIR_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `TXEIR` reader - Transmit FIFO empty raw interrupt status"]
+pub struct TXEIR_R(crate::FieldReader<bool, bool>);
+impl TXEIR_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        TXEIR_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for TXEIR_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
 impl R {
     #[doc = "Bit 5 - Multi-master contention raw interrupt status"]
     #[inline(always)]
@@ -42,5 +127,25 @@ impl R {
     #[inline(always)]
     pub fn txeir(&self) -> TXEIR_R {
         TXEIR_R::new((self.bits & 0x01) != 0)
+    }
+}
+#[doc = "Raw interrupt status  
+
+This register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+
+For information about available fields see [risr](index.html) module"]
+pub struct RISR_SPEC;
+impl crate::RegisterSpec for RISR_SPEC {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [risr::R](R) reader structure"]
+impl crate::Readable for RISR_SPEC {
+    type Reader = R;
+}
+#[doc = "`reset()` method sets RISR to value 0"]
+impl crate::Resettable for RISR_SPEC {
+    #[inline(always)]
+    fn reset_value() -> Self::Ux {
+        0
     }
 }

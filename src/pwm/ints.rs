@@ -1,21 +1,130 @@
-#[doc = "Reader of register INTS"]
-pub type R = crate::R<u32, super::INTS>;
-#[doc = "Reader of field `CH7`"]
-pub type CH7_R = crate::R<bool, bool>;
-#[doc = "Reader of field `CH6`"]
-pub type CH6_R = crate::R<bool, bool>;
-#[doc = "Reader of field `CH5`"]
-pub type CH5_R = crate::R<bool, bool>;
-#[doc = "Reader of field `CH4`"]
-pub type CH4_R = crate::R<bool, bool>;
-#[doc = "Reader of field `CH3`"]
-pub type CH3_R = crate::R<bool, bool>;
-#[doc = "Reader of field `CH2`"]
-pub type CH2_R = crate::R<bool, bool>;
-#[doc = "Reader of field `CH1`"]
-pub type CH1_R = crate::R<bool, bool>;
-#[doc = "Reader of field `CH0`"]
-pub type CH0_R = crate::R<bool, bool>;
+#[doc = "Register `INTS` reader"]
+pub struct R(crate::R<INTS_SPEC>);
+impl core::ops::Deref for R {
+    type Target = crate::R<INTS_SPEC>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+impl From<crate::R<INTS_SPEC>> for R {
+    #[inline(always)]
+    fn from(reader: crate::R<INTS_SPEC>) -> Self {
+        R(reader)
+    }
+}
+#[doc = "Field `CH7` reader - "]
+pub struct CH7_R(crate::FieldReader<bool, bool>);
+impl CH7_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        CH7_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for CH7_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `CH6` reader - "]
+pub struct CH6_R(crate::FieldReader<bool, bool>);
+impl CH6_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        CH6_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for CH6_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `CH5` reader - "]
+pub struct CH5_R(crate::FieldReader<bool, bool>);
+impl CH5_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        CH5_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for CH5_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `CH4` reader - "]
+pub struct CH4_R(crate::FieldReader<bool, bool>);
+impl CH4_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        CH4_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for CH4_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `CH3` reader - "]
+pub struct CH3_R(crate::FieldReader<bool, bool>);
+impl CH3_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        CH3_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for CH3_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `CH2` reader - "]
+pub struct CH2_R(crate::FieldReader<bool, bool>);
+impl CH2_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        CH2_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for CH2_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `CH1` reader - "]
+pub struct CH1_R(crate::FieldReader<bool, bool>);
+impl CH1_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        CH1_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for CH1_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `CH0` reader - "]
+pub struct CH0_R(crate::FieldReader<bool, bool>);
+impl CH0_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        CH0_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for CH0_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
 impl R {
     #[doc = "Bit 7"]
     #[inline(always)]
@@ -56,5 +165,25 @@ impl R {
     #[inline(always)]
     pub fn ch0(&self) -> CH0_R {
         CH0_R::new((self.bits & 0x01) != 0)
+    }
+}
+#[doc = "Interrupt status after masking & forcing  
+
+This register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+
+For information about available fields see [ints](index.html) module"]
+pub struct INTS_SPEC;
+impl crate::RegisterSpec for INTS_SPEC {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [ints::R](R) reader structure"]
+impl crate::Readable for INTS_SPEC {
+    type Reader = R;
+}
+#[doc = "`reset()` method sets INTS to value 0"]
+impl crate::Resettable for INTS_SPEC {
+    #[inline(always)]
+    fn reset_value() -> Self::Ux {
+        0
     }
 }

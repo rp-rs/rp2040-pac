@@ -2,160 +2,67 @@
 #[repr(C)]
 pub struct RegisterBlock {
     #[doc = "0x00 - Cache control"]
-    pub ctrl: CTRL,
+    pub ctrl: crate::Reg<ctrl::CTRL_SPEC>,
     #[doc = "0x04 - Cache Flush control"]
-    pub flush: FLUSH,
+    pub flush: crate::Reg<flush::FLUSH_SPEC>,
     #[doc = "0x08 - Cache Status"]
-    pub stat: STAT,
+    pub stat: crate::Reg<stat::STAT_SPEC>,
     #[doc = "0x0c - Cache Hit counter  
  A 32 bit saturating counter that increments upon each cache hit,  
  i.e. when an XIP access is serviced directly from cached data.  
  Write any value to clear."]
-    pub ctr_hit: CTR_HIT,
+    pub ctr_hit: crate::Reg<ctr_hit::CTR_HIT_SPEC>,
     #[doc = "0x10 - Cache Access counter  
  A 32 bit saturating counter that increments upon each XIP access,  
  whether the cache is hit or not. This includes noncacheable accesses.  
  Write any value to clear."]
-    pub ctr_acc: CTR_ACC,
+    pub ctr_acc: crate::Reg<ctr_acc::CTR_ACC_SPEC>,
     #[doc = "0x14 - FIFO stream address"]
-    pub stream_addr: STREAM_ADDR,
+    pub stream_addr: crate::Reg<stream_addr::STREAM_ADDR_SPEC>,
     #[doc = "0x18 - FIFO stream control"]
-    pub stream_ctr: STREAM_CTR,
+    pub stream_ctr: crate::Reg<stream_ctr::STREAM_CTR_SPEC>,
     #[doc = "0x1c - FIFO stream data  
  Streamed data is buffered here, for retrieval by the system DMA.  
  This FIFO can also be accessed via the XIP_AUX slave, to avoid exposing  
  the DMA to bus stalls caused by other XIP traffic."]
-    pub stream_fifo: STREAM_FIFO,
+    pub stream_fifo: crate::Reg<stream_fifo::STREAM_FIFO_SPEC>,
 }
-#[doc = "Cache control  
-
-This register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
-
-For information about available fields see [ctrl](ctrl) module"]
-pub type CTRL = crate::Reg<u32, _CTRL>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CTRL;
-#[doc = "`read()` method returns [ctrl::R](ctrl::R) reader structure"]
-impl crate::Readable for CTRL {}
-#[doc = "`write(|w| ..)` method takes [ctrl::W](ctrl::W) writer structure"]
-impl crate::Writable for CTRL {}
+#[doc = "CTRL register accessor: an alias for `Reg<CTRL_SPEC>`"]
+pub type CTRL = crate::Reg<ctrl::CTRL_SPEC>;
 #[doc = "Cache control"]
 pub mod ctrl;
-#[doc = "Cache Flush control  
-
-This register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
-
-For information about available fields see [flush](flush) module"]
-pub type FLUSH = crate::Reg<u32, _FLUSH>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _FLUSH;
-#[doc = "`read()` method returns [flush::R](flush::R) reader structure"]
-impl crate::Readable for FLUSH {}
-#[doc = "`write(|w| ..)` method takes [flush::W](flush::W) writer structure"]
-impl crate::Writable for FLUSH {}
+#[doc = "FLUSH register accessor: an alias for `Reg<FLUSH_SPEC>`"]
+pub type FLUSH = crate::Reg<flush::FLUSH_SPEC>;
 #[doc = "Cache Flush control"]
 pub mod flush;
-#[doc = "Cache Status  
-
-This register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
-
-For information about available fields see [stat](stat) module"]
-pub type STAT = crate::Reg<u32, _STAT>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _STAT;
-#[doc = "`read()` method returns [stat::R](stat::R) reader structure"]
-impl crate::Readable for STAT {}
+#[doc = "STAT register accessor: an alias for `Reg<STAT_SPEC>`"]
+pub type STAT = crate::Reg<stat::STAT_SPEC>;
 #[doc = "Cache Status"]
 pub mod stat;
-#[doc = "Cache Hit counter  
- A 32 bit saturating counter that increments upon each cache hit,  
- i.e. when an XIP access is serviced directly from cached data.  
- Write any value to clear.  
-
-This register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
-
-For information about available fields see [ctr_hit](ctr_hit) module"]
-pub type CTR_HIT = crate::Reg<u32, _CTR_HIT>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CTR_HIT;
-#[doc = "`read()` method returns [ctr_hit::R](ctr_hit::R) reader structure"]
-impl crate::Readable for CTR_HIT {}
-#[doc = "`write(|w| ..)` method takes [ctr_hit::W](ctr_hit::W) writer structure"]
-impl crate::Writable for CTR_HIT {}
+#[doc = "CTR_HIT register accessor: an alias for `Reg<CTR_HIT_SPEC>`"]
+pub type CTR_HIT = crate::Reg<ctr_hit::CTR_HIT_SPEC>;
 #[doc = "Cache Hit counter  
  A 32 bit saturating counter that increments upon each cache hit,  
  i.e. when an XIP access is serviced directly from cached data.  
  Write any value to clear."]
 pub mod ctr_hit;
-#[doc = "Cache Access counter  
- A 32 bit saturating counter that increments upon each XIP access,  
- whether the cache is hit or not. This includes noncacheable accesses.  
- Write any value to clear.  
-
-This register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
-
-For information about available fields see [ctr_acc](ctr_acc) module"]
-pub type CTR_ACC = crate::Reg<u32, _CTR_ACC>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CTR_ACC;
-#[doc = "`read()` method returns [ctr_acc::R](ctr_acc::R) reader structure"]
-impl crate::Readable for CTR_ACC {}
-#[doc = "`write(|w| ..)` method takes [ctr_acc::W](ctr_acc::W) writer structure"]
-impl crate::Writable for CTR_ACC {}
+#[doc = "CTR_ACC register accessor: an alias for `Reg<CTR_ACC_SPEC>`"]
+pub type CTR_ACC = crate::Reg<ctr_acc::CTR_ACC_SPEC>;
 #[doc = "Cache Access counter  
  A 32 bit saturating counter that increments upon each XIP access,  
  whether the cache is hit or not. This includes noncacheable accesses.  
  Write any value to clear."]
 pub mod ctr_acc;
-#[doc = "FIFO stream address  
-
-This register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
-
-For information about available fields see [stream_addr](stream_addr) module"]
-pub type STREAM_ADDR = crate::Reg<u32, _STREAM_ADDR>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _STREAM_ADDR;
-#[doc = "`read()` method returns [stream_addr::R](stream_addr::R) reader structure"]
-impl crate::Readable for STREAM_ADDR {}
-#[doc = "`write(|w| ..)` method takes [stream_addr::W](stream_addr::W) writer structure"]
-impl crate::Writable for STREAM_ADDR {}
+#[doc = "STREAM_ADDR register accessor: an alias for `Reg<STREAM_ADDR_SPEC>`"]
+pub type STREAM_ADDR = crate::Reg<stream_addr::STREAM_ADDR_SPEC>;
 #[doc = "FIFO stream address"]
 pub mod stream_addr;
-#[doc = "FIFO stream control  
-
-This register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
-
-For information about available fields see [stream_ctr](stream_ctr) module"]
-pub type STREAM_CTR = crate::Reg<u32, _STREAM_CTR>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _STREAM_CTR;
-#[doc = "`read()` method returns [stream_ctr::R](stream_ctr::R) reader structure"]
-impl crate::Readable for STREAM_CTR {}
-#[doc = "`write(|w| ..)` method takes [stream_ctr::W](stream_ctr::W) writer structure"]
-impl crate::Writable for STREAM_CTR {}
+#[doc = "STREAM_CTR register accessor: an alias for `Reg<STREAM_CTR_SPEC>`"]
+pub type STREAM_CTR = crate::Reg<stream_ctr::STREAM_CTR_SPEC>;
 #[doc = "FIFO stream control"]
 pub mod stream_ctr;
-#[doc = "FIFO stream data  
- Streamed data is buffered here, for retrieval by the system DMA.  
- This FIFO can also be accessed via the XIP_AUX slave, to avoid exposing  
- the DMA to bus stalls caused by other XIP traffic.  
-
-This register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
-
-For information about available fields see [stream_fifo](stream_fifo) module"]
-pub type STREAM_FIFO = crate::Reg<u32, _STREAM_FIFO>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _STREAM_FIFO;
-#[doc = "`read()` method returns [stream_fifo::R](stream_fifo::R) reader structure"]
-impl crate::Readable for STREAM_FIFO {}
+#[doc = "STREAM_FIFO register accessor: an alias for `Reg<STREAM_FIFO_SPEC>`"]
+pub type STREAM_FIFO = crate::Reg<stream_fifo::STREAM_FIFO_SPEC>;
 #[doc = "FIFO stream data  
  Streamed data is buffered here, for retrieval by the system DMA.  
  This FIFO can also be accessed via the XIP_AUX slave, to avoid exposing  

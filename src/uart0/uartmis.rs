@@ -1,27 +1,172 @@
-#[doc = "Reader of register UARTMIS"]
-pub type R = crate::R<u32, super::UARTMIS>;
-#[doc = "Reader of field `OEMIS`"]
-pub type OEMIS_R = crate::R<bool, bool>;
-#[doc = "Reader of field `BEMIS`"]
-pub type BEMIS_R = crate::R<bool, bool>;
-#[doc = "Reader of field `PEMIS`"]
-pub type PEMIS_R = crate::R<bool, bool>;
-#[doc = "Reader of field `FEMIS`"]
-pub type FEMIS_R = crate::R<bool, bool>;
-#[doc = "Reader of field `RTMIS`"]
-pub type RTMIS_R = crate::R<bool, bool>;
-#[doc = "Reader of field `TXMIS`"]
-pub type TXMIS_R = crate::R<bool, bool>;
-#[doc = "Reader of field `RXMIS`"]
-pub type RXMIS_R = crate::R<bool, bool>;
-#[doc = "Reader of field `DSRMMIS`"]
-pub type DSRMMIS_R = crate::R<bool, bool>;
-#[doc = "Reader of field `DCDMMIS`"]
-pub type DCDMMIS_R = crate::R<bool, bool>;
-#[doc = "Reader of field `CTSMMIS`"]
-pub type CTSMMIS_R = crate::R<bool, bool>;
-#[doc = "Reader of field `RIMMIS`"]
-pub type RIMMIS_R = crate::R<bool, bool>;
+#[doc = "Register `UARTMIS` reader"]
+pub struct R(crate::R<UARTMIS_SPEC>);
+impl core::ops::Deref for R {
+    type Target = crate::R<UARTMIS_SPEC>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+impl From<crate::R<UARTMIS_SPEC>> for R {
+    #[inline(always)]
+    fn from(reader: crate::R<UARTMIS_SPEC>) -> Self {
+        R(reader)
+    }
+}
+#[doc = "Field `OEMIS` reader - Overrun error masked interrupt status. Returns the masked interrupt state of the UARTOEINTR interrupt."]
+pub struct OEMIS_R(crate::FieldReader<bool, bool>);
+impl OEMIS_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        OEMIS_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for OEMIS_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `BEMIS` reader - Break error masked interrupt status. Returns the masked interrupt state of the UARTBEINTR interrupt."]
+pub struct BEMIS_R(crate::FieldReader<bool, bool>);
+impl BEMIS_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        BEMIS_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for BEMIS_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `PEMIS` reader - Parity error masked interrupt status. Returns the masked interrupt state of the UARTPEINTR interrupt."]
+pub struct PEMIS_R(crate::FieldReader<bool, bool>);
+impl PEMIS_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        PEMIS_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for PEMIS_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `FEMIS` reader - Framing error masked interrupt status. Returns the masked interrupt state of the UARTFEINTR interrupt."]
+pub struct FEMIS_R(crate::FieldReader<bool, bool>);
+impl FEMIS_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        FEMIS_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for FEMIS_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `RTMIS` reader - Receive timeout masked interrupt status. Returns the masked interrupt state of the UARTRTINTR interrupt."]
+pub struct RTMIS_R(crate::FieldReader<bool, bool>);
+impl RTMIS_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        RTMIS_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for RTMIS_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `TXMIS` reader - Transmit masked interrupt status. Returns the masked interrupt state of the UARTTXINTR interrupt."]
+pub struct TXMIS_R(crate::FieldReader<bool, bool>);
+impl TXMIS_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        TXMIS_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for TXMIS_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `RXMIS` reader - Receive masked interrupt status. Returns the masked interrupt state of the UARTRXINTR interrupt."]
+pub struct RXMIS_R(crate::FieldReader<bool, bool>);
+impl RXMIS_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        RXMIS_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for RXMIS_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `DSRMMIS` reader - nUARTDSR modem masked interrupt status. Returns the masked interrupt state of the UARTDSRINTR interrupt."]
+pub struct DSRMMIS_R(crate::FieldReader<bool, bool>);
+impl DSRMMIS_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        DSRMMIS_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for DSRMMIS_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `DCDMMIS` reader - nUARTDCD modem masked interrupt status. Returns the masked interrupt state of the UARTDCDINTR interrupt."]
+pub struct DCDMMIS_R(crate::FieldReader<bool, bool>);
+impl DCDMMIS_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        DCDMMIS_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for DCDMMIS_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `CTSMMIS` reader - nUARTCTS modem masked interrupt status. Returns the masked interrupt state of the UARTCTSINTR interrupt."]
+pub struct CTSMMIS_R(crate::FieldReader<bool, bool>);
+impl CTSMMIS_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        CTSMMIS_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for CTSMMIS_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `RIMMIS` reader - nUARTRI modem masked interrupt status. Returns the masked interrupt state of the UARTRIINTR interrupt."]
+pub struct RIMMIS_R(crate::FieldReader<bool, bool>);
+impl RIMMIS_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        RIMMIS_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for RIMMIS_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
 impl R {
     #[doc = "Bit 10 - Overrun error masked interrupt status. Returns the masked interrupt state of the UARTOEINTR interrupt."]
     #[inline(always)]
@@ -77,5 +222,25 @@ impl R {
     #[inline(always)]
     pub fn rimmis(&self) -> RIMMIS_R {
         RIMMIS_R::new((self.bits & 0x01) != 0)
+    }
+}
+#[doc = "Masked Interrupt Status Register, UARTMIS  
+
+This register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+
+For information about available fields see [uartmis](index.html) module"]
+pub struct UARTMIS_SPEC;
+impl crate::RegisterSpec for UARTMIS_SPEC {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [uartmis::R](R) reader structure"]
+impl crate::Readable for UARTMIS_SPEC {
+    type Reader = R;
+}
+#[doc = "`reset()` method sets UARTMIS to value 0"]
+impl crate::Resettable for UARTMIS_SPEC {
+    #[inline(always)]
+    fn reset_value() -> Self::Ux {
+        0
     }
 }

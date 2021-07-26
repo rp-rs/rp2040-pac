@@ -1,21 +1,130 @@
-#[doc = "Reader of register FLEVEL"]
-pub type R = crate::R<u32, super::FLEVEL>;
-#[doc = "Reader of field `RX3`"]
-pub type RX3_R = crate::R<u8, u8>;
-#[doc = "Reader of field `TX3`"]
-pub type TX3_R = crate::R<u8, u8>;
-#[doc = "Reader of field `RX2`"]
-pub type RX2_R = crate::R<u8, u8>;
-#[doc = "Reader of field `TX2`"]
-pub type TX2_R = crate::R<u8, u8>;
-#[doc = "Reader of field `RX1`"]
-pub type RX1_R = crate::R<u8, u8>;
-#[doc = "Reader of field `TX1`"]
-pub type TX1_R = crate::R<u8, u8>;
-#[doc = "Reader of field `RX0`"]
-pub type RX0_R = crate::R<u8, u8>;
-#[doc = "Reader of field `TX0`"]
-pub type TX0_R = crate::R<u8, u8>;
+#[doc = "Register `FLEVEL` reader"]
+pub struct R(crate::R<FLEVEL_SPEC>);
+impl core::ops::Deref for R {
+    type Target = crate::R<FLEVEL_SPEC>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+impl From<crate::R<FLEVEL_SPEC>> for R {
+    #[inline(always)]
+    fn from(reader: crate::R<FLEVEL_SPEC>) -> Self {
+        R(reader)
+    }
+}
+#[doc = "Field `RX3` reader - "]
+pub struct RX3_R(crate::FieldReader<u8, u8>);
+impl RX3_R {
+    pub(crate) fn new(bits: u8) -> Self {
+        RX3_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for RX3_R {
+    type Target = crate::FieldReader<u8, u8>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `TX3` reader - "]
+pub struct TX3_R(crate::FieldReader<u8, u8>);
+impl TX3_R {
+    pub(crate) fn new(bits: u8) -> Self {
+        TX3_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for TX3_R {
+    type Target = crate::FieldReader<u8, u8>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `RX2` reader - "]
+pub struct RX2_R(crate::FieldReader<u8, u8>);
+impl RX2_R {
+    pub(crate) fn new(bits: u8) -> Self {
+        RX2_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for RX2_R {
+    type Target = crate::FieldReader<u8, u8>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `TX2` reader - "]
+pub struct TX2_R(crate::FieldReader<u8, u8>);
+impl TX2_R {
+    pub(crate) fn new(bits: u8) -> Self {
+        TX2_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for TX2_R {
+    type Target = crate::FieldReader<u8, u8>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `RX1` reader - "]
+pub struct RX1_R(crate::FieldReader<u8, u8>);
+impl RX1_R {
+    pub(crate) fn new(bits: u8) -> Self {
+        RX1_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for RX1_R {
+    type Target = crate::FieldReader<u8, u8>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `TX1` reader - "]
+pub struct TX1_R(crate::FieldReader<u8, u8>);
+impl TX1_R {
+    pub(crate) fn new(bits: u8) -> Self {
+        TX1_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for TX1_R {
+    type Target = crate::FieldReader<u8, u8>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `RX0` reader - "]
+pub struct RX0_R(crate::FieldReader<u8, u8>);
+impl RX0_R {
+    pub(crate) fn new(bits: u8) -> Self {
+        RX0_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for RX0_R {
+    type Target = crate::FieldReader<u8, u8>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `TX0` reader - "]
+pub struct TX0_R(crate::FieldReader<u8, u8>);
+impl TX0_R {
+    pub(crate) fn new(bits: u8) -> Self {
+        TX0_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for TX0_R {
+    type Target = crate::FieldReader<u8, u8>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
 impl R {
     #[doc = "Bits 28:31"]
     #[inline(always)]
@@ -56,5 +165,25 @@ impl R {
     #[inline(always)]
     pub fn tx0(&self) -> TX0_R {
         TX0_R::new((self.bits & 0x0f) as u8)
+    }
+}
+#[doc = "FIFO levels  
+
+This register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+
+For information about available fields see [flevel](index.html) module"]
+pub struct FLEVEL_SPEC;
+impl crate::RegisterSpec for FLEVEL_SPEC {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [flevel::R](R) reader structure"]
+impl crate::Readable for FLEVEL_SPEC {
+    type Reader = R;
+}
+#[doc = "`reset()` method sets FLEVEL to value 0"]
+impl crate::Resettable for FLEVEL_SPEC {
+    #[inline(always)]
+    fn reset_value() -> Self::Ux {
+        0
     }
 }

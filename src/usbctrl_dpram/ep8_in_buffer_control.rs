@@ -1,18 +1,54 @@
-#[doc = "Reader of register EP8_IN_BUFFER_CONTROL"]
-pub type R = crate::R<u32, super::EP8_IN_BUFFER_CONTROL>;
-#[doc = "Writer for register EP8_IN_BUFFER_CONTROL"]
-pub type W = crate::W<u32, super::EP8_IN_BUFFER_CONTROL>;
-#[doc = "Register EP8_IN_BUFFER_CONTROL `reset()`'s with value 0"]
-impl crate::ResetValue for super::EP8_IN_BUFFER_CONTROL {
-    type Type = u32;
+#[doc = "Register `EP8_IN_BUFFER_CONTROL` reader"]
+pub struct R(crate::R<EP8_IN_BUFFER_CONTROL_SPEC>);
+impl core::ops::Deref for R {
+    type Target = crate::R<EP8_IN_BUFFER_CONTROL_SPEC>;
     #[inline(always)]
-    fn reset_value() -> Self::Type {
-        0
+    fn deref(&self) -> &Self::Target {
+        &self.0
     }
 }
-#[doc = "Reader of field `FULL_1`"]
-pub type FULL_1_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `FULL_1`"]
+impl From<crate::R<EP8_IN_BUFFER_CONTROL_SPEC>> for R {
+    #[inline(always)]
+    fn from(reader: crate::R<EP8_IN_BUFFER_CONTROL_SPEC>) -> Self {
+        R(reader)
+    }
+}
+#[doc = "Register `EP8_IN_BUFFER_CONTROL` writer"]
+pub struct W(crate::W<EP8_IN_BUFFER_CONTROL_SPEC>);
+impl core::ops::Deref for W {
+    type Target = crate::W<EP8_IN_BUFFER_CONTROL_SPEC>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+impl core::ops::DerefMut for W {
+    #[inline(always)]
+    fn deref_mut(&mut self) -> &mut Self::Target {
+        &mut self.0
+    }
+}
+impl From<crate::W<EP8_IN_BUFFER_CONTROL_SPEC>> for W {
+    #[inline(always)]
+    fn from(writer: crate::W<EP8_IN_BUFFER_CONTROL_SPEC>) -> Self {
+        W(writer)
+    }
+}
+#[doc = "Field `FULL_1` reader - Buffer 1 is full. For an IN transfer (TX to the host) the bit is set to indicate the data is valid. For an OUT transfer (RX from the host) this bit should be left as a 0. The host will set it when it has filled the buffer with data."]
+pub struct FULL_1_R(crate::FieldReader<bool, bool>);
+impl FULL_1_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        FULL_1_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for FULL_1_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `FULL_1` writer - Buffer 1 is full. For an IN transfer (TX to the host) the bit is set to indicate the data is valid. For an OUT transfer (RX from the host) this bit should be left as a 0. The host will set it when it has filled the buffer with data."]
 pub struct FULL_1_W<'a> {
     w: &'a mut W,
 }
@@ -30,13 +66,25 @@ impl<'a> FULL_1_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 31)) | (((value as u32) & 0x01) << 31);
+        self.w.bits = (self.w.bits & !(0x01 << 31)) | ((value as u32 & 0x01) << 31);
         self.w
     }
 }
-#[doc = "Reader of field `LAST_1`"]
-pub type LAST_1_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `LAST_1`"]
+#[doc = "Field `LAST_1` reader - Buffer 1 is the last buffer of the transfer."]
+pub struct LAST_1_R(crate::FieldReader<bool, bool>);
+impl LAST_1_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        LAST_1_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for LAST_1_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `LAST_1` writer - Buffer 1 is the last buffer of the transfer."]
 pub struct LAST_1_W<'a> {
     w: &'a mut W,
 }
@@ -54,13 +102,25 @@ impl<'a> LAST_1_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 30)) | (((value as u32) & 0x01) << 30);
+        self.w.bits = (self.w.bits & !(0x01 << 30)) | ((value as u32 & 0x01) << 30);
         self.w
     }
 }
-#[doc = "Reader of field `PID_1`"]
-pub type PID_1_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `PID_1`"]
+#[doc = "Field `PID_1` reader - The data pid of buffer 1."]
+pub struct PID_1_R(crate::FieldReader<bool, bool>);
+impl PID_1_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        PID_1_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for PID_1_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `PID_1` writer - The data pid of buffer 1."]
 pub struct PID_1_W<'a> {
     w: &'a mut W,
 }
@@ -78,7 +138,7 @@ impl<'a> PID_1_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 29)) | (((value as u32) & 0x01) << 29);
+        self.w.bits = (self.w.bits & !(0x01 << 29)) | ((value as u32 & 0x01) << 29);
         self.w
     }
 }
@@ -104,9 +164,13 @@ impl From<DOUBLE_BUFFER_ISO_OFFSET_A> for u8 {
         variant as _
     }
 }
-#[doc = "Reader of field `DOUBLE_BUFFER_ISO_OFFSET`"]
-pub type DOUBLE_BUFFER_ISO_OFFSET_R = crate::R<u8, DOUBLE_BUFFER_ISO_OFFSET_A>;
+#[doc = "Field `DOUBLE_BUFFER_ISO_OFFSET` reader - The number of bytes buffer 1 is offset from buffer 0 in Isochronous mode. Only valid in double buffered mode for an Isochronous endpoint.  
+ For a non Isochronous endpoint the offset is always 64 bytes."]
+pub struct DOUBLE_BUFFER_ISO_OFFSET_R(crate::FieldReader<u8, DOUBLE_BUFFER_ISO_OFFSET_A>);
 impl DOUBLE_BUFFER_ISO_OFFSET_R {
+    pub(crate) fn new(bits: u8) -> Self {
+        DOUBLE_BUFFER_ISO_OFFSET_R(crate::FieldReader::new(bits))
+    }
     #[doc = r"Get enumerated values variant"]
     #[inline(always)]
     pub fn variant(&self) -> DOUBLE_BUFFER_ISO_OFFSET_A {
@@ -121,25 +185,33 @@ impl DOUBLE_BUFFER_ISO_OFFSET_R {
     #[doc = "Checks if the value of the field is `_128`"]
     #[inline(always)]
     pub fn is_128(&self) -> bool {
-        *self == DOUBLE_BUFFER_ISO_OFFSET_A::_128
+        **self == DOUBLE_BUFFER_ISO_OFFSET_A::_128
     }
     #[doc = "Checks if the value of the field is `_256`"]
     #[inline(always)]
     pub fn is_256(&self) -> bool {
-        *self == DOUBLE_BUFFER_ISO_OFFSET_A::_256
+        **self == DOUBLE_BUFFER_ISO_OFFSET_A::_256
     }
     #[doc = "Checks if the value of the field is `_512`"]
     #[inline(always)]
     pub fn is_512(&self) -> bool {
-        *self == DOUBLE_BUFFER_ISO_OFFSET_A::_512
+        **self == DOUBLE_BUFFER_ISO_OFFSET_A::_512
     }
     #[doc = "Checks if the value of the field is `_1024`"]
     #[inline(always)]
     pub fn is_1024(&self) -> bool {
-        *self == DOUBLE_BUFFER_ISO_OFFSET_A::_1024
+        **self == DOUBLE_BUFFER_ISO_OFFSET_A::_1024
     }
 }
-#[doc = "Write proxy for field `DOUBLE_BUFFER_ISO_OFFSET`"]
+impl core::ops::Deref for DOUBLE_BUFFER_ISO_OFFSET_R {
+    type Target = crate::FieldReader<u8, DOUBLE_BUFFER_ISO_OFFSET_A>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `DOUBLE_BUFFER_ISO_OFFSET` writer - The number of bytes buffer 1 is offset from buffer 0 in Isochronous mode. Only valid in double buffered mode for an Isochronous endpoint.  
+ For a non Isochronous endpoint the offset is always 64 bytes."]
 pub struct DOUBLE_BUFFER_ISO_OFFSET_W<'a> {
     w: &'a mut W,
 }
@@ -147,9 +219,7 @@ impl<'a> DOUBLE_BUFFER_ISO_OFFSET_W<'a> {
     #[doc = r"Writes `variant` to the field"]
     #[inline(always)]
     pub fn variant(self, variant: DOUBLE_BUFFER_ISO_OFFSET_A) -> &'a mut W {
-        {
-            self.bits(variant.into())
-        }
+        self.bits(variant.into())
     }
     #[doc = "`0`"]
     #[inline(always)]
@@ -174,13 +244,25 @@ impl<'a> DOUBLE_BUFFER_ISO_OFFSET_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 27)) | (((value as u32) & 0x03) << 27);
+        self.w.bits = (self.w.bits & !(0x03 << 27)) | ((value as u32 & 0x03) << 27);
         self.w
     }
 }
-#[doc = "Reader of field `AVAILABLE_1`"]
-pub type AVAILABLE_1_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `AVAILABLE_1`"]
+#[doc = "Field `AVAILABLE_1` reader - Buffer 1 is available. This bit is set to indicate the buffer can be used by the controller. The controller clears the available bit when writing the status back."]
+pub struct AVAILABLE_1_R(crate::FieldReader<bool, bool>);
+impl AVAILABLE_1_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        AVAILABLE_1_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for AVAILABLE_1_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `AVAILABLE_1` writer - Buffer 1 is available. This bit is set to indicate the buffer can be used by the controller. The controller clears the available bit when writing the status back."]
 pub struct AVAILABLE_1_W<'a> {
     w: &'a mut W,
 }
@@ -198,13 +280,25 @@ impl<'a> AVAILABLE_1_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 26)) | (((value as u32) & 0x01) << 26);
+        self.w.bits = (self.w.bits & !(0x01 << 26)) | ((value as u32 & 0x01) << 26);
         self.w
     }
 }
-#[doc = "Reader of field `LENGTH_1`"]
-pub type LENGTH_1_R = crate::R<u16, u16>;
-#[doc = "Write proxy for field `LENGTH_1`"]
+#[doc = "Field `LENGTH_1` reader - The length of the data in buffer 1."]
+pub struct LENGTH_1_R(crate::FieldReader<u16, u16>);
+impl LENGTH_1_R {
+    pub(crate) fn new(bits: u16) -> Self {
+        LENGTH_1_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for LENGTH_1_R {
+    type Target = crate::FieldReader<u16, u16>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `LENGTH_1` writer - The length of the data in buffer 1."]
 pub struct LENGTH_1_W<'a> {
     w: &'a mut W,
 }
@@ -212,13 +306,25 @@ impl<'a> LENGTH_1_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u16) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03ff << 16)) | (((value as u32) & 0x03ff) << 16);
+        self.w.bits = (self.w.bits & !(0x03ff << 16)) | ((value as u32 & 0x03ff) << 16);
         self.w
     }
 }
-#[doc = "Reader of field `FULL_0`"]
-pub type FULL_0_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `FULL_0`"]
+#[doc = "Field `FULL_0` reader - Buffer 0 is full. For an IN transfer (TX to the host) the bit is set to indicate the data is valid. For an OUT transfer (RX from the host) this bit should be left as a 0. The host will set it when it has filled the buffer with data."]
+pub struct FULL_0_R(crate::FieldReader<bool, bool>);
+impl FULL_0_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        FULL_0_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for FULL_0_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `FULL_0` writer - Buffer 0 is full. For an IN transfer (TX to the host) the bit is set to indicate the data is valid. For an OUT transfer (RX from the host) this bit should be left as a 0. The host will set it when it has filled the buffer with data."]
 pub struct FULL_0_W<'a> {
     w: &'a mut W,
 }
@@ -236,13 +342,25 @@ impl<'a> FULL_0_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 15)) | (((value as u32) & 0x01) << 15);
+        self.w.bits = (self.w.bits & !(0x01 << 15)) | ((value as u32 & 0x01) << 15);
         self.w
     }
 }
-#[doc = "Reader of field `LAST_0`"]
-pub type LAST_0_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `LAST_0`"]
+#[doc = "Field `LAST_0` reader - Buffer 0 is the last buffer of the transfer."]
+pub struct LAST_0_R(crate::FieldReader<bool, bool>);
+impl LAST_0_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        LAST_0_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for LAST_0_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `LAST_0` writer - Buffer 0 is the last buffer of the transfer."]
 pub struct LAST_0_W<'a> {
     w: &'a mut W,
 }
@@ -260,13 +378,25 @@ impl<'a> LAST_0_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 14)) | (((value as u32) & 0x01) << 14);
+        self.w.bits = (self.w.bits & !(0x01 << 14)) | ((value as u32 & 0x01) << 14);
         self.w
     }
 }
-#[doc = "Reader of field `PID_0`"]
-pub type PID_0_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `PID_0`"]
+#[doc = "Field `PID_0` reader - The data pid of buffer 0."]
+pub struct PID_0_R(crate::FieldReader<bool, bool>);
+impl PID_0_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        PID_0_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for PID_0_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `PID_0` writer - The data pid of buffer 0."]
 pub struct PID_0_W<'a> {
     w: &'a mut W,
 }
@@ -284,13 +414,25 @@ impl<'a> PID_0_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 13)) | (((value as u32) & 0x01) << 13);
+        self.w.bits = (self.w.bits & !(0x01 << 13)) | ((value as u32 & 0x01) << 13);
         self.w
     }
 }
-#[doc = "Reader of field `RESET`"]
-pub type RESET_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `RESET`"]
+#[doc = "Field `RESET` reader - Reset the buffer selector to buffer 0."]
+pub struct RESET_R(crate::FieldReader<bool, bool>);
+impl RESET_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        RESET_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for RESET_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `RESET` writer - Reset the buffer selector to buffer 0."]
 pub struct RESET_W<'a> {
     w: &'a mut W,
 }
@@ -308,13 +450,25 @@ impl<'a> RESET_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 12)) | (((value as u32) & 0x01) << 12);
+        self.w.bits = (self.w.bits & !(0x01 << 12)) | ((value as u32 & 0x01) << 12);
         self.w
     }
 }
-#[doc = "Reader of field `STALL`"]
-pub type STALL_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `STALL`"]
+#[doc = "Field `STALL` reader - Reply with a stall (valid for both buffers)."]
+pub struct STALL_R(crate::FieldReader<bool, bool>);
+impl STALL_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        STALL_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for STALL_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `STALL` writer - Reply with a stall (valid for both buffers)."]
 pub struct STALL_W<'a> {
     w: &'a mut W,
 }
@@ -332,13 +486,25 @@ impl<'a> STALL_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 11)) | (((value as u32) & 0x01) << 11);
+        self.w.bits = (self.w.bits & !(0x01 << 11)) | ((value as u32 & 0x01) << 11);
         self.w
     }
 }
-#[doc = "Reader of field `AVAILABLE_0`"]
-pub type AVAILABLE_0_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `AVAILABLE_0`"]
+#[doc = "Field `AVAILABLE_0` reader - Buffer 0 is available. This bit is set to indicate the buffer can be used by the controller. The controller clears the available bit when writing the status back."]
+pub struct AVAILABLE_0_R(crate::FieldReader<bool, bool>);
+impl AVAILABLE_0_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        AVAILABLE_0_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for AVAILABLE_0_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `AVAILABLE_0` writer - Buffer 0 is available. This bit is set to indicate the buffer can be used by the controller. The controller clears the available bit when writing the status back."]
 pub struct AVAILABLE_0_W<'a> {
     w: &'a mut W,
 }
@@ -356,13 +522,25 @@ impl<'a> AVAILABLE_0_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 10)) | (((value as u32) & 0x01) << 10);
+        self.w.bits = (self.w.bits & !(0x01 << 10)) | ((value as u32 & 0x01) << 10);
         self.w
     }
 }
-#[doc = "Reader of field `LENGTH_0`"]
-pub type LENGTH_0_R = crate::R<u16, u16>;
-#[doc = "Write proxy for field `LENGTH_0`"]
+#[doc = "Field `LENGTH_0` reader - The length of the data in buffer 1."]
+pub struct LENGTH_0_R(crate::FieldReader<u16, u16>);
+impl LENGTH_0_R {
+    pub(crate) fn new(bits: u16) -> Self {
+        LENGTH_0_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for LENGTH_0_R {
+    type Target = crate::FieldReader<u16, u16>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `LENGTH_0` writer - The length of the data in buffer 1."]
 pub struct LENGTH_0_W<'a> {
     w: &'a mut W,
 }
@@ -370,7 +548,7 @@ impl<'a> LENGTH_0_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u16) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x03ff) | ((value as u32) & 0x03ff);
+        self.w.bits = (self.w.bits & !0x03ff) | (value as u32 & 0x03ff);
         self.w
     }
 }
@@ -390,8 +568,7 @@ impl R {
     pub fn pid_1(&self) -> PID_1_R {
         PID_1_R::new(((self.bits >> 29) & 0x01) != 0)
     }
-    #[doc = "Bits 27:28 - The number of bytes buffer 1 is offset from buffer 0 in Isochronous mode. Only valid in double buffered mode for an Isochronous endpoint.  
- For a non Isochronous endpoint the offset is always 64 bytes."]
+    #[doc = "Bits 27:28 - The number of bytes buffer 1 is offset from buffer 0 in Isochronous mode. Only valid in double buffered mode for an Isochronous endpoint. For a non Isochronous endpoint the offset is always 64 bytes."]
     #[inline(always)]
     pub fn double_buffer_iso_offset(&self) -> DOUBLE_BUFFER_ISO_OFFSET_R {
         DOUBLE_BUFFER_ISO_OFFSET_R::new(((self.bits >> 27) & 0x03) as u8)
@@ -458,8 +635,7 @@ impl W {
     pub fn pid_1(&mut self) -> PID_1_W {
         PID_1_W { w: self }
     }
-    #[doc = "Bits 27:28 - The number of bytes buffer 1 is offset from buffer 0 in Isochronous mode. Only valid in double buffered mode for an Isochronous endpoint.  
- For a non Isochronous endpoint the offset is always 64 bytes."]
+    #[doc = "Bits 27:28 - The number of bytes buffer 1 is offset from buffer 0 in Isochronous mode. Only valid in double buffered mode for an Isochronous endpoint. For a non Isochronous endpoint the offset is always 64 bytes."]
     #[inline(always)]
     pub fn double_buffer_iso_offset(&mut self) -> DOUBLE_BUFFER_ISO_OFFSET_W {
         DOUBLE_BUFFER_ISO_OFFSET_W { w: self }
@@ -508,5 +684,36 @@ impl W {
     #[inline(always)]
     pub fn length_0(&mut self) -> LENGTH_0_W {
         LENGTH_0_W { w: self }
+    }
+    #[doc = "Writes raw bits to the register."]
+    #[inline(always)]
+    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
+        self.0.bits(bits);
+        self
+    }
+}
+#[doc = "Buffer control for both buffers of an endpoint. Fields ending in a _1 are for buffer 1.  
+ Fields ending in a _0 are for buffer 0. Buffer 1 controls are only valid if the endpoint is in double buffered mode.  
+
+This register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+
+For information about available fields see [ep8_in_buffer_control](index.html) module"]
+pub struct EP8_IN_BUFFER_CONTROL_SPEC;
+impl crate::RegisterSpec for EP8_IN_BUFFER_CONTROL_SPEC {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [ep8_in_buffer_control::R](R) reader structure"]
+impl crate::Readable for EP8_IN_BUFFER_CONTROL_SPEC {
+    type Reader = R;
+}
+#[doc = "`write(|w| ..)` method takes [ep8_in_buffer_control::W](W) writer structure"]
+impl crate::Writable for EP8_IN_BUFFER_CONTROL_SPEC {
+    type Writer = W;
+}
+#[doc = "`reset()` method sets EP8_IN_BUFFER_CONTROL to value 0"]
+impl crate::Resettable for EP8_IN_BUFFER_CONTROL_SPEC {
+    #[inline(always)]
+    fn reset_value() -> Self::Ux {
+        0
     }
 }

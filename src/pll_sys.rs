@@ -6,87 +6,36 @@ pub struct RegisterBlock {
  Reference clock frequency min=5MHz, max=800MHz  
  Feedback divider min=16, max=320  
  VCO frequency min=400MHz, max=1600MHz"]
-    pub cs: CS,
+    pub cs: crate::Reg<cs::CS_SPEC>,
     #[doc = "0x04 - Controls the PLL power modes."]
-    pub pwr: PWR,
+    pub pwr: crate::Reg<pwr::PWR_SPEC>,
     #[doc = "0x08 - Feedback divisor  
  (note: this PLL does not support fractional division)"]
-    pub fbdiv_int: FBDIV_INT,
+    pub fbdiv_int: crate::Reg<fbdiv_int::FBDIV_INT_SPEC>,
     #[doc = "0x0c - Controls the PLL post dividers for the primary output  
  (note: this PLL does not have a secondary output)  
  the primary output is driven from VCO divided by postdiv1*postdiv2"]
-    pub prim: PRIM,
+    pub prim: crate::Reg<prim::PRIM_SPEC>,
 }
-#[doc = "Control and Status  
- GENERAL CONSTRAINTS:  
- Reference clock frequency min=5MHz, max=800MHz  
- Feedback divider min=16, max=320  
- VCO frequency min=400MHz, max=1600MHz  
-
-This register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
-
-For information about available fields see [cs](cs) module"]
-pub type CS = crate::Reg<u32, _CS>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _CS;
-#[doc = "`read()` method returns [cs::R](cs::R) reader structure"]
-impl crate::Readable for CS {}
-#[doc = "`write(|w| ..)` method takes [cs::W](cs::W) writer structure"]
-impl crate::Writable for CS {}
+#[doc = "CS register accessor: an alias for `Reg<CS_SPEC>`"]
+pub type CS = crate::Reg<cs::CS_SPEC>;
 #[doc = "Control and Status  
  GENERAL CONSTRAINTS:  
  Reference clock frequency min=5MHz, max=800MHz  
  Feedback divider min=16, max=320  
  VCO frequency min=400MHz, max=1600MHz"]
 pub mod cs;
-#[doc = "Controls the PLL power modes.  
-
-This register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
-
-For information about available fields see [pwr](pwr) module"]
-pub type PWR = crate::Reg<u32, _PWR>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _PWR;
-#[doc = "`read()` method returns [pwr::R](pwr::R) reader structure"]
-impl crate::Readable for PWR {}
-#[doc = "`write(|w| ..)` method takes [pwr::W](pwr::W) writer structure"]
-impl crate::Writable for PWR {}
+#[doc = "PWR register accessor: an alias for `Reg<PWR_SPEC>`"]
+pub type PWR = crate::Reg<pwr::PWR_SPEC>;
 #[doc = "Controls the PLL power modes."]
 pub mod pwr;
-#[doc = "Feedback divisor  
- (note: this PLL does not support fractional division)  
-
-This register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
-
-For information about available fields see [fbdiv_int](fbdiv_int) module"]
-pub type FBDIV_INT = crate::Reg<u32, _FBDIV_INT>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _FBDIV_INT;
-#[doc = "`read()` method returns [fbdiv_int::R](fbdiv_int::R) reader structure"]
-impl crate::Readable for FBDIV_INT {}
-#[doc = "`write(|w| ..)` method takes [fbdiv_int::W](fbdiv_int::W) writer structure"]
-impl crate::Writable for FBDIV_INT {}
+#[doc = "FBDIV_INT register accessor: an alias for `Reg<FBDIV_INT_SPEC>`"]
+pub type FBDIV_INT = crate::Reg<fbdiv_int::FBDIV_INT_SPEC>;
 #[doc = "Feedback divisor  
  (note: this PLL does not support fractional division)"]
 pub mod fbdiv_int;
-#[doc = "Controls the PLL post dividers for the primary output  
- (note: this PLL does not have a secondary output)  
- the primary output is driven from VCO divided by postdiv1*postdiv2  
-
-This register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
-
-For information about available fields see [prim](prim) module"]
-pub type PRIM = crate::Reg<u32, _PRIM>;
-#[allow(missing_docs)]
-#[doc(hidden)]
-pub struct _PRIM;
-#[doc = "`read()` method returns [prim::R](prim::R) reader structure"]
-impl crate::Readable for PRIM {}
-#[doc = "`write(|w| ..)` method takes [prim::W](prim::W) writer structure"]
-impl crate::Writable for PRIM {}
+#[doc = "PRIM register accessor: an alias for `Reg<PRIM_SPEC>`"]
+pub type PRIM = crate::Reg<prim::PRIM_SPEC>;
 #[doc = "Controls the PLL post dividers for the primary output  
  (note: this PLL does not have a secondary output)  
  the primary output is driven from VCO divided by postdiv1*postdiv2"]

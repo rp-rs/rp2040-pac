@@ -1,13 +1,37 @@
-#[doc = "Reader of register PERFSEL1"]
-pub type R = crate::R<u32, super::PERFSEL1>;
-#[doc = "Writer for register PERFSEL1"]
-pub type W = crate::W<u32, super::PERFSEL1>;
-#[doc = "Register PERFSEL1 `reset()`'s with value 0x1f"]
-impl crate::ResetValue for super::PERFSEL1 {
-    type Type = u32;
+#[doc = "Register `PERFSEL1` reader"]
+pub struct R(crate::R<PERFSEL1_SPEC>);
+impl core::ops::Deref for R {
+    type Target = crate::R<PERFSEL1_SPEC>;
     #[inline(always)]
-    fn reset_value() -> Self::Type {
-        0x1f
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+impl From<crate::R<PERFSEL1_SPEC>> for R {
+    #[inline(always)]
+    fn from(reader: crate::R<PERFSEL1_SPEC>) -> Self {
+        R(reader)
+    }
+}
+#[doc = "Register `PERFSEL1` writer"]
+pub struct W(crate::W<PERFSEL1_SPEC>);
+impl core::ops::Deref for W {
+    type Target = crate::W<PERFSEL1_SPEC>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+impl core::ops::DerefMut for W {
+    #[inline(always)]
+    fn deref_mut(&mut self) -> &mut Self::Target {
+        &mut self.0
+    }
+}
+impl From<crate::W<PERFSEL1_SPEC>> for W {
+    #[inline(always)]
+    fn from(writer: crate::W<PERFSEL1_SPEC>) -> Self {
+        W(writer)
     }
 }
 #[doc = "Select an event for PERFCTR1. Count either contested accesses, or all accesses, on a downstream port of the main crossbar.  
@@ -63,139 +87,148 @@ impl From<PERFSEL1_A> for u8 {
         variant as _
     }
 }
-#[doc = "Reader of field `PERFSEL1`"]
-pub type PERFSEL1_R = crate::R<u8, PERFSEL1_A>;
+#[doc = "Field `PERFSEL1` reader - Select an event for PERFCTR1. Count either contested accesses, or all accesses, on a downstream port of the main crossbar."]
+pub struct PERFSEL1_R(crate::FieldReader<u8, PERFSEL1_A>);
 impl PERFSEL1_R {
+    pub(crate) fn new(bits: u8) -> Self {
+        PERFSEL1_R(crate::FieldReader::new(bits))
+    }
     #[doc = r"Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> crate::Variant<u8, PERFSEL1_A> {
-        use crate::Variant::*;
+    pub fn variant(&self) -> Option<PERFSEL1_A> {
         match self.bits {
-            0 => Val(PERFSEL1_A::APB_CONTESTED),
-            1 => Val(PERFSEL1_A::APB),
-            2 => Val(PERFSEL1_A::FASTPERI_CONTESTED),
-            3 => Val(PERFSEL1_A::FASTPERI),
-            4 => Val(PERFSEL1_A::SRAM5_CONTESTED),
-            5 => Val(PERFSEL1_A::SRAM5),
-            6 => Val(PERFSEL1_A::SRAM4_CONTESTED),
-            7 => Val(PERFSEL1_A::SRAM4),
-            8 => Val(PERFSEL1_A::SRAM3_CONTESTED),
-            9 => Val(PERFSEL1_A::SRAM3),
-            10 => Val(PERFSEL1_A::SRAM2_CONTESTED),
-            11 => Val(PERFSEL1_A::SRAM2),
-            12 => Val(PERFSEL1_A::SRAM1_CONTESTED),
-            13 => Val(PERFSEL1_A::SRAM1),
-            14 => Val(PERFSEL1_A::SRAM0_CONTESTED),
-            15 => Val(PERFSEL1_A::SRAM0),
-            16 => Val(PERFSEL1_A::XIP_MAIN_CONTESTED),
-            17 => Val(PERFSEL1_A::XIP_MAIN),
-            18 => Val(PERFSEL1_A::ROM_CONTESTED),
-            19 => Val(PERFSEL1_A::ROM),
-            i => Res(i),
+            0 => Some(PERFSEL1_A::APB_CONTESTED),
+            1 => Some(PERFSEL1_A::APB),
+            2 => Some(PERFSEL1_A::FASTPERI_CONTESTED),
+            3 => Some(PERFSEL1_A::FASTPERI),
+            4 => Some(PERFSEL1_A::SRAM5_CONTESTED),
+            5 => Some(PERFSEL1_A::SRAM5),
+            6 => Some(PERFSEL1_A::SRAM4_CONTESTED),
+            7 => Some(PERFSEL1_A::SRAM4),
+            8 => Some(PERFSEL1_A::SRAM3_CONTESTED),
+            9 => Some(PERFSEL1_A::SRAM3),
+            10 => Some(PERFSEL1_A::SRAM2_CONTESTED),
+            11 => Some(PERFSEL1_A::SRAM2),
+            12 => Some(PERFSEL1_A::SRAM1_CONTESTED),
+            13 => Some(PERFSEL1_A::SRAM1),
+            14 => Some(PERFSEL1_A::SRAM0_CONTESTED),
+            15 => Some(PERFSEL1_A::SRAM0),
+            16 => Some(PERFSEL1_A::XIP_MAIN_CONTESTED),
+            17 => Some(PERFSEL1_A::XIP_MAIN),
+            18 => Some(PERFSEL1_A::ROM_CONTESTED),
+            19 => Some(PERFSEL1_A::ROM),
+            _ => None,
         }
     }
     #[doc = "Checks if the value of the field is `APB_CONTESTED`"]
     #[inline(always)]
     pub fn is_apb_contested(&self) -> bool {
-        *self == PERFSEL1_A::APB_CONTESTED
+        **self == PERFSEL1_A::APB_CONTESTED
     }
     #[doc = "Checks if the value of the field is `APB`"]
     #[inline(always)]
     pub fn is_apb(&self) -> bool {
-        *self == PERFSEL1_A::APB
+        **self == PERFSEL1_A::APB
     }
     #[doc = "Checks if the value of the field is `FASTPERI_CONTESTED`"]
     #[inline(always)]
     pub fn is_fastperi_contested(&self) -> bool {
-        *self == PERFSEL1_A::FASTPERI_CONTESTED
+        **self == PERFSEL1_A::FASTPERI_CONTESTED
     }
     #[doc = "Checks if the value of the field is `FASTPERI`"]
     #[inline(always)]
     pub fn is_fastperi(&self) -> bool {
-        *self == PERFSEL1_A::FASTPERI
+        **self == PERFSEL1_A::FASTPERI
     }
     #[doc = "Checks if the value of the field is `SRAM5_CONTESTED`"]
     #[inline(always)]
     pub fn is_sram5_contested(&self) -> bool {
-        *self == PERFSEL1_A::SRAM5_CONTESTED
+        **self == PERFSEL1_A::SRAM5_CONTESTED
     }
     #[doc = "Checks if the value of the field is `SRAM5`"]
     #[inline(always)]
     pub fn is_sram5(&self) -> bool {
-        *self == PERFSEL1_A::SRAM5
+        **self == PERFSEL1_A::SRAM5
     }
     #[doc = "Checks if the value of the field is `SRAM4_CONTESTED`"]
     #[inline(always)]
     pub fn is_sram4_contested(&self) -> bool {
-        *self == PERFSEL1_A::SRAM4_CONTESTED
+        **self == PERFSEL1_A::SRAM4_CONTESTED
     }
     #[doc = "Checks if the value of the field is `SRAM4`"]
     #[inline(always)]
     pub fn is_sram4(&self) -> bool {
-        *self == PERFSEL1_A::SRAM4
+        **self == PERFSEL1_A::SRAM4
     }
     #[doc = "Checks if the value of the field is `SRAM3_CONTESTED`"]
     #[inline(always)]
     pub fn is_sram3_contested(&self) -> bool {
-        *self == PERFSEL1_A::SRAM3_CONTESTED
+        **self == PERFSEL1_A::SRAM3_CONTESTED
     }
     #[doc = "Checks if the value of the field is `SRAM3`"]
     #[inline(always)]
     pub fn is_sram3(&self) -> bool {
-        *self == PERFSEL1_A::SRAM3
+        **self == PERFSEL1_A::SRAM3
     }
     #[doc = "Checks if the value of the field is `SRAM2_CONTESTED`"]
     #[inline(always)]
     pub fn is_sram2_contested(&self) -> bool {
-        *self == PERFSEL1_A::SRAM2_CONTESTED
+        **self == PERFSEL1_A::SRAM2_CONTESTED
     }
     #[doc = "Checks if the value of the field is `SRAM2`"]
     #[inline(always)]
     pub fn is_sram2(&self) -> bool {
-        *self == PERFSEL1_A::SRAM2
+        **self == PERFSEL1_A::SRAM2
     }
     #[doc = "Checks if the value of the field is `SRAM1_CONTESTED`"]
     #[inline(always)]
     pub fn is_sram1_contested(&self) -> bool {
-        *self == PERFSEL1_A::SRAM1_CONTESTED
+        **self == PERFSEL1_A::SRAM1_CONTESTED
     }
     #[doc = "Checks if the value of the field is `SRAM1`"]
     #[inline(always)]
     pub fn is_sram1(&self) -> bool {
-        *self == PERFSEL1_A::SRAM1
+        **self == PERFSEL1_A::SRAM1
     }
     #[doc = "Checks if the value of the field is `SRAM0_CONTESTED`"]
     #[inline(always)]
     pub fn is_sram0_contested(&self) -> bool {
-        *self == PERFSEL1_A::SRAM0_CONTESTED
+        **self == PERFSEL1_A::SRAM0_CONTESTED
     }
     #[doc = "Checks if the value of the field is `SRAM0`"]
     #[inline(always)]
     pub fn is_sram0(&self) -> bool {
-        *self == PERFSEL1_A::SRAM0
+        **self == PERFSEL1_A::SRAM0
     }
     #[doc = "Checks if the value of the field is `XIP_MAIN_CONTESTED`"]
     #[inline(always)]
     pub fn is_xip_main_contested(&self) -> bool {
-        *self == PERFSEL1_A::XIP_MAIN_CONTESTED
+        **self == PERFSEL1_A::XIP_MAIN_CONTESTED
     }
     #[doc = "Checks if the value of the field is `XIP_MAIN`"]
     #[inline(always)]
     pub fn is_xip_main(&self) -> bool {
-        *self == PERFSEL1_A::XIP_MAIN
+        **self == PERFSEL1_A::XIP_MAIN
     }
     #[doc = "Checks if the value of the field is `ROM_CONTESTED`"]
     #[inline(always)]
     pub fn is_rom_contested(&self) -> bool {
-        *self == PERFSEL1_A::ROM_CONTESTED
+        **self == PERFSEL1_A::ROM_CONTESTED
     }
     #[doc = "Checks if the value of the field is `ROM`"]
     #[inline(always)]
     pub fn is_rom(&self) -> bool {
-        *self == PERFSEL1_A::ROM
+        **self == PERFSEL1_A::ROM
     }
 }
-#[doc = "Write proxy for field `PERFSEL1`"]
+impl core::ops::Deref for PERFSEL1_R {
+    type Target = crate::FieldReader<u8, PERFSEL1_A>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `PERFSEL1` writer - Select an event for PERFCTR1. Count either contested accesses, or all accesses, on a downstream port of the main crossbar."]
 pub struct PERFSEL1_W<'a> {
     w: &'a mut W,
 }
@@ -308,7 +341,7 @@ impl<'a> PERFSEL1_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x1f) | ((value as u32) & 0x1f);
+        self.w.bits = (self.w.bits & !0x1f) | (value as u32 & 0x1f);
         self.w
     }
 }
@@ -324,5 +357,35 @@ impl W {
     #[inline(always)]
     pub fn perfsel1(&mut self) -> PERFSEL1_W {
         PERFSEL1_W { w: self }
+    }
+    #[doc = "Writes raw bits to the register."]
+    #[inline(always)]
+    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
+        self.0.bits(bits);
+        self
+    }
+}
+#[doc = "Bus fabric performance event select for PERFCTR1  
+
+This register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+
+For information about available fields see [perfsel1](index.html) module"]
+pub struct PERFSEL1_SPEC;
+impl crate::RegisterSpec for PERFSEL1_SPEC {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [perfsel1::R](R) reader structure"]
+impl crate::Readable for PERFSEL1_SPEC {
+    type Reader = R;
+}
+#[doc = "`write(|w| ..)` method takes [perfsel1::W](W) writer structure"]
+impl crate::Writable for PERFSEL1_SPEC {
+    type Writer = W;
+}
+#[doc = "`reset()` method sets PERFSEL1 to value 0x1f"]
+impl crate::Resettable for PERFSEL1_SPEC {
+    #[inline(always)]
+    fn reset_value() -> Self::Ux {
+        0x1f
     }
 }

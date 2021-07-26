@@ -1,18 +1,54 @@
-#[doc = "Reader of register IRQ_SETUP_1"]
-pub type R = crate::R<u32, super::IRQ_SETUP_1>;
-#[doc = "Writer for register IRQ_SETUP_1"]
-pub type W = crate::W<u32, super::IRQ_SETUP_1>;
-#[doc = "Register IRQ_SETUP_1 `reset()`'s with value 0"]
-impl crate::ResetValue for super::IRQ_SETUP_1 {
-    type Type = u32;
+#[doc = "Register `IRQ_SETUP_1` reader"]
+pub struct R(crate::R<IRQ_SETUP_1_SPEC>);
+impl core::ops::Deref for R {
+    type Target = crate::R<IRQ_SETUP_1_SPEC>;
     #[inline(always)]
-    fn reset_value() -> Self::Type {
-        0
+    fn deref(&self) -> &Self::Target {
+        &self.0
     }
 }
-#[doc = "Reader of field `DOTW_ENA`"]
-pub type DOTW_ENA_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `DOTW_ENA`"]
+impl From<crate::R<IRQ_SETUP_1_SPEC>> for R {
+    #[inline(always)]
+    fn from(reader: crate::R<IRQ_SETUP_1_SPEC>) -> Self {
+        R(reader)
+    }
+}
+#[doc = "Register `IRQ_SETUP_1` writer"]
+pub struct W(crate::W<IRQ_SETUP_1_SPEC>);
+impl core::ops::Deref for W {
+    type Target = crate::W<IRQ_SETUP_1_SPEC>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+impl core::ops::DerefMut for W {
+    #[inline(always)]
+    fn deref_mut(&mut self) -> &mut Self::Target {
+        &mut self.0
+    }
+}
+impl From<crate::W<IRQ_SETUP_1_SPEC>> for W {
+    #[inline(always)]
+    fn from(writer: crate::W<IRQ_SETUP_1_SPEC>) -> Self {
+        W(writer)
+    }
+}
+#[doc = "Field `DOTW_ENA` reader - Enable day of the week matching"]
+pub struct DOTW_ENA_R(crate::FieldReader<bool, bool>);
+impl DOTW_ENA_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        DOTW_ENA_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for DOTW_ENA_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `DOTW_ENA` writer - Enable day of the week matching"]
 pub struct DOTW_ENA_W<'a> {
     w: &'a mut W,
 }
@@ -30,13 +66,25 @@ impl<'a> DOTW_ENA_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 31)) | (((value as u32) & 0x01) << 31);
+        self.w.bits = (self.w.bits & !(0x01 << 31)) | ((value as u32 & 0x01) << 31);
         self.w
     }
 }
-#[doc = "Reader of field `HOUR_ENA`"]
-pub type HOUR_ENA_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `HOUR_ENA`"]
+#[doc = "Field `HOUR_ENA` reader - Enable hour matching"]
+pub struct HOUR_ENA_R(crate::FieldReader<bool, bool>);
+impl HOUR_ENA_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        HOUR_ENA_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for HOUR_ENA_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `HOUR_ENA` writer - Enable hour matching"]
 pub struct HOUR_ENA_W<'a> {
     w: &'a mut W,
 }
@@ -54,13 +102,25 @@ impl<'a> HOUR_ENA_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 30)) | (((value as u32) & 0x01) << 30);
+        self.w.bits = (self.w.bits & !(0x01 << 30)) | ((value as u32 & 0x01) << 30);
         self.w
     }
 }
-#[doc = "Reader of field `MIN_ENA`"]
-pub type MIN_ENA_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `MIN_ENA`"]
+#[doc = "Field `MIN_ENA` reader - Enable minute matching"]
+pub struct MIN_ENA_R(crate::FieldReader<bool, bool>);
+impl MIN_ENA_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        MIN_ENA_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for MIN_ENA_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `MIN_ENA` writer - Enable minute matching"]
 pub struct MIN_ENA_W<'a> {
     w: &'a mut W,
 }
@@ -78,13 +138,25 @@ impl<'a> MIN_ENA_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 29)) | (((value as u32) & 0x01) << 29);
+        self.w.bits = (self.w.bits & !(0x01 << 29)) | ((value as u32 & 0x01) << 29);
         self.w
     }
 }
-#[doc = "Reader of field `SEC_ENA`"]
-pub type SEC_ENA_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `SEC_ENA`"]
+#[doc = "Field `SEC_ENA` reader - Enable second matching"]
+pub struct SEC_ENA_R(crate::FieldReader<bool, bool>);
+impl SEC_ENA_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        SEC_ENA_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for SEC_ENA_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `SEC_ENA` writer - Enable second matching"]
 pub struct SEC_ENA_W<'a> {
     w: &'a mut W,
 }
@@ -102,13 +174,25 @@ impl<'a> SEC_ENA_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 28)) | (((value as u32) & 0x01) << 28);
+        self.w.bits = (self.w.bits & !(0x01 << 28)) | ((value as u32 & 0x01) << 28);
         self.w
     }
 }
-#[doc = "Reader of field `DOTW`"]
-pub type DOTW_R = crate::R<u8, u8>;
-#[doc = "Write proxy for field `DOTW`"]
+#[doc = "Field `DOTW` reader - Day of the week"]
+pub struct DOTW_R(crate::FieldReader<u8, u8>);
+impl DOTW_R {
+    pub(crate) fn new(bits: u8) -> Self {
+        DOTW_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for DOTW_R {
+    type Target = crate::FieldReader<u8, u8>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `DOTW` writer - Day of the week"]
 pub struct DOTW_W<'a> {
     w: &'a mut W,
 }
@@ -116,13 +200,25 @@ impl<'a> DOTW_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x07 << 24)) | (((value as u32) & 0x07) << 24);
+        self.w.bits = (self.w.bits & !(0x07 << 24)) | ((value as u32 & 0x07) << 24);
         self.w
     }
 }
-#[doc = "Reader of field `HOUR`"]
-pub type HOUR_R = crate::R<u8, u8>;
-#[doc = "Write proxy for field `HOUR`"]
+#[doc = "Field `HOUR` reader - Hours"]
+pub struct HOUR_R(crate::FieldReader<u8, u8>);
+impl HOUR_R {
+    pub(crate) fn new(bits: u8) -> Self {
+        HOUR_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for HOUR_R {
+    type Target = crate::FieldReader<u8, u8>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `HOUR` writer - Hours"]
 pub struct HOUR_W<'a> {
     w: &'a mut W,
 }
@@ -130,13 +226,25 @@ impl<'a> HOUR_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x1f << 16)) | (((value as u32) & 0x1f) << 16);
+        self.w.bits = (self.w.bits & !(0x1f << 16)) | ((value as u32 & 0x1f) << 16);
         self.w
     }
 }
-#[doc = "Reader of field `MIN`"]
-pub type MIN_R = crate::R<u8, u8>;
-#[doc = "Write proxy for field `MIN`"]
+#[doc = "Field `MIN` reader - Minutes"]
+pub struct MIN_R(crate::FieldReader<u8, u8>);
+impl MIN_R {
+    pub(crate) fn new(bits: u8) -> Self {
+        MIN_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for MIN_R {
+    type Target = crate::FieldReader<u8, u8>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `MIN` writer - Minutes"]
 pub struct MIN_W<'a> {
     w: &'a mut W,
 }
@@ -144,13 +252,25 @@ impl<'a> MIN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x3f << 8)) | (((value as u32) & 0x3f) << 8);
+        self.w.bits = (self.w.bits & !(0x3f << 8)) | ((value as u32 & 0x3f) << 8);
         self.w
     }
 }
-#[doc = "Reader of field `SEC`"]
-pub type SEC_R = crate::R<u8, u8>;
-#[doc = "Write proxy for field `SEC`"]
+#[doc = "Field `SEC` reader - Seconds"]
+pub struct SEC_R(crate::FieldReader<u8, u8>);
+impl SEC_R {
+    pub(crate) fn new(bits: u8) -> Self {
+        SEC_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for SEC_R {
+    type Target = crate::FieldReader<u8, u8>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `SEC` writer - Seconds"]
 pub struct SEC_W<'a> {
     w: &'a mut W,
 }
@@ -158,7 +278,7 @@ impl<'a> SEC_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x3f) | ((value as u32) & 0x3f);
+        self.w.bits = (self.w.bits & !0x3f) | (value as u32 & 0x3f);
         self.w
     }
 }
@@ -244,5 +364,35 @@ impl W {
     #[inline(always)]
     pub fn sec(&mut self) -> SEC_W {
         SEC_W { w: self }
+    }
+    #[doc = "Writes raw bits to the register."]
+    #[inline(always)]
+    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
+        self.0.bits(bits);
+        self
+    }
+}
+#[doc = "Interrupt setup register 1  
+
+This register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+
+For information about available fields see [irq_setup_1](index.html) module"]
+pub struct IRQ_SETUP_1_SPEC;
+impl crate::RegisterSpec for IRQ_SETUP_1_SPEC {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [irq_setup_1::R](R) reader structure"]
+impl crate::Readable for IRQ_SETUP_1_SPEC {
+    type Reader = R;
+}
+#[doc = "`write(|w| ..)` method takes [irq_setup_1::W](W) writer structure"]
+impl crate::Writable for IRQ_SETUP_1_SPEC {
+    type Writer = W;
+}
+#[doc = "`reset()` method sets IRQ_SETUP_1 to value 0"]
+impl crate::Resettable for IRQ_SETUP_1_SPEC {
+    #[inline(always)]
+    fn reset_value() -> Self::Ux {
+        0
     }
 }

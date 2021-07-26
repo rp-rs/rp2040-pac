@@ -1,18 +1,54 @@
-#[doc = "Reader of register USB_PWR"]
-pub type R = crate::R<u32, super::USB_PWR>;
-#[doc = "Writer for register USB_PWR"]
-pub type W = crate::W<u32, super::USB_PWR>;
-#[doc = "Register USB_PWR `reset()`'s with value 0"]
-impl crate::ResetValue for super::USB_PWR {
-    type Type = u32;
+#[doc = "Register `USB_PWR` reader"]
+pub struct R(crate::R<USB_PWR_SPEC>);
+impl core::ops::Deref for R {
+    type Target = crate::R<USB_PWR_SPEC>;
     #[inline(always)]
-    fn reset_value() -> Self::Type {
-        0
+    fn deref(&self) -> &Self::Target {
+        &self.0
     }
 }
-#[doc = "Reader of field `OVERCURR_DETECT_EN`"]
-pub type OVERCURR_DETECT_EN_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `OVERCURR_DETECT_EN`"]
+impl From<crate::R<USB_PWR_SPEC>> for R {
+    #[inline(always)]
+    fn from(reader: crate::R<USB_PWR_SPEC>) -> Self {
+        R(reader)
+    }
+}
+#[doc = "Register `USB_PWR` writer"]
+pub struct W(crate::W<USB_PWR_SPEC>);
+impl core::ops::Deref for W {
+    type Target = crate::W<USB_PWR_SPEC>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+impl core::ops::DerefMut for W {
+    #[inline(always)]
+    fn deref_mut(&mut self) -> &mut Self::Target {
+        &mut self.0
+    }
+}
+impl From<crate::W<USB_PWR_SPEC>> for W {
+    #[inline(always)]
+    fn from(writer: crate::W<USB_PWR_SPEC>) -> Self {
+        W(writer)
+    }
+}
+#[doc = "Field `OVERCURR_DETECT_EN` reader - "]
+pub struct OVERCURR_DETECT_EN_R(crate::FieldReader<bool, bool>);
+impl OVERCURR_DETECT_EN_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        OVERCURR_DETECT_EN_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for OVERCURR_DETECT_EN_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `OVERCURR_DETECT_EN` writer - "]
 pub struct OVERCURR_DETECT_EN_W<'a> {
     w: &'a mut W,
 }
@@ -30,13 +66,25 @@ impl<'a> OVERCURR_DETECT_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 5)) | (((value as u32) & 0x01) << 5);
+        self.w.bits = (self.w.bits & !(0x01 << 5)) | ((value as u32 & 0x01) << 5);
         self.w
     }
 }
-#[doc = "Reader of field `OVERCURR_DETECT`"]
-pub type OVERCURR_DETECT_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `OVERCURR_DETECT`"]
+#[doc = "Field `OVERCURR_DETECT` reader - "]
+pub struct OVERCURR_DETECT_R(crate::FieldReader<bool, bool>);
+impl OVERCURR_DETECT_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        OVERCURR_DETECT_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for OVERCURR_DETECT_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `OVERCURR_DETECT` writer - "]
 pub struct OVERCURR_DETECT_W<'a> {
     w: &'a mut W,
 }
@@ -54,13 +102,25 @@ impl<'a> OVERCURR_DETECT_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 4)) | (((value as u32) & 0x01) << 4);
+        self.w.bits = (self.w.bits & !(0x01 << 4)) | ((value as u32 & 0x01) << 4);
         self.w
     }
 }
-#[doc = "Reader of field `VBUS_DETECT_OVERRIDE_EN`"]
-pub type VBUS_DETECT_OVERRIDE_EN_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `VBUS_DETECT_OVERRIDE_EN`"]
+#[doc = "Field `VBUS_DETECT_OVERRIDE_EN` reader - "]
+pub struct VBUS_DETECT_OVERRIDE_EN_R(crate::FieldReader<bool, bool>);
+impl VBUS_DETECT_OVERRIDE_EN_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        VBUS_DETECT_OVERRIDE_EN_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for VBUS_DETECT_OVERRIDE_EN_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `VBUS_DETECT_OVERRIDE_EN` writer - "]
 pub struct VBUS_DETECT_OVERRIDE_EN_W<'a> {
     w: &'a mut W,
 }
@@ -78,13 +138,25 @@ impl<'a> VBUS_DETECT_OVERRIDE_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 3)) | (((value as u32) & 0x01) << 3);
+        self.w.bits = (self.w.bits & !(0x01 << 3)) | ((value as u32 & 0x01) << 3);
         self.w
     }
 }
-#[doc = "Reader of field `VBUS_DETECT`"]
-pub type VBUS_DETECT_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `VBUS_DETECT`"]
+#[doc = "Field `VBUS_DETECT` reader - "]
+pub struct VBUS_DETECT_R(crate::FieldReader<bool, bool>);
+impl VBUS_DETECT_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        VBUS_DETECT_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for VBUS_DETECT_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `VBUS_DETECT` writer - "]
 pub struct VBUS_DETECT_W<'a> {
     w: &'a mut W,
 }
@@ -102,13 +174,25 @@ impl<'a> VBUS_DETECT_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 2)) | (((value as u32) & 0x01) << 2);
+        self.w.bits = (self.w.bits & !(0x01 << 2)) | ((value as u32 & 0x01) << 2);
         self.w
     }
 }
-#[doc = "Reader of field `VBUS_EN_OVERRIDE_EN`"]
-pub type VBUS_EN_OVERRIDE_EN_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `VBUS_EN_OVERRIDE_EN`"]
+#[doc = "Field `VBUS_EN_OVERRIDE_EN` reader - "]
+pub struct VBUS_EN_OVERRIDE_EN_R(crate::FieldReader<bool, bool>);
+impl VBUS_EN_OVERRIDE_EN_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        VBUS_EN_OVERRIDE_EN_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for VBUS_EN_OVERRIDE_EN_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `VBUS_EN_OVERRIDE_EN` writer - "]
 pub struct VBUS_EN_OVERRIDE_EN_W<'a> {
     w: &'a mut W,
 }
@@ -126,13 +210,25 @@ impl<'a> VBUS_EN_OVERRIDE_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | (((value as u32) & 0x01) << 1);
+        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u32 & 0x01) << 1);
         self.w
     }
 }
-#[doc = "Reader of field `VBUS_EN`"]
-pub type VBUS_EN_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `VBUS_EN`"]
+#[doc = "Field `VBUS_EN` reader - "]
+pub struct VBUS_EN_R(crate::FieldReader<bool, bool>);
+impl VBUS_EN_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        VBUS_EN_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for VBUS_EN_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `VBUS_EN` writer - "]
 pub struct VBUS_EN_W<'a> {
     w: &'a mut W,
 }
@@ -150,7 +246,7 @@ impl<'a> VBUS_EN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | ((value as u32) & 0x01);
+        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
         self.w
     }
 }
@@ -216,5 +312,35 @@ impl W {
     #[inline(always)]
     pub fn vbus_en(&mut self) -> VBUS_EN_W {
         VBUS_EN_W { w: self }
+    }
+    #[doc = "Writes raw bits to the register."]
+    #[inline(always)]
+    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
+        self.0.bits(bits);
+        self
+    }
+}
+#[doc = "Overrides for the power signals in the event that the VBUS signals are not hooked up to GPIO. Set the value of the override and then the override enable to switch over to the override value.  
+
+This register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+
+For information about available fields see [usb_pwr](index.html) module"]
+pub struct USB_PWR_SPEC;
+impl crate::RegisterSpec for USB_PWR_SPEC {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [usb_pwr::R](R) reader structure"]
+impl crate::Readable for USB_PWR_SPEC {
+    type Reader = R;
+}
+#[doc = "`write(|w| ..)` method takes [usb_pwr::W](W) writer structure"]
+impl crate::Writable for USB_PWR_SPEC {
+    type Writer = W;
+}
+#[doc = "`reset()` method sets USB_PWR to value 0"]
+impl crate::Resettable for USB_PWR_SPEC {
+    #[inline(always)]
+    fn reset_value() -> Self::Ux {
+        0
     }
 }

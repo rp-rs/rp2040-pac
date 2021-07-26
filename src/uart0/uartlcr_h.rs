@@ -1,18 +1,54 @@
-#[doc = "Reader of register UARTLCR_H"]
-pub type R = crate::R<u32, super::UARTLCR_H>;
-#[doc = "Writer for register UARTLCR_H"]
-pub type W = crate::W<u32, super::UARTLCR_H>;
-#[doc = "Register UARTLCR_H `reset()`'s with value 0"]
-impl crate::ResetValue for super::UARTLCR_H {
-    type Type = u32;
+#[doc = "Register `UARTLCR_H` reader"]
+pub struct R(crate::R<UARTLCR_H_SPEC>);
+impl core::ops::Deref for R {
+    type Target = crate::R<UARTLCR_H_SPEC>;
     #[inline(always)]
-    fn reset_value() -> Self::Type {
-        0
+    fn deref(&self) -> &Self::Target {
+        &self.0
     }
 }
-#[doc = "Reader of field `SPS`"]
-pub type SPS_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `SPS`"]
+impl From<crate::R<UARTLCR_H_SPEC>> for R {
+    #[inline(always)]
+    fn from(reader: crate::R<UARTLCR_H_SPEC>) -> Self {
+        R(reader)
+    }
+}
+#[doc = "Register `UARTLCR_H` writer"]
+pub struct W(crate::W<UARTLCR_H_SPEC>);
+impl core::ops::Deref for W {
+    type Target = crate::W<UARTLCR_H_SPEC>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+impl core::ops::DerefMut for W {
+    #[inline(always)]
+    fn deref_mut(&mut self) -> &mut Self::Target {
+        &mut self.0
+    }
+}
+impl From<crate::W<UARTLCR_H_SPEC>> for W {
+    #[inline(always)]
+    fn from(writer: crate::W<UARTLCR_H_SPEC>) -> Self {
+        W(writer)
+    }
+}
+#[doc = "Field `SPS` reader - Stick parity select. 0 = stick parity is disabled 1 = either: * if the EPS bit is 0 then the parity bit is transmitted and checked as a 1 * if the EPS bit is 1 then the parity bit is transmitted and checked as a 0. This bit has no effect when the PEN bit disables parity checking and generation."]
+pub struct SPS_R(crate::FieldReader<bool, bool>);
+impl SPS_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        SPS_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for SPS_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `SPS` writer - Stick parity select. 0 = stick parity is disabled 1 = either: * if the EPS bit is 0 then the parity bit is transmitted and checked as a 1 * if the EPS bit is 1 then the parity bit is transmitted and checked as a 0. This bit has no effect when the PEN bit disables parity checking and generation."]
 pub struct SPS_W<'a> {
     w: &'a mut W,
 }
@@ -30,13 +66,25 @@ impl<'a> SPS_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 7)) | (((value as u32) & 0x01) << 7);
+        self.w.bits = (self.w.bits & !(0x01 << 7)) | ((value as u32 & 0x01) << 7);
         self.w
     }
 }
-#[doc = "Reader of field `WLEN`"]
-pub type WLEN_R = crate::R<u8, u8>;
-#[doc = "Write proxy for field `WLEN`"]
+#[doc = "Field `WLEN` reader - Word length. These bits indicate the number of data bits transmitted or received in a frame as follows: b11 = 8 bits b10 = 7 bits b01 = 6 bits b00 = 5 bits."]
+pub struct WLEN_R(crate::FieldReader<u8, u8>);
+impl WLEN_R {
+    pub(crate) fn new(bits: u8) -> Self {
+        WLEN_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for WLEN_R {
+    type Target = crate::FieldReader<u8, u8>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `WLEN` writer - Word length. These bits indicate the number of data bits transmitted or received in a frame as follows: b11 = 8 bits b10 = 7 bits b01 = 6 bits b00 = 5 bits."]
 pub struct WLEN_W<'a> {
     w: &'a mut W,
 }
@@ -44,13 +92,25 @@ impl<'a> WLEN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 5)) | (((value as u32) & 0x03) << 5);
+        self.w.bits = (self.w.bits & !(0x03 << 5)) | ((value as u32 & 0x03) << 5);
         self.w
     }
 }
-#[doc = "Reader of field `FEN`"]
-pub type FEN_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `FEN`"]
+#[doc = "Field `FEN` reader - Enable FIFOs: 0 = FIFOs are disabled (character mode) that is, the FIFOs become 1-byte-deep holding registers 1 = transmit and receive FIFO buffers are enabled (FIFO mode)."]
+pub struct FEN_R(crate::FieldReader<bool, bool>);
+impl FEN_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        FEN_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for FEN_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `FEN` writer - Enable FIFOs: 0 = FIFOs are disabled (character mode) that is, the FIFOs become 1-byte-deep holding registers 1 = transmit and receive FIFO buffers are enabled (FIFO mode)."]
 pub struct FEN_W<'a> {
     w: &'a mut W,
 }
@@ -68,13 +128,25 @@ impl<'a> FEN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 4)) | (((value as u32) & 0x01) << 4);
+        self.w.bits = (self.w.bits & !(0x01 << 4)) | ((value as u32 & 0x01) << 4);
         self.w
     }
 }
-#[doc = "Reader of field `STP2`"]
-pub type STP2_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `STP2`"]
+#[doc = "Field `STP2` reader - Two stop bits select. If this bit is set to 1, two stop bits are transmitted at the end of the frame. The receive logic does not check for two stop bits being received."]
+pub struct STP2_R(crate::FieldReader<bool, bool>);
+impl STP2_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        STP2_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for STP2_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `STP2` writer - Two stop bits select. If this bit is set to 1, two stop bits are transmitted at the end of the frame. The receive logic does not check for two stop bits being received."]
 pub struct STP2_W<'a> {
     w: &'a mut W,
 }
@@ -92,13 +164,25 @@ impl<'a> STP2_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 3)) | (((value as u32) & 0x01) << 3);
+        self.w.bits = (self.w.bits & !(0x01 << 3)) | ((value as u32 & 0x01) << 3);
         self.w
     }
 }
-#[doc = "Reader of field `EPS`"]
-pub type EPS_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `EPS`"]
+#[doc = "Field `EPS` reader - Even parity select. Controls the type of parity the UART uses during transmission and reception: 0 = odd parity. The UART generates or checks for an odd number of 1s in the data and parity bits. 1 = even parity. The UART generates or checks for an even number of 1s in the data and parity bits. This bit has no effect when the PEN bit disables parity checking and generation."]
+pub struct EPS_R(crate::FieldReader<bool, bool>);
+impl EPS_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        EPS_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for EPS_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `EPS` writer - Even parity select. Controls the type of parity the UART uses during transmission and reception: 0 = odd parity. The UART generates or checks for an odd number of 1s in the data and parity bits. 1 = even parity. The UART generates or checks for an even number of 1s in the data and parity bits. This bit has no effect when the PEN bit disables parity checking and generation."]
 pub struct EPS_W<'a> {
     w: &'a mut W,
 }
@@ -116,13 +200,25 @@ impl<'a> EPS_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 2)) | (((value as u32) & 0x01) << 2);
+        self.w.bits = (self.w.bits & !(0x01 << 2)) | ((value as u32 & 0x01) << 2);
         self.w
     }
 }
-#[doc = "Reader of field `PEN`"]
-pub type PEN_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `PEN`"]
+#[doc = "Field `PEN` reader - Parity enable: 0 = parity is disabled and no parity bit added to the data frame 1 = parity checking and generation is enabled."]
+pub struct PEN_R(crate::FieldReader<bool, bool>);
+impl PEN_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        PEN_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for PEN_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `PEN` writer - Parity enable: 0 = parity is disabled and no parity bit added to the data frame 1 = parity checking and generation is enabled."]
 pub struct PEN_W<'a> {
     w: &'a mut W,
 }
@@ -140,13 +236,25 @@ impl<'a> PEN_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | (((value as u32) & 0x01) << 1);
+        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u32 & 0x01) << 1);
         self.w
     }
 }
-#[doc = "Reader of field `BRK`"]
-pub type BRK_R = crate::R<bool, bool>;
-#[doc = "Write proxy for field `BRK`"]
+#[doc = "Field `BRK` reader - Send break. If this bit is set to 1, a low-level is continually output on the UARTTXD output, after completing transmission of the current character. For the proper execution of the break command, the software must set this bit for at least two complete frames. For normal use, this bit must be cleared to 0."]
+pub struct BRK_R(crate::FieldReader<bool, bool>);
+impl BRK_R {
+    pub(crate) fn new(bits: bool) -> Self {
+        BRK_R(crate::FieldReader::new(bits))
+    }
+}
+impl core::ops::Deref for BRK_R {
+    type Target = crate::FieldReader<bool, bool>;
+    #[inline(always)]
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
+}
+#[doc = "Field `BRK` writer - Send break. If this bit is set to 1, a low-level is continually output on the UARTTXD output, after completing transmission of the current character. For the proper execution of the break command, the software must set this bit for at least two complete frames. For normal use, this bit must be cleared to 0."]
 pub struct BRK_W<'a> {
     w: &'a mut W,
 }
@@ -164,7 +272,7 @@ impl<'a> BRK_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | ((value as u32) & 0x01);
+        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
         self.w
     }
 }
@@ -240,5 +348,35 @@ impl W {
     #[inline(always)]
     pub fn brk(&mut self) -> BRK_W {
         BRK_W { w: self }
+    }
+    #[doc = "Writes raw bits to the register."]
+    #[inline(always)]
+    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
+        self.0.bits(bits);
+        self
+    }
+}
+#[doc = "Line Control Register, UARTLCR_H  
+
+This register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+
+For information about available fields see [uartlcr_h](index.html) module"]
+pub struct UARTLCR_H_SPEC;
+impl crate::RegisterSpec for UARTLCR_H_SPEC {
+    type Ux = u32;
+}
+#[doc = "`read()` method returns [uartlcr_h::R](R) reader structure"]
+impl crate::Readable for UARTLCR_H_SPEC {
+    type Reader = R;
+}
+#[doc = "`write(|w| ..)` method takes [uartlcr_h::W](W) writer structure"]
+impl crate::Writable for UARTLCR_H_SPEC {
+    type Writer = W;
+}
+#[doc = "`reset()` method sets UARTLCR_H to value 0"]
+impl crate::Resettable for UARTLCR_H_SPEC {
+    #[inline(always)]
+    fn reset_value() -> Self::Ux {
+        0
     }
 }
