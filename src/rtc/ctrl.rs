@@ -85,7 +85,8 @@ impl<'a> RTC_ENABLE_W<'a> {
     }
 }
 impl R {
-    #[doc = "Bit 8 - If set, leapyear is forced off.\\n Useful for years divisible by 100 but not by 400"]
+    #[doc = "Bit 8 - If set, leapyear is forced off.  
+ Useful for years divisible by 100 but not by 400"]
     #[inline(always)]
     pub fn force_notleapyear(&self) -> FORCE_NOTLEAPYEAR_R {
         FORCE_NOTLEAPYEAR_R::new(((self.bits >> 8) & 0x01) != 0)
@@ -107,7 +108,8 @@ impl R {
     }
 }
 impl W {
-    #[doc = "Bit 8 - If set, leapyear is forced off.\\n Useful for years divisible by 100 but not by 400"]
+    #[doc = "Bit 8 - If set, leapyear is forced off.  
+ Useful for years divisible by 100 but not by 400"]
     #[inline(always)]
     pub fn force_notleapyear(&mut self) -> FORCE_NOTLEAPYEAR_W {
         FORCE_NOTLEAPYEAR_W { w: self }

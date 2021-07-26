@@ -12,12 +12,12 @@ impl R {
     pub fn stable(&self) -> STABLE_R {
         STABLE_R::new(((self.bits >> 31) & 0x01) != 0)
     }
-    #[doc = "Bit 16 - post-divider is running\\n this resets to 0 but transitions to 1 during chip startup"]
+    #[doc = "Bit 16 - post-divider is running this resets to 0 but transitions to 1 during chip startup"]
     #[inline(always)]
     pub fn div_running(&self) -> DIV_RUNNING_R {
         DIV_RUNNING_R::new(((self.bits >> 16) & 0x01) != 0)
     }
-    #[doc = "Bit 12 - Oscillator is enabled but not necessarily running and stable\\n this resets to 0 but transitions to 1 during chip startup"]
+    #[doc = "Bit 12 - Oscillator is enabled but not necessarily running and stable this resets to 0 but transitions to 1 during chip startup"]
     #[inline(always)]
     pub fn enabled(&self) -> ENABLED_R {
         ENABLED_R::new(((self.bits >> 12) & 0x01) != 0)

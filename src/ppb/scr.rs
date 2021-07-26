@@ -83,34 +83,54 @@ impl<'a> SLEEPONEXIT_W<'a> {
     }
 }
 impl R {
-    #[doc = "Bit 4 - Send Event on Pending bit:\\n 0 = Only enabled interrupts or events can wakeup the processor, disabled interrupts are excluded.\\n 1 = Enabled events and all interrupts, including disabled interrupts, can wakeup the processor.\\n When an event or interrupt becomes pending, the event signal wakes up the processor from WFE. If the\\n processor is not waiting for an event, the event is registered and affects the next WFE.\\n The processor also wakes up on execution of an SEV instruction or an external event."]
+    #[doc = "Bit 4 - Send Event on Pending bit:  
+ 0 = Only enabled interrupts or events can wakeup the processor, disabled interrupts are excluded.  
+ 1 = Enabled events and all interrupts, including disabled interrupts, can wakeup the processor.  
+ When an event or interrupt becomes pending, the event signal wakes up the processor from WFE. If the  
+ processor is not waiting for an event, the event is registered and affects the next WFE.  
+ The processor also wakes up on execution of an SEV instruction or an external event."]
     #[inline(always)]
     pub fn sevonpend(&self) -> SEVONPEND_R {
         SEVONPEND_R::new(((self.bits >> 4) & 0x01) != 0)
     }
-    #[doc = "Bit 2 - Controls whether the processor uses sleep or deep sleep as its low power mode:\\n 0 = Sleep.\\n 1 = Deep sleep."]
+    #[doc = "Bit 2 - Controls whether the processor uses sleep or deep sleep as its low power mode:  
+ 0 = Sleep.  
+ 1 = Deep sleep."]
     #[inline(always)]
     pub fn sleepdeep(&self) -> SLEEPDEEP_R {
         SLEEPDEEP_R::new(((self.bits >> 2) & 0x01) != 0)
     }
-    #[doc = "Bit 1 - Indicates sleep-on-exit when returning from Handler mode to Thread mode:\\n 0 = Do not sleep when returning to Thread mode.\\n 1 = Enter sleep, or deep sleep, on return from an ISR to Thread mode.\\n Setting this bit to 1 enables an interrupt driven application to avoid returning to an empty main application."]
+    #[doc = "Bit 1 - Indicates sleep-on-exit when returning from Handler mode to Thread mode:  
+ 0 = Do not sleep when returning to Thread mode.  
+ 1 = Enter sleep, or deep sleep, on return from an ISR to Thread mode.  
+ Setting this bit to 1 enables an interrupt driven application to avoid returning to an empty main application."]
     #[inline(always)]
     pub fn sleeponexit(&self) -> SLEEPONEXIT_R {
         SLEEPONEXIT_R::new(((self.bits >> 1) & 0x01) != 0)
     }
 }
 impl W {
-    #[doc = "Bit 4 - Send Event on Pending bit:\\n 0 = Only enabled interrupts or events can wakeup the processor, disabled interrupts are excluded.\\n 1 = Enabled events and all interrupts, including disabled interrupts, can wakeup the processor.\\n When an event or interrupt becomes pending, the event signal wakes up the processor from WFE. If the\\n processor is not waiting for an event, the event is registered and affects the next WFE.\\n The processor also wakes up on execution of an SEV instruction or an external event."]
+    #[doc = "Bit 4 - Send Event on Pending bit:  
+ 0 = Only enabled interrupts or events can wakeup the processor, disabled interrupts are excluded.  
+ 1 = Enabled events and all interrupts, including disabled interrupts, can wakeup the processor.  
+ When an event or interrupt becomes pending, the event signal wakes up the processor from WFE. If the  
+ processor is not waiting for an event, the event is registered and affects the next WFE.  
+ The processor also wakes up on execution of an SEV instruction or an external event."]
     #[inline(always)]
     pub fn sevonpend(&mut self) -> SEVONPEND_W {
         SEVONPEND_W { w: self }
     }
-    #[doc = "Bit 2 - Controls whether the processor uses sleep or deep sleep as its low power mode:\\n 0 = Sleep.\\n 1 = Deep sleep."]
+    #[doc = "Bit 2 - Controls whether the processor uses sleep or deep sleep as its low power mode:  
+ 0 = Sleep.  
+ 1 = Deep sleep."]
     #[inline(always)]
     pub fn sleepdeep(&mut self) -> SLEEPDEEP_W {
         SLEEPDEEP_W { w: self }
     }
-    #[doc = "Bit 1 - Indicates sleep-on-exit when returning from Handler mode to Thread mode:\\n 0 = Do not sleep when returning to Thread mode.\\n 1 = Enter sleep, or deep sleep, on return from an ISR to Thread mode.\\n Setting this bit to 1 enables an interrupt driven application to avoid returning to an empty main application."]
+    #[doc = "Bit 1 - Indicates sleep-on-exit when returning from Handler mode to Thread mode:  
+ 0 = Do not sleep when returning to Thread mode.  
+ 1 = Enter sleep, or deep sleep, on return from an ISR to Thread mode.  
+ Setting this bit to 1 enables an interrupt driven application to avoid returning to an empty main application."]
     #[inline(always)]
     pub fn sleeponexit(&mut self) -> SLEEPONEXIT_W {
         SLEEPONEXIT_W { w: self }

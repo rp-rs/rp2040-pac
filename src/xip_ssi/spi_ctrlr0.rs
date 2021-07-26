@@ -110,7 +110,9 @@ impl<'a> WAIT_CYCLES_W<'a> {
         self.w
     }
 }
-#[doc = "Instruction length (0/4/8/16b)\n\nValue on reset: 0"]
+#[doc = "Instruction length (0/4/8/16b)  
+
+Value on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq)]
 #[repr(u8)]
 pub enum INST_L_A {
@@ -217,7 +219,9 @@ impl<'a> ADDR_L_W<'a> {
         self.w
     }
 }
-#[doc = "Address and instruction transfer format\n\nValue on reset: 0"]
+#[doc = "Address and instruction transfer format  
+
+Value on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq)]
 #[repr(u8)]
 pub enum TRANS_TYPE_A {

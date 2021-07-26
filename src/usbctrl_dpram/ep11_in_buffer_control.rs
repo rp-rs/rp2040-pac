@@ -82,7 +82,10 @@ impl<'a> PID_1_W<'a> {
         self.w
     }
 }
-#[doc = "The number of bytes buffer 1 is offset from buffer 0 in Isochronous mode. Only valid in double buffered mode for an Isochronous endpoint.\\n For a non Isochronous endpoint the offset is always 64 bytes.\n\nValue on reset: 0"]
+#[doc = "The number of bytes buffer 1 is offset from buffer 0 in Isochronous mode. Only valid in double buffered mode for an Isochronous endpoint.  
+ For a non Isochronous endpoint the offset is always 64 bytes.  
+
+Value on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq)]
 #[repr(u8)]
 pub enum DOUBLE_BUFFER_ISO_OFFSET_A {
@@ -387,7 +390,8 @@ impl R {
     pub fn pid_1(&self) -> PID_1_R {
         PID_1_R::new(((self.bits >> 29) & 0x01) != 0)
     }
-    #[doc = "Bits 27:28 - The number of bytes buffer 1 is offset from buffer 0 in Isochronous mode. Only valid in double buffered mode for an Isochronous endpoint.\\n For a non Isochronous endpoint the offset is always 64 bytes."]
+    #[doc = "Bits 27:28 - The number of bytes buffer 1 is offset from buffer 0 in Isochronous mode. Only valid in double buffered mode for an Isochronous endpoint.  
+ For a non Isochronous endpoint the offset is always 64 bytes."]
     #[inline(always)]
     pub fn double_buffer_iso_offset(&self) -> DOUBLE_BUFFER_ISO_OFFSET_R {
         DOUBLE_BUFFER_ISO_OFFSET_R::new(((self.bits >> 27) & 0x03) as u8)
@@ -454,7 +458,8 @@ impl W {
     pub fn pid_1(&mut self) -> PID_1_W {
         PID_1_W { w: self }
     }
-    #[doc = "Bits 27:28 - The number of bytes buffer 1 is offset from buffer 0 in Isochronous mode. Only valid in double buffered mode for an Isochronous endpoint.\\n For a non Isochronous endpoint the offset is always 64 bytes."]
+    #[doc = "Bits 27:28 - The number of bytes buffer 1 is offset from buffer 0 in Isochronous mode. Only valid in double buffered mode for an Isochronous endpoint.  
+ For a non Isochronous endpoint the offset is always 64 bytes."]
     #[inline(always)]
     pub fn double_buffer_iso_offset(&mut self) -> DOUBLE_BUFFER_ISO_OFFSET_W {
         DOUBLE_BUFFER_ISO_OFFSET_W { w: self }

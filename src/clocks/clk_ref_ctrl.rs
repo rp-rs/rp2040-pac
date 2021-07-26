@@ -10,7 +10,9 @@ impl crate::ResetValue for super::CLK_REF_CTRL {
         0
     }
 }
-#[doc = "Selects the auxiliary clock source, will glitch when switching\n\nValue on reset: 0"]
+#[doc = "Selects the auxiliary clock source, will glitch when switching  
+
+Value on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq)]
 #[repr(u8)]
 pub enum AUXSRC_A {
@@ -89,7 +91,9 @@ impl<'a> AUXSRC_W<'a> {
         self.w
     }
 }
-#[doc = "Selects the clock source glitchlessly, can be changed on-the-fly\n\nValue on reset: 0"]
+#[doc = "Selects the clock source glitchlessly, can be changed on-the-fly  
+
+Value on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq)]
 #[repr(u8)]
 pub enum SRC_A {

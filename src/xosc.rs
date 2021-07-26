@@ -5,12 +5,21 @@ pub struct RegisterBlock {
     pub ctrl: CTRL,
     #[doc = "0x04 - Crystal Oscillator Status"]
     pub status: STATUS,
-    #[doc = "0x08 - Crystal Oscillator pause control\\n This is used to save power by pausing the XOSC\\n On power-up this field is initialised to WAKE\\n An invalid write will also select WAKE\\n WARNING: stop the PLLs before selecting dormant mode\\n WARNING: setup the irq before selecting dormant mode"]
+    #[doc = "0x08 - Crystal Oscillator pause control  
+ This is used to save power by pausing the XOSC  
+ On power-up this field is initialised to WAKE  
+ An invalid write will also select WAKE  
+ WARNING: stop the PLLs before selecting dormant mode  
+ WARNING: setup the irq before selecting dormant mode"]
     pub dormant: DORMANT,
     #[doc = "0x0c - Controls the startup delay"]
     pub startup: STARTUP,
 }
-#[doc = "Crystal Oscillator Control\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [ctrl](ctrl) module"]
+#[doc = "Crystal Oscillator Control  
+
+This register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+
+For information about available fields see [ctrl](ctrl) module"]
 pub type CTRL = crate::Reg<u32, _CTRL>;
 #[allow(missing_docs)]
 #[doc(hidden)]
@@ -21,7 +30,11 @@ impl crate::Readable for CTRL {}
 impl crate::Writable for CTRL {}
 #[doc = "Crystal Oscillator Control"]
 pub mod ctrl;
-#[doc = "Crystal Oscillator Status\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [status](status) module"]
+#[doc = "Crystal Oscillator Status  
+
+This register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+
+For information about available fields see [status](status) module"]
 pub type STATUS = crate::Reg<u32, _STATUS>;
 #[allow(missing_docs)]
 #[doc(hidden)]
@@ -32,7 +45,16 @@ impl crate::Readable for STATUS {}
 impl crate::Writable for STATUS {}
 #[doc = "Crystal Oscillator Status"]
 pub mod status;
-#[doc = "Crystal Oscillator pause control\\n This is used to save power by pausing the XOSC\\n On power-up this field is initialised to WAKE\\n An invalid write will also select WAKE\\n WARNING: stop the PLLs before selecting dormant mode\\n WARNING: setup the irq before selecting dormant mode\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [dormant](dormant) module"]
+#[doc = "Crystal Oscillator pause control  
+ This is used to save power by pausing the XOSC  
+ On power-up this field is initialised to WAKE  
+ An invalid write will also select WAKE  
+ WARNING: stop the PLLs before selecting dormant mode  
+ WARNING: setup the irq before selecting dormant mode  
+
+This register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+
+For information about available fields see [dormant](dormant) module"]
 pub type DORMANT = crate::Reg<u32, _DORMANT>;
 #[allow(missing_docs)]
 #[doc(hidden)]
@@ -41,9 +63,18 @@ pub struct _DORMANT;
 impl crate::Readable for DORMANT {}
 #[doc = "`write(|w| ..)` method takes [dormant::W](dormant::W) writer structure"]
 impl crate::Writable for DORMANT {}
-#[doc = "Crystal Oscillator pause control\\n This is used to save power by pausing the XOSC\\n On power-up this field is initialised to WAKE\\n An invalid write will also select WAKE\\n WARNING: stop the PLLs before selecting dormant mode\\n WARNING: setup the irq before selecting dormant mode"]
+#[doc = "Crystal Oscillator pause control  
+ This is used to save power by pausing the XOSC  
+ On power-up this field is initialised to WAKE  
+ An invalid write will also select WAKE  
+ WARNING: stop the PLLs before selecting dormant mode  
+ WARNING: setup the irq before selecting dormant mode"]
 pub mod dormant;
-#[doc = "Controls the startup delay\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [startup](startup) module"]
+#[doc = "Controls the startup delay  
+
+This register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+
+For information about available fields see [startup](startup) module"]
 pub type STARTUP = crate::Reg<u32, _STARTUP>;
 #[allow(missing_docs)]
 #[doc(hidden)]

@@ -25,14 +25,32 @@ impl<'a> SETPEND_W<'a> {
     }
 }
 impl R {
-    #[doc = "Bits 0:31 - Interrupt set-pending bits.\\n Write:\\n 0 = No effect.\\n 1 = Changes interrupt state to pending.\\n Read:\\n 0 = Interrupt is not pending.\\n 1 = Interrupt is pending.\\n Note: Writing 1 to the NVIC_ISPR bit corresponding to:\\n An interrupt that is pending has no effect.\\n A disabled interrupt sets the state of that interrupt to pending."]
+    #[doc = "Bits 0:31 - Interrupt set-pending bits.  
+ Write:  
+ 0 = No effect.  
+ 1 = Changes interrupt state to pending.  
+ Read:  
+ 0 = Interrupt is not pending.  
+ 1 = Interrupt is pending.  
+ Note: Writing 1 to the NVIC_ISPR bit corresponding to:  
+ An interrupt that is pending has no effect.  
+ A disabled interrupt sets the state of that interrupt to pending."]
     #[inline(always)]
     pub fn setpend(&self) -> SETPEND_R {
         SETPEND_R::new((self.bits & 0xffff_ffff) as u32)
     }
 }
 impl W {
-    #[doc = "Bits 0:31 - Interrupt set-pending bits.\\n Write:\\n 0 = No effect.\\n 1 = Changes interrupt state to pending.\\n Read:\\n 0 = Interrupt is not pending.\\n 1 = Interrupt is pending.\\n Note: Writing 1 to the NVIC_ISPR bit corresponding to:\\n An interrupt that is pending has no effect.\\n A disabled interrupt sets the state of that interrupt to pending."]
+    #[doc = "Bits 0:31 - Interrupt set-pending bits.  
+ Write:  
+ 0 = No effect.  
+ 1 = Changes interrupt state to pending.  
+ Read:  
+ 0 = Interrupt is not pending.  
+ 1 = Interrupt is pending.  
+ Note: Writing 1 to the NVIC_ISPR bit corresponding to:  
+ An interrupt that is pending has no effect.  
+ A disabled interrupt sets the state of that interrupt to pending."]
     #[inline(always)]
     pub fn setpend(&mut self) -> SETPEND_W {
         SETPEND_W { w: self }

@@ -16,7 +16,11 @@ pub struct RegisterBlock {
     #[doc = "0x18 - Pad control register"]
     pub gpio_qspi_ss: GPIO_QSPI_SS,
 }
-#[doc = "Voltage select. Per bank control\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [voltage_select](voltage_select) module"]
+#[doc = "Voltage select. Per bank control  
+
+This register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+
+For information about available fields see [voltage_select](voltage_select) module"]
 pub type VOLTAGE_SELECT = crate::Reg<u32, _VOLTAGE_SELECT>;
 #[allow(missing_docs)]
 #[doc(hidden)]
@@ -27,7 +31,11 @@ impl crate::Readable for VOLTAGE_SELECT {}
 impl crate::Writable for VOLTAGE_SELECT {}
 #[doc = "Voltage select. Per bank control"]
 pub mod voltage_select;
-#[doc = "Pad control register\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [gpio_qspi_sclk](gpio_qspi_sclk) module"]
+#[doc = "Pad control register  
+
+This register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+
+For information about available fields see [gpio_qspi_sclk](gpio_qspi_sclk) module"]
 pub type GPIO_QSPI_SCLK = crate::Reg<u32, _GPIO_QSPI_SCLK>;
 #[allow(missing_docs)]
 #[doc(hidden)]
@@ -38,7 +46,11 @@ impl crate::Readable for GPIO_QSPI_SCLK {}
 impl crate::Writable for GPIO_QSPI_SCLK {}
 #[doc = "Pad control register"]
 pub mod gpio_qspi_sclk;
-#[doc = "Pad control register\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [gpio_qspi_sd0](gpio_qspi_sd0) module"]
+#[doc = "Pad control register  
+
+This register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+
+For information about available fields see [gpio_qspi_sd0](gpio_qspi_sd0) module"]
 pub type GPIO_QSPI_SD0 = crate::Reg<u32, _GPIO_QSPI_SD0>;
 #[allow(missing_docs)]
 #[doc(hidden)]
@@ -49,7 +61,11 @@ impl crate::Readable for GPIO_QSPI_SD0 {}
 impl crate::Writable for GPIO_QSPI_SD0 {}
 #[doc = "Pad control register"]
 pub mod gpio_qspi_sd0;
-#[doc = "Pad control register\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [gpio_qspi_sd1](gpio_qspi_sd1) module"]
+#[doc = "Pad control register  
+
+This register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+
+For information about available fields see [gpio_qspi_sd1](gpio_qspi_sd1) module"]
 pub type GPIO_QSPI_SD1 = crate::Reg<u32, _GPIO_QSPI_SD1>;
 #[allow(missing_docs)]
 #[doc(hidden)]
@@ -60,7 +76,11 @@ impl crate::Readable for GPIO_QSPI_SD1 {}
 impl crate::Writable for GPIO_QSPI_SD1 {}
 #[doc = "Pad control register"]
 pub mod gpio_qspi_sd1;
-#[doc = "Pad control register\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [gpio_qspi_sd2](gpio_qspi_sd2) module"]
+#[doc = "Pad control register  
+
+This register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+
+For information about available fields see [gpio_qspi_sd2](gpio_qspi_sd2) module"]
 pub type GPIO_QSPI_SD2 = crate::Reg<u32, _GPIO_QSPI_SD2>;
 #[allow(missing_docs)]
 #[doc(hidden)]
@@ -71,7 +91,11 @@ impl crate::Readable for GPIO_QSPI_SD2 {}
 impl crate::Writable for GPIO_QSPI_SD2 {}
 #[doc = "Pad control register"]
 pub mod gpio_qspi_sd2;
-#[doc = "Pad control register\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [gpio_qspi_sd3](gpio_qspi_sd3) module"]
+#[doc = "Pad control register  
+
+This register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+
+For information about available fields see [gpio_qspi_sd3](gpio_qspi_sd3) module"]
 pub type GPIO_QSPI_SD3 = crate::Reg<u32, _GPIO_QSPI_SD3>;
 #[allow(missing_docs)]
 #[doc(hidden)]
@@ -82,7 +106,11 @@ impl crate::Readable for GPIO_QSPI_SD3 {}
 impl crate::Writable for GPIO_QSPI_SD3 {}
 #[doc = "Pad control register"]
 pub mod gpio_qspi_sd3;
-#[doc = "Pad control register\n\nThis register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [gpio_qspi_ss](gpio_qspi_ss) module"]
+#[doc = "Pad control register  
+
+This register you can [`read`](crate::generic::Reg::read), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+
+For information about available fields see [gpio_qspi_ss](gpio_qspi_ss) module"]
 pub type GPIO_QSPI_SS = crate::Reg<u32, _GPIO_QSPI_SS>;
 #[allow(missing_docs)]
 #[doc(hidden)]

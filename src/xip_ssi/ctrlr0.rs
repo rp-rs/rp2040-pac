@@ -34,7 +34,9 @@ impl<'a> SSTE_W<'a> {
         self.w
     }
 }
-#[doc = "SPI frame format\n\nValue on reset: 0"]
+#[doc = "SPI frame format  
+
+Value on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq)]
 #[repr(u8)]
 pub enum SPI_FRF_A {
@@ -189,7 +191,9 @@ impl<'a> SLV_OE_W<'a> {
         self.w
     }
 }
-#[doc = "Transfer mode\n\nValue on reset: 0"]
+#[doc = "Transfer mode  
+
+Value on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq)]
 #[repr(u8)]
 pub enum TMOD_A {
@@ -369,12 +373,14 @@ impl R {
     pub fn spi_frf(&self) -> SPI_FRF_R {
         SPI_FRF_R::new(((self.bits >> 21) & 0x03) as u8)
     }
-    #[doc = "Bits 16:20 - Data frame size in 32b transfer mode\\n Value of n -> n+1 clocks per frame."]
+    #[doc = "Bits 16:20 - Data frame size in 32b transfer mode  
+ Value of n -> n+1 clocks per frame."]
     #[inline(always)]
     pub fn dfs_32(&self) -> DFS_32_R {
         DFS_32_R::new(((self.bits >> 16) & 0x1f) as u8)
     }
-    #[doc = "Bits 12:15 - Control frame size\\n Value of n -> n+1 clocks per frame."]
+    #[doc = "Bits 12:15 - Control frame size  
+ Value of n -> n+1 clocks per frame."]
     #[inline(always)]
     pub fn cfs(&self) -> CFS_R {
         CFS_R::new(((self.bits >> 12) & 0x0f) as u8)
@@ -426,12 +432,14 @@ impl W {
     pub fn spi_frf(&mut self) -> SPI_FRF_W {
         SPI_FRF_W { w: self }
     }
-    #[doc = "Bits 16:20 - Data frame size in 32b transfer mode\\n Value of n -> n+1 clocks per frame."]
+    #[doc = "Bits 16:20 - Data frame size in 32b transfer mode  
+ Value of n -> n+1 clocks per frame."]
     #[inline(always)]
     pub fn dfs_32(&mut self) -> DFS_32_W {
         DFS_32_W { w: self }
     }
-    #[doc = "Bits 12:15 - Control frame size\\n Value of n -> n+1 clocks per frame."]
+    #[doc = "Bits 12:15 - Control frame size  
+ Value of n -> n+1 clocks per frame."]
     #[inline(always)]
     pub fn cfs(&mut self) -> CFS_W {
         CFS_W { w: self }

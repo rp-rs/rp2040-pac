@@ -58,7 +58,9 @@ impl<'a> KILL_W<'a> {
         self.w
     }
 }
-#[doc = "Selects the auxiliary clock source, will glitch when switching\n\nValue on reset: 0"]
+#[doc = "Selects the auxiliary clock source, will glitch when switching  
+
+Value on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq)]
 #[repr(u8)]
 pub enum AUXSRC_A {

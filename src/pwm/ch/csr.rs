@@ -58,7 +58,9 @@ impl<'a> PH_RET_W<'a> {
         self.w
     }
 }
-#[doc = "\n\nValue on reset: 0"]
+#[doc = "  
+
+Value on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq)]
 #[repr(u8)]
 pub enum DIVMODE_A {
@@ -248,12 +250,15 @@ impl<'a> EN_W<'a> {
     }
 }
 impl R {
-    #[doc = "Bit 7 - Advance the phase of the counter by 1 count, while it is running.\\n Self-clearing. Write a 1, and poll until low. Counter must be running\\n at less than full speed (div_int + div_frac / 16 > 1)"]
+    #[doc = "Bit 7 - Advance the phase of the counter by 1 count, while it is running.  
+ Self-clearing. Write a 1, and poll until low. Counter must be running  
+ at less than full speed (div_int + div_frac / 16 > 1)"]
     #[inline(always)]
     pub fn ph_adv(&self) -> PH_ADV_R {
         PH_ADV_R::new(((self.bits >> 7) & 0x01) != 0)
     }
-    #[doc = "Bit 6 - Retard the phase of the counter by 1 count, while it is running.\\n Self-clearing. Write a 1, and poll until low. Counter must be running."]
+    #[doc = "Bit 6 - Retard the phase of the counter by 1 count, while it is running.  
+ Self-clearing. Write a 1, and poll until low. Counter must be running."]
     #[inline(always)]
     pub fn ph_ret(&self) -> PH_RET_R {
         PH_RET_R::new(((self.bits >> 6) & 0x01) != 0)
@@ -285,12 +290,15 @@ impl R {
     }
 }
 impl W {
-    #[doc = "Bit 7 - Advance the phase of the counter by 1 count, while it is running.\\n Self-clearing. Write a 1, and poll until low. Counter must be running\\n at less than full speed (div_int + div_frac / 16 > 1)"]
+    #[doc = "Bit 7 - Advance the phase of the counter by 1 count, while it is running.  
+ Self-clearing. Write a 1, and poll until low. Counter must be running  
+ at less than full speed (div_int + div_frac / 16 > 1)"]
     #[inline(always)]
     pub fn ph_adv(&mut self) -> PH_ADV_W {
         PH_ADV_W { w: self }
     }
-    #[doc = "Bit 6 - Retard the phase of the counter by 1 count, while it is running.\\n Self-clearing. Write a 1, and poll until low. Counter must be running."]
+    #[doc = "Bit 6 - Retard the phase of the counter by 1 count, while it is running.  
+ Self-clearing. Write a 1, and poll until low. Counter must be running."]
     #[inline(always)]
     pub fn ph_ret(&mut self) -> PH_RET_W {
         PH_RET_W { w: self }

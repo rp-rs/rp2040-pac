@@ -16,12 +16,14 @@ impl R {
     pub fn implementer(&self) -> IMPLEMENTER_R {
         IMPLEMENTER_R::new(((self.bits >> 24) & 0xff) as u8)
     }
-    #[doc = "Bits 20:23 - Major revision number n in the rnpm revision status:\\n 0x0 = Revision 0."]
+    #[doc = "Bits 20:23 - Major revision number n in the rnpm revision status:  
+ 0x0 = Revision 0."]
     #[inline(always)]
     pub fn variant(&self) -> VARIANT_R {
         VARIANT_R::new(((self.bits >> 20) & 0x0f) as u8)
     }
-    #[doc = "Bits 16:19 - Constant that defines the architecture of the processor:\\n 0xC = ARMv6-M architecture."]
+    #[doc = "Bits 16:19 - Constant that defines the architecture of the processor:  
+ 0xC = ARMv6-M architecture."]
     #[inline(always)]
     pub fn architecture(&self) -> ARCHITECTURE_R {
         ARCHITECTURE_R::new(((self.bits >> 16) & 0x0f) as u8)
@@ -31,7 +33,8 @@ impl R {
     pub fn partno(&self) -> PARTNO_R {
         PARTNO_R::new(((self.bits >> 4) & 0x0fff) as u16)
     }
-    #[doc = "Bits 0:3 - Minor revision number m in the rnpm revision status:\\n 0x1 = Patch 1."]
+    #[doc = "Bits 0:3 - Minor revision number m in the rnpm revision status:  
+ 0x1 = Patch 1."]
     #[inline(always)]
     pub fn revision(&self) -> REVISION_R {
         REVISION_R::new((self.bits & 0x0f) as u8)

@@ -1,6 +1,8 @@
 #[doc = "Reader of register IC_STATUS"]
 pub type R = crate::R<u32, super::IC_STATUS>;
-#[doc = "Slave FSM Activity Status. When the Slave Finite State Machine (FSM) is not in the IDLE state, this bit is set. - 0: Slave FSM is in IDLE state so the Slave part of DW_apb_i2c is not Active - 1: Slave FSM is not in IDLE state so the Slave part of DW_apb_i2c is Active Reset value: 0x0\n\nValue on reset: 0"]
+#[doc = "Slave FSM Activity Status. When the Slave Finite State Machine (FSM) is not in the IDLE state, this bit is set. - 0: Slave FSM is in IDLE state so the Slave part of DW_apb_i2c is not Active - 1: Slave FSM is not in IDLE state so the Slave part of DW_apb_i2c is Active Reset value: 0x0  
+
+Value on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum SLV_ACTIVITY_A {
     #[doc = "0: Slave is idle"]
@@ -36,7 +38,11 @@ impl SLV_ACTIVITY_R {
         *self == SLV_ACTIVITY_A::ACTIVE
     }
 }
-#[doc = "Master FSM Activity Status. When the Master Finite State Machine (FSM) is not in the IDLE state, this bit is set. - 0: Master FSM is in IDLE state so the Master part of DW_apb_i2c is not Active - 1: Master FSM is not in IDLE state so the Master part of DW_apb_i2c is Active Note: IC_STATUS\\[0\\]-that is, ACTIVITY bit-is the OR of SLV_ACTIVITY and MST_ACTIVITY bits.\\n\\n Reset value: 0x0\n\nValue on reset: 0"]
+#[doc = "Master FSM Activity Status. When the Master Finite State Machine (FSM) is not in the IDLE state, this bit is set. - 0: Master FSM is in IDLE state so the Master part of DW_apb_i2c is not Active - 1: Master FSM is not in IDLE state so the Master part of DW_apb_i2c is Active Note: IC_STATUS\\[0\\]-that is, ACTIVITY bit-is the OR of SLV_ACTIVITY and MST_ACTIVITY bits.  
+
+ Reset value: 0x0  
+
+Value on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum MST_ACTIVITY_A {
     #[doc = "0: Master is idle"]
@@ -72,7 +78,9 @@ impl MST_ACTIVITY_R {
         *self == MST_ACTIVITY_A::ACTIVE
     }
 }
-#[doc = "Receive FIFO Completely Full. When the receive FIFO is completely full, this bit is set. When the receive FIFO contains one or more empty location, this bit is cleared. - 0: Receive FIFO is not full - 1: Receive FIFO is full Reset value: 0x0\n\nValue on reset: 0"]
+#[doc = "Receive FIFO Completely Full. When the receive FIFO is completely full, this bit is set. When the receive FIFO contains one or more empty location, this bit is cleared. - 0: Receive FIFO is not full - 1: Receive FIFO is full Reset value: 0x0  
+
+Value on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum RFF_A {
     #[doc = "0: Rx FIFO not full"]
@@ -108,7 +116,9 @@ impl RFF_R {
         *self == RFF_A::FULL
     }
 }
-#[doc = "Receive FIFO Not Empty. This bit is set when the receive FIFO contains one or more entries; it is cleared when the receive FIFO is empty. - 0: Receive FIFO is empty - 1: Receive FIFO is not empty Reset value: 0x0\n\nValue on reset: 0"]
+#[doc = "Receive FIFO Not Empty. This bit is set when the receive FIFO contains one or more entries; it is cleared when the receive FIFO is empty. - 0: Receive FIFO is empty - 1: Receive FIFO is not empty Reset value: 0x0  
+
+Value on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum RFNE_A {
     #[doc = "0: Rx FIFO is empty"]
@@ -144,7 +154,9 @@ impl RFNE_R {
         *self == RFNE_A::NOT_EMPTY
     }
 }
-#[doc = "Transmit FIFO Completely Empty. When the transmit FIFO is completely empty, this bit is set. When it contains one or more valid entries, this bit is cleared. This bit field does not request an interrupt. - 0: Transmit FIFO is not empty - 1: Transmit FIFO is empty Reset value: 0x1\n\nValue on reset: 1"]
+#[doc = "Transmit FIFO Completely Empty. When the transmit FIFO is completely empty, this bit is set. When it contains one or more valid entries, this bit is cleared. This bit field does not request an interrupt. - 0: Transmit FIFO is not empty - 1: Transmit FIFO is empty Reset value: 0x1  
+
+Value on reset: 1"]
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum TFE_A {
     #[doc = "0: Tx FIFO not empty"]
@@ -180,7 +192,9 @@ impl TFE_R {
         *self == TFE_A::EMPTY
     }
 }
-#[doc = "Transmit FIFO Not Full. Set when the transmit FIFO contains one or more empty locations, and is cleared when the FIFO is full. - 0: Transmit FIFO is full - 1: Transmit FIFO is not full Reset value: 0x1\n\nValue on reset: 1"]
+#[doc = "Transmit FIFO Not Full. Set when the transmit FIFO contains one or more empty locations, and is cleared when the FIFO is full. - 0: Transmit FIFO is full - 1: Transmit FIFO is not full Reset value: 0x1  
+
+Value on reset: 1"]
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum TFNF_A {
     #[doc = "0: Tx FIFO is full"]
@@ -216,7 +230,9 @@ impl TFNF_R {
         *self == TFNF_A::NOT_FULL
     }
 }
-#[doc = "I2C Activity Status. Reset value: 0x0\n\nValue on reset: 0"]
+#[doc = "I2C Activity Status. Reset value: 0x0  
+
+Value on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq)]
 pub enum ACTIVITY_A {
     #[doc = "0: I2C is idle"]
@@ -258,7 +274,9 @@ impl R {
     pub fn slv_activity(&self) -> SLV_ACTIVITY_R {
         SLV_ACTIVITY_R::new(((self.bits >> 6) & 0x01) != 0)
     }
-    #[doc = "Bit 5 - Master FSM Activity Status. When the Master Finite State Machine (FSM) is not in the IDLE state, this bit is set. - 0: Master FSM is in IDLE state so the Master part of DW_apb_i2c is not Active - 1: Master FSM is not in IDLE state so the Master part of DW_apb_i2c is Active Note: IC_STATUS\\[0\\]-that is, ACTIVITY bit-is the OR of SLV_ACTIVITY and MST_ACTIVITY bits.\\n\\n Reset value: 0x0"]
+    #[doc = "Bit 5 - Master FSM Activity Status. When the Master Finite State Machine (FSM) is not in the IDLE state, this bit is set. - 0: Master FSM is in IDLE state so the Master part of DW_apb_i2c is not Active - 1: Master FSM is not in IDLE state so the Master part of DW_apb_i2c is Active Note: IC_STATUS\\[0\\]-that is, ACTIVITY bit-is the OR of SLV_ACTIVITY and MST_ACTIVITY bits.  
+
+ Reset value: 0x0"]
     #[inline(always)]
     pub fn mst_activity(&self) -> MST_ACTIVITY_R {
         MST_ACTIVITY_R::new(((self.bits >> 5) & 0x01) != 0)

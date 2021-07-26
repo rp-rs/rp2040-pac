@@ -10,7 +10,9 @@ impl crate::ResetValue for super::GPIO_CTRL {
         0x1f
     }
 }
-#[doc = "\n\nValue on reset: 0"]
+#[doc = "  
+
+Value on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq)]
 #[repr(u8)]
 pub enum IRQOVER_A {
@@ -103,7 +105,9 @@ impl<'a> IRQOVER_W<'a> {
         self.w
     }
 }
-#[doc = "\n\nValue on reset: 0"]
+#[doc = "  
+
+Value on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq)]
 #[repr(u8)]
 pub enum INOVER_A {
@@ -196,7 +200,9 @@ impl<'a> INOVER_W<'a> {
         self.w
     }
 }
-#[doc = "\n\nValue on reset: 0"]
+#[doc = "  
+
+Value on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq)]
 #[repr(u8)]
 pub enum OEOVER_A {
@@ -289,7 +295,9 @@ impl<'a> OEOVER_W<'a> {
         self.w
     }
 }
-#[doc = "\n\nValue on reset: 0"]
+#[doc = "  
+
+Value on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq)]
 #[repr(u8)]
 pub enum OUTOVER_A {
@@ -382,7 +390,10 @@ impl<'a> OUTOVER_W<'a> {
         self.w
     }
 }
-#[doc = "0-31 -> selects pin function according to the gpio table\\n 31 == NULL\n\nValue on reset: 31"]
+#[doc = "0-31 -> selects pin function according to the gpio table  
+ 31 == NULL  
+
+Value on reset: 31"]
 #[derive(Clone, Copy, Debug, PartialEq)]
 #[repr(u8)]
 pub enum FUNCSEL_A {
@@ -482,7 +493,8 @@ impl R {
     pub fn outover(&self) -> OUTOVER_R {
         OUTOVER_R::new(((self.bits >> 8) & 0x03) as u8)
     }
-    #[doc = "Bits 0:4 - 0-31 -> selects pin function according to the gpio table\\n 31 == NULL"]
+    #[doc = "Bits 0:4 - 0-31 -> selects pin function according to the gpio table  
+ 31 == NULL"]
     #[inline(always)]
     pub fn funcsel(&self) -> FUNCSEL_R {
         FUNCSEL_R::new((self.bits & 0x1f) as u8)
@@ -509,7 +521,8 @@ impl W {
     pub fn outover(&mut self) -> OUTOVER_W {
         OUTOVER_W { w: self }
     }
-    #[doc = "Bits 0:4 - 0-31 -> selects pin function according to the gpio table\\n 31 == NULL"]
+    #[doc = "Bits 0:4 - 0-31 -> selects pin function according to the gpio table  
+ 31 == NULL"]
     #[inline(always)]
     pub fn funcsel(&mut self) -> FUNCSEL_W {
         FUNCSEL_W { w: self }

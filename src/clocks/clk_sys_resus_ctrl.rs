@@ -112,7 +112,8 @@ impl R {
     pub fn enable(&self) -> ENABLE_R {
         ENABLE_R::new(((self.bits >> 8) & 0x01) != 0)
     }
-    #[doc = "Bits 0:7 - This is expressed as a number of clk_ref cycles\\n and must be >= 2x clk_ref_freq/min_clk_tst_freq"]
+    #[doc = "Bits 0:7 - This is expressed as a number of clk_ref cycles  
+ and must be >= 2x clk_ref_freq/min_clk_tst_freq"]
     #[inline(always)]
     pub fn timeout(&self) -> TIMEOUT_R {
         TIMEOUT_R::new((self.bits & 0xff) as u8)
@@ -134,7 +135,8 @@ impl W {
     pub fn enable(&mut self) -> ENABLE_W {
         ENABLE_W { w: self }
     }
-    #[doc = "Bits 0:7 - This is expressed as a number of clk_ref cycles\\n and must be >= 2x clk_ref_freq/min_clk_tst_freq"]
+    #[doc = "Bits 0:7 - This is expressed as a number of clk_ref cycles  
+ and must be >= 2x clk_ref_freq/min_clk_tst_freq"]
     #[inline(always)]
     pub fn timeout(&mut self) -> TIMEOUT_W {
         TIMEOUT_W { w: self }

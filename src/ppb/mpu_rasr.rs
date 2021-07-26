@@ -77,7 +77,14 @@ impl<'a> ENABLE_W<'a> {
     }
 }
 impl R {
-    #[doc = "Bits 16:31 - The MPU Region Attribute field. Use to define the region attribute control.\\n 28 = XN: Instruction access disable bit:\\n 0 = Instruction fetches enabled.\\n 1 = Instruction fetches disabled.\\n 26:24 = AP: Access permission field\\n 18 = S: Shareable bit\\n 17 = C: Cacheable bit\\n 16 = B: Bufferable bit"]
+    #[doc = "Bits 16:31 - The MPU Region Attribute field. Use to define the region attribute control.  
+ 28 = XN: Instruction access disable bit:  
+ 0 = Instruction fetches enabled.  
+ 1 = Instruction fetches disabled.  
+ 26:24 = AP: Access permission field  
+ 18 = S: Shareable bit  
+ 17 = C: Cacheable bit  
+ 16 = B: Bufferable bit"]
     #[inline(always)]
     pub fn attrs(&self) -> ATTRS_R {
         ATTRS_R::new(((self.bits >> 16) & 0xffff) as u16)
@@ -99,7 +106,14 @@ impl R {
     }
 }
 impl W {
-    #[doc = "Bits 16:31 - The MPU Region Attribute field. Use to define the region attribute control.\\n 28 = XN: Instruction access disable bit:\\n 0 = Instruction fetches enabled.\\n 1 = Instruction fetches disabled.\\n 26:24 = AP: Access permission field\\n 18 = S: Shareable bit\\n 17 = C: Cacheable bit\\n 16 = B: Bufferable bit"]
+    #[doc = "Bits 16:31 - The MPU Region Attribute field. Use to define the region attribute control.  
+ 28 = XN: Instruction access disable bit:  
+ 0 = Instruction fetches enabled.  
+ 1 = Instruction fetches disabled.  
+ 26:24 = AP: Access permission field  
+ 18 = S: Shareable bit  
+ 17 = C: Cacheable bit  
+ 16 = B: Bufferable bit"]
     #[inline(always)]
     pub fn attrs(&mut self) -> ATTRS_W {
         ATTRS_W { w: self }

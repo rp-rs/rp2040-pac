@@ -17,7 +17,9 @@ impl R {
     pub fn sm_count(&self) -> SM_COUNT_R {
         SM_COUNT_R::new(((self.bits >> 8) & 0x0f) as u8)
     }
-    #[doc = "Bits 0:5 - The depth of the state machine TX/RX FIFOs, measured in words.\\n Joining fifos via SHIFTCTRL_FJOIN gives one FIFO with double\\n this depth."]
+    #[doc = "Bits 0:5 - The depth of the state machine TX/RX FIFOs, measured in words.  
+ Joining fifos via SHIFTCTRL_FJOIN gives one FIFO with double  
+ this depth."]
     #[inline(always)]
     pub fn fifo_depth(&self) -> FIFO_DEPTH_R {
         FIFO_DEPTH_R::new((self.bits & 0x3f) as u8)

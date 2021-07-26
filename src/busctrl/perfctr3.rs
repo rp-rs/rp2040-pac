@@ -25,14 +25,18 @@ impl<'a> PERFCTR3_W<'a> {
     }
 }
 impl R {
-    #[doc = "Bits 0:23 - Busfabric saturating performance counter 3\\n Count some event signal from the busfabric arbiters.\\n Write any value to clear. Select an event to count using PERFSEL3"]
+    #[doc = "Bits 0:23 - Busfabric saturating performance counter 3  
+ Count some event signal from the busfabric arbiters.  
+ Write any value to clear. Select an event to count using PERFSEL3"]
     #[inline(always)]
     pub fn perfctr3(&self) -> PERFCTR3_R {
         PERFCTR3_R::new((self.bits & 0x00ff_ffff) as u32)
     }
 }
 impl W {
-    #[doc = "Bits 0:23 - Busfabric saturating performance counter 3\\n Count some event signal from the busfabric arbiters.\\n Write any value to clear. Select an event to count using PERFSEL3"]
+    #[doc = "Bits 0:23 - Busfabric saturating performance counter 3  
+ Count some event signal from the busfabric arbiters.  
+ Write any value to clear. Select an event to count using PERFSEL3"]
     #[inline(always)]
     pub fn perfctr3(&mut self) -> PERFCTR3_W {
         PERFCTR3_W { w: self }
