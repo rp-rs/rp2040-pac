@@ -126,6 +126,17 @@ ROSC:
           bitWidth: 1
           access: "read-only"
 
+# SPINLOCK0-31 are read-only in the SVD and datasheet, but used as read-write
+# in the example code (see https://github.com/raspberrypi/pico-feedback/issues/162).
+SIO:
+  _modify:
+      "SPINLOCK[0123456789]":
+        access: read-write
+      "SPINLOCK[12][0123456789]":
+        access: read-write
+      "SPINLOCK3[01]":
+        access: read-write
+
 XOSC:
   _delete:
     # RP2040-E7: ROSC and XOSC COUNT registers are unreliable
