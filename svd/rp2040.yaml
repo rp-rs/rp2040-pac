@@ -89,6 +89,11 @@ USBCTRL_REGS:
     _modify:
       "EP*":
         access: read-write
+  # CONNECTED is implied to be read-write https://github.com/raspberrypi/pico-feedback/issues/110
+  SIE_STATUS:
+    _modify:
+      CONNECTED:
+          access: "read-write"
 
 ROSC:
   _delete:

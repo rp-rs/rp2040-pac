@@ -36,7 +36,11 @@ for ((i = 0; i < ${#alphaTargets[@]}; i++)); do
 
   # This will replace the parts that need to be sorted.
   toReplace=$(cat src/lib.rs | grep "${alphaTargets[$i]}" -A $blockEndLine | tail -n $blockEndLine)
-  alphabetized=$(echo "$toReplace" | sed '$!N;s/\n/ /' | sort | sed -E 's/\s{5}/\n    /')
+  if [ "$(uname)" == "Darwin" ]; then
+    alphabetized=$(echo "$toReplace" | sed '$!N;s/\n/ /' | sort | sed 's/     /\n    /')
+  else
+    alphabetized=$(echo "$toReplace" | sed '$!N;s/\n/ /' | sort | sed -E 's/\s{5}/\n    /')
+  fi
 
   # Grab the parts that we aren't sorting
   libSrcHead=$(cat src/lib.rs | head -n $blockStart)
