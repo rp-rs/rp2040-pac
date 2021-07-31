@@ -30159,7 +30159,7 @@
             If core 0 and core 1 attempt to claim the same lock simultaneously, core 0 wins.\n
             The value returned on success is 0x1 &lt;&lt; lock number.</description>
           <addressOffset>0x0100</addressOffset>
-          <access>read-only</access>
+          <access>read-write</access>
           <resetValue>0x00000000</resetValue>
         </register>
         <register>
@@ -30171,7 +30171,7 @@
             If core 0 and core 1 attempt to claim the same lock simultaneously, core 0 wins.\n
             The value returned on success is 0x1 &lt;&lt; lock number.</description>
           <addressOffset>0x0104</addressOffset>
-          <access>read-only</access>
+          <access>read-write</access>
           <resetValue>0x00000000</resetValue>
         </register>
         <register>
@@ -30183,7 +30183,7 @@
             If core 0 and core 1 attempt to claim the same lock simultaneously, core 0 wins.\n
             The value returned on success is 0x1 &lt;&lt; lock number.</description>
           <addressOffset>0x0108</addressOffset>
-          <access>read-only</access>
+          <access>read-write</access>
           <resetValue>0x00000000</resetValue>
         </register>
         <register>
@@ -30195,7 +30195,7 @@
             If core 0 and core 1 attempt to claim the same lock simultaneously, core 0 wins.\n
             The value returned on success is 0x1 &lt;&lt; lock number.</description>
           <addressOffset>0x010c</addressOffset>
-          <access>read-only</access>
+          <access>read-write</access>
           <resetValue>0x00000000</resetValue>
         </register>
         <register>
@@ -30207,7 +30207,7 @@
             If core 0 and core 1 attempt to claim the same lock simultaneously, core 0 wins.\n
             The value returned on success is 0x1 &lt;&lt; lock number.</description>
           <addressOffset>0x0110</addressOffset>
-          <access>read-only</access>
+          <access>read-write</access>
           <resetValue>0x00000000</resetValue>
         </register>
         <register>
@@ -30219,7 +30219,7 @@
             If core 0 and core 1 attempt to claim the same lock simultaneously, core 0 wins.\n
             The value returned on success is 0x1 &lt;&lt; lock number.</description>
           <addressOffset>0x0114</addressOffset>
-          <access>read-only</access>
+          <access>read-write</access>
           <resetValue>0x00000000</resetValue>
         </register>
         <register>
@@ -30231,7 +30231,7 @@
             If core 0 and core 1 attempt to claim the same lock simultaneously, core 0 wins.\n
             The value returned on success is 0x1 &lt;&lt; lock number.</description>
           <addressOffset>0x0118</addressOffset>
-          <access>read-only</access>
+          <access>read-write</access>
           <resetValue>0x00000000</resetValue>
         </register>
         <register>
@@ -30243,7 +30243,7 @@
             If core 0 and core 1 attempt to claim the same lock simultaneously, core 0 wins.\n
             The value returned on success is 0x1 &lt;&lt; lock number.</description>
           <addressOffset>0x011c</addressOffset>
-          <access>read-only</access>
+          <access>read-write</access>
           <resetValue>0x00000000</resetValue>
         </register>
         <register>
@@ -30255,7 +30255,7 @@
             If core 0 and core 1 attempt to claim the same lock simultaneously, core 0 wins.\n
             The value returned on success is 0x1 &lt;&lt; lock number.</description>
           <addressOffset>0x0120</addressOffset>
-          <access>read-only</access>
+          <access>read-write</access>
           <resetValue>0x00000000</resetValue>
         </register>
         <register>
@@ -30267,7 +30267,7 @@
             If core 0 and core 1 attempt to claim the same lock simultaneously, core 0 wins.\n
             The value returned on success is 0x1 &lt;&lt; lock number.</description>
           <addressOffset>0x0124</addressOffset>
-          <access>read-only</access>
+          <access>read-write</access>
           <resetValue>0x00000000</resetValue>
         </register>
         <register>
@@ -30279,7 +30279,7 @@
             If core 0 and core 1 attempt to claim the same lock simultaneously, core 0 wins.\n
             The value returned on success is 0x1 &lt;&lt; lock number.</description>
           <addressOffset>0x0128</addressOffset>
-          <access>read-only</access>
+          <access>read-write</access>
           <resetValue>0x00000000</resetValue>
         </register>
         <register>
@@ -30291,7 +30291,7 @@
             If core 0 and core 1 attempt to claim the same lock simultaneously, core 0 wins.\n
             The value returned on success is 0x1 &lt;&lt; lock number.</description>
           <addressOffset>0x012c</addressOffset>
-          <access>read-only</access>
+          <access>read-write</access>
           <resetValue>0x00000000</resetValue>
         </register>
         <register>
@@ -30303,7 +30303,7 @@
             If core 0 and core 1 attempt to claim the same lock simultaneously, core 0 wins.\n
             The value returned on success is 0x1 &lt;&lt; lock number.</description>
           <addressOffset>0x0130</addressOffset>
-          <access>read-only</access>
+          <access>read-write</access>
           <resetValue>0x00000000</resetValue>
         </register>
         <register>
@@ -30315,7 +30315,7 @@
             If core 0 and core 1 attempt to claim the same lock simultaneously, core 0 wins.\n
             The value returned on success is 0x1 &lt;&lt; lock number.</description>
           <addressOffset>0x0134</addressOffset>
-          <access>read-only</access>
+          <access>read-write</access>
           <resetValue>0x00000000</resetValue>
         </register>
         <register>
@@ -30327,7 +30327,7 @@
             If core 0 and core 1 attempt to claim the same lock simultaneously, core 0 wins.\n
             The value returned on success is 0x1 &lt;&lt; lock number.</description>
           <addressOffset>0x0138</addressOffset>
-          <access>read-only</access>
+          <access>read-write</access>
           <resetValue>0x00000000</resetValue>
         </register>
         <register>
@@ -30339,7 +30339,7 @@
             If core 0 and core 1 attempt to claim the same lock simultaneously, core 0 wins.\n
             The value returned on success is 0x1 &lt;&lt; lock number.</description>
           <addressOffset>0x013c</addressOffset>
-          <access>read-only</access>
+          <access>read-write</access>
           <resetValue>0x00000000</resetValue>
         </register>
         <register>
@@ -30351,7 +30351,7 @@
             If core 0 and core 1 attempt to claim the same lock simultaneously, core 0 wins.\n
             The value returned on success is 0x1 &lt;&lt; lock number.</description>
           <addressOffset>0x0140</addressOffset>
-          <access>read-only</access>
+          <access>read-write</access>
           <resetValue>0x00000000</resetValue>
         </register>
         <register>
@@ -30363,7 +30363,7 @@
             If core 0 and core 1 attempt to claim the same lock simultaneously, core 0 wins.\n
             The value returned on success is 0x1 &lt;&lt; lock number.</description>
           <addressOffset>0x0144</addressOffset>
-          <access>read-only</access>
+          <access>read-write</access>
           <resetValue>0x00000000</resetValue>
         </register>
         <register>
@@ -30375,7 +30375,7 @@
             If core 0 and core 1 attempt to claim the same lock simultaneously, core 0 wins.\n
             The value returned on success is 0x1 &lt;&lt; lock number.</description>
           <addressOffset>0x0148</addressOffset>
-          <access>read-only</access>
+          <access>read-write</access>
           <resetValue>0x00000000</resetValue>
         </register>
         <register>
@@ -30387,7 +30387,7 @@
             If core 0 and core 1 attempt to claim the same lock simultaneously, core 0 wins.\n
             The value returned on success is 0x1 &lt;&lt; lock number.</description>
           <addressOffset>0x014c</addressOffset>
-          <access>read-only</access>
+          <access>read-write</access>
           <resetValue>0x00000000</resetValue>
         </register>
         <register>
@@ -30399,7 +30399,7 @@
             If core 0 and core 1 attempt to claim the same lock simultaneously, core 0 wins.\n
             The value returned on success is 0x1 &lt;&lt; lock number.</description>
           <addressOffset>0x0150</addressOffset>
-          <access>read-only</access>
+          <access>read-write</access>
           <resetValue>0x00000000</resetValue>
         </register>
         <register>
@@ -30411,7 +30411,7 @@
             If core 0 and core 1 attempt to claim the same lock simultaneously, core 0 wins.\n
             The value returned on success is 0x1 &lt;&lt; lock number.</description>
           <addressOffset>0x0154</addressOffset>
-          <access>read-only</access>
+          <access>read-write</access>
           <resetValue>0x00000000</resetValue>
         </register>
         <register>
@@ -30423,7 +30423,7 @@
             If core 0 and core 1 attempt to claim the same lock simultaneously, core 0 wins.\n
             The value returned on success is 0x1 &lt;&lt; lock number.</description>
           <addressOffset>0x0158</addressOffset>
-          <access>read-only</access>
+          <access>read-write</access>
           <resetValue>0x00000000</resetValue>
         </register>
         <register>
@@ -30435,7 +30435,7 @@
             If core 0 and core 1 attempt to claim the same lock simultaneously, core 0 wins.\n
             The value returned on success is 0x1 &lt;&lt; lock number.</description>
           <addressOffset>0x015c</addressOffset>
-          <access>read-only</access>
+          <access>read-write</access>
           <resetValue>0x00000000</resetValue>
         </register>
         <register>
@@ -30447,7 +30447,7 @@
             If core 0 and core 1 attempt to claim the same lock simultaneously, core 0 wins.\n
             The value returned on success is 0x1 &lt;&lt; lock number.</description>
           <addressOffset>0x0160</addressOffset>
-          <access>read-only</access>
+          <access>read-write</access>
           <resetValue>0x00000000</resetValue>
         </register>
         <register>
@@ -30459,7 +30459,7 @@
             If core 0 and core 1 attempt to claim the same lock simultaneously, core 0 wins.\n
             The value returned on success is 0x1 &lt;&lt; lock number.</description>
           <addressOffset>0x0164</addressOffset>
-          <access>read-only</access>
+          <access>read-write</access>
           <resetValue>0x00000000</resetValue>
         </register>
         <register>
@@ -30471,7 +30471,7 @@
             If core 0 and core 1 attempt to claim the same lock simultaneously, core 0 wins.\n
             The value returned on success is 0x1 &lt;&lt; lock number.</description>
           <addressOffset>0x0168</addressOffset>
-          <access>read-only</access>
+          <access>read-write</access>
           <resetValue>0x00000000</resetValue>
         </register>
         <register>
@@ -30483,7 +30483,7 @@
             If core 0 and core 1 attempt to claim the same lock simultaneously, core 0 wins.\n
             The value returned on success is 0x1 &lt;&lt; lock number.</description>
           <addressOffset>0x016c</addressOffset>
-          <access>read-only</access>
+          <access>read-write</access>
           <resetValue>0x00000000</resetValue>
         </register>
         <register>
@@ -30495,7 +30495,7 @@
             If core 0 and core 1 attempt to claim the same lock simultaneously, core 0 wins.\n
             The value returned on success is 0x1 &lt;&lt; lock number.</description>
           <addressOffset>0x0170</addressOffset>
-          <access>read-only</access>
+          <access>read-write</access>
           <resetValue>0x00000000</resetValue>
         </register>
         <register>
@@ -30507,7 +30507,7 @@
             If core 0 and core 1 attempt to claim the same lock simultaneously, core 0 wins.\n
             The value returned on success is 0x1 &lt;&lt; lock number.</description>
           <addressOffset>0x0174</addressOffset>
-          <access>read-only</access>
+          <access>read-write</access>
           <resetValue>0x00000000</resetValue>
         </register>
         <register>
@@ -30519,7 +30519,7 @@
             If core 0 and core 1 attempt to claim the same lock simultaneously, core 0 wins.\n
             The value returned on success is 0x1 &lt;&lt; lock number.</description>
           <addressOffset>0x0178</addressOffset>
-          <access>read-only</access>
+          <access>read-write</access>
           <resetValue>0x00000000</resetValue>
         </register>
         <register>
@@ -30531,7 +30531,7 @@
             If core 0 and core 1 attempt to claim the same lock simultaneously, core 0 wins.\n
             The value returned on success is 0x1 &lt;&lt; lock number.</description>
           <addressOffset>0x017c</addressOffset>
-          <access>read-only</access>
+          <access>read-write</access>
           <resetValue>0x00000000</resetValue>
         </register>
       </registers>
