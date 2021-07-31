@@ -476,6 +476,28 @@ impl core::ops::Deref for CONNECTED_R {
         &self.0
     }
 }
+#[doc = "Field `CONNECTED` writer - Device: connected"]
+pub struct CONNECTED_W<'a> {
+    w: &'a mut W,
+}
+impl<'a> CONNECTED_W<'a> {
+    #[doc = r"Sets the field bit"]
+    #[inline(always)]
+    pub fn set_bit(self) -> &'a mut W {
+        self.bit(true)
+    }
+    #[doc = r"Clears the field bit"]
+    #[inline(always)]
+    pub fn clear_bit(self) -> &'a mut W {
+        self.bit(false)
+    }
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
+    pub fn bit(self, value: bool) -> &'a mut W {
+        self.w.bits = (self.w.bits & !(0x01 << 16)) | ((value as u32 & 0x01) << 16);
+        self.w
+    }
+}
 #[doc = "Field `RESUME` reader - Host: Device has initiated a remote resume. Device: host has initiated a resume."]
 pub struct RESUME_R(crate::FieldReader<bool, bool>);
 impl RESUME_R {
@@ -729,6 +751,11 @@ impl W {
     #[inline(always)]
     pub fn setup_rec(&mut self) -> SETUP_REC_W {
         SETUP_REC_W { w: self }
+    }
+    #[doc = "Bit 16 - Device: connected"]
+    #[inline(always)]
+    pub fn connected(&mut self) -> CONNECTED_W {
+        CONNECTED_W { w: self }
     }
     #[doc = "Bit 11 - Host: Device has initiated a remote resume. Device: host has initiated a resume."]
     #[inline(always)]

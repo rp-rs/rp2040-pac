@@ -26513,7 +26513,7 @@
               <name>CONNECTED</name>
             <description>Device: connected</description>
               <bitRange>[16:16]</bitRange>
-              <access>read-only</access>
+              <access>read-write</access>
               </field>
             <field>
               <name>RESUME</name>
