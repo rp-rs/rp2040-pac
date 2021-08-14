@@ -6,7 +6,7 @@ Cortex-M0+ microcontroller.
 [Peripheral Access Crate]: https://rust-embedded.github.io/book/start/registers.html
 [RP2040]: https://datasheets.raspberrypi.org/rp2040/rp2040_datasheet.pdf
 
-This crate has been built using [svd2rust] version 0.17 and [svdtools], using
+This crate has been built using [svd2rust] version 0.19 and [svdtools], using
 the SVD file in the [pico-sdk v1.2.0]. Some manual fixes have been made to the
 documentation formatting, and the removal of some unrecognized lints.
 
