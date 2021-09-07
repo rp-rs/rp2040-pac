@@ -142,6 +142,14 @@ SIO:
       "SPINLOCK3[01]":
         access: read-write
 
+USBCTRL_REGS:
+  SIE_STATUS:
+    LINE_STATE:
+      SE0: [0, "SE0"]
+      J: [1, "J"]
+      K: [2, "K"]
+      SE1: [3, "SE1"]
+
 USBCTRL_DPRAM:
   _modify:
     "EP1_IN_CONTROL":
