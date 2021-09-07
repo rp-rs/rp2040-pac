@@ -141,3 +141,18 @@ SIO:
         access: read-write
       "SPINLOCK3[01]":
         access: read-write
+
+USBCTRL_DPRAM:
+  _modify:
+    "EP1_IN_CONTROL":
+      description: "-"
+    "EP0_IN_BUFFER_CONTROL":
+      description: "-"
+
+  _array:
+    "EP*_IN_BUFFER_CONTROL,EP*_OUT_BUFFER_CONTROL":
+        _start_from_zero: true
+        name: "EP_BUFFER_CONTROL%s"
+    "EP*_IN_CONTROL,EP*_OUT_CONTROL":
+        _start_from_zero: true
+        name: "EP_CONTROL%s"

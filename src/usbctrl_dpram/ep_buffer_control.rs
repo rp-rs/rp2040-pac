@@ -1,22 +1,22 @@
-#[doc = "Register `EP6_OUT_BUFFER_CONTROL` reader"]
-pub struct R(crate::R<EP6_OUT_BUFFER_CONTROL_SPEC>);
+#[doc = "Register `EP_BUFFER_CONTROL%s` reader"]
+pub struct R(crate::R<EP_BUFFER_CONTROL_SPEC>);
 impl core::ops::Deref for R {
-    type Target = crate::R<EP6_OUT_BUFFER_CONTROL_SPEC>;
+    type Target = crate::R<EP_BUFFER_CONTROL_SPEC>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
-impl From<crate::R<EP6_OUT_BUFFER_CONTROL_SPEC>> for R {
+impl From<crate::R<EP_BUFFER_CONTROL_SPEC>> for R {
     #[inline(always)]
-    fn from(reader: crate::R<EP6_OUT_BUFFER_CONTROL_SPEC>) -> Self {
+    fn from(reader: crate::R<EP_BUFFER_CONTROL_SPEC>) -> Self {
         R(reader)
     }
 }
-#[doc = "Register `EP6_OUT_BUFFER_CONTROL` writer"]
-pub struct W(crate::W<EP6_OUT_BUFFER_CONTROL_SPEC>);
+#[doc = "Register `EP_BUFFER_CONTROL%s` writer"]
+pub struct W(crate::W<EP_BUFFER_CONTROL_SPEC>);
 impl core::ops::Deref for W {
-    type Target = crate::W<EP6_OUT_BUFFER_CONTROL_SPEC>;
+    type Target = crate::W<EP_BUFFER_CONTROL_SPEC>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -28,9 +28,9 @@ impl core::ops::DerefMut for W {
         &mut self.0
     }
 }
-impl From<crate::W<EP6_OUT_BUFFER_CONTROL_SPEC>> for W {
+impl From<crate::W<EP_BUFFER_CONTROL_SPEC>> for W {
     #[inline(always)]
-    fn from(writer: crate::W<EP6_OUT_BUFFER_CONTROL_SPEC>) -> Self {
+    fn from(writer: crate::W<EP_BUFFER_CONTROL_SPEC>) -> Self {
         W(writer)
     }
 }
@@ -692,26 +692,25 @@ impl W {
         self
     }
 }
-#[doc = "Buffer control for both buffers of an endpoint. Fields ending in a _1 are for buffer 1.  
- Fields ending in a _0 are for buffer 0. Buffer 1 controls are only valid if the endpoint is in double buffered mode.  
+#[doc = "%s-%s  
 
 This register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
 
-For information about available fields see [ep6_out_buffer_control](index.html) module"]
-pub struct EP6_OUT_BUFFER_CONTROL_SPEC;
-impl crate::RegisterSpec for EP6_OUT_BUFFER_CONTROL_SPEC {
+For information about available fields see [ep_buffer_control](index.html) module"]
+pub struct EP_BUFFER_CONTROL_SPEC;
+impl crate::RegisterSpec for EP_BUFFER_CONTROL_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [ep6_out_buffer_control::R](R) reader structure"]
-impl crate::Readable for EP6_OUT_BUFFER_CONTROL_SPEC {
+#[doc = "`read()` method returns [ep_buffer_control::R](R) reader structure"]
+impl crate::Readable for EP_BUFFER_CONTROL_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [ep6_out_buffer_control::W](W) writer structure"]
-impl crate::Writable for EP6_OUT_BUFFER_CONTROL_SPEC {
+#[doc = "`write(|w| ..)` method takes [ep_buffer_control::W](W) writer structure"]
+impl crate::Writable for EP_BUFFER_CONTROL_SPEC {
     type Writer = W;
 }
-#[doc = "`reset()` method sets EP6_OUT_BUFFER_CONTROL to value 0"]
-impl crate::Resettable for EP6_OUT_BUFFER_CONTROL_SPEC {
+#[doc = "`reset()` method sets EP_BUFFER_CONTROL%s to value 0"]
+impl crate::Resettable for EP_BUFFER_CONTROL_SPEC {
     #[inline(always)]
     fn reset_value() -> Self::Ux {
         0

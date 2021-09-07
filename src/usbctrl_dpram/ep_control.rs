@@ -1,22 +1,22 @@
-#[doc = "Register `EP1_OUT_CONTROL` reader"]
-pub struct R(crate::R<EP1_OUT_CONTROL_SPEC>);
+#[doc = "Register `EP_CONTROL%s` reader"]
+pub struct R(crate::R<EP_CONTROL_SPEC>);
 impl core::ops::Deref for R {
-    type Target = crate::R<EP1_OUT_CONTROL_SPEC>;
+    type Target = crate::R<EP_CONTROL_SPEC>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
-impl From<crate::R<EP1_OUT_CONTROL_SPEC>> for R {
+impl From<crate::R<EP_CONTROL_SPEC>> for R {
     #[inline(always)]
-    fn from(reader: crate::R<EP1_OUT_CONTROL_SPEC>) -> Self {
+    fn from(reader: crate::R<EP_CONTROL_SPEC>) -> Self {
         R(reader)
     }
 }
-#[doc = "Register `EP1_OUT_CONTROL` writer"]
-pub struct W(crate::W<EP1_OUT_CONTROL_SPEC>);
+#[doc = "Register `EP_CONTROL%s` writer"]
+pub struct W(crate::W<EP_CONTROL_SPEC>);
 impl core::ops::Deref for W {
-    type Target = crate::W<EP1_OUT_CONTROL_SPEC>;
+    type Target = crate::W<EP_CONTROL_SPEC>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -28,9 +28,9 @@ impl core::ops::DerefMut for W {
         &mut self.0
     }
 }
-impl From<crate::W<EP1_OUT_CONTROL_SPEC>> for W {
+impl From<crate::W<EP_CONTROL_SPEC>> for W {
     #[inline(always)]
-    fn from(writer: crate::W<EP1_OUT_CONTROL_SPEC>) -> Self {
+    fn from(writer: crate::W<EP_CONTROL_SPEC>) -> Self {
         W(writer)
     }
 }
@@ -469,25 +469,25 @@ impl W {
         self
     }
 }
-#[doc = "  
+#[doc = "%s-%s  
 
 This register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
 
-For information about available fields see [ep1_out_control](index.html) module"]
-pub struct EP1_OUT_CONTROL_SPEC;
-impl crate::RegisterSpec for EP1_OUT_CONTROL_SPEC {
+For information about available fields see [ep_control](index.html) module"]
+pub struct EP_CONTROL_SPEC;
+impl crate::RegisterSpec for EP_CONTROL_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [ep1_out_control::R](R) reader structure"]
-impl crate::Readable for EP1_OUT_CONTROL_SPEC {
+#[doc = "`read()` method returns [ep_control::R](R) reader structure"]
+impl crate::Readable for EP_CONTROL_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [ep1_out_control::W](W) writer structure"]
-impl crate::Writable for EP1_OUT_CONTROL_SPEC {
+#[doc = "`write(|w| ..)` method takes [ep_control::W](W) writer structure"]
+impl crate::Writable for EP_CONTROL_SPEC {
     type Writer = W;
 }
-#[doc = "`reset()` method sets EP1_OUT_CONTROL to value 0"]
-impl crate::Resettable for EP1_OUT_CONTROL_SPEC {
+#[doc = "`reset()` method sets EP_CONTROL%s to value 0"]
+impl crate::Resettable for EP_CONTROL_SPEC {
     #[inline(always)]
     fn reset_value() -> Self::Ux {
         0
