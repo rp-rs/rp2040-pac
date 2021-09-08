@@ -576,15 +576,67 @@ impl core::ops::Deref for SUSPENDED_R {
         &self.0
     }
 }
+#[doc = "USB bus line state  
+
+Value on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq)]
+#[repr(u8)]
+pub enum LINE_STATE_A {
+    #[doc = "0: SE0"]
+    SE0 = 0,
+    #[doc = "1: J"]
+    J = 1,
+    #[doc = "2: K"]
+    K = 2,
+    #[doc = "3: SE1"]
+    SE1 = 3,
+}
+impl From<LINE_STATE_A> for u8 {
+    #[inline(always)]
+    fn from(variant: LINE_STATE_A) -> Self {
+        variant as _
+    }
+}
 #[doc = "Field `LINE_STATE` reader - USB bus line state"]
-pub struct LINE_STATE_R(crate::FieldReader<u8, u8>);
+pub struct LINE_STATE_R(crate::FieldReader<u8, LINE_STATE_A>);
 impl LINE_STATE_R {
     pub(crate) fn new(bits: u8) -> Self {
         LINE_STATE_R(crate::FieldReader::new(bits))
     }
+    #[doc = r"Get enumerated values variant"]
+    #[inline(always)]
+    pub fn variant(&self) -> LINE_STATE_A {
+        match self.bits {
+            0 => LINE_STATE_A::SE0,
+            1 => LINE_STATE_A::J,
+            2 => LINE_STATE_A::K,
+            3 => LINE_STATE_A::SE1,
+            _ => unreachable!(),
+        }
+    }
+    #[doc = "Checks if the value of the field is `SE0`"]
+    #[inline(always)]
+    pub fn is_se0(&self) -> bool {
+        **self == LINE_STATE_A::SE0
+    }
+    #[doc = "Checks if the value of the field is `J`"]
+    #[inline(always)]
+    pub fn is_j(&self) -> bool {
+        **self == LINE_STATE_A::J
+    }
+    #[doc = "Checks if the value of the field is `K`"]
+    #[inline(always)]
+    pub fn is_k(&self) -> bool {
+        **self == LINE_STATE_A::K
+    }
+    #[doc = "Checks if the value of the field is `SE1`"]
+    #[inline(always)]
+    pub fn is_se1(&self) -> bool {
+        **self == LINE_STATE_A::SE1
+    }
 }
 impl core::ops::Deref for LINE_STATE_R {
-    type Target = crate::FieldReader<u8, u8>;
+    type Target = crate::FieldReader<u8, LINE_STATE_A>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0

@@ -5,7 +5,7 @@ authors = ["eolder <evanmolder@gmail.com>", "Jonathan Pallant <github@thejpster.
 edition = "2018"
 homepage = "https://github.com/rp-rs/rp2040-pac"
 description = "A Peripheral Access Crate for the Raspberry Pi RP2040 SoC"
-license-file = "svd/rp2040.svd"
+license = "BSD-3-Clause"
 
 [dependencies]
 cortex-m = "0.7.3"
