@@ -7,7 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+- Update cortex-m-rt to 0.7.0
 - Fix cargo license declaration
+- arrayify USB endpoint registers
+- add USB line state variants as enum
 
 ## [0.1.4] [Crates.io](https://crates.io/crates/rp2040-pac/0.1.4) [Github](https://github.com/rp-rs/rp2040-pac/releases/tag/v0.1.4)
 
