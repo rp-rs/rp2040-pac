@@ -1,6 +1,9 @@
 _svd: "./rp2040.svd"
 
 DMA:
+  _modify:
+      "CH?_AL*":
+        access: read-write
   _cluster:
     "CH%s":
       "CH?_READ_ADDR,CH??_READ_ADDR": {}
