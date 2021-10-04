@@ -1,9 +1,122 @@
 _svd: "./rp2040.svd"
 
 DMA:
+  _delete:
+    "CH*_AL1_CTRL": {}
+    "CH*_AL2_CTRL": {}
+    "CH*_AL3_CTRL": {}
   _modify:
-      "CH?_AL*":
-        access: read-write
+    "CH*_AL*":
+      access: read-write
+  _derive:
+    "CH0_AL1_CTRL":
+      _from: "CH0_CTRL_TRIG"
+      addressOffset: 0x10
+    "CH0_AL2_CTRL":
+      _from: "CH0_CTRL_TRIG"
+      addressOffset: 0x20
+    "CH0_AL3_CTRL":
+      _from: "CH0_CTRL_TRIG"
+      addressOffset: 0x30
+    "CH1_AL1_CTRL":
+      _from: "CH1_CTRL_TRIG"
+      addressOffset: 0x50
+    "CH1_AL2_CTRL":
+      _from: "CH1_CTRL_TRIG"
+      addressOffset: 0x60
+    "CH1_AL3_CTRL":
+      _from: "CH1_CTRL_TRIG"
+      addressOffset: 0x70
+    "CH2_AL1_CTRL":
+      _from: "CH2_CTRL_TRIG"
+      addressOffset: 0x90
+    "CH2_AL2_CTRL":
+      _from: "CH2_CTRL_TRIG"
+      addressOffset: 0xa0
+    "CH2_AL3_CTRL":
+      _from: "CH2_CTRL_TRIG"
+      addressOffset: 0xb0
+    "CH3_AL1_CTRL":
+      _from: "CH3_CTRL_TRIG"
+      addressOffset: 0xd0
+    "CH3_AL2_CTRL":
+      _from: "CH3_CTRL_TRIG"
+      addressOffset: 0xe0
+    "CH3_AL3_CTRL":
+      _from: "CH3_CTRL_TRIG"
+      addressOffset: 0xf0
+    "CH4_AL1_CTRL":
+      _from: "CH4_CTRL_TRIG"
+      addressOffset: 0x110
+    "CH4_AL2_CTRL":
+      _from: "CH4_CTRL_TRIG"
+      addressOffset: 0x120
+    "CH4_AL3_CTRL":
+      _from: "CH4_CTRL_TRIG"
+      addressOffset: 0x130
+    "CH5_AL1_CTRL":
+      _from: "CH5_CTRL_TRIG"
+      addressOffset: 0x150
+    "CH5_AL2_CTRL":
+      _from: "CH5_CTRL_TRIG"
+      addressOffset: 0x160
+    "CH5_AL3_CTRL":
+      _from: "CH5_CTRL_TRIG"
+      addressOffset: 0x170
+    "CH6_AL1_CTRL":
+      _from: "CH6_CTRL_TRIG"
+      addressOffset: 0x190
+    "CH6_AL2_CTRL":
+      _from: "CH6_CTRL_TRIG"
+      addressOffset: 0x1a0
+    "CH6_AL3_CTRL":
+      _from: "CH6_CTRL_TRIG"
+      addressOffset: 0x1b0
+    "CH7_AL1_CTRL":
+      _from: "CH7_CTRL_TRIG"
+      addressOffset: 0x1d0
+    "CH7_AL2_CTRL":
+      _from: "CH7_CTRL_TRIG"
+      addressOffset: 0x1e0
+    "CH7_AL3_CTRL":
+      _from: "CH7_CTRL_TRIG"
+      addressOffset: 0x1f0
+    "CH8_AL1_CTRL":
+      _from: "CH8_CTRL_TRIG"
+      addressOffset: 0x210
+    "CH8_AL2_CTRL":
+      _from: "CH8_CTRL_TRIG"
+      addressOffset: 0x220
+    "CH8_AL3_CTRL":
+      _from: "CH8_CTRL_TRIG"
+      addressOffset: 0x230
+    "CH9_AL1_CTRL":
+      _from: "CH9_CTRL_TRIG"
+      addressOffset: 0x250
+    "CH9_AL2_CTRL":
+      _from: "CH9_CTRL_TRIG"
+      addressOffset: 0x260
+    "CH9_AL3_CTRL":
+      _from: "CH9_CTRL_TRIG"
+      addressOffset: 0x270
+    "CH10_AL1_CTRL":
+      _from: "CH10_CTRL_TRIG"
+      addressOffset: 0x290
+    "CH10_AL2_CTRL":
+      _from: "CH10_CTRL_TRIG"
+      addressOffset: 0x2a0
+    "CH10_AL3_CTRL":
+      _from: "CH10_CTRL_TRIG"
+      addressOffset: 0x2b0
+    "CH11_AL1_CTRL":
+      _from: "CH11_CTRL_TRIG"
+      addressOffset: 0x2d0
+    "CH11_AL2_CTRL":
+      _from: "CH11_CTRL_TRIG"
+      addressOffset: 0x2e0
+    "CH11_AL3_CTRL":
+      _from: "CH11_CTRL_TRIG"
+      addressOffset: 0x2f0
   _cluster:
     "CH%s":
       "CH?_READ_ADDR,CH??_READ_ADDR": {}
