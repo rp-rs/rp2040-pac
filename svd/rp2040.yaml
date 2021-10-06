@@ -89,11 +89,16 @@ USBCTRL_REGS:
     _modify:
       "EP*":
         access: read-write
-  # CONNECTED is implied to be read-write https://github.com/raspberrypi/pico-feedback/issues/110
   SIE_STATUS:
     _modify:
+      # CONNECTED is implied to be read-write https://github.com/raspberrypi/pico-feedback/issues/110
       CONNECTED:
           access: "read-write"
+    LINE_STATE:
+      SE0: [0, "SE0"]
+      J: [1, "J"]
+      K: [2, "K"]
+      SE1: [3, "SE1"]
 
 ROSC:
   _delete:
@@ -141,14 +146,6 @@ SIO:
         access: read-write
       "SPINLOCK3[01]":
         access: read-write
-
-USBCTRL_REGS:
-  SIE_STATUS:
-    LINE_STATE:
-      SE0: [0, "SE0"]
-      J: [1, "J"]
-      K: [2, "K"]
-      SE1: [3, "SE1"]
 
 USBCTRL_DPRAM:
   _modify:
