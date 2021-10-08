@@ -126,7 +126,7 @@ pub struct CH {
     pub ch_trans_count: crate::Reg<self::ch::ch_trans_count::CH_TRANS_COUNT_SPEC>,
     #[doc = "0x0c - DMA Channel 0 Control and Status"]
     pub ch_ctrl_trig: crate::Reg<self::ch::ch_ctrl_trig::CH_CTRL_TRIG_SPEC>,
-    #[doc = "0x10 - Alias for channel 0 CTRL register"]
+    #[doc = "0x10 - DMA Channel 0 Control and Status"]
     pub ch_al1_ctrl: crate::Reg<self::ch::ch_al1_ctrl::CH_AL1_CTRL_SPEC>,
     #[doc = "0x14 - Alias for channel 0 READ_ADDR register"]
     pub ch_al1_read_addr: crate::Reg<self::ch::ch_al1_read_addr::CH_AL1_READ_ADDR_SPEC>,
@@ -137,7 +137,7 @@ pub struct CH {
  reload the channel counter and start the channel."]
     pub ch_al1_trans_count_trig:
         crate::Reg<self::ch::ch_al1_trans_count_trig::CH_AL1_TRANS_COUNT_TRIG_SPEC>,
-    #[doc = "0x20 - Alias for channel 0 CTRL register"]
+    #[doc = "0x20 - DMA Channel 0 Control and Status"]
     pub ch_al2_ctrl: crate::Reg<self::ch::ch_al2_ctrl::CH_AL2_CTRL_SPEC>,
     #[doc = "0x24 - Alias for channel 0 TRANS_COUNT register"]
     pub ch_al2_trans_count: crate::Reg<self::ch::ch_al2_trans_count::CH_AL2_TRANS_COUNT_SPEC>,
@@ -148,7 +148,7 @@ pub struct CH {
  reload the channel counter and start the channel."]
     pub ch_al2_write_addr_trig:
         crate::Reg<self::ch::ch_al2_write_addr_trig::CH_AL2_WRITE_ADDR_TRIG_SPEC>,
-    #[doc = "0x30 - Alias for channel 0 CTRL register"]
+    #[doc = "0x30 - DMA Channel 0 Control and Status"]
     pub ch_al3_ctrl: crate::Reg<self::ch::ch_al3_ctrl::CH_AL3_CTRL_SPEC>,
     #[doc = "0x34 - Alias for channel 0 WRITE_ADDR register"]
     pub ch_al3_write_addr: crate::Reg<self::ch::ch_al3_write_addr::CH_AL3_WRITE_ADDR_SPEC>,

@@ -19414,23 +19414,184 @@
           </register>
         <register>
           <name>CH_AL1_CTRL</name>
-          <description>Alias for channel 0 CTRL register</description>
+          <description>DMA Channel 0 Control and Status</description>
           <addressOffset>0x10</addressOffset>
-          <access>read-only</access>
           <resetValue>0x00000000</resetValue>
-        </register>
+        <fields>
+            <field>
+              <name>AHB_ERROR</name>
+            <description>Logical OR of the READ_ERROR and WRITE_ERROR flags. The channel halts when it encounters any bus error, and always raises its channel IRQ flag.</description>
+              <bitRange>[31:31]</bitRange>
+              <access>read-only</access>
+              </field>
+            <field>
+              <name>READ_ERROR</name>
+            <description>If 1, the channel received a read bus error. Write one to clear.\n
+                READ_ADDR shows the approximate address where the bus error was encountered (will not to be earlier, or more than 3 transfers later)</description>
+              <bitRange>[30:30]</bitRange>
+              <access>read-write</access>
+              <modifiedWriteValues>oneToClear</modifiedWriteValues>
+              </field>
+            <field>
+              <name>WRITE_ERROR</name>
+            <description>If 1, the channel received a write bus error. Write one to clear.\n
+                WRITE_ADDR shows the approximate address where the bus error was encountered (will not to be earlier, or more than 5 transfers later)</description>
+              <bitRange>[29:29]</bitRange>
+              <access>read-write</access>
+              <modifiedWriteValues>oneToClear</modifiedWriteValues>
+              </field>
+            <field>
+              <name>BUSY</name>
+            <description>This flag goes high when the channel starts a new transfer sequence, and low when the last transfer of that sequence completes. Clearing EN while BUSY is high pauses the channel, and BUSY will stay high while paused.\n\n
+                To terminate a sequence early (and clear the BUSY flag), see CHAN_ABORT.</description>
+              <bitRange>[24:24]</bitRange>
+              <access>read-only</access>
+              </field>
+            <field>
+              <name>SNIFF_EN</name>
+            <description>If 1, this channel's data transfers are visible to the sniff hardware, and each transfer will advance the state of the checksum. This only applies if the sniff hardware is enabled, and has this channel selected.\n\n
+                This allows checksum to be enabled or disabled on a per-control- block basis.</description>
+              <bitRange>[23:23]</bitRange>
+              <access>read-write</access>
+              </field>
+            <field>
+              <name>BSWAP</name>
+            <description>Apply byte-swap transformation to DMA data.\n
+                For byte data, this has no effect. For halfword data, the two bytes of each halfword are swapped. For word data, the four bytes of each word are swapped to reverse order.</description>
+              <bitRange>[22:22]</bitRange>
+              <access>read-write</access>
+              </field>
+            <field>
+              <name>IRQ_QUIET</name>
+            <description>In QUIET mode, the channel does not generate IRQs at the end of every transfer block. Instead, an IRQ is raised when NULL is written to a trigger register, indicating the end of a control block chain.\n\n
+                This reduces the number of interrupts to be serviced by the CPU when transferring a DMA chain of many small control blocks.</description>
+              <bitRange>[21:21]</bitRange>
+              <access>read-write</access>
+              </field>
+            <field>
+              <name>TREQ_SEL</name>
+            <description>Select a Transfer Request signal.\n
+                The channel uses the transfer request signal to pace its data transfer rate. Sources for TREQ signals are internal (TIMERS) or external (DREQ, a Data Request from the system).\n
+                0x0 to 0x3a -&gt; select DREQ n as TREQ</description>
+              <bitRange>[20:15]</bitRange>
+              <access>read-write</access>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>TIMER0</name>
+                  <description>Select Timer 0 as TREQ</description>
+                  <value>59</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>TIMER1</name>
+                  <description>Select Timer 1 as TREQ</description>
+                  <value>60</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>TIMER2</name>
+                  <description>Select Timer 2 as TREQ (Optional)</description>
+                  <value>61</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>TIMER3</name>
+                  <description>Select Timer 3 as TREQ (Optional)</description>
+                  <value>62</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>PERMANENT</name>
+                  <description>Permanent request, for unpaced transfers.</description>
+                  <value>63</value>
+                </enumeratedValue>
+              </enumeratedValues>
+              </field>
+            <field>
+              <name>CHAIN_TO</name>
+            <description>When this channel completes, it will trigger the channel indicated by CHAIN_TO. Disable by setting CHAIN_TO = _(this channel)_.\n
+                Reset value is equal to channel number (0).</description>
+              <bitRange>[14:11]</bitRange>
+              <access>read-write</access>
+              </field>
+            <field>
+              <name>RING_SEL</name>
+            <description>Select whether RING_SIZE applies to read or write addresses.\n
+                If 0, read addresses are wrapped on a (1 &lt;&lt; RING_SIZE) boundary. If 1, write addresses are wrapped.</description>
+              <bitRange>[10:10]</bitRange>
+              <access>read-write</access>
+              </field>
+            <field>
+              <name>RING_SIZE</name>
+            <description>Size of address wrap region. If 0, don't wrap. For values n &gt; 0, only the lower n bits of the address will change. This wraps the address on a (1 &lt;&lt; n) byte boundary, facilitating access to naturally-aligned ring buffers.\n\n
+                Ring sizes between 2 and 32768 bytes are possible. This can apply to either read or write addresses, based on value of RING_SEL.</description>
+              <bitRange>[9:6]</bitRange>
+              <access>read-write</access>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>RING_NONE</name>
+                  <value>0</value>
+                </enumeratedValue>
+              </enumeratedValues>
+              </field>
+            <field>
+              <name>INCR_WRITE</name>
+            <description>If 1, the write address increments with each transfer. If 0, each write is directed to the same, initial address.\n\n
+                Generally this should be disabled for memory-to-peripheral transfers.</description>
+              <bitRange>[5:5]</bitRange>
+              <access>read-write</access>
+              </field>
+            <field>
+              <name>INCR_READ</name>
+            <description>If 1, the read address increments with each transfer. If 0, each read is directed to the same, initial address.\n\n
+                Generally this should be disabled for peripheral-to-memory transfers.</description>
+              <bitRange>[4:4]</bitRange>
+              <access>read-write</access>
+              </field>
+            <field>
+              <name>DATA_SIZE</name>
+            <description>Set the size of each bus transfer (byte/halfword/word). READ_ADDR and WRITE_ADDR advance by this amount (1/2/4 bytes) with each transfer.</description>
+              <bitRange>[3:2]</bitRange>
+              <access>read-write</access>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>SIZE_BYTE</name>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>SIZE_HALFWORD</name>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>SIZE_WORD</name>
+                  <value>2</value>
+                </enumeratedValue>
+              </enumeratedValues>
+              </field>
+            <field>
+              <name>HIGH_PRIORITY</name>
+            <description>HIGH_PRIORITY gives a channel preferential treatment in issue scheduling: in each scheduling round, all high priority channels are considered first, and then only a single low priority channel, before returning to the high priority channels.\n\n
+                This only affects the order in which the DMA schedules channels. The DMA's bus priority is not changed. If the DMA is not saturated then a low priority channel will see no loss of throughput.</description>
+              <bitRange>[1:1]</bitRange>
+              <access>read-write</access>
+              </field>
+            <field>
+              <name>EN</name>
+            <description>DMA Channel Enable.\n
+                When 1, the channel will respond to triggering events, which will cause it to become BUSY and start transferring data. When 0, the channel will ignore triggers, stop issuing transfers, and pause the current transfer sequence (i.e. BUSY will remain high if already high)</description>
+              <bitRange>[0:0]</bitRange>
+              <access>read-write</access>
+              </field>
+          </fields>
+          </register>
         <register>
           <name>CH_AL1_READ_ADDR</name>
           <description>Alias for channel 0 READ_ADDR register</description>
           <addressOffset>0x14</addressOffset>
-          <access>read-only</access>
+          <access>read-write</access>
           <resetValue>0x00000000</resetValue>
         </register>
         <register>
           <name>CH_AL1_WRITE_ADDR</name>
           <description>Alias for channel 0 WRITE_ADDR register</description>
           <addressOffset>0x18</addressOffset>
-          <access>read-only</access>
+          <access>read-write</access>
           <resetValue>0x00000000</resetValue>
         </register>
         <register>
@@ -19439,28 +19600,189 @@
             This is a trigger register (0xc). Writing a nonzero value will\n
             reload the channel counter and start the channel.</description>
           <addressOffset>0x1c</addressOffset>
-          <access>read-only</access>
+          <access>read-write</access>
           <resetValue>0x00000000</resetValue>
         </register>
         <register>
           <name>CH_AL2_CTRL</name>
-          <description>Alias for channel 0 CTRL register</description>
+          <description>DMA Channel 0 Control and Status</description>
           <addressOffset>0x20</addressOffset>
-          <access>read-only</access>
           <resetValue>0x00000000</resetValue>
-        </register>
+        <fields>
+            <field>
+              <name>AHB_ERROR</name>
+            <description>Logical OR of the READ_ERROR and WRITE_ERROR flags. The channel halts when it encounters any bus error, and always raises its channel IRQ flag.</description>
+              <bitRange>[31:31]</bitRange>
+              <access>read-only</access>
+              </field>
+            <field>
+              <name>READ_ERROR</name>
+            <description>If 1, the channel received a read bus error. Write one to clear.\n
+                READ_ADDR shows the approximate address where the bus error was encountered (will not to be earlier, or more than 3 transfers later)</description>
+              <bitRange>[30:30]</bitRange>
+              <access>read-write</access>
+              <modifiedWriteValues>oneToClear</modifiedWriteValues>
+              </field>
+            <field>
+              <name>WRITE_ERROR</name>
+            <description>If 1, the channel received a write bus error. Write one to clear.\n
+                WRITE_ADDR shows the approximate address where the bus error was encountered (will not to be earlier, or more than 5 transfers later)</description>
+              <bitRange>[29:29]</bitRange>
+              <access>read-write</access>
+              <modifiedWriteValues>oneToClear</modifiedWriteValues>
+              </field>
+            <field>
+              <name>BUSY</name>
+            <description>This flag goes high when the channel starts a new transfer sequence, and low when the last transfer of that sequence completes. Clearing EN while BUSY is high pauses the channel, and BUSY will stay high while paused.\n\n
+                To terminate a sequence early (and clear the BUSY flag), see CHAN_ABORT.</description>
+              <bitRange>[24:24]</bitRange>
+              <access>read-only</access>
+              </field>
+            <field>
+              <name>SNIFF_EN</name>
+            <description>If 1, this channel's data transfers are visible to the sniff hardware, and each transfer will advance the state of the checksum. This only applies if the sniff hardware is enabled, and has this channel selected.\n\n
+                This allows checksum to be enabled or disabled on a per-control- block basis.</description>
+              <bitRange>[23:23]</bitRange>
+              <access>read-write</access>
+              </field>
+            <field>
+              <name>BSWAP</name>
+            <description>Apply byte-swap transformation to DMA data.\n
+                For byte data, this has no effect. For halfword data, the two bytes of each halfword are swapped. For word data, the four bytes of each word are swapped to reverse order.</description>
+              <bitRange>[22:22]</bitRange>
+              <access>read-write</access>
+              </field>
+            <field>
+              <name>IRQ_QUIET</name>
+            <description>In QUIET mode, the channel does not generate IRQs at the end of every transfer block. Instead, an IRQ is raised when NULL is written to a trigger register, indicating the end of a control block chain.\n\n
+                This reduces the number of interrupts to be serviced by the CPU when transferring a DMA chain of many small control blocks.</description>
+              <bitRange>[21:21]</bitRange>
+              <access>read-write</access>
+              </field>
+            <field>
+              <name>TREQ_SEL</name>
+            <description>Select a Transfer Request signal.\n
+                The channel uses the transfer request signal to pace its data transfer rate. Sources for TREQ signals are internal (TIMERS) or external (DREQ, a Data Request from the system).\n
+                0x0 to 0x3a -&gt; select DREQ n as TREQ</description>
+              <bitRange>[20:15]</bitRange>
+              <access>read-write</access>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>TIMER0</name>
+                  <description>Select Timer 0 as TREQ</description>
+                  <value>59</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>TIMER1</name>
+                  <description>Select Timer 1 as TREQ</description>
+                  <value>60</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>TIMER2</name>
+                  <description>Select Timer 2 as TREQ (Optional)</description>
+                  <value>61</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>TIMER3</name>
+                  <description>Select Timer 3 as TREQ (Optional)</description>
+                  <value>62</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>PERMANENT</name>
+                  <description>Permanent request, for unpaced transfers.</description>
+                  <value>63</value>
+                </enumeratedValue>
+              </enumeratedValues>
+              </field>
+            <field>
+              <name>CHAIN_TO</name>
+            <description>When this channel completes, it will trigger the channel indicated by CHAIN_TO. Disable by setting CHAIN_TO = _(this channel)_.\n
+                Reset value is equal to channel number (0).</description>
+              <bitRange>[14:11]</bitRange>
+              <access>read-write</access>
+              </field>
+            <field>
+              <name>RING_SEL</name>
+            <description>Select whether RING_SIZE applies to read or write addresses.\n
+                If 0, read addresses are wrapped on a (1 &lt;&lt; RING_SIZE) boundary. If 1, write addresses are wrapped.</description>
+              <bitRange>[10:10]</bitRange>
+              <access>read-write</access>
+              </field>
+            <field>
+              <name>RING_SIZE</name>
+            <description>Size of address wrap region. If 0, don't wrap. For values n &gt; 0, only the lower n bits of the address will change. This wraps the address on a (1 &lt;&lt; n) byte boundary, facilitating access to naturally-aligned ring buffers.\n\n
+                Ring sizes between 2 and 32768 bytes are possible. This can apply to either read or write addresses, based on value of RING_SEL.</description>
+              <bitRange>[9:6]</bitRange>
+              <access>read-write</access>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>RING_NONE</name>
+                  <value>0</value>
+                </enumeratedValue>
+              </enumeratedValues>
+              </field>
+            <field>
+              <name>INCR_WRITE</name>
+            <description>If 1, the write address increments with each transfer. If 0, each write is directed to the same, initial address.\n\n
+                Generally this should be disabled for memory-to-peripheral transfers.</description>
+              <bitRange>[5:5]</bitRange>
+              <access>read-write</access>
+              </field>
+            <field>
+              <name>INCR_READ</name>
+            <description>If 1, the read address increments with each transfer. If 0, each read is directed to the same, initial address.\n\n
+                Generally this should be disabled for peripheral-to-memory transfers.</description>
+              <bitRange>[4:4]</bitRange>
+              <access>read-write</access>
+              </field>
+            <field>
+              <name>DATA_SIZE</name>
+            <description>Set the size of each bus transfer (byte/halfword/word). READ_ADDR and WRITE_ADDR advance by this amount (1/2/4 bytes) with each transfer.</description>
+              <bitRange>[3:2]</bitRange>
+              <access>read-write</access>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>SIZE_BYTE</name>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>SIZE_HALFWORD</name>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>SIZE_WORD</name>
+                  <value>2</value>
+                </enumeratedValue>
+              </enumeratedValues>
+              </field>
+            <field>
+              <name>HIGH_PRIORITY</name>
+            <description>HIGH_PRIORITY gives a channel preferential treatment in issue scheduling: in each scheduling round, all high priority channels are considered first, and then only a single low priority channel, before returning to the high priority channels.\n\n
+                This only affects the order in which the DMA schedules channels. The DMA's bus priority is not changed. If the DMA is not saturated then a low priority channel will see no loss of throughput.</description>
+              <bitRange>[1:1]</bitRange>
+              <access>read-write</access>
+              </field>
+            <field>
+              <name>EN</name>
+            <description>DMA Channel Enable.\n
+                When 1, the channel will respond to triggering events, which will cause it to become BUSY and start transferring data. When 0, the channel will ignore triggers, stop issuing transfers, and pause the current transfer sequence (i.e. BUSY will remain high if already high)</description>
+              <bitRange>[0:0]</bitRange>
+              <access>read-write</access>
+              </field>
+          </fields>
+          </register>
         <register>
           <name>CH_AL2_TRANS_COUNT</name>
           <description>Alias for channel 0 TRANS_COUNT register</description>
           <addressOffset>0x24</addressOffset>
-          <access>read-only</access>
+          <access>read-write</access>
           <resetValue>0x00000000</resetValue>
         </register>
         <register>
           <name>CH_AL2_READ_ADDR</name>
           <description>Alias for channel 0 READ_ADDR register</description>
           <addressOffset>0x28</addressOffset>
-          <access>read-only</access>
+          <access>read-write</access>
           <resetValue>0x00000000</resetValue>
         </register>
         <register>
@@ -19469,28 +19791,189 @@
             This is a trigger register (0xc). Writing a nonzero value will\n
             reload the channel counter and start the channel.</description>
           <addressOffset>0x2c</addressOffset>
-          <access>read-only</access>
+          <access>read-write</access>
           <resetValue>0x00000000</resetValue>
         </register>
         <register>
           <name>CH_AL3_CTRL</name>
-          <description>Alias for channel 0 CTRL register</description>
+          <description>DMA Channel 0 Control and Status</description>
           <addressOffset>0x30</addressOffset>
-          <access>read-only</access>
           <resetValue>0x00000000</resetValue>
-        </register>
+        <fields>
+            <field>
+              <name>AHB_ERROR</name>
+            <description>Logical OR of the READ_ERROR and WRITE_ERROR flags. The channel halts when it encounters any bus error, and always raises its channel IRQ flag.</description>
+              <bitRange>[31:31]</bitRange>
+              <access>read-only</access>
+              </field>
+            <field>
+              <name>READ_ERROR</name>
+            <description>If 1, the channel received a read bus error. Write one to clear.\n
+                READ_ADDR shows the approximate address where the bus error was encountered (will not to be earlier, or more than 3 transfers later)</description>
+              <bitRange>[30:30]</bitRange>
+              <access>read-write</access>
+              <modifiedWriteValues>oneToClear</modifiedWriteValues>
+              </field>
+            <field>
+              <name>WRITE_ERROR</name>
+            <description>If 1, the channel received a write bus error. Write one to clear.\n
+                WRITE_ADDR shows the approximate address where the bus error was encountered (will not to be earlier, or more than 5 transfers later)</description>
+              <bitRange>[29:29]</bitRange>
+              <access>read-write</access>
+              <modifiedWriteValues>oneToClear</modifiedWriteValues>
+              </field>
+            <field>
+              <name>BUSY</name>
+            <description>This flag goes high when the channel starts a new transfer sequence, and low when the last transfer of that sequence completes. Clearing EN while BUSY is high pauses the channel, and BUSY will stay high while paused.\n\n
+                To terminate a sequence early (and clear the BUSY flag), see CHAN_ABORT.</description>
+              <bitRange>[24:24]</bitRange>
+              <access>read-only</access>
+              </field>
+            <field>
+              <name>SNIFF_EN</name>
+            <description>If 1, this channel's data transfers are visible to the sniff hardware, and each transfer will advance the state of the checksum. This only applies if the sniff hardware is enabled, and has this channel selected.\n\n
+                This allows checksum to be enabled or disabled on a per-control- block basis.</description>
+              <bitRange>[23:23]</bitRange>
+              <access>read-write</access>
+              </field>
+            <field>
+              <name>BSWAP</name>
+            <description>Apply byte-swap transformation to DMA data.\n
+                For byte data, this has no effect. For halfword data, the two bytes of each halfword are swapped. For word data, the four bytes of each word are swapped to reverse order.</description>
+              <bitRange>[22:22]</bitRange>
+              <access>read-write</access>
+              </field>
+            <field>
+              <name>IRQ_QUIET</name>
+            <description>In QUIET mode, the channel does not generate IRQs at the end of every transfer block. Instead, an IRQ is raised when NULL is written to a trigger register, indicating the end of a control block chain.\n\n
+                This reduces the number of interrupts to be serviced by the CPU when transferring a DMA chain of many small control blocks.</description>
+              <bitRange>[21:21]</bitRange>
+              <access>read-write</access>
+              </field>
+            <field>
+              <name>TREQ_SEL</name>
+            <description>Select a Transfer Request signal.\n
+                The channel uses the transfer request signal to pace its data transfer rate. Sources for TREQ signals are internal (TIMERS) or external (DREQ, a Data Request from the system).\n
+                0x0 to 0x3a -&gt; select DREQ n as TREQ</description>
+              <bitRange>[20:15]</bitRange>
+              <access>read-write</access>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>TIMER0</name>
+                  <description>Select Timer 0 as TREQ</description>
+                  <value>59</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>TIMER1</name>
+                  <description>Select Timer 1 as TREQ</description>
+                  <value>60</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>TIMER2</name>
+                  <description>Select Timer 2 as TREQ (Optional)</description>
+                  <value>61</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>TIMER3</name>
+                  <description>Select Timer 3 as TREQ (Optional)</description>
+                  <value>62</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>PERMANENT</name>
+                  <description>Permanent request, for unpaced transfers.</description>
+                  <value>63</value>
+                </enumeratedValue>
+              </enumeratedValues>
+              </field>
+            <field>
+              <name>CHAIN_TO</name>
+            <description>When this channel completes, it will trigger the channel indicated by CHAIN_TO. Disable by setting CHAIN_TO = _(this channel)_.\n
+                Reset value is equal to channel number (0).</description>
+              <bitRange>[14:11]</bitRange>
+              <access>read-write</access>
+              </field>
+            <field>
+              <name>RING_SEL</name>
+            <description>Select whether RING_SIZE applies to read or write addresses.\n
+                If 0, read addresses are wrapped on a (1 &lt;&lt; RING_SIZE) boundary. If 1, write addresses are wrapped.</description>
+              <bitRange>[10:10]</bitRange>
+              <access>read-write</access>
+              </field>
+            <field>
+              <name>RING_SIZE</name>
+            <description>Size of address wrap region. If 0, don't wrap. For values n &gt; 0, only the lower n bits of the address will change. This wraps the address on a (1 &lt;&lt; n) byte boundary, facilitating access to naturally-aligned ring buffers.\n\n
+                Ring sizes between 2 and 32768 bytes are possible. This can apply to either read or write addresses, based on value of RING_SEL.</description>
+              <bitRange>[9:6]</bitRange>
+              <access>read-write</access>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>RING_NONE</name>
+                  <value>0</value>
+                </enumeratedValue>
+              </enumeratedValues>
+              </field>
+            <field>
+              <name>INCR_WRITE</name>
+            <description>If 1, the write address increments with each transfer. If 0, each write is directed to the same, initial address.\n\n
+                Generally this should be disabled for memory-to-peripheral transfers.</description>
+              <bitRange>[5:5]</bitRange>
+              <access>read-write</access>
+              </field>
+            <field>
+              <name>INCR_READ</name>
+            <description>If 1, the read address increments with each transfer. If 0, each read is directed to the same, initial address.\n\n
+                Generally this should be disabled for peripheral-to-memory transfers.</description>
+              <bitRange>[4:4]</bitRange>
+              <access>read-write</access>
+              </field>
+            <field>
+              <name>DATA_SIZE</name>
+            <description>Set the size of each bus transfer (byte/halfword/word). READ_ADDR and WRITE_ADDR advance by this amount (1/2/4 bytes) with each transfer.</description>
+              <bitRange>[3:2]</bitRange>
+              <access>read-write</access>
+              <enumeratedValues>
+                <enumeratedValue>
+                  <name>SIZE_BYTE</name>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>SIZE_HALFWORD</name>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>SIZE_WORD</name>
+                  <value>2</value>
+                </enumeratedValue>
+              </enumeratedValues>
+              </field>
+            <field>
+              <name>HIGH_PRIORITY</name>
+            <description>HIGH_PRIORITY gives a channel preferential treatment in issue scheduling: in each scheduling round, all high priority channels are considered first, and then only a single low priority channel, before returning to the high priority channels.\n\n
+                This only affects the order in which the DMA schedules channels. The DMA's bus priority is not changed. If the DMA is not saturated then a low priority channel will see no loss of throughput.</description>
+              <bitRange>[1:1]</bitRange>
+              <access>read-write</access>
+              </field>
+            <field>
+              <name>EN</name>
+            <description>DMA Channel Enable.\n
+                When 1, the channel will respond to triggering events, which will cause it to become BUSY and start transferring data. When 0, the channel will ignore triggers, stop issuing transfers, and pause the current transfer sequence (i.e. BUSY will remain high if already high)</description>
+              <bitRange>[0:0]</bitRange>
+              <access>read-write</access>
+              </field>
+          </fields>
+          </register>
         <register>
           <name>CH_AL3_WRITE_ADDR</name>
           <description>Alias for channel 0 WRITE_ADDR register</description>
           <addressOffset>0x34</addressOffset>
-          <access>read-only</access>
+          <access>read-write</access>
           <resetValue>0x00000000</resetValue>
         </register>
         <register>
           <name>CH_AL3_TRANS_COUNT</name>
           <description>Alias for channel 0 TRANS_COUNT register</description>
           <addressOffset>0x38</addressOffset>
-          <access>read-only</access>
+          <access>read-write</access>
           <resetValue>0x00000000</resetValue>
         </register>
         <register>
@@ -19499,7 +19982,7 @@
             This is a trigger register (0xc). Writing a nonzero value will\n
             reload the channel counter and start the channel.</description>
           <addressOffset>0x3c</addressOffset>
-          <access>read-only</access>
+          <access>read-write</access>
           <resetValue>0x00000000</resetValue>
         </register>
         </cluster><register>
