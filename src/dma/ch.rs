@@ -25,7 +25,7 @@ pub type CH_CTRL_TRIG = crate::Reg<ch_ctrl_trig::CH_CTRL_TRIG_SPEC>;
 pub mod ch_ctrl_trig;
 #[doc = "CH_AL1_CTRL register accessor: an alias for `Reg<CH_AL1_CTRL_SPEC>`"]
 pub type CH_AL1_CTRL = crate::Reg<ch_al1_ctrl::CH_AL1_CTRL_SPEC>;
-#[doc = "Alias for channel 0 CTRL register"]
+#[doc = "DMA Channel 0 Control and Status"]
 pub mod ch_al1_ctrl;
 #[doc = "CH_AL1_READ_ADDR register accessor: an alias for `Reg<CH_AL1_READ_ADDR_SPEC>`"]
 pub type CH_AL1_READ_ADDR = crate::Reg<ch_al1_read_addr::CH_AL1_READ_ADDR_SPEC>;
@@ -44,7 +44,7 @@ pub type CH_AL1_TRANS_COUNT_TRIG =
 pub mod ch_al1_trans_count_trig;
 #[doc = "CH_AL2_CTRL register accessor: an alias for `Reg<CH_AL2_CTRL_SPEC>`"]
 pub type CH_AL2_CTRL = crate::Reg<ch_al2_ctrl::CH_AL2_CTRL_SPEC>;
-#[doc = "Alias for channel 0 CTRL register"]
+#[doc = "DMA Channel 0 Control and Status"]
 pub mod ch_al2_ctrl;
 #[doc = "CH_AL2_TRANS_COUNT register accessor: an alias for `Reg<CH_AL2_TRANS_COUNT_SPEC>`"]
 pub type CH_AL2_TRANS_COUNT = crate::Reg<ch_al2_trans_count::CH_AL2_TRANS_COUNT_SPEC>;
@@ -62,7 +62,7 @@ pub type CH_AL2_WRITE_ADDR_TRIG = crate::Reg<ch_al2_write_addr_trig::CH_AL2_WRIT
 pub mod ch_al2_write_addr_trig;
 #[doc = "CH_AL3_CTRL register accessor: an alias for `Reg<CH_AL3_CTRL_SPEC>`"]
 pub type CH_AL3_CTRL = crate::Reg<ch_al3_ctrl::CH_AL3_CTRL_SPEC>;
-#[doc = "Alias for channel 0 CTRL register"]
+#[doc = "DMA Channel 0 Control and Status"]
 pub mod ch_al3_ctrl;
 #[doc = "CH_AL3_WRITE_ADDR register accessor: an alias for `Reg<CH_AL3_WRITE_ADDR_SPEC>`"]
 pub type CH_AL3_WRITE_ADDR = crate::Reg<ch_al3_write_addr::CH_AL3_WRITE_ADDR_SPEC>;
