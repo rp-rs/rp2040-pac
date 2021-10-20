@@ -17,30 +17,12 @@ pub struct RegisterBlock {
     pub proc1_intf: [crate::Reg<proc1_intf::PROC1_INTF_SPEC>; 4],
     #[doc = "0x150..0x160 - Interrupt status after masking & forcing for proc1"]
     pub proc1_ints: [crate::Reg<proc1_ints::PROC1_INTS_SPEC>; 4],
-    #[doc = "0x160 - Interrupt Enable for dormant_wake"]
-    pub dormant_wake_inte0: crate::Reg<dormant_wake_inte0::DORMANT_WAKE_INTE0_SPEC>,
-    #[doc = "0x164 - Interrupt Enable for dormant_wake"]
-    pub dormant_wake_inte1: crate::Reg<dormant_wake_inte1::DORMANT_WAKE_INTE1_SPEC>,
-    #[doc = "0x168 - Interrupt Enable for dormant_wake"]
-    pub dormant_wake_inte2: crate::Reg<dormant_wake_inte2::DORMANT_WAKE_INTE2_SPEC>,
-    #[doc = "0x16c - Interrupt Enable for dormant_wake"]
-    pub dormant_wake_inte3: crate::Reg<dormant_wake_inte3::DORMANT_WAKE_INTE3_SPEC>,
-    #[doc = "0x170 - Interrupt Force for dormant_wake"]
-    pub dormant_wake_intf0: crate::Reg<dormant_wake_intf0::DORMANT_WAKE_INTF0_SPEC>,
-    #[doc = "0x174 - Interrupt Force for dormant_wake"]
-    pub dormant_wake_intf1: crate::Reg<dormant_wake_intf1::DORMANT_WAKE_INTF1_SPEC>,
-    #[doc = "0x178 - Interrupt Force for dormant_wake"]
-    pub dormant_wake_intf2: crate::Reg<dormant_wake_intf2::DORMANT_WAKE_INTF2_SPEC>,
-    #[doc = "0x17c - Interrupt Force for dormant_wake"]
-    pub dormant_wake_intf3: crate::Reg<dormant_wake_intf3::DORMANT_WAKE_INTF3_SPEC>,
-    #[doc = "0x180 - Interrupt status after masking & forcing for dormant_wake"]
-    pub dormant_wake_ints0: crate::Reg<dormant_wake_ints0::DORMANT_WAKE_INTS0_SPEC>,
-    #[doc = "0x184 - Interrupt status after masking & forcing for dormant_wake"]
-    pub dormant_wake_ints1: crate::Reg<dormant_wake_ints1::DORMANT_WAKE_INTS1_SPEC>,
-    #[doc = "0x188 - Interrupt status after masking & forcing for dormant_wake"]
-    pub dormant_wake_ints2: crate::Reg<dormant_wake_ints2::DORMANT_WAKE_INTS2_SPEC>,
-    #[doc = "0x18c - Interrupt status after masking & forcing for dormant_wake"]
-    pub dormant_wake_ints3: crate::Reg<dormant_wake_ints3::DORMANT_WAKE_INTS3_SPEC>,
+    #[doc = "0x160..0x170 - Interrupt Enable for dormant_wake"]
+    pub dormant_wake_inte: [crate::Reg<dormant_wake_inte::DORMANT_WAKE_INTE_SPEC>; 4],
+    #[doc = "0x170..0x180 - Interrupt Force for dormant_wake"]
+    pub dormant_wake_intf: [crate::Reg<dormant_wake_intf::DORMANT_WAKE_INTF_SPEC>; 4],
+    #[doc = "0x180..0x190 - Interrupt status after masking & forcing for dormant_wake"]
+    pub dormant_wake_ints: [crate::Reg<dormant_wake_ints::DORMANT_WAKE_INTS_SPEC>; 4],
 }
 #[doc = r"Register block"]
 #[repr(C)]
@@ -81,51 +63,15 @@ pub mod proc1_intf;
 pub type PROC1_INTS = crate::Reg<proc1_ints::PROC1_INTS_SPEC>;
 #[doc = "Interrupt status after masking & forcing for proc1"]
 pub mod proc1_ints;
-#[doc = "DORMANT_WAKE_INTE0 register accessor: an alias for `Reg<DORMANT_WAKE_INTE0_SPEC>`"]
-pub type DORMANT_WAKE_INTE0 = crate::Reg<dormant_wake_inte0::DORMANT_WAKE_INTE0_SPEC>;
+#[doc = "DORMANT_WAKE_INTE register accessor: an alias for `Reg<DORMANT_WAKE_INTE_SPEC>`"]
+pub type DORMANT_WAKE_INTE = crate::Reg<dormant_wake_inte::DORMANT_WAKE_INTE_SPEC>;
 #[doc = "Interrupt Enable for dormant_wake"]
-pub mod dormant_wake_inte0;
-#[doc = "DORMANT_WAKE_INTE1 register accessor: an alias for `Reg<DORMANT_WAKE_INTE1_SPEC>`"]
-pub type DORMANT_WAKE_INTE1 = crate::Reg<dormant_wake_inte1::DORMANT_WAKE_INTE1_SPEC>;
-#[doc = "Interrupt Enable for dormant_wake"]
-pub mod dormant_wake_inte1;
-#[doc = "DORMANT_WAKE_INTE2 register accessor: an alias for `Reg<DORMANT_WAKE_INTE2_SPEC>`"]
-pub type DORMANT_WAKE_INTE2 = crate::Reg<dormant_wake_inte2::DORMANT_WAKE_INTE2_SPEC>;
-#[doc = "Interrupt Enable for dormant_wake"]
-pub mod dormant_wake_inte2;
-#[doc = "DORMANT_WAKE_INTE3 register accessor: an alias for `Reg<DORMANT_WAKE_INTE3_SPEC>`"]
-pub type DORMANT_WAKE_INTE3 = crate::Reg<dormant_wake_inte3::DORMANT_WAKE_INTE3_SPEC>;
-#[doc = "Interrupt Enable for dormant_wake"]
-pub mod dormant_wake_inte3;
-#[doc = "DORMANT_WAKE_INTF0 register accessor: an alias for `Reg<DORMANT_WAKE_INTF0_SPEC>`"]
-pub type DORMANT_WAKE_INTF0 = crate::Reg<dormant_wake_intf0::DORMANT_WAKE_INTF0_SPEC>;
+pub mod dormant_wake_inte;
+#[doc = "DORMANT_WAKE_INTF register accessor: an alias for `Reg<DORMANT_WAKE_INTF_SPEC>`"]
+pub type DORMANT_WAKE_INTF = crate::Reg<dormant_wake_intf::DORMANT_WAKE_INTF_SPEC>;
 #[doc = "Interrupt Force for dormant_wake"]
-pub mod dormant_wake_intf0;
-#[doc = "DORMANT_WAKE_INTF1 register accessor: an alias for `Reg<DORMANT_WAKE_INTF1_SPEC>`"]
-pub type DORMANT_WAKE_INTF1 = crate::Reg<dormant_wake_intf1::DORMANT_WAKE_INTF1_SPEC>;
-#[doc = "Interrupt Force for dormant_wake"]
-pub mod dormant_wake_intf1;
-#[doc = "DORMANT_WAKE_INTF2 register accessor: an alias for `Reg<DORMANT_WAKE_INTF2_SPEC>`"]
-pub type DORMANT_WAKE_INTF2 = crate::Reg<dormant_wake_intf2::DORMANT_WAKE_INTF2_SPEC>;
-#[doc = "Interrupt Force for dormant_wake"]
-pub mod dormant_wake_intf2;
-#[doc = "DORMANT_WAKE_INTF3 register accessor: an alias for `Reg<DORMANT_WAKE_INTF3_SPEC>`"]
-pub type DORMANT_WAKE_INTF3 = crate::Reg<dormant_wake_intf3::DORMANT_WAKE_INTF3_SPEC>;
-#[doc = "Interrupt Force for dormant_wake"]
-pub mod dormant_wake_intf3;
-#[doc = "DORMANT_WAKE_INTS0 register accessor: an alias for `Reg<DORMANT_WAKE_INTS0_SPEC>`"]
-pub type DORMANT_WAKE_INTS0 = crate::Reg<dormant_wake_ints0::DORMANT_WAKE_INTS0_SPEC>;
+pub mod dormant_wake_intf;
+#[doc = "DORMANT_WAKE_INTS register accessor: an alias for `Reg<DORMANT_WAKE_INTS_SPEC>`"]
+pub type DORMANT_WAKE_INTS = crate::Reg<dormant_wake_ints::DORMANT_WAKE_INTS_SPEC>;
 #[doc = "Interrupt status after masking & forcing for dormant_wake"]
-pub mod dormant_wake_ints0;
-#[doc = "DORMANT_WAKE_INTS1 register accessor: an alias for `Reg<DORMANT_WAKE_INTS1_SPEC>`"]
-pub type DORMANT_WAKE_INTS1 = crate::Reg<dormant_wake_ints1::DORMANT_WAKE_INTS1_SPEC>;
-#[doc = "Interrupt status after masking & forcing for dormant_wake"]
-pub mod dormant_wake_ints1;
-#[doc = "DORMANT_WAKE_INTS2 register accessor: an alias for `Reg<DORMANT_WAKE_INTS2_SPEC>`"]
-pub type DORMANT_WAKE_INTS2 = crate::Reg<dormant_wake_ints2::DORMANT_WAKE_INTS2_SPEC>;
-#[doc = "Interrupt status after masking & forcing for dormant_wake"]
-pub mod dormant_wake_ints2;
-#[doc = "DORMANT_WAKE_INTS3 register accessor: an alias for `Reg<DORMANT_WAKE_INTS3_SPEC>`"]
-pub type DORMANT_WAKE_INTS3 = crate::Reg<dormant_wake_ints3::DORMANT_WAKE_INTS3_SPEC>;
-#[doc = "Interrupt status after masking & forcing for dormant_wake"]
-pub mod dormant_wake_ints3;
+pub mod dormant_wake_ints;

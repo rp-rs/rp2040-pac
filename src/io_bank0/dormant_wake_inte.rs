@@ -1,22 +1,22 @@
-#[doc = "Register `DORMANT_WAKE_INTE0` reader"]
-pub struct R(crate::R<DORMANT_WAKE_INTE0_SPEC>);
+#[doc = "Register `DORMANT_WAKE_INTE%s` reader"]
+pub struct R(crate::R<DORMANT_WAKE_INTE_SPEC>);
 impl core::ops::Deref for R {
-    type Target = crate::R<DORMANT_WAKE_INTE0_SPEC>;
+    type Target = crate::R<DORMANT_WAKE_INTE_SPEC>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
-impl From<crate::R<DORMANT_WAKE_INTE0_SPEC>> for R {
+impl From<crate::R<DORMANT_WAKE_INTE_SPEC>> for R {
     #[inline(always)]
-    fn from(reader: crate::R<DORMANT_WAKE_INTE0_SPEC>) -> Self {
+    fn from(reader: crate::R<DORMANT_WAKE_INTE_SPEC>) -> Self {
         R(reader)
     }
 }
-#[doc = "Register `DORMANT_WAKE_INTE0` writer"]
-pub struct W(crate::W<DORMANT_WAKE_INTE0_SPEC>);
+#[doc = "Register `DORMANT_WAKE_INTE%s` writer"]
+pub struct W(crate::W<DORMANT_WAKE_INTE_SPEC>);
 impl core::ops::Deref for W {
-    type Target = crate::W<DORMANT_WAKE_INTE0_SPEC>;
+    type Target = crate::W<DORMANT_WAKE_INTE_SPEC>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -28,9 +28,9 @@ impl core::ops::DerefMut for W {
         &mut self.0
     }
 }
-impl From<crate::W<DORMANT_WAKE_INTE0_SPEC>> for W {
+impl From<crate::W<DORMANT_WAKE_INTE_SPEC>> for W {
     #[inline(always)]
-    fn from(writer: crate::W<DORMANT_WAKE_INTE0_SPEC>) -> Self {
+    fn from(writer: crate::W<DORMANT_WAKE_INTE_SPEC>) -> Self {
         W(writer)
     }
 }
@@ -1520,21 +1520,21 @@ impl W {
 
 This register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
 
-For information about available fields see [dormant_wake_inte0](index.html) module"]
-pub struct DORMANT_WAKE_INTE0_SPEC;
-impl crate::RegisterSpec for DORMANT_WAKE_INTE0_SPEC {
+For information about available fields see [dormant_wake_inte](index.html) module"]
+pub struct DORMANT_WAKE_INTE_SPEC;
+impl crate::RegisterSpec for DORMANT_WAKE_INTE_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [dormant_wake_inte0::R](R) reader structure"]
-impl crate::Readable for DORMANT_WAKE_INTE0_SPEC {
+#[doc = "`read()` method returns [dormant_wake_inte::R](R) reader structure"]
+impl crate::Readable for DORMANT_WAKE_INTE_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [dormant_wake_inte0::W](W) writer structure"]
-impl crate::Writable for DORMANT_WAKE_INTE0_SPEC {
+#[doc = "`write(|w| ..)` method takes [dormant_wake_inte::W](W) writer structure"]
+impl crate::Writable for DORMANT_WAKE_INTE_SPEC {
     type Writer = W;
 }
-#[doc = "`reset()` method sets DORMANT_WAKE_INTE0 to value 0"]
-impl crate::Resettable for DORMANT_WAKE_INTE0_SPEC {
+#[doc = "`reset()` method sets DORMANT_WAKE_INTE%s to value 0"]
+impl crate::Resettable for DORMANT_WAKE_INTE_SPEC {
     #[inline(always)]
     fn reset_value() -> Self::Ux {
         0
