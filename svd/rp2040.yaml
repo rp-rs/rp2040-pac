@@ -188,34 +188,38 @@ IO_BANK0:
         bitOffset: 31
         bitWidth: 1
         access: read-write
+        modifiedWriteValues: oneToClear
       GPIO31_EDGE_LOW:
         bitOffset: 30
         bitWidth: 1
         access: read-write
+        modifiedWriteValues: oneToClear
       GPIO31_LEVEL_HIGH:
         bitOffset: 29
         bitWidth: 1
-        access: read-write
+        access: read-only
       GPIO31_LEVEL_LOW:
         bitOffset: 28
         bitWidth: 1
-        access: read-write
+        access: read-only
       GPIO30_EDGE_HIGH:
         bitOffset: 27
         bitWidth: 1
         access: read-write
+        modifiedWriteValues: oneToClear
       GPIO30_EDGE_LOW:
         bitOffset: 26
         bitWidth: 1
         access: read-write
+        modifiedWriteValues: oneToClear
       GPIO30_LEVEL_HIGH:
         bitOffset: 25
         bitWidth: 1
-        access: read-write
+        access: read-only
       GPIO30_LEVEL_LOW:
         bitOffset: 24
         bitWidth: 1
-        access: read-write
+        access: read-only
   PROC0_INTE3:
     _add:
       GPIO31_EDGE_HIGH:
