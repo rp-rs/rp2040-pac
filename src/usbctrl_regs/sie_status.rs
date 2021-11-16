@@ -562,6 +562,18 @@ impl core::ops::Deref for SPEED_R {
         &self.0
     }
 }
+#[doc = "Field `SPEED` writer - Host: device speed. Disconnected = 00, LS = 01, FS = 10"]
+pub struct SPEED_W<'a> {
+    w: &'a mut W,
+}
+impl<'a> SPEED_W<'a> {
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
+    pub unsafe fn bits(self, value: u8) -> &'a mut W {
+        self.w.bits = (self.w.bits & !(0x03 << 8)) | ((value as u32 & 0x03) << 8);
+        self.w
+    }
+}
 #[doc = "Field `SUSPENDED` reader - Bus in suspended state. Valid for device and host. Host and device will go into suspend if neither Keep Alive / SOF frames are enabled."]
 pub struct SUSPENDED_R(crate::FieldReader<bool, bool>);
 impl SUSPENDED_R {
@@ -574,6 +586,28 @@ impl core::ops::Deref for SUSPENDED_R {
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
+    }
+}
+#[doc = "Field `SUSPENDED` writer - Bus in suspended state. Valid for device and host. Host and device will go into suspend if neither Keep Alive / SOF frames are enabled."]
+pub struct SUSPENDED_W<'a> {
+    w: &'a mut W,
+}
+impl<'a> SUSPENDED_W<'a> {
+    #[doc = r"Sets the field bit"]
+    #[inline(always)]
+    pub fn set_bit(self) -> &'a mut W {
+        self.bit(true)
+    }
+    #[doc = r"Clears the field bit"]
+    #[inline(always)]
+    pub fn clear_bit(self) -> &'a mut W {
+        self.bit(false)
+    }
+    #[doc = r"Writes raw bits to the field"]
+    #[inline(always)]
+    pub fn bit(self, value: bool) -> &'a mut W {
+        self.w.bits = (self.w.bits & !(0x01 << 4)) | ((value as u32 & 0x01) << 4);
+        self.w
     }
 }
 #[doc = "USB bus line state  
@@ -813,6 +847,16 @@ impl W {
     #[inline(always)]
     pub fn resume(&mut self) -> RESUME_W {
         RESUME_W { w: self }
+    }
+    #[doc = "Bits 8:9 - Host: device speed. Disconnected = 00, LS = 01, FS = 10"]
+    #[inline(always)]
+    pub fn speed(&mut self) -> SPEED_W {
+        SPEED_W { w: self }
+    }
+    #[doc = "Bit 4 - Bus in suspended state. Valid for device and host. Host and device will go into suspend if neither Keep Alive / SOF frames are enabled."]
+    #[inline(always)]
+    pub fn suspended(&mut self) -> SUSPENDED_W {
+        SUSPENDED_W { w: self }
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

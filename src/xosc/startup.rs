@@ -34,7 +34,7 @@ impl From<crate::W<STARTUP_SPEC>> for W {
         W(writer)
     }
 }
-#[doc = "Field `X4` reader - Multiplies the startup_delay by 4. This is of little value to the user given that the delay can be programmed directly"]
+#[doc = "Field `X4` reader - Multiplies the startup_delay by 4. This is of little value to the user given that the delay can be programmed directly."]
 pub struct X4_R(crate::FieldReader<bool, bool>);
 impl X4_R {
     pub(crate) fn new(bits: bool) -> Self {
@@ -48,7 +48,7 @@ impl core::ops::Deref for X4_R {
         &self.0
     }
 }
-#[doc = "Field `X4` writer - Multiplies the startup_delay by 4. This is of little value to the user given that the delay can be programmed directly"]
+#[doc = "Field `X4` writer - Multiplies the startup_delay by 4. This is of little value to the user given that the delay can be programmed directly."]
 pub struct X4_W<'a> {
     w: &'a mut W,
 }
@@ -70,7 +70,7 @@ impl<'a> X4_W<'a> {
         self.w
     }
 }
-#[doc = "Field `DELAY` reader - in multiples of 256*xtal_period"]
+#[doc = "Field `DELAY` reader - in multiples of 256*xtal_period. The reset value of 0xc4 corresponds to approx 50 000 cycles."]
 pub struct DELAY_R(crate::FieldReader<u16, u16>);
 impl DELAY_R {
     pub(crate) fn new(bits: u16) -> Self {
@@ -84,7 +84,7 @@ impl core::ops::Deref for DELAY_R {
         &self.0
     }
 }
-#[doc = "Field `DELAY` writer - in multiples of 256*xtal_period"]
+#[doc = "Field `DELAY` writer - in multiples of 256*xtal_period. The reset value of 0xc4 corresponds to approx 50 000 cycles."]
 pub struct DELAY_W<'a> {
     w: &'a mut W,
 }
@@ -97,24 +97,24 @@ impl<'a> DELAY_W<'a> {
     }
 }
 impl R {
-    #[doc = "Bit 20 - Multiplies the startup_delay by 4. This is of little value to the user given that the delay can be programmed directly"]
+    #[doc = "Bit 20 - Multiplies the startup_delay by 4. This is of little value to the user given that the delay can be programmed directly."]
     #[inline(always)]
     pub fn x4(&self) -> X4_R {
         X4_R::new(((self.bits >> 20) & 0x01) != 0)
     }
-    #[doc = "Bits 0:13 - in multiples of 256*xtal_period"]
+    #[doc = "Bits 0:13 - in multiples of 256*xtal_period. The reset value of 0xc4 corresponds to approx 50 000 cycles."]
     #[inline(always)]
     pub fn delay(&self) -> DELAY_R {
         DELAY_R::new((self.bits & 0x3fff) as u16)
     }
 }
 impl W {
-    #[doc = "Bit 20 - Multiplies the startup_delay by 4. This is of little value to the user given that the delay can be programmed directly"]
+    #[doc = "Bit 20 - Multiplies the startup_delay by 4. This is of little value to the user given that the delay can be programmed directly."]
     #[inline(always)]
     pub fn x4(&mut self) -> X4_W {
         X4_W { w: self }
     }
-    #[doc = "Bits 0:13 - in multiples of 256*xtal_period"]
+    #[doc = "Bits 0:13 - in multiples of 256*xtal_period. The reset value of 0xc4 corresponds to approx 50 000 cycles."]
     #[inline(always)]
     pub fn delay(&mut self) -> DELAY_W {
         DELAY_W { w: self }
@@ -143,10 +143,10 @@ impl crate::Readable for STARTUP_SPEC {
 impl crate::Writable for STARTUP_SPEC {
     type Writer = W;
 }
-#[doc = "`reset()` method sets STARTUP to value 0"]
+#[doc = "`reset()` method sets STARTUP to value 0xc4"]
 impl crate::Resettable for STARTUP_SPEC {
     #[inline(always)]
     fn reset_value() -> Self::Ux {
-        0
+        0xc4
     }
 }

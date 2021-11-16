@@ -125,7 +125,7 @@ impl core::ops::Deref for BUS_RESET_R {
         &self.0
     }
 }
-#[doc = "Field `VBUS_DETECT` reader - Source: SIE_STATUS.VBUS_DETECT"]
+#[doc = "Field `VBUS_DETECT` reader - Source: SIE_STATUS.VBUS_DETECTED"]
 pub struct VBUS_DETECT_R(crate::FieldReader<bool, bool>);
 impl VBUS_DETECT_R {
     pub(crate) fn new(bits: bool) -> Self {
@@ -334,7 +334,7 @@ impl R {
     pub fn bus_reset(&self) -> BUS_RESET_R {
         BUS_RESET_R::new(((self.bits >> 12) & 0x01) != 0)
     }
-    #[doc = "Bit 11 - Source: SIE_STATUS.VBUS_DETECT"]
+    #[doc = "Bit 11 - Source: SIE_STATUS.VBUS_DETECTED"]
     #[inline(always)]
     pub fn vbus_detect(&self) -> VBUS_DETECT_R {
         VBUS_DETECT_R::new(((self.bits >> 11) & 0x01) != 0)
