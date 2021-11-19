@@ -1,22 +1,22 @@
-#[doc = "Register `DORMANT_WAKE_INTE0` reader"]
-pub struct R(crate::R<DORMANT_WAKE_INTE0_SPEC>);
+#[doc = "Register `PROC0_INTF%s` reader"]
+pub struct R(crate::R<PROC0_INTF_SPEC>);
 impl core::ops::Deref for R {
-    type Target = crate::R<DORMANT_WAKE_INTE0_SPEC>;
+    type Target = crate::R<PROC0_INTF_SPEC>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
-impl From<crate::R<DORMANT_WAKE_INTE0_SPEC>> for R {
+impl From<crate::R<PROC0_INTF_SPEC>> for R {
     #[inline(always)]
-    fn from(reader: crate::R<DORMANT_WAKE_INTE0_SPEC>) -> Self {
+    fn from(reader: crate::R<PROC0_INTF_SPEC>) -> Self {
         R(reader)
     }
 }
-#[doc = "Register `DORMANT_WAKE_INTE0` writer"]
-pub struct W(crate::W<DORMANT_WAKE_INTE0_SPEC>);
+#[doc = "Register `PROC0_INTF%s` writer"]
+pub struct W(crate::W<PROC0_INTF_SPEC>);
 impl core::ops::Deref for W {
-    type Target = crate::W<DORMANT_WAKE_INTE0_SPEC>;
+    type Target = crate::W<PROC0_INTF_SPEC>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
@@ -28,9 +28,9 @@ impl core::ops::DerefMut for W {
         &mut self.0
     }
 }
-impl From<crate::W<DORMANT_WAKE_INTE0_SPEC>> for W {
+impl From<crate::W<PROC0_INTF_SPEC>> for W {
     #[inline(always)]
-    fn from(writer: crate::W<DORMANT_WAKE_INTE0_SPEC>) -> Self {
+    fn from(writer: crate::W<PROC0_INTF_SPEC>) -> Self {
         W(writer)
     }
 }
@@ -1516,25 +1516,25 @@ impl W {
         self
     }
 }
-#[doc = "Interrupt Enable for dormant_wake  
+#[doc = "Interrupt Force for proc%s  
 
 This register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
 
-For information about available fields see [dormant_wake_inte0](index.html) module"]
-pub struct DORMANT_WAKE_INTE0_SPEC;
-impl crate::RegisterSpec for DORMANT_WAKE_INTE0_SPEC {
+For information about available fields see [proc0_intf](index.html) module"]
+pub struct PROC0_INTF_SPEC;
+impl crate::RegisterSpec for PROC0_INTF_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [dormant_wake_inte0::R](R) reader structure"]
-impl crate::Readable for DORMANT_WAKE_INTE0_SPEC {
+#[doc = "`read()` method returns [proc0_intf::R](R) reader structure"]
+impl crate::Readable for PROC0_INTF_SPEC {
     type Reader = R;
 }
-#[doc = "`write(|w| ..)` method takes [dormant_wake_inte0::W](W) writer structure"]
-impl crate::Writable for DORMANT_WAKE_INTE0_SPEC {
+#[doc = "`write(|w| ..)` method takes [proc0_intf::W](W) writer structure"]
+impl crate::Writable for PROC0_INTF_SPEC {
     type Writer = W;
 }
-#[doc = "`reset()` method sets DORMANT_WAKE_INTE0 to value 0"]
-impl crate::Resettable for DORMANT_WAKE_INTE0_SPEC {
+#[doc = "`reset()` method sets PROC0_INTF%s to value 0"]
+impl crate::Resettable for PROC0_INTF_SPEC {
     #[inline(always)]
     fn reset_value() -> Self::Ux {
         0

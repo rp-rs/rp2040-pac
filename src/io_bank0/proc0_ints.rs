@@ -1,15 +1,15 @@
-#[doc = "Register `PROC1_INTS0` reader"]
-pub struct R(crate::R<PROC1_INTS0_SPEC>);
+#[doc = "Register `PROC0_INTS%s` reader"]
+pub struct R(crate::R<PROC0_INTS_SPEC>);
 impl core::ops::Deref for R {
-    type Target = crate::R<PROC1_INTS0_SPEC>;
+    type Target = crate::R<PROC0_INTS_SPEC>;
     #[inline(always)]
     fn deref(&self) -> &Self::Target {
         &self.0
     }
 }
-impl From<crate::R<PROC1_INTS0_SPEC>> for R {
+impl From<crate::R<PROC0_INTS_SPEC>> for R {
     #[inline(always)]
-    fn from(reader: crate::R<PROC1_INTS0_SPEC>) -> Self {
+    fn from(reader: crate::R<PROC0_INTS_SPEC>) -> Self {
         R(reader)
     }
 }
@@ -623,21 +623,21 @@ impl R {
         GPIO0_LEVEL_LOW_R::new((self.bits & 0x01) != 0)
     }
 }
-#[doc = "Interrupt status after masking & forcing for proc1  
+#[doc = "Interrupt status after masking & forcing for proc%s  
 
 This register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
 
-For information about available fields see [proc1_ints0](index.html) module"]
-pub struct PROC1_INTS0_SPEC;
-impl crate::RegisterSpec for PROC1_INTS0_SPEC {
+For information about available fields see [proc0_ints](index.html) module"]
+pub struct PROC0_INTS_SPEC;
+impl crate::RegisterSpec for PROC0_INTS_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [proc1_ints0::R](R) reader structure"]
-impl crate::Readable for PROC1_INTS0_SPEC {
+#[doc = "`read()` method returns [proc0_ints::R](R) reader structure"]
+impl crate::Readable for PROC0_INTS_SPEC {
     type Reader = R;
 }
-#[doc = "`reset()` method sets PROC1_INTS0 to value 0"]
-impl crate::Resettable for PROC1_INTS0_SPEC {
+#[doc = "`reset()` method sets PROC0_INTS%s to value 0"]
+impl crate::Resettable for PROC0_INTS_SPEC {
     #[inline(always)]
     fn reset_value() -> Self::Ux {
         0
