@@ -526,7 +526,7 @@ impl<'a> AVAILABLE_0_W<'a> {
         self.w
     }
 }
-#[doc = "Field `LENGTH_0` reader - The length of the data in buffer 1."]
+#[doc = "Field `LENGTH_0` reader - The length of the data in buffer 0."]
 pub struct LENGTH_0_R(crate::FieldReader<u16, u16>);
 impl LENGTH_0_R {
     pub(crate) fn new(bits: u16) -> Self {
@@ -540,7 +540,7 @@ impl core::ops::Deref for LENGTH_0_R {
         &self.0
     }
 }
-#[doc = "Field `LENGTH_0` writer - The length of the data in buffer 1."]
+#[doc = "Field `LENGTH_0` writer - The length of the data in buffer 0."]
 pub struct LENGTH_0_W<'a> {
     w: &'a mut W,
 }
@@ -613,7 +613,7 @@ impl R {
     pub fn available_0(&self) -> AVAILABLE_0_R {
         AVAILABLE_0_R::new(((self.bits >> 10) & 0x01) != 0)
     }
-    #[doc = "Bits 0:9 - The length of the data in buffer 1."]
+    #[doc = "Bits 0:9 - The length of the data in buffer 0."]
     #[inline(always)]
     pub fn length_0(&self) -> LENGTH_0_R {
         LENGTH_0_R::new((self.bits & 0x03ff) as u16)
@@ -680,7 +680,7 @@ impl W {
     pub fn available_0(&mut self) -> AVAILABLE_0_W {
         AVAILABLE_0_W { w: self }
     }
-    #[doc = "Bits 0:9 - The length of the data in buffer 1."]
+    #[doc = "Bits 0:9 - The length of the data in buffer 0."]
     #[inline(always)]
     pub fn length_0(&mut self) -> LENGTH_0_W {
         LENGTH_0_W { w: self }

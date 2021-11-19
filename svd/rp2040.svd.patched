@@ -13007,17 +13007,17 @@
           <name>STARTUP</name>
           <description>Controls the startup delay</description>
           <addressOffset>0x000c</addressOffset>
-          <resetValue>0x00000000</resetValue>
+          <resetValue>0x000000c4</resetValue>
         <fields>
             <field>
               <name>X4</name>
-            <description>Multiplies the startup_delay by 4. This is of little value to the user given that the delay can be programmed directly</description>
+            <description>Multiplies the startup_delay by 4. This is of little value to the user given that the delay can be programmed directly.</description>
               <bitRange>[20:20]</bitRange>
               <access>read-write</access>
               </field>
             <field>
               <name>DELAY</name>
-            <description>in multiples of 256*xtal_period</description>
+            <description>in multiples of 256*xtal_period. The reset value of 0xc4 corresponds to approx 50 000 cycles.</description>
               <bitRange>[13:0]</bitRange>
               <access>read-write</access>
               </field>
@@ -14897,7 +14897,76 @@
     <peripheral>
       <name>I2C0</name>
       <version>1</version>
-    <description>DW_apb_i2c address block</description>
+    <description>DW_apb_i2c address block\n\n
+        List of configuration constants for the Synopsys I2C hardware (you may see references to these in I2C register header; these are *fixed* values, set at hardware design time):\n\n
+        IC_ULTRA_FAST_MODE ................ 0x0\n
+        IC_UFM_TBUF_CNT_DEFAULT ........... 0x8\n
+        IC_UFM_SCL_LOW_COUNT .............. 0x0008\n
+        IC_UFM_SCL_HIGH_COUNT ............. 0x0006\n
+        IC_TX_TL .......................... 0x0\n
+        IC_TX_CMD_BLOCK ................... 0x1\n
+        IC_HAS_DMA ........................ 0x1\n
+        IC_HAS_ASYNC_FIFO ................. 0x0\n
+        IC_SMBUS_ARP ...................... 0x0\n
+        IC_FIRST_DATA_BYTE_STATUS ......... 0x1\n
+        IC_INTR_IO ........................ 0x1\n
+        IC_MASTER_MODE .................... 0x1\n
+        IC_DEFAULT_ACK_GENERAL_CALL ....... 0x1\n
+        IC_INTR_POL ....................... 0x1\n
+        IC_OPTIONAL_SAR ................... 0x0\n
+        IC_DEFAULT_TAR_SLAVE_ADDR ......... 0x055\n
+        IC_DEFAULT_SLAVE_ADDR ............. 0x055\n
+        IC_DEFAULT_HS_SPKLEN .............. 0x1\n
+        IC_FS_SCL_HIGH_COUNT .............. 0x0006\n
+        IC_HS_SCL_LOW_COUNT ............... 0x0008\n
+        IC_DEVICE_ID_VALUE ................ 0x0\n
+        IC_10BITADDR_MASTER ............... 0x0\n
+        IC_CLK_FREQ_OPTIMIZATION .......... 0x0\n
+        IC_DEFAULT_FS_SPKLEN .............. 0x7\n
+        IC_ADD_ENCODED_PARAMS ............. 0x0\n
+        IC_DEFAULT_SDA_HOLD ............... 0x000001\n
+        IC_DEFAULT_SDA_SETUP .............. 0x64\n
+        IC_AVOID_RX_FIFO_FLUSH_ON_TX_ABRT . 0x0\n
+        IC_CLOCK_PERIOD ................... 100\n
+        IC_EMPTYFIFO_HOLD_MASTER_EN ....... 1\n
+        IC_RESTART_EN ..................... 0x1\n
+        IC_TX_CMD_BLOCK_DEFAULT ........... 0x0\n
+        IC_BUS_CLEAR_FEATURE .............. 0x0\n
+        IC_CAP_LOADING .................... 100\n
+        IC_FS_SCL_LOW_COUNT ............... 0x000d\n
+        APB_DATA_WIDTH .................... 32\n
+        IC_SDA_STUCK_TIMEOUT_DEFAULT ...... 0xffffffff\n
+        IC_SLV_DATA_NACK_ONLY ............. 0x1\n
+        IC_10BITADDR_SLAVE ................ 0x0\n
+        IC_CLK_TYPE ....................... 0x0\n
+        IC_SMBUS_UDID_MSB ................. 0x0\n
+        IC_SMBUS_SUSPEND_ALERT ............ 0x0\n
+        IC_HS_SCL_HIGH_COUNT .............. 0x0006\n
+        IC_SLV_RESTART_DET_EN ............. 0x1\n
+        IC_SMBUS .......................... 0x0\n
+        IC_OPTIONAL_SAR_DEFAULT ........... 0x0\n
+        IC_PERSISTANT_SLV_ADDR_DEFAULT .... 0x0\n
+        IC_USE_COUNTS ..................... 0x0\n
+        IC_RX_BUFFER_DEPTH ................ 16\n
+        IC_SCL_STUCK_TIMEOUT_DEFAULT ...... 0xffffffff\n
+        IC_RX_FULL_HLD_BUS_EN ............. 0x1\n
+        IC_SLAVE_DISABLE .................. 0x1\n
+        IC_RX_TL .......................... 0x0\n
+        IC_DEVICE_ID ...................... 0x0\n
+        IC_HC_COUNT_VALUES ................ 0x0\n
+        I2C_DYNAMIC_TAR_UPDATE ............ 0\n
+        IC_SMBUS_CLK_LOW_MEXT_DEFAULT ..... 0xffffffff\n
+        IC_SMBUS_CLK_LOW_SEXT_DEFAULT ..... 0xffffffff\n
+        IC_HS_MASTER_CODE ................. 0x1\n
+        IC_SMBUS_RST_IDLE_CNT_DEFAULT ..... 0xffff\n
+        IC_SMBUS_UDID_LSB_DEFAULT ......... 0xffffffff\n
+        IC_SS_SCL_HIGH_COUNT .............. 0x0028\n
+        IC_SS_SCL_LOW_COUNT ............... 0x002f\n
+        IC_MAX_SPEED_MODE ................. 0x2\n
+        IC_STAT_FOR_CLK_STRETCH ........... 0x0\n
+        IC_STOP_DET_IF_MASTER_ACTIVE ...... 0x0\n
+        IC_DEFAULT_UFM_SPKLEN ............. 0x1\n
+        IC_TX_BUFFER_DEPTH ................ 16</description>
       <baseAddress>0x40044000</baseAddress>
       <size>32</size>
       <addressBlock>
@@ -20337,7 +20406,8 @@
             <field>
               <name>CH0_DBG_CTDREQ</name>
             <bitRange>[5:0]</bitRange>
-              <access>read-only</access>
+              <access>read-write</access>
+              <modifiedWriteValues>oneToClear</modifiedWriteValues>
               </field>
           </fields>
           </register>
@@ -20357,7 +20427,8 @@
             <field>
               <name>CH1_DBG_CTDREQ</name>
             <bitRange>[5:0]</bitRange>
-              <access>read-only</access>
+              <access>read-write</access>
+              <modifiedWriteValues>oneToClear</modifiedWriteValues>
               </field>
           </fields>
           </register>
@@ -20377,7 +20448,8 @@
             <field>
               <name>CH2_DBG_CTDREQ</name>
             <bitRange>[5:0]</bitRange>
-              <access>read-only</access>
+              <access>read-write</access>
+              <modifiedWriteValues>oneToClear</modifiedWriteValues>
               </field>
           </fields>
           </register>
@@ -20397,7 +20469,8 @@
             <field>
               <name>CH3_DBG_CTDREQ</name>
             <bitRange>[5:0]</bitRange>
-              <access>read-only</access>
+              <access>read-write</access>
+              <modifiedWriteValues>oneToClear</modifiedWriteValues>
               </field>
           </fields>
           </register>
@@ -20417,7 +20490,8 @@
             <field>
               <name>CH4_DBG_CTDREQ</name>
             <bitRange>[5:0]</bitRange>
-              <access>read-only</access>
+              <access>read-write</access>
+              <modifiedWriteValues>oneToClear</modifiedWriteValues>
               </field>
           </fields>
           </register>
@@ -20437,7 +20511,8 @@
             <field>
               <name>CH5_DBG_CTDREQ</name>
             <bitRange>[5:0]</bitRange>
-              <access>read-only</access>
+              <access>read-write</access>
+              <modifiedWriteValues>oneToClear</modifiedWriteValues>
               </field>
           </fields>
           </register>
@@ -20457,7 +20532,8 @@
             <field>
               <name>CH6_DBG_CTDREQ</name>
             <bitRange>[5:0]</bitRange>
-              <access>read-only</access>
+              <access>read-write</access>
+              <modifiedWriteValues>oneToClear</modifiedWriteValues>
               </field>
           </fields>
           </register>
@@ -20477,7 +20553,8 @@
             <field>
               <name>CH7_DBG_CTDREQ</name>
             <bitRange>[5:0]</bitRange>
-              <access>read-only</access>
+              <access>read-write</access>
+              <modifiedWriteValues>oneToClear</modifiedWriteValues>
               </field>
           </fields>
           </register>
@@ -20497,7 +20574,8 @@
             <field>
               <name>CH8_DBG_CTDREQ</name>
             <bitRange>[5:0]</bitRange>
-              <access>read-only</access>
+              <access>read-write</access>
+              <modifiedWriteValues>oneToClear</modifiedWriteValues>
               </field>
           </fields>
           </register>
@@ -20517,7 +20595,8 @@
             <field>
               <name>CH9_DBG_CTDREQ</name>
             <bitRange>[5:0]</bitRange>
-              <access>read-only</access>
+              <access>read-write</access>
+              <modifiedWriteValues>oneToClear</modifiedWriteValues>
               </field>
           </fields>
           </register>
@@ -20537,7 +20616,8 @@
             <field>
               <name>CH10_DBG_CTDREQ</name>
             <bitRange>[5:0]</bitRange>
-              <access>read-only</access>
+              <access>read-write</access>
+              <modifiedWriteValues>oneToClear</modifiedWriteValues>
               </field>
           </fields>
           </register>
@@ -20557,7 +20637,8 @@
             <field>
               <name>CH11_DBG_CTDREQ</name>
             <bitRange>[5:0]</bitRange>
-              <access>read-only</access>
+              <access>read-write</access>
+              <modifiedWriteValues>oneToClear</modifiedWriteValues>
               </field>
           </fields>
           </register>
@@ -20794,7 +20875,7 @@
               </field>
             <field>
               <name>LENGTH_0</name>
-            <description>The length of the data in buffer 1.</description>
+            <description>The length of the data in buffer 0.</description>
               <bitRange>[9:0]</bitRange>
               <access>read-write</access>
               </field>
@@ -21622,6 +21703,7 @@
             <description>Device: connected</description>
               <bitRange>[16:16]</bitRange>
               <access>read-write</access>
+              <modifiedWriteValues>oneToClear</modifiedWriteValues>
               </field>
             <field>
               <name>RESUME</name>
@@ -21640,13 +21722,15 @@
               <name>SPEED</name>
             <description>Host: device speed. Disconnected = 00, LS = 01, FS = 10</description>
               <bitRange>[9:8]</bitRange>
-              <access>read-only</access>
+              <access>read-write</access>
+              <modifiedWriteValues>oneToClear</modifiedWriteValues>
               </field>
             <field>
               <name>SUSPENDED</name>
             <description>Bus in suspended state. Valid for device and host. Host and device will go into suspend if neither Keep Alive / SOF frames are enabled.</description>
               <bitRange>[4:4]</bitRange>
-              <access>read-only</access>
+              <access>read-write</access>
+              <modifiedWriteValues>oneToClear</modifiedWriteValues>
               </field>
             <field>
               <name>LINE_STATE</name>
@@ -23015,7 +23099,7 @@
               </field>
             <field>
               <name>VBUS_DETECT</name>
-            <description>Source: SIE_STATUS.VBUS_DETECT</description>
+            <description>Source: SIE_STATUS.VBUS_DETECTED</description>
               <bitRange>[11:11]</bitRange>
               <access>read-only</access>
               </field>
@@ -23143,7 +23227,7 @@
               </field>
             <field>
               <name>VBUS_DETECT</name>
-            <description>Source: SIE_STATUS.VBUS_DETECT</description>
+            <description>Source: SIE_STATUS.VBUS_DETECTED</description>
               <bitRange>[11:11]</bitRange>
               <access>read-write</access>
               </field>
@@ -23271,7 +23355,7 @@
               </field>
             <field>
               <name>VBUS_DETECT</name>
-            <description>Source: SIE_STATUS.VBUS_DETECT</description>
+            <description>Source: SIE_STATUS.VBUS_DETECTED</description>
               <bitRange>[11:11]</bitRange>
               <access>read-write</access>
               </field>
@@ -23399,7 +23483,7 @@
               </field>
             <field>
               <name>VBUS_DETECT</name>
-            <description>Source: SIE_STATUS.VBUS_DETECT</description>
+            <description>Source: SIE_STATUS.VBUS_DETECTED</description>
               <bitRange>[11:11]</bitRange>
               <access>read-only</access>
               </field>
@@ -24149,14 +24233,14 @@
         </register>
         <register>
           <name>DBG_PADOUT</name>
-          <description>Read to sample the pad output values PIO is currently driving to the GPIOs.</description>
+          <description>Read to sample the pad output values PIO is currently driving to the GPIOs. On RP2040 there are 30 GPIOs, so the two most significant bits are hardwired to 0.</description>
           <addressOffset>0x003c</addressOffset>
           <access>read-only</access>
           <resetValue>0x00000000</resetValue>
         </register>
         <register>
           <name>DBG_PADOE</name>
-          <description>Read to sample the pad output enables (direction) PIO is currently driving to the GPIOs.</description>
+          <description>Read to sample the pad output enables (direction) PIO is currently driving to the GPIOs. On RP2040 there are 30 GPIOs, so the two most significant bits are hardwired to 0.</description>
           <addressOffset>0x0040</addressOffset>
           <access>read-only</access>
           <resetValue>0x00000000</resetValue>
@@ -24199,7 +24283,7 @@
             <field>
               <name>INSTR_MEM0</name>
             <bitRange>[15:0]</bitRange>
-              <access>read-write</access>
+              <access>write-only</access>
               </field>
           </fields>
           </register>
@@ -24370,7 +24454,7 @@
               <name>GPIO_OUT_SET</name>
             <description>Perform an atomic bit-set on GPIO_OUT, i.e. `GPIO_OUT |= wdata`</description>
               <bitRange>[29:0]</bitRange>
-              <access>read-write</access>
+              <access>write-only</access>
               </field>
           </fields>
           </register>
@@ -24384,7 +24468,7 @@
               <name>GPIO_OUT_CLR</name>
             <description>Perform an atomic bit-clear on GPIO_OUT, i.e. `GPIO_OUT &amp;= ~wdata`</description>
               <bitRange>[29:0]</bitRange>
-              <access>read-write</access>
+              <access>write-only</access>
               </field>
           </fields>
           </register>
@@ -24398,7 +24482,7 @@
               <name>GPIO_OUT_XOR</name>
             <description>Perform an atomic bitwise XOR on GPIO_OUT, i.e. `GPIO_OUT ^= wdata`</description>
               <bitRange>[29:0]</bitRange>
-              <access>read-write</access>
+              <access>write-only</access>
               </field>
           </fields>
           </register>
@@ -24430,7 +24514,7 @@
               <name>GPIO_OE_SET</name>
             <description>Perform an atomic bit-set on GPIO_OE, i.e. `GPIO_OE |= wdata`</description>
               <bitRange>[29:0]</bitRange>
-              <access>read-write</access>
+              <access>write-only</access>
               </field>
           </fields>
           </register>
@@ -24444,7 +24528,7 @@
               <name>GPIO_OE_CLR</name>
             <description>Perform an atomic bit-clear on GPIO_OE, i.e. `GPIO_OE &amp;= ~wdata`</description>
               <bitRange>[29:0]</bitRange>
-              <access>read-write</access>
+              <access>write-only</access>
               </field>
           </fields>
           </register>
@@ -24458,7 +24542,7 @@
               <name>GPIO_OE_XOR</name>
             <description>Perform an atomic bitwise XOR on GPIO_OE, i.e. `GPIO_OE ^= wdata`</description>
               <bitRange>[29:0]</bitRange>
-              <access>read-write</access>
+              <access>write-only</access>
               </field>
           </fields>
           </register>
@@ -24490,7 +24574,7 @@
               <name>GPIO_HI_OUT_SET</name>
             <description>Perform an atomic bit-set on GPIO_HI_OUT, i.e. `GPIO_HI_OUT |= wdata`</description>
               <bitRange>[5:0]</bitRange>
-              <access>read-write</access>
+              <access>write-only</access>
               </field>
           </fields>
           </register>
@@ -24504,7 +24588,7 @@
               <name>GPIO_HI_OUT_CLR</name>
             <description>Perform an atomic bit-clear on GPIO_HI_OUT, i.e. `GPIO_HI_OUT &amp;= ~wdata`</description>
               <bitRange>[5:0]</bitRange>
-              <access>read-write</access>
+              <access>write-only</access>
               </field>
           </fields>
           </register>
@@ -24518,7 +24602,7 @@
               <name>GPIO_HI_OUT_XOR</name>
             <description>Perform an atomic bitwise XOR on GPIO_HI_OUT, i.e. `GPIO_HI_OUT ^= wdata`</description>
               <bitRange>[5:0]</bitRange>
-              <access>read-write</access>
+              <access>write-only</access>
               </field>
           </fields>
           </register>
@@ -24550,7 +24634,7 @@
               <name>GPIO_HI_OE_SET</name>
             <description>Perform an atomic bit-set on GPIO_HI_OE, i.e. `GPIO_HI_OE |= wdata`</description>
               <bitRange>[5:0]</bitRange>
-              <access>read-write</access>
+              <access>write-only</access>
               </field>
           </fields>
           </register>
@@ -24564,7 +24648,7 @@
               <name>GPIO_HI_OE_CLR</name>
             <description>Perform an atomic bit-clear on GPIO_HI_OE, i.e. `GPIO_HI_OE &amp;= ~wdata`</description>
               <bitRange>[5:0]</bitRange>
-              <access>read-write</access>
+              <access>write-only</access>
               </field>
           </fields>
           </register>
@@ -24578,7 +24662,7 @@
               <name>GPIO_HI_OE_XOR</name>
             <description>Perform an atomic bitwise XOR on GPIO_HI_OE, i.e. `GPIO_HI_OE ^= wdata`</description>
               <bitRange>[5:0]</bitRange>
-              <access>read-write</access>
+              <access>write-only</access>
               </field>
           </fields>
           </register>
@@ -24994,7 +25078,7 @@
           <description>On write, the lower 16 bits go to BASE0, upper bits to BASE1 simultaneously.\n
             Each half is sign-extended to 32 bits if that lane's SIGNED flag is set.</description>
           <addressOffset>0x00bc</addressOffset>
-          <access>read-write</access>
+          <access>write-only</access>
           <resetValue>0x00000000</resetValue>
         </register>
         <register>
@@ -25256,7 +25340,7 @@
           <description>On write, the lower 16 bits go to BASE0, upper bits to BASE1 simultaneously.\n
             Each half is sign-extended to 32 bits if that lane's SIGNED flag is set.</description>
           <addressOffset>0x00fc</addressOffset>
-          <access>read-write</access>
+          <access>write-only</access>
           <resetValue>0x00000000</resetValue>
         </register>
         <register>

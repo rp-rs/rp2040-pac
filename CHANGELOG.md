@@ -7,6 +7,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+- Update source SVD to pico-sdk 1.3.0
+- Remove patches that were no longer required thanks to new SVD file.
+
 ## [0.1.5] [Crates.io](https://crates.io/crates/rp2040-pac/0.1.5) [Github](https://github.com/rp-rs/rp2040-pac/releases/tag/v0.1.5)
 
 - Update cortex-m-rt to 0.7.0

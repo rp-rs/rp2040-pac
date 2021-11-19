@@ -5,9 +5,6 @@ DMA:
     "CH*_AL1_CTRL": {}
     "CH*_AL2_CTRL": {}
     "CH*_AL3_CTRL": {}
-  _modify:
-    "CH*_AL*":
-      access: read-write
   _derive:
     "CH0_AL1_CTRL":
       _from: "CH0_CTRL_TRIG"
@@ -199,17 +196,7 @@ PADS_BANK0:
     "GPIO*": {}
 
 USBCTRL_REGS:
-  # BUFF_STATUS is read-only in the SVD and datasheet, but used as read-write
-  # in the example code (see https://github.com/raspberrypi/pico-feedback/issues/36).
-  BUFF_STATUS:
-    _modify:
-      "EP*":
-        access: read-write
   SIE_STATUS:
-    _modify:
-      # CONNECTED is implied to be read-write https://github.com/raspberrypi/pico-feedback/issues/110
-      CONNECTED:
-          access: "read-write"
     LINE_STATE:
       SE0: [0, "SE0"]
       J: [1, "J"]
@@ -251,17 +238,6 @@ XOSC:
   _delete:
     # RP2040-E7: ROSC and XOSC COUNT registers are unreliable
     "COUNT":
-
-# SPINLOCK0-31 are read-only in the SVD and datasheet, but used as read-write
-# in the example code (see https://github.com/raspberrypi/pico-feedback/issues/162).
-SIO:
-  _modify:
-      "SPINLOCK[0123456789]":
-        access: read-write
-      "SPINLOCK[12][0123456789]":
-        access: read-write
-      "SPINLOCK3[01]":
-        access: read-write
 
 USBCTRL_DPRAM:
   _modify:

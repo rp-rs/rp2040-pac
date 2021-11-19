@@ -24,9 +24,9 @@ pub struct RegisterBlock {
  1 -> synchronizer is bypassed  
  If in doubt, leave this register as all zeroes."]
     pub input_sync_bypass: crate::Reg<input_sync_bypass::INPUT_SYNC_BYPASS_SPEC>,
-    #[doc = "0x3c - Read to sample the pad output values PIO is currently driving to the GPIOs."]
+    #[doc = "0x3c - Read to sample the pad output values PIO is currently driving to the GPIOs. On RP2040 there are 30 GPIOs, so the two most significant bits are hardwired to 0."]
     pub dbg_padout: crate::Reg<dbg_padout::DBG_PADOUT_SPEC>,
-    #[doc = "0x40 - Read to sample the pad output enables (direction) PIO is currently driving to the GPIOs."]
+    #[doc = "0x40 - Read to sample the pad output enables (direction) PIO is currently driving to the GPIOs. On RP2040 there are 30 GPIOs, so the two most significant bits are hardwired to 0."]
     pub dbg_padoe: crate::Reg<dbg_padoe::DBG_PADOE_SPEC>,
     #[doc = "0x44 - The PIO hardware has some free parameters that may vary between chip products.  
  These should be provided in the chip datasheet, but are also exposed here."]
@@ -117,11 +117,11 @@ pub type INPUT_SYNC_BYPASS = crate::Reg<input_sync_bypass::INPUT_SYNC_BYPASS_SPE
 pub mod input_sync_bypass;
 #[doc = "DBG_PADOUT register accessor: an alias for `Reg<DBG_PADOUT_SPEC>`"]
 pub type DBG_PADOUT = crate::Reg<dbg_padout::DBG_PADOUT_SPEC>;
-#[doc = "Read to sample the pad output values PIO is currently driving to the GPIOs."]
+#[doc = "Read to sample the pad output values PIO is currently driving to the GPIOs. On RP2040 there are 30 GPIOs, so the two most significant bits are hardwired to 0."]
 pub mod dbg_padout;
 #[doc = "DBG_PADOE register accessor: an alias for `Reg<DBG_PADOE_SPEC>`"]
 pub type DBG_PADOE = crate::Reg<dbg_padoe::DBG_PADOE_SPEC>;
-#[doc = "Read to sample the pad output enables (direction) PIO is currently driving to the GPIOs."]
+#[doc = "Read to sample the pad output enables (direction) PIO is currently driving to the GPIOs. On RP2040 there are 30 GPIOs, so the two most significant bits are hardwired to 0."]
 pub mod dbg_padoe;
 #[doc = "DBG_CFGINFO register accessor: an alias for `Reg<DBG_CFGINFO_SPEC>`"]
 pub type DBG_CFGINFO = crate::Reg<dbg_cfginfo::DBG_CFGINFO_SPEC>;
