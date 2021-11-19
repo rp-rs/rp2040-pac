@@ -1,6 +1,6 @@
 [package]
 name = "rp2040-pac"
-version = "0.1.5"
+version = "0.1.6"
 authors = ["eolder <evanmolder@gmail.com>", "Jonathan Pallant <github@thejpster.org.uk>"]
 edition = "2018"
 homepage = "https://github.com/rp-rs/rp2040-pac"
