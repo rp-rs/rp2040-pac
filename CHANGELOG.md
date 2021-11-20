@@ -9,11 +9,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - None
 
-## [0.1.6] [Crates.io](https://crates.io/crates/rp2040-pac/0.1.6) [Github](https://github.com/rp-rs/rp2040-pac/releases/tag/v0.1.6)
+## [0.2.0] [Crates.io](https://crates.io/crates/rp2040-pac/0.2.0) [Github](https://github.com/rp-rs/rp2040-pac/releases/tag/v0.2.0)
 
 - Update source SVD to pico-sdk 1.3.0
 - Remove patches that were no longer required thanks to new SVD file.
-- Arrayify `procX_intX` registers in `IO_BANK1`.
+- Arrayify `procX_intX` registers in `IO_BANK1`. This is a breaking change.
 
 ## [0.1.5] [Crates.io](https://crates.io/crates/rp2040-pac/0.1.5) [Github](https://github.com/rp-rs/rp2040-pac/releases/tag/v0.1.5)
 
