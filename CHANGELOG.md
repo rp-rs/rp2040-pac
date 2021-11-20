@@ -7,7 +7,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
-- None
+- Arrayify `spinlockX` registers in `SIO`
 
 ## [0.2.0] [Crates.io](https://crates.io/crates/rp2040-pac/0.2.0) [Github](https://github.com/rp-rs/rp2040-pac/releases/tag/v0.2.0)
 
