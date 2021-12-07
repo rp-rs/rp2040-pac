@@ -37,6 +37,7 @@ impl From<crate::W<IC_SDA_SETUP_SPEC>> for W {
 #[doc = "Field `SDA_SETUP` reader - SDA Setup. It is recommended that if the required delay is 1000ns, then for an ic_clk frequency of 10 MHz, IC_SDA_SETUP should be programmed to a value of 11. IC_SDA_SETUP must be programmed with a minimum value of 2."]
 pub struct SDA_SETUP_R(crate::FieldReader<u8, u8>);
 impl SDA_SETUP_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         SDA_SETUP_R(crate::FieldReader::new(bits))
     }

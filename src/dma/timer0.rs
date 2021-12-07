@@ -37,6 +37,7 @@ impl From<crate::W<TIMER0_SPEC>> for W {
 #[doc = "Field `X` reader - Pacing Timer Dividend. Specifies the X value for the (X/Y) fractional timer."]
 pub struct X_R(crate::FieldReader<u16, u16>);
 impl X_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u16) -> Self {
         X_R(crate::FieldReader::new(bits))
     }
@@ -63,6 +64,7 @@ impl<'a> X_W<'a> {
 #[doc = "Field `Y` reader - Pacing Timer Divisor. Specifies the Y value for the (X/Y) fractional timer."]
 pub struct Y_R(crate::FieldReader<u16, u16>);
 impl Y_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u16) -> Self {
         Y_R(crate::FieldReader::new(bits))
     }

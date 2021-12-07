@@ -38,6 +38,7 @@ impl From<crate::W<VTOR_SPEC>> for W {
 of the indicate the vector table offset address."]
 pub struct TBLOFF_R(crate::FieldReader<u32, u32>);
 impl TBLOFF_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u32) -> Self {
         TBLOFF_R(crate::FieldReader::new(bits))
     }

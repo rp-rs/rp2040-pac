@@ -37,6 +37,7 @@ impl From<crate::W<UARTLCR_H_SPEC>> for W {
 #[doc = "Field `SPS` reader - Stick parity select. 0 = stick parity is disabled 1 = either: * if the EPS bit is 0 then the parity bit is transmitted and checked as a 1 * if the EPS bit is 1 then the parity bit is transmitted and checked as a 0. This bit has no effect when the PEN bit disables parity checking and generation."]
 pub struct SPS_R(crate::FieldReader<bool, bool>);
 impl SPS_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         SPS_R(crate::FieldReader::new(bits))
     }
@@ -73,6 +74,7 @@ impl<'a> SPS_W<'a> {
 #[doc = "Field `WLEN` reader - Word length. These bits indicate the number of data bits transmitted or received in a frame as follows: b11 = 8 bits b10 = 7 bits b01 = 6 bits b00 = 5 bits."]
 pub struct WLEN_R(crate::FieldReader<u8, u8>);
 impl WLEN_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         WLEN_R(crate::FieldReader::new(bits))
     }
@@ -99,6 +101,7 @@ impl<'a> WLEN_W<'a> {
 #[doc = "Field `FEN` reader - Enable FIFOs: 0 = FIFOs are disabled (character mode) that is, the FIFOs become 1-byte-deep holding registers 1 = transmit and receive FIFO buffers are enabled (FIFO mode)."]
 pub struct FEN_R(crate::FieldReader<bool, bool>);
 impl FEN_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         FEN_R(crate::FieldReader::new(bits))
     }
@@ -135,6 +138,7 @@ impl<'a> FEN_W<'a> {
 #[doc = "Field `STP2` reader - Two stop bits select. If this bit is set to 1, two stop bits are transmitted at the end of the frame. The receive logic does not check for two stop bits being received."]
 pub struct STP2_R(crate::FieldReader<bool, bool>);
 impl STP2_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         STP2_R(crate::FieldReader::new(bits))
     }
@@ -171,6 +175,7 @@ impl<'a> STP2_W<'a> {
 #[doc = "Field `EPS` reader - Even parity select. Controls the type of parity the UART uses during transmission and reception: 0 = odd parity. The UART generates or checks for an odd number of 1s in the data and parity bits. 1 = even parity. The UART generates or checks for an even number of 1s in the data and parity bits. This bit has no effect when the PEN bit disables parity checking and generation."]
 pub struct EPS_R(crate::FieldReader<bool, bool>);
 impl EPS_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         EPS_R(crate::FieldReader::new(bits))
     }
@@ -207,6 +212,7 @@ impl<'a> EPS_W<'a> {
 #[doc = "Field `PEN` reader - Parity enable: 0 = parity is disabled and no parity bit added to the data frame 1 = parity checking and generation is enabled."]
 pub struct PEN_R(crate::FieldReader<bool, bool>);
 impl PEN_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         PEN_R(crate::FieldReader::new(bits))
     }
@@ -243,6 +249,7 @@ impl<'a> PEN_W<'a> {
 #[doc = "Field `BRK` reader - Send break. If this bit is set to 1, a low-level is continually output on the UARTTXD output, after completing transmission of the current character. For the proper execution of the break command, the software must set this bit for at least two complete frames. For normal use, this bit must be cleared to 0."]
 pub struct BRK_R(crate::FieldReader<bool, bool>);
 impl BRK_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         BRK_R(crate::FieldReader::new(bits))
     }

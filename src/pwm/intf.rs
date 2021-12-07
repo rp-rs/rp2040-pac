@@ -37,6 +37,7 @@ impl From<crate::W<INTF_SPEC>> for W {
 #[doc = "Field `CH7` reader - "]
 pub struct CH7_R(crate::FieldReader<bool, bool>);
 impl CH7_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         CH7_R(crate::FieldReader::new(bits))
     }
@@ -73,6 +74,7 @@ impl<'a> CH7_W<'a> {
 #[doc = "Field `CH6` reader - "]
 pub struct CH6_R(crate::FieldReader<bool, bool>);
 impl CH6_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         CH6_R(crate::FieldReader::new(bits))
     }
@@ -109,6 +111,7 @@ impl<'a> CH6_W<'a> {
 #[doc = "Field `CH5` reader - "]
 pub struct CH5_R(crate::FieldReader<bool, bool>);
 impl CH5_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         CH5_R(crate::FieldReader::new(bits))
     }
@@ -145,6 +148,7 @@ impl<'a> CH5_W<'a> {
 #[doc = "Field `CH4` reader - "]
 pub struct CH4_R(crate::FieldReader<bool, bool>);
 impl CH4_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         CH4_R(crate::FieldReader::new(bits))
     }
@@ -181,6 +185,7 @@ impl<'a> CH4_W<'a> {
 #[doc = "Field `CH3` reader - "]
 pub struct CH3_R(crate::FieldReader<bool, bool>);
 impl CH3_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         CH3_R(crate::FieldReader::new(bits))
     }
@@ -217,6 +222,7 @@ impl<'a> CH3_W<'a> {
 #[doc = "Field `CH2` reader - "]
 pub struct CH2_R(crate::FieldReader<bool, bool>);
 impl CH2_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         CH2_R(crate::FieldReader::new(bits))
     }
@@ -253,6 +259,7 @@ impl<'a> CH2_W<'a> {
 #[doc = "Field `CH1` reader - "]
 pub struct CH1_R(crate::FieldReader<bool, bool>);
 impl CH1_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         CH1_R(crate::FieldReader::new(bits))
     }
@@ -289,6 +296,7 @@ impl<'a> CH1_W<'a> {
 #[doc = "Field `CH0` reader - "]
 pub struct CH0_R(crate::FieldReader<bool, bool>);
 impl CH0_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         CH0_R(crate::FieldReader::new(bits))
     }

@@ -37,6 +37,7 @@ impl From<crate::W<INTE_SPEC>> for W {
 #[doc = "Field `RTC` reader - "]
 pub struct RTC_R(crate::FieldReader<bool, bool>);
 impl RTC_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         RTC_R(crate::FieldReader::new(bits))
     }

@@ -53,6 +53,7 @@ impl From<ACK_GEN_CALL_A> for bool {
 #[doc = "Field `ACK_GEN_CALL` reader - ACK General Call. When set to 1, DW_apb_i2c responds with a ACK (by asserting ic_data_oe) when it receives a General Call. Otherwise, DW_apb_i2c responds with a NACK (by negating ic_data_oe)."]
 pub struct ACK_GEN_CALL_R(crate::FieldReader<bool, ACK_GEN_CALL_A>);
 impl ACK_GEN_CALL_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         ACK_GEN_CALL_R(crate::FieldReader::new(bits))
     }

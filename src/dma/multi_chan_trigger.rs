@@ -37,6 +37,7 @@ impl From<crate::W<MULTI_CHAN_TRIGGER_SPEC>> for W {
 #[doc = "Field `MULTI_CHAN_TRIGGER` reader - Each bit in this register corresponds to a DMA channel. Writing a 1 to the relevant bit is the same as writing to that channel's trigger register; the channel will start if it is currently enabled and not already busy."]
 pub struct MULTI_CHAN_TRIGGER_R(crate::FieldReader<u16, u16>);
 impl MULTI_CHAN_TRIGGER_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u16) -> Self {
         MULTI_CHAN_TRIGGER_R(crate::FieldReader::new(bits))
     }

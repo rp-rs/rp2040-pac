@@ -39,6 +39,7 @@ impl From<crate::W<CHIP_RESET_SPEC>> for W {
  In the safe mode the debugger can repair the boot code, clear this flag then reboot the processor."]
 pub struct PSM_RESTART_FLAG_R(crate::FieldReader<bool, bool>);
 impl PSM_RESTART_FLAG_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         PSM_RESTART_FLAG_R(crate::FieldReader::new(bits))
     }
@@ -77,6 +78,7 @@ impl<'a> PSM_RESTART_FLAG_W<'a> {
 #[doc = "Field `HAD_PSM_RESTART` reader - Last reset was from the debug port"]
 pub struct HAD_PSM_RESTART_R(crate::FieldReader<bool, bool>);
 impl HAD_PSM_RESTART_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         HAD_PSM_RESTART_R(crate::FieldReader::new(bits))
     }
@@ -91,6 +93,7 @@ impl core::ops::Deref for HAD_PSM_RESTART_R {
 #[doc = "Field `HAD_RUN` reader - Last reset was from the RUN pin"]
 pub struct HAD_RUN_R(crate::FieldReader<bool, bool>);
 impl HAD_RUN_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         HAD_RUN_R(crate::FieldReader::new(bits))
     }
@@ -105,6 +108,7 @@ impl core::ops::Deref for HAD_RUN_R {
 #[doc = "Field `HAD_POR` reader - Last reset was from the power-on reset or brown-out detection blocks"]
 pub struct HAD_POR_R(crate::FieldReader<bool, bool>);
 impl HAD_POR_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         HAD_POR_R(crate::FieldReader::new(bits))
     }
@@ -117,7 +121,9 @@ impl core::ops::Deref for HAD_POR_R {
     }
 }
 impl R {
-    #[doc = "Bit 24 - This is set by psm_restart from the debugger. Its purpose is to branch bootcode to a safe mode when the debugger has issued a psm_restart in order to recover from a boot lock-up. In the safe mode the debugger can repair the boot code, clear this flag then reboot the processor."]
+    #[doc = "Bit 24 - This is set by psm_restart from the debugger.  
+ Its purpose is to branch bootcode to a safe mode when the debugger has issued a psm_restart in order to recover from a boot lock-up.  
+ In the safe mode the debugger can repair the boot code, clear this flag then reboot the processor."]
     #[inline(always)]
     pub fn psm_restart_flag(&self) -> PSM_RESTART_FLAG_R {
         PSM_RESTART_FLAG_R::new(((self.bits >> 24) & 0x01) != 0)
@@ -139,7 +145,9 @@ impl R {
     }
 }
 impl W {
-    #[doc = "Bit 24 - This is set by psm_restart from the debugger. Its purpose is to branch bootcode to a safe mode when the debugger has issued a psm_restart in order to recover from a boot lock-up. In the safe mode the debugger can repair the boot code, clear this flag then reboot the processor."]
+    #[doc = "Bit 24 - This is set by psm_restart from the debugger.  
+ Its purpose is to branch bootcode to a safe mode when the debugger has issued a psm_restart in order to recover from a boot lock-up.  
+ In the safe mode the debugger can repair the boot code, clear this flag then reboot the processor."]
     #[inline(always)]
     pub fn psm_restart_flag(&mut self) -> PSM_RESTART_FLAG_W {
         PSM_RESTART_FLAG_W { w: self }

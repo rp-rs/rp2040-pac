@@ -16,6 +16,7 @@ impl From<crate::R<SSPSR_SPEC>> for R {
 #[doc = "Field `BSY` reader - PrimeCell SSP busy flag, RO: 0 SSP is idle. 1 SSP is currently transmitting and/or receiving a frame or the transmit FIFO is not empty."]
 pub struct BSY_R(crate::FieldReader<bool, bool>);
 impl BSY_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         BSY_R(crate::FieldReader::new(bits))
     }
@@ -30,6 +31,7 @@ impl core::ops::Deref for BSY_R {
 #[doc = "Field `RFF` reader - Receive FIFO full, RO: 0 Receive FIFO is not full. 1 Receive FIFO is full."]
 pub struct RFF_R(crate::FieldReader<bool, bool>);
 impl RFF_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         RFF_R(crate::FieldReader::new(bits))
     }
@@ -44,6 +46,7 @@ impl core::ops::Deref for RFF_R {
 #[doc = "Field `RNE` reader - Receive FIFO not empty, RO: 0 Receive FIFO is empty. 1 Receive FIFO is not empty."]
 pub struct RNE_R(crate::FieldReader<bool, bool>);
 impl RNE_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         RNE_R(crate::FieldReader::new(bits))
     }
@@ -58,6 +61,7 @@ impl core::ops::Deref for RNE_R {
 #[doc = "Field `TNF` reader - Transmit FIFO not full, RO: 0 Transmit FIFO is full. 1 Transmit FIFO is not full."]
 pub struct TNF_R(crate::FieldReader<bool, bool>);
 impl TNF_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         TNF_R(crate::FieldReader::new(bits))
     }
@@ -72,6 +76,7 @@ impl core::ops::Deref for TNF_R {
 #[doc = "Field `TFE` reader - Transmit FIFO empty, RO: 0 Transmit FIFO is not empty. 1 Transmit FIFO is empty."]
 pub struct TFE_R(crate::FieldReader<bool, bool>);
 impl TFE_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         TFE_R(crate::FieldReader::new(bits))
     }

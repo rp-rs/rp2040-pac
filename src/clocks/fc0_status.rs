@@ -16,6 +16,7 @@ impl From<crate::R<FC0_STATUS_SPEC>> for R {
 #[doc = "Field `DIED` reader - Test clock stopped during test"]
 pub struct DIED_R(crate::FieldReader<bool, bool>);
 impl DIED_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         DIED_R(crate::FieldReader::new(bits))
     }
@@ -30,6 +31,7 @@ impl core::ops::Deref for DIED_R {
 #[doc = "Field `FAST` reader - Test clock faster than expected, only valid when status_done=1"]
 pub struct FAST_R(crate::FieldReader<bool, bool>);
 impl FAST_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         FAST_R(crate::FieldReader::new(bits))
     }
@@ -44,6 +46,7 @@ impl core::ops::Deref for FAST_R {
 #[doc = "Field `SLOW` reader - Test clock slower than expected, only valid when status_done=1"]
 pub struct SLOW_R(crate::FieldReader<bool, bool>);
 impl SLOW_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         SLOW_R(crate::FieldReader::new(bits))
     }
@@ -58,6 +61,7 @@ impl core::ops::Deref for SLOW_R {
 #[doc = "Field `FAIL` reader - Test failed"]
 pub struct FAIL_R(crate::FieldReader<bool, bool>);
 impl FAIL_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         FAIL_R(crate::FieldReader::new(bits))
     }
@@ -72,6 +76,7 @@ impl core::ops::Deref for FAIL_R {
 #[doc = "Field `WAITING` reader - Waiting for test clock to start"]
 pub struct WAITING_R(crate::FieldReader<bool, bool>);
 impl WAITING_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         WAITING_R(crate::FieldReader::new(bits))
     }
@@ -86,6 +91,7 @@ impl core::ops::Deref for WAITING_R {
 #[doc = "Field `RUNNING` reader - Test running"]
 pub struct RUNNING_R(crate::FieldReader<bool, bool>);
 impl RUNNING_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         RUNNING_R(crate::FieldReader::new(bits))
     }
@@ -100,6 +106,7 @@ impl core::ops::Deref for RUNNING_R {
 #[doc = "Field `DONE` reader - Test complete"]
 pub struct DONE_R(crate::FieldReader<bool, bool>);
 impl DONE_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         DONE_R(crate::FieldReader::new(bits))
     }
@@ -114,6 +121,7 @@ impl core::ops::Deref for DONE_R {
 #[doc = "Field `PASS` reader - Test passed"]
 pub struct PASS_R(crate::FieldReader<bool, bool>);
 impl PASS_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         PASS_R(crate::FieldReader::new(bits))
     }

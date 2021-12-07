@@ -16,6 +16,7 @@ impl From<crate::R<RANDOMBIT_SPEC>> for R {
 #[doc = "Field `RANDOMBIT` reader - "]
 pub struct RANDOMBIT_R(crate::FieldReader<bool, bool>);
 impl RANDOMBIT_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         RANDOMBIT_R(crate::FieldReader::new(bits))
     }

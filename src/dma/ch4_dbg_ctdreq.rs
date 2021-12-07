@@ -37,6 +37,7 @@ impl From<crate::W<CH4_DBG_CTDREQ_SPEC>> for W {
 #[doc = "Field `CH4_DBG_CTDREQ` reader - "]
 pub struct CH4_DBG_CTDREQ_R(crate::FieldReader<u8, u8>);
 impl CH4_DBG_CTDREQ_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         CH4_DBG_CTDREQ_R(crate::FieldReader::new(bits))
     }

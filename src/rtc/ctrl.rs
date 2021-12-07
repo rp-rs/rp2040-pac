@@ -38,6 +38,7 @@ impl From<crate::W<CTRL_SPEC>> for W {
  Useful for years divisible by 100 but not by 400"]
 pub struct FORCE_NOTLEAPYEAR_R(crate::FieldReader<bool, bool>);
 impl FORCE_NOTLEAPYEAR_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         FORCE_NOTLEAPYEAR_R(crate::FieldReader::new(bits))
     }
@@ -75,6 +76,7 @@ impl<'a> FORCE_NOTLEAPYEAR_W<'a> {
 #[doc = "Field `LOAD` reader - Load RTC"]
 pub struct LOAD_R(crate::FieldReader<bool, bool>);
 impl LOAD_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         LOAD_R(crate::FieldReader::new(bits))
     }
@@ -111,6 +113,7 @@ impl<'a> LOAD_W<'a> {
 #[doc = "Field `RTC_ACTIVE` reader - RTC enabled (running)"]
 pub struct RTC_ACTIVE_R(crate::FieldReader<bool, bool>);
 impl RTC_ACTIVE_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         RTC_ACTIVE_R(crate::FieldReader::new(bits))
     }
@@ -125,6 +128,7 @@ impl core::ops::Deref for RTC_ACTIVE_R {
 #[doc = "Field `RTC_ENABLE` reader - Enable RTC"]
 pub struct RTC_ENABLE_R(crate::FieldReader<bool, bool>);
 impl RTC_ENABLE_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         RTC_ENABLE_R(crate::FieldReader::new(bits))
     }
@@ -159,7 +163,8 @@ impl<'a> RTC_ENABLE_W<'a> {
     }
 }
 impl R {
-    #[doc = "Bit 8 - If set, leapyear is forced off. Useful for years divisible by 100 but not by 400"]
+    #[doc = "Bit 8 - If set, leapyear is forced off.  
+ Useful for years divisible by 100 but not by 400"]
     #[inline(always)]
     pub fn force_notleapyear(&self) -> FORCE_NOTLEAPYEAR_R {
         FORCE_NOTLEAPYEAR_R::new(((self.bits >> 8) & 0x01) != 0)
@@ -181,7 +186,8 @@ impl R {
     }
 }
 impl W {
-    #[doc = "Bit 8 - If set, leapyear is forced off. Useful for years divisible by 100 but not by 400"]
+    #[doc = "Bit 8 - If set, leapyear is forced off.  
+ Useful for years divisible by 100 but not by 400"]
     #[inline(always)]
     pub fn force_notleapyear(&mut self) -> FORCE_NOTLEAPYEAR_W {
         FORCE_NOTLEAPYEAR_W { w: self }

@@ -16,6 +16,7 @@ impl From<crate::R<UARTPERIPHID1_SPEC>> for R {
 #[doc = "Field `DESIGNER0` reader - These bits read back as 0x1"]
 pub struct DESIGNER0_R(crate::FieldReader<u8, u8>);
 impl DESIGNER0_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         DESIGNER0_R(crate::FieldReader::new(bits))
     }
@@ -30,6 +31,7 @@ impl core::ops::Deref for DESIGNER0_R {
 #[doc = "Field `PARTNUMBER1` reader - These bits read back as 0x0"]
 pub struct PARTNUMBER1_R(crate::FieldReader<u8, u8>);
 impl PARTNUMBER1_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         PARTNUMBER1_R(crate::FieldReader::new(bits))
     }

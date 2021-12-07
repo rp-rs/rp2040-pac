@@ -37,6 +37,7 @@ impl From<crate::W<INTERP0_ACCUM1_ADD_SPEC>> for W {
 #[doc = "Field `INTERP0_ACCUM1_ADD` reader - "]
 pub struct INTERP0_ACCUM1_ADD_R(crate::FieldReader<u32, u32>);
 impl INTERP0_ACCUM1_ADD_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u32) -> Self {
         INTERP0_ACCUM1_ADD_R(crate::FieldReader::new(bits))
     }

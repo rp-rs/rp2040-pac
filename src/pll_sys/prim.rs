@@ -37,6 +37,7 @@ impl From<crate::W<PRIM_SPEC>> for W {
 #[doc = "Field `POSTDIV1` reader - divide by 1-7"]
 pub struct POSTDIV1_R(crate::FieldReader<u8, u8>);
 impl POSTDIV1_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         POSTDIV1_R(crate::FieldReader::new(bits))
     }
@@ -63,6 +64,7 @@ impl<'a> POSTDIV1_W<'a> {
 #[doc = "Field `POSTDIV2` reader - divide by 1-7"]
 pub struct POSTDIV2_R(crate::FieldReader<u8, u8>);
 impl POSTDIV2_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         POSTDIV2_R(crate::FieldReader::new(bits))
     }

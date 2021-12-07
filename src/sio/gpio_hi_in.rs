@@ -16,6 +16,7 @@ impl From<crate::R<GPIO_HI_IN_SPEC>> for R {
 #[doc = "Field `GPIO_HI_IN` reader - Input value on QSPI IO in order 0..5: SCLK, SSn, SD0, SD1, SD2, SD3"]
 pub struct GPIO_HI_IN_R(crate::FieldReader<u8, u8>);
 impl GPIO_HI_IN_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         GPIO_HI_IN_R(crate::FieldReader::new(bits))
     }

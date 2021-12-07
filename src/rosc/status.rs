@@ -16,6 +16,7 @@ impl From<crate::R<STATUS_SPEC>> for R {
 #[doc = "Field `STABLE` reader - Oscillator is running and stable"]
 pub struct STABLE_R(crate::FieldReader<bool, bool>);
 impl STABLE_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         STABLE_R(crate::FieldReader::new(bits))
     }
@@ -30,6 +31,7 @@ impl core::ops::Deref for STABLE_R {
 #[doc = "Field `DIV_RUNNING` reader - post-divider is running this resets to 0 but transitions to 1 during chip startup"]
 pub struct DIV_RUNNING_R(crate::FieldReader<bool, bool>);
 impl DIV_RUNNING_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         DIV_RUNNING_R(crate::FieldReader::new(bits))
     }
@@ -44,6 +46,7 @@ impl core::ops::Deref for DIV_RUNNING_R {
 #[doc = "Field `ENABLED` reader - Oscillator is enabled but not necessarily running and stable this resets to 0 but transitions to 1 during chip startup"]
 pub struct ENABLED_R(crate::FieldReader<bool, bool>);
 impl ENABLED_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         ENABLED_R(crate::FieldReader::new(bits))
     }

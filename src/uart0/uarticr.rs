@@ -37,6 +37,7 @@ impl From<crate::W<UARTICR_SPEC>> for W {
 #[doc = "Field `OEIC` reader - Overrun error interrupt clear. Clears the UARTOEINTR interrupt."]
 pub struct OEIC_R(crate::FieldReader<bool, bool>);
 impl OEIC_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         OEIC_R(crate::FieldReader::new(bits))
     }
@@ -73,6 +74,7 @@ impl<'a> OEIC_W<'a> {
 #[doc = "Field `BEIC` reader - Break error interrupt clear. Clears the UARTBEINTR interrupt."]
 pub struct BEIC_R(crate::FieldReader<bool, bool>);
 impl BEIC_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         BEIC_R(crate::FieldReader::new(bits))
     }
@@ -109,6 +111,7 @@ impl<'a> BEIC_W<'a> {
 #[doc = "Field `PEIC` reader - Parity error interrupt clear. Clears the UARTPEINTR interrupt."]
 pub struct PEIC_R(crate::FieldReader<bool, bool>);
 impl PEIC_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         PEIC_R(crate::FieldReader::new(bits))
     }
@@ -145,6 +148,7 @@ impl<'a> PEIC_W<'a> {
 #[doc = "Field `FEIC` reader - Framing error interrupt clear. Clears the UARTFEINTR interrupt."]
 pub struct FEIC_R(crate::FieldReader<bool, bool>);
 impl FEIC_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         FEIC_R(crate::FieldReader::new(bits))
     }
@@ -181,6 +185,7 @@ impl<'a> FEIC_W<'a> {
 #[doc = "Field `RTIC` reader - Receive timeout interrupt clear. Clears the UARTRTINTR interrupt."]
 pub struct RTIC_R(crate::FieldReader<bool, bool>);
 impl RTIC_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         RTIC_R(crate::FieldReader::new(bits))
     }
@@ -217,6 +222,7 @@ impl<'a> RTIC_W<'a> {
 #[doc = "Field `TXIC` reader - Transmit interrupt clear. Clears the UARTTXINTR interrupt."]
 pub struct TXIC_R(crate::FieldReader<bool, bool>);
 impl TXIC_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         TXIC_R(crate::FieldReader::new(bits))
     }
@@ -253,6 +259,7 @@ impl<'a> TXIC_W<'a> {
 #[doc = "Field `RXIC` reader - Receive interrupt clear. Clears the UARTRXINTR interrupt."]
 pub struct RXIC_R(crate::FieldReader<bool, bool>);
 impl RXIC_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         RXIC_R(crate::FieldReader::new(bits))
     }
@@ -289,6 +296,7 @@ impl<'a> RXIC_W<'a> {
 #[doc = "Field `DSRMIC` reader - nUARTDSR modem interrupt clear. Clears the UARTDSRINTR interrupt."]
 pub struct DSRMIC_R(crate::FieldReader<bool, bool>);
 impl DSRMIC_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         DSRMIC_R(crate::FieldReader::new(bits))
     }
@@ -325,6 +333,7 @@ impl<'a> DSRMIC_W<'a> {
 #[doc = "Field `DCDMIC` reader - nUARTDCD modem interrupt clear. Clears the UARTDCDINTR interrupt."]
 pub struct DCDMIC_R(crate::FieldReader<bool, bool>);
 impl DCDMIC_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         DCDMIC_R(crate::FieldReader::new(bits))
     }
@@ -361,6 +370,7 @@ impl<'a> DCDMIC_W<'a> {
 #[doc = "Field `CTSMIC` reader - nUARTCTS modem interrupt clear. Clears the UARTCTSINTR interrupt."]
 pub struct CTSMIC_R(crate::FieldReader<bool, bool>);
 impl CTSMIC_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         CTSMIC_R(crate::FieldReader::new(bits))
     }
@@ -397,6 +407,7 @@ impl<'a> CTSMIC_W<'a> {
 #[doc = "Field `RIMIC` reader - nUARTRI modem interrupt clear. Clears the UARTRIINTR interrupt."]
 pub struct RIMIC_R(crate::FieldReader<bool, bool>);
 impl RIMIC_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         RIMIC_R(crate::FieldReader::new(bits))
     }

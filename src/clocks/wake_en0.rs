@@ -37,6 +37,7 @@ impl From<crate::W<WAKE_EN0_SPEC>> for W {
 #[doc = "Field `clk_sys_sram3` reader - "]
 pub struct CLK_SYS_SRAM3_R(crate::FieldReader<bool, bool>);
 impl CLK_SYS_SRAM3_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         CLK_SYS_SRAM3_R(crate::FieldReader::new(bits))
     }
@@ -73,6 +74,7 @@ impl<'a> CLK_SYS_SRAM3_W<'a> {
 #[doc = "Field `clk_sys_sram2` reader - "]
 pub struct CLK_SYS_SRAM2_R(crate::FieldReader<bool, bool>);
 impl CLK_SYS_SRAM2_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         CLK_SYS_SRAM2_R(crate::FieldReader::new(bits))
     }
@@ -109,6 +111,7 @@ impl<'a> CLK_SYS_SRAM2_W<'a> {
 #[doc = "Field `clk_sys_sram1` reader - "]
 pub struct CLK_SYS_SRAM1_R(crate::FieldReader<bool, bool>);
 impl CLK_SYS_SRAM1_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         CLK_SYS_SRAM1_R(crate::FieldReader::new(bits))
     }
@@ -145,6 +148,7 @@ impl<'a> CLK_SYS_SRAM1_W<'a> {
 #[doc = "Field `clk_sys_sram0` reader - "]
 pub struct CLK_SYS_SRAM0_R(crate::FieldReader<bool, bool>);
 impl CLK_SYS_SRAM0_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         CLK_SYS_SRAM0_R(crate::FieldReader::new(bits))
     }
@@ -181,6 +185,7 @@ impl<'a> CLK_SYS_SRAM0_W<'a> {
 #[doc = "Field `clk_sys_spi1` reader - "]
 pub struct CLK_SYS_SPI1_R(crate::FieldReader<bool, bool>);
 impl CLK_SYS_SPI1_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         CLK_SYS_SPI1_R(crate::FieldReader::new(bits))
     }
@@ -217,6 +222,7 @@ impl<'a> CLK_SYS_SPI1_W<'a> {
 #[doc = "Field `clk_peri_spi1` reader - "]
 pub struct CLK_PERI_SPI1_R(crate::FieldReader<bool, bool>);
 impl CLK_PERI_SPI1_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         CLK_PERI_SPI1_R(crate::FieldReader::new(bits))
     }
@@ -253,6 +259,7 @@ impl<'a> CLK_PERI_SPI1_W<'a> {
 #[doc = "Field `clk_sys_spi0` reader - "]
 pub struct CLK_SYS_SPI0_R(crate::FieldReader<bool, bool>);
 impl CLK_SYS_SPI0_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         CLK_SYS_SPI0_R(crate::FieldReader::new(bits))
     }
@@ -289,6 +296,7 @@ impl<'a> CLK_SYS_SPI0_W<'a> {
 #[doc = "Field `clk_peri_spi0` reader - "]
 pub struct CLK_PERI_SPI0_R(crate::FieldReader<bool, bool>);
 impl CLK_PERI_SPI0_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         CLK_PERI_SPI0_R(crate::FieldReader::new(bits))
     }
@@ -325,6 +333,7 @@ impl<'a> CLK_PERI_SPI0_W<'a> {
 #[doc = "Field `clk_sys_sio` reader - "]
 pub struct CLK_SYS_SIO_R(crate::FieldReader<bool, bool>);
 impl CLK_SYS_SIO_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         CLK_SYS_SIO_R(crate::FieldReader::new(bits))
     }
@@ -361,6 +370,7 @@ impl<'a> CLK_SYS_SIO_W<'a> {
 #[doc = "Field `clk_sys_rtc` reader - "]
 pub struct CLK_SYS_RTC_R(crate::FieldReader<bool, bool>);
 impl CLK_SYS_RTC_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         CLK_SYS_RTC_R(crate::FieldReader::new(bits))
     }
@@ -397,6 +407,7 @@ impl<'a> CLK_SYS_RTC_W<'a> {
 #[doc = "Field `clk_rtc_rtc` reader - "]
 pub struct CLK_RTC_RTC_R(crate::FieldReader<bool, bool>);
 impl CLK_RTC_RTC_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         CLK_RTC_RTC_R(crate::FieldReader::new(bits))
     }
@@ -433,6 +444,7 @@ impl<'a> CLK_RTC_RTC_W<'a> {
 #[doc = "Field `clk_sys_rosc` reader - "]
 pub struct CLK_SYS_ROSC_R(crate::FieldReader<bool, bool>);
 impl CLK_SYS_ROSC_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         CLK_SYS_ROSC_R(crate::FieldReader::new(bits))
     }
@@ -469,6 +481,7 @@ impl<'a> CLK_SYS_ROSC_W<'a> {
 #[doc = "Field `clk_sys_rom` reader - "]
 pub struct CLK_SYS_ROM_R(crate::FieldReader<bool, bool>);
 impl CLK_SYS_ROM_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         CLK_SYS_ROM_R(crate::FieldReader::new(bits))
     }
@@ -505,6 +518,7 @@ impl<'a> CLK_SYS_ROM_W<'a> {
 #[doc = "Field `clk_sys_resets` reader - "]
 pub struct CLK_SYS_RESETS_R(crate::FieldReader<bool, bool>);
 impl CLK_SYS_RESETS_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         CLK_SYS_RESETS_R(crate::FieldReader::new(bits))
     }
@@ -541,6 +555,7 @@ impl<'a> CLK_SYS_RESETS_W<'a> {
 #[doc = "Field `clk_sys_pwm` reader - "]
 pub struct CLK_SYS_PWM_R(crate::FieldReader<bool, bool>);
 impl CLK_SYS_PWM_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         CLK_SYS_PWM_R(crate::FieldReader::new(bits))
     }
@@ -577,6 +592,7 @@ impl<'a> CLK_SYS_PWM_W<'a> {
 #[doc = "Field `clk_sys_psm` reader - "]
 pub struct CLK_SYS_PSM_R(crate::FieldReader<bool, bool>);
 impl CLK_SYS_PSM_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         CLK_SYS_PSM_R(crate::FieldReader::new(bits))
     }
@@ -613,6 +629,7 @@ impl<'a> CLK_SYS_PSM_W<'a> {
 #[doc = "Field `clk_sys_pll_usb` reader - "]
 pub struct CLK_SYS_PLL_USB_R(crate::FieldReader<bool, bool>);
 impl CLK_SYS_PLL_USB_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         CLK_SYS_PLL_USB_R(crate::FieldReader::new(bits))
     }
@@ -649,6 +666,7 @@ impl<'a> CLK_SYS_PLL_USB_W<'a> {
 #[doc = "Field `clk_sys_pll_sys` reader - "]
 pub struct CLK_SYS_PLL_SYS_R(crate::FieldReader<bool, bool>);
 impl CLK_SYS_PLL_SYS_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         CLK_SYS_PLL_SYS_R(crate::FieldReader::new(bits))
     }
@@ -685,6 +703,7 @@ impl<'a> CLK_SYS_PLL_SYS_W<'a> {
 #[doc = "Field `clk_sys_pio1` reader - "]
 pub struct CLK_SYS_PIO1_R(crate::FieldReader<bool, bool>);
 impl CLK_SYS_PIO1_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         CLK_SYS_PIO1_R(crate::FieldReader::new(bits))
     }
@@ -721,6 +740,7 @@ impl<'a> CLK_SYS_PIO1_W<'a> {
 #[doc = "Field `clk_sys_pio0` reader - "]
 pub struct CLK_SYS_PIO0_R(crate::FieldReader<bool, bool>);
 impl CLK_SYS_PIO0_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         CLK_SYS_PIO0_R(crate::FieldReader::new(bits))
     }
@@ -757,6 +777,7 @@ impl<'a> CLK_SYS_PIO0_W<'a> {
 #[doc = "Field `clk_sys_pads` reader - "]
 pub struct CLK_SYS_PADS_R(crate::FieldReader<bool, bool>);
 impl CLK_SYS_PADS_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         CLK_SYS_PADS_R(crate::FieldReader::new(bits))
     }
@@ -793,6 +814,7 @@ impl<'a> CLK_SYS_PADS_W<'a> {
 #[doc = "Field `clk_sys_vreg_and_chip_reset` reader - "]
 pub struct CLK_SYS_VREG_AND_CHIP_RESET_R(crate::FieldReader<bool, bool>);
 impl CLK_SYS_VREG_AND_CHIP_RESET_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         CLK_SYS_VREG_AND_CHIP_RESET_R(crate::FieldReader::new(bits))
     }
@@ -829,6 +851,7 @@ impl<'a> CLK_SYS_VREG_AND_CHIP_RESET_W<'a> {
 #[doc = "Field `clk_sys_jtag` reader - "]
 pub struct CLK_SYS_JTAG_R(crate::FieldReader<bool, bool>);
 impl CLK_SYS_JTAG_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         CLK_SYS_JTAG_R(crate::FieldReader::new(bits))
     }
@@ -865,6 +888,7 @@ impl<'a> CLK_SYS_JTAG_W<'a> {
 #[doc = "Field `clk_sys_io` reader - "]
 pub struct CLK_SYS_IO_R(crate::FieldReader<bool, bool>);
 impl CLK_SYS_IO_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         CLK_SYS_IO_R(crate::FieldReader::new(bits))
     }
@@ -901,6 +925,7 @@ impl<'a> CLK_SYS_IO_W<'a> {
 #[doc = "Field `clk_sys_i2c1` reader - "]
 pub struct CLK_SYS_I2C1_R(crate::FieldReader<bool, bool>);
 impl CLK_SYS_I2C1_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         CLK_SYS_I2C1_R(crate::FieldReader::new(bits))
     }
@@ -937,6 +962,7 @@ impl<'a> CLK_SYS_I2C1_W<'a> {
 #[doc = "Field `clk_sys_i2c0` reader - "]
 pub struct CLK_SYS_I2C0_R(crate::FieldReader<bool, bool>);
 impl CLK_SYS_I2C0_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         CLK_SYS_I2C0_R(crate::FieldReader::new(bits))
     }
@@ -973,6 +999,7 @@ impl<'a> CLK_SYS_I2C0_W<'a> {
 #[doc = "Field `clk_sys_dma` reader - "]
 pub struct CLK_SYS_DMA_R(crate::FieldReader<bool, bool>);
 impl CLK_SYS_DMA_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         CLK_SYS_DMA_R(crate::FieldReader::new(bits))
     }
@@ -1009,6 +1036,7 @@ impl<'a> CLK_SYS_DMA_W<'a> {
 #[doc = "Field `clk_sys_busfabric` reader - "]
 pub struct CLK_SYS_BUSFABRIC_R(crate::FieldReader<bool, bool>);
 impl CLK_SYS_BUSFABRIC_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         CLK_SYS_BUSFABRIC_R(crate::FieldReader::new(bits))
     }
@@ -1045,6 +1073,7 @@ impl<'a> CLK_SYS_BUSFABRIC_W<'a> {
 #[doc = "Field `clk_sys_busctrl` reader - "]
 pub struct CLK_SYS_BUSCTRL_R(crate::FieldReader<bool, bool>);
 impl CLK_SYS_BUSCTRL_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         CLK_SYS_BUSCTRL_R(crate::FieldReader::new(bits))
     }
@@ -1081,6 +1110,7 @@ impl<'a> CLK_SYS_BUSCTRL_W<'a> {
 #[doc = "Field `clk_sys_adc` reader - "]
 pub struct CLK_SYS_ADC_R(crate::FieldReader<bool, bool>);
 impl CLK_SYS_ADC_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         CLK_SYS_ADC_R(crate::FieldReader::new(bits))
     }
@@ -1117,6 +1147,7 @@ impl<'a> CLK_SYS_ADC_W<'a> {
 #[doc = "Field `clk_adc_adc` reader - "]
 pub struct CLK_ADC_ADC_R(crate::FieldReader<bool, bool>);
 impl CLK_ADC_ADC_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         CLK_ADC_ADC_R(crate::FieldReader::new(bits))
     }
@@ -1153,6 +1184,7 @@ impl<'a> CLK_ADC_ADC_W<'a> {
 #[doc = "Field `clk_sys_clocks` reader - "]
 pub struct CLK_SYS_CLOCKS_R(crate::FieldReader<bool, bool>);
 impl CLK_SYS_CLOCKS_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         CLK_SYS_CLOCKS_R(crate::FieldReader::new(bits))
     }

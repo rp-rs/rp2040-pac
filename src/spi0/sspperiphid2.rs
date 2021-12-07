@@ -16,6 +16,7 @@ impl From<crate::R<SSPPERIPHID2_SPEC>> for R {
 #[doc = "Field `REVISION` reader - These bits return the peripheral revision"]
 pub struct REVISION_R(crate::FieldReader<u8, u8>);
 impl REVISION_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         REVISION_R(crate::FieldReader::new(bits))
     }
@@ -30,6 +31,7 @@ impl core::ops::Deref for REVISION_R {
 #[doc = "Field `DESIGNER1` reader - These bits read back as 0x4"]
 pub struct DESIGNER1_R(crate::FieldReader<u8, u8>);
 impl DESIGNER1_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         DESIGNER1_R(crate::FieldReader::new(bits))
     }

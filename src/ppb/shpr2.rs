@@ -37,6 +37,7 @@ impl From<crate::W<SHPR2_SPEC>> for W {
 #[doc = "Field `PRI_11` reader - Priority of system handler 11, SVCall"]
 pub struct PRI_11_R(crate::FieldReader<u8, u8>);
 impl PRI_11_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         PRI_11_R(crate::FieldReader::new(bits))
     }

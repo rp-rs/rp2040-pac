@@ -39,6 +39,7 @@ impl From<crate::W<PROC_CONFIG_SPEC>> for W {
  WARNING: do not set to 15 as this is reserved for RescueDP"]
 pub struct PROC1_DAP_INSTID_R(crate::FieldReader<u8, u8>);
 impl PROC1_DAP_INSTID_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         PROC1_DAP_INSTID_R(crate::FieldReader::new(bits))
     }
@@ -69,6 +70,7 @@ impl<'a> PROC1_DAP_INSTID_W<'a> {
  WARNING: do not set to 15 as this is reserved for RescueDP"]
 pub struct PROC0_DAP_INSTID_R(crate::FieldReader<u8, u8>);
 impl PROC0_DAP_INSTID_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         PROC0_DAP_INSTID_R(crate::FieldReader::new(bits))
     }
@@ -97,6 +99,7 @@ impl<'a> PROC0_DAP_INSTID_W<'a> {
 #[doc = "Field `PROC1_HALTED` reader - Indication that proc1 has halted"]
 pub struct PROC1_HALTED_R(crate::FieldReader<bool, bool>);
 impl PROC1_HALTED_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         PROC1_HALTED_R(crate::FieldReader::new(bits))
     }
@@ -111,6 +114,7 @@ impl core::ops::Deref for PROC1_HALTED_R {
 #[doc = "Field `PROC0_HALTED` reader - Indication that proc0 has halted"]
 pub struct PROC0_HALTED_R(crate::FieldReader<bool, bool>);
 impl PROC0_HALTED_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         PROC0_HALTED_R(crate::FieldReader::new(bits))
     }
@@ -123,12 +127,16 @@ impl core::ops::Deref for PROC0_HALTED_R {
     }
 }
 impl R {
-    #[doc = "Bits 28:31 - Configure proc1 DAP instance ID. Recommend that this is NOT changed until you require debug access in multi-chip environment WARNING: do not set to 15 as this is reserved for RescueDP"]
+    #[doc = "Bits 28:31 - Configure proc1 DAP instance ID.  
+ Recommend that this is NOT changed until you require debug access in multi-chip environment  
+ WARNING: do not set to 15 as this is reserved for RescueDP"]
     #[inline(always)]
     pub fn proc1_dap_instid(&self) -> PROC1_DAP_INSTID_R {
         PROC1_DAP_INSTID_R::new(((self.bits >> 28) & 0x0f) as u8)
     }
-    #[doc = "Bits 24:27 - Configure proc0 DAP instance ID. Recommend that this is NOT changed until you require debug access in multi-chip environment WARNING: do not set to 15 as this is reserved for RescueDP"]
+    #[doc = "Bits 24:27 - Configure proc0 DAP instance ID.  
+ Recommend that this is NOT changed until you require debug access in multi-chip environment  
+ WARNING: do not set to 15 as this is reserved for RescueDP"]
     #[inline(always)]
     pub fn proc0_dap_instid(&self) -> PROC0_DAP_INSTID_R {
         PROC0_DAP_INSTID_R::new(((self.bits >> 24) & 0x0f) as u8)
@@ -145,12 +153,16 @@ impl R {
     }
 }
 impl W {
-    #[doc = "Bits 28:31 - Configure proc1 DAP instance ID. Recommend that this is NOT changed until you require debug access in multi-chip environment WARNING: do not set to 15 as this is reserved for RescueDP"]
+    #[doc = "Bits 28:31 - Configure proc1 DAP instance ID.  
+ Recommend that this is NOT changed until you require debug access in multi-chip environment  
+ WARNING: do not set to 15 as this is reserved for RescueDP"]
     #[inline(always)]
     pub fn proc1_dap_instid(&mut self) -> PROC1_DAP_INSTID_W {
         PROC1_DAP_INSTID_W { w: self }
     }
-    #[doc = "Bits 24:27 - Configure proc0 DAP instance ID. Recommend that this is NOT changed until you require debug access in multi-chip environment WARNING: do not set to 15 as this is reserved for RescueDP"]
+    #[doc = "Bits 24:27 - Configure proc0 DAP instance ID.  
+ Recommend that this is NOT changed until you require debug access in multi-chip environment  
+ WARNING: do not set to 15 as this is reserved for RescueDP"]
     #[inline(always)]
     pub fn proc0_dap_instid(&mut self) -> PROC0_DAP_INSTID_W {
         PROC0_DAP_INSTID_W { w: self }

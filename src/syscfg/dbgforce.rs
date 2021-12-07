@@ -37,6 +37,7 @@ impl From<crate::W<DBGFORCE_SPEC>> for W {
 #[doc = "Field `PROC1_ATTACH` reader - Attach processor 1 debug port to syscfg controls, and disconnect it from external SWD pads."]
 pub struct PROC1_ATTACH_R(crate::FieldReader<bool, bool>);
 impl PROC1_ATTACH_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         PROC1_ATTACH_R(crate::FieldReader::new(bits))
     }
@@ -73,6 +74,7 @@ impl<'a> PROC1_ATTACH_W<'a> {
 #[doc = "Field `PROC1_SWCLK` reader - Directly drive processor 1 SWCLK, if PROC1_ATTACH is set"]
 pub struct PROC1_SWCLK_R(crate::FieldReader<bool, bool>);
 impl PROC1_SWCLK_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         PROC1_SWCLK_R(crate::FieldReader::new(bits))
     }
@@ -109,6 +111,7 @@ impl<'a> PROC1_SWCLK_W<'a> {
 #[doc = "Field `PROC1_SWDI` reader - Directly drive processor 1 SWDIO input, if PROC1_ATTACH is set"]
 pub struct PROC1_SWDI_R(crate::FieldReader<bool, bool>);
 impl PROC1_SWDI_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         PROC1_SWDI_R(crate::FieldReader::new(bits))
     }
@@ -145,6 +148,7 @@ impl<'a> PROC1_SWDI_W<'a> {
 #[doc = "Field `PROC1_SWDO` reader - Observe the value of processor 1 SWDIO output."]
 pub struct PROC1_SWDO_R(crate::FieldReader<bool, bool>);
 impl PROC1_SWDO_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         PROC1_SWDO_R(crate::FieldReader::new(bits))
     }
@@ -159,6 +163,7 @@ impl core::ops::Deref for PROC1_SWDO_R {
 #[doc = "Field `PROC0_ATTACH` reader - Attach processor 0 debug port to syscfg controls, and disconnect it from external SWD pads."]
 pub struct PROC0_ATTACH_R(crate::FieldReader<bool, bool>);
 impl PROC0_ATTACH_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         PROC0_ATTACH_R(crate::FieldReader::new(bits))
     }
@@ -195,6 +200,7 @@ impl<'a> PROC0_ATTACH_W<'a> {
 #[doc = "Field `PROC0_SWCLK` reader - Directly drive processor 0 SWCLK, if PROC0_ATTACH is set"]
 pub struct PROC0_SWCLK_R(crate::FieldReader<bool, bool>);
 impl PROC0_SWCLK_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         PROC0_SWCLK_R(crate::FieldReader::new(bits))
     }
@@ -231,6 +237,7 @@ impl<'a> PROC0_SWCLK_W<'a> {
 #[doc = "Field `PROC0_SWDI` reader - Directly drive processor 0 SWDIO input, if PROC0_ATTACH is set"]
 pub struct PROC0_SWDI_R(crate::FieldReader<bool, bool>);
 impl PROC0_SWDI_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         PROC0_SWDI_R(crate::FieldReader::new(bits))
     }
@@ -267,6 +274,7 @@ impl<'a> PROC0_SWDI_W<'a> {
 #[doc = "Field `PROC0_SWDO` reader - Observe the value of processor 0 SWDIO output."]
 pub struct PROC0_SWDO_R(crate::FieldReader<bool, bool>);
 impl PROC0_SWDO_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         PROC0_SWDO_R(crate::FieldReader::new(bits))
     }

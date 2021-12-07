@@ -16,6 +16,7 @@ impl From<crate::R<SYST_CALIB_SPEC>> for R {
 #[doc = "Field `NOREF` reader - If reads as 1, the Reference clock is not provided - the CLKSOURCE bit of the SysTick Control and Status register will be forced to 1 and cannot be cleared to 0."]
 pub struct NOREF_R(crate::FieldReader<bool, bool>);
 impl NOREF_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         NOREF_R(crate::FieldReader::new(bits))
     }
@@ -30,6 +31,7 @@ impl core::ops::Deref for NOREF_R {
 #[doc = "Field `SKEW` reader - If reads as 1, the calibration value for 10ms is inexact (due to clock frequency)."]
 pub struct SKEW_R(crate::FieldReader<bool, bool>);
 impl SKEW_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         SKEW_R(crate::FieldReader::new(bits))
     }
@@ -44,6 +46,7 @@ impl core::ops::Deref for SKEW_R {
 #[doc = "Field `TENMS` reader - An optional Reload value to be used for 10ms (100Hz) timing, subject to system clock skew errors. If the value reads as 0, the calibration value is not known."]
 pub struct TENMS_R(crate::FieldReader<u32, u32>);
 impl TENMS_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u32) -> Self {
         TENMS_R(crate::FieldReader::new(bits))
     }

@@ -37,6 +37,7 @@ impl From<crate::W<NVIC_IPR2_SPEC>> for W {
 #[doc = "Field `IP_11` reader - Priority of interrupt 11"]
 pub struct IP_11_R(crate::FieldReader<u8, u8>);
 impl IP_11_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         IP_11_R(crate::FieldReader::new(bits))
     }
@@ -63,6 +64,7 @@ impl<'a> IP_11_W<'a> {
 #[doc = "Field `IP_10` reader - Priority of interrupt 10"]
 pub struct IP_10_R(crate::FieldReader<u8, u8>);
 impl IP_10_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         IP_10_R(crate::FieldReader::new(bits))
     }
@@ -89,6 +91,7 @@ impl<'a> IP_10_W<'a> {
 #[doc = "Field `IP_9` reader - Priority of interrupt 9"]
 pub struct IP_9_R(crate::FieldReader<u8, u8>);
 impl IP_9_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         IP_9_R(crate::FieldReader::new(bits))
     }
@@ -115,6 +118,7 @@ impl<'a> IP_9_W<'a> {
 #[doc = "Field `IP_8` reader - Priority of interrupt 8"]
 pub struct IP_8_R(crate::FieldReader<u8, u8>);
 impl IP_8_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         IP_8_R(crate::FieldReader::new(bits))
     }

@@ -16,6 +16,7 @@ impl From<crate::R<TXFLR_SPEC>> for R {
 #[doc = "Field `TFTFL` reader - Transmit FIFO level"]
 pub struct TFTFL_R(crate::FieldReader<u8, u8>);
 impl TFTFL_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         TFTFL_R(crate::FieldReader::new(bits))
     }

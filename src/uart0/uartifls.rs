@@ -37,6 +37,7 @@ impl From<crate::W<UARTIFLS_SPEC>> for W {
 #[doc = "Field `RXIFLSEL` reader - Receive interrupt FIFO level select. The trigger points for the receive interrupt are as follows: b000 = Receive FIFO becomes >= 1 / 8 full b001 = Receive FIFO becomes >= 1 / 4 full b010 = Receive FIFO becomes >= 1 / 2 full b011 = Receive FIFO becomes >= 3 / 4 full b100 = Receive FIFO becomes >= 7 / 8 full b101-b111 = reserved."]
 pub struct RXIFLSEL_R(crate::FieldReader<u8, u8>);
 impl RXIFLSEL_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         RXIFLSEL_R(crate::FieldReader::new(bits))
     }
@@ -63,6 +64,7 @@ impl<'a> RXIFLSEL_W<'a> {
 #[doc = "Field `TXIFLSEL` reader - Transmit interrupt FIFO level select. The trigger points for the transmit interrupt are as follows: b000 = Transmit FIFO becomes <= 1 / 8 full b001 = Transmit FIFO becomes <= 1 / 4 full b010 = Transmit FIFO becomes <= 1 / 2 full b011 = Transmit FIFO becomes <= 3 / 4 full b100 = Transmit FIFO becomes <= 7 / 8 full b101-b111 = reserved."]
 pub struct TXIFLSEL_R(crate::FieldReader<u8, u8>);
 impl TXIFLSEL_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         TXIFLSEL_R(crate::FieldReader::new(bits))
     }

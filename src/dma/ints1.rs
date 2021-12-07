@@ -38,6 +38,7 @@ impl From<crate::W<INTS1_SPEC>> for W {
  Channel interrupts can be cleared by writing a bit mask here."]
 pub struct INTS1_R(crate::FieldReader<u16, u16>);
 impl INTS1_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u16) -> Self {
         INTS1_R(crate::FieldReader::new(bits))
     }
@@ -63,14 +64,16 @@ impl<'a> INTS1_W<'a> {
     }
 }
 impl R {
-    #[doc = "Bits 0:15 - Indicates active channel interrupt requests which are currently causing IRQ 1 to be asserted. Channel interrupts can be cleared by writing a bit mask here."]
+    #[doc = "Bits 0:15 - Indicates active channel interrupt requests which are currently causing IRQ 1 to be asserted.  
+ Channel interrupts can be cleared by writing a bit mask here."]
     #[inline(always)]
     pub fn ints1(&self) -> INTS1_R {
         INTS1_R::new((self.bits & 0xffff) as u16)
     }
 }
 impl W {
-    #[doc = "Bits 0:15 - Indicates active channel interrupt requests which are currently causing IRQ 1 to be asserted. Channel interrupts can be cleared by writing a bit mask here."]
+    #[doc = "Bits 0:15 - Indicates active channel interrupt requests which are currently causing IRQ 1 to be asserted.  
+ Channel interrupts can be cleared by writing a bit mask here."]
     #[inline(always)]
     pub fn ints1(&mut self) -> INTS1_W {
         INTS1_W { w: self }

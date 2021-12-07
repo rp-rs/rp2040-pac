@@ -44,6 +44,7 @@ impl From<crate::W<MPU_RASR_SPEC>> for W {
  16 = B: Bufferable bit"]
 pub struct ATTRS_R(crate::FieldReader<u16, u16>);
 impl ATTRS_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u16) -> Self {
         ATTRS_R(crate::FieldReader::new(bits))
     }
@@ -77,6 +78,7 @@ impl<'a> ATTRS_W<'a> {
 #[doc = "Field `SRD` reader - Subregion Disable. For regions of 256 bytes or larger, each bit of this field controls whether one of the eight equal subregions is enabled."]
 pub struct SRD_R(crate::FieldReader<u8, u8>);
 impl SRD_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         SRD_R(crate::FieldReader::new(bits))
     }
@@ -103,6 +105,7 @@ impl<'a> SRD_W<'a> {
 #[doc = "Field `SIZE` reader - Indicates the region size. Region size in bytes = 2^(SIZE+1). The minimum permitted value is 7 (b00111) = 256Bytes"]
 pub struct SIZE_R(crate::FieldReader<u8, u8>);
 impl SIZE_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         SIZE_R(crate::FieldReader::new(bits))
     }
@@ -129,6 +132,7 @@ impl<'a> SIZE_W<'a> {
 #[doc = "Field `ENABLE` reader - Enables the region."]
 pub struct ENABLE_R(crate::FieldReader<bool, bool>);
 impl ENABLE_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         ENABLE_R(crate::FieldReader::new(bits))
     }
@@ -163,7 +167,14 @@ impl<'a> ENABLE_W<'a> {
     }
 }
 impl R {
-    #[doc = "Bits 16:31 - The MPU Region Attribute field. Use to define the region attribute control. 28 = XN: Instruction access disable bit: 0 = Instruction fetches enabled. 1 = Instruction fetches disabled. 26:24 = AP: Access permission field 18 = S: Shareable bit 17 = C: Cacheable bit 16 = B: Bufferable bit"]
+    #[doc = "Bits 16:31 - The MPU Region Attribute field. Use to define the region attribute control.  
+ 28 = XN: Instruction access disable bit:  
+ 0 = Instruction fetches enabled.  
+ 1 = Instruction fetches disabled.  
+ 26:24 = AP: Access permission field  
+ 18 = S: Shareable bit  
+ 17 = C: Cacheable bit  
+ 16 = B: Bufferable bit"]
     #[inline(always)]
     pub fn attrs(&self) -> ATTRS_R {
         ATTRS_R::new(((self.bits >> 16) & 0xffff) as u16)
@@ -185,7 +196,14 @@ impl R {
     }
 }
 impl W {
-    #[doc = "Bits 16:31 - The MPU Region Attribute field. Use to define the region attribute control. 28 = XN: Instruction access disable bit: 0 = Instruction fetches enabled. 1 = Instruction fetches disabled. 26:24 = AP: Access permission field 18 = S: Shareable bit 17 = C: Cacheable bit 16 = B: Bufferable bit"]
+    #[doc = "Bits 16:31 - The MPU Region Attribute field. Use to define the region attribute control.  
+ 28 = XN: Instruction access disable bit:  
+ 0 = Instruction fetches enabled.  
+ 1 = Instruction fetches disabled.  
+ 26:24 = AP: Access permission field  
+ 18 = S: Shareable bit  
+ 17 = C: Cacheable bit  
+ 16 = B: Bufferable bit"]
     #[inline(always)]
     pub fn attrs(&mut self) -> ATTRS_W {
         ATTRS_W { w: self }

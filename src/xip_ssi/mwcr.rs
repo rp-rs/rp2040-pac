@@ -37,6 +37,7 @@ impl From<crate::W<MWCR_SPEC>> for W {
 #[doc = "Field `MHS` reader - Microwire handshaking"]
 pub struct MHS_R(crate::FieldReader<bool, bool>);
 impl MHS_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         MHS_R(crate::FieldReader::new(bits))
     }
@@ -73,6 +74,7 @@ impl<'a> MHS_W<'a> {
 #[doc = "Field `MDD` reader - Microwire control"]
 pub struct MDD_R(crate::FieldReader<bool, bool>);
 impl MDD_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         MDD_R(crate::FieldReader::new(bits))
     }
@@ -109,6 +111,7 @@ impl<'a> MDD_W<'a> {
 #[doc = "Field `MWMOD` reader - Microwire transfer mode"]
 pub struct MWMOD_R(crate::FieldReader<bool, bool>);
 impl MWMOD_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         MWMOD_R(crate::FieldReader::new(bits))
     }

@@ -37,6 +37,7 @@ impl From<crate::W<SETUP_0_SPEC>> for W {
 #[doc = "Field `YEAR` reader - Year"]
 pub struct YEAR_R(crate::FieldReader<u16, u16>);
 impl YEAR_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u16) -> Self {
         YEAR_R(crate::FieldReader::new(bits))
     }
@@ -63,6 +64,7 @@ impl<'a> YEAR_W<'a> {
 #[doc = "Field `MONTH` reader - Month (1..12)"]
 pub struct MONTH_R(crate::FieldReader<u8, u8>);
 impl MONTH_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         MONTH_R(crate::FieldReader::new(bits))
     }
@@ -89,6 +91,7 @@ impl<'a> MONTH_W<'a> {
 #[doc = "Field `DAY` reader - Day of the month (1..31)"]
 pub struct DAY_R(crate::FieldReader<u8, u8>);
 impl DAY_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         DAY_R(crate::FieldReader::new(bits))
     }

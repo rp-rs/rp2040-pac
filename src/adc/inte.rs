@@ -38,6 +38,7 @@ impl From<crate::W<INTE_SPEC>> for W {
  This level can be programmed via the FCS_THRESH field."]
 pub struct FIFO_R(crate::FieldReader<bool, bool>);
 impl FIFO_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         FIFO_R(crate::FieldReader::new(bits))
     }
@@ -73,14 +74,16 @@ impl<'a> FIFO_W<'a> {
     }
 }
 impl R {
-    #[doc = "Bit 0 - Triggered when the sample FIFO reaches a certain level. This level can be programmed via the FCS_THRESH field."]
+    #[doc = "Bit 0 - Triggered when the sample FIFO reaches a certain level.  
+ This level can be programmed via the FCS_THRESH field."]
     #[inline(always)]
     pub fn fifo(&self) -> FIFO_R {
         FIFO_R::new((self.bits & 0x01) != 0)
     }
 }
 impl W {
-    #[doc = "Bit 0 - Triggered when the sample FIFO reaches a certain level. This level can be programmed via the FCS_THRESH field."]
+    #[doc = "Bit 0 - Triggered when the sample FIFO reaches a certain level.  
+ This level can be programmed via the FCS_THRESH field."]
     #[inline(always)]
     pub fn fifo(&mut self) -> FIFO_W {
         FIFO_W { w: self }

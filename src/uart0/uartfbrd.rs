@@ -37,6 +37,7 @@ impl From<crate::W<UARTFBRD_SPEC>> for W {
 #[doc = "Field `BAUD_DIVFRAC` reader - The fractional baud rate divisor. These bits are cleared to 0 on reset."]
 pub struct BAUD_DIVFRAC_R(crate::FieldReader<u8, u8>);
 impl BAUD_DIVFRAC_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         BAUD_DIVFRAC_R(crate::FieldReader::new(bits))
     }

@@ -37,6 +37,7 @@ impl From<crate::W<TXD_DRIVE_EDGE_SPEC>> for W {
 #[doc = "Field `TDE` reader - TXD drive edge"]
 pub struct TDE_R(crate::FieldReader<u8, u8>);
 impl TDE_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         TDE_R(crate::FieldReader::new(bits))
     }

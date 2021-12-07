@@ -57,6 +57,7 @@ impl From<M_RESTART_DET_A> for bool {
  Reset value: 0x0"]
 pub struct M_RESTART_DET_R(crate::FieldReader<bool, M_RESTART_DET_A>);
 impl M_RESTART_DET_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         M_RESTART_DET_R(crate::FieldReader::new(bits))
     }
@@ -148,6 +149,7 @@ impl From<M_GEN_CALL_A> for bool {
  Reset value: 0x1"]
 pub struct M_GEN_CALL_R(crate::FieldReader<bool, M_GEN_CALL_A>);
 impl M_GEN_CALL_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         M_GEN_CALL_R(crate::FieldReader::new(bits))
     }
@@ -239,6 +241,7 @@ impl From<M_START_DET_A> for bool {
  Reset value: 0x0"]
 pub struct M_START_DET_R(crate::FieldReader<bool, M_START_DET_A>);
 impl M_START_DET_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         M_START_DET_R(crate::FieldReader::new(bits))
     }
@@ -330,6 +333,7 @@ impl From<M_STOP_DET_A> for bool {
  Reset value: 0x0"]
 pub struct M_STOP_DET_R(crate::FieldReader<bool, M_STOP_DET_A>);
 impl M_STOP_DET_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         M_STOP_DET_R(crate::FieldReader::new(bits))
     }
@@ -421,6 +425,7 @@ impl From<M_ACTIVITY_A> for bool {
  Reset value: 0x0"]
 pub struct M_ACTIVITY_R(crate::FieldReader<bool, M_ACTIVITY_A>);
 impl M_ACTIVITY_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         M_ACTIVITY_R(crate::FieldReader::new(bits))
     }
@@ -512,6 +517,7 @@ impl From<M_RX_DONE_A> for bool {
  Reset value: 0x1"]
 pub struct M_RX_DONE_R(crate::FieldReader<bool, M_RX_DONE_A>);
 impl M_RX_DONE_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         M_RX_DONE_R(crate::FieldReader::new(bits))
     }
@@ -603,6 +609,7 @@ impl From<M_TX_ABRT_A> for bool {
  Reset value: 0x1"]
 pub struct M_TX_ABRT_R(crate::FieldReader<bool, M_TX_ABRT_A>);
 impl M_TX_ABRT_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         M_TX_ABRT_R(crate::FieldReader::new(bits))
     }
@@ -694,6 +701,7 @@ impl From<M_RD_REQ_A> for bool {
  Reset value: 0x1"]
 pub struct M_RD_REQ_R(crate::FieldReader<bool, M_RD_REQ_A>);
 impl M_RD_REQ_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         M_RD_REQ_R(crate::FieldReader::new(bits))
     }
@@ -785,6 +793,7 @@ impl From<M_TX_EMPTY_A> for bool {
  Reset value: 0x1"]
 pub struct M_TX_EMPTY_R(crate::FieldReader<bool, M_TX_EMPTY_A>);
 impl M_TX_EMPTY_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         M_TX_EMPTY_R(crate::FieldReader::new(bits))
     }
@@ -876,6 +885,7 @@ impl From<M_TX_OVER_A> for bool {
  Reset value: 0x1"]
 pub struct M_TX_OVER_R(crate::FieldReader<bool, M_TX_OVER_A>);
 impl M_TX_OVER_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         M_TX_OVER_R(crate::FieldReader::new(bits))
     }
@@ -967,6 +977,7 @@ impl From<M_RX_FULL_A> for bool {
  Reset value: 0x1"]
 pub struct M_RX_FULL_R(crate::FieldReader<bool, M_RX_FULL_A>);
 impl M_RX_FULL_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         M_RX_FULL_R(crate::FieldReader::new(bits))
     }
@@ -1058,6 +1069,7 @@ impl From<M_RX_OVER_A> for bool {
  Reset value: 0x1"]
 pub struct M_RX_OVER_R(crate::FieldReader<bool, M_RX_OVER_A>);
 impl M_RX_OVER_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         M_RX_OVER_R(crate::FieldReader::new(bits))
     }
@@ -1149,6 +1161,7 @@ impl From<M_RX_UNDER_A> for bool {
  Reset value: 0x1"]
 pub struct M_RX_UNDER_R(crate::FieldReader<bool, M_RX_UNDER_A>);
 impl M_RX_UNDER_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         M_RX_UNDER_R(crate::FieldReader::new(bits))
     }
@@ -1218,134 +1231,186 @@ impl<'a> M_RX_UNDER_W<'a> {
     }
 }
 impl R {
-    #[doc = "Bit 12 - This bit masks the R_RESTART_DET interrupt in IC_INTR_STAT register. Reset value: 0x0"]
+    #[doc = "Bit 12 - This bit masks the R_RESTART_DET interrupt in IC_INTR_STAT register.  
+
+ Reset value: 0x0"]
     #[inline(always)]
     pub fn m_restart_det(&self) -> M_RESTART_DET_R {
         M_RESTART_DET_R::new(((self.bits >> 12) & 0x01) != 0)
     }
-    #[doc = "Bit 11 - This bit masks the R_GEN_CALL interrupt in IC_INTR_STAT register. Reset value: 0x1"]
+    #[doc = "Bit 11 - This bit masks the R_GEN_CALL interrupt in IC_INTR_STAT register.  
+
+ Reset value: 0x1"]
     #[inline(always)]
     pub fn m_gen_call(&self) -> M_GEN_CALL_R {
         M_GEN_CALL_R::new(((self.bits >> 11) & 0x01) != 0)
     }
-    #[doc = "Bit 10 - This bit masks the R_START_DET interrupt in IC_INTR_STAT register. Reset value: 0x0"]
+    #[doc = "Bit 10 - This bit masks the R_START_DET interrupt in IC_INTR_STAT register.  
+
+ Reset value: 0x0"]
     #[inline(always)]
     pub fn m_start_det(&self) -> M_START_DET_R {
         M_START_DET_R::new(((self.bits >> 10) & 0x01) != 0)
     }
-    #[doc = "Bit 9 - This bit masks the R_STOP_DET interrupt in IC_INTR_STAT register. Reset value: 0x0"]
+    #[doc = "Bit 9 - This bit masks the R_STOP_DET interrupt in IC_INTR_STAT register.  
+
+ Reset value: 0x0"]
     #[inline(always)]
     pub fn m_stop_det(&self) -> M_STOP_DET_R {
         M_STOP_DET_R::new(((self.bits >> 9) & 0x01) != 0)
     }
-    #[doc = "Bit 8 - This bit masks the R_ACTIVITY interrupt in IC_INTR_STAT register. Reset value: 0x0"]
+    #[doc = "Bit 8 - This bit masks the R_ACTIVITY interrupt in IC_INTR_STAT register.  
+
+ Reset value: 0x0"]
     #[inline(always)]
     pub fn m_activity(&self) -> M_ACTIVITY_R {
         M_ACTIVITY_R::new(((self.bits >> 8) & 0x01) != 0)
     }
-    #[doc = "Bit 7 - This bit masks the R_RX_DONE interrupt in IC_INTR_STAT register. Reset value: 0x1"]
+    #[doc = "Bit 7 - This bit masks the R_RX_DONE interrupt in IC_INTR_STAT register.  
+
+ Reset value: 0x1"]
     #[inline(always)]
     pub fn m_rx_done(&self) -> M_RX_DONE_R {
         M_RX_DONE_R::new(((self.bits >> 7) & 0x01) != 0)
     }
-    #[doc = "Bit 6 - This bit masks the R_TX_ABRT interrupt in IC_INTR_STAT register. Reset value: 0x1"]
+    #[doc = "Bit 6 - This bit masks the R_TX_ABRT interrupt in IC_INTR_STAT register.  
+
+ Reset value: 0x1"]
     #[inline(always)]
     pub fn m_tx_abrt(&self) -> M_TX_ABRT_R {
         M_TX_ABRT_R::new(((self.bits >> 6) & 0x01) != 0)
     }
-    #[doc = "Bit 5 - This bit masks the R_RD_REQ interrupt in IC_INTR_STAT register. Reset value: 0x1"]
+    #[doc = "Bit 5 - This bit masks the R_RD_REQ interrupt in IC_INTR_STAT register.  
+
+ Reset value: 0x1"]
     #[inline(always)]
     pub fn m_rd_req(&self) -> M_RD_REQ_R {
         M_RD_REQ_R::new(((self.bits >> 5) & 0x01) != 0)
     }
-    #[doc = "Bit 4 - This bit masks the R_TX_EMPTY interrupt in IC_INTR_STAT register. Reset value: 0x1"]
+    #[doc = "Bit 4 - This bit masks the R_TX_EMPTY interrupt in IC_INTR_STAT register.  
+
+ Reset value: 0x1"]
     #[inline(always)]
     pub fn m_tx_empty(&self) -> M_TX_EMPTY_R {
         M_TX_EMPTY_R::new(((self.bits >> 4) & 0x01) != 0)
     }
-    #[doc = "Bit 3 - This bit masks the R_TX_OVER interrupt in IC_INTR_STAT register. Reset value: 0x1"]
+    #[doc = "Bit 3 - This bit masks the R_TX_OVER interrupt in IC_INTR_STAT register.  
+
+ Reset value: 0x1"]
     #[inline(always)]
     pub fn m_tx_over(&self) -> M_TX_OVER_R {
         M_TX_OVER_R::new(((self.bits >> 3) & 0x01) != 0)
     }
-    #[doc = "Bit 2 - This bit masks the R_RX_FULL interrupt in IC_INTR_STAT register. Reset value: 0x1"]
+    #[doc = "Bit 2 - This bit masks the R_RX_FULL interrupt in IC_INTR_STAT register.  
+
+ Reset value: 0x1"]
     #[inline(always)]
     pub fn m_rx_full(&self) -> M_RX_FULL_R {
         M_RX_FULL_R::new(((self.bits >> 2) & 0x01) != 0)
     }
-    #[doc = "Bit 1 - This bit masks the R_RX_OVER interrupt in IC_INTR_STAT register. Reset value: 0x1"]
+    #[doc = "Bit 1 - This bit masks the R_RX_OVER interrupt in IC_INTR_STAT register.  
+
+ Reset value: 0x1"]
     #[inline(always)]
     pub fn m_rx_over(&self) -> M_RX_OVER_R {
         M_RX_OVER_R::new(((self.bits >> 1) & 0x01) != 0)
     }
-    #[doc = "Bit 0 - This bit masks the R_RX_UNDER interrupt in IC_INTR_STAT register. Reset value: 0x1"]
+    #[doc = "Bit 0 - This bit masks the R_RX_UNDER interrupt in IC_INTR_STAT register.  
+
+ Reset value: 0x1"]
     #[inline(always)]
     pub fn m_rx_under(&self) -> M_RX_UNDER_R {
         M_RX_UNDER_R::new((self.bits & 0x01) != 0)
     }
 }
 impl W {
-    #[doc = "Bit 12 - This bit masks the R_RESTART_DET interrupt in IC_INTR_STAT register. Reset value: 0x0"]
+    #[doc = "Bit 12 - This bit masks the R_RESTART_DET interrupt in IC_INTR_STAT register.  
+
+ Reset value: 0x0"]
     #[inline(always)]
     pub fn m_restart_det(&mut self) -> M_RESTART_DET_W {
         M_RESTART_DET_W { w: self }
     }
-    #[doc = "Bit 11 - This bit masks the R_GEN_CALL interrupt in IC_INTR_STAT register. Reset value: 0x1"]
+    #[doc = "Bit 11 - This bit masks the R_GEN_CALL interrupt in IC_INTR_STAT register.  
+
+ Reset value: 0x1"]
     #[inline(always)]
     pub fn m_gen_call(&mut self) -> M_GEN_CALL_W {
         M_GEN_CALL_W { w: self }
     }
-    #[doc = "Bit 10 - This bit masks the R_START_DET interrupt in IC_INTR_STAT register. Reset value: 0x0"]
+    #[doc = "Bit 10 - This bit masks the R_START_DET interrupt in IC_INTR_STAT register.  
+
+ Reset value: 0x0"]
     #[inline(always)]
     pub fn m_start_det(&mut self) -> M_START_DET_W {
         M_START_DET_W { w: self }
     }
-    #[doc = "Bit 9 - This bit masks the R_STOP_DET interrupt in IC_INTR_STAT register. Reset value: 0x0"]
+    #[doc = "Bit 9 - This bit masks the R_STOP_DET interrupt in IC_INTR_STAT register.  
+
+ Reset value: 0x0"]
     #[inline(always)]
     pub fn m_stop_det(&mut self) -> M_STOP_DET_W {
         M_STOP_DET_W { w: self }
     }
-    #[doc = "Bit 8 - This bit masks the R_ACTIVITY interrupt in IC_INTR_STAT register. Reset value: 0x0"]
+    #[doc = "Bit 8 - This bit masks the R_ACTIVITY interrupt in IC_INTR_STAT register.  
+
+ Reset value: 0x0"]
     #[inline(always)]
     pub fn m_activity(&mut self) -> M_ACTIVITY_W {
         M_ACTIVITY_W { w: self }
     }
-    #[doc = "Bit 7 - This bit masks the R_RX_DONE interrupt in IC_INTR_STAT register. Reset value: 0x1"]
+    #[doc = "Bit 7 - This bit masks the R_RX_DONE interrupt in IC_INTR_STAT register.  
+
+ Reset value: 0x1"]
     #[inline(always)]
     pub fn m_rx_done(&mut self) -> M_RX_DONE_W {
         M_RX_DONE_W { w: self }
     }
-    #[doc = "Bit 6 - This bit masks the R_TX_ABRT interrupt in IC_INTR_STAT register. Reset value: 0x1"]
+    #[doc = "Bit 6 - This bit masks the R_TX_ABRT interrupt in IC_INTR_STAT register.  
+
+ Reset value: 0x1"]
     #[inline(always)]
     pub fn m_tx_abrt(&mut self) -> M_TX_ABRT_W {
         M_TX_ABRT_W { w: self }
     }
-    #[doc = "Bit 5 - This bit masks the R_RD_REQ interrupt in IC_INTR_STAT register. Reset value: 0x1"]
+    #[doc = "Bit 5 - This bit masks the R_RD_REQ interrupt in IC_INTR_STAT register.  
+
+ Reset value: 0x1"]
     #[inline(always)]
     pub fn m_rd_req(&mut self) -> M_RD_REQ_W {
         M_RD_REQ_W { w: self }
     }
-    #[doc = "Bit 4 - This bit masks the R_TX_EMPTY interrupt in IC_INTR_STAT register. Reset value: 0x1"]
+    #[doc = "Bit 4 - This bit masks the R_TX_EMPTY interrupt in IC_INTR_STAT register.  
+
+ Reset value: 0x1"]
     #[inline(always)]
     pub fn m_tx_empty(&mut self) -> M_TX_EMPTY_W {
         M_TX_EMPTY_W { w: self }
     }
-    #[doc = "Bit 3 - This bit masks the R_TX_OVER interrupt in IC_INTR_STAT register. Reset value: 0x1"]
+    #[doc = "Bit 3 - This bit masks the R_TX_OVER interrupt in IC_INTR_STAT register.  
+
+ Reset value: 0x1"]
     #[inline(always)]
     pub fn m_tx_over(&mut self) -> M_TX_OVER_W {
         M_TX_OVER_W { w: self }
     }
-    #[doc = "Bit 2 - This bit masks the R_RX_FULL interrupt in IC_INTR_STAT register. Reset value: 0x1"]
+    #[doc = "Bit 2 - This bit masks the R_RX_FULL interrupt in IC_INTR_STAT register.  
+
+ Reset value: 0x1"]
     #[inline(always)]
     pub fn m_rx_full(&mut self) -> M_RX_FULL_W {
         M_RX_FULL_W { w: self }
     }
-    #[doc = "Bit 1 - This bit masks the R_RX_OVER interrupt in IC_INTR_STAT register. Reset value: 0x1"]
+    #[doc = "Bit 1 - This bit masks the R_RX_OVER interrupt in IC_INTR_STAT register.  
+
+ Reset value: 0x1"]
     #[inline(always)]
     pub fn m_rx_over(&mut self) -> M_RX_OVER_W {
         M_RX_OVER_W { w: self }
     }
-    #[doc = "Bit 0 - This bit masks the R_RX_UNDER interrupt in IC_INTR_STAT register. Reset value: 0x1"]
+    #[doc = "Bit 0 - This bit masks the R_RX_UNDER interrupt in IC_INTR_STAT register.  
+
+ Reset value: 0x1"]
     #[inline(always)]
     pub fn m_rx_under(&mut self) -> M_RX_UNDER_W {
         M_RX_UNDER_W { w: self }

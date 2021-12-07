@@ -37,6 +37,7 @@ impl From<crate::W<MAIN_CTRL_SPEC>> for W {
 #[doc = "Field `SIM_TIMING` reader - Reduced timings for simulation"]
 pub struct SIM_TIMING_R(crate::FieldReader<bool, bool>);
 impl SIM_TIMING_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         SIM_TIMING_R(crate::FieldReader::new(bits))
     }
@@ -73,6 +74,7 @@ impl<'a> SIM_TIMING_W<'a> {
 #[doc = "Field `HOST_NDEVICE` reader - Device mode = 0, Host mode = 1"]
 pub struct HOST_NDEVICE_R(crate::FieldReader<bool, bool>);
 impl HOST_NDEVICE_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         HOST_NDEVICE_R(crate::FieldReader::new(bits))
     }
@@ -109,6 +111,7 @@ impl<'a> HOST_NDEVICE_W<'a> {
 #[doc = "Field `CONTROLLER_EN` reader - Enable controller"]
 pub struct CONTROLLER_EN_R(crate::FieldReader<bool, bool>);
 impl CONTROLLER_EN_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         CONTROLLER_EN_R(crate::FieldReader::new(bits))
     }

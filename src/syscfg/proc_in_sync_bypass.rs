@@ -37,6 +37,7 @@ impl From<crate::W<PROC_IN_SYNC_BYPASS_SPEC>> for W {
 #[doc = "Field `PROC_IN_SYNC_BYPASS` reader - "]
 pub struct PROC_IN_SYNC_BYPASS_R(crate::FieldReader<u32, u32>);
 impl PROC_IN_SYNC_BYPASS_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u32) -> Self {
         PROC_IN_SYNC_BYPASS_R(crate::FieldReader::new(bits))
     }

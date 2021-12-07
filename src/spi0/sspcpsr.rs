@@ -37,6 +37,7 @@ impl From<crate::W<SSPCPSR_SPEC>> for W {
 #[doc = "Field `CPSDVSR` reader - Clock prescale divisor. Must be an even number from 2-254, depending on the frequency of SSPCLK. The least significant bit always returns zero on reads."]
 pub struct CPSDVSR_R(crate::FieldReader<u8, u8>);
 impl CPSDVSR_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         CPSDVSR_R(crate::FieldReader::new(bits))
     }

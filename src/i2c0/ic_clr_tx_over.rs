@@ -18,6 +18,7 @@ impl From<crate::R<IC_CLR_TX_OVER_SPEC>> for R {
  Reset value: 0x0"]
 pub struct CLR_TX_OVER_R(crate::FieldReader<bool, bool>);
 impl CLR_TX_OVER_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         CLR_TX_OVER_R(crate::FieldReader::new(bits))
     }
@@ -30,7 +31,9 @@ impl core::ops::Deref for CLR_TX_OVER_R {
     }
 }
 impl R {
-    #[doc = "Bit 0 - Read this register to clear the TX_OVER interrupt (bit 3) of the IC_RAW_INTR_STAT register. Reset value: 0x0"]
+    #[doc = "Bit 0 - Read this register to clear the TX_OVER interrupt (bit 3) of the IC_RAW_INTR_STAT register.  
+
+ Reset value: 0x0"]
     #[inline(always)]
     pub fn clr_tx_over(&self) -> CLR_TX_OVER_R {
         CLR_TX_OVER_R::new((self.bits & 0x01) != 0)

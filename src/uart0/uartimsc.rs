@@ -37,6 +37,7 @@ impl From<crate::W<UARTIMSC_SPEC>> for W {
 #[doc = "Field `OEIM` reader - Overrun error interrupt mask. A read returns the current mask for the UARTOEINTR interrupt. On a write of 1, the mask of the UARTOEINTR interrupt is set. A write of 0 clears the mask."]
 pub struct OEIM_R(crate::FieldReader<bool, bool>);
 impl OEIM_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         OEIM_R(crate::FieldReader::new(bits))
     }
@@ -73,6 +74,7 @@ impl<'a> OEIM_W<'a> {
 #[doc = "Field `BEIM` reader - Break error interrupt mask. A read returns the current mask for the UARTBEINTR interrupt. On a write of 1, the mask of the UARTBEINTR interrupt is set. A write of 0 clears the mask."]
 pub struct BEIM_R(crate::FieldReader<bool, bool>);
 impl BEIM_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         BEIM_R(crate::FieldReader::new(bits))
     }
@@ -109,6 +111,7 @@ impl<'a> BEIM_W<'a> {
 #[doc = "Field `PEIM` reader - Parity error interrupt mask. A read returns the current mask for the UARTPEINTR interrupt. On a write of 1, the mask of the UARTPEINTR interrupt is set. A write of 0 clears the mask."]
 pub struct PEIM_R(crate::FieldReader<bool, bool>);
 impl PEIM_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         PEIM_R(crate::FieldReader::new(bits))
     }
@@ -145,6 +148,7 @@ impl<'a> PEIM_W<'a> {
 #[doc = "Field `FEIM` reader - Framing error interrupt mask. A read returns the current mask for the UARTFEINTR interrupt. On a write of 1, the mask of the UARTFEINTR interrupt is set. A write of 0 clears the mask."]
 pub struct FEIM_R(crate::FieldReader<bool, bool>);
 impl FEIM_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         FEIM_R(crate::FieldReader::new(bits))
     }
@@ -181,6 +185,7 @@ impl<'a> FEIM_W<'a> {
 #[doc = "Field `RTIM` reader - Receive timeout interrupt mask. A read returns the current mask for the UARTRTINTR interrupt. On a write of 1, the mask of the UARTRTINTR interrupt is set. A write of 0 clears the mask."]
 pub struct RTIM_R(crate::FieldReader<bool, bool>);
 impl RTIM_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         RTIM_R(crate::FieldReader::new(bits))
     }
@@ -217,6 +222,7 @@ impl<'a> RTIM_W<'a> {
 #[doc = "Field `TXIM` reader - Transmit interrupt mask. A read returns the current mask for the UARTTXINTR interrupt. On a write of 1, the mask of the UARTTXINTR interrupt is set. A write of 0 clears the mask."]
 pub struct TXIM_R(crate::FieldReader<bool, bool>);
 impl TXIM_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         TXIM_R(crate::FieldReader::new(bits))
     }
@@ -253,6 +259,7 @@ impl<'a> TXIM_W<'a> {
 #[doc = "Field `RXIM` reader - Receive interrupt mask. A read returns the current mask for the UARTRXINTR interrupt. On a write of 1, the mask of the UARTRXINTR interrupt is set. A write of 0 clears the mask."]
 pub struct RXIM_R(crate::FieldReader<bool, bool>);
 impl RXIM_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         RXIM_R(crate::FieldReader::new(bits))
     }
@@ -289,6 +296,7 @@ impl<'a> RXIM_W<'a> {
 #[doc = "Field `DSRMIM` reader - nUARTDSR modem interrupt mask. A read returns the current mask for the UARTDSRINTR interrupt. On a write of 1, the mask of the UARTDSRINTR interrupt is set. A write of 0 clears the mask."]
 pub struct DSRMIM_R(crate::FieldReader<bool, bool>);
 impl DSRMIM_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         DSRMIM_R(crate::FieldReader::new(bits))
     }
@@ -325,6 +333,7 @@ impl<'a> DSRMIM_W<'a> {
 #[doc = "Field `DCDMIM` reader - nUARTDCD modem interrupt mask. A read returns the current mask for the UARTDCDINTR interrupt. On a write of 1, the mask of the UARTDCDINTR interrupt is set. A write of 0 clears the mask."]
 pub struct DCDMIM_R(crate::FieldReader<bool, bool>);
 impl DCDMIM_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         DCDMIM_R(crate::FieldReader::new(bits))
     }
@@ -361,6 +370,7 @@ impl<'a> DCDMIM_W<'a> {
 #[doc = "Field `CTSMIM` reader - nUARTCTS modem interrupt mask. A read returns the current mask for the UARTCTSINTR interrupt. On a write of 1, the mask of the UARTCTSINTR interrupt is set. A write of 0 clears the mask."]
 pub struct CTSMIM_R(crate::FieldReader<bool, bool>);
 impl CTSMIM_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         CTSMIM_R(crate::FieldReader::new(bits))
     }
@@ -397,6 +407,7 @@ impl<'a> CTSMIM_W<'a> {
 #[doc = "Field `RIMIM` reader - nUARTRI modem interrupt mask. A read returns the current mask for the UARTRIINTR interrupt. On a write of 1, the mask of the UARTRIINTR interrupt is set. A write of 0 clears the mask."]
 pub struct RIMIM_R(crate::FieldReader<bool, bool>);
 impl RIMIM_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         RIMIM_R(crate::FieldReader::new(bits))
     }

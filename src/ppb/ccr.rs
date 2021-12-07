@@ -17,6 +17,7 @@ impl From<crate::R<CCR_SPEC>> for R {
 of the stacked PSR to indicate the stack alignment. On return from the exception it uses this stacked bit to restore the correct stack alignment."]
 pub struct STKALIGN_R(crate::FieldReader<bool, bool>);
 impl STKALIGN_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         STKALIGN_R(crate::FieldReader::new(bits))
     }
@@ -31,6 +32,7 @@ impl core::ops::Deref for STKALIGN_R {
 #[doc = "Field `UNALIGN_TRP` reader - Always reads as one, indicates that all unaligned accesses generate a HardFault."]
 pub struct UNALIGN_TRP_R(crate::FieldReader<bool, bool>);
 impl UNALIGN_TRP_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         UNALIGN_TRP_R(crate::FieldReader::new(bits))
     }

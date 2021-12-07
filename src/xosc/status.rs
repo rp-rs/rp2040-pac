@@ -37,6 +37,7 @@ impl From<crate::W<STATUS_SPEC>> for W {
 #[doc = "Field `STABLE` reader - Oscillator is running and stable"]
 pub struct STABLE_R(crate::FieldReader<bool, bool>);
 impl STABLE_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         STABLE_R(crate::FieldReader::new(bits))
     }
@@ -51,6 +52,7 @@ impl core::ops::Deref for STABLE_R {
 #[doc = "Field `BADWRITE` reader - An invalid value has been written to CTRL_ENABLE or CTRL_FREQ_RANGE or DORMANT"]
 pub struct BADWRITE_R(crate::FieldReader<bool, bool>);
 impl BADWRITE_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         BADWRITE_R(crate::FieldReader::new(bits))
     }
@@ -87,6 +89,7 @@ impl<'a> BADWRITE_W<'a> {
 #[doc = "Field `ENABLED` reader - Oscillator is enabled but not necessarily running and stable, resets to 0"]
 pub struct ENABLED_R(crate::FieldReader<bool, bool>);
 impl ENABLED_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         ENABLED_R(crate::FieldReader::new(bits))
     }
@@ -122,6 +125,7 @@ impl From<FREQ_RANGE_A> for u8 {
 #[doc = "Field `FREQ_RANGE` reader - The current frequency range setting, always reads 0"]
 pub struct FREQ_RANGE_R(crate::FieldReader<u8, FREQ_RANGE_A>);
 impl FREQ_RANGE_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         FREQ_RANGE_R(crate::FieldReader::new(bits))
     }

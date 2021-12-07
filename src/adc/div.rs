@@ -37,6 +37,7 @@ impl From<crate::W<DIV_SPEC>> for W {
 #[doc = "Field `INT` reader - Integer part of clock divisor."]
 pub struct INT_R(crate::FieldReader<u16, u16>);
 impl INT_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u16) -> Self {
         INT_R(crate::FieldReader::new(bits))
     }
@@ -63,6 +64,7 @@ impl<'a> INT_W<'a> {
 #[doc = "Field `FRAC` reader - Fractional part of clock divisor. First-order delta-sigma."]
 pub struct FRAC_R(crate::FieldReader<u8, u8>);
 impl FRAC_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         FRAC_R(crate::FieldReader::new(bits))
     }

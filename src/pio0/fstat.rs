@@ -16,6 +16,7 @@ impl From<crate::R<FSTAT_SPEC>> for R {
 #[doc = "Field `TXEMPTY` reader - State machine TX FIFO is empty"]
 pub struct TXEMPTY_R(crate::FieldReader<u8, u8>);
 impl TXEMPTY_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         TXEMPTY_R(crate::FieldReader::new(bits))
     }
@@ -30,6 +31,7 @@ impl core::ops::Deref for TXEMPTY_R {
 #[doc = "Field `TXFULL` reader - State machine TX FIFO is full"]
 pub struct TXFULL_R(crate::FieldReader<u8, u8>);
 impl TXFULL_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         TXFULL_R(crate::FieldReader::new(bits))
     }
@@ -44,6 +46,7 @@ impl core::ops::Deref for TXFULL_R {
 #[doc = "Field `RXEMPTY` reader - State machine RX FIFO is empty"]
 pub struct RXEMPTY_R(crate::FieldReader<u8, u8>);
 impl RXEMPTY_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         RXEMPTY_R(crate::FieldReader::new(bits))
     }
@@ -58,6 +61,7 @@ impl core::ops::Deref for RXEMPTY_R {
 #[doc = "Field `RXFULL` reader - State machine RX FIFO is full"]
 pub struct RXFULL_R(crate::FieldReader<u8, u8>);
 impl RXFULL_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         RXFULL_R(crate::FieldReader::new(bits))
     }

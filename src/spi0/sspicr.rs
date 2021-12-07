@@ -37,6 +37,7 @@ impl From<crate::W<SSPICR_SPEC>> for W {
 #[doc = "Field `RTIC` reader - Clears the SSPRTINTR interrupt"]
 pub struct RTIC_R(crate::FieldReader<bool, bool>);
 impl RTIC_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         RTIC_R(crate::FieldReader::new(bits))
     }
@@ -73,6 +74,7 @@ impl<'a> RTIC_W<'a> {
 #[doc = "Field `RORIC` reader - Clears the SSPRORINTR interrupt"]
 pub struct RORIC_R(crate::FieldReader<bool, bool>);
 impl RORIC_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         RORIC_R(crate::FieldReader::new(bits))
     }

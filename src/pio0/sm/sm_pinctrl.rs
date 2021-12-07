@@ -37,6 +37,7 @@ impl From<crate::W<SM_PINCTRL_SPEC>> for W {
 #[doc = "Field `SIDESET_COUNT` reader - The number of MSBs of the Delay/Side-set instruction field which are used for side-set. Inclusive of the enable bit, if present. Minimum of 0 (all delay bits, no side-set) and maximum of 5 (all side-set, no delay)."]
 pub struct SIDESET_COUNT_R(crate::FieldReader<u8, u8>);
 impl SIDESET_COUNT_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         SIDESET_COUNT_R(crate::FieldReader::new(bits))
     }
@@ -63,6 +64,7 @@ impl<'a> SIDESET_COUNT_W<'a> {
 #[doc = "Field `SET_COUNT` reader - The number of pins asserted by a SET. In the range 0 to 5 inclusive."]
 pub struct SET_COUNT_R(crate::FieldReader<u8, u8>);
 impl SET_COUNT_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         SET_COUNT_R(crate::FieldReader::new(bits))
     }
@@ -89,6 +91,7 @@ impl<'a> SET_COUNT_W<'a> {
 #[doc = "Field `OUT_COUNT` reader - The number of pins asserted by an OUT PINS, OUT PINDIRS or MOV PINS instruction. In the range 0 to 32 inclusive."]
 pub struct OUT_COUNT_R(crate::FieldReader<u8, u8>);
 impl OUT_COUNT_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         OUT_COUNT_R(crate::FieldReader::new(bits))
     }
@@ -115,6 +118,7 @@ impl<'a> OUT_COUNT_W<'a> {
 #[doc = "Field `IN_BASE` reader - The pin which is mapped to the least-significant bit of a state machine's IN data bus. Higher-numbered pins are mapped to consecutively more-significant data bits, with a modulo of 32 applied to pin number."]
 pub struct IN_BASE_R(crate::FieldReader<u8, u8>);
 impl IN_BASE_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         IN_BASE_R(crate::FieldReader::new(bits))
     }
@@ -141,6 +145,7 @@ impl<'a> IN_BASE_W<'a> {
 #[doc = "Field `SIDESET_BASE` reader - The lowest-numbered pin that will be affected by a side-set operation. The MSBs of an instruction's side-set/delay field (up to 5, determined by SIDESET_COUNT) are used for side-set data, with the remaining LSBs used for delay. The least-significant bit of the side-set portion is the bit written to this pin, with more-significant bits written to higher-numbered pins."]
 pub struct SIDESET_BASE_R(crate::FieldReader<u8, u8>);
 impl SIDESET_BASE_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         SIDESET_BASE_R(crate::FieldReader::new(bits))
     }
@@ -167,6 +172,7 @@ impl<'a> SIDESET_BASE_W<'a> {
 #[doc = "Field `SET_BASE` reader - The lowest-numbered pin that will be affected by a SET PINS or SET PINDIRS instruction. The data written to this pin is the least-significant bit of the SET data."]
 pub struct SET_BASE_R(crate::FieldReader<u8, u8>);
 impl SET_BASE_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         SET_BASE_R(crate::FieldReader::new(bits))
     }
@@ -193,6 +199,7 @@ impl<'a> SET_BASE_W<'a> {
 #[doc = "Field `OUT_BASE` reader - The lowest-numbered pin that will be affected by an OUT PINS, OUT PINDIRS or MOV PINS instruction. The data written to this pin will always be the least-significant bit of the OUT or MOV data."]
 pub struct OUT_BASE_R(crate::FieldReader<u8, u8>);
 impl OUT_BASE_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         OUT_BASE_R(crate::FieldReader::new(bits))
     }

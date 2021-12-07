@@ -43,6 +43,7 @@ impl From<crate::W<NVIC_ICER_SPEC>> for W {
  1 = Interrupt enabled."]
 pub struct CLRENA_R(crate::FieldReader<u32, u32>);
 impl CLRENA_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u32) -> Self {
         CLRENA_R(crate::FieldReader::new(bits))
     }
@@ -73,14 +74,26 @@ impl<'a> CLRENA_W<'a> {
     }
 }
 impl R {
-    #[doc = "Bits 0:31 - Interrupt clear-enable bits. Write: 0 = No effect. 1 = Disable interrupt. Read: 0 = Interrupt disabled. 1 = Interrupt enabled."]
+    #[doc = "Bits 0:31 - Interrupt clear-enable bits.  
+ Write:  
+ 0 = No effect.  
+ 1 = Disable interrupt.  
+ Read:  
+ 0 = Interrupt disabled.  
+ 1 = Interrupt enabled."]
     #[inline(always)]
     pub fn clrena(&self) -> CLRENA_R {
         CLRENA_R::new((self.bits & 0xffff_ffff) as u32)
     }
 }
 impl W {
-    #[doc = "Bits 0:31 - Interrupt clear-enable bits. Write: 0 = No effect. 1 = Disable interrupt. Read: 0 = Interrupt disabled. 1 = Interrupt enabled."]
+    #[doc = "Bits 0:31 - Interrupt clear-enable bits.  
+ Write:  
+ 0 = No effect.  
+ 1 = Disable interrupt.  
+ Read:  
+ 0 = Interrupt disabled.  
+ 1 = Interrupt enabled."]
     #[inline(always)]
     pub fn clrena(&mut self) -> CLRENA_W {
         CLRENA_W { w: self }

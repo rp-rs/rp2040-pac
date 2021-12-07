@@ -40,6 +40,7 @@ impl From<crate::W<CS_SPEC>> for W {
  AINSEL will be updated after each conversion with the newly-selected channel."]
 pub struct RROBIN_R(crate::FieldReader<u8, u8>);
 impl RROBIN_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         RROBIN_R(crate::FieldReader::new(bits))
     }
@@ -69,6 +70,7 @@ impl<'a> RROBIN_W<'a> {
 #[doc = "Field `AINSEL` reader - Select analog mux input. Updated automatically in round-robin mode."]
 pub struct AINSEL_R(crate::FieldReader<u8, u8>);
 impl AINSEL_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         AINSEL_R(crate::FieldReader::new(bits))
     }
@@ -95,6 +97,7 @@ impl<'a> AINSEL_W<'a> {
 #[doc = "Field `ERR_STICKY` reader - Some past ADC conversion encountered an error. Write 1 to clear."]
 pub struct ERR_STICKY_R(crate::FieldReader<bool, bool>);
 impl ERR_STICKY_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         ERR_STICKY_R(crate::FieldReader::new(bits))
     }
@@ -131,6 +134,7 @@ impl<'a> ERR_STICKY_W<'a> {
 #[doc = "Field `ERR` reader - The most recent ADC conversion encountered an error; result is undefined or noisy."]
 pub struct ERR_R(crate::FieldReader<bool, bool>);
 impl ERR_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         ERR_R(crate::FieldReader::new(bits))
     }
@@ -146,6 +150,7 @@ impl core::ops::Deref for ERR_R {
  0 whilst conversion in progress."]
 pub struct READY_R(crate::FieldReader<bool, bool>);
 impl READY_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         READY_R(crate::FieldReader::new(bits))
     }
@@ -160,6 +165,7 @@ impl core::ops::Deref for READY_R {
 #[doc = "Field `START_MANY` reader - Continuously perform conversions whilst this bit is 1. A new conversion will start immediately after the previous finishes."]
 pub struct START_MANY_R(crate::FieldReader<bool, bool>);
 impl START_MANY_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         START_MANY_R(crate::FieldReader::new(bits))
     }
@@ -196,6 +202,7 @@ impl<'a> START_MANY_W<'a> {
 #[doc = "Field `START_ONCE` reader - Start a single conversion. Self-clearing. Ignored if start_many is asserted."]
 pub struct START_ONCE_R(crate::FieldReader<bool, bool>);
 impl START_ONCE_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         START_ONCE_R(crate::FieldReader::new(bits))
     }
@@ -232,6 +239,7 @@ impl<'a> START_ONCE_W<'a> {
 #[doc = "Field `TS_EN` reader - Power on temperature sensor. 1 - enabled. 0 - disabled."]
 pub struct TS_EN_R(crate::FieldReader<bool, bool>);
 impl TS_EN_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         TS_EN_R(crate::FieldReader::new(bits))
     }
@@ -269,6 +277,7 @@ impl<'a> TS_EN_W<'a> {
  1 - enabled. 0 - disabled."]
 pub struct EN_R(crate::FieldReader<bool, bool>);
 impl EN_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         EN_R(crate::FieldReader::new(bits))
     }
@@ -304,7 +313,10 @@ impl<'a> EN_W<'a> {
     }
 }
 impl R {
-    #[doc = "Bits 16:20 - Round-robin sampling. 1 bit per channel. Set all bits to 0 to disable. Otherwise, the ADC will cycle through each enabled channel in a round-robin fashion. The first channel to be sampled will be the one currently indicated by AINSEL. AINSEL will be updated after each conversion with the newly-selected channel."]
+    #[doc = "Bits 16:20 - Round-robin sampling. 1 bit per channel. Set all bits to 0 to disable.  
+ Otherwise, the ADC will cycle through each enabled channel in a round-robin fashion.  
+ The first channel to be sampled will be the one currently indicated by AINSEL.  
+ AINSEL will be updated after each conversion with the newly-selected channel."]
     #[inline(always)]
     pub fn rrobin(&self) -> RROBIN_R {
         RROBIN_R::new(((self.bits >> 16) & 0x1f) as u8)
@@ -324,7 +336,8 @@ impl R {
     pub fn err(&self) -> ERR_R {
         ERR_R::new(((self.bits >> 9) & 0x01) != 0)
     }
-    #[doc = "Bit 8 - 1 if the ADC is ready to start a new conversion. Implies any previous conversion has completed. 0 whilst conversion in progress."]
+    #[doc = "Bit 8 - 1 if the ADC is ready to start a new conversion. Implies any previous conversion has completed.  
+ 0 whilst conversion in progress."]
     #[inline(always)]
     pub fn ready(&self) -> READY_R {
         READY_R::new(((self.bits >> 8) & 0x01) != 0)
@@ -344,14 +357,18 @@ impl R {
     pub fn ts_en(&self) -> TS_EN_R {
         TS_EN_R::new(((self.bits >> 1) & 0x01) != 0)
     }
-    #[doc = "Bit 0 - Power on ADC and enable its clock. 1 - enabled. 0 - disabled."]
+    #[doc = "Bit 0 - Power on ADC and enable its clock.  
+ 1 - enabled. 0 - disabled."]
     #[inline(always)]
     pub fn en(&self) -> EN_R {
         EN_R::new((self.bits & 0x01) != 0)
     }
 }
 impl W {
-    #[doc = "Bits 16:20 - Round-robin sampling. 1 bit per channel. Set all bits to 0 to disable. Otherwise, the ADC will cycle through each enabled channel in a round-robin fashion. The first channel to be sampled will be the one currently indicated by AINSEL. AINSEL will be updated after each conversion with the newly-selected channel."]
+    #[doc = "Bits 16:20 - Round-robin sampling. 1 bit per channel. Set all bits to 0 to disable.  
+ Otherwise, the ADC will cycle through each enabled channel in a round-robin fashion.  
+ The first channel to be sampled will be the one currently indicated by AINSEL.  
+ AINSEL will be updated after each conversion with the newly-selected channel."]
     #[inline(always)]
     pub fn rrobin(&mut self) -> RROBIN_W {
         RROBIN_W { w: self }
@@ -381,7 +398,8 @@ impl W {
     pub fn ts_en(&mut self) -> TS_EN_W {
         TS_EN_W { w: self }
     }
-    #[doc = "Bit 0 - Power on ADC and enable its clock. 1 - enabled. 0 - disabled."]
+    #[doc = "Bit 0 - Power on ADC and enable its clock.  
+ 1 - enabled. 0 - disabled."]
     #[inline(always)]
     pub fn en(&mut self) -> EN_W {
         EN_W { w: self }

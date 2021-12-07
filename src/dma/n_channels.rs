@@ -16,6 +16,7 @@ impl From<crate::R<N_CHANNELS_SPEC>> for R {
 #[doc = "Field `N_CHANNELS` reader - "]
 pub struct N_CHANNELS_R(crate::FieldReader<u8, u8>);
 impl N_CHANNELS_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         N_CHANNELS_R(crate::FieldReader::new(bits))
     }

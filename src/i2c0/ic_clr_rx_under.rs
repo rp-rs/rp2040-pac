@@ -18,6 +18,7 @@ impl From<crate::R<IC_CLR_RX_UNDER_SPEC>> for R {
  Reset value: 0x0"]
 pub struct CLR_RX_UNDER_R(crate::FieldReader<bool, bool>);
 impl CLR_RX_UNDER_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         CLR_RX_UNDER_R(crate::FieldReader::new(bits))
     }
@@ -30,7 +31,9 @@ impl core::ops::Deref for CLR_RX_UNDER_R {
     }
 }
 impl R {
-    #[doc = "Bit 0 - Read this register to clear the RX_UNDER interrupt (bit 0) of the IC_RAW_INTR_STAT register. Reset value: 0x0"]
+    #[doc = "Bit 0 - Read this register to clear the RX_UNDER interrupt (bit 0) of the IC_RAW_INTR_STAT register.  
+
+ Reset value: 0x0"]
     #[inline(always)]
     pub fn clr_rx_under(&self) -> CLR_RX_UNDER_R {
         CLR_RX_UNDER_R::new((self.bits & 0x01) != 0)

@@ -37,6 +37,7 @@ impl From<crate::W<EP_STALL_ARM_SPEC>> for W {
 #[doc = "Field `EP0_OUT` reader - "]
 pub struct EP0_OUT_R(crate::FieldReader<bool, bool>);
 impl EP0_OUT_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         EP0_OUT_R(crate::FieldReader::new(bits))
     }
@@ -73,6 +74,7 @@ impl<'a> EP0_OUT_W<'a> {
 #[doc = "Field `EP0_IN` reader - "]
 pub struct EP0_IN_R(crate::FieldReader<bool, bool>);
 impl EP0_IN_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         EP0_IN_R(crate::FieldReader::new(bits))
     }

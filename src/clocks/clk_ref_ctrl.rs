@@ -56,6 +56,7 @@ impl From<AUXSRC_A> for u8 {
 #[doc = "Field `AUXSRC` reader - Selects the auxiliary clock source, will glitch when switching"]
 pub struct AUXSRC_R(crate::FieldReader<u8, AUXSRC_A>);
 impl AUXSRC_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         AUXSRC_R(crate::FieldReader::new(bits))
     }
@@ -146,6 +147,7 @@ impl From<SRC_A> for u8 {
 #[doc = "Field `SRC` reader - Selects the clock source glitchlessly, can be changed on-the-fly"]
 pub struct SRC_R(crate::FieldReader<u8, SRC_A>);
 impl SRC_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         SRC_R(crate::FieldReader::new(bits))
     }

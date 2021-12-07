@@ -37,6 +37,7 @@ impl From<crate::W<CTRLR1_SPEC>> for W {
 #[doc = "Field `NDF` reader - Number of data frames"]
 pub struct NDF_R(crate::FieldReader<u16, u16>);
 impl NDF_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u16) -> Self {
         NDF_R(crate::FieldReader::new(bits))
     }

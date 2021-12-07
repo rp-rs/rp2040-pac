@@ -16,6 +16,7 @@ impl From<crate::R<CLK_SYS_RESUS_STATUS_SPEC>> for R {
 #[doc = "Field `RESUSSED` reader - Clock has been resuscitated, correct the error then send ctrl_clear=1"]
 pub struct RESUSSED_R(crate::FieldReader<bool, bool>);
 impl RESUSSED_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         RESUSSED_R(crate::FieldReader::new(bits))
     }

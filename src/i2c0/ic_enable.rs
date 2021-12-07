@@ -55,6 +55,7 @@ impl From<TX_CMD_BLOCK_A> for bool {
 == 0). Any further commands put in the Tx FIFO are not executed until TX_CMD_BLOCK bit is unset. Reset value: IC_TX_CMD_BLOCK_DEFAULT"]
 pub struct TX_CMD_BLOCK_R(crate::FieldReader<bool, TX_CMD_BLOCK_A>);
 impl TX_CMD_BLOCK_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         TX_CMD_BLOCK_R(crate::FieldReader::new(bits))
     }
@@ -149,6 +150,7 @@ impl From<ABORT_A> for bool {
  Reset value: 0x0"]
 pub struct ABORT_R(crate::FieldReader<bool, ABORT_A>);
 impl ABORT_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         ABORT_R(crate::FieldReader::new(bits))
     }
@@ -250,6 +252,7 @@ impl From<ENABLE_A> for bool {
  Reset value: 0x0"]
 pub struct ENABLE_R(crate::FieldReader<bool, ENABLE_A>);
 impl ENABLE_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         ENABLE_R(crate::FieldReader::new(bits))
     }
@@ -329,12 +332,22 @@ impl R {
     pub fn tx_cmd_block(&self) -> TX_CMD_BLOCK_R {
         TX_CMD_BLOCK_R::new(((self.bits >> 2) & 0x01) != 0)
     }
-    #[doc = "Bit 1 - When set, the controller initiates the transfer abort. - 0: ABORT not initiated or ABORT done - 1: ABORT operation in progress The software can abort the I2C transfer in master mode by setting this bit. The software can set this bit only when ENABLE is already set; otherwise, the controller ignores any write to ABORT bit. The software cannot clear the ABORT bit once set. In response to an ABORT, the controller issues a STOP and flushes the Tx FIFO after completing the current transfer, then sets the TX_ABORT interrupt after the abort operation. The ABORT bit is cleared automatically after the abort operation. For a detailed description on how to abort I2C transfers, refer to 'Aborting I2C Transfers'. Reset value: 0x0"]
+    #[doc = "Bit 1 - When set, the controller initiates the transfer abort. - 0: ABORT not initiated or ABORT done - 1: ABORT operation in progress The software can abort the I2C transfer in master mode by setting this bit. The software can set this bit only when ENABLE is already set; otherwise, the controller ignores any write to ABORT bit. The software cannot clear the ABORT bit once set. In response to an ABORT, the controller issues a STOP and flushes the Tx FIFO after completing the current transfer, then sets the TX_ABORT interrupt after the abort operation. The ABORT bit is cleared automatically after the abort operation.  
+
+ For a detailed description on how to abort I2C transfers, refer to 'Aborting I2C Transfers'.  
+
+ Reset value: 0x0"]
     #[inline(always)]
     pub fn abort(&self) -> ABORT_R {
         ABORT_R::new(((self.bits >> 1) & 0x01) != 0)
     }
-    #[doc = "Bit 0 - Controls whether the DW_apb_i2c is enabled. - 0: Disables DW_apb_i2c (TX and RX FIFOs are held in an erased state) - 1: Enables DW_apb_i2c Software can disable DW_apb_i2c while it is active. However, it is important that care be taken to ensure that DW_apb_i2c is disabled properly. A recommended procedure is described in 'Disabling DW_apb_i2c'. When DW_apb_i2c is disabled, the following occurs: - The TX FIFO and RX FIFO get flushed. - Status bits in the IC_INTR_STAT register are still active until DW_apb_i2c goes into IDLE state. If the module is transmitting, it stops as well as deletes the contents of the transmit buffer after the current transfer is complete. If the module is receiving, the DW_apb_i2c stops the current transfer at the end of the current byte and does not acknowledge the transfer. In systems with asynchronous pclk and ic_clk when IC_CLK_TYPE parameter set to asynchronous (1), there is a two ic_clk delay when enabling or disabling the DW_apb_i2c. For a detailed description on how to disable DW_apb_i2c, refer to 'Disabling DW_apb_i2c' Reset value: 0x0"]
+    #[doc = "Bit 0 - Controls whether the DW_apb_i2c is enabled. - 0: Disables DW_apb_i2c (TX and RX FIFOs are held in an erased state) - 1: Enables DW_apb_i2c Software can disable DW_apb_i2c while it is active. However, it is important that care be taken to ensure that DW_apb_i2c is disabled properly. A recommended procedure is described in 'Disabling DW_apb_i2c'.  
+
+ When DW_apb_i2c is disabled, the following occurs: - The TX FIFO and RX FIFO get flushed. - Status bits in the IC_INTR_STAT register are still active until DW_apb_i2c goes into IDLE state. If the module is transmitting, it stops as well as deletes the contents of the transmit buffer after the current transfer is complete. If the module is receiving, the DW_apb_i2c stops the current transfer at the end of the current byte and does not acknowledge the transfer.  
+
+ In systems with asynchronous pclk and ic_clk when IC_CLK_TYPE parameter set to asynchronous (1), there is a two ic_clk delay when enabling or disabling the DW_apb_i2c. For a detailed description on how to disable DW_apb_i2c, refer to 'Disabling DW_apb_i2c'  
+
+ Reset value: 0x0"]
     #[inline(always)]
     pub fn enable(&self) -> ENABLE_R {
         ENABLE_R::new((self.bits & 0x01) != 0)
@@ -347,12 +360,22 @@ impl W {
     pub fn tx_cmd_block(&mut self) -> TX_CMD_BLOCK_W {
         TX_CMD_BLOCK_W { w: self }
     }
-    #[doc = "Bit 1 - When set, the controller initiates the transfer abort. - 0: ABORT not initiated or ABORT done - 1: ABORT operation in progress The software can abort the I2C transfer in master mode by setting this bit. The software can set this bit only when ENABLE is already set; otherwise, the controller ignores any write to ABORT bit. The software cannot clear the ABORT bit once set. In response to an ABORT, the controller issues a STOP and flushes the Tx FIFO after completing the current transfer, then sets the TX_ABORT interrupt after the abort operation. The ABORT bit is cleared automatically after the abort operation. For a detailed description on how to abort I2C transfers, refer to 'Aborting I2C Transfers'. Reset value: 0x0"]
+    #[doc = "Bit 1 - When set, the controller initiates the transfer abort. - 0: ABORT not initiated or ABORT done - 1: ABORT operation in progress The software can abort the I2C transfer in master mode by setting this bit. The software can set this bit only when ENABLE is already set; otherwise, the controller ignores any write to ABORT bit. The software cannot clear the ABORT bit once set. In response to an ABORT, the controller issues a STOP and flushes the Tx FIFO after completing the current transfer, then sets the TX_ABORT interrupt after the abort operation. The ABORT bit is cleared automatically after the abort operation.  
+
+ For a detailed description on how to abort I2C transfers, refer to 'Aborting I2C Transfers'.  
+
+ Reset value: 0x0"]
     #[inline(always)]
     pub fn abort(&mut self) -> ABORT_W {
         ABORT_W { w: self }
     }
-    #[doc = "Bit 0 - Controls whether the DW_apb_i2c is enabled. - 0: Disables DW_apb_i2c (TX and RX FIFOs are held in an erased state) - 1: Enables DW_apb_i2c Software can disable DW_apb_i2c while it is active. However, it is important that care be taken to ensure that DW_apb_i2c is disabled properly. A recommended procedure is described in 'Disabling DW_apb_i2c'. When DW_apb_i2c is disabled, the following occurs: - The TX FIFO and RX FIFO get flushed. - Status bits in the IC_INTR_STAT register are still active until DW_apb_i2c goes into IDLE state. If the module is transmitting, it stops as well as deletes the contents of the transmit buffer after the current transfer is complete. If the module is receiving, the DW_apb_i2c stops the current transfer at the end of the current byte and does not acknowledge the transfer. In systems with asynchronous pclk and ic_clk when IC_CLK_TYPE parameter set to asynchronous (1), there is a two ic_clk delay when enabling or disabling the DW_apb_i2c. For a detailed description on how to disable DW_apb_i2c, refer to 'Disabling DW_apb_i2c' Reset value: 0x0"]
+    #[doc = "Bit 0 - Controls whether the DW_apb_i2c is enabled. - 0: Disables DW_apb_i2c (TX and RX FIFOs are held in an erased state) - 1: Enables DW_apb_i2c Software can disable DW_apb_i2c while it is active. However, it is important that care be taken to ensure that DW_apb_i2c is disabled properly. A recommended procedure is described in 'Disabling DW_apb_i2c'.  
+
+ When DW_apb_i2c is disabled, the following occurs: - The TX FIFO and RX FIFO get flushed. - Status bits in the IC_INTR_STAT register are still active until DW_apb_i2c goes into IDLE state. If the module is transmitting, it stops as well as deletes the contents of the transmit buffer after the current transfer is complete. If the module is receiving, the DW_apb_i2c stops the current transfer at the end of the current byte and does not acknowledge the transfer.  
+
+ In systems with asynchronous pclk and ic_clk when IC_CLK_TYPE parameter set to asynchronous (1), there is a two ic_clk delay when enabling or disabling the DW_apb_i2c. For a detailed description on how to disable DW_apb_i2c, refer to 'Disabling DW_apb_i2c'  
+
+ Reset value: 0x0"]
     #[inline(always)]
     pub fn enable(&mut self) -> ENABLE_W {
         ENABLE_W { w: self }

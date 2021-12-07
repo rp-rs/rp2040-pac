@@ -37,6 +37,7 @@ impl From<crate::W<SSIENR_SPEC>> for W {
 #[doc = "Field `SSI_EN` reader - SSI enable"]
 pub struct SSI_EN_R(crate::FieldReader<bool, bool>);
 impl SSI_EN_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         SSI_EN_R(crate::FieldReader::new(bits))
     }

@@ -37,6 +37,7 @@ impl From<crate::W<UARTCR_SPEC>> for W {
 #[doc = "Field `CTSEN` reader - CTS hardware flow control enable. If this bit is set to 1, CTS hardware flow control is enabled. Data is only transmitted when the nUARTCTS signal is asserted."]
 pub struct CTSEN_R(crate::FieldReader<bool, bool>);
 impl CTSEN_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         CTSEN_R(crate::FieldReader::new(bits))
     }
@@ -73,6 +74,7 @@ impl<'a> CTSEN_W<'a> {
 #[doc = "Field `RTSEN` reader - RTS hardware flow control enable. If this bit is set to 1, RTS hardware flow control is enabled. Data is only requested when there is space in the receive FIFO for it to be received."]
 pub struct RTSEN_R(crate::FieldReader<bool, bool>);
 impl RTSEN_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         RTSEN_R(crate::FieldReader::new(bits))
     }
@@ -109,6 +111,7 @@ impl<'a> RTSEN_W<'a> {
 #[doc = "Field `OUT2` reader - This bit is the complement of the UART Out2 (nUARTOut2) modem status output. That is, when the bit is programmed to a 1, the output is 0. For DTE this can be used as Ring Indicator (RI)."]
 pub struct OUT2_R(crate::FieldReader<bool, bool>);
 impl OUT2_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         OUT2_R(crate::FieldReader::new(bits))
     }
@@ -145,6 +148,7 @@ impl<'a> OUT2_W<'a> {
 #[doc = "Field `OUT1` reader - This bit is the complement of the UART Out1 (nUARTOut1) modem status output. That is, when the bit is programmed to a 1 the output is 0. For DTE this can be used as Data Carrier Detect (DCD)."]
 pub struct OUT1_R(crate::FieldReader<bool, bool>);
 impl OUT1_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         OUT1_R(crate::FieldReader::new(bits))
     }
@@ -181,6 +185,7 @@ impl<'a> OUT1_W<'a> {
 #[doc = "Field `RTS` reader - Request to send. This bit is the complement of the UART request to send, nUARTRTS, modem status output. That is, when the bit is programmed to a 1 then nUARTRTS is LOW."]
 pub struct RTS_R(crate::FieldReader<bool, bool>);
 impl RTS_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         RTS_R(crate::FieldReader::new(bits))
     }
@@ -217,6 +222,7 @@ impl<'a> RTS_W<'a> {
 #[doc = "Field `DTR` reader - Data transmit ready. This bit is the complement of the UART data transmit ready, nUARTDTR, modem status output. That is, when the bit is programmed to a 1 then nUARTDTR is LOW."]
 pub struct DTR_R(crate::FieldReader<bool, bool>);
 impl DTR_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         DTR_R(crate::FieldReader::new(bits))
     }
@@ -253,6 +259,7 @@ impl<'a> DTR_W<'a> {
 #[doc = "Field `RXE` reader - Receive enable. If this bit is set to 1, the receive section of the UART is enabled. Data reception occurs for either UART signals or SIR signals depending on the setting of the SIREN bit. When the UART is disabled in the middle of reception, it completes the current character before stopping."]
 pub struct RXE_R(crate::FieldReader<bool, bool>);
 impl RXE_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         RXE_R(crate::FieldReader::new(bits))
     }
@@ -289,6 +296,7 @@ impl<'a> RXE_W<'a> {
 #[doc = "Field `TXE` reader - Transmit enable. If this bit is set to 1, the transmit section of the UART is enabled. Data transmission occurs for either UART signals, or SIR signals depending on the setting of the SIREN bit. When the UART is disabled in the middle of transmission, it completes the current character before stopping."]
 pub struct TXE_R(crate::FieldReader<bool, bool>);
 impl TXE_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         TXE_R(crate::FieldReader::new(bits))
     }
@@ -325,6 +333,7 @@ impl<'a> TXE_W<'a> {
 #[doc = "Field `LBE` reader - Loopback enable. If this bit is set to 1 and the SIREN bit is set to 1 and the SIRTEST bit in the Test Control Register, UARTTCR is set to 1, then the nSIROUT path is inverted, and fed through to the SIRIN path. The SIRTEST bit in the test register must be set to 1 to override the normal half-duplex SIR operation. This must be the requirement for accessing the test registers during normal operation, and SIRTEST must be cleared to 0 when loopback testing is finished. This feature reduces the amount of external coupling required during system test. If this bit is set to 1, and the SIRTEST bit is set to 0, the UARTTXD path is fed through to the UARTRXD path. In either SIR mode or UART mode, when this bit is set, the modem outputs are also fed through to the modem inputs. This bit is cleared to 0 on reset, to disable loopback."]
 pub struct LBE_R(crate::FieldReader<bool, bool>);
 impl LBE_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         LBE_R(crate::FieldReader::new(bits))
     }
@@ -361,6 +370,7 @@ impl<'a> LBE_W<'a> {
 #[doc = "Field `SIRLP` reader - SIR low-power IrDA mode. This bit selects the IrDA encoding mode. If this bit is cleared to 0, low-level bits are transmitted as an active high pulse with a width of 3 / 16th of the bit period. If this bit is set to 1, low-level bits are transmitted with a pulse width that is 3 times the period of the IrLPBaud16 input signal, regardless of the selected bit rate. Setting this bit uses less power, but might reduce transmission distances."]
 pub struct SIRLP_R(crate::FieldReader<bool, bool>);
 impl SIRLP_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         SIRLP_R(crate::FieldReader::new(bits))
     }
@@ -397,6 +407,7 @@ impl<'a> SIRLP_W<'a> {
 #[doc = "Field `SIREN` reader - SIR enable: 0 = IrDA SIR ENDEC is disabled. nSIROUT remains LOW (no light pulse generated), and signal transitions on SIRIN have no effect. 1 = IrDA SIR ENDEC is enabled. Data is transmitted and received on nSIROUT and SIRIN. UARTTXD remains HIGH, in the marking state. Signal transitions on UARTRXD or modem status inputs have no effect. This bit has no effect if the UARTEN bit disables the UART."]
 pub struct SIREN_R(crate::FieldReader<bool, bool>);
 impl SIREN_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         SIREN_R(crate::FieldReader::new(bits))
     }
@@ -433,6 +444,7 @@ impl<'a> SIREN_W<'a> {
 #[doc = "Field `UARTEN` reader - UART enable: 0 = UART is disabled. If the UART is disabled in the middle of transmission or reception, it completes the current character before stopping. 1 = the UART is enabled. Data transmission and reception occurs for either UART signals or SIR signals depending on the setting of the SIREN bit."]
 pub struct UARTEN_R(crate::FieldReader<bool, bool>);
 impl UARTEN_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         UARTEN_R(crate::FieldReader::new(bits))
     }

@@ -39,6 +39,7 @@ impl From<crate::W<CSR_SPEC>> for W {
  at less than full speed (div_int + div_frac / 16 > 1)"]
 pub struct PH_ADV_R(crate::FieldReader<bool, bool>);
 impl PH_ADV_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         PH_ADV_R(crate::FieldReader::new(bits))
     }
@@ -78,6 +79,7 @@ impl<'a> PH_ADV_W<'a> {
  Self-clearing. Write a 1, and poll until low. Counter must be running."]
 pub struct PH_RET_R(crate::FieldReader<bool, bool>);
 impl PH_RET_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         PH_RET_R(crate::FieldReader::new(bits))
     }
@@ -136,6 +138,7 @@ impl From<DIVMODE_A> for u8 {
 #[doc = "Field `DIVMODE` reader - "]
 pub struct DIVMODE_R(crate::FieldReader<u8, DIVMODE_A>);
 impl DIVMODE_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         DIVMODE_R(crate::FieldReader::new(bits))
     }
@@ -218,6 +221,7 @@ impl<'a> DIVMODE_W<'a> {
 #[doc = "Field `B_INV` reader - Invert output B"]
 pub struct B_INV_R(crate::FieldReader<bool, bool>);
 impl B_INV_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         B_INV_R(crate::FieldReader::new(bits))
     }
@@ -254,6 +258,7 @@ impl<'a> B_INV_W<'a> {
 #[doc = "Field `A_INV` reader - Invert output A"]
 pub struct A_INV_R(crate::FieldReader<bool, bool>);
 impl A_INV_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         A_INV_R(crate::FieldReader::new(bits))
     }
@@ -290,6 +295,7 @@ impl<'a> A_INV_W<'a> {
 #[doc = "Field `PH_CORRECT` reader - 1: Enable phase-correct modulation. 0: Trailing-edge"]
 pub struct PH_CORRECT_R(crate::FieldReader<bool, bool>);
 impl PH_CORRECT_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         PH_CORRECT_R(crate::FieldReader::new(bits))
     }
@@ -326,6 +332,7 @@ impl<'a> PH_CORRECT_W<'a> {
 #[doc = "Field `EN` reader - Enable the PWM channel."]
 pub struct EN_R(crate::FieldReader<bool, bool>);
 impl EN_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         EN_R(crate::FieldReader::new(bits))
     }
@@ -360,12 +367,15 @@ impl<'a> EN_W<'a> {
     }
 }
 impl R {
-    #[doc = "Bit 7 - Advance the phase of the counter by 1 count, while it is running. Self-clearing. Write a 1, and poll until low. Counter must be running at less than full speed (div_int + div_frac / 16 > 1)"]
+    #[doc = "Bit 7 - Advance the phase of the counter by 1 count, while it is running.  
+ Self-clearing. Write a 1, and poll until low. Counter must be running  
+ at less than full speed (div_int + div_frac / 16 > 1)"]
     #[inline(always)]
     pub fn ph_adv(&self) -> PH_ADV_R {
         PH_ADV_R::new(((self.bits >> 7) & 0x01) != 0)
     }
-    #[doc = "Bit 6 - Retard the phase of the counter by 1 count, while it is running. Self-clearing. Write a 1, and poll until low. Counter must be running."]
+    #[doc = "Bit 6 - Retard the phase of the counter by 1 count, while it is running.  
+ Self-clearing. Write a 1, and poll until low. Counter must be running."]
     #[inline(always)]
     pub fn ph_ret(&self) -> PH_RET_R {
         PH_RET_R::new(((self.bits >> 6) & 0x01) != 0)
@@ -397,12 +407,15 @@ impl R {
     }
 }
 impl W {
-    #[doc = "Bit 7 - Advance the phase of the counter by 1 count, while it is running. Self-clearing. Write a 1, and poll until low. Counter must be running at less than full speed (div_int + div_frac / 16 > 1)"]
+    #[doc = "Bit 7 - Advance the phase of the counter by 1 count, while it is running.  
+ Self-clearing. Write a 1, and poll until low. Counter must be running  
+ at less than full speed (div_int + div_frac / 16 > 1)"]
     #[inline(always)]
     pub fn ph_adv(&mut self) -> PH_ADV_W {
         PH_ADV_W { w: self }
     }
-    #[doc = "Bit 6 - Retard the phase of the counter by 1 count, while it is running. Self-clearing. Write a 1, and poll until low. Counter must be running."]
+    #[doc = "Bit 6 - Retard the phase of the counter by 1 count, while it is running.  
+ Self-clearing. Write a 1, and poll until low. Counter must be running."]
     #[inline(always)]
     pub fn ph_ret(&mut self) -> PH_RET_W {
         PH_RET_W { w: self }

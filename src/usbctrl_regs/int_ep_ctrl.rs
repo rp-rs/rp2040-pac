@@ -37,6 +37,7 @@ impl From<crate::W<INT_EP_CTRL_SPEC>> for W {
 #[doc = "Field `INT_EP_ACTIVE` reader - Host: Enable interrupt endpoint 1 -> 15"]
 pub struct INT_EP_ACTIVE_R(crate::FieldReader<u16, u16>);
 impl INT_EP_ACTIVE_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u16) -> Self {
         INT_EP_ACTIVE_R(crate::FieldReader::new(bits))
     }

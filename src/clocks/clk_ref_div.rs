@@ -37,6 +37,7 @@ impl From<crate::W<CLK_REF_DIV_SPEC>> for W {
 #[doc = "Field `INT` reader - Integer component of the divisor, 0 -> divide by 2^16"]
 pub struct INT_R(crate::FieldReader<u8, u8>);
 impl INT_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         INT_R(crate::FieldReader::new(bits))
     }

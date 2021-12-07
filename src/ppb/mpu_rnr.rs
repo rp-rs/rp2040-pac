@@ -38,6 +38,7 @@ impl From<crate::W<MPU_RNR_SPEC>> for W {
  The MPU supports 8 memory regions, so the permitted values of this field are 0-7."]
 pub struct REGION_R(crate::FieldReader<u8, u8>);
 impl REGION_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         REGION_R(crate::FieldReader::new(bits))
     }
@@ -63,14 +64,16 @@ impl<'a> REGION_W<'a> {
     }
 }
 impl R {
-    #[doc = "Bits 0:3 - Indicates the MPU region referenced by the MPU_RBAR and MPU_RASR registers. The MPU supports 8 memory regions, so the permitted values of this field are 0-7."]
+    #[doc = "Bits 0:3 - Indicates the MPU region referenced by the MPU_RBAR and MPU_RASR registers.  
+ The MPU supports 8 memory regions, so the permitted values of this field are 0-7."]
     #[inline(always)]
     pub fn region(&self) -> REGION_R {
         REGION_R::new((self.bits & 0x0f) as u8)
     }
 }
 impl W {
-    #[doc = "Bits 0:3 - Indicates the MPU region referenced by the MPU_RBAR and MPU_RASR registers. The MPU supports 8 memory regions, so the permitted values of this field are 0-7."]
+    #[doc = "Bits 0:3 - Indicates the MPU region referenced by the MPU_RBAR and MPU_RASR registers.  
+ The MPU supports 8 memory regions, so the permitted values of this field are 0-7."]
     #[inline(always)]
     pub fn region(&mut self) -> REGION_W {
         REGION_W { w: self }

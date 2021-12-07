@@ -38,6 +38,7 @@ impl From<crate::W<CLK_USB_CTRL_SPEC>> for W {
  This can be done at any time"]
 pub struct NUDGE_R(crate::FieldReader<bool, bool>);
 impl NUDGE_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         NUDGE_R(crate::FieldReader::new(bits))
     }
@@ -76,6 +77,7 @@ impl<'a> NUDGE_W<'a> {
  This must be set before the clock is enabled to have any effect"]
 pub struct PHASE_R(crate::FieldReader<u8, u8>);
 impl PHASE_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         PHASE_R(crate::FieldReader::new(bits))
     }
@@ -103,6 +105,7 @@ impl<'a> PHASE_W<'a> {
 #[doc = "Field `ENABLE` reader - Starts and stops the clock generator cleanly"]
 pub struct ENABLE_R(crate::FieldReader<bool, bool>);
 impl ENABLE_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         ENABLE_R(crate::FieldReader::new(bits))
     }
@@ -139,6 +142,7 @@ impl<'a> ENABLE_W<'a> {
 #[doc = "Field `KILL` reader - Asynchronously kills the clock generator"]
 pub struct KILL_R(crate::FieldReader<bool, bool>);
 impl KILL_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         KILL_R(crate::FieldReader::new(bits))
     }
@@ -200,6 +204,7 @@ impl From<AUXSRC_A> for u8 {
 #[doc = "Field `AUXSRC` reader - Selects the auxiliary clock source, will glitch when switching"]
 pub struct AUXSRC_R(crate::FieldReader<u8, AUXSRC_A>);
 impl AUXSRC_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         AUXSRC_R(crate::FieldReader::new(bits))
     }
@@ -302,12 +307,14 @@ impl<'a> AUXSRC_W<'a> {
     }
 }
 impl R {
-    #[doc = "Bit 20 - An edge on this signal shifts the phase of the output by 1 cycle of the input clock This can be done at any time"]
+    #[doc = "Bit 20 - An edge on this signal shifts the phase of the output by 1 cycle of the input clock  
+ This can be done at any time"]
     #[inline(always)]
     pub fn nudge(&self) -> NUDGE_R {
         NUDGE_R::new(((self.bits >> 20) & 0x01) != 0)
     }
-    #[doc = "Bits 16:17 - This delays the enable signal by up to 3 cycles of the input clock This must be set before the clock is enabled to have any effect"]
+    #[doc = "Bits 16:17 - This delays the enable signal by up to 3 cycles of the input clock  
+ This must be set before the clock is enabled to have any effect"]
     #[inline(always)]
     pub fn phase(&self) -> PHASE_R {
         PHASE_R::new(((self.bits >> 16) & 0x03) as u8)
@@ -329,12 +336,14 @@ impl R {
     }
 }
 impl W {
-    #[doc = "Bit 20 - An edge on this signal shifts the phase of the output by 1 cycle of the input clock This can be done at any time"]
+    #[doc = "Bit 20 - An edge on this signal shifts the phase of the output by 1 cycle of the input clock  
+ This can be done at any time"]
     #[inline(always)]
     pub fn nudge(&mut self) -> NUDGE_W {
         NUDGE_W { w: self }
     }
-    #[doc = "Bits 16:17 - This delays the enable signal by up to 3 cycles of the input clock This must be set before the clock is enabled to have any effect"]
+    #[doc = "Bits 16:17 - This delays the enable signal by up to 3 cycles of the input clock  
+ This must be set before the clock is enabled to have any effect"]
     #[inline(always)]
     pub fn phase(&mut self) -> PHASE_W {
         PHASE_W { w: self }

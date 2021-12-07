@@ -39,6 +39,7 @@ impl From<crate::W<STREAM_ADDR_SPEC>> for W {
  Write the initial access address here before starting a streaming read."]
 pub struct STREAM_ADDR_R(crate::FieldReader<u32, u32>);
 impl STREAM_ADDR_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u32) -> Self {
         STREAM_ADDR_R(crate::FieldReader::new(bits))
     }
@@ -65,14 +66,18 @@ impl<'a> STREAM_ADDR_W<'a> {
     }
 }
 impl R {
-    #[doc = "Bits 2:31 - The address of the next word to be streamed from flash to the streaming FIFO. Increments automatically after each flash access. Write the initial access address here before starting a streaming read."]
+    #[doc = "Bits 2:31 - The address of the next word to be streamed from flash to the streaming FIFO.  
+ Increments automatically after each flash access.  
+ Write the initial access address here before starting a streaming read."]
     #[inline(always)]
     pub fn stream_addr(&self) -> STREAM_ADDR_R {
         STREAM_ADDR_R::new(((self.bits >> 2) & 0x3fff_ffff) as u32)
     }
 }
 impl W {
-    #[doc = "Bits 2:31 - The address of the next word to be streamed from flash to the streaming FIFO. Increments automatically after each flash access. Write the initial access address here before starting a streaming read."]
+    #[doc = "Bits 2:31 - The address of the next word to be streamed from flash to the streaming FIFO.  
+ Increments automatically after each flash access.  
+ Write the initial access address here before starting a streaming read."]
     #[inline(always)]
     pub fn stream_addr(&mut self) -> STREAM_ADDR_W {
         STREAM_ADDR_W { w: self }

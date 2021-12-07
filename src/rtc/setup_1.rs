@@ -37,6 +37,7 @@ impl From<crate::W<SETUP_1_SPEC>> for W {
 #[doc = "Field `DOTW` reader - Day of the week: 1-Monday...0-Sunday ISO 8601 mod 7"]
 pub struct DOTW_R(crate::FieldReader<u8, u8>);
 impl DOTW_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         DOTW_R(crate::FieldReader::new(bits))
     }
@@ -63,6 +64,7 @@ impl<'a> DOTW_W<'a> {
 #[doc = "Field `HOUR` reader - Hours"]
 pub struct HOUR_R(crate::FieldReader<u8, u8>);
 impl HOUR_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         HOUR_R(crate::FieldReader::new(bits))
     }
@@ -89,6 +91,7 @@ impl<'a> HOUR_W<'a> {
 #[doc = "Field `MIN` reader - Minutes"]
 pub struct MIN_R(crate::FieldReader<u8, u8>);
 impl MIN_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         MIN_R(crate::FieldReader::new(bits))
     }
@@ -115,6 +118,7 @@ impl<'a> MIN_W<'a> {
 #[doc = "Field `SEC` reader - Seconds"]
 pub struct SEC_R(crate::FieldReader<u8, u8>);
 impl SEC_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         SEC_R(crate::FieldReader::new(bits))
     }

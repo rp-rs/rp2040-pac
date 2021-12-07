@@ -37,6 +37,7 @@ impl From<crate::W<EP_CONTROL_SPEC>> for W {
 #[doc = "Field `ENABLE` reader - Enable this endpoint. The device will not reply to any packets for this endpoint if this bit is not set."]
 pub struct ENABLE_R(crate::FieldReader<bool, bool>);
 impl ENABLE_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         ENABLE_R(crate::FieldReader::new(bits))
     }
@@ -73,6 +74,7 @@ impl<'a> ENABLE_W<'a> {
 #[doc = "Field `DOUBLE_BUFFERED` reader - This endpoint is double buffered."]
 pub struct DOUBLE_BUFFERED_R(crate::FieldReader<bool, bool>);
 impl DOUBLE_BUFFERED_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         DOUBLE_BUFFERED_R(crate::FieldReader::new(bits))
     }
@@ -109,6 +111,7 @@ impl<'a> DOUBLE_BUFFERED_W<'a> {
 #[doc = "Field `INTERRUPT_PER_BUFF` reader - Trigger an interrupt each time a buffer is done."]
 pub struct INTERRUPT_PER_BUFF_R(crate::FieldReader<bool, bool>);
 impl INTERRUPT_PER_BUFF_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         INTERRUPT_PER_BUFF_R(crate::FieldReader::new(bits))
     }
@@ -145,6 +148,7 @@ impl<'a> INTERRUPT_PER_BUFF_W<'a> {
 #[doc = "Field `INTERRUPT_PER_DOUBLE_BUFF` reader - Trigger an interrupt each time both buffers are done. Only valid in double buffered mode."]
 pub struct INTERRUPT_PER_DOUBLE_BUFF_R(crate::FieldReader<bool, bool>);
 impl INTERRUPT_PER_DOUBLE_BUFF_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         INTERRUPT_PER_DOUBLE_BUFF_R(crate::FieldReader::new(bits))
     }
@@ -202,6 +206,7 @@ impl From<ENDPOINT_TYPE_A> for u8 {
 #[doc = "Field `ENDPOINT_TYPE` reader - "]
 pub struct ENDPOINT_TYPE_R(crate::FieldReader<u8, ENDPOINT_TYPE_A>);
 impl ENDPOINT_TYPE_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         ENDPOINT_TYPE_R(crate::FieldReader::new(bits))
     }
@@ -284,6 +289,7 @@ impl<'a> ENDPOINT_TYPE_W<'a> {
 #[doc = "Field `INTERRUPT_ON_STALL` reader - Trigger an interrupt if a STALL is sent. Intended for debug only."]
 pub struct INTERRUPT_ON_STALL_R(crate::FieldReader<bool, bool>);
 impl INTERRUPT_ON_STALL_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         INTERRUPT_ON_STALL_R(crate::FieldReader::new(bits))
     }
@@ -320,6 +326,7 @@ impl<'a> INTERRUPT_ON_STALL_W<'a> {
 #[doc = "Field `INTERRUPT_ON_NAK` reader - Trigger an interrupt if a NAK is sent. Intended for debug only."]
 pub struct INTERRUPT_ON_NAK_R(crate::FieldReader<bool, bool>);
 impl INTERRUPT_ON_NAK_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         INTERRUPT_ON_NAK_R(crate::FieldReader::new(bits))
     }
@@ -356,6 +363,7 @@ impl<'a> INTERRUPT_ON_NAK_W<'a> {
 #[doc = "Field `BUFFER_ADDRESS` reader - 64 byte aligned buffer address for this EP (bits 0-5 are ignored). Relative to the start of the DPRAM."]
 pub struct BUFFER_ADDRESS_R(crate::FieldReader<u16, u16>);
 impl BUFFER_ADDRESS_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u16) -> Self {
         BUFFER_ADDRESS_R(crate::FieldReader::new(bits))
     }

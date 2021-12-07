@@ -16,6 +16,7 @@ impl From<crate::R<INTR_SPEC>> for R {
 #[doc = "Field `CLK_SYS_RESUS` reader - "]
 pub struct CLK_SYS_RESUS_R(crate::FieldReader<bool, bool>);
 impl CLK_SYS_RESUS_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         CLK_SYS_RESUS_R(crate::FieldReader::new(bits))
     }

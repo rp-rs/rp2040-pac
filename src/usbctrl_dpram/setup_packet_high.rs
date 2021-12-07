@@ -37,6 +37,7 @@ impl From<crate::W<SETUP_PACKET_HIGH_SPEC>> for W {
 #[doc = "Field `WLENGTH` reader - "]
 pub struct WLENGTH_R(crate::FieldReader<u16, u16>);
 impl WLENGTH_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u16) -> Self {
         WLENGTH_R(crate::FieldReader::new(bits))
     }
@@ -63,6 +64,7 @@ impl<'a> WLENGTH_W<'a> {
 #[doc = "Field `WINDEX` reader - "]
 pub struct WINDEX_R(crate::FieldReader<u16, u16>);
 impl WINDEX_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u16) -> Self {
         WINDEX_R(crate::FieldReader::new(bits))
     }

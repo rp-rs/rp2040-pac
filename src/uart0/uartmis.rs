@@ -16,6 +16,7 @@ impl From<crate::R<UARTMIS_SPEC>> for R {
 #[doc = "Field `OEMIS` reader - Overrun error masked interrupt status. Returns the masked interrupt state of the UARTOEINTR interrupt."]
 pub struct OEMIS_R(crate::FieldReader<bool, bool>);
 impl OEMIS_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         OEMIS_R(crate::FieldReader::new(bits))
     }
@@ -30,6 +31,7 @@ impl core::ops::Deref for OEMIS_R {
 #[doc = "Field `BEMIS` reader - Break error masked interrupt status. Returns the masked interrupt state of the UARTBEINTR interrupt."]
 pub struct BEMIS_R(crate::FieldReader<bool, bool>);
 impl BEMIS_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         BEMIS_R(crate::FieldReader::new(bits))
     }
@@ -44,6 +46,7 @@ impl core::ops::Deref for BEMIS_R {
 #[doc = "Field `PEMIS` reader - Parity error masked interrupt status. Returns the masked interrupt state of the UARTPEINTR interrupt."]
 pub struct PEMIS_R(crate::FieldReader<bool, bool>);
 impl PEMIS_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         PEMIS_R(crate::FieldReader::new(bits))
     }
@@ -58,6 +61,7 @@ impl core::ops::Deref for PEMIS_R {
 #[doc = "Field `FEMIS` reader - Framing error masked interrupt status. Returns the masked interrupt state of the UARTFEINTR interrupt."]
 pub struct FEMIS_R(crate::FieldReader<bool, bool>);
 impl FEMIS_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         FEMIS_R(crate::FieldReader::new(bits))
     }
@@ -72,6 +76,7 @@ impl core::ops::Deref for FEMIS_R {
 #[doc = "Field `RTMIS` reader - Receive timeout masked interrupt status. Returns the masked interrupt state of the UARTRTINTR interrupt."]
 pub struct RTMIS_R(crate::FieldReader<bool, bool>);
 impl RTMIS_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         RTMIS_R(crate::FieldReader::new(bits))
     }
@@ -86,6 +91,7 @@ impl core::ops::Deref for RTMIS_R {
 #[doc = "Field `TXMIS` reader - Transmit masked interrupt status. Returns the masked interrupt state of the UARTTXINTR interrupt."]
 pub struct TXMIS_R(crate::FieldReader<bool, bool>);
 impl TXMIS_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         TXMIS_R(crate::FieldReader::new(bits))
     }
@@ -100,6 +106,7 @@ impl core::ops::Deref for TXMIS_R {
 #[doc = "Field `RXMIS` reader - Receive masked interrupt status. Returns the masked interrupt state of the UARTRXINTR interrupt."]
 pub struct RXMIS_R(crate::FieldReader<bool, bool>);
 impl RXMIS_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         RXMIS_R(crate::FieldReader::new(bits))
     }
@@ -114,6 +121,7 @@ impl core::ops::Deref for RXMIS_R {
 #[doc = "Field `DSRMMIS` reader - nUARTDSR modem masked interrupt status. Returns the masked interrupt state of the UARTDSRINTR interrupt."]
 pub struct DSRMMIS_R(crate::FieldReader<bool, bool>);
 impl DSRMMIS_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         DSRMMIS_R(crate::FieldReader::new(bits))
     }
@@ -128,6 +136,7 @@ impl core::ops::Deref for DSRMMIS_R {
 #[doc = "Field `DCDMMIS` reader - nUARTDCD modem masked interrupt status. Returns the masked interrupt state of the UARTDCDINTR interrupt."]
 pub struct DCDMMIS_R(crate::FieldReader<bool, bool>);
 impl DCDMMIS_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         DCDMMIS_R(crate::FieldReader::new(bits))
     }
@@ -142,6 +151,7 @@ impl core::ops::Deref for DCDMMIS_R {
 #[doc = "Field `CTSMMIS` reader - nUARTCTS modem masked interrupt status. Returns the masked interrupt state of the UARTCTSINTR interrupt."]
 pub struct CTSMMIS_R(crate::FieldReader<bool, bool>);
 impl CTSMMIS_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         CTSMMIS_R(crate::FieldReader::new(bits))
     }
@@ -156,6 +166,7 @@ impl core::ops::Deref for CTSMMIS_R {
 #[doc = "Field `RIMMIS` reader - nUARTRI modem masked interrupt status. Returns the masked interrupt state of the UARTRIINTR interrupt."]
 pub struct RIMMIS_R(crate::FieldReader<bool, bool>);
 impl RIMMIS_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         RIMMIS_R(crate::FieldReader::new(bits))
     }

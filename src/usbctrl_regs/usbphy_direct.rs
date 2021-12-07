@@ -37,6 +37,7 @@ impl From<crate::W<USBPHY_DIRECT_SPEC>> for W {
 #[doc = "Field `DM_OVV` reader - DM over voltage"]
 pub struct DM_OVV_R(crate::FieldReader<bool, bool>);
 impl DM_OVV_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         DM_OVV_R(crate::FieldReader::new(bits))
     }
@@ -51,6 +52,7 @@ impl core::ops::Deref for DM_OVV_R {
 #[doc = "Field `DP_OVV` reader - DP over voltage"]
 pub struct DP_OVV_R(crate::FieldReader<bool, bool>);
 impl DP_OVV_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         DP_OVV_R(crate::FieldReader::new(bits))
     }
@@ -65,6 +67,7 @@ impl core::ops::Deref for DP_OVV_R {
 #[doc = "Field `DM_OVCN` reader - DM overcurrent"]
 pub struct DM_OVCN_R(crate::FieldReader<bool, bool>);
 impl DM_OVCN_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         DM_OVCN_R(crate::FieldReader::new(bits))
     }
@@ -79,6 +82,7 @@ impl core::ops::Deref for DM_OVCN_R {
 #[doc = "Field `DP_OVCN` reader - DP overcurrent"]
 pub struct DP_OVCN_R(crate::FieldReader<bool, bool>);
 impl DP_OVCN_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         DP_OVCN_R(crate::FieldReader::new(bits))
     }
@@ -93,6 +97,7 @@ impl core::ops::Deref for DP_OVCN_R {
 #[doc = "Field `RX_DM` reader - DPM pin state"]
 pub struct RX_DM_R(crate::FieldReader<bool, bool>);
 impl RX_DM_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         RX_DM_R(crate::FieldReader::new(bits))
     }
@@ -107,6 +112,7 @@ impl core::ops::Deref for RX_DM_R {
 #[doc = "Field `RX_DP` reader - DPP pin state"]
 pub struct RX_DP_R(crate::FieldReader<bool, bool>);
 impl RX_DP_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         RX_DP_R(crate::FieldReader::new(bits))
     }
@@ -121,6 +127,7 @@ impl core::ops::Deref for RX_DP_R {
 #[doc = "Field `RX_DD` reader - Differential RX"]
 pub struct RX_DD_R(crate::FieldReader<bool, bool>);
 impl RX_DD_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         RX_DD_R(crate::FieldReader::new(bits))
     }
@@ -136,6 +143,7 @@ impl core::ops::Deref for RX_DD_R {
  TX_DIFFMODE=1: Differential drive mode (TX_DM, TX_DM_OE ignored)"]
 pub struct TX_DIFFMODE_R(crate::FieldReader<bool, bool>);
 impl TX_DIFFMODE_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         TX_DIFFMODE_R(crate::FieldReader::new(bits))
     }
@@ -174,6 +182,7 @@ impl<'a> TX_DIFFMODE_W<'a> {
  TX_FSSLEW=1: Full speed slew rate"]
 pub struct TX_FSSLEW_R(crate::FieldReader<bool, bool>);
 impl TX_FSSLEW_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         TX_FSSLEW_R(crate::FieldReader::new(bits))
     }
@@ -211,6 +220,7 @@ impl<'a> TX_FSSLEW_W<'a> {
 #[doc = "Field `TX_PD` reader - TX power down override (if override enable is set). 1 = powered down."]
 pub struct TX_PD_R(crate::FieldReader<bool, bool>);
 impl TX_PD_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         TX_PD_R(crate::FieldReader::new(bits))
     }
@@ -247,6 +257,7 @@ impl<'a> TX_PD_W<'a> {
 #[doc = "Field `RX_PD` reader - RX power down override (if override enable is set). 1 = powered down."]
 pub struct RX_PD_R(crate::FieldReader<bool, bool>);
 impl RX_PD_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         RX_PD_R(crate::FieldReader::new(bits))
     }
@@ -284,6 +295,7 @@ impl<'a> RX_PD_W<'a> {
  TX_DIFFMODE=0, Drives DPM only. TX_DM_OE=1 to enable drive. DPM=TX_DM"]
 pub struct TX_DM_R(crate::FieldReader<bool, bool>);
 impl TX_DM_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         TX_DM_R(crate::FieldReader::new(bits))
     }
@@ -322,6 +334,7 @@ impl<'a> TX_DM_W<'a> {
  If TX_DIFFMODE=0, Drives DPP only. TX_DP_OE=1 to enable drive. DPP=TX_DP"]
 pub struct TX_DP_R(crate::FieldReader<bool, bool>);
 impl TX_DP_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         TX_DP_R(crate::FieldReader::new(bits))
     }
@@ -360,6 +373,7 @@ impl<'a> TX_DP_W<'a> {
  If TX_DIFFMODE=0, OE for DPM only. 0 - DPM in Hi-Z state; 1 - DPM driving"]
 pub struct TX_DM_OE_R(crate::FieldReader<bool, bool>);
 impl TX_DM_OE_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         TX_DM_OE_R(crate::FieldReader::new(bits))
     }
@@ -398,6 +412,7 @@ impl<'a> TX_DM_OE_W<'a> {
  If TX_DIFFMODE=0, OE for DPP only. 0 - DPP in Hi-Z state; 1 - DPP driving"]
 pub struct TX_DP_OE_R(crate::FieldReader<bool, bool>);
 impl TX_DP_OE_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         TX_DP_OE_R(crate::FieldReader::new(bits))
     }
@@ -435,6 +450,7 @@ impl<'a> TX_DP_OE_W<'a> {
 #[doc = "Field `DM_PULLDN_EN` reader - DM pull down enable"]
 pub struct DM_PULLDN_EN_R(crate::FieldReader<bool, bool>);
 impl DM_PULLDN_EN_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         DM_PULLDN_EN_R(crate::FieldReader::new(bits))
     }
@@ -471,6 +487,7 @@ impl<'a> DM_PULLDN_EN_W<'a> {
 #[doc = "Field `DM_PULLUP_EN` reader - DM pull up enable"]
 pub struct DM_PULLUP_EN_R(crate::FieldReader<bool, bool>);
 impl DM_PULLUP_EN_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         DM_PULLUP_EN_R(crate::FieldReader::new(bits))
     }
@@ -507,6 +524,7 @@ impl<'a> DM_PULLUP_EN_W<'a> {
 #[doc = "Field `DM_PULLUP_HISEL` reader - Enable the second DM pull up resistor. 0 - Pull = Rpu2; 1 - Pull = Rpu1 + Rpu2"]
 pub struct DM_PULLUP_HISEL_R(crate::FieldReader<bool, bool>);
 impl DM_PULLUP_HISEL_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         DM_PULLUP_HISEL_R(crate::FieldReader::new(bits))
     }
@@ -543,6 +561,7 @@ impl<'a> DM_PULLUP_HISEL_W<'a> {
 #[doc = "Field `DP_PULLDN_EN` reader - DP pull down enable"]
 pub struct DP_PULLDN_EN_R(crate::FieldReader<bool, bool>);
 impl DP_PULLDN_EN_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         DP_PULLDN_EN_R(crate::FieldReader::new(bits))
     }
@@ -579,6 +598,7 @@ impl<'a> DP_PULLDN_EN_W<'a> {
 #[doc = "Field `DP_PULLUP_EN` reader - DP pull up enable"]
 pub struct DP_PULLUP_EN_R(crate::FieldReader<bool, bool>);
 impl DP_PULLUP_EN_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         DP_PULLUP_EN_R(crate::FieldReader::new(bits))
     }
@@ -615,6 +635,7 @@ impl<'a> DP_PULLUP_EN_W<'a> {
 #[doc = "Field `DP_PULLUP_HISEL` reader - Enable the second DP pull up resistor. 0 - Pull = Rpu2; 1 - Pull = Rpu1 + Rpu2"]
 pub struct DP_PULLUP_HISEL_R(crate::FieldReader<bool, bool>);
 impl DP_PULLUP_HISEL_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         DP_PULLUP_HISEL_R(crate::FieldReader::new(bits))
     }
@@ -684,12 +705,14 @@ impl R {
     pub fn rx_dd(&self) -> RX_DD_R {
         RX_DD_R::new(((self.bits >> 16) & 0x01) != 0)
     }
-    #[doc = "Bit 15 - TX_DIFFMODE=0: Single ended mode TX_DIFFMODE=1: Differential drive mode (TX_DM, TX_DM_OE ignored)"]
+    #[doc = "Bit 15 - TX_DIFFMODE=0: Single ended mode  
+ TX_DIFFMODE=1: Differential drive mode (TX_DM, TX_DM_OE ignored)"]
     #[inline(always)]
     pub fn tx_diffmode(&self) -> TX_DIFFMODE_R {
         TX_DIFFMODE_R::new(((self.bits >> 15) & 0x01) != 0)
     }
-    #[doc = "Bit 14 - TX_FSSLEW=0: Low speed slew rate TX_FSSLEW=1: Full speed slew rate"]
+    #[doc = "Bit 14 - TX_FSSLEW=0: Low speed slew rate  
+ TX_FSSLEW=1: Full speed slew rate"]
     #[inline(always)]
     pub fn tx_fsslew(&self) -> TX_FSSLEW_R {
         TX_FSSLEW_R::new(((self.bits >> 14) & 0x01) != 0)
@@ -704,22 +727,26 @@ impl R {
     pub fn rx_pd(&self) -> RX_PD_R {
         RX_PD_R::new(((self.bits >> 12) & 0x01) != 0)
     }
-    #[doc = "Bit 11 - Output data. TX_DIFFMODE=1, Ignored TX_DIFFMODE=0, Drives DPM only. TX_DM_OE=1 to enable drive. DPM=TX_DM"]
+    #[doc = "Bit 11 - Output data. TX_DIFFMODE=1, Ignored  
+ TX_DIFFMODE=0, Drives DPM only. TX_DM_OE=1 to enable drive. DPM=TX_DM"]
     #[inline(always)]
     pub fn tx_dm(&self) -> TX_DM_R {
         TX_DM_R::new(((self.bits >> 11) & 0x01) != 0)
     }
-    #[doc = "Bit 10 - Output data. If TX_DIFFMODE=1, Drives DPP/DPM diff pair. TX_DP_OE=1 to enable drive. DPP=TX_DP, DPM=~TX_DP If TX_DIFFMODE=0, Drives DPP only. TX_DP_OE=1 to enable drive. DPP=TX_DP"]
+    #[doc = "Bit 10 - Output data. If TX_DIFFMODE=1, Drives DPP/DPM diff pair. TX_DP_OE=1 to enable drive. DPP=TX_DP, DPM=~TX_DP  
+ If TX_DIFFMODE=0, Drives DPP only. TX_DP_OE=1 to enable drive. DPP=TX_DP"]
     #[inline(always)]
     pub fn tx_dp(&self) -> TX_DP_R {
         TX_DP_R::new(((self.bits >> 10) & 0x01) != 0)
     }
-    #[doc = "Bit 9 - Output enable. If TX_DIFFMODE=1, Ignored. If TX_DIFFMODE=0, OE for DPM only. 0 - DPM in Hi-Z state; 1 - DPM driving"]
+    #[doc = "Bit 9 - Output enable. If TX_DIFFMODE=1, Ignored.  
+ If TX_DIFFMODE=0, OE for DPM only. 0 - DPM in Hi-Z state; 1 - DPM driving"]
     #[inline(always)]
     pub fn tx_dm_oe(&self) -> TX_DM_OE_R {
         TX_DM_OE_R::new(((self.bits >> 9) & 0x01) != 0)
     }
-    #[doc = "Bit 8 - Output enable. If TX_DIFFMODE=1, OE for DPP/DPM diff pair. 0 - DPP/DPM in Hi-Z state; 1 - DPP/DPM driving If TX_DIFFMODE=0, OE for DPP only. 0 - DPP in Hi-Z state; 1 - DPP driving"]
+    #[doc = "Bit 8 - Output enable. If TX_DIFFMODE=1, OE for DPP/DPM diff pair. 0 - DPP/DPM in Hi-Z state; 1 - DPP/DPM driving  
+ If TX_DIFFMODE=0, OE for DPP only. 0 - DPP in Hi-Z state; 1 - DPP driving"]
     #[inline(always)]
     pub fn tx_dp_oe(&self) -> TX_DP_OE_R {
         TX_DP_OE_R::new(((self.bits >> 8) & 0x01) != 0)
@@ -756,12 +783,14 @@ impl R {
     }
 }
 impl W {
-    #[doc = "Bit 15 - TX_DIFFMODE=0: Single ended mode TX_DIFFMODE=1: Differential drive mode (TX_DM, TX_DM_OE ignored)"]
+    #[doc = "Bit 15 - TX_DIFFMODE=0: Single ended mode  
+ TX_DIFFMODE=1: Differential drive mode (TX_DM, TX_DM_OE ignored)"]
     #[inline(always)]
     pub fn tx_diffmode(&mut self) -> TX_DIFFMODE_W {
         TX_DIFFMODE_W { w: self }
     }
-    #[doc = "Bit 14 - TX_FSSLEW=0: Low speed slew rate TX_FSSLEW=1: Full speed slew rate"]
+    #[doc = "Bit 14 - TX_FSSLEW=0: Low speed slew rate  
+ TX_FSSLEW=1: Full speed slew rate"]
     #[inline(always)]
     pub fn tx_fsslew(&mut self) -> TX_FSSLEW_W {
         TX_FSSLEW_W { w: self }
@@ -776,22 +805,26 @@ impl W {
     pub fn rx_pd(&mut self) -> RX_PD_W {
         RX_PD_W { w: self }
     }
-    #[doc = "Bit 11 - Output data. TX_DIFFMODE=1, Ignored TX_DIFFMODE=0, Drives DPM only. TX_DM_OE=1 to enable drive. DPM=TX_DM"]
+    #[doc = "Bit 11 - Output data. TX_DIFFMODE=1, Ignored  
+ TX_DIFFMODE=0, Drives DPM only. TX_DM_OE=1 to enable drive. DPM=TX_DM"]
     #[inline(always)]
     pub fn tx_dm(&mut self) -> TX_DM_W {
         TX_DM_W { w: self }
     }
-    #[doc = "Bit 10 - Output data. If TX_DIFFMODE=1, Drives DPP/DPM diff pair. TX_DP_OE=1 to enable drive. DPP=TX_DP, DPM=~TX_DP If TX_DIFFMODE=0, Drives DPP only. TX_DP_OE=1 to enable drive. DPP=TX_DP"]
+    #[doc = "Bit 10 - Output data. If TX_DIFFMODE=1, Drives DPP/DPM diff pair. TX_DP_OE=1 to enable drive. DPP=TX_DP, DPM=~TX_DP  
+ If TX_DIFFMODE=0, Drives DPP only. TX_DP_OE=1 to enable drive. DPP=TX_DP"]
     #[inline(always)]
     pub fn tx_dp(&mut self) -> TX_DP_W {
         TX_DP_W { w: self }
     }
-    #[doc = "Bit 9 - Output enable. If TX_DIFFMODE=1, Ignored. If TX_DIFFMODE=0, OE for DPM only. 0 - DPM in Hi-Z state; 1 - DPM driving"]
+    #[doc = "Bit 9 - Output enable. If TX_DIFFMODE=1, Ignored.  
+ If TX_DIFFMODE=0, OE for DPM only. 0 - DPM in Hi-Z state; 1 - DPM driving"]
     #[inline(always)]
     pub fn tx_dm_oe(&mut self) -> TX_DM_OE_W {
         TX_DM_OE_W { w: self }
     }
-    #[doc = "Bit 8 - Output enable. If TX_DIFFMODE=1, OE for DPP/DPM diff pair. 0 - DPP/DPM in Hi-Z state; 1 - DPP/DPM driving If TX_DIFFMODE=0, OE for DPP only. 0 - DPP in Hi-Z state; 1 - DPP driving"]
+    #[doc = "Bit 8 - Output enable. If TX_DIFFMODE=1, OE for DPP/DPM diff pair. 0 - DPP/DPM in Hi-Z state; 1 - DPP/DPM driving  
+ If TX_DIFFMODE=0, OE for DPP only. 0 - DPP in Hi-Z state; 1 - DPP driving"]
     #[inline(always)]
     pub fn tx_dp_oe(&mut self) -> TX_DP_OE_W {
         TX_DP_OE_W { w: self }

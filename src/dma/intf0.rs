@@ -37,6 +37,7 @@ impl From<crate::W<INTF0_SPEC>> for W {
 #[doc = "Field `INTF0` reader - Write 1s to force the corresponding bits in INTE0. The interrupt remains asserted until INTF0 is cleared."]
 pub struct INTF0_R(crate::FieldReader<u16, u16>);
 impl INTF0_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u16) -> Self {
         INTF0_R(crate::FieldReader::new(bits))
     }

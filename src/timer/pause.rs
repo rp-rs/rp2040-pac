@@ -37,6 +37,7 @@ impl From<crate::W<PAUSE_SPEC>> for W {
 #[doc = "Field `PAUSE` reader - "]
 pub struct PAUSE_R(crate::FieldReader<bool, bool>);
 impl PAUSE_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         PAUSE_R(crate::FieldReader::new(bits))
     }

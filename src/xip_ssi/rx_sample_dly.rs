@@ -37,6 +37,7 @@ impl From<crate::W<RX_SAMPLE_DLY_SPEC>> for W {
 #[doc = "Field `RSD` reader - RXD sample delay (in SCLK cycles)"]
 pub struct RSD_R(crate::FieldReader<u8, u8>);
 impl RSD_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         RSD_R(crate::FieldReader::new(bits))
     }

@@ -37,6 +37,7 @@ impl From<crate::W<ADDR_ENDP_SPEC>> for W {
 #[doc = "Field `ENDPOINT` reader - Device endpoint to send data to. Only valid for HOST mode."]
 pub struct ENDPOINT_R(crate::FieldReader<u8, u8>);
 impl ENDPOINT_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         ENDPOINT_R(crate::FieldReader::new(bits))
     }
@@ -63,6 +64,7 @@ impl<'a> ENDPOINT_W<'a> {
 #[doc = "Field `ADDRESS` reader - In device mode, the address that the device should respond to. Set in response to a SET_ADDR setup packet from the host. In host mode set to the address of the device to communicate with."]
 pub struct ADDRESS_R(crate::FieldReader<u8, u8>);
 impl ADDRESS_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         ADDRESS_R(crate::FieldReader::new(bits))
     }

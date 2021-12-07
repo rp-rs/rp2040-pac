@@ -37,6 +37,7 @@ impl From<crate::W<FCS_SPEC>> for W {
 #[doc = "Field `THRESH` reader - DREQ/IRQ asserted when level >= threshold"]
 pub struct THRESH_R(crate::FieldReader<u8, u8>);
 impl THRESH_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         THRESH_R(crate::FieldReader::new(bits))
     }
@@ -63,6 +64,7 @@ impl<'a> THRESH_W<'a> {
 #[doc = "Field `LEVEL` reader - The number of conversion results currently waiting in the FIFO"]
 pub struct LEVEL_R(crate::FieldReader<u8, u8>);
 impl LEVEL_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         LEVEL_R(crate::FieldReader::new(bits))
     }
@@ -77,6 +79,7 @@ impl core::ops::Deref for LEVEL_R {
 #[doc = "Field `OVER` reader - 1 if the FIFO has been overflowed. Write 1 to clear."]
 pub struct OVER_R(crate::FieldReader<bool, bool>);
 impl OVER_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         OVER_R(crate::FieldReader::new(bits))
     }
@@ -113,6 +116,7 @@ impl<'a> OVER_W<'a> {
 #[doc = "Field `UNDER` reader - 1 if the FIFO has been underflowed. Write 1 to clear."]
 pub struct UNDER_R(crate::FieldReader<bool, bool>);
 impl UNDER_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         UNDER_R(crate::FieldReader::new(bits))
     }
@@ -149,6 +153,7 @@ impl<'a> UNDER_W<'a> {
 #[doc = "Field `FULL` reader - "]
 pub struct FULL_R(crate::FieldReader<bool, bool>);
 impl FULL_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         FULL_R(crate::FieldReader::new(bits))
     }
@@ -163,6 +168,7 @@ impl core::ops::Deref for FULL_R {
 #[doc = "Field `EMPTY` reader - "]
 pub struct EMPTY_R(crate::FieldReader<bool, bool>);
 impl EMPTY_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         EMPTY_R(crate::FieldReader::new(bits))
     }
@@ -177,6 +183,7 @@ impl core::ops::Deref for EMPTY_R {
 #[doc = "Field `DREQ_EN` reader - If 1: assert DMA requests when FIFO contains data"]
 pub struct DREQ_EN_R(crate::FieldReader<bool, bool>);
 impl DREQ_EN_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         DREQ_EN_R(crate::FieldReader::new(bits))
     }
@@ -213,6 +220,7 @@ impl<'a> DREQ_EN_W<'a> {
 #[doc = "Field `ERR` reader - If 1: conversion error bit appears in the FIFO alongside the result"]
 pub struct ERR_R(crate::FieldReader<bool, bool>);
 impl ERR_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         ERR_R(crate::FieldReader::new(bits))
     }
@@ -249,6 +257,7 @@ impl<'a> ERR_W<'a> {
 #[doc = "Field `SHIFT` reader - If 1: FIFO results are right-shifted to be one byte in size. Enables DMA to byte buffers."]
 pub struct SHIFT_R(crate::FieldReader<bool, bool>);
 impl SHIFT_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         SHIFT_R(crate::FieldReader::new(bits))
     }
@@ -285,6 +294,7 @@ impl<'a> SHIFT_W<'a> {
 #[doc = "Field `EN` reader - If 1: write result to the FIFO after each conversion."]
 pub struct EN_R(crate::FieldReader<bool, bool>);
 impl EN_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         EN_R(crate::FieldReader::new(bits))
     }

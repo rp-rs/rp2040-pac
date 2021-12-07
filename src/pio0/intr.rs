@@ -16,6 +16,7 @@ impl From<crate::R<INTR_SPEC>> for R {
 #[doc = "Field `SM3` reader - "]
 pub struct SM3_R(crate::FieldReader<bool, bool>);
 impl SM3_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         SM3_R(crate::FieldReader::new(bits))
     }
@@ -30,6 +31,7 @@ impl core::ops::Deref for SM3_R {
 #[doc = "Field `SM2` reader - "]
 pub struct SM2_R(crate::FieldReader<bool, bool>);
 impl SM2_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         SM2_R(crate::FieldReader::new(bits))
     }
@@ -44,6 +46,7 @@ impl core::ops::Deref for SM2_R {
 #[doc = "Field `SM1` reader - "]
 pub struct SM1_R(crate::FieldReader<bool, bool>);
 impl SM1_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         SM1_R(crate::FieldReader::new(bits))
     }
@@ -58,6 +61,7 @@ impl core::ops::Deref for SM1_R {
 #[doc = "Field `SM0` reader - "]
 pub struct SM0_R(crate::FieldReader<bool, bool>);
 impl SM0_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         SM0_R(crate::FieldReader::new(bits))
     }
@@ -72,6 +76,7 @@ impl core::ops::Deref for SM0_R {
 #[doc = "Field `SM3_TXNFULL` reader - "]
 pub struct SM3_TXNFULL_R(crate::FieldReader<bool, bool>);
 impl SM3_TXNFULL_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         SM3_TXNFULL_R(crate::FieldReader::new(bits))
     }
@@ -86,6 +91,7 @@ impl core::ops::Deref for SM3_TXNFULL_R {
 #[doc = "Field `SM2_TXNFULL` reader - "]
 pub struct SM2_TXNFULL_R(crate::FieldReader<bool, bool>);
 impl SM2_TXNFULL_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         SM2_TXNFULL_R(crate::FieldReader::new(bits))
     }
@@ -100,6 +106,7 @@ impl core::ops::Deref for SM2_TXNFULL_R {
 #[doc = "Field `SM1_TXNFULL` reader - "]
 pub struct SM1_TXNFULL_R(crate::FieldReader<bool, bool>);
 impl SM1_TXNFULL_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         SM1_TXNFULL_R(crate::FieldReader::new(bits))
     }
@@ -114,6 +121,7 @@ impl core::ops::Deref for SM1_TXNFULL_R {
 #[doc = "Field `SM0_TXNFULL` reader - "]
 pub struct SM0_TXNFULL_R(crate::FieldReader<bool, bool>);
 impl SM0_TXNFULL_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         SM0_TXNFULL_R(crate::FieldReader::new(bits))
     }
@@ -128,6 +136,7 @@ impl core::ops::Deref for SM0_TXNFULL_R {
 #[doc = "Field `SM3_RXNEMPTY` reader - "]
 pub struct SM3_RXNEMPTY_R(crate::FieldReader<bool, bool>);
 impl SM3_RXNEMPTY_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         SM3_RXNEMPTY_R(crate::FieldReader::new(bits))
     }
@@ -142,6 +151,7 @@ impl core::ops::Deref for SM3_RXNEMPTY_R {
 #[doc = "Field `SM2_RXNEMPTY` reader - "]
 pub struct SM2_RXNEMPTY_R(crate::FieldReader<bool, bool>);
 impl SM2_RXNEMPTY_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         SM2_RXNEMPTY_R(crate::FieldReader::new(bits))
     }
@@ -156,6 +166,7 @@ impl core::ops::Deref for SM2_RXNEMPTY_R {
 #[doc = "Field `SM1_RXNEMPTY` reader - "]
 pub struct SM1_RXNEMPTY_R(crate::FieldReader<bool, bool>);
 impl SM1_RXNEMPTY_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         SM1_RXNEMPTY_R(crate::FieldReader::new(bits))
     }
@@ -170,6 +181,7 @@ impl core::ops::Deref for SM1_RXNEMPTY_R {
 #[doc = "Field `SM0_RXNEMPTY` reader - "]
 pub struct SM0_RXNEMPTY_R(crate::FieldReader<bool, bool>);
 impl SM0_RXNEMPTY_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         SM0_RXNEMPTY_R(crate::FieldReader::new(bits))
     }

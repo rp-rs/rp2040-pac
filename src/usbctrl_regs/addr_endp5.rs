@@ -37,6 +37,7 @@ impl From<crate::W<ADDR_ENDP5_SPEC>> for W {
 #[doc = "Field `INTEP_PREAMBLE` reader - Interrupt EP requires preamble (is a low speed device on a full speed hub)"]
 pub struct INTEP_PREAMBLE_R(crate::FieldReader<bool, bool>);
 impl INTEP_PREAMBLE_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         INTEP_PREAMBLE_R(crate::FieldReader::new(bits))
     }
@@ -73,6 +74,7 @@ impl<'a> INTEP_PREAMBLE_W<'a> {
 #[doc = "Field `INTEP_DIR` reader - Direction of the interrupt endpoint. In=0, Out=1"]
 pub struct INTEP_DIR_R(crate::FieldReader<bool, bool>);
 impl INTEP_DIR_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         INTEP_DIR_R(crate::FieldReader::new(bits))
     }
@@ -109,6 +111,7 @@ impl<'a> INTEP_DIR_W<'a> {
 #[doc = "Field `ENDPOINT` reader - Endpoint number of the interrupt endpoint"]
 pub struct ENDPOINT_R(crate::FieldReader<u8, u8>);
 impl ENDPOINT_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         ENDPOINT_R(crate::FieldReader::new(bits))
     }
@@ -135,6 +138,7 @@ impl<'a> ENDPOINT_W<'a> {
 #[doc = "Field `ADDRESS` reader - Device address"]
 pub struct ADDRESS_R(crate::FieldReader<u8, u8>);
 impl ADDRESS_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         ADDRESS_R(crate::FieldReader::new(bits))
     }

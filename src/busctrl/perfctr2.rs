@@ -39,6 +39,7 @@ impl From<crate::W<PERFCTR2_SPEC>> for W {
  Write any value to clear. Select an event to count using PERFSEL2"]
 pub struct PERFCTR2_R(crate::FieldReader<u32, u32>);
 impl PERFCTR2_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u32) -> Self {
         PERFCTR2_R(crate::FieldReader::new(bits))
     }
@@ -65,14 +66,18 @@ impl<'a> PERFCTR2_W<'a> {
     }
 }
 impl R {
-    #[doc = "Bits 0:23 - Busfabric saturating performance counter 2 Count some event signal from the busfabric arbiters. Write any value to clear. Select an event to count using PERFSEL2"]
+    #[doc = "Bits 0:23 - Busfabric saturating performance counter 2  
+ Count some event signal from the busfabric arbiters.  
+ Write any value to clear. Select an event to count using PERFSEL2"]
     #[inline(always)]
     pub fn perfctr2(&self) -> PERFCTR2_R {
         PERFCTR2_R::new((self.bits & 0x00ff_ffff) as u32)
     }
 }
 impl W {
-    #[doc = "Bits 0:23 - Busfabric saturating performance counter 2 Count some event signal from the busfabric arbiters. Write any value to clear. Select an event to count using PERFSEL2"]
+    #[doc = "Bits 0:23 - Busfabric saturating performance counter 2  
+ Count some event signal from the busfabric arbiters.  
+ Write any value to clear. Select an event to count using PERFSEL2"]
     #[inline(always)]
     pub fn perfctr2(&mut self) -> PERFCTR2_W {
         PERFCTR2_W { w: self }

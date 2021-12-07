@@ -37,6 +37,7 @@ impl From<crate::W<SM_EXECCTRL_SPEC>> for W {
 #[doc = "Field `EXEC_STALLED` reader - If 1, an instruction written to SMx_INSTR is stalled, and latched by the state machine. Will clear to 0 once this instruction completes."]
 pub struct EXEC_STALLED_R(crate::FieldReader<bool, bool>);
 impl EXEC_STALLED_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         EXEC_STALLED_R(crate::FieldReader::new(bits))
     }
@@ -51,6 +52,7 @@ impl core::ops::Deref for EXEC_STALLED_R {
 #[doc = "Field `SIDE_EN` reader - If 1, the MSB of the Delay/Side-set instruction field is used as side-set enable, rather than a side-set data bit. This allows instructions to perform side-set optionally, rather than on every instruction, but the maximum possible side-set width is reduced from 5 to 4. Note that the value of PINCTRL_SIDESET_COUNT is inclusive of this enable bit."]
 pub struct SIDE_EN_R(crate::FieldReader<bool, bool>);
 impl SIDE_EN_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         SIDE_EN_R(crate::FieldReader::new(bits))
     }
@@ -87,6 +89,7 @@ impl<'a> SIDE_EN_W<'a> {
 #[doc = "Field `SIDE_PINDIR` reader - If 1, side-set data is asserted to pin directions, instead of pin values"]
 pub struct SIDE_PINDIR_R(crate::FieldReader<bool, bool>);
 impl SIDE_PINDIR_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         SIDE_PINDIR_R(crate::FieldReader::new(bits))
     }
@@ -123,6 +126,7 @@ impl<'a> SIDE_PINDIR_W<'a> {
 #[doc = "Field `JMP_PIN` reader - The GPIO number to use as condition for JMP PIN. Unaffected by input mapping."]
 pub struct JMP_PIN_R(crate::FieldReader<u8, u8>);
 impl JMP_PIN_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         JMP_PIN_R(crate::FieldReader::new(bits))
     }
@@ -149,6 +153,7 @@ impl<'a> JMP_PIN_W<'a> {
 #[doc = "Field `OUT_EN_SEL` reader - Which data bit to use for inline OUT enable"]
 pub struct OUT_EN_SEL_R(crate::FieldReader<u8, u8>);
 impl OUT_EN_SEL_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         OUT_EN_SEL_R(crate::FieldReader::new(bits))
     }
@@ -178,6 +183,7 @@ impl<'a> OUT_EN_SEL_W<'a> {
  due to the priority ordering of state machine pin writes (SM0 < SM1 < ...)"]
 pub struct INLINE_OUT_EN_R(crate::FieldReader<bool, bool>);
 impl INLINE_OUT_EN_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         INLINE_OUT_EN_R(crate::FieldReader::new(bits))
     }
@@ -217,6 +223,7 @@ impl<'a> INLINE_OUT_EN_W<'a> {
 #[doc = "Field `OUT_STICKY` reader - Continuously assert the most recent OUT/SET to the pins"]
 pub struct OUT_STICKY_R(crate::FieldReader<bool, bool>);
 impl OUT_STICKY_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         OUT_STICKY_R(crate::FieldReader::new(bits))
     }
@@ -254,6 +261,7 @@ impl<'a> OUT_STICKY_W<'a> {
  If the instruction is a jump, and the jump condition is true, the jump takes priority."]
 pub struct WRAP_TOP_R(crate::FieldReader<u8, u8>);
 impl WRAP_TOP_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         WRAP_TOP_R(crate::FieldReader::new(bits))
     }
@@ -281,6 +289,7 @@ impl<'a> WRAP_TOP_W<'a> {
 #[doc = "Field `WRAP_BOTTOM` reader - After reaching wrap_top, execution is wrapped to this address."]
 pub struct WRAP_BOTTOM_R(crate::FieldReader<u8, u8>);
 impl WRAP_BOTTOM_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         WRAP_BOTTOM_R(crate::FieldReader::new(bits))
     }
@@ -323,6 +332,7 @@ impl From<STATUS_SEL_A> for bool {
 #[doc = "Field `STATUS_SEL` reader - Comparison used for the MOV x, STATUS instruction."]
 pub struct STATUS_SEL_R(crate::FieldReader<bool, STATUS_SEL_A>);
 impl STATUS_SEL_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         STATUS_SEL_R(crate::FieldReader::new(bits))
     }
@@ -392,6 +402,7 @@ impl<'a> STATUS_SEL_W<'a> {
 #[doc = "Field `STATUS_N` reader - Comparison level for the MOV x, STATUS instruction"]
 pub struct STATUS_N_R(crate::FieldReader<u8, u8>);
 impl STATUS_N_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         STATUS_N_R(crate::FieldReader::new(bits))
     }
@@ -441,7 +452,10 @@ impl R {
     pub fn out_en_sel(&self) -> OUT_EN_SEL_R {
         OUT_EN_SEL_R::new(((self.bits >> 19) & 0x1f) as u8)
     }
-    #[doc = "Bit 18 - If 1, use a bit of OUT data as an auxiliary write enable When used in conjunction with OUT_STICKY, writes with an enable of 0 will deassert the latest pin write. This can create useful masking/override behaviour due to the priority ordering of state machine pin writes (SM0 < SM1 < ...)"]
+    #[doc = "Bit 18 - If 1, use a bit of OUT data as an auxiliary write enable  
+ When used in conjunction with OUT_STICKY, writes with an enable of 0 will  
+ deassert the latest pin write. This can create useful masking/override behaviour  
+ due to the priority ordering of state machine pin writes (SM0 < SM1 < ...)"]
     #[inline(always)]
     pub fn inline_out_en(&self) -> INLINE_OUT_EN_R {
         INLINE_OUT_EN_R::new(((self.bits >> 18) & 0x01) != 0)
@@ -451,7 +465,8 @@ impl R {
     pub fn out_sticky(&self) -> OUT_STICKY_R {
         OUT_STICKY_R::new(((self.bits >> 17) & 0x01) != 0)
     }
-    #[doc = "Bits 12:16 - After reaching this address, execution is wrapped to wrap_bottom. If the instruction is a jump, and the jump condition is true, the jump takes priority."]
+    #[doc = "Bits 12:16 - After reaching this address, execution is wrapped to wrap_bottom.  
+ If the instruction is a jump, and the jump condition is true, the jump takes priority."]
     #[inline(always)]
     pub fn wrap_top(&self) -> WRAP_TOP_R {
         WRAP_TOP_R::new(((self.bits >> 12) & 0x1f) as u8)
@@ -493,7 +508,10 @@ impl W {
     pub fn out_en_sel(&mut self) -> OUT_EN_SEL_W {
         OUT_EN_SEL_W { w: self }
     }
-    #[doc = "Bit 18 - If 1, use a bit of OUT data as an auxiliary write enable When used in conjunction with OUT_STICKY, writes with an enable of 0 will deassert the latest pin write. This can create useful masking/override behaviour due to the priority ordering of state machine pin writes (SM0 < SM1 < ...)"]
+    #[doc = "Bit 18 - If 1, use a bit of OUT data as an auxiliary write enable  
+ When used in conjunction with OUT_STICKY, writes with an enable of 0 will  
+ deassert the latest pin write. This can create useful masking/override behaviour  
+ due to the priority ordering of state machine pin writes (SM0 < SM1 < ...)"]
     #[inline(always)]
     pub fn inline_out_en(&mut self) -> INLINE_OUT_EN_W {
         INLINE_OUT_EN_W { w: self }
@@ -503,7 +521,8 @@ impl W {
     pub fn out_sticky(&mut self) -> OUT_STICKY_W {
         OUT_STICKY_W { w: self }
     }
-    #[doc = "Bits 12:16 - After reaching this address, execution is wrapped to wrap_bottom. If the instruction is a jump, and the jump condition is true, the jump takes priority."]
+    #[doc = "Bits 12:16 - After reaching this address, execution is wrapped to wrap_bottom.  
+ If the instruction is a jump, and the jump condition is true, the jump takes priority."]
     #[inline(always)]
     pub fn wrap_top(&mut self) -> WRAP_TOP_W {
         WRAP_TOP_W { w: self }

@@ -38,6 +38,7 @@ impl From<crate::W<IC_FS_SPKLEN_SPEC>> for W {
 register being set to 0. Writes at other times have no effect. The minimum valid value is 1; hardware prevents values less than this being written, and if attempted results in 1 being set. or more information, refer to 'Spike Suppression'."]
 pub struct IC_FS_SPKLEN_R(crate::FieldReader<u8, u8>);
 impl IC_FS_SPKLEN_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         IC_FS_SPKLEN_R(crate::FieldReader::new(bits))
     }

@@ -20,6 +20,7 @@ impl From<crate::R<IC_TX_ABRT_SOURCE_SPEC>> for R {
  Role of DW_apb_i2c: Master-Transmitter or Slave-Transmitter"]
 pub struct TX_FLUSH_CNT_R(crate::FieldReader<u16, u16>);
 impl TX_FLUSH_CNT_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u16) -> Self {
         TX_FLUSH_CNT_R(crate::FieldReader::new(bits))
     }
@@ -58,6 +59,7 @@ impl From<ABRT_USER_ABRT_A> for bool {
  Role of DW_apb_i2c: Master-Transmitter"]
 pub struct ABRT_USER_ABRT_R(crate::FieldReader<bool, ABRT_USER_ABRT_A>);
 impl ABRT_USER_ABRT_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         ABRT_USER_ABRT_R(crate::FieldReader::new(bits))
     }
@@ -114,6 +116,7 @@ impl From<ABRT_SLVRD_INTX_A> for bool {
  Role of DW_apb_i2c: Slave-Transmitter"]
 pub struct ABRT_SLVRD_INTX_R(crate::FieldReader<bool, ABRT_SLVRD_INTX_A>);
 impl ABRT_SLVRD_INTX_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         ABRT_SLVRD_INTX_R(crate::FieldReader::new(bits))
     }
@@ -172,6 +175,7 @@ is set at the same time. Note: Even though the slave never 'owns' the bus, somet
  Role of DW_apb_i2c: Slave-Transmitter"]
 pub struct ABRT_SLV_ARBLOST_R(crate::FieldReader<bool, ABRT_SLV_ARBLOST_A>);
 impl ABRT_SLV_ARBLOST_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         ABRT_SLV_ARBLOST_R(crate::FieldReader::new(bits))
     }
@@ -228,6 +232,7 @@ impl From<ABRT_SLVFLUSH_TXFIFO_A> for bool {
  Role of DW_apb_i2c: Slave-Transmitter"]
 pub struct ABRT_SLVFLUSH_TXFIFO_R(crate::FieldReader<bool, ABRT_SLVFLUSH_TXFIFO_A>);
 impl ABRT_SLVFLUSH_TXFIFO_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         ABRT_SLVFLUSH_TXFIFO_R(crate::FieldReader::new(bits))
     }
@@ -286,6 +291,7 @@ is also set, then the slave transmitter has lost arbitration.
  Role of DW_apb_i2c: Master-Transmitter or Slave-Transmitter"]
 pub struct ARB_LOST_R(crate::FieldReader<bool, ARB_LOST_A>);
 impl ARB_LOST_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         ARB_LOST_R(crate::FieldReader::new(bits))
     }
@@ -342,6 +348,7 @@ impl From<ABRT_MASTER_DIS_A> for bool {
  Role of DW_apb_i2c: Master-Transmitter or Master-Receiver"]
 pub struct ABRT_MASTER_DIS_R(crate::FieldReader<bool, ABRT_MASTER_DIS_A>);
 impl ABRT_MASTER_DIS_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         ABRT_MASTER_DIS_R(crate::FieldReader::new(bits))
     }
@@ -398,6 +405,7 @@ impl From<ABRT_10B_RD_NORSTRT_A> for bool {
  Role of DW_apb_i2c: Master-Receiver"]
 pub struct ABRT_10B_RD_NORSTRT_R(crate::FieldReader<bool, ABRT_10B_RD_NORSTRT_A>);
 impl ABRT_10B_RD_NORSTRT_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         ABRT_10B_RD_NORSTRT_R(crate::FieldReader::new(bits))
     }
@@ -454,6 +462,7 @@ impl From<ABRT_SBYTE_NORSTRT_A> for bool {
  Role of DW_apb_i2c: Master"]
 pub struct ABRT_SBYTE_NORSTRT_R(crate::FieldReader<bool, ABRT_SBYTE_NORSTRT_A>);
 impl ABRT_SBYTE_NORSTRT_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         ABRT_SBYTE_NORSTRT_R(crate::FieldReader::new(bits))
     }
@@ -510,6 +519,7 @@ impl From<ABRT_HS_NORSTRT_A> for bool {
  Role of DW_apb_i2c: Master-Transmitter or Master-Receiver"]
 pub struct ABRT_HS_NORSTRT_R(crate::FieldReader<bool, ABRT_HS_NORSTRT_A>);
 impl ABRT_HS_NORSTRT_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         ABRT_HS_NORSTRT_R(crate::FieldReader::new(bits))
     }
@@ -566,6 +576,7 @@ impl From<ABRT_SBYTE_ACKDET_A> for bool {
  Role of DW_apb_i2c: Master"]
 pub struct ABRT_SBYTE_ACKDET_R(crate::FieldReader<bool, ABRT_SBYTE_ACKDET_A>);
 impl ABRT_SBYTE_ACKDET_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         ABRT_SBYTE_ACKDET_R(crate::FieldReader::new(bits))
     }
@@ -622,6 +633,7 @@ impl From<ABRT_HS_ACKDET_A> for bool {
  Role of DW_apb_i2c: Master"]
 pub struct ABRT_HS_ACKDET_R(crate::FieldReader<bool, ABRT_HS_ACKDET_A>);
 impl ABRT_HS_ACKDET_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         ABRT_HS_ACKDET_R(crate::FieldReader::new(bits))
     }
@@ -680,6 +692,7 @@ is set to 1).
  Role of DW_apb_i2c: Master-Transmitter"]
 pub struct ABRT_GCALL_READ_R(crate::FieldReader<bool, ABRT_GCALL_READ_A>);
 impl ABRT_GCALL_READ_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         ABRT_GCALL_READ_R(crate::FieldReader::new(bits))
     }
@@ -736,6 +749,7 @@ impl From<ABRT_GCALL_NOACK_A> for bool {
  Role of DW_apb_i2c: Master-Transmitter"]
 pub struct ABRT_GCALL_NOACK_R(crate::FieldReader<bool, ABRT_GCALL_NOACK_A>);
 impl ABRT_GCALL_NOACK_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         ABRT_GCALL_NOACK_R(crate::FieldReader::new(bits))
     }
@@ -792,6 +806,7 @@ impl From<ABRT_TXDATA_NOACK_A> for bool {
  Role of DW_apb_i2c: Master-Transmitter"]
 pub struct ABRT_TXDATA_NOACK_R(crate::FieldReader<bool, ABRT_TXDATA_NOACK_A>);
 impl ABRT_TXDATA_NOACK_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         ABRT_TXDATA_NOACK_R(crate::FieldReader::new(bits))
     }
@@ -848,6 +863,7 @@ impl From<ABRT_10ADDR2_NOACK_A> for bool {
  Role of DW_apb_i2c: Master-Transmitter or Master-Receiver"]
 pub struct ABRT_10ADDR2_NOACK_R(crate::FieldReader<bool, ABRT_10ADDR2_NOACK_A>);
 impl ABRT_10ADDR2_NOACK_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         ABRT_10ADDR2_NOACK_R(crate::FieldReader::new(bits))
     }
@@ -904,6 +920,7 @@ impl From<ABRT_10ADDR1_NOACK_A> for bool {
  Role of DW_apb_i2c: Master-Transmitter or Master-Receiver"]
 pub struct ABRT_10ADDR1_NOACK_R(crate::FieldReader<bool, ABRT_10ADDR1_NOACK_A>);
 impl ABRT_10ADDR1_NOACK_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         ABRT_10ADDR1_NOACK_R(crate::FieldReader::new(bits))
     }
@@ -960,6 +977,7 @@ impl From<ABRT_7B_ADDR_NOACK_A> for bool {
  Role of DW_apb_i2c: Master-Transmitter or Master-Receiver"]
 pub struct ABRT_7B_ADDR_NOACK_R(crate::FieldReader<bool, ABRT_7B_ADDR_NOACK_A>);
 impl ABRT_7B_ADDR_NOACK_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         ABRT_7B_ADDR_NOACK_R(crate::FieldReader::new(bits))
     }
@@ -990,95 +1008,167 @@ impl core::ops::Deref for ABRT_7B_ADDR_NOACK_R {
     }
 }
 impl R {
-    #[doc = "Bits 23:31 - This field indicates the number of Tx FIFO Data Commands which are flushed due to TX_ABRT interrupt. It is cleared whenever I2C is disabled. Reset value: 0x0 Role of DW_apb_i2c: Master-Transmitter or Slave-Transmitter"]
+    #[doc = "Bits 23:31 - This field indicates the number of Tx FIFO Data Commands which are flushed due to TX_ABRT interrupt. It is cleared whenever I2C is disabled.  
+
+ Reset value: 0x0  
+
+ Role of DW_apb_i2c: Master-Transmitter or Slave-Transmitter"]
     #[inline(always)]
     pub fn tx_flush_cnt(&self) -> TX_FLUSH_CNT_R {
         TX_FLUSH_CNT_R::new(((self.bits >> 23) & 0x01ff) as u16)
     }
-    #[doc = "Bit 16 - This is a master-mode-only bit. Master has detected the transfer abort (IC_ENABLE\\[1\\]) Reset value: 0x0 Role of DW_apb_i2c: Master-Transmitter"]
+    #[doc = "Bit 16 - This is a master-mode-only bit. Master has detected the transfer abort (IC_ENABLE\\[1\\])  
+
+ Reset value: 0x0  
+
+ Role of DW_apb_i2c: Master-Transmitter"]
     #[inline(always)]
     pub fn abrt_user_abrt(&self) -> ABRT_USER_ABRT_R {
         ABRT_USER_ABRT_R::new(((self.bits >> 16) & 0x01) != 0)
     }
-    #[doc = "Bit 15 - 1: When the processor side responds to a slave mode request for data to be transmitted to a remote master and user writes a 1 in CMD (bit 8) of IC_DATA_CMD register. Reset value: 0x0 Role of DW_apb_i2c: Slave-Transmitter"]
+    #[doc = "Bit 15 - 1: When the processor side responds to a slave mode request for data to be transmitted to a remote master and user writes a 1 in CMD (bit 8) of IC_DATA_CMD register.  
+
+ Reset value: 0x0  
+
+ Role of DW_apb_i2c: Slave-Transmitter"]
     #[inline(always)]
     pub fn abrt_slvrd_intx(&self) -> ABRT_SLVRD_INTX_R {
         ABRT_SLVRD_INTX_R::new(((self.bits >> 15) & 0x01) != 0)
     }
     #[doc = "Bit 14 - This field indicates that a Slave has lost the bus while transmitting data to a remote master. IC_TX_ABRT_SOURCE\\[12\\]
-is set at the same time. Note: Even though the slave never 'owns' the bus, something could go wrong on the bus. This is a fail safe check. For instance, during a data transmission at the low-to-high transition of SCL, if what is on the data bus is not what is supposed to be transmitted, then DW_apb_i2c no longer own the bus. Reset value: 0x0 Role of DW_apb_i2c: Slave-Transmitter"]
+is set at the same time. Note: Even though the slave never 'owns' the bus, something could go wrong on the bus. This is a fail safe check. For instance, during a data transmission at the low-to-high transition of SCL, if what is on the data bus is not what is supposed to be transmitted, then DW_apb_i2c no longer own the bus.  
+
+ Reset value: 0x0  
+
+ Role of DW_apb_i2c: Slave-Transmitter"]
     #[inline(always)]
     pub fn abrt_slv_arblost(&self) -> ABRT_SLV_ARBLOST_R {
         ABRT_SLV_ARBLOST_R::new(((self.bits >> 14) & 0x01) != 0)
     }
-    #[doc = "Bit 13 - This field specifies that the Slave has received a read command and some data exists in the TX FIFO, so the slave issues a TX_ABRT interrupt to flush old data in TX FIFO. Reset value: 0x0 Role of DW_apb_i2c: Slave-Transmitter"]
+    #[doc = "Bit 13 - This field specifies that the Slave has received a read command and some data exists in the TX FIFO, so the slave issues a TX_ABRT interrupt to flush old data in TX FIFO.  
+
+ Reset value: 0x0  
+
+ Role of DW_apb_i2c: Slave-Transmitter"]
     #[inline(always)]
     pub fn abrt_slvflush_txfifo(&self) -> ABRT_SLVFLUSH_TXFIFO_R {
         ABRT_SLVFLUSH_TXFIFO_R::new(((self.bits >> 13) & 0x01) != 0)
     }
     #[doc = "Bit 12 - This field specifies that the Master has lost arbitration, or if IC_TX_ABRT_SOURCE\\[14\\]
-is also set, then the slave transmitter has lost arbitration. Reset value: 0x0 Role of DW_apb_i2c: Master-Transmitter or Slave-Transmitter"]
+is also set, then the slave transmitter has lost arbitration.  
+
+ Reset value: 0x0  
+
+ Role of DW_apb_i2c: Master-Transmitter or Slave-Transmitter"]
     #[inline(always)]
     pub fn arb_lost(&self) -> ARB_LOST_R {
         ARB_LOST_R::new(((self.bits >> 12) & 0x01) != 0)
     }
-    #[doc = "Bit 11 - This field indicates that the User tries to initiate a Master operation with the Master mode disabled. Reset value: 0x0 Role of DW_apb_i2c: Master-Transmitter or Master-Receiver"]
+    #[doc = "Bit 11 - This field indicates that the User tries to initiate a Master operation with the Master mode disabled.  
+
+ Reset value: 0x0  
+
+ Role of DW_apb_i2c: Master-Transmitter or Master-Receiver"]
     #[inline(always)]
     pub fn abrt_master_dis(&self) -> ABRT_MASTER_DIS_R {
         ABRT_MASTER_DIS_R::new(((self.bits >> 11) & 0x01) != 0)
     }
-    #[doc = "Bit 10 - This field indicates that the restart is disabled (IC_RESTART_EN bit (IC_CON\\[5\\]) =0) and the master sends a read command in 10-bit addressing mode. Reset value: 0x0 Role of DW_apb_i2c: Master-Receiver"]
+    #[doc = "Bit 10 - This field indicates that the restart is disabled (IC_RESTART_EN bit (IC_CON\\[5\\]) =0) and the master sends a read command in 10-bit addressing mode.  
+
+ Reset value: 0x0  
+
+ Role of DW_apb_i2c: Master-Receiver"]
     #[inline(always)]
     pub fn abrt_10b_rd_norstrt(&self) -> ABRT_10B_RD_NORSTRT_R {
         ABRT_10B_RD_NORSTRT_R::new(((self.bits >> 10) & 0x01) != 0)
     }
-    #[doc = "Bit 9 - To clear Bit 9, the source of the ABRT_SBYTE_NORSTRT must be fixed first; restart must be enabled (IC_CON\\[5\\]=1), the SPECIAL bit must be cleared (IC_TAR\\[11\\]), or the GC_OR_START bit must be cleared (IC_TAR\\[10\\]). Once the source of the ABRT_SBYTE_NORSTRT is fixed, then this bit can be cleared in the same manner as other bits in this register. If the source of the ABRT_SBYTE_NORSTRT is not fixed before attempting to clear this bit, bit 9 clears for one cycle and then gets reasserted. When this field is set to 1, the restart is disabled (IC_RESTART_EN bit (IC_CON\\[5\\]) =0) and the user is trying to send a START Byte. Reset value: 0x0 Role of DW_apb_i2c: Master"]
+    #[doc = "Bit 9 - To clear Bit 9, the source of the ABRT_SBYTE_NORSTRT must be fixed first; restart must be enabled (IC_CON\\[5\\]=1), the SPECIAL bit must be cleared (IC_TAR\\[11\\]), or the GC_OR_START bit must be cleared (IC_TAR\\[10\\]). Once the source of the ABRT_SBYTE_NORSTRT is fixed, then this bit can be cleared in the same manner as other bits in this register. If the source of the ABRT_SBYTE_NORSTRT is not fixed before attempting to clear this bit, bit 9 clears for one cycle and then gets reasserted. When this field is set to 1, the restart is disabled (IC_RESTART_EN bit (IC_CON\\[5\\]) =0) and the user is trying to send a START Byte.  
+
+ Reset value: 0x0  
+
+ Role of DW_apb_i2c: Master"]
     #[inline(always)]
     pub fn abrt_sbyte_norstrt(&self) -> ABRT_SBYTE_NORSTRT_R {
         ABRT_SBYTE_NORSTRT_R::new(((self.bits >> 9) & 0x01) != 0)
     }
-    #[doc = "Bit 8 - This field indicates that the restart is disabled (IC_RESTART_EN bit (IC_CON\\[5\\]) =0) and the user is trying to use the master to transfer data in High Speed mode. Reset value: 0x0 Role of DW_apb_i2c: Master-Transmitter or Master-Receiver"]
+    #[doc = "Bit 8 - This field indicates that the restart is disabled (IC_RESTART_EN bit (IC_CON\\[5\\]) =0) and the user is trying to use the master to transfer data in High Speed mode.  
+
+ Reset value: 0x0  
+
+ Role of DW_apb_i2c: Master-Transmitter or Master-Receiver"]
     #[inline(always)]
     pub fn abrt_hs_norstrt(&self) -> ABRT_HS_NORSTRT_R {
         ABRT_HS_NORSTRT_R::new(((self.bits >> 8) & 0x01) != 0)
     }
-    #[doc = "Bit 7 - This field indicates that the Master has sent a START Byte and the START Byte was acknowledged (wrong behavior). Reset value: 0x0 Role of DW_apb_i2c: Master"]
+    #[doc = "Bit 7 - This field indicates that the Master has sent a START Byte and the START Byte was acknowledged (wrong behavior).  
+
+ Reset value: 0x0  
+
+ Role of DW_apb_i2c: Master"]
     #[inline(always)]
     pub fn abrt_sbyte_ackdet(&self) -> ABRT_SBYTE_ACKDET_R {
         ABRT_SBYTE_ACKDET_R::new(((self.bits >> 7) & 0x01) != 0)
     }
-    #[doc = "Bit 6 - This field indicates that the Master is in High Speed mode and the High Speed Master code was acknowledged (wrong behavior). Reset value: 0x0 Role of DW_apb_i2c: Master"]
+    #[doc = "Bit 6 - This field indicates that the Master is in High Speed mode and the High Speed Master code was acknowledged (wrong behavior).  
+
+ Reset value: 0x0  
+
+ Role of DW_apb_i2c: Master"]
     #[inline(always)]
     pub fn abrt_hs_ackdet(&self) -> ABRT_HS_ACKDET_R {
         ABRT_HS_ACKDET_R::new(((self.bits >> 6) & 0x01) != 0)
     }
     #[doc = "Bit 5 - This field indicates that DW_apb_i2c in the master mode has sent a General Call but the user programmed the byte following the General Call to be a read from the bus (IC_DATA_CMD\\[9\\]
-is set to 1). Reset value: 0x0 Role of DW_apb_i2c: Master-Transmitter"]
+is set to 1).  
+
+ Reset value: 0x0  
+
+ Role of DW_apb_i2c: Master-Transmitter"]
     #[inline(always)]
     pub fn abrt_gcall_read(&self) -> ABRT_GCALL_READ_R {
         ABRT_GCALL_READ_R::new(((self.bits >> 5) & 0x01) != 0)
     }
-    #[doc = "Bit 4 - This field indicates that DW_apb_i2c in master mode has sent a General Call and no slave on the bus acknowledged the General Call. Reset value: 0x0 Role of DW_apb_i2c: Master-Transmitter"]
+    #[doc = "Bit 4 - This field indicates that DW_apb_i2c in master mode has sent a General Call and no slave on the bus acknowledged the General Call.  
+
+ Reset value: 0x0  
+
+ Role of DW_apb_i2c: Master-Transmitter"]
     #[inline(always)]
     pub fn abrt_gcall_noack(&self) -> ABRT_GCALL_NOACK_R {
         ABRT_GCALL_NOACK_R::new(((self.bits >> 4) & 0x01) != 0)
     }
-    #[doc = "Bit 3 - This field indicates the master-mode only bit. When the master receives an acknowledgement for the address, but when it sends data byte(s) following the address, it did not receive an acknowledge from the remote slave(s). Reset value: 0x0 Role of DW_apb_i2c: Master-Transmitter"]
+    #[doc = "Bit 3 - This field indicates the master-mode only bit. When the master receives an acknowledgement for the address, but when it sends data byte(s) following the address, it did not receive an acknowledge from the remote slave(s).  
+
+ Reset value: 0x0  
+
+ Role of DW_apb_i2c: Master-Transmitter"]
     #[inline(always)]
     pub fn abrt_txdata_noack(&self) -> ABRT_TXDATA_NOACK_R {
         ABRT_TXDATA_NOACK_R::new(((self.bits >> 3) & 0x01) != 0)
     }
-    #[doc = "Bit 2 - This field indicates that the Master is in 10-bit address mode and that the second address byte of the 10-bit address was not acknowledged by any slave. Reset value: 0x0 Role of DW_apb_i2c: Master-Transmitter or Master-Receiver"]
+    #[doc = "Bit 2 - This field indicates that the Master is in 10-bit address mode and that the second address byte of the 10-bit address was not acknowledged by any slave.  
+
+ Reset value: 0x0  
+
+ Role of DW_apb_i2c: Master-Transmitter or Master-Receiver"]
     #[inline(always)]
     pub fn abrt_10addr2_noack(&self) -> ABRT_10ADDR2_NOACK_R {
         ABRT_10ADDR2_NOACK_R::new(((self.bits >> 2) & 0x01) != 0)
     }
-    #[doc = "Bit 1 - This field indicates that the Master is in 10-bit address mode and the first 10-bit address byte was not acknowledged by any slave. Reset value: 0x0 Role of DW_apb_i2c: Master-Transmitter or Master-Receiver"]
+    #[doc = "Bit 1 - This field indicates that the Master is in 10-bit address mode and the first 10-bit address byte was not acknowledged by any slave.  
+
+ Reset value: 0x0  
+
+ Role of DW_apb_i2c: Master-Transmitter or Master-Receiver"]
     #[inline(always)]
     pub fn abrt_10addr1_noack(&self) -> ABRT_10ADDR1_NOACK_R {
         ABRT_10ADDR1_NOACK_R::new(((self.bits >> 1) & 0x01) != 0)
     }
-    #[doc = "Bit 0 - This field indicates that the Master is in 7-bit addressing mode and the address sent was not acknowledged by any slave. Reset value: 0x0 Role of DW_apb_i2c: Master-Transmitter or Master-Receiver"]
+    #[doc = "Bit 0 - This field indicates that the Master is in 7-bit addressing mode and the address sent was not acknowledged by any slave.  
+
+ Reset value: 0x0  
+
+ Role of DW_apb_i2c: Master-Transmitter or Master-Receiver"]
     #[inline(always)]
     pub fn abrt_7b_addr_noack(&self) -> ABRT_7B_ADDR_NOACK_R {
         ABRT_7B_ADDR_NOACK_R::new((self.bits & 0x01) != 0)

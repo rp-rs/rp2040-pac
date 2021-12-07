@@ -37,6 +37,7 @@ impl From<crate::W<ARMED_SPEC>> for W {
 #[doc = "Field `ARMED` reader - "]
 pub struct ARMED_R(crate::FieldReader<u8, u8>);
 impl ARMED_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         ARMED_R(crate::FieldReader::new(bits))
     }

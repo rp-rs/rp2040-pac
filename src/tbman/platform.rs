@@ -16,6 +16,7 @@ impl From<crate::R<PLATFORM_SPEC>> for R {
 #[doc = "Field `FPGA` reader - Indicates the platform is an FPGA"]
 pub struct FPGA_R(crate::FieldReader<bool, bool>);
 impl FPGA_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         FPGA_R(crate::FieldReader::new(bits))
     }
@@ -30,6 +31,7 @@ impl core::ops::Deref for FPGA_R {
 #[doc = "Field `ASIC` reader - Indicates the platform is an ASIC"]
 pub struct ASIC_R(crate::FieldReader<bool, bool>);
 impl ASIC_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         ASIC_R(crate::FieldReader::new(bits))
     }

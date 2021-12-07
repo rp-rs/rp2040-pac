@@ -16,6 +16,7 @@ impl From<crate::R<BUFF_CPU_SHOULD_HANDLE_SPEC>> for R {
 #[doc = "Field `EP15_OUT` reader - "]
 pub struct EP15_OUT_R(crate::FieldReader<bool, bool>);
 impl EP15_OUT_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         EP15_OUT_R(crate::FieldReader::new(bits))
     }
@@ -30,6 +31,7 @@ impl core::ops::Deref for EP15_OUT_R {
 #[doc = "Field `EP15_IN` reader - "]
 pub struct EP15_IN_R(crate::FieldReader<bool, bool>);
 impl EP15_IN_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         EP15_IN_R(crate::FieldReader::new(bits))
     }
@@ -44,6 +46,7 @@ impl core::ops::Deref for EP15_IN_R {
 #[doc = "Field `EP14_OUT` reader - "]
 pub struct EP14_OUT_R(crate::FieldReader<bool, bool>);
 impl EP14_OUT_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         EP14_OUT_R(crate::FieldReader::new(bits))
     }
@@ -58,6 +61,7 @@ impl core::ops::Deref for EP14_OUT_R {
 #[doc = "Field `EP14_IN` reader - "]
 pub struct EP14_IN_R(crate::FieldReader<bool, bool>);
 impl EP14_IN_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         EP14_IN_R(crate::FieldReader::new(bits))
     }
@@ -72,6 +76,7 @@ impl core::ops::Deref for EP14_IN_R {
 #[doc = "Field `EP13_OUT` reader - "]
 pub struct EP13_OUT_R(crate::FieldReader<bool, bool>);
 impl EP13_OUT_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         EP13_OUT_R(crate::FieldReader::new(bits))
     }
@@ -86,6 +91,7 @@ impl core::ops::Deref for EP13_OUT_R {
 #[doc = "Field `EP13_IN` reader - "]
 pub struct EP13_IN_R(crate::FieldReader<bool, bool>);
 impl EP13_IN_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         EP13_IN_R(crate::FieldReader::new(bits))
     }
@@ -100,6 +106,7 @@ impl core::ops::Deref for EP13_IN_R {
 #[doc = "Field `EP12_OUT` reader - "]
 pub struct EP12_OUT_R(crate::FieldReader<bool, bool>);
 impl EP12_OUT_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         EP12_OUT_R(crate::FieldReader::new(bits))
     }
@@ -114,6 +121,7 @@ impl core::ops::Deref for EP12_OUT_R {
 #[doc = "Field `EP12_IN` reader - "]
 pub struct EP12_IN_R(crate::FieldReader<bool, bool>);
 impl EP12_IN_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         EP12_IN_R(crate::FieldReader::new(bits))
     }
@@ -128,6 +136,7 @@ impl core::ops::Deref for EP12_IN_R {
 #[doc = "Field `EP11_OUT` reader - "]
 pub struct EP11_OUT_R(crate::FieldReader<bool, bool>);
 impl EP11_OUT_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         EP11_OUT_R(crate::FieldReader::new(bits))
     }
@@ -142,6 +151,7 @@ impl core::ops::Deref for EP11_OUT_R {
 #[doc = "Field `EP11_IN` reader - "]
 pub struct EP11_IN_R(crate::FieldReader<bool, bool>);
 impl EP11_IN_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         EP11_IN_R(crate::FieldReader::new(bits))
     }
@@ -156,6 +166,7 @@ impl core::ops::Deref for EP11_IN_R {
 #[doc = "Field `EP10_OUT` reader - "]
 pub struct EP10_OUT_R(crate::FieldReader<bool, bool>);
 impl EP10_OUT_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         EP10_OUT_R(crate::FieldReader::new(bits))
     }
@@ -170,6 +181,7 @@ impl core::ops::Deref for EP10_OUT_R {
 #[doc = "Field `EP10_IN` reader - "]
 pub struct EP10_IN_R(crate::FieldReader<bool, bool>);
 impl EP10_IN_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         EP10_IN_R(crate::FieldReader::new(bits))
     }
@@ -184,6 +196,7 @@ impl core::ops::Deref for EP10_IN_R {
 #[doc = "Field `EP9_OUT` reader - "]
 pub struct EP9_OUT_R(crate::FieldReader<bool, bool>);
 impl EP9_OUT_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         EP9_OUT_R(crate::FieldReader::new(bits))
     }
@@ -198,6 +211,7 @@ impl core::ops::Deref for EP9_OUT_R {
 #[doc = "Field `EP9_IN` reader - "]
 pub struct EP9_IN_R(crate::FieldReader<bool, bool>);
 impl EP9_IN_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         EP9_IN_R(crate::FieldReader::new(bits))
     }
@@ -212,6 +226,7 @@ impl core::ops::Deref for EP9_IN_R {
 #[doc = "Field `EP8_OUT` reader - "]
 pub struct EP8_OUT_R(crate::FieldReader<bool, bool>);
 impl EP8_OUT_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         EP8_OUT_R(crate::FieldReader::new(bits))
     }
@@ -226,6 +241,7 @@ impl core::ops::Deref for EP8_OUT_R {
 #[doc = "Field `EP8_IN` reader - "]
 pub struct EP8_IN_R(crate::FieldReader<bool, bool>);
 impl EP8_IN_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         EP8_IN_R(crate::FieldReader::new(bits))
     }
@@ -240,6 +256,7 @@ impl core::ops::Deref for EP8_IN_R {
 #[doc = "Field `EP7_OUT` reader - "]
 pub struct EP7_OUT_R(crate::FieldReader<bool, bool>);
 impl EP7_OUT_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         EP7_OUT_R(crate::FieldReader::new(bits))
     }
@@ -254,6 +271,7 @@ impl core::ops::Deref for EP7_OUT_R {
 #[doc = "Field `EP7_IN` reader - "]
 pub struct EP7_IN_R(crate::FieldReader<bool, bool>);
 impl EP7_IN_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         EP7_IN_R(crate::FieldReader::new(bits))
     }
@@ -268,6 +286,7 @@ impl core::ops::Deref for EP7_IN_R {
 #[doc = "Field `EP6_OUT` reader - "]
 pub struct EP6_OUT_R(crate::FieldReader<bool, bool>);
 impl EP6_OUT_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         EP6_OUT_R(crate::FieldReader::new(bits))
     }
@@ -282,6 +301,7 @@ impl core::ops::Deref for EP6_OUT_R {
 #[doc = "Field `EP6_IN` reader - "]
 pub struct EP6_IN_R(crate::FieldReader<bool, bool>);
 impl EP6_IN_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         EP6_IN_R(crate::FieldReader::new(bits))
     }
@@ -296,6 +316,7 @@ impl core::ops::Deref for EP6_IN_R {
 #[doc = "Field `EP5_OUT` reader - "]
 pub struct EP5_OUT_R(crate::FieldReader<bool, bool>);
 impl EP5_OUT_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         EP5_OUT_R(crate::FieldReader::new(bits))
     }
@@ -310,6 +331,7 @@ impl core::ops::Deref for EP5_OUT_R {
 #[doc = "Field `EP5_IN` reader - "]
 pub struct EP5_IN_R(crate::FieldReader<bool, bool>);
 impl EP5_IN_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         EP5_IN_R(crate::FieldReader::new(bits))
     }
@@ -324,6 +346,7 @@ impl core::ops::Deref for EP5_IN_R {
 #[doc = "Field `EP4_OUT` reader - "]
 pub struct EP4_OUT_R(crate::FieldReader<bool, bool>);
 impl EP4_OUT_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         EP4_OUT_R(crate::FieldReader::new(bits))
     }
@@ -338,6 +361,7 @@ impl core::ops::Deref for EP4_OUT_R {
 #[doc = "Field `EP4_IN` reader - "]
 pub struct EP4_IN_R(crate::FieldReader<bool, bool>);
 impl EP4_IN_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         EP4_IN_R(crate::FieldReader::new(bits))
     }
@@ -352,6 +376,7 @@ impl core::ops::Deref for EP4_IN_R {
 #[doc = "Field `EP3_OUT` reader - "]
 pub struct EP3_OUT_R(crate::FieldReader<bool, bool>);
 impl EP3_OUT_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         EP3_OUT_R(crate::FieldReader::new(bits))
     }
@@ -366,6 +391,7 @@ impl core::ops::Deref for EP3_OUT_R {
 #[doc = "Field `EP3_IN` reader - "]
 pub struct EP3_IN_R(crate::FieldReader<bool, bool>);
 impl EP3_IN_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         EP3_IN_R(crate::FieldReader::new(bits))
     }
@@ -380,6 +406,7 @@ impl core::ops::Deref for EP3_IN_R {
 #[doc = "Field `EP2_OUT` reader - "]
 pub struct EP2_OUT_R(crate::FieldReader<bool, bool>);
 impl EP2_OUT_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         EP2_OUT_R(crate::FieldReader::new(bits))
     }
@@ -394,6 +421,7 @@ impl core::ops::Deref for EP2_OUT_R {
 #[doc = "Field `EP2_IN` reader - "]
 pub struct EP2_IN_R(crate::FieldReader<bool, bool>);
 impl EP2_IN_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         EP2_IN_R(crate::FieldReader::new(bits))
     }
@@ -408,6 +436,7 @@ impl core::ops::Deref for EP2_IN_R {
 #[doc = "Field `EP1_OUT` reader - "]
 pub struct EP1_OUT_R(crate::FieldReader<bool, bool>);
 impl EP1_OUT_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         EP1_OUT_R(crate::FieldReader::new(bits))
     }
@@ -422,6 +451,7 @@ impl core::ops::Deref for EP1_OUT_R {
 #[doc = "Field `EP1_IN` reader - "]
 pub struct EP1_IN_R(crate::FieldReader<bool, bool>);
 impl EP1_IN_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         EP1_IN_R(crate::FieldReader::new(bits))
     }
@@ -436,6 +466,7 @@ impl core::ops::Deref for EP1_IN_R {
 #[doc = "Field `EP0_OUT` reader - "]
 pub struct EP0_OUT_R(crate::FieldReader<bool, bool>);
 impl EP0_OUT_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         EP0_OUT_R(crate::FieldReader::new(bits))
     }
@@ -450,6 +481,7 @@ impl core::ops::Deref for EP0_OUT_R {
 #[doc = "Field `EP0_IN` reader - "]
 pub struct EP0_IN_R(crate::FieldReader<bool, bool>);
 impl EP0_IN_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         EP0_IN_R(crate::FieldReader::new(bits))
     }

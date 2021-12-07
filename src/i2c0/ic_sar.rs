@@ -43,6 +43,7 @@ register being set to 0. Writes at other times have no effect.
  Note: The default values cannot be any of the reserved address locations: that is, 0x00 to 0x07, or 0x78 to 0x7f. The correct operation of the device is not guaranteed if you program the IC_SAR or IC_TAR to a reserved value. Refer to <<table_I2C_firstbyte_bit_defs>> for a complete list of these reserved values."]
 pub struct IC_SAR_R(crate::FieldReader<u16, u16>);
 impl IC_SAR_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u16) -> Self {
         IC_SAR_R(crate::FieldReader::new(bits))
     }
@@ -74,8 +75,12 @@ impl<'a> IC_SAR_W<'a> {
 }
 impl R {
     #[doc = "Bits 0:9 - The IC_SAR holds the slave address when the I2C is operating as a slave. For 7-bit addressing, only IC_SAR\\[6:0\\]
-is used. This register can be written only when the I2C interface is disabled, which corresponds to the IC_ENABLE\\[0\\]
-register being set to 0. Writes at other times have no effect. Note: The default values cannot be any of the reserved address locations: that is, 0x00 to 0x07, or 0x78 to 0x7f. The correct operation of the device is not guaranteed if you program the IC_SAR or IC_TAR to a reserved value. Refer to <<table_I2C_firstbyte_bit_defs>> for a complete list of these reserved values."]
+is used.  
+
+ This register can be written only when the I2C interface is disabled, which corresponds to the IC_ENABLE\\[0\\]
+register being set to 0. Writes at other times have no effect.  
+
+ Note: The default values cannot be any of the reserved address locations: that is, 0x00 to 0x07, or 0x78 to 0x7f. The correct operation of the device is not guaranteed if you program the IC_SAR or IC_TAR to a reserved value. Refer to <<table_I2C_firstbyte_bit_defs>> for a complete list of these reserved values."]
     #[inline(always)]
     pub fn ic_sar(&self) -> IC_SAR_R {
         IC_SAR_R::new((self.bits & 0x03ff) as u16)
@@ -83,8 +88,12 @@ register being set to 0. Writes at other times have no effect. Note: The default
 }
 impl W {
     #[doc = "Bits 0:9 - The IC_SAR holds the slave address when the I2C is operating as a slave. For 7-bit addressing, only IC_SAR\\[6:0\\]
-is used. This register can be written only when the I2C interface is disabled, which corresponds to the IC_ENABLE\\[0\\]
-register being set to 0. Writes at other times have no effect. Note: The default values cannot be any of the reserved address locations: that is, 0x00 to 0x07, or 0x78 to 0x7f. The correct operation of the device is not guaranteed if you program the IC_SAR or IC_TAR to a reserved value. Refer to <<table_I2C_firstbyte_bit_defs>> for a complete list of these reserved values."]
+is used.  
+
+ This register can be written only when the I2C interface is disabled, which corresponds to the IC_ENABLE\\[0\\]
+register being set to 0. Writes at other times have no effect.  
+
+ Note: The default values cannot be any of the reserved address locations: that is, 0x00 to 0x07, or 0x78 to 0x7f. The correct operation of the device is not guaranteed if you program the IC_SAR or IC_TAR to a reserved value. Refer to <<table_I2C_firstbyte_bit_defs>> for a complete list of these reserved values."]
     #[inline(always)]
     pub fn ic_sar(&mut self) -> IC_SAR_W {
         IC_SAR_W { w: self }

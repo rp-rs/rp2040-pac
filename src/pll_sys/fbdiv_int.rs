@@ -37,6 +37,7 @@ impl From<crate::W<FBDIV_INT_SPEC>> for W {
 #[doc = "Field `FBDIV_INT` reader - see ctrl reg description for constraints"]
 pub struct FBDIV_INT_R(crate::FieldReader<u16, u16>);
 impl FBDIV_INT_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u16) -> Self {
         FBDIV_INT_R(crate::FieldReader::new(bits))
     }

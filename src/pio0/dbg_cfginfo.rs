@@ -16,6 +16,7 @@ impl From<crate::R<DBG_CFGINFO_SPEC>> for R {
 #[doc = "Field `IMEM_SIZE` reader - The size of the instruction memory, measured in units of one instruction"]
 pub struct IMEM_SIZE_R(crate::FieldReader<u8, u8>);
 impl IMEM_SIZE_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         IMEM_SIZE_R(crate::FieldReader::new(bits))
     }
@@ -30,6 +31,7 @@ impl core::ops::Deref for IMEM_SIZE_R {
 #[doc = "Field `SM_COUNT` reader - The number of state machines this PIO instance is equipped with."]
 pub struct SM_COUNT_R(crate::FieldReader<u8, u8>);
 impl SM_COUNT_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         SM_COUNT_R(crate::FieldReader::new(bits))
     }
@@ -46,6 +48,7 @@ impl core::ops::Deref for SM_COUNT_R {
  this depth."]
 pub struct FIFO_DEPTH_R(crate::FieldReader<u8, u8>);
 impl FIFO_DEPTH_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         FIFO_DEPTH_R(crate::FieldReader::new(bits))
     }
@@ -68,7 +71,9 @@ impl R {
     pub fn sm_count(&self) -> SM_COUNT_R {
         SM_COUNT_R::new(((self.bits >> 8) & 0x0f) as u8)
     }
-    #[doc = "Bits 0:5 - The depth of the state machine TX/RX FIFOs, measured in words. Joining fifos via SHIFTCTRL_FJOIN gives one FIFO with double this depth."]
+    #[doc = "Bits 0:5 - The depth of the state machine TX/RX FIFOs, measured in words.  
+ Joining fifos via SHIFTCTRL_FJOIN gives one FIFO with double  
+ this depth."]
     #[inline(always)]
     pub fn fifo_depth(&self) -> FIFO_DEPTH_R {
         FIFO_DEPTH_R::new((self.bits & 0x3f) as u8)

@@ -37,6 +37,7 @@ impl From<crate::W<SYST_CSR_SPEC>> for W {
 #[doc = "Field `COUNTFLAG` reader - Returns 1 if timer counted to 0 since last time this was read. Clears on read by application or debugger."]
 pub struct COUNTFLAG_R(crate::FieldReader<bool, bool>);
 impl COUNTFLAG_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         COUNTFLAG_R(crate::FieldReader::new(bits))
     }
@@ -54,6 +55,7 @@ impl core::ops::Deref for COUNTFLAG_R {
  1 = Processor clock."]
 pub struct CLKSOURCE_R(crate::FieldReader<bool, bool>);
 impl CLKSOURCE_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         CLKSOURCE_R(crate::FieldReader::new(bits))
     }
@@ -95,6 +97,7 @@ impl<'a> CLKSOURCE_W<'a> {
  1 = Counting down to zero to asserts the SysTick exception request."]
 pub struct TICKINT_R(crate::FieldReader<bool, bool>);
 impl TICKINT_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         TICKINT_R(crate::FieldReader::new(bits))
     }
@@ -135,6 +138,7 @@ impl<'a> TICKINT_W<'a> {
  1 = Counter enabled."]
 pub struct ENABLE_R(crate::FieldReader<bool, bool>);
 impl ENABLE_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         ENABLE_R(crate::FieldReader::new(bits))
     }
@@ -176,34 +180,48 @@ impl R {
     pub fn countflag(&self) -> COUNTFLAG_R {
         COUNTFLAG_R::new(((self.bits >> 16) & 0x01) != 0)
     }
-    #[doc = "Bit 2 - SysTick clock source. Always reads as one if SYST_CALIB reports NOREF. Selects the SysTick timer clock source: 0 = External reference clock. 1 = Processor clock."]
+    #[doc = "Bit 2 - SysTick clock source. Always reads as one if SYST_CALIB reports NOREF.  
+ Selects the SysTick timer clock source:  
+ 0 = External reference clock.  
+ 1 = Processor clock."]
     #[inline(always)]
     pub fn clksource(&self) -> CLKSOURCE_R {
         CLKSOURCE_R::new(((self.bits >> 2) & 0x01) != 0)
     }
-    #[doc = "Bit 1 - Enables SysTick exception request: 0 = Counting down to zero does not assert the SysTick exception request. 1 = Counting down to zero to asserts the SysTick exception request."]
+    #[doc = "Bit 1 - Enables SysTick exception request:  
+ 0 = Counting down to zero does not assert the SysTick exception request.  
+ 1 = Counting down to zero to asserts the SysTick exception request."]
     #[inline(always)]
     pub fn tickint(&self) -> TICKINT_R {
         TICKINT_R::new(((self.bits >> 1) & 0x01) != 0)
     }
-    #[doc = "Bit 0 - Enable SysTick counter: 0 = Counter disabled. 1 = Counter enabled."]
+    #[doc = "Bit 0 - Enable SysTick counter:  
+ 0 = Counter disabled.  
+ 1 = Counter enabled."]
     #[inline(always)]
     pub fn enable(&self) -> ENABLE_R {
         ENABLE_R::new((self.bits & 0x01) != 0)
     }
 }
 impl W {
-    #[doc = "Bit 2 - SysTick clock source. Always reads as one if SYST_CALIB reports NOREF. Selects the SysTick timer clock source: 0 = External reference clock. 1 = Processor clock."]
+    #[doc = "Bit 2 - SysTick clock source. Always reads as one if SYST_CALIB reports NOREF.  
+ Selects the SysTick timer clock source:  
+ 0 = External reference clock.  
+ 1 = Processor clock."]
     #[inline(always)]
     pub fn clksource(&mut self) -> CLKSOURCE_W {
         CLKSOURCE_W { w: self }
     }
-    #[doc = "Bit 1 - Enables SysTick exception request: 0 = Counting down to zero does not assert the SysTick exception request. 1 = Counting down to zero to asserts the SysTick exception request."]
+    #[doc = "Bit 1 - Enables SysTick exception request:  
+ 0 = Counting down to zero does not assert the SysTick exception request.  
+ 1 = Counting down to zero to asserts the SysTick exception request."]
     #[inline(always)]
     pub fn tickint(&mut self) -> TICKINT_W {
         TICKINT_W { w: self }
     }
-    #[doc = "Bit 0 - Enable SysTick counter: 0 = Counter disabled. 1 = Counter enabled."]
+    #[doc = "Bit 0 - Enable SysTick counter:  
+ 0 = Counter disabled.  
+ 1 = Counter enabled."]
     #[inline(always)]
     pub fn enable(&mut self) -> ENABLE_W {
         ENABLE_W { w: self }

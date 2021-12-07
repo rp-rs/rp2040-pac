@@ -37,6 +37,7 @@ impl From<crate::W<IMR_SPEC>> for W {
 #[doc = "Field `MSTIM` reader - Multi-master contention interrupt mask"]
 pub struct MSTIM_R(crate::FieldReader<bool, bool>);
 impl MSTIM_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         MSTIM_R(crate::FieldReader::new(bits))
     }
@@ -73,6 +74,7 @@ impl<'a> MSTIM_W<'a> {
 #[doc = "Field `RXFIM` reader - Receive FIFO full interrupt mask"]
 pub struct RXFIM_R(crate::FieldReader<bool, bool>);
 impl RXFIM_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         RXFIM_R(crate::FieldReader::new(bits))
     }
@@ -109,6 +111,7 @@ impl<'a> RXFIM_W<'a> {
 #[doc = "Field `RXOIM` reader - Receive FIFO overflow interrupt mask"]
 pub struct RXOIM_R(crate::FieldReader<bool, bool>);
 impl RXOIM_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         RXOIM_R(crate::FieldReader::new(bits))
     }
@@ -145,6 +148,7 @@ impl<'a> RXOIM_W<'a> {
 #[doc = "Field `RXUIM` reader - Receive FIFO underflow interrupt mask"]
 pub struct RXUIM_R(crate::FieldReader<bool, bool>);
 impl RXUIM_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         RXUIM_R(crate::FieldReader::new(bits))
     }
@@ -181,6 +185,7 @@ impl<'a> RXUIM_W<'a> {
 #[doc = "Field `TXOIM` reader - Transmit FIFO overflow interrupt mask"]
 pub struct TXOIM_R(crate::FieldReader<bool, bool>);
 impl TXOIM_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         TXOIM_R(crate::FieldReader::new(bits))
     }
@@ -217,6 +222,7 @@ impl<'a> TXOIM_W<'a> {
 #[doc = "Field `TXEIM` reader - Transmit FIFO empty interrupt mask"]
 pub struct TXEIM_R(crate::FieldReader<bool, bool>);
 impl TXEIM_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         TXEIM_R(crate::FieldReader::new(bits))
     }

@@ -37,6 +37,7 @@ impl From<crate::W<FC0_DELAY_SPEC>> for W {
 #[doc = "Field `FC0_DELAY` reader - "]
 pub struct FC0_DELAY_R(crate::FieldReader<u8, u8>);
 impl FC0_DELAY_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         FC0_DELAY_R(crate::FieldReader::new(bits))
     }

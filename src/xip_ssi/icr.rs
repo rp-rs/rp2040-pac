@@ -16,6 +16,7 @@ impl From<crate::R<ICR_SPEC>> for R {
 #[doc = "Field `ICR` reader - Clear-on-read all active interrupts"]
 pub struct ICR_R(crate::FieldReader<bool, bool>);
 impl ICR_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         ICR_R(crate::FieldReader::new(bits))
     }

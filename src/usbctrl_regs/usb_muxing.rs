@@ -37,6 +37,7 @@ impl From<crate::W<USB_MUXING_SPEC>> for W {
 #[doc = "Field `SOFTCON` reader - "]
 pub struct SOFTCON_R(crate::FieldReader<bool, bool>);
 impl SOFTCON_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         SOFTCON_R(crate::FieldReader::new(bits))
     }
@@ -73,6 +74,7 @@ impl<'a> SOFTCON_W<'a> {
 #[doc = "Field `TO_DIGITAL_PAD` reader - "]
 pub struct TO_DIGITAL_PAD_R(crate::FieldReader<bool, bool>);
 impl TO_DIGITAL_PAD_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         TO_DIGITAL_PAD_R(crate::FieldReader::new(bits))
     }
@@ -109,6 +111,7 @@ impl<'a> TO_DIGITAL_PAD_W<'a> {
 #[doc = "Field `TO_EXTPHY` reader - "]
 pub struct TO_EXTPHY_R(crate::FieldReader<bool, bool>);
 impl TO_EXTPHY_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         TO_EXTPHY_R(crate::FieldReader::new(bits))
     }
@@ -145,6 +148,7 @@ impl<'a> TO_EXTPHY_W<'a> {
 #[doc = "Field `TO_PHY` reader - "]
 pub struct TO_PHY_R(crate::FieldReader<bool, bool>);
 impl TO_PHY_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         TO_PHY_R(crate::FieldReader::new(bits))
     }

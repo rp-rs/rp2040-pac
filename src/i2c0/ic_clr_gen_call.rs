@@ -18,6 +18,7 @@ impl From<crate::R<IC_CLR_GEN_CALL_SPEC>> for R {
  Reset value: 0x0"]
 pub struct CLR_GEN_CALL_R(crate::FieldReader<bool, bool>);
 impl CLR_GEN_CALL_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         CLR_GEN_CALL_R(crate::FieldReader::new(bits))
     }
@@ -30,7 +31,9 @@ impl core::ops::Deref for CLR_GEN_CALL_R {
     }
 }
 impl R {
-    #[doc = "Bit 0 - Read this register to clear the GEN_CALL interrupt (bit 11) of IC_RAW_INTR_STAT register. Reset value: 0x0"]
+    #[doc = "Bit 0 - Read this register to clear the GEN_CALL interrupt (bit 11) of IC_RAW_INTR_STAT register.  
+
+ Reset value: 0x0"]
     #[inline(always)]
     pub fn clr_gen_call(&self) -> CLR_GEN_CALL_R {
         CLR_GEN_CALL_R::new((self.bits & 0x01) != 0)

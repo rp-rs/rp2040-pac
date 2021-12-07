@@ -37,6 +37,7 @@ impl From<crate::W<MPU_RBAR_SPEC>> for W {
 #[doc = "Field `ADDR` reader - Base address of the region."]
 pub struct ADDR_R(crate::FieldReader<u32, u32>);
 impl ADDR_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u32) -> Self {
         ADDR_R(crate::FieldReader::new(bits))
     }
@@ -71,6 +72,7 @@ impl<'a> ADDR_W<'a> {
  Always reads as zero."]
 pub struct VALID_R(crate::FieldReader<bool, bool>);
 impl VALID_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         VALID_R(crate::FieldReader::new(bits))
     }
@@ -116,6 +118,7 @@ impl<'a> VALID_W<'a> {
 of MPU_RNR."]
 pub struct REGION_R(crate::FieldReader<u8, u8>);
 impl REGION_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         REGION_R(crate::FieldReader::new(bits))
     }
@@ -146,7 +149,15 @@ impl R {
     pub fn addr(&self) -> ADDR_R {
         ADDR_R::new(((self.bits >> 8) & 0x00ff_ffff) as u32)
     }
-    #[doc = "Bit 4 - On writes, indicates whether the write must update the base address of the region identified by the REGION field, updating the MPU_RNR to indicate this new region. Write: 0 = MPU_RNR not changed, and the processor: Updates the base address for the region specified in the MPU_RNR. Ignores the value of the REGION field. 1 = The processor: Updates the value of the MPU_RNR to the value of the REGION field. Updates the base address for the region specified in the REGION field. Always reads as zero."]
+    #[doc = "Bit 4 - On writes, indicates whether the write must update the base address of the region identified by the REGION field, updating the MPU_RNR to indicate this new region.  
+ Write:  
+ 0 = MPU_RNR not changed, and the processor:  
+ Updates the base address for the region specified in the MPU_RNR.  
+ Ignores the value of the REGION field.  
+ 1 = The processor:  
+ Updates the value of the MPU_RNR to the value of the REGION field.  
+ Updates the base address for the region specified in the REGION field.  
+ Always reads as zero."]
     #[inline(always)]
     pub fn valid(&self) -> VALID_R {
         VALID_R::new(((self.bits >> 4) & 0x01) != 0)
@@ -164,7 +175,15 @@ impl W {
     pub fn addr(&mut self) -> ADDR_W {
         ADDR_W { w: self }
     }
-    #[doc = "Bit 4 - On writes, indicates whether the write must update the base address of the region identified by the REGION field, updating the MPU_RNR to indicate this new region. Write: 0 = MPU_RNR not changed, and the processor: Updates the base address for the region specified in the MPU_RNR. Ignores the value of the REGION field. 1 = The processor: Updates the value of the MPU_RNR to the value of the REGION field. Updates the base address for the region specified in the REGION field. Always reads as zero."]
+    #[doc = "Bit 4 - On writes, indicates whether the write must update the base address of the region identified by the REGION field, updating the MPU_RNR to indicate this new region.  
+ Write:  
+ 0 = MPU_RNR not changed, and the processor:  
+ Updates the base address for the region specified in the MPU_RNR.  
+ Ignores the value of the REGION field.  
+ 1 = The processor:  
+ Updates the value of the MPU_RNR to the value of the REGION field.  
+ Updates the base address for the region specified in the REGION field.  
+ Always reads as zero."]
     #[inline(always)]
     pub fn valid(&mut self) -> VALID_W {
         VALID_W { w: self }

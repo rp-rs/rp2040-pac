@@ -16,6 +16,7 @@ impl From<crate::R<SR_SPEC>> for R {
 #[doc = "Field `DCOL` reader - Data collision error"]
 pub struct DCOL_R(crate::FieldReader<bool, bool>);
 impl DCOL_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         DCOL_R(crate::FieldReader::new(bits))
     }
@@ -30,6 +31,7 @@ impl core::ops::Deref for DCOL_R {
 #[doc = "Field `TXE` reader - Transmission error"]
 pub struct TXE_R(crate::FieldReader<bool, bool>);
 impl TXE_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         TXE_R(crate::FieldReader::new(bits))
     }
@@ -44,6 +46,7 @@ impl core::ops::Deref for TXE_R {
 #[doc = "Field `RFF` reader - Receive FIFO full"]
 pub struct RFF_R(crate::FieldReader<bool, bool>);
 impl RFF_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         RFF_R(crate::FieldReader::new(bits))
     }
@@ -58,6 +61,7 @@ impl core::ops::Deref for RFF_R {
 #[doc = "Field `RFNE` reader - Receive FIFO not empty"]
 pub struct RFNE_R(crate::FieldReader<bool, bool>);
 impl RFNE_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         RFNE_R(crate::FieldReader::new(bits))
     }
@@ -72,6 +76,7 @@ impl core::ops::Deref for RFNE_R {
 #[doc = "Field `TFE` reader - Transmit FIFO empty"]
 pub struct TFE_R(crate::FieldReader<bool, bool>);
 impl TFE_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         TFE_R(crate::FieldReader::new(bits))
     }
@@ -86,6 +91,7 @@ impl core::ops::Deref for TFE_R {
 #[doc = "Field `TFNF` reader - Transmit FIFO not full"]
 pub struct TFNF_R(crate::FieldReader<bool, bool>);
 impl TFNF_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         TFNF_R(crate::FieldReader::new(bits))
     }
@@ -100,6 +106,7 @@ impl core::ops::Deref for TFNF_R {
 #[doc = "Field `BUSY` reader - SSI busy flag"]
 pub struct BUSY_R(crate::FieldReader<bool, bool>);
 impl BUSY_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         BUSY_R(crate::FieldReader::new(bits))
     }

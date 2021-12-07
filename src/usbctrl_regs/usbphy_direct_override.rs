@@ -37,6 +37,7 @@ impl From<crate::W<USBPHY_DIRECT_OVERRIDE_SPEC>> for W {
 #[doc = "Field `TX_DIFFMODE_OVERRIDE_EN` reader - "]
 pub struct TX_DIFFMODE_OVERRIDE_EN_R(crate::FieldReader<bool, bool>);
 impl TX_DIFFMODE_OVERRIDE_EN_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         TX_DIFFMODE_OVERRIDE_EN_R(crate::FieldReader::new(bits))
     }
@@ -73,6 +74,7 @@ impl<'a> TX_DIFFMODE_OVERRIDE_EN_W<'a> {
 #[doc = "Field `DM_PULLUP_OVERRIDE_EN` reader - "]
 pub struct DM_PULLUP_OVERRIDE_EN_R(crate::FieldReader<bool, bool>);
 impl DM_PULLUP_OVERRIDE_EN_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         DM_PULLUP_OVERRIDE_EN_R(crate::FieldReader::new(bits))
     }
@@ -109,6 +111,7 @@ impl<'a> DM_PULLUP_OVERRIDE_EN_W<'a> {
 #[doc = "Field `TX_FSSLEW_OVERRIDE_EN` reader - "]
 pub struct TX_FSSLEW_OVERRIDE_EN_R(crate::FieldReader<bool, bool>);
 impl TX_FSSLEW_OVERRIDE_EN_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         TX_FSSLEW_OVERRIDE_EN_R(crate::FieldReader::new(bits))
     }
@@ -145,6 +148,7 @@ impl<'a> TX_FSSLEW_OVERRIDE_EN_W<'a> {
 #[doc = "Field `TX_PD_OVERRIDE_EN` reader - "]
 pub struct TX_PD_OVERRIDE_EN_R(crate::FieldReader<bool, bool>);
 impl TX_PD_OVERRIDE_EN_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         TX_PD_OVERRIDE_EN_R(crate::FieldReader::new(bits))
     }
@@ -181,6 +185,7 @@ impl<'a> TX_PD_OVERRIDE_EN_W<'a> {
 #[doc = "Field `RX_PD_OVERRIDE_EN` reader - "]
 pub struct RX_PD_OVERRIDE_EN_R(crate::FieldReader<bool, bool>);
 impl RX_PD_OVERRIDE_EN_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         RX_PD_OVERRIDE_EN_R(crate::FieldReader::new(bits))
     }
@@ -217,6 +222,7 @@ impl<'a> RX_PD_OVERRIDE_EN_W<'a> {
 #[doc = "Field `TX_DM_OVERRIDE_EN` reader - "]
 pub struct TX_DM_OVERRIDE_EN_R(crate::FieldReader<bool, bool>);
 impl TX_DM_OVERRIDE_EN_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         TX_DM_OVERRIDE_EN_R(crate::FieldReader::new(bits))
     }
@@ -253,6 +259,7 @@ impl<'a> TX_DM_OVERRIDE_EN_W<'a> {
 #[doc = "Field `TX_DP_OVERRIDE_EN` reader - "]
 pub struct TX_DP_OVERRIDE_EN_R(crate::FieldReader<bool, bool>);
 impl TX_DP_OVERRIDE_EN_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         TX_DP_OVERRIDE_EN_R(crate::FieldReader::new(bits))
     }
@@ -289,6 +296,7 @@ impl<'a> TX_DP_OVERRIDE_EN_W<'a> {
 #[doc = "Field `TX_DM_OE_OVERRIDE_EN` reader - "]
 pub struct TX_DM_OE_OVERRIDE_EN_R(crate::FieldReader<bool, bool>);
 impl TX_DM_OE_OVERRIDE_EN_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         TX_DM_OE_OVERRIDE_EN_R(crate::FieldReader::new(bits))
     }
@@ -325,6 +333,7 @@ impl<'a> TX_DM_OE_OVERRIDE_EN_W<'a> {
 #[doc = "Field `TX_DP_OE_OVERRIDE_EN` reader - "]
 pub struct TX_DP_OE_OVERRIDE_EN_R(crate::FieldReader<bool, bool>);
 impl TX_DP_OE_OVERRIDE_EN_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         TX_DP_OE_OVERRIDE_EN_R(crate::FieldReader::new(bits))
     }
@@ -361,6 +370,7 @@ impl<'a> TX_DP_OE_OVERRIDE_EN_W<'a> {
 #[doc = "Field `DM_PULLDN_EN_OVERRIDE_EN` reader - "]
 pub struct DM_PULLDN_EN_OVERRIDE_EN_R(crate::FieldReader<bool, bool>);
 impl DM_PULLDN_EN_OVERRIDE_EN_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         DM_PULLDN_EN_OVERRIDE_EN_R(crate::FieldReader::new(bits))
     }
@@ -397,6 +407,7 @@ impl<'a> DM_PULLDN_EN_OVERRIDE_EN_W<'a> {
 #[doc = "Field `DP_PULLDN_EN_OVERRIDE_EN` reader - "]
 pub struct DP_PULLDN_EN_OVERRIDE_EN_R(crate::FieldReader<bool, bool>);
 impl DP_PULLDN_EN_OVERRIDE_EN_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         DP_PULLDN_EN_OVERRIDE_EN_R(crate::FieldReader::new(bits))
     }
@@ -433,6 +444,7 @@ impl<'a> DP_PULLDN_EN_OVERRIDE_EN_W<'a> {
 #[doc = "Field `DP_PULLUP_EN_OVERRIDE_EN` reader - "]
 pub struct DP_PULLUP_EN_OVERRIDE_EN_R(crate::FieldReader<bool, bool>);
 impl DP_PULLUP_EN_OVERRIDE_EN_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         DP_PULLUP_EN_OVERRIDE_EN_R(crate::FieldReader::new(bits))
     }
@@ -469,6 +481,7 @@ impl<'a> DP_PULLUP_EN_OVERRIDE_EN_W<'a> {
 #[doc = "Field `DM_PULLUP_HISEL_OVERRIDE_EN` reader - "]
 pub struct DM_PULLUP_HISEL_OVERRIDE_EN_R(crate::FieldReader<bool, bool>);
 impl DM_PULLUP_HISEL_OVERRIDE_EN_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         DM_PULLUP_HISEL_OVERRIDE_EN_R(crate::FieldReader::new(bits))
     }
@@ -505,6 +518,7 @@ impl<'a> DM_PULLUP_HISEL_OVERRIDE_EN_W<'a> {
 #[doc = "Field `DP_PULLUP_HISEL_OVERRIDE_EN` reader - "]
 pub struct DP_PULLUP_HISEL_OVERRIDE_EN_R(crate::FieldReader<bool, bool>);
 impl DP_PULLUP_HISEL_OVERRIDE_EN_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         DP_PULLUP_HISEL_OVERRIDE_EN_R(crate::FieldReader::new(bits))
     }

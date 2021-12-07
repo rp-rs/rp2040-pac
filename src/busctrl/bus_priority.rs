@@ -37,6 +37,7 @@ impl From<crate::W<BUS_PRIORITY_SPEC>> for W {
 #[doc = "Field `DMA_W` reader - 0 - low priority, 1 - high priority"]
 pub struct DMA_W_R(crate::FieldReader<bool, bool>);
 impl DMA_W_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         DMA_W_R(crate::FieldReader::new(bits))
     }
@@ -73,6 +74,7 @@ impl<'a> DMA_W_W<'a> {
 #[doc = "Field `DMA_R` reader - 0 - low priority, 1 - high priority"]
 pub struct DMA_R_R(crate::FieldReader<bool, bool>);
 impl DMA_R_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         DMA_R_R(crate::FieldReader::new(bits))
     }
@@ -109,6 +111,7 @@ impl<'a> DMA_R_W<'a> {
 #[doc = "Field `PROC1` reader - 0 - low priority, 1 - high priority"]
 pub struct PROC1_R(crate::FieldReader<bool, bool>);
 impl PROC1_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         PROC1_R(crate::FieldReader::new(bits))
     }
@@ -145,6 +148,7 @@ impl<'a> PROC1_W<'a> {
 #[doc = "Field `PROC0` reader - 0 - low priority, 1 - high priority"]
 pub struct PROC0_R(crate::FieldReader<bool, bool>);
 impl PROC0_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         PROC0_R(crate::FieldReader::new(bits))
     }

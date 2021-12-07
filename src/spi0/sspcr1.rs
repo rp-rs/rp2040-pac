@@ -37,6 +37,7 @@ impl From<crate::W<SSPCR1_SPEC>> for W {
 #[doc = "Field `SOD` reader - Slave-mode output disable. This bit is relevant only in the slave mode, MS=1. In multiple-slave systems, it is possible for an PrimeCell SSP master to broadcast a message to all slaves in the system while ensuring that only one slave drives data onto its serial output line. In such systems the RXD lines from multiple slaves could be tied together. To operate in such systems, the SOD bit can be set if the PrimeCell SSP slave is not supposed to drive the SSPTXD line: 0 SSP can drive the SSPTXD output in slave mode. 1 SSP must not drive the SSPTXD output in slave mode."]
 pub struct SOD_R(crate::FieldReader<bool, bool>);
 impl SOD_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         SOD_R(crate::FieldReader::new(bits))
     }
@@ -73,6 +74,7 @@ impl<'a> SOD_W<'a> {
 #[doc = "Field `MS` reader - Master or slave mode select. This bit can be modified only when the PrimeCell SSP is disabled, SSE=0: 0 Device configured as master, default. 1 Device configured as slave."]
 pub struct MS_R(crate::FieldReader<bool, bool>);
 impl MS_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         MS_R(crate::FieldReader::new(bits))
     }
@@ -109,6 +111,7 @@ impl<'a> MS_W<'a> {
 #[doc = "Field `SSE` reader - Synchronous serial port enable: 0 SSP operation disabled. 1 SSP operation enabled."]
 pub struct SSE_R(crate::FieldReader<bool, bool>);
 impl SSE_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         SSE_R(crate::FieldReader::new(bits))
     }
@@ -145,6 +148,7 @@ impl<'a> SSE_W<'a> {
 #[doc = "Field `LBM` reader - Loop back mode: 0 Normal serial port operation enabled. 1 Output of transmit serial shifter is connected to input of receive serial shifter internally."]
 pub struct LBM_R(crate::FieldReader<bool, bool>);
 impl LBM_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         LBM_R(crate::FieldReader::new(bits))
     }

@@ -39,6 +39,7 @@ impl From<crate::W<SER_SPEC>> for W {
  1 -> slave selected"]
 pub struct SER_R(crate::FieldReader<bool, bool>);
 impl SER_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         SER_R(crate::FieldReader::new(bits))
     }
@@ -75,14 +76,18 @@ impl<'a> SER_W<'a> {
     }
 }
 impl R {
-    #[doc = "Bit 0 - For each bit: 0 -> slave not selected 1 -> slave selected"]
+    #[doc = "Bit 0 - For each bit:  
+ 0 -> slave not selected  
+ 1 -> slave selected"]
     #[inline(always)]
     pub fn ser(&self) -> SER_R {
         SER_R::new((self.bits & 0x01) != 0)
     }
 }
 impl W {
-    #[doc = "Bit 0 - For each bit: 0 -> slave not selected 1 -> slave selected"]
+    #[doc = "Bit 0 - For each bit:  
+ 0 -> slave not selected  
+ 1 -> slave selected"]
     #[inline(always)]
     pub fn ser(&mut self) -> SER_W {
         SER_W { w: self }

@@ -37,6 +37,7 @@ impl From<crate::W<CTRLR0_SPEC>> for W {
 #[doc = "Field `SSTE` reader - Slave select toggle enable"]
 pub struct SSTE_R(crate::FieldReader<bool, bool>);
 impl SSTE_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         SSTE_R(crate::FieldReader::new(bits))
     }
@@ -92,6 +93,7 @@ impl From<SPI_FRF_A> for u8 {
 #[doc = "Field `SPI_FRF` reader - SPI frame format"]
 pub struct SPI_FRF_R(crate::FieldReader<u8, SPI_FRF_A>);
 impl SPI_FRF_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         SPI_FRF_R(crate::FieldReader::new(bits))
     }
@@ -164,6 +166,7 @@ impl<'a> SPI_FRF_W<'a> {
  Value of n -> n+1 clocks per frame."]
 pub struct DFS_32_R(crate::FieldReader<u8, u8>);
 impl DFS_32_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         DFS_32_R(crate::FieldReader::new(bits))
     }
@@ -192,6 +195,7 @@ impl<'a> DFS_32_W<'a> {
  Value of n -> n+1 clocks per frame."]
 pub struct CFS_R(crate::FieldReader<u8, u8>);
 impl CFS_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         CFS_R(crate::FieldReader::new(bits))
     }
@@ -219,6 +223,7 @@ impl<'a> CFS_W<'a> {
 #[doc = "Field `SRL` reader - Shift register loop (test mode)"]
 pub struct SRL_R(crate::FieldReader<bool, bool>);
 impl SRL_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         SRL_R(crate::FieldReader::new(bits))
     }
@@ -255,6 +260,7 @@ impl<'a> SRL_W<'a> {
 #[doc = "Field `SLV_OE` reader - Slave output enable"]
 pub struct SLV_OE_R(crate::FieldReader<bool, bool>);
 impl SLV_OE_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         SLV_OE_R(crate::FieldReader::new(bits))
     }
@@ -312,6 +318,7 @@ impl From<TMOD_A> for u8 {
 #[doc = "Field `TMOD` reader - Transfer mode"]
 pub struct TMOD_R(crate::FieldReader<u8, TMOD_A>);
 impl TMOD_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         TMOD_R(crate::FieldReader::new(bits))
     }
@@ -394,6 +401,7 @@ impl<'a> TMOD_W<'a> {
 #[doc = "Field `SCPOL` reader - Serial clock polarity"]
 pub struct SCPOL_R(crate::FieldReader<bool, bool>);
 impl SCPOL_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         SCPOL_R(crate::FieldReader::new(bits))
     }
@@ -430,6 +438,7 @@ impl<'a> SCPOL_W<'a> {
 #[doc = "Field `SCPH` reader - Serial clock phase"]
 pub struct SCPH_R(crate::FieldReader<bool, bool>);
 impl SCPH_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         SCPH_R(crate::FieldReader::new(bits))
     }
@@ -466,6 +475,7 @@ impl<'a> SCPH_W<'a> {
 #[doc = "Field `FRF` reader - Frame format"]
 pub struct FRF_R(crate::FieldReader<u8, u8>);
 impl FRF_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         FRF_R(crate::FieldReader::new(bits))
     }
@@ -492,6 +502,7 @@ impl<'a> FRF_W<'a> {
 #[doc = "Field `DFS` reader - Data frame size"]
 pub struct DFS_R(crate::FieldReader<u8, u8>);
 impl DFS_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         DFS_R(crate::FieldReader::new(bits))
     }
@@ -526,12 +537,14 @@ impl R {
     pub fn spi_frf(&self) -> SPI_FRF_R {
         SPI_FRF_R::new(((self.bits >> 21) & 0x03) as u8)
     }
-    #[doc = "Bits 16:20 - Data frame size in 32b transfer mode Value of n -> n+1 clocks per frame."]
+    #[doc = "Bits 16:20 - Data frame size in 32b transfer mode  
+ Value of n -> n+1 clocks per frame."]
     #[inline(always)]
     pub fn dfs_32(&self) -> DFS_32_R {
         DFS_32_R::new(((self.bits >> 16) & 0x1f) as u8)
     }
-    #[doc = "Bits 12:15 - Control frame size Value of n -> n+1 clocks per frame."]
+    #[doc = "Bits 12:15 - Control frame size  
+ Value of n -> n+1 clocks per frame."]
     #[inline(always)]
     pub fn cfs(&self) -> CFS_R {
         CFS_R::new(((self.bits >> 12) & 0x0f) as u8)
@@ -583,12 +596,14 @@ impl W {
     pub fn spi_frf(&mut self) -> SPI_FRF_W {
         SPI_FRF_W { w: self }
     }
-    #[doc = "Bits 16:20 - Data frame size in 32b transfer mode Value of n -> n+1 clocks per frame."]
+    #[doc = "Bits 16:20 - Data frame size in 32b transfer mode  
+ Value of n -> n+1 clocks per frame."]
     #[inline(always)]
     pub fn dfs_32(&mut self) -> DFS_32_W {
         DFS_32_W { w: self }
     }
-    #[doc = "Bits 12:15 - Control frame size Value of n -> n+1 clocks per frame."]
+    #[doc = "Bits 12:15 - Control frame size  
+ Value of n -> n+1 clocks per frame."]
     #[inline(always)]
     pub fn cfs(&mut self) -> CFS_W {
         CFS_W { w: self }
