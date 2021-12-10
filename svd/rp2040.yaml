@@ -539,6 +539,24 @@ IO_BANK0:
     "DORMANT_WAKE_INTF*": {}
     "DORMANT_WAKE_INTS*": {}
 
+  "GPIO*_CTRL":
+    _modify:
+      FUNCSEL:
+        description: "0-31 -> selects pin function according to the GPIO table. Not all options are valid for all GPIO pins."
+    FUNCSEL:
+      _replace_enum:
+        jtag: [0, "Connect to JTAG peripheral"]
+        spi: [1, "Connect to matching SPI peripheral"]
+        uart: [2, "Connect to matching UART peripheral"]
+        i2c: [3, "Connect to matching I2C peripheral"]
+        pwm: [4, "Connect to matching PWM peripheral"]
+        sio: [5, "Use as a GPIO pin (connect to SIO peripheral)"]
+        pio0: [6, "Connect to PIO0 peripheral"]
+        pio1: [7, "Connect to PIO1 peripheral"]
+        clock: [8, "Connect to Clock peripheral"]
+        usb: [9, "Connect to USB peripheral"]
+        "null": [31, "Connect to nothing"]
+
   _cluster:
     "GPIO%s":
       "GPIO*_STATUS": {}

@@ -450,32 +450,33 @@ impl<'a> OUTOVER_W<'a> {
         self.w
     }
 }
-#[doc = "0-31 -> selects pin function according to the gpio table  
- 31 == NULL  
+#[doc = "0-31 -> selects pin function according to the GPIO table. Not all options are valid for all GPIO pins.  
 
 Value on reset: 31"]
 #[derive(Clone, Copy, Debug, PartialEq)]
 #[repr(u8)]
 pub enum FUNCSEL_A {
-    #[doc = "0: `0`"]
-    JTAG_TCK = 0,
-    #[doc = "1: `1`"]
-    SPI0_RX = 1,
-    #[doc = "2: `10`"]
-    UART0_TX = 2,
-    #[doc = "3: `11`"]
-    I2C0_SDA = 3,
-    #[doc = "4: `100`"]
-    PWM_A_0 = 4,
-    #[doc = "5: `101`"]
-    SIO_0 = 5,
-    #[doc = "6: `110`"]
-    PIO0_0 = 6,
-    #[doc = "7: `111`"]
-    PIO1_0 = 7,
-    #[doc = "9: `1001`"]
-    USB_MUXING_OVERCURR_DETECT = 9,
-    #[doc = "31: `11111`"]
+    #[doc = "0: Connect to JTAG peripheral"]
+    JTAG = 0,
+    #[doc = "1: Connect to matching SPI peripheral"]
+    SPI = 1,
+    #[doc = "2: Connect to matching UART peripheral"]
+    UART = 2,
+    #[doc = "3: Connect to matching I2C peripheral"]
+    I2C = 3,
+    #[doc = "4: Connect to matching PWM peripheral"]
+    PWM = 4,
+    #[doc = "5: Use as a GPIO pin (connect to SIO peripheral)"]
+    SIO = 5,
+    #[doc = "6: Connect to PIO0 peripheral"]
+    PIO0 = 6,
+    #[doc = "7: Connect to PIO1 peripheral"]
+    PIO1 = 7,
+    #[doc = "8: Connect to Clock peripheral"]
+    CLOCK = 8,
+    #[doc = "9: Connect to USB peripheral"]
+    USB = 9,
+    #[doc = "31: Connect to nothing"]
     NULL = 31,
 }
 impl From<FUNCSEL_A> for u8 {
@@ -484,8 +485,7 @@ impl From<FUNCSEL_A> for u8 {
         variant as _
     }
 }
-#[doc = "Field `FUNCSEL` reader - 0-31 -> selects pin function according to the gpio table  
- 31 == NULL"]
+#[doc = "Field `FUNCSEL` reader - 0-31 -> selects pin function according to the GPIO table. Not all options are valid for all GPIO pins."]
 pub struct FUNCSEL_R(crate::FieldReader<u8, FUNCSEL_A>);
 impl FUNCSEL_R {
     #[inline(always)]
@@ -496,63 +496,69 @@ impl FUNCSEL_R {
     #[inline(always)]
     pub fn variant(&self) -> Option<FUNCSEL_A> {
         match self.bits {
-            0 => Some(FUNCSEL_A::JTAG_TCK),
-            1 => Some(FUNCSEL_A::SPI0_RX),
-            2 => Some(FUNCSEL_A::UART0_TX),
-            3 => Some(FUNCSEL_A::I2C0_SDA),
-            4 => Some(FUNCSEL_A::PWM_A_0),
-            5 => Some(FUNCSEL_A::SIO_0),
-            6 => Some(FUNCSEL_A::PIO0_0),
-            7 => Some(FUNCSEL_A::PIO1_0),
-            9 => Some(FUNCSEL_A::USB_MUXING_OVERCURR_DETECT),
+            0 => Some(FUNCSEL_A::JTAG),
+            1 => Some(FUNCSEL_A::SPI),
+            2 => Some(FUNCSEL_A::UART),
+            3 => Some(FUNCSEL_A::I2C),
+            4 => Some(FUNCSEL_A::PWM),
+            5 => Some(FUNCSEL_A::SIO),
+            6 => Some(FUNCSEL_A::PIO0),
+            7 => Some(FUNCSEL_A::PIO1),
+            8 => Some(FUNCSEL_A::CLOCK),
+            9 => Some(FUNCSEL_A::USB),
             31 => Some(FUNCSEL_A::NULL),
             _ => None,
         }
     }
-    #[doc = "Checks if the value of the field is `JTAG_TCK`"]
+    #[doc = "Checks if the value of the field is `JTAG`"]
     #[inline(always)]
-    pub fn is_jtag_tck(&self) -> bool {
-        **self == FUNCSEL_A::JTAG_TCK
+    pub fn is_jtag(&self) -> bool {
+        **self == FUNCSEL_A::JTAG
     }
-    #[doc = "Checks if the value of the field is `SPI0_RX`"]
+    #[doc = "Checks if the value of the field is `SPI`"]
     #[inline(always)]
-    pub fn is_spi0_rx(&self) -> bool {
-        **self == FUNCSEL_A::SPI0_RX
+    pub fn is_spi(&self) -> bool {
+        **self == FUNCSEL_A::SPI
     }
-    #[doc = "Checks if the value of the field is `UART0_TX`"]
+    #[doc = "Checks if the value of the field is `UART`"]
     #[inline(always)]
-    pub fn is_uart0_tx(&self) -> bool {
-        **self == FUNCSEL_A::UART0_TX
+    pub fn is_uart(&self) -> bool {
+        **self == FUNCSEL_A::UART
     }
-    #[doc = "Checks if the value of the field is `I2C0_SDA`"]
+    #[doc = "Checks if the value of the field is `I2C`"]
     #[inline(always)]
-    pub fn is_i2c0_sda(&self) -> bool {
-        **self == FUNCSEL_A::I2C0_SDA
+    pub fn is_i2c(&self) -> bool {
+        **self == FUNCSEL_A::I2C
     }
-    #[doc = "Checks if the value of the field is `PWM_A_0`"]
+    #[doc = "Checks if the value of the field is `PWM`"]
     #[inline(always)]
-    pub fn is_pwm_a_0(&self) -> bool {
-        **self == FUNCSEL_A::PWM_A_0
+    pub fn is_pwm(&self) -> bool {
+        **self == FUNCSEL_A::PWM
     }
-    #[doc = "Checks if the value of the field is `SIO_0`"]
+    #[doc = "Checks if the value of the field is `SIO`"]
     #[inline(always)]
-    pub fn is_sio_0(&self) -> bool {
-        **self == FUNCSEL_A::SIO_0
+    pub fn is_sio(&self) -> bool {
+        **self == FUNCSEL_A::SIO
     }
-    #[doc = "Checks if the value of the field is `PIO0_0`"]
+    #[doc = "Checks if the value of the field is `PIO0`"]
     #[inline(always)]
-    pub fn is_pio0_0(&self) -> bool {
-        **self == FUNCSEL_A::PIO0_0
+    pub fn is_pio0(&self) -> bool {
+        **self == FUNCSEL_A::PIO0
     }
-    #[doc = "Checks if the value of the field is `PIO1_0`"]
+    #[doc = "Checks if the value of the field is `PIO1`"]
     #[inline(always)]
-    pub fn is_pio1_0(&self) -> bool {
-        **self == FUNCSEL_A::PIO1_0
+    pub fn is_pio1(&self) -> bool {
+        **self == FUNCSEL_A::PIO1
     }
-    #[doc = "Checks if the value of the field is `USB_MUXING_OVERCURR_DETECT`"]
+    #[doc = "Checks if the value of the field is `CLOCK`"]
     #[inline(always)]
-    pub fn is_usb_muxing_overcurr_detect(&self) -> bool {
-        **self == FUNCSEL_A::USB_MUXING_OVERCURR_DETECT
+    pub fn is_clock(&self) -> bool {
+        **self == FUNCSEL_A::CLOCK
+    }
+    #[doc = "Checks if the value of the field is `USB`"]
+    #[inline(always)]
+    pub fn is_usb(&self) -> bool {
+        **self == FUNCSEL_A::USB
     }
     #[doc = "Checks if the value of the field is `NULL`"]
     #[inline(always)]
@@ -567,8 +573,7 @@ impl core::ops::Deref for FUNCSEL_R {
         &self.0
     }
 }
-#[doc = "Field `FUNCSEL` writer - 0-31 -> selects pin function according to the gpio table  
- 31 == NULL"]
+#[doc = "Field `FUNCSEL` writer - 0-31 -> selects pin function according to the GPIO table. Not all options are valid for all GPIO pins."]
 pub struct FUNCSEL_W<'a> {
     w: &'a mut W,
 }
@@ -578,52 +583,57 @@ impl<'a> FUNCSEL_W<'a> {
     pub fn variant(self, variant: FUNCSEL_A) -> &'a mut W {
         unsafe { self.bits(variant.into()) }
     }
-    #[doc = "`0`"]
+    #[doc = "Connect to JTAG peripheral"]
     #[inline(always)]
-    pub fn jtag_tck(self) -> &'a mut W {
-        self.variant(FUNCSEL_A::JTAG_TCK)
+    pub fn jtag(self) -> &'a mut W {
+        self.variant(FUNCSEL_A::JTAG)
     }
-    #[doc = "`1`"]
+    #[doc = "Connect to matching SPI peripheral"]
     #[inline(always)]
-    pub fn spi0_rx(self) -> &'a mut W {
-        self.variant(FUNCSEL_A::SPI0_RX)
+    pub fn spi(self) -> &'a mut W {
+        self.variant(FUNCSEL_A::SPI)
     }
-    #[doc = "`10`"]
+    #[doc = "Connect to matching UART peripheral"]
     #[inline(always)]
-    pub fn uart0_tx(self) -> &'a mut W {
-        self.variant(FUNCSEL_A::UART0_TX)
+    pub fn uart(self) -> &'a mut W {
+        self.variant(FUNCSEL_A::UART)
     }
-    #[doc = "`11`"]
+    #[doc = "Connect to matching I2C peripheral"]
     #[inline(always)]
-    pub fn i2c0_sda(self) -> &'a mut W {
-        self.variant(FUNCSEL_A::I2C0_SDA)
+    pub fn i2c(self) -> &'a mut W {
+        self.variant(FUNCSEL_A::I2C)
     }
-    #[doc = "`100`"]
+    #[doc = "Connect to matching PWM peripheral"]
     #[inline(always)]
-    pub fn pwm_a_0(self) -> &'a mut W {
-        self.variant(FUNCSEL_A::PWM_A_0)
+    pub fn pwm(self) -> &'a mut W {
+        self.variant(FUNCSEL_A::PWM)
     }
-    #[doc = "`101`"]
+    #[doc = "Use as a GPIO pin (connect to SIO peripheral)"]
     #[inline(always)]
-    pub fn sio_0(self) -> &'a mut W {
-        self.variant(FUNCSEL_A::SIO_0)
+    pub fn sio(self) -> &'a mut W {
+        self.variant(FUNCSEL_A::SIO)
     }
-    #[doc = "`110`"]
+    #[doc = "Connect to PIO0 peripheral"]
     #[inline(always)]
-    pub fn pio0_0(self) -> &'a mut W {
-        self.variant(FUNCSEL_A::PIO0_0)
+    pub fn pio0(self) -> &'a mut W {
+        self.variant(FUNCSEL_A::PIO0)
     }
-    #[doc = "`111`"]
+    #[doc = "Connect to PIO1 peripheral"]
     #[inline(always)]
-    pub fn pio1_0(self) -> &'a mut W {
-        self.variant(FUNCSEL_A::PIO1_0)
+    pub fn pio1(self) -> &'a mut W {
+        self.variant(FUNCSEL_A::PIO1)
     }
-    #[doc = "`1001`"]
+    #[doc = "Connect to Clock peripheral"]
     #[inline(always)]
-    pub fn usb_muxing_overcurr_detect(self) -> &'a mut W {
-        self.variant(FUNCSEL_A::USB_MUXING_OVERCURR_DETECT)
+    pub fn clock(self) -> &'a mut W {
+        self.variant(FUNCSEL_A::CLOCK)
     }
-    #[doc = "`11111`"]
+    #[doc = "Connect to USB peripheral"]
+    #[inline(always)]
+    pub fn usb(self) -> &'a mut W {
+        self.variant(FUNCSEL_A::USB)
+    }
+    #[doc = "Connect to nothing"]
     #[inline(always)]
     pub fn null(self) -> &'a mut W {
         self.variant(FUNCSEL_A::NULL)
@@ -656,8 +666,7 @@ impl R {
     pub fn outover(&self) -> OUTOVER_R {
         OUTOVER_R::new(((self.bits >> 8) & 0x03) as u8)
     }
-    #[doc = "Bits 0:4 - 0-31 -> selects pin function according to the gpio table  
- 31 == NULL"]
+    #[doc = "Bits 0:4 - 0-31 -> selects pin function according to the GPIO table. Not all options are valid for all GPIO pins."]
     #[inline(always)]
     pub fn funcsel(&self) -> FUNCSEL_R {
         FUNCSEL_R::new((self.bits & 0x1f) as u8)
@@ -684,8 +693,7 @@ impl W {
     pub fn outover(&mut self) -> OUTOVER_W {
         OUTOVER_W { w: self }
     }
-    #[doc = "Bits 0:4 - 0-31 -> selects pin function according to the gpio table  
- 31 == NULL"]
+    #[doc = "Bits 0:4 - 0-31 -> selects pin function according to the GPIO table. Not all options are valid for all GPIO pins."]
     #[inline(always)]
     pub fn funcsel(&mut self) -> FUNCSEL_W {
         FUNCSEL_W { w: self }

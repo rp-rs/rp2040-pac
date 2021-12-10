@@ -4257,53 +4257,11 @@
               </field>
             <field>
               <name>FUNCSEL</name>
-            <description>0-31 -&gt; selects pin function according to the gpio table\n
-                31 == NULL</description>
+            <description>0-31 -&gt; selects pin function according to the GPIO table. Not all options are valid for all GPIO pins.</description>
               <bitRange>[4:0]</bitRange>
               <access>read-write</access>
-              <enumeratedValues>
-                <enumeratedValue>
-                  <name>jtag_tck</name>
-                  <value>0</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>spi0_rx</name>
-                  <value>1</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>uart0_tx</name>
-                  <value>2</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>i2c0_sda</name>
-                  <value>3</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>pwm_a_0</name>
-                  <value>4</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>sio_0</name>
-                  <value>5</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>pio0_0</name>
-                  <value>6</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>pio1_0</name>
-                  <value>7</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>usb_muxing_overcurr_detect</name>
-                  <value>9</value>
-                </enumeratedValue>
-                <enumeratedValue>
-                  <name>null</name>
-                  <value>31</value>
-                </enumeratedValue>
-              </enumeratedValues>
-              </field>
+              <enumeratedValues><name>FUNCSEL</name><usage>read-write</usage><enumeratedValue><name>jtag</name><description>Connect to JTAG peripheral</description><value>0</value></enumeratedValue><enumeratedValue><name>spi</name><description>Connect to matching SPI peripheral</description><value>1</value></enumeratedValue><enumeratedValue><name>uart</name><description>Connect to matching UART peripheral</description><value>2</value></enumeratedValue><enumeratedValue><name>i2c</name><description>Connect to matching I2C peripheral</description><value>3</value></enumeratedValue><enumeratedValue><name>pwm</name><description>Connect to matching PWM peripheral</description><value>4</value></enumeratedValue><enumeratedValue><name>sio</name><description>Use as a GPIO pin (connect to SIO peripheral)</description><value>5</value></enumeratedValue><enumeratedValue><name>pio0</name><description>Connect to PIO0 peripheral</description><value>6</value></enumeratedValue><enumeratedValue><name>pio1</name><description>Connect to PIO1 peripheral</description><value>7</value></enumeratedValue><enumeratedValue><name>clock</name><description>Connect to Clock peripheral</description><value>8</value></enumeratedValue><enumeratedValue><name>usb</name><description>Connect to USB peripheral</description><value>9</value></enumeratedValue><enumeratedValue><name>null</name><description>Connect to nothing</description><value>31</value></enumeratedValue></enumeratedValues>
+            </field>
           </fields>
           </register>
         </cluster><register>
