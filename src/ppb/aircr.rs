@@ -39,6 +39,7 @@ impl From<crate::W<AIRCR_SPEC>> for W {
  On writes, write 0x05FA to VECTKEY, otherwise the write is ignored."]
 pub struct VECTKEY_R(crate::FieldReader<u16, u16>);
 impl VECTKEY_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u16) -> Self {
         VECTKEY_R(crate::FieldReader::new(bits))
     }
@@ -68,6 +69,7 @@ impl<'a> VECTKEY_W<'a> {
  0 = Little-endian."]
 pub struct ENDIANESS_R(crate::FieldReader<bool, bool>);
 impl ENDIANESS_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         ENDIANESS_R(crate::FieldReader::new(bits))
     }
@@ -82,6 +84,7 @@ impl core::ops::Deref for ENDIANESS_R {
 #[doc = "Field `SYSRESETREQ` reader - Writing 1 to this bit causes the SYSRESETREQ signal to the outer system to be asserted to request a reset. The intention is to force a large system reset of all major components except for debug. The C_HALT bit in the DHCSR is cleared as a result of the system reset requested. The debugger does not lose contact with the device."]
 pub struct SYSRESETREQ_R(crate::FieldReader<bool, bool>);
 impl SYSRESETREQ_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         SYSRESETREQ_R(crate::FieldReader::new(bits))
     }
@@ -118,6 +121,7 @@ impl<'a> SYSRESETREQ_W<'a> {
 #[doc = "Field `VECTCLRACTIVE` reader - Clears all active state information for fixed and configurable exceptions. This bit: is self-clearing, can only be set by the DAP when the core is halted. When set: clears all active exception status of the processor, forces a return to Thread mode, forces an IPSR of 0. A debugger must re-initialize the stack."]
 pub struct VECTCLRACTIVE_R(crate::FieldReader<bool, bool>);
 impl VECTCLRACTIVE_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         VECTCLRACTIVE_R(crate::FieldReader::new(bits))
     }
@@ -152,12 +156,15 @@ impl<'a> VECTCLRACTIVE_W<'a> {
     }
 }
 impl R {
-    #[doc = "Bits 16:31 - Register key: Reads as Unknown On writes, write 0x05FA to VECTKEY, otherwise the write is ignored."]
+    #[doc = "Bits 16:31 - Register key:  
+ Reads as Unknown  
+ On writes, write 0x05FA to VECTKEY, otherwise the write is ignored."]
     #[inline(always)]
     pub fn vectkey(&self) -> VECTKEY_R {
         VECTKEY_R::new(((self.bits >> 16) & 0xffff) as u16)
     }
-    #[doc = "Bit 15 - Data endianness implemented: 0 = Little-endian."]
+    #[doc = "Bit 15 - Data endianness implemented:  
+ 0 = Little-endian."]
     #[inline(always)]
     pub fn endianess(&self) -> ENDIANESS_R {
         ENDIANESS_R::new(((self.bits >> 15) & 0x01) != 0)
@@ -174,7 +181,9 @@ impl R {
     }
 }
 impl W {
-    #[doc = "Bits 16:31 - Register key: Reads as Unknown On writes, write 0x05FA to VECTKEY, otherwise the write is ignored."]
+    #[doc = "Bits 16:31 - Register key:  
+ Reads as Unknown  
+ On writes, write 0x05FA to VECTKEY, otherwise the write is ignored."]
     #[inline(always)]
     pub fn vectkey(&mut self) -> VECTKEY_W {
         VECTKEY_W { w: self }

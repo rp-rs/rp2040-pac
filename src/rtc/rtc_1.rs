@@ -16,6 +16,7 @@ impl From<crate::R<RTC_1_SPEC>> for R {
 #[doc = "Field `YEAR` reader - Year"]
 pub struct YEAR_R(crate::FieldReader<u16, u16>);
 impl YEAR_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u16) -> Self {
         YEAR_R(crate::FieldReader::new(bits))
     }
@@ -30,6 +31,7 @@ impl core::ops::Deref for YEAR_R {
 #[doc = "Field `MONTH` reader - Month (1..12)"]
 pub struct MONTH_R(crate::FieldReader<u8, u8>);
 impl MONTH_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         MONTH_R(crate::FieldReader::new(bits))
     }
@@ -44,6 +46,7 @@ impl core::ops::Deref for MONTH_R {
 #[doc = "Field `DAY` reader - Day of the month (1..31)"]
 pub struct DAY_R(crate::FieldReader<u8, u8>);
 impl DAY_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         DAY_R(crate::FieldReader::new(bits))
     }

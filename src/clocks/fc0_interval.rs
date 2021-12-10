@@ -37,6 +37,7 @@ impl From<crate::W<FC0_INTERVAL_SPEC>> for W {
 #[doc = "Field `FC0_INTERVAL` reader - "]
 pub struct FC0_INTERVAL_R(crate::FieldReader<u8, u8>);
 impl FC0_INTERVAL_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         FC0_INTERVAL_R(crate::FieldReader::new(bits))
     }

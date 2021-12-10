@@ -37,6 +37,7 @@ impl From<crate::W<SIE_CTRL_SPEC>> for W {
 #[doc = "Field `EP0_INT_STALL` reader - Device: Set bit in EP_STATUS_STALL_NAK when EP0 sends a STALL"]
 pub struct EP0_INT_STALL_R(crate::FieldReader<bool, bool>);
 impl EP0_INT_STALL_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         EP0_INT_STALL_R(crate::FieldReader::new(bits))
     }
@@ -73,6 +74,7 @@ impl<'a> EP0_INT_STALL_W<'a> {
 #[doc = "Field `EP0_DOUBLE_BUF` reader - Device: EP0 single buffered = 0, double buffered = 1"]
 pub struct EP0_DOUBLE_BUF_R(crate::FieldReader<bool, bool>);
 impl EP0_DOUBLE_BUF_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         EP0_DOUBLE_BUF_R(crate::FieldReader::new(bits))
     }
@@ -109,6 +111,7 @@ impl<'a> EP0_DOUBLE_BUF_W<'a> {
 #[doc = "Field `EP0_INT_1BUF` reader - Device: Set bit in BUFF_STATUS for every buffer completed on EP0"]
 pub struct EP0_INT_1BUF_R(crate::FieldReader<bool, bool>);
 impl EP0_INT_1BUF_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         EP0_INT_1BUF_R(crate::FieldReader::new(bits))
     }
@@ -145,6 +148,7 @@ impl<'a> EP0_INT_1BUF_W<'a> {
 #[doc = "Field `EP0_INT_2BUF` reader - Device: Set bit in BUFF_STATUS for every 2 buffers completed on EP0"]
 pub struct EP0_INT_2BUF_R(crate::FieldReader<bool, bool>);
 impl EP0_INT_2BUF_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         EP0_INT_2BUF_R(crate::FieldReader::new(bits))
     }
@@ -181,6 +185,7 @@ impl<'a> EP0_INT_2BUF_W<'a> {
 #[doc = "Field `EP0_INT_NAK` reader - Device: Set bit in EP_STATUS_STALL_NAK when EP0 sends a NAK"]
 pub struct EP0_INT_NAK_R(crate::FieldReader<bool, bool>);
 impl EP0_INT_NAK_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         EP0_INT_NAK_R(crate::FieldReader::new(bits))
     }
@@ -217,6 +222,7 @@ impl<'a> EP0_INT_NAK_W<'a> {
 #[doc = "Field `DIRECT_EN` reader - Direct bus drive enable"]
 pub struct DIRECT_EN_R(crate::FieldReader<bool, bool>);
 impl DIRECT_EN_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         DIRECT_EN_R(crate::FieldReader::new(bits))
     }
@@ -253,6 +259,7 @@ impl<'a> DIRECT_EN_W<'a> {
 #[doc = "Field `DIRECT_DP` reader - Direct control of DP"]
 pub struct DIRECT_DP_R(crate::FieldReader<bool, bool>);
 impl DIRECT_DP_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         DIRECT_DP_R(crate::FieldReader::new(bits))
     }
@@ -289,6 +296,7 @@ impl<'a> DIRECT_DP_W<'a> {
 #[doc = "Field `DIRECT_DM` reader - Direct control of DM"]
 pub struct DIRECT_DM_R(crate::FieldReader<bool, bool>);
 impl DIRECT_DM_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         DIRECT_DM_R(crate::FieldReader::new(bits))
     }
@@ -325,6 +333,7 @@ impl<'a> DIRECT_DM_W<'a> {
 #[doc = "Field `TRANSCEIVER_PD` reader - Power down bus transceiver"]
 pub struct TRANSCEIVER_PD_R(crate::FieldReader<bool, bool>);
 impl TRANSCEIVER_PD_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         TRANSCEIVER_PD_R(crate::FieldReader::new(bits))
     }
@@ -361,6 +370,7 @@ impl<'a> TRANSCEIVER_PD_W<'a> {
 #[doc = "Field `RPU_OPT` reader - Device: Pull-up strength (0=1K2, 1=2k3)"]
 pub struct RPU_OPT_R(crate::FieldReader<bool, bool>);
 impl RPU_OPT_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         RPU_OPT_R(crate::FieldReader::new(bits))
     }
@@ -397,6 +407,7 @@ impl<'a> RPU_OPT_W<'a> {
 #[doc = "Field `PULLUP_EN` reader - Device: Enable pull up resistor"]
 pub struct PULLUP_EN_R(crate::FieldReader<bool, bool>);
 impl PULLUP_EN_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         PULLUP_EN_R(crate::FieldReader::new(bits))
     }
@@ -433,6 +444,7 @@ impl<'a> PULLUP_EN_W<'a> {
 #[doc = "Field `PULLDOWN_EN` reader - Host: Enable pull down resistors"]
 pub struct PULLDOWN_EN_R(crate::FieldReader<bool, bool>);
 impl PULLDOWN_EN_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         PULLDOWN_EN_R(crate::FieldReader::new(bits))
     }
@@ -469,6 +481,7 @@ impl<'a> PULLDOWN_EN_W<'a> {
 #[doc = "Field `RESET_BUS` reader - Host: Reset bus"]
 pub struct RESET_BUS_R(crate::FieldReader<bool, bool>);
 impl RESET_BUS_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         RESET_BUS_R(crate::FieldReader::new(bits))
     }
@@ -505,6 +518,7 @@ impl<'a> RESET_BUS_W<'a> {
 #[doc = "Field `RESUME` reader - Device: Remote wakeup. Device can initiate its own resume after suspend."]
 pub struct RESUME_R(crate::FieldReader<bool, bool>);
 impl RESUME_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         RESUME_R(crate::FieldReader::new(bits))
     }
@@ -541,6 +555,7 @@ impl<'a> RESUME_W<'a> {
 #[doc = "Field `VBUS_EN` reader - Host: Enable VBUS"]
 pub struct VBUS_EN_R(crate::FieldReader<bool, bool>);
 impl VBUS_EN_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         VBUS_EN_R(crate::FieldReader::new(bits))
     }
@@ -577,6 +592,7 @@ impl<'a> VBUS_EN_W<'a> {
 #[doc = "Field `KEEP_ALIVE_EN` reader - Host: Enable keep alive packet (for low speed bus)"]
 pub struct KEEP_ALIVE_EN_R(crate::FieldReader<bool, bool>);
 impl KEEP_ALIVE_EN_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         KEEP_ALIVE_EN_R(crate::FieldReader::new(bits))
     }
@@ -613,6 +629,7 @@ impl<'a> KEEP_ALIVE_EN_W<'a> {
 #[doc = "Field `SOF_EN` reader - Host: Enable SOF generation (for full speed bus)"]
 pub struct SOF_EN_R(crate::FieldReader<bool, bool>);
 impl SOF_EN_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         SOF_EN_R(crate::FieldReader::new(bits))
     }
@@ -649,6 +666,7 @@ impl<'a> SOF_EN_W<'a> {
 #[doc = "Field `SOF_SYNC` reader - Host: Delay packet(s) until after SOF"]
 pub struct SOF_SYNC_R(crate::FieldReader<bool, bool>);
 impl SOF_SYNC_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         SOF_SYNC_R(crate::FieldReader::new(bits))
     }
@@ -685,6 +703,7 @@ impl<'a> SOF_SYNC_W<'a> {
 #[doc = "Field `PREAMBLE_EN` reader - Host: Preable enable for LS device on FS hub"]
 pub struct PREAMBLE_EN_R(crate::FieldReader<bool, bool>);
 impl PREAMBLE_EN_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         PREAMBLE_EN_R(crate::FieldReader::new(bits))
     }
@@ -721,6 +740,7 @@ impl<'a> PREAMBLE_EN_W<'a> {
 #[doc = "Field `STOP_TRANS` reader - Host: Stop transaction"]
 pub struct STOP_TRANS_R(crate::FieldReader<bool, bool>);
 impl STOP_TRANS_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         STOP_TRANS_R(crate::FieldReader::new(bits))
     }
@@ -757,6 +777,7 @@ impl<'a> STOP_TRANS_W<'a> {
 #[doc = "Field `RECEIVE_DATA` reader - Host: Receive transaction (IN to host)"]
 pub struct RECEIVE_DATA_R(crate::FieldReader<bool, bool>);
 impl RECEIVE_DATA_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         RECEIVE_DATA_R(crate::FieldReader::new(bits))
     }
@@ -793,6 +814,7 @@ impl<'a> RECEIVE_DATA_W<'a> {
 #[doc = "Field `SEND_DATA` reader - Host: Send transaction (OUT from host)"]
 pub struct SEND_DATA_R(crate::FieldReader<bool, bool>);
 impl SEND_DATA_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         SEND_DATA_R(crate::FieldReader::new(bits))
     }
@@ -829,6 +851,7 @@ impl<'a> SEND_DATA_W<'a> {
 #[doc = "Field `SEND_SETUP` reader - Host: Send Setup packet"]
 pub struct SEND_SETUP_R(crate::FieldReader<bool, bool>);
 impl SEND_SETUP_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         SEND_SETUP_R(crate::FieldReader::new(bits))
     }
@@ -865,6 +888,7 @@ impl<'a> SEND_SETUP_W<'a> {
 #[doc = "Field `START_TRANS` reader - Host: Start transaction"]
 pub struct START_TRANS_R(crate::FieldReader<bool, bool>);
 impl START_TRANS_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         START_TRANS_R(crate::FieldReader::new(bits))
     }

@@ -37,6 +37,7 @@ impl From<crate::W<SETUP_PACKET_LOW_SPEC>> for W {
 #[doc = "Field `WVALUE` reader - "]
 pub struct WVALUE_R(crate::FieldReader<u16, u16>);
 impl WVALUE_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u16) -> Self {
         WVALUE_R(crate::FieldReader::new(bits))
     }
@@ -63,6 +64,7 @@ impl<'a> WVALUE_W<'a> {
 #[doc = "Field `BREQUEST` reader - "]
 pub struct BREQUEST_R(crate::FieldReader<u8, u8>);
 impl BREQUEST_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         BREQUEST_R(crate::FieldReader::new(bits))
     }
@@ -89,6 +91,7 @@ impl<'a> BREQUEST_W<'a> {
 #[doc = "Field `BMREQUESTTYPE` reader - "]
 pub struct BMREQUESTTYPE_R(crate::FieldReader<u8, u8>);
 impl BMREQUESTTYPE_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         BMREQUESTTYPE_R(crate::FieldReader::new(bits))
     }

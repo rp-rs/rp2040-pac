@@ -16,6 +16,7 @@ impl From<crate::R<RXUICR_SPEC>> for R {
 #[doc = "Field `RXUICR` reader - Clear-on-read receive FIFO underflow interrupt"]
 pub struct RXUICR_R(crate::FieldReader<bool, bool>);
 impl RXUICR_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         RXUICR_R(crate::FieldReader::new(bits))
     }

@@ -37,6 +37,7 @@ impl From<crate::W<INTE1_SPEC>> for W {
 #[doc = "Field `INTE1` reader - Set bit n to pass interrupts from channel n to DMA IRQ 1."]
 pub struct INTE1_R(crate::FieldReader<u16, u16>);
 impl INTE1_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u16) -> Self {
         INTE1_R(crate::FieldReader::new(bits))
     }

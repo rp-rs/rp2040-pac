@@ -37,6 +37,7 @@ impl From<crate::W<SSPCR0_SPEC>> for W {
 #[doc = "Field `SCR` reader - Serial clock rate. The value SCR is used to generate the transmit and receive bit rate of the PrimeCell SSP. The bit rate is: F SSPCLK CPSDVSR x (1+SCR) where CPSDVSR is an even value from 2-254, programmed through the SSPCPSR register and SCR is a value from 0-255."]
 pub struct SCR_R(crate::FieldReader<u8, u8>);
 impl SCR_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         SCR_R(crate::FieldReader::new(bits))
     }
@@ -63,6 +64,7 @@ impl<'a> SCR_W<'a> {
 #[doc = "Field `SPH` reader - SSPCLKOUT phase, applicable to Motorola SPI frame format only. See Motorola SPI frame format on page 2-10."]
 pub struct SPH_R(crate::FieldReader<bool, bool>);
 impl SPH_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         SPH_R(crate::FieldReader::new(bits))
     }
@@ -99,6 +101,7 @@ impl<'a> SPH_W<'a> {
 #[doc = "Field `SPO` reader - SSPCLKOUT polarity, applicable to Motorola SPI frame format only. See Motorola SPI frame format on page 2-10."]
 pub struct SPO_R(crate::FieldReader<bool, bool>);
 impl SPO_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         SPO_R(crate::FieldReader::new(bits))
     }
@@ -135,6 +138,7 @@ impl<'a> SPO_W<'a> {
 #[doc = "Field `FRF` reader - Frame format: 00 Motorola SPI frame format. 01 TI synchronous serial frame format. 10 National Microwire frame format. 11 Reserved, undefined operation."]
 pub struct FRF_R(crate::FieldReader<u8, u8>);
 impl FRF_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         FRF_R(crate::FieldReader::new(bits))
     }
@@ -161,6 +165,7 @@ impl<'a> FRF_W<'a> {
 #[doc = "Field `DSS` reader - Data Size Select: 0000 Reserved, undefined operation. 0001 Reserved, undefined operation. 0010 Reserved, undefined operation. 0011 4-bit data. 0100 5-bit data. 0101 6-bit data. 0110 7-bit data. 0111 8-bit data. 1000 9-bit data. 1001 10-bit data. 1010 11-bit data. 1011 12-bit data. 1100 13-bit data. 1101 14-bit data. 1110 15-bit data. 1111 16-bit data."]
 pub struct DSS_R(crate::FieldReader<u8, u8>);
 impl DSS_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         DSS_R(crate::FieldReader::new(bits))
     }

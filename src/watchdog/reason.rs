@@ -16,6 +16,7 @@ impl From<crate::R<REASON_SPEC>> for R {
 #[doc = "Field `FORCE` reader - "]
 pub struct FORCE_R(crate::FieldReader<bool, bool>);
 impl FORCE_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         FORCE_R(crate::FieldReader::new(bits))
     }
@@ -30,6 +31,7 @@ impl core::ops::Deref for FORCE_R {
 #[doc = "Field `TIMER` reader - "]
 pub struct TIMER_R(crate::FieldReader<bool, bool>);
 impl TIMER_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         TIMER_R(crate::FieldReader::new(bits))
     }

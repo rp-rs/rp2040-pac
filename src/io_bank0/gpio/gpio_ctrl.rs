@@ -58,6 +58,7 @@ impl From<IRQOVER_A> for u8 {
 #[doc = "Field `IRQOVER` reader - "]
 pub struct IRQOVER_R(crate::FieldReader<u8, IRQOVER_A>);
 impl IRQOVER_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         IRQOVER_R(crate::FieldReader::new(bits))
     }
@@ -161,6 +162,7 @@ impl From<INOVER_A> for u8 {
 #[doc = "Field `INOVER` reader - "]
 pub struct INOVER_R(crate::FieldReader<u8, INOVER_A>);
 impl INOVER_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         INOVER_R(crate::FieldReader::new(bits))
     }
@@ -264,6 +266,7 @@ impl From<OEOVER_A> for u8 {
 #[doc = "Field `OEOVER` reader - "]
 pub struct OEOVER_R(crate::FieldReader<u8, OEOVER_A>);
 impl OEOVER_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         OEOVER_R(crate::FieldReader::new(bits))
     }
@@ -367,6 +370,7 @@ impl From<OUTOVER_A> for u8 {
 #[doc = "Field `OUTOVER` reader - "]
 pub struct OUTOVER_R(crate::FieldReader<u8, OUTOVER_A>);
 impl OUTOVER_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         OUTOVER_R(crate::FieldReader::new(bits))
     }
@@ -484,6 +488,7 @@ impl From<FUNCSEL_A> for u8 {
  31 == NULL"]
 pub struct FUNCSEL_R(crate::FieldReader<u8, FUNCSEL_A>);
 impl FUNCSEL_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         FUNCSEL_R(crate::FieldReader::new(bits))
     }
@@ -651,7 +656,8 @@ impl R {
     pub fn outover(&self) -> OUTOVER_R {
         OUTOVER_R::new(((self.bits >> 8) & 0x03) as u8)
     }
-    #[doc = "Bits 0:4 - 0-31 -> selects pin function according to the gpio table 31 == NULL"]
+    #[doc = "Bits 0:4 - 0-31 -> selects pin function according to the gpio table  
+ 31 == NULL"]
     #[inline(always)]
     pub fn funcsel(&self) -> FUNCSEL_R {
         FUNCSEL_R::new((self.bits & 0x1f) as u8)
@@ -678,7 +684,8 @@ impl W {
     pub fn outover(&mut self) -> OUTOVER_W {
         OUTOVER_W { w: self }
     }
-    #[doc = "Bits 0:4 - 0-31 -> selects pin function according to the gpio table 31 == NULL"]
+    #[doc = "Bits 0:4 - 0-31 -> selects pin function according to the gpio table  
+ 31 == NULL"]
     #[inline(always)]
     pub fn funcsel(&mut self) -> FUNCSEL_W {
         FUNCSEL_W { w: self }

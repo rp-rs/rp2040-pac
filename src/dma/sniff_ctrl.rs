@@ -37,6 +37,7 @@ impl From<crate::W<SNIFF_CTRL_SPEC>> for W {
 #[doc = "Field `OUT_INV` reader - If set, the result appears inverted (bitwise complement) when read. This does not affect the way the checksum is calculated; the result is transformed on-the-fly between the result register and the bus."]
 pub struct OUT_INV_R(crate::FieldReader<bool, bool>);
 impl OUT_INV_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         OUT_INV_R(crate::FieldReader::new(bits))
     }
@@ -73,6 +74,7 @@ impl<'a> OUT_INV_W<'a> {
 #[doc = "Field `OUT_REV` reader - If set, the result appears bit-reversed when read. This does not affect the way the checksum is calculated; the result is transformed on-the-fly between the result register and the bus."]
 pub struct OUT_REV_R(crate::FieldReader<bool, bool>);
 impl OUT_REV_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         OUT_REV_R(crate::FieldReader::new(bits))
     }
@@ -111,6 +113,7 @@ impl<'a> OUT_REV_W<'a> {
  Note that the sniff hardware is downstream of the DMA channel byteswap performed in the read master: if channel CTRL_BSWAP and SNIFF_CTRL_BSWAP are both enabled, their effects cancel from the sniffer's point of view."]
 pub struct BSWAP_R(crate::FieldReader<bool, bool>);
 impl BSWAP_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         BSWAP_R(crate::FieldReader::new(bits))
     }
@@ -174,6 +177,7 @@ impl From<CALC_A> for u8 {
 #[doc = "Field `CALC` reader - "]
 pub struct CALC_R(crate::FieldReader<u8, CALC_A>);
 impl CALC_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         CALC_R(crate::FieldReader::new(bits))
     }
@@ -278,6 +282,7 @@ impl<'a> CALC_W<'a> {
 #[doc = "Field `DMACH` reader - DMA channel for Sniffer to observe"]
 pub struct DMACH_R(crate::FieldReader<u8, u8>);
 impl DMACH_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         DMACH_R(crate::FieldReader::new(bits))
     }
@@ -304,6 +309,7 @@ impl<'a> DMACH_W<'a> {
 #[doc = "Field `EN` reader - Enable sniffer"]
 pub struct EN_R(crate::FieldReader<bool, bool>);
 impl EN_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         EN_R(crate::FieldReader::new(bits))
     }
@@ -348,7 +354,9 @@ impl R {
     pub fn out_rev(&self) -> OUT_REV_R {
         OUT_REV_R::new(((self.bits >> 10) & 0x01) != 0)
     }
-    #[doc = "Bit 9 - Locally perform a byte reverse on the sniffed data, before feeding into checksum. Note that the sniff hardware is downstream of the DMA channel byteswap performed in the read master: if channel CTRL_BSWAP and SNIFF_CTRL_BSWAP are both enabled, their effects cancel from the sniffer's point of view."]
+    #[doc = "Bit 9 - Locally perform a byte reverse on the sniffed data, before feeding into checksum.  
+
+ Note that the sniff hardware is downstream of the DMA channel byteswap performed in the read master: if channel CTRL_BSWAP and SNIFF_CTRL_BSWAP are both enabled, their effects cancel from the sniffer's point of view."]
     #[inline(always)]
     pub fn bswap(&self) -> BSWAP_R {
         BSWAP_R::new(((self.bits >> 9) & 0x01) != 0)
@@ -380,7 +388,9 @@ impl W {
     pub fn out_rev(&mut self) -> OUT_REV_W {
         OUT_REV_W { w: self }
     }
-    #[doc = "Bit 9 - Locally perform a byte reverse on the sniffed data, before feeding into checksum. Note that the sniff hardware is downstream of the DMA channel byteswap performed in the read master: if channel CTRL_BSWAP and SNIFF_CTRL_BSWAP are both enabled, their effects cancel from the sniffer's point of view."]
+    #[doc = "Bit 9 - Locally perform a byte reverse on the sniffed data, before feeding into checksum.  
+
+ Note that the sniff hardware is downstream of the DMA channel byteswap performed in the read master: if channel CTRL_BSWAP and SNIFF_CTRL_BSWAP are both enabled, their effects cancel from the sniffer's point of view."]
     #[inline(always)]
     pub fn bswap(&mut self) -> BSWAP_W {
         BSWAP_W { w: self }

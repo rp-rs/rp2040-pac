@@ -16,6 +16,7 @@ impl From<crate::R<GPIO_STATUS_SPEC>> for R {
 #[doc = "Field `IRQTOPROC` reader - interrupt to processors, after override is applied"]
 pub struct IRQTOPROC_R(crate::FieldReader<bool, bool>);
 impl IRQTOPROC_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         IRQTOPROC_R(crate::FieldReader::new(bits))
     }
@@ -30,6 +31,7 @@ impl core::ops::Deref for IRQTOPROC_R {
 #[doc = "Field `IRQFROMPAD` reader - interrupt from pad before override is applied"]
 pub struct IRQFROMPAD_R(crate::FieldReader<bool, bool>);
 impl IRQFROMPAD_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         IRQFROMPAD_R(crate::FieldReader::new(bits))
     }
@@ -44,6 +46,7 @@ impl core::ops::Deref for IRQFROMPAD_R {
 #[doc = "Field `INTOPERI` reader - input signal to peripheral, after override is applied"]
 pub struct INTOPERI_R(crate::FieldReader<bool, bool>);
 impl INTOPERI_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         INTOPERI_R(crate::FieldReader::new(bits))
     }
@@ -58,6 +61,7 @@ impl core::ops::Deref for INTOPERI_R {
 #[doc = "Field `INFROMPAD` reader - input signal from pad, before override is applied"]
 pub struct INFROMPAD_R(crate::FieldReader<bool, bool>);
 impl INFROMPAD_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         INFROMPAD_R(crate::FieldReader::new(bits))
     }
@@ -72,6 +76,7 @@ impl core::ops::Deref for INFROMPAD_R {
 #[doc = "Field `OETOPAD` reader - output enable to pad after register override is applied"]
 pub struct OETOPAD_R(crate::FieldReader<bool, bool>);
 impl OETOPAD_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         OETOPAD_R(crate::FieldReader::new(bits))
     }
@@ -86,6 +91,7 @@ impl core::ops::Deref for OETOPAD_R {
 #[doc = "Field `OEFROMPERI` reader - output enable from selected peripheral, before register override is applied"]
 pub struct OEFROMPERI_R(crate::FieldReader<bool, bool>);
 impl OEFROMPERI_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         OEFROMPERI_R(crate::FieldReader::new(bits))
     }
@@ -100,6 +106,7 @@ impl core::ops::Deref for OEFROMPERI_R {
 #[doc = "Field `OUTTOPAD` reader - output signal to pad after register override is applied"]
 pub struct OUTTOPAD_R(crate::FieldReader<bool, bool>);
 impl OUTTOPAD_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         OUTTOPAD_R(crate::FieldReader::new(bits))
     }
@@ -114,6 +121,7 @@ impl core::ops::Deref for OUTTOPAD_R {
 #[doc = "Field `OUTFROMPERI` reader - output signal from selected peripheral, before register override is applied"]
 pub struct OUTFROMPERI_R(crate::FieldReader<bool, bool>);
 impl OUTFROMPERI_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         OUTFROMPERI_R(crate::FieldReader::new(bits))
     }

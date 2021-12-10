@@ -16,6 +16,7 @@ impl From<crate::R<CHIP_ID_SPEC>> for R {
 #[doc = "Field `REVISION` reader - "]
 pub struct REVISION_R(crate::FieldReader<u8, u8>);
 impl REVISION_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         REVISION_R(crate::FieldReader::new(bits))
     }
@@ -30,6 +31,7 @@ impl core::ops::Deref for REVISION_R {
 #[doc = "Field `PART` reader - "]
 pub struct PART_R(crate::FieldReader<u16, u16>);
 impl PART_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u16) -> Self {
         PART_R(crate::FieldReader::new(bits))
     }
@@ -44,6 +46,7 @@ impl core::ops::Deref for PART_R {
 #[doc = "Field `MANUFACTURER` reader - "]
 pub struct MANUFACTURER_R(crate::FieldReader<u16, u16>);
 impl MANUFACTURER_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u16) -> Self {
         MANUFACTURER_R(crate::FieldReader::new(bits))
     }

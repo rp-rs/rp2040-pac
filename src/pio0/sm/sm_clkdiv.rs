@@ -38,6 +38,7 @@ impl From<crate::W<SM_CLKDIV_SPEC>> for W {
  Value of 0 is interpreted as 65536. If INT is 0, FRAC must also be 0."]
 pub struct INT_R(crate::FieldReader<u16, u16>);
 impl INT_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u16) -> Self {
         INT_R(crate::FieldReader::new(bits))
     }
@@ -65,6 +66,7 @@ impl<'a> INT_W<'a> {
 #[doc = "Field `FRAC` reader - Fractional part of clock divisor"]
 pub struct FRAC_R(crate::FieldReader<u8, u8>);
 impl FRAC_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         FRAC_R(crate::FieldReader::new(bits))
     }
@@ -89,7 +91,8 @@ impl<'a> FRAC_W<'a> {
     }
 }
 impl R {
-    #[doc = "Bits 16:31 - Effective frequency is sysclk/(int + frac/256). Value of 0 is interpreted as 65536. If INT is 0, FRAC must also be 0."]
+    #[doc = "Bits 16:31 - Effective frequency is sysclk/(int + frac/256).  
+ Value of 0 is interpreted as 65536. If INT is 0, FRAC must also be 0."]
     #[inline(always)]
     pub fn int(&self) -> INT_R {
         INT_R::new(((self.bits >> 16) & 0xffff) as u16)
@@ -101,7 +104,8 @@ impl R {
     }
 }
 impl W {
-    #[doc = "Bits 16:31 - Effective frequency is sysclk/(int + frac/256). Value of 0 is interpreted as 65536. If INT is 0, FRAC must also be 0."]
+    #[doc = "Bits 16:31 - Effective frequency is sysclk/(int + frac/256).  
+ Value of 0 is interpreted as 65536. If INT is 0, FRAC must also be 0."]
     #[inline(always)]
     pub fn int(&mut self) -> INT_W {
         INT_W { w: self }

@@ -16,6 +16,7 @@ impl From<crate::R<RTC_0_SPEC>> for R {
 #[doc = "Field `DOTW` reader - Day of the week"]
 pub struct DOTW_R(crate::FieldReader<u8, u8>);
 impl DOTW_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         DOTW_R(crate::FieldReader::new(bits))
     }
@@ -30,6 +31,7 @@ impl core::ops::Deref for DOTW_R {
 #[doc = "Field `HOUR` reader - Hours"]
 pub struct HOUR_R(crate::FieldReader<u8, u8>);
 impl HOUR_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         HOUR_R(crate::FieldReader::new(bits))
     }
@@ -44,6 +46,7 @@ impl core::ops::Deref for HOUR_R {
 #[doc = "Field `MIN` reader - Minutes"]
 pub struct MIN_R(crate::FieldReader<u8, u8>);
 impl MIN_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         MIN_R(crate::FieldReader::new(bits))
     }
@@ -58,6 +61,7 @@ impl core::ops::Deref for MIN_R {
 #[doc = "Field `SEC` reader - Seconds"]
 pub struct SEC_R(crate::FieldReader<u8, u8>);
 impl SEC_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         SEC_R(crate::FieldReader::new(bits))
     }

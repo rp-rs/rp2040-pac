@@ -37,6 +37,7 @@ impl From<crate::W<IRQ_SETUP_0_SPEC>> for W {
 #[doc = "Field `MATCH_ACTIVE` reader - "]
 pub struct MATCH_ACTIVE_R(crate::FieldReader<bool, bool>);
 impl MATCH_ACTIVE_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         MATCH_ACTIVE_R(crate::FieldReader::new(bits))
     }
@@ -51,6 +52,7 @@ impl core::ops::Deref for MATCH_ACTIVE_R {
 #[doc = "Field `MATCH_ENA` reader - Global match enable. Don't change any other value while this one is enabled"]
 pub struct MATCH_ENA_R(crate::FieldReader<bool, bool>);
 impl MATCH_ENA_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         MATCH_ENA_R(crate::FieldReader::new(bits))
     }
@@ -87,6 +89,7 @@ impl<'a> MATCH_ENA_W<'a> {
 #[doc = "Field `YEAR_ENA` reader - Enable year matching"]
 pub struct YEAR_ENA_R(crate::FieldReader<bool, bool>);
 impl YEAR_ENA_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         YEAR_ENA_R(crate::FieldReader::new(bits))
     }
@@ -123,6 +126,7 @@ impl<'a> YEAR_ENA_W<'a> {
 #[doc = "Field `MONTH_ENA` reader - Enable month matching"]
 pub struct MONTH_ENA_R(crate::FieldReader<bool, bool>);
 impl MONTH_ENA_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         MONTH_ENA_R(crate::FieldReader::new(bits))
     }
@@ -159,6 +163,7 @@ impl<'a> MONTH_ENA_W<'a> {
 #[doc = "Field `DAY_ENA` reader - Enable day matching"]
 pub struct DAY_ENA_R(crate::FieldReader<bool, bool>);
 impl DAY_ENA_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         DAY_ENA_R(crate::FieldReader::new(bits))
     }
@@ -195,6 +200,7 @@ impl<'a> DAY_ENA_W<'a> {
 #[doc = "Field `YEAR` reader - Year"]
 pub struct YEAR_R(crate::FieldReader<u16, u16>);
 impl YEAR_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u16) -> Self {
         YEAR_R(crate::FieldReader::new(bits))
     }
@@ -221,6 +227,7 @@ impl<'a> YEAR_W<'a> {
 #[doc = "Field `MONTH` reader - Month (1..12)"]
 pub struct MONTH_R(crate::FieldReader<u8, u8>);
 impl MONTH_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         MONTH_R(crate::FieldReader::new(bits))
     }
@@ -247,6 +254,7 @@ impl<'a> MONTH_W<'a> {
 #[doc = "Field `DAY` reader - Day of the month (1..31)"]
 pub struct DAY_R(crate::FieldReader<u8, u8>);
 impl DAY_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         DAY_R(crate::FieldReader::new(bits))
     }

@@ -39,6 +39,7 @@ impl From<crate::W<USBPHY_TRIM_SPEC>> for W {
  Experimental data suggests that the reset value will work, but this register allows adjustment if required"]
 pub struct DM_PULLDN_TRIM_R(crate::FieldReader<u8, u8>);
 impl DM_PULLDN_TRIM_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         DM_PULLDN_TRIM_R(crate::FieldReader::new(bits))
     }
@@ -69,6 +70,7 @@ impl<'a> DM_PULLDN_TRIM_W<'a> {
  Experimental data suggests that the reset value will work, but this register allows adjustment if required"]
 pub struct DP_PULLDN_TRIM_R(crate::FieldReader<u8, u8>);
 impl DP_PULLDN_TRIM_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         DP_PULLDN_TRIM_R(crate::FieldReader::new(bits))
     }
@@ -95,24 +97,32 @@ impl<'a> DP_PULLDN_TRIM_W<'a> {
     }
 }
 impl R {
-    #[doc = "Bits 8:12 - Value to drive to USB PHY DM pulldown resistor trim control Experimental data suggests that the reset value will work, but this register allows adjustment if required"]
+    #[doc = "Bits 8:12 - Value to drive to USB PHY  
+ DM pulldown resistor trim control  
+ Experimental data suggests that the reset value will work, but this register allows adjustment if required"]
     #[inline(always)]
     pub fn dm_pulldn_trim(&self) -> DM_PULLDN_TRIM_R {
         DM_PULLDN_TRIM_R::new(((self.bits >> 8) & 0x1f) as u8)
     }
-    #[doc = "Bits 0:4 - Value to drive to USB PHY DP pulldown resistor trim control Experimental data suggests that the reset value will work, but this register allows adjustment if required"]
+    #[doc = "Bits 0:4 - Value to drive to USB PHY  
+ DP pulldown resistor trim control  
+ Experimental data suggests that the reset value will work, but this register allows adjustment if required"]
     #[inline(always)]
     pub fn dp_pulldn_trim(&self) -> DP_PULLDN_TRIM_R {
         DP_PULLDN_TRIM_R::new((self.bits & 0x1f) as u8)
     }
 }
 impl W {
-    #[doc = "Bits 8:12 - Value to drive to USB PHY DM pulldown resistor trim control Experimental data suggests that the reset value will work, but this register allows adjustment if required"]
+    #[doc = "Bits 8:12 - Value to drive to USB PHY  
+ DM pulldown resistor trim control  
+ Experimental data suggests that the reset value will work, but this register allows adjustment if required"]
     #[inline(always)]
     pub fn dm_pulldn_trim(&mut self) -> DM_PULLDN_TRIM_W {
         DM_PULLDN_TRIM_W { w: self }
     }
-    #[doc = "Bits 0:4 - Value to drive to USB PHY DP pulldown resistor trim control Experimental data suggests that the reset value will work, but this register allows adjustment if required"]
+    #[doc = "Bits 0:4 - Value to drive to USB PHY  
+ DP pulldown resistor trim control  
+ Experimental data suggests that the reset value will work, but this register allows adjustment if required"]
     #[inline(always)]
     pub fn dp_pulldn_trim(&mut self) -> DP_PULLDN_TRIM_W {
         DP_PULLDN_TRIM_W { w: self }

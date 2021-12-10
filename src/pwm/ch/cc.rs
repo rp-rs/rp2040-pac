@@ -37,6 +37,7 @@ impl From<crate::W<CC_SPEC>> for W {
 #[doc = "Field `B` reader - "]
 pub struct B_R(crate::FieldReader<u16, u16>);
 impl B_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u16) -> Self {
         B_R(crate::FieldReader::new(bits))
     }
@@ -63,6 +64,7 @@ impl<'a> B_W<'a> {
 #[doc = "Field `A` reader - "]
 pub struct A_R(crate::FieldReader<u16, u16>);
 impl A_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u16) -> Self {
         A_R(crate::FieldReader::new(bits))
     }

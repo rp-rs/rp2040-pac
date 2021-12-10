@@ -37,6 +37,7 @@ impl From<crate::W<SWD_SPEC>> for W {
 #[doc = "Field `OD` reader - Output disable. Has priority over output enable from peripherals"]
 pub struct OD_R(crate::FieldReader<bool, bool>);
 impl OD_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         OD_R(crate::FieldReader::new(bits))
     }
@@ -73,6 +74,7 @@ impl<'a> OD_W<'a> {
 #[doc = "Field `IE` reader - Input enable"]
 pub struct IE_R(crate::FieldReader<bool, bool>);
 impl IE_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         IE_R(crate::FieldReader::new(bits))
     }
@@ -130,6 +132,7 @@ impl From<DRIVE_A> for u8 {
 #[doc = "Field `DRIVE` reader - Drive strength."]
 pub struct DRIVE_R(crate::FieldReader<u8, DRIVE_A>);
 impl DRIVE_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         DRIVE_R(crate::FieldReader::new(bits))
     }
@@ -212,6 +215,7 @@ impl<'a> DRIVE_W<'a> {
 #[doc = "Field `PUE` reader - Pull up enable"]
 pub struct PUE_R(crate::FieldReader<bool, bool>);
 impl PUE_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         PUE_R(crate::FieldReader::new(bits))
     }
@@ -248,6 +252,7 @@ impl<'a> PUE_W<'a> {
 #[doc = "Field `PDE` reader - Pull down enable"]
 pub struct PDE_R(crate::FieldReader<bool, bool>);
 impl PDE_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         PDE_R(crate::FieldReader::new(bits))
     }
@@ -284,6 +289,7 @@ impl<'a> PDE_W<'a> {
 #[doc = "Field `SCHMITT` reader - Enable schmitt trigger"]
 pub struct SCHMITT_R(crate::FieldReader<bool, bool>);
 impl SCHMITT_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         SCHMITT_R(crate::FieldReader::new(bits))
     }
@@ -320,6 +326,7 @@ impl<'a> SCHMITT_W<'a> {
 #[doc = "Field `SLEWFAST` reader - Slew rate control. 1 = Fast, 0 = Slow"]
 pub struct SLEWFAST_R(crate::FieldReader<bool, bool>);
 impl SLEWFAST_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         SLEWFAST_R(crate::FieldReader::new(bits))
     }

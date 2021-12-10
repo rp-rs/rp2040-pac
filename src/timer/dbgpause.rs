@@ -37,6 +37,7 @@ impl From<crate::W<DBGPAUSE_SPEC>> for W {
 #[doc = "Field `DBG1` reader - Pause when processor 1 is in debug mode"]
 pub struct DBG1_R(crate::FieldReader<bool, bool>);
 impl DBG1_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         DBG1_R(crate::FieldReader::new(bits))
     }
@@ -73,6 +74,7 @@ impl<'a> DBG1_W<'a> {
 #[doc = "Field `DBG0` reader - Pause when processor 0 is in debug mode"]
 pub struct DBG0_R(crate::FieldReader<bool, bool>);
 impl DBG0_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         DBG0_R(crate::FieldReader::new(bits))
     }

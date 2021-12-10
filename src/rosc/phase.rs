@@ -38,6 +38,7 @@ impl From<crate::W<PHASE_SPEC>> for W {
  any other value enables the output with shift=0"]
 pub struct PASSWD_R(crate::FieldReader<u8, u8>);
 impl PASSWD_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         PASSWD_R(crate::FieldReader::new(bits))
     }
@@ -66,6 +67,7 @@ impl<'a> PASSWD_W<'a> {
  this can be changed on-the-fly"]
 pub struct ENABLE_R(crate::FieldReader<bool, bool>);
 impl ENABLE_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         ENABLE_R(crate::FieldReader::new(bits))
     }
@@ -104,6 +106,7 @@ impl<'a> ENABLE_W<'a> {
  this is ignored when div=1"]
 pub struct FLIP_R(crate::FieldReader<bool, bool>);
 impl FLIP_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         FLIP_R(crate::FieldReader::new(bits))
     }
@@ -143,6 +146,7 @@ impl<'a> FLIP_W<'a> {
  must be set to 0 before setting div=1"]
 pub struct SHIFT_R(crate::FieldReader<u8, u8>);
 impl SHIFT_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         SHIFT_R(crate::FieldReader::new(bits))
     }
@@ -169,44 +173,54 @@ impl<'a> SHIFT_W<'a> {
     }
 }
 impl R {
-    #[doc = "Bits 4:11 - set to 0xaa any other value enables the output with shift=0"]
+    #[doc = "Bits 4:11 - set to 0xaa  
+ any other value enables the output with shift=0"]
     #[inline(always)]
     pub fn passwd(&self) -> PASSWD_R {
         PASSWD_R::new(((self.bits >> 4) & 0xff) as u8)
     }
-    #[doc = "Bit 3 - enable the phase-shifted output this can be changed on-the-fly"]
+    #[doc = "Bit 3 - enable the phase-shifted output  
+ this can be changed on-the-fly"]
     #[inline(always)]
     pub fn enable(&self) -> ENABLE_R {
         ENABLE_R::new(((self.bits >> 3) & 0x01) != 0)
     }
-    #[doc = "Bit 2 - invert the phase-shifted output this is ignored when div=1"]
+    #[doc = "Bit 2 - invert the phase-shifted output  
+ this is ignored when div=1"]
     #[inline(always)]
     pub fn flip(&self) -> FLIP_R {
         FLIP_R::new(((self.bits >> 2) & 0x01) != 0)
     }
-    #[doc = "Bits 0:1 - phase shift the phase-shifted output by SHIFT input clocks this can be changed on-the-fly must be set to 0 before setting div=1"]
+    #[doc = "Bits 0:1 - phase shift the phase-shifted output by SHIFT input clocks  
+ this can be changed on-the-fly  
+ must be set to 0 before setting div=1"]
     #[inline(always)]
     pub fn shift(&self) -> SHIFT_R {
         SHIFT_R::new((self.bits & 0x03) as u8)
     }
 }
 impl W {
-    #[doc = "Bits 4:11 - set to 0xaa any other value enables the output with shift=0"]
+    #[doc = "Bits 4:11 - set to 0xaa  
+ any other value enables the output with shift=0"]
     #[inline(always)]
     pub fn passwd(&mut self) -> PASSWD_W {
         PASSWD_W { w: self }
     }
-    #[doc = "Bit 3 - enable the phase-shifted output this can be changed on-the-fly"]
+    #[doc = "Bit 3 - enable the phase-shifted output  
+ this can be changed on-the-fly"]
     #[inline(always)]
     pub fn enable(&mut self) -> ENABLE_W {
         ENABLE_W { w: self }
     }
-    #[doc = "Bit 2 - invert the phase-shifted output this is ignored when div=1"]
+    #[doc = "Bit 2 - invert the phase-shifted output  
+ this is ignored when div=1"]
     #[inline(always)]
     pub fn flip(&mut self) -> FLIP_W {
         FLIP_W { w: self }
     }
-    #[doc = "Bits 0:1 - phase shift the phase-shifted output by SHIFT input clocks this can be changed on-the-fly must be set to 0 before setting div=1"]
+    #[doc = "Bits 0:1 - phase shift the phase-shifted output by SHIFT input clocks  
+ this can be changed on-the-fly  
+ must be set to 0 before setting div=1"]
     #[inline(always)]
     pub fn shift(&mut self) -> SHIFT_W {
         SHIFT_W { w: self }

@@ -37,6 +37,7 @@ impl From<crate::W<FDEBUG_SPEC>> for W {
 #[doc = "Field `TXSTALL` reader - State machine has stalled on empty TX FIFO during a blocking PULL, or an OUT with autopull enabled. Write 1 to clear."]
 pub struct TXSTALL_R(crate::FieldReader<u8, u8>);
 impl TXSTALL_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         TXSTALL_R(crate::FieldReader::new(bits))
     }
@@ -63,6 +64,7 @@ impl<'a> TXSTALL_W<'a> {
 #[doc = "Field `TXOVER` reader - TX FIFO overflow (i.e. write-on-full by the system) has occurred. Write 1 to clear. Note that write-on-full does not alter the state or contents of the FIFO in any way, but the data that the system attempted to write is dropped, so if this flag is set, your software has quite likely dropped some data on the floor."]
 pub struct TXOVER_R(crate::FieldReader<u8, u8>);
 impl TXOVER_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         TXOVER_R(crate::FieldReader::new(bits))
     }
@@ -89,6 +91,7 @@ impl<'a> TXOVER_W<'a> {
 #[doc = "Field `RXUNDER` reader - RX FIFO underflow (i.e. read-on-empty by the system) has occurred. Write 1 to clear. Note that read-on-empty does not perturb the state of the FIFO in any way, but the data returned by reading from an empty FIFO is undefined, so this flag generally only becomes set due to some kind of software error."]
 pub struct RXUNDER_R(crate::FieldReader<u8, u8>);
 impl RXUNDER_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         RXUNDER_R(crate::FieldReader::new(bits))
     }
@@ -115,6 +118,7 @@ impl<'a> RXUNDER_W<'a> {
 #[doc = "Field `RXSTALL` reader - State machine has stalled on full RX FIFO during a blocking PUSH, or an IN with autopush enabled. This flag is also set when a nonblocking PUSH to a full FIFO took place, in which case the state machine has dropped data. Write 1 to clear."]
 pub struct RXSTALL_R(crate::FieldReader<u8, u8>);
 impl RXSTALL_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         RXSTALL_R(crate::FieldReader::new(bits))
     }

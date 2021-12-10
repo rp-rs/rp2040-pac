@@ -37,6 +37,7 @@ impl From<crate::W<SM_INSTR_SPEC>> for W {
 #[doc = "Field `SM0_INSTR` reader - "]
 pub struct SM0_INSTR_R(crate::FieldReader<u16, u16>);
 impl SM0_INSTR_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u16) -> Self {
         SM0_INSTR_R(crate::FieldReader::new(bits))
     }

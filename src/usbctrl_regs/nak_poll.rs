@@ -37,6 +37,7 @@ impl From<crate::W<NAK_POLL_SPEC>> for W {
 #[doc = "Field `DELAY_FS` reader - NAK polling interval for a full speed device"]
 pub struct DELAY_FS_R(crate::FieldReader<u16, u16>);
 impl DELAY_FS_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u16) -> Self {
         DELAY_FS_R(crate::FieldReader::new(bits))
     }
@@ -63,6 +64,7 @@ impl<'a> DELAY_FS_W<'a> {
 #[doc = "Field `DELAY_LS` reader - NAK polling interval for a low speed device"]
 pub struct DELAY_LS_R(crate::FieldReader<u16, u16>);
 impl DELAY_LS_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u16) -> Self {
         DELAY_LS_R(crate::FieldReader::new(bits))
     }

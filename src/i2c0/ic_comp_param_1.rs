@@ -16,6 +16,7 @@ impl From<crate::R<IC_COMP_PARAM_1_SPEC>> for R {
 #[doc = "Field `TX_BUFFER_DEPTH` reader - TX Buffer Depth = 16"]
 pub struct TX_BUFFER_DEPTH_R(crate::FieldReader<u8, u8>);
 impl TX_BUFFER_DEPTH_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         TX_BUFFER_DEPTH_R(crate::FieldReader::new(bits))
     }
@@ -30,6 +31,7 @@ impl core::ops::Deref for TX_BUFFER_DEPTH_R {
 #[doc = "Field `RX_BUFFER_DEPTH` reader - RX Buffer Depth = 16"]
 pub struct RX_BUFFER_DEPTH_R(crate::FieldReader<u8, u8>);
 impl RX_BUFFER_DEPTH_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         RX_BUFFER_DEPTH_R(crate::FieldReader::new(bits))
     }
@@ -44,6 +46,7 @@ impl core::ops::Deref for RX_BUFFER_DEPTH_R {
 #[doc = "Field `ADD_ENCODED_PARAMS` reader - Encoded parameters not visible"]
 pub struct ADD_ENCODED_PARAMS_R(crate::FieldReader<bool, bool>);
 impl ADD_ENCODED_PARAMS_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         ADD_ENCODED_PARAMS_R(crate::FieldReader::new(bits))
     }
@@ -58,6 +61,7 @@ impl core::ops::Deref for ADD_ENCODED_PARAMS_R {
 #[doc = "Field `HAS_DMA` reader - DMA handshaking signals are enabled"]
 pub struct HAS_DMA_R(crate::FieldReader<bool, bool>);
 impl HAS_DMA_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         HAS_DMA_R(crate::FieldReader::new(bits))
     }
@@ -72,6 +76,7 @@ impl core::ops::Deref for HAS_DMA_R {
 #[doc = "Field `INTR_IO` reader - COMBINED Interrupt outputs"]
 pub struct INTR_IO_R(crate::FieldReader<bool, bool>);
 impl INTR_IO_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         INTR_IO_R(crate::FieldReader::new(bits))
     }
@@ -86,6 +91,7 @@ impl core::ops::Deref for INTR_IO_R {
 #[doc = "Field `HC_COUNT_VALUES` reader - Programmable count values for each mode."]
 pub struct HC_COUNT_VALUES_R(crate::FieldReader<bool, bool>);
 impl HC_COUNT_VALUES_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         HC_COUNT_VALUES_R(crate::FieldReader::new(bits))
     }
@@ -100,6 +106,7 @@ impl core::ops::Deref for HC_COUNT_VALUES_R {
 #[doc = "Field `MAX_SPEED_MODE` reader - MAX SPEED MODE = FAST MODE"]
 pub struct MAX_SPEED_MODE_R(crate::FieldReader<u8, u8>);
 impl MAX_SPEED_MODE_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         MAX_SPEED_MODE_R(crate::FieldReader::new(bits))
     }
@@ -114,6 +121,7 @@ impl core::ops::Deref for MAX_SPEED_MODE_R {
 #[doc = "Field `APB_DATA_WIDTH` reader - APB data bus width is 32 bits"]
 pub struct APB_DATA_WIDTH_R(crate::FieldReader<u8, u8>);
 impl APB_DATA_WIDTH_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         APB_DATA_WIDTH_R(crate::FieldReader::new(bits))
     }

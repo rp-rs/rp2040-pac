@@ -37,6 +37,7 @@ impl From<crate::W<MEMPOWERDOWN_SPEC>> for W {
 #[doc = "Field `ROM` reader - "]
 pub struct ROM_R(crate::FieldReader<bool, bool>);
 impl ROM_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         ROM_R(crate::FieldReader::new(bits))
     }
@@ -73,6 +74,7 @@ impl<'a> ROM_W<'a> {
 #[doc = "Field `USB` reader - "]
 pub struct USB_R(crate::FieldReader<bool, bool>);
 impl USB_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         USB_R(crate::FieldReader::new(bits))
     }
@@ -109,6 +111,7 @@ impl<'a> USB_W<'a> {
 #[doc = "Field `SRAM5` reader - "]
 pub struct SRAM5_R(crate::FieldReader<bool, bool>);
 impl SRAM5_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         SRAM5_R(crate::FieldReader::new(bits))
     }
@@ -145,6 +148,7 @@ impl<'a> SRAM5_W<'a> {
 #[doc = "Field `SRAM4` reader - "]
 pub struct SRAM4_R(crate::FieldReader<bool, bool>);
 impl SRAM4_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         SRAM4_R(crate::FieldReader::new(bits))
     }
@@ -181,6 +185,7 @@ impl<'a> SRAM4_W<'a> {
 #[doc = "Field `SRAM3` reader - "]
 pub struct SRAM3_R(crate::FieldReader<bool, bool>);
 impl SRAM3_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         SRAM3_R(crate::FieldReader::new(bits))
     }
@@ -217,6 +222,7 @@ impl<'a> SRAM3_W<'a> {
 #[doc = "Field `SRAM2` reader - "]
 pub struct SRAM2_R(crate::FieldReader<bool, bool>);
 impl SRAM2_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         SRAM2_R(crate::FieldReader::new(bits))
     }
@@ -253,6 +259,7 @@ impl<'a> SRAM2_W<'a> {
 #[doc = "Field `SRAM1` reader - "]
 pub struct SRAM1_R(crate::FieldReader<bool, bool>);
 impl SRAM1_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         SRAM1_R(crate::FieldReader::new(bits))
     }
@@ -289,6 +296,7 @@ impl<'a> SRAM1_W<'a> {
 #[doc = "Field `SRAM0` reader - "]
 pub struct SRAM0_R(crate::FieldReader<bool, bool>);
 impl SRAM0_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         SRAM0_R(crate::FieldReader::new(bits))
     }

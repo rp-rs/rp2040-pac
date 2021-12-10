@@ -37,6 +37,7 @@ impl From<crate::W<CLK_SYS_DIV_SPEC>> for W {
 #[doc = "Field `INT` reader - Integer component of the divisor, 0 -> divide by 2^16"]
 pub struct INT_R(crate::FieldReader<u32, u32>);
 impl INT_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u32) -> Self {
         INT_R(crate::FieldReader::new(bits))
     }
@@ -63,6 +64,7 @@ impl<'a> INT_W<'a> {
 #[doc = "Field `FRAC` reader - Fractional component of the divisor"]
 pub struct FRAC_R(crate::FieldReader<u8, u8>);
 impl FRAC_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         FRAC_R(crate::FieldReader::new(bits))
     }

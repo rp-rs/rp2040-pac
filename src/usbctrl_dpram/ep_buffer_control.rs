@@ -37,6 +37,7 @@ impl From<crate::W<EP_BUFFER_CONTROL_SPEC>> for W {
 #[doc = "Field `FULL_1` reader - Buffer 1 is full. For an IN transfer (TX to the host) the bit is set to indicate the data is valid. For an OUT transfer (RX from the host) this bit should be left as a 0. The host will set it when it has filled the buffer with data."]
 pub struct FULL_1_R(crate::FieldReader<bool, bool>);
 impl FULL_1_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         FULL_1_R(crate::FieldReader::new(bits))
     }
@@ -73,6 +74,7 @@ impl<'a> FULL_1_W<'a> {
 #[doc = "Field `LAST_1` reader - Buffer 1 is the last buffer of the transfer."]
 pub struct LAST_1_R(crate::FieldReader<bool, bool>);
 impl LAST_1_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         LAST_1_R(crate::FieldReader::new(bits))
     }
@@ -109,6 +111,7 @@ impl<'a> LAST_1_W<'a> {
 #[doc = "Field `PID_1` reader - The data pid of buffer 1."]
 pub struct PID_1_R(crate::FieldReader<bool, bool>);
 impl PID_1_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         PID_1_R(crate::FieldReader::new(bits))
     }
@@ -168,6 +171,7 @@ impl From<DOUBLE_BUFFER_ISO_OFFSET_A> for u8 {
  For a non Isochronous endpoint the offset is always 64 bytes."]
 pub struct DOUBLE_BUFFER_ISO_OFFSET_R(crate::FieldReader<u8, DOUBLE_BUFFER_ISO_OFFSET_A>);
 impl DOUBLE_BUFFER_ISO_OFFSET_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         DOUBLE_BUFFER_ISO_OFFSET_R(crate::FieldReader::new(bits))
     }
@@ -251,6 +255,7 @@ impl<'a> DOUBLE_BUFFER_ISO_OFFSET_W<'a> {
 #[doc = "Field `AVAILABLE_1` reader - Buffer 1 is available. This bit is set to indicate the buffer can be used by the controller. The controller clears the available bit when writing the status back."]
 pub struct AVAILABLE_1_R(crate::FieldReader<bool, bool>);
 impl AVAILABLE_1_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         AVAILABLE_1_R(crate::FieldReader::new(bits))
     }
@@ -287,6 +292,7 @@ impl<'a> AVAILABLE_1_W<'a> {
 #[doc = "Field `LENGTH_1` reader - The length of the data in buffer 1."]
 pub struct LENGTH_1_R(crate::FieldReader<u16, u16>);
 impl LENGTH_1_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u16) -> Self {
         LENGTH_1_R(crate::FieldReader::new(bits))
     }
@@ -313,6 +319,7 @@ impl<'a> LENGTH_1_W<'a> {
 #[doc = "Field `FULL_0` reader - Buffer 0 is full. For an IN transfer (TX to the host) the bit is set to indicate the data is valid. For an OUT transfer (RX from the host) this bit should be left as a 0. The host will set it when it has filled the buffer with data."]
 pub struct FULL_0_R(crate::FieldReader<bool, bool>);
 impl FULL_0_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         FULL_0_R(crate::FieldReader::new(bits))
     }
@@ -349,6 +356,7 @@ impl<'a> FULL_0_W<'a> {
 #[doc = "Field `LAST_0` reader - Buffer 0 is the last buffer of the transfer."]
 pub struct LAST_0_R(crate::FieldReader<bool, bool>);
 impl LAST_0_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         LAST_0_R(crate::FieldReader::new(bits))
     }
@@ -385,6 +393,7 @@ impl<'a> LAST_0_W<'a> {
 #[doc = "Field `PID_0` reader - The data pid of buffer 0."]
 pub struct PID_0_R(crate::FieldReader<bool, bool>);
 impl PID_0_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         PID_0_R(crate::FieldReader::new(bits))
     }
@@ -421,6 +430,7 @@ impl<'a> PID_0_W<'a> {
 #[doc = "Field `RESET` reader - Reset the buffer selector to buffer 0."]
 pub struct RESET_R(crate::FieldReader<bool, bool>);
 impl RESET_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         RESET_R(crate::FieldReader::new(bits))
     }
@@ -457,6 +467,7 @@ impl<'a> RESET_W<'a> {
 #[doc = "Field `STALL` reader - Reply with a stall (valid for both buffers)."]
 pub struct STALL_R(crate::FieldReader<bool, bool>);
 impl STALL_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         STALL_R(crate::FieldReader::new(bits))
     }
@@ -493,6 +504,7 @@ impl<'a> STALL_W<'a> {
 #[doc = "Field `AVAILABLE_0` reader - Buffer 0 is available. This bit is set to indicate the buffer can be used by the controller. The controller clears the available bit when writing the status back."]
 pub struct AVAILABLE_0_R(crate::FieldReader<bool, bool>);
 impl AVAILABLE_0_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         AVAILABLE_0_R(crate::FieldReader::new(bits))
     }
@@ -529,6 +541,7 @@ impl<'a> AVAILABLE_0_W<'a> {
 #[doc = "Field `LENGTH_0` reader - The length of the data in buffer 0."]
 pub struct LENGTH_0_R(crate::FieldReader<u16, u16>);
 impl LENGTH_0_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u16) -> Self {
         LENGTH_0_R(crate::FieldReader::new(bits))
     }
@@ -568,7 +581,8 @@ impl R {
     pub fn pid_1(&self) -> PID_1_R {
         PID_1_R::new(((self.bits >> 29) & 0x01) != 0)
     }
-    #[doc = "Bits 27:28 - The number of bytes buffer 1 is offset from buffer 0 in Isochronous mode. Only valid in double buffered mode for an Isochronous endpoint. For a non Isochronous endpoint the offset is always 64 bytes."]
+    #[doc = "Bits 27:28 - The number of bytes buffer 1 is offset from buffer 0 in Isochronous mode. Only valid in double buffered mode for an Isochronous endpoint.  
+ For a non Isochronous endpoint the offset is always 64 bytes."]
     #[inline(always)]
     pub fn double_buffer_iso_offset(&self) -> DOUBLE_BUFFER_ISO_OFFSET_R {
         DOUBLE_BUFFER_ISO_OFFSET_R::new(((self.bits >> 27) & 0x03) as u8)
@@ -635,7 +649,8 @@ impl W {
     pub fn pid_1(&mut self) -> PID_1_W {
         PID_1_W { w: self }
     }
-    #[doc = "Bits 27:28 - The number of bytes buffer 1 is offset from buffer 0 in Isochronous mode. Only valid in double buffered mode for an Isochronous endpoint. For a non Isochronous endpoint the offset is always 64 bytes."]
+    #[doc = "Bits 27:28 - The number of bytes buffer 1 is offset from buffer 0 in Isochronous mode. Only valid in double buffered mode for an Isochronous endpoint.  
+ For a non Isochronous endpoint the offset is always 64 bytes."]
     #[inline(always)]
     pub fn double_buffer_iso_offset(&mut self) -> DOUBLE_BUFFER_ISO_OFFSET_W {
         DOUBLE_BUFFER_ISO_OFFSET_W { w: self }

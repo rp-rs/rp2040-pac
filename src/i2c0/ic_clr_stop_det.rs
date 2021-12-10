@@ -18,6 +18,7 @@ impl From<crate::R<IC_CLR_STOP_DET_SPEC>> for R {
  Reset value: 0x0"]
 pub struct CLR_STOP_DET_R(crate::FieldReader<bool, bool>);
 impl CLR_STOP_DET_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         CLR_STOP_DET_R(crate::FieldReader::new(bits))
     }
@@ -30,7 +31,9 @@ impl core::ops::Deref for CLR_STOP_DET_R {
     }
 }
 impl R {
-    #[doc = "Bit 0 - Read this register to clear the STOP_DET interrupt (bit 9) of the IC_RAW_INTR_STAT register. Reset value: 0x0"]
+    #[doc = "Bit 0 - Read this register to clear the STOP_DET interrupt (bit 9) of the IC_RAW_INTR_STAT register.  
+
+ Reset value: 0x0"]
     #[inline(always)]
     pub fn clr_stop_det(&self) -> CLR_STOP_DET_R {
         CLR_STOP_DET_R::new((self.bits & 0x01) != 0)

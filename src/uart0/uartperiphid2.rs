@@ -16,6 +16,7 @@ impl From<crate::R<UARTPERIPHID2_SPEC>> for R {
 #[doc = "Field `REVISION` reader - This field depends on the revision of the UART: r1p0 0x0 r1p1 0x1 r1p3 0x2 r1p4 0x2 r1p5 0x3"]
 pub struct REVISION_R(crate::FieldReader<u8, u8>);
 impl REVISION_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         REVISION_R(crate::FieldReader::new(bits))
     }
@@ -30,6 +31,7 @@ impl core::ops::Deref for REVISION_R {
 #[doc = "Field `DESIGNER1` reader - These bits read back as 0x4"]
 pub struct DESIGNER1_R(crate::FieldReader<u8, u8>);
 impl DESIGNER1_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         DESIGNER1_R(crate::FieldReader::new(bits))
     }

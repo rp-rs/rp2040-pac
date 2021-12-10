@@ -37,6 +37,7 @@ impl From<crate::W<BAUDR_SPEC>> for W {
 #[doc = "Field `SCKDV` reader - SSI clock divider"]
 pub struct SCKDV_R(crate::FieldReader<u16, u16>);
 impl SCKDV_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u16) -> Self {
         SCKDV_R(crate::FieldReader::new(bits))
     }

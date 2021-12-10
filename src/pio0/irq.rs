@@ -37,6 +37,7 @@ impl From<crate::W<IRQ_SPEC>> for W {
 #[doc = "Field `IRQ` reader - "]
 pub struct IRQ_R(crate::FieldReader<u8, u8>);
 impl IRQ_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         IRQ_R(crate::FieldReader::new(bits))
     }

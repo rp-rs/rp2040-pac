@@ -16,6 +16,7 @@ impl From<crate::R<IDR_SPEC>> for R {
 #[doc = "Field `IDCODE` reader - Peripheral dentification code"]
 pub struct IDCODE_R(crate::FieldReader<u32, u32>);
 impl IDCODE_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u32) -> Self {
         IDCODE_R(crate::FieldReader::new(bits))
     }

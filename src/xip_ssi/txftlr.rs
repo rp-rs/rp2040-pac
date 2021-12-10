@@ -37,6 +37,7 @@ impl From<crate::W<TXFTLR_SPEC>> for W {
 #[doc = "Field `TFT` reader - Transmit FIFO threshold"]
 pub struct TFT_R(crate::FieldReader<u8, u8>);
 impl TFT_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         TFT_R(crate::FieldReader::new(bits))
     }

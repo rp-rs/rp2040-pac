@@ -45,6 +45,7 @@ impl From<crate::W<SIE_STATUS_SPEC>> for W {
  * An IN packet from the device has the wrong data PID"]
 pub struct DATA_SEQ_ERROR_R(crate::FieldReader<bool, bool>);
 impl DATA_SEQ_ERROR_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         DATA_SEQ_ERROR_R(crate::FieldReader::new(bits))
     }
@@ -89,6 +90,7 @@ impl<'a> DATA_SEQ_ERROR_W<'a> {
 #[doc = "Field `ACK_REC` reader - ACK received. Raised by both host and device."]
 pub struct ACK_REC_R(crate::FieldReader<bool, bool>);
 impl ACK_REC_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         ACK_REC_R(crate::FieldReader::new(bits))
     }
@@ -125,6 +127,7 @@ impl<'a> ACK_REC_W<'a> {
 #[doc = "Field `STALL_REC` reader - Host: STALL received"]
 pub struct STALL_REC_R(crate::FieldReader<bool, bool>);
 impl STALL_REC_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         STALL_REC_R(crate::FieldReader::new(bits))
     }
@@ -161,6 +164,7 @@ impl<'a> STALL_REC_W<'a> {
 #[doc = "Field `NAK_REC` reader - Host: NAK received"]
 pub struct NAK_REC_R(crate::FieldReader<bool, bool>);
 impl NAK_REC_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         NAK_REC_R(crate::FieldReader::new(bits))
     }
@@ -197,6 +201,7 @@ impl<'a> NAK_REC_W<'a> {
 #[doc = "Field `RX_TIMEOUT` reader - RX timeout is raised by both the host and device if an ACK is not received in the maximum time specified by the USB spec."]
 pub struct RX_TIMEOUT_R(crate::FieldReader<bool, bool>);
 impl RX_TIMEOUT_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         RX_TIMEOUT_R(crate::FieldReader::new(bits))
     }
@@ -233,6 +238,7 @@ impl<'a> RX_TIMEOUT_W<'a> {
 #[doc = "Field `RX_OVERFLOW` reader - RX overflow is raised by the Serial RX engine if the incoming data is too fast."]
 pub struct RX_OVERFLOW_R(crate::FieldReader<bool, bool>);
 impl RX_OVERFLOW_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         RX_OVERFLOW_R(crate::FieldReader::new(bits))
     }
@@ -269,6 +275,7 @@ impl<'a> RX_OVERFLOW_W<'a> {
 #[doc = "Field `BIT_STUFF_ERROR` reader - Bit Stuff Error. Raised by the Serial RX engine."]
 pub struct BIT_STUFF_ERROR_R(crate::FieldReader<bool, bool>);
 impl BIT_STUFF_ERROR_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         BIT_STUFF_ERROR_R(crate::FieldReader::new(bits))
     }
@@ -305,6 +312,7 @@ impl<'a> BIT_STUFF_ERROR_W<'a> {
 #[doc = "Field `CRC_ERROR` reader - CRC Error. Raised by the Serial RX engine."]
 pub struct CRC_ERROR_R(crate::FieldReader<bool, bool>);
 impl CRC_ERROR_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         CRC_ERROR_R(crate::FieldReader::new(bits))
     }
@@ -341,6 +349,7 @@ impl<'a> CRC_ERROR_W<'a> {
 #[doc = "Field `BUS_RESET` reader - Device: bus reset received"]
 pub struct BUS_RESET_R(crate::FieldReader<bool, bool>);
 impl BUS_RESET_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         BUS_RESET_R(crate::FieldReader::new(bits))
     }
@@ -385,6 +394,7 @@ impl<'a> BUS_RESET_W<'a> {
  * A setup packet is sent when no data in or data out transaction follows * An IN packet is received and the `LAST_BUFF` bit is set in the buffer control register * An IN packet is received with zero length * An OUT packet is sent and the `LAST_BUFF` bit is set"]
 pub struct TRANS_COMPLETE_R(crate::FieldReader<bool, bool>);
 impl TRANS_COMPLETE_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         TRANS_COMPLETE_R(crate::FieldReader::new(bits))
     }
@@ -429,6 +439,7 @@ impl<'a> TRANS_COMPLETE_W<'a> {
 #[doc = "Field `SETUP_REC` reader - Device: Setup packet received"]
 pub struct SETUP_REC_R(crate::FieldReader<bool, bool>);
 impl SETUP_REC_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         SETUP_REC_R(crate::FieldReader::new(bits))
     }
@@ -465,6 +476,7 @@ impl<'a> SETUP_REC_W<'a> {
 #[doc = "Field `CONNECTED` reader - Device: connected"]
 pub struct CONNECTED_R(crate::FieldReader<bool, bool>);
 impl CONNECTED_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         CONNECTED_R(crate::FieldReader::new(bits))
     }
@@ -501,6 +513,7 @@ impl<'a> CONNECTED_W<'a> {
 #[doc = "Field `RESUME` reader - Host: Device has initiated a remote resume. Device: host has initiated a resume."]
 pub struct RESUME_R(crate::FieldReader<bool, bool>);
 impl RESUME_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         RESUME_R(crate::FieldReader::new(bits))
     }
@@ -537,6 +550,7 @@ impl<'a> RESUME_W<'a> {
 #[doc = "Field `VBUS_OVER_CURR` reader - VBUS over current detected"]
 pub struct VBUS_OVER_CURR_R(crate::FieldReader<bool, bool>);
 impl VBUS_OVER_CURR_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         VBUS_OVER_CURR_R(crate::FieldReader::new(bits))
     }
@@ -551,6 +565,7 @@ impl core::ops::Deref for VBUS_OVER_CURR_R {
 #[doc = "Field `SPEED` reader - Host: device speed. Disconnected = 00, LS = 01, FS = 10"]
 pub struct SPEED_R(crate::FieldReader<u8, u8>);
 impl SPEED_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         SPEED_R(crate::FieldReader::new(bits))
     }
@@ -577,6 +592,7 @@ impl<'a> SPEED_W<'a> {
 #[doc = "Field `SUSPENDED` reader - Bus in suspended state. Valid for device and host. Host and device will go into suspend if neither Keep Alive / SOF frames are enabled."]
 pub struct SUSPENDED_R(crate::FieldReader<bool, bool>);
 impl SUSPENDED_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         SUSPENDED_R(crate::FieldReader::new(bits))
     }
@@ -634,6 +650,7 @@ impl From<LINE_STATE_A> for u8 {
 #[doc = "Field `LINE_STATE` reader - USB bus line state"]
 pub struct LINE_STATE_R(crate::FieldReader<u8, LINE_STATE_A>);
 impl LINE_STATE_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         LINE_STATE_R(crate::FieldReader::new(bits))
     }
@@ -679,6 +696,7 @@ impl core::ops::Deref for LINE_STATE_R {
 #[doc = "Field `VBUS_DETECTED` reader - Device: VBUS Detected"]
 pub struct VBUS_DETECTED_R(crate::FieldReader<bool, bool>);
 impl VBUS_DETECTED_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         VBUS_DETECTED_R(crate::FieldReader::new(bits))
     }
@@ -691,7 +709,15 @@ impl core::ops::Deref for VBUS_DETECTED_R {
     }
 }
 impl R {
-    #[doc = "Bit 31 - Data Sequence Error. The device can raise a sequence error in the following conditions: * A SETUP packet is received followed by a DATA1 packet (data phase should always be DATA0) * An OUT packet is received from the host but doesn't match the data pid in the buffer control register read from DPSRAM The host can raise a data sequence error in the following conditions: * An IN packet from the device has the wrong data PID"]
+    #[doc = "Bit 31 - Data Sequence Error.  
+
+ The device can raise a sequence error in the following conditions:  
+
+ * A SETUP packet is received followed by a DATA1 packet (data phase should always be DATA0) * An OUT packet is received from the host but doesn't match the data pid in the buffer control register read from DPSRAM  
+
+ The host can raise a data sequence error in the following conditions:  
+
+ * An IN packet from the device has the wrong data PID"]
     #[inline(always)]
     pub fn data_seq_error(&self) -> DATA_SEQ_ERROR_R {
         DATA_SEQ_ERROR_R::new(((self.bits >> 31) & 0x01) != 0)
@@ -736,7 +762,15 @@ impl R {
     pub fn bus_reset(&self) -> BUS_RESET_R {
         BUS_RESET_R::new(((self.bits >> 19) & 0x01) != 0)
     }
-    #[doc = "Bit 18 - Transaction complete. Raised by device if: * An IN or OUT packet is sent with the `LAST_BUFF` bit set in the buffer control register Raised by host if: * A setup packet is sent when no data in or data out transaction follows * An IN packet is received and the `LAST_BUFF` bit is set in the buffer control register * An IN packet is received with zero length * An OUT packet is sent and the `LAST_BUFF` bit is set"]
+    #[doc = "Bit 18 - Transaction complete.  
+
+ Raised by device if:  
+
+ * An IN or OUT packet is sent with the `LAST_BUFF` bit set in the buffer control register  
+
+ Raised by host if:  
+
+ * A setup packet is sent when no data in or data out transaction follows * An IN packet is received and the `LAST_BUFF` bit is set in the buffer control register * An IN packet is received with zero length * An OUT packet is sent and the `LAST_BUFF` bit is set"]
     #[inline(always)]
     pub fn trans_complete(&self) -> TRANS_COMPLETE_R {
         TRANS_COMPLETE_R::new(((self.bits >> 18) & 0x01) != 0)
@@ -783,7 +817,15 @@ impl R {
     }
 }
 impl W {
-    #[doc = "Bit 31 - Data Sequence Error. The device can raise a sequence error in the following conditions: * A SETUP packet is received followed by a DATA1 packet (data phase should always be DATA0) * An OUT packet is received from the host but doesn't match the data pid in the buffer control register read from DPSRAM The host can raise a data sequence error in the following conditions: * An IN packet from the device has the wrong data PID"]
+    #[doc = "Bit 31 - Data Sequence Error.  
+
+ The device can raise a sequence error in the following conditions:  
+
+ * A SETUP packet is received followed by a DATA1 packet (data phase should always be DATA0) * An OUT packet is received from the host but doesn't match the data pid in the buffer control register read from DPSRAM  
+
+ The host can raise a data sequence error in the following conditions:  
+
+ * An IN packet from the device has the wrong data PID"]
     #[inline(always)]
     pub fn data_seq_error(&mut self) -> DATA_SEQ_ERROR_W {
         DATA_SEQ_ERROR_W { w: self }
@@ -828,7 +870,15 @@ impl W {
     pub fn bus_reset(&mut self) -> BUS_RESET_W {
         BUS_RESET_W { w: self }
     }
-    #[doc = "Bit 18 - Transaction complete. Raised by device if: * An IN or OUT packet is sent with the `LAST_BUFF` bit set in the buffer control register Raised by host if: * A setup packet is sent when no data in or data out transaction follows * An IN packet is received and the `LAST_BUFF` bit is set in the buffer control register * An IN packet is received with zero length * An OUT packet is sent and the `LAST_BUFF` bit is set"]
+    #[doc = "Bit 18 - Transaction complete.  
+
+ Raised by device if:  
+
+ * An IN or OUT packet is sent with the `LAST_BUFF` bit set in the buffer control register  
+
+ Raised by host if:  
+
+ * A setup packet is sent when no data in or data out transaction follows * An IN packet is received and the `LAST_BUFF` bit is set in the buffer control register * An IN packet is received with zero length * An OUT packet is sent and the `LAST_BUFF` bit is set"]
     #[inline(always)]
     pub fn trans_complete(&mut self) -> TRANS_COMPLETE_W {
         TRANS_COMPLETE_W { w: self }

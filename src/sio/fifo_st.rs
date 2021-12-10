@@ -37,6 +37,7 @@ impl From<crate::W<FIFO_ST_SPEC>> for W {
 #[doc = "Field `ROE` reader - Sticky flag indicating the RX FIFO was read when empty. This read was ignored by the FIFO."]
 pub struct ROE_R(crate::FieldReader<bool, bool>);
 impl ROE_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         ROE_R(crate::FieldReader::new(bits))
     }
@@ -73,6 +74,7 @@ impl<'a> ROE_W<'a> {
 #[doc = "Field `WOF` reader - Sticky flag indicating the TX FIFO was written when full. This write was ignored by the FIFO."]
 pub struct WOF_R(crate::FieldReader<bool, bool>);
 impl WOF_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         WOF_R(crate::FieldReader::new(bits))
     }
@@ -109,6 +111,7 @@ impl<'a> WOF_W<'a> {
 #[doc = "Field `RDY` reader - Value is 1 if this core's TX FIFO is not full (i.e. if FIFO_WR is ready for more data)"]
 pub struct RDY_R(crate::FieldReader<bool, bool>);
 impl RDY_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         RDY_R(crate::FieldReader::new(bits))
     }
@@ -123,6 +126,7 @@ impl core::ops::Deref for RDY_R {
 #[doc = "Field `VLD` reader - Value is 1 if this core's RX FIFO is not empty (i.e. if FIFO_RD is valid)"]
 pub struct VLD_R(crate::FieldReader<bool, bool>);
 impl VLD_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         VLD_R(crate::FieldReader::new(bits))
     }

@@ -37,6 +37,7 @@ impl From<crate::W<TICK_SPEC>> for W {
 #[doc = "Field `COUNT` reader - Count down timer: the remaining number clk_tick cycles before the next tick is generated."]
 pub struct COUNT_R(crate::FieldReader<u16, u16>);
 impl COUNT_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u16) -> Self {
         COUNT_R(crate::FieldReader::new(bits))
     }
@@ -51,6 +52,7 @@ impl core::ops::Deref for COUNT_R {
 #[doc = "Field `RUNNING` reader - Is the tick generator running?"]
 pub struct RUNNING_R(crate::FieldReader<bool, bool>);
 impl RUNNING_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         RUNNING_R(crate::FieldReader::new(bits))
     }
@@ -65,6 +67,7 @@ impl core::ops::Deref for RUNNING_R {
 #[doc = "Field `ENABLE` reader - start / stop tick generation"]
 pub struct ENABLE_R(crate::FieldReader<bool, bool>);
 impl ENABLE_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         ENABLE_R(crate::FieldReader::new(bits))
     }
@@ -101,6 +104,7 @@ impl<'a> ENABLE_W<'a> {
 #[doc = "Field `CYCLES` reader - Total number of clk_tick cycles before the next tick."]
 pub struct CYCLES_R(crate::FieldReader<u16, u16>);
 impl CYCLES_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u16) -> Self {
         CYCLES_R(crate::FieldReader::new(bits))
     }

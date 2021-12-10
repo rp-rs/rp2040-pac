@@ -16,6 +16,7 @@ impl From<crate::R<INTS_SPEC>> for R {
 #[doc = "Field `EP_STALL_NAK` reader - Raised when any bit in EP_STATUS_STALL_NAK is set. Clear by clearing all bits in EP_STATUS_STALL_NAK."]
 pub struct EP_STALL_NAK_R(crate::FieldReader<bool, bool>);
 impl EP_STALL_NAK_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         EP_STALL_NAK_R(crate::FieldReader::new(bits))
     }
@@ -30,6 +31,7 @@ impl core::ops::Deref for EP_STALL_NAK_R {
 #[doc = "Field `ABORT_DONE` reader - Raised when any bit in ABORT_DONE is set. Clear by clearing all bits in ABORT_DONE."]
 pub struct ABORT_DONE_R(crate::FieldReader<bool, bool>);
 impl ABORT_DONE_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         ABORT_DONE_R(crate::FieldReader::new(bits))
     }
@@ -44,6 +46,7 @@ impl core::ops::Deref for ABORT_DONE_R {
 #[doc = "Field `DEV_SOF` reader - Set every time the device receives a SOF (Start of Frame) packet. Cleared by reading SOF_RD"]
 pub struct DEV_SOF_R(crate::FieldReader<bool, bool>);
 impl DEV_SOF_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         DEV_SOF_R(crate::FieldReader::new(bits))
     }
@@ -58,6 +61,7 @@ impl core::ops::Deref for DEV_SOF_R {
 #[doc = "Field `SETUP_REQ` reader - Device. Source: SIE_STATUS.SETUP_REC"]
 pub struct SETUP_REQ_R(crate::FieldReader<bool, bool>);
 impl SETUP_REQ_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         SETUP_REQ_R(crate::FieldReader::new(bits))
     }
@@ -72,6 +76,7 @@ impl core::ops::Deref for SETUP_REQ_R {
 #[doc = "Field `DEV_RESUME_FROM_HOST` reader - Set when the device receives a resume from the host. Cleared by writing to SIE_STATUS.RESUME"]
 pub struct DEV_RESUME_FROM_HOST_R(crate::FieldReader<bool, bool>);
 impl DEV_RESUME_FROM_HOST_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         DEV_RESUME_FROM_HOST_R(crate::FieldReader::new(bits))
     }
@@ -86,6 +91,7 @@ impl core::ops::Deref for DEV_RESUME_FROM_HOST_R {
 #[doc = "Field `DEV_SUSPEND` reader - Set when the device suspend state changes. Cleared by writing to SIE_STATUS.SUSPENDED"]
 pub struct DEV_SUSPEND_R(crate::FieldReader<bool, bool>);
 impl DEV_SUSPEND_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         DEV_SUSPEND_R(crate::FieldReader::new(bits))
     }
@@ -100,6 +106,7 @@ impl core::ops::Deref for DEV_SUSPEND_R {
 #[doc = "Field `DEV_CONN_DIS` reader - Set when the device connection state changes. Cleared by writing to SIE_STATUS.CONNECTED"]
 pub struct DEV_CONN_DIS_R(crate::FieldReader<bool, bool>);
 impl DEV_CONN_DIS_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         DEV_CONN_DIS_R(crate::FieldReader::new(bits))
     }
@@ -114,6 +121,7 @@ impl core::ops::Deref for DEV_CONN_DIS_R {
 #[doc = "Field `BUS_RESET` reader - Source: SIE_STATUS.BUS_RESET"]
 pub struct BUS_RESET_R(crate::FieldReader<bool, bool>);
 impl BUS_RESET_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         BUS_RESET_R(crate::FieldReader::new(bits))
     }
@@ -128,6 +136,7 @@ impl core::ops::Deref for BUS_RESET_R {
 #[doc = "Field `VBUS_DETECT` reader - Source: SIE_STATUS.VBUS_DETECTED"]
 pub struct VBUS_DETECT_R(crate::FieldReader<bool, bool>);
 impl VBUS_DETECT_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         VBUS_DETECT_R(crate::FieldReader::new(bits))
     }
@@ -142,6 +151,7 @@ impl core::ops::Deref for VBUS_DETECT_R {
 #[doc = "Field `STALL` reader - Source: SIE_STATUS.STALL_REC"]
 pub struct STALL_R(crate::FieldReader<bool, bool>);
 impl STALL_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         STALL_R(crate::FieldReader::new(bits))
     }
@@ -156,6 +166,7 @@ impl core::ops::Deref for STALL_R {
 #[doc = "Field `ERROR_CRC` reader - Source: SIE_STATUS.CRC_ERROR"]
 pub struct ERROR_CRC_R(crate::FieldReader<bool, bool>);
 impl ERROR_CRC_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         ERROR_CRC_R(crate::FieldReader::new(bits))
     }
@@ -170,6 +181,7 @@ impl core::ops::Deref for ERROR_CRC_R {
 #[doc = "Field `ERROR_BIT_STUFF` reader - Source: SIE_STATUS.BIT_STUFF_ERROR"]
 pub struct ERROR_BIT_STUFF_R(crate::FieldReader<bool, bool>);
 impl ERROR_BIT_STUFF_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         ERROR_BIT_STUFF_R(crate::FieldReader::new(bits))
     }
@@ -184,6 +196,7 @@ impl core::ops::Deref for ERROR_BIT_STUFF_R {
 #[doc = "Field `ERROR_RX_OVERFLOW` reader - Source: SIE_STATUS.RX_OVERFLOW"]
 pub struct ERROR_RX_OVERFLOW_R(crate::FieldReader<bool, bool>);
 impl ERROR_RX_OVERFLOW_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         ERROR_RX_OVERFLOW_R(crate::FieldReader::new(bits))
     }
@@ -198,6 +211,7 @@ impl core::ops::Deref for ERROR_RX_OVERFLOW_R {
 #[doc = "Field `ERROR_RX_TIMEOUT` reader - Source: SIE_STATUS.RX_TIMEOUT"]
 pub struct ERROR_RX_TIMEOUT_R(crate::FieldReader<bool, bool>);
 impl ERROR_RX_TIMEOUT_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         ERROR_RX_TIMEOUT_R(crate::FieldReader::new(bits))
     }
@@ -212,6 +226,7 @@ impl core::ops::Deref for ERROR_RX_TIMEOUT_R {
 #[doc = "Field `ERROR_DATA_SEQ` reader - Source: SIE_STATUS.DATA_SEQ_ERROR"]
 pub struct ERROR_DATA_SEQ_R(crate::FieldReader<bool, bool>);
 impl ERROR_DATA_SEQ_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         ERROR_DATA_SEQ_R(crate::FieldReader::new(bits))
     }
@@ -226,6 +241,7 @@ impl core::ops::Deref for ERROR_DATA_SEQ_R {
 #[doc = "Field `BUFF_STATUS` reader - Raised when any bit in BUFF_STATUS is set. Clear by clearing all bits in BUFF_STATUS."]
 pub struct BUFF_STATUS_R(crate::FieldReader<bool, bool>);
 impl BUFF_STATUS_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         BUFF_STATUS_R(crate::FieldReader::new(bits))
     }
@@ -240,6 +256,7 @@ impl core::ops::Deref for BUFF_STATUS_R {
 #[doc = "Field `TRANS_COMPLETE` reader - Raised every time SIE_STATUS.TRANS_COMPLETE is set. Clear by writing to this bit."]
 pub struct TRANS_COMPLETE_R(crate::FieldReader<bool, bool>);
 impl TRANS_COMPLETE_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         TRANS_COMPLETE_R(crate::FieldReader::new(bits))
     }
@@ -254,6 +271,7 @@ impl core::ops::Deref for TRANS_COMPLETE_R {
 #[doc = "Field `HOST_SOF` reader - Host: raised every time the host sends a SOF (Start of Frame). Cleared by reading SOF_RD"]
 pub struct HOST_SOF_R(crate::FieldReader<bool, bool>);
 impl HOST_SOF_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         HOST_SOF_R(crate::FieldReader::new(bits))
     }
@@ -268,6 +286,7 @@ impl core::ops::Deref for HOST_SOF_R {
 #[doc = "Field `HOST_RESUME` reader - Host: raised when a device wakes up the host. Cleared by writing to SIE_STATUS.RESUME"]
 pub struct HOST_RESUME_R(crate::FieldReader<bool, bool>);
 impl HOST_RESUME_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         HOST_RESUME_R(crate::FieldReader::new(bits))
     }
@@ -282,6 +301,7 @@ impl core::ops::Deref for HOST_RESUME_R {
 #[doc = "Field `HOST_CONN_DIS` reader - Host: raised when a device is connected or disconnected (i.e. when SIE_STATUS.SPEED changes). Cleared by writing to SIE_STATUS.SPEED"]
 pub struct HOST_CONN_DIS_R(crate::FieldReader<bool, bool>);
 impl HOST_CONN_DIS_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         HOST_CONN_DIS_R(crate::FieldReader::new(bits))
     }

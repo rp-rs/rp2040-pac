@@ -78,6 +78,7 @@ impl From<FC0_SRC_A> for u8 {
 #[doc = "Field `FC0_SRC` reader - "]
 pub struct FC0_SRC_R(crate::FieldReader<u8, FC0_SRC_A>);
 impl FC0_SRC_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         FC0_SRC_R(crate::FieldReader::new(bits))
     }

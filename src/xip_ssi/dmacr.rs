@@ -37,6 +37,7 @@ impl From<crate::W<DMACR_SPEC>> for W {
 #[doc = "Field `TDMAE` reader - Transmit DMA enable"]
 pub struct TDMAE_R(crate::FieldReader<bool, bool>);
 impl TDMAE_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         TDMAE_R(crate::FieldReader::new(bits))
     }
@@ -73,6 +74,7 @@ impl<'a> TDMAE_W<'a> {
 #[doc = "Field `RDMAE` reader - Receive DMA enable"]
 pub struct RDMAE_R(crate::FieldReader<bool, bool>);
 impl RDMAE_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         RDMAE_R(crate::FieldReader::new(bits))
     }

@@ -37,6 +37,7 @@ impl From<crate::W<TOP_SPEC>> for W {
 #[doc = "Field `TOP` reader - "]
 pub struct TOP_R(crate::FieldReader<u16, u16>);
 impl TOP_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u16) -> Self {
         TOP_R(crate::FieldReader::new(bits))
     }

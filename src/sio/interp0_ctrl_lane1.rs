@@ -39,6 +39,7 @@ impl From<crate::W<INTERP0_CTRL_LANE1_SPEC>> for W {
  of pointers into flash or SRAM."]
 pub struct FORCE_MSB_R(crate::FieldReader<u8, u8>);
 impl FORCE_MSB_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         FORCE_MSB_R(crate::FieldReader::new(bits))
     }
@@ -67,6 +68,7 @@ impl<'a> FORCE_MSB_W<'a> {
 #[doc = "Field `ADD_RAW` reader - If 1, mask + shift is bypassed for LANE1 result. This does not affect FULL result."]
 pub struct ADD_RAW_R(crate::FieldReader<bool, bool>);
 impl ADD_RAW_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         ADD_RAW_R(crate::FieldReader::new(bits))
     }
@@ -103,6 +105,7 @@ impl<'a> ADD_RAW_W<'a> {
 #[doc = "Field `CROSS_RESULT` reader - If 1, feed the opposite lane's result into this lane's accumulator on POP."]
 pub struct CROSS_RESULT_R(crate::FieldReader<bool, bool>);
 impl CROSS_RESULT_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         CROSS_RESULT_R(crate::FieldReader::new(bits))
     }
@@ -140,6 +143,7 @@ impl<'a> CROSS_RESULT_W<'a> {
  Takes effect even if ADD_RAW is set (the CROSS_INPUT mux is before the shift+mask bypass)"]
 pub struct CROSS_INPUT_R(crate::FieldReader<bool, bool>);
 impl CROSS_INPUT_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         CROSS_INPUT_R(crate::FieldReader::new(bits))
     }
@@ -178,6 +182,7 @@ impl<'a> CROSS_INPUT_W<'a> {
  before adding to BASE1, and LANE1 PEEK/POP appear extended to 32 bits when read by processor."]
 pub struct SIGNED_R(crate::FieldReader<bool, bool>);
 impl SIGNED_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         SIGNED_R(crate::FieldReader::new(bits))
     }
@@ -216,6 +221,7 @@ impl<'a> SIGNED_W<'a> {
  Setting MSB < LSB may cause chip to turn inside-out"]
 pub struct MASK_MSB_R(crate::FieldReader<u8, u8>);
 impl MASK_MSB_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         MASK_MSB_R(crate::FieldReader::new(bits))
     }
@@ -243,6 +249,7 @@ impl<'a> MASK_MSB_W<'a> {
 #[doc = "Field `MASK_LSB` reader - The least-significant bit allowed to pass by the mask (inclusive)"]
 pub struct MASK_LSB_R(crate::FieldReader<u8, u8>);
 impl MASK_LSB_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         MASK_LSB_R(crate::FieldReader::new(bits))
     }
@@ -269,6 +276,7 @@ impl<'a> MASK_LSB_W<'a> {
 #[doc = "Field `SHIFT` reader - Logical right-shift applied to accumulator before masking"]
 pub struct SHIFT_R(crate::FieldReader<u8, u8>);
 impl SHIFT_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         SHIFT_R(crate::FieldReader::new(bits))
     }
@@ -293,7 +301,9 @@ impl<'a> SHIFT_W<'a> {
     }
 }
 impl R {
-    #[doc = "Bits 19:20 - ORed into bits 29:28 of the lane result presented to the processor on the bus. No effect on the internal 32-bit datapath. Handy for using a lane to generate sequence of pointers into flash or SRAM."]
+    #[doc = "Bits 19:20 - ORed into bits 29:28 of the lane result presented to the processor on the bus.  
+ No effect on the internal 32-bit datapath. Handy for using a lane to generate sequence  
+ of pointers into flash or SRAM."]
     #[inline(always)]
     pub fn force_msb(&self) -> FORCE_MSB_R {
         FORCE_MSB_R::new(((self.bits >> 19) & 0x03) as u8)
@@ -308,17 +318,20 @@ impl R {
     pub fn cross_result(&self) -> CROSS_RESULT_R {
         CROSS_RESULT_R::new(((self.bits >> 17) & 0x01) != 0)
     }
-    #[doc = "Bit 16 - If 1, feed the opposite lane's accumulator into this lane's shift + mask hardware. Takes effect even if ADD_RAW is set (the CROSS_INPUT mux is before the shift+mask bypass)"]
+    #[doc = "Bit 16 - If 1, feed the opposite lane's accumulator into this lane's shift + mask hardware.  
+ Takes effect even if ADD_RAW is set (the CROSS_INPUT mux is before the shift+mask bypass)"]
     #[inline(always)]
     pub fn cross_input(&self) -> CROSS_INPUT_R {
         CROSS_INPUT_R::new(((self.bits >> 16) & 0x01) != 0)
     }
-    #[doc = "Bit 15 - If SIGNED is set, the shifted and masked accumulator value is sign-extended to 32 bits before adding to BASE1, and LANE1 PEEK/POP appear extended to 32 bits when read by processor."]
+    #[doc = "Bit 15 - If SIGNED is set, the shifted and masked accumulator value is sign-extended to 32 bits  
+ before adding to BASE1, and LANE1 PEEK/POP appear extended to 32 bits when read by processor."]
     #[inline(always)]
     pub fn signed(&self) -> SIGNED_R {
         SIGNED_R::new(((self.bits >> 15) & 0x01) != 0)
     }
-    #[doc = "Bits 10:14 - The most-significant bit allowed to pass by the mask (inclusive) Setting MSB < LSB may cause chip to turn inside-out"]
+    #[doc = "Bits 10:14 - The most-significant bit allowed to pass by the mask (inclusive)  
+ Setting MSB < LSB may cause chip to turn inside-out"]
     #[inline(always)]
     pub fn mask_msb(&self) -> MASK_MSB_R {
         MASK_MSB_R::new(((self.bits >> 10) & 0x1f) as u8)
@@ -335,7 +348,9 @@ impl R {
     }
 }
 impl W {
-    #[doc = "Bits 19:20 - ORed into bits 29:28 of the lane result presented to the processor on the bus. No effect on the internal 32-bit datapath. Handy for using a lane to generate sequence of pointers into flash or SRAM."]
+    #[doc = "Bits 19:20 - ORed into bits 29:28 of the lane result presented to the processor on the bus.  
+ No effect on the internal 32-bit datapath. Handy for using a lane to generate sequence  
+ of pointers into flash or SRAM."]
     #[inline(always)]
     pub fn force_msb(&mut self) -> FORCE_MSB_W {
         FORCE_MSB_W { w: self }
@@ -350,17 +365,20 @@ impl W {
     pub fn cross_result(&mut self) -> CROSS_RESULT_W {
         CROSS_RESULT_W { w: self }
     }
-    #[doc = "Bit 16 - If 1, feed the opposite lane's accumulator into this lane's shift + mask hardware. Takes effect even if ADD_RAW is set (the CROSS_INPUT mux is before the shift+mask bypass)"]
+    #[doc = "Bit 16 - If 1, feed the opposite lane's accumulator into this lane's shift + mask hardware.  
+ Takes effect even if ADD_RAW is set (the CROSS_INPUT mux is before the shift+mask bypass)"]
     #[inline(always)]
     pub fn cross_input(&mut self) -> CROSS_INPUT_W {
         CROSS_INPUT_W { w: self }
     }
-    #[doc = "Bit 15 - If SIGNED is set, the shifted and masked accumulator value is sign-extended to 32 bits before adding to BASE1, and LANE1 PEEK/POP appear extended to 32 bits when read by processor."]
+    #[doc = "Bit 15 - If SIGNED is set, the shifted and masked accumulator value is sign-extended to 32 bits  
+ before adding to BASE1, and LANE1 PEEK/POP appear extended to 32 bits when read by processor."]
     #[inline(always)]
     pub fn signed(&mut self) -> SIGNED_W {
         SIGNED_W { w: self }
     }
-    #[doc = "Bits 10:14 - The most-significant bit allowed to pass by the mask (inclusive) Setting MSB < LSB may cause chip to turn inside-out"]
+    #[doc = "Bits 10:14 - The most-significant bit allowed to pass by the mask (inclusive)  
+ Setting MSB < LSB may cause chip to turn inside-out"]
     #[inline(always)]
     pub fn mask_msb(&mut self) -> MASK_MSB_W {
         MASK_MSB_W { w: self }

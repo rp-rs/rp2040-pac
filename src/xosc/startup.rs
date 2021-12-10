@@ -37,6 +37,7 @@ impl From<crate::W<STARTUP_SPEC>> for W {
 #[doc = "Field `X4` reader - Multiplies the startup_delay by 4. This is of little value to the user given that the delay can be programmed directly."]
 pub struct X4_R(crate::FieldReader<bool, bool>);
 impl X4_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         X4_R(crate::FieldReader::new(bits))
     }
@@ -73,6 +74,7 @@ impl<'a> X4_W<'a> {
 #[doc = "Field `DELAY` reader - in multiples of 256*xtal_period. The reset value of 0xc4 corresponds to approx 50 000 cycles."]
 pub struct DELAY_R(crate::FieldReader<u16, u16>);
 impl DELAY_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u16) -> Self {
         DELAY_R(crate::FieldReader::new(bits))
     }

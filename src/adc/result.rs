@@ -16,6 +16,7 @@ impl From<crate::R<RESULT_SPEC>> for R {
 #[doc = "Field `RESULT` reader - "]
 pub struct RESULT_R(crate::FieldReader<u16, u16>);
 impl RESULT_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u16) -> Self {
         RESULT_R(crate::FieldReader::new(bits))
     }

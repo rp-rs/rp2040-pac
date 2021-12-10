@@ -37,6 +37,7 @@ impl From<crate::W<CTRL_SPEC>> for W {
 #[doc = "Field `TRIGGER` reader - Trigger a watchdog reset"]
 pub struct TRIGGER_R(crate::FieldReader<bool, bool>);
 impl TRIGGER_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         TRIGGER_R(crate::FieldReader::new(bits))
     }
@@ -73,6 +74,7 @@ impl<'a> TRIGGER_W<'a> {
 #[doc = "Field `ENABLE` reader - When not enabled the watchdog timer is paused"]
 pub struct ENABLE_R(crate::FieldReader<bool, bool>);
 impl ENABLE_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         ENABLE_R(crate::FieldReader::new(bits))
     }
@@ -109,6 +111,7 @@ impl<'a> ENABLE_W<'a> {
 #[doc = "Field `PAUSE_DBG1` reader - Pause the watchdog timer when processor 1 is in debug mode"]
 pub struct PAUSE_DBG1_R(crate::FieldReader<bool, bool>);
 impl PAUSE_DBG1_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         PAUSE_DBG1_R(crate::FieldReader::new(bits))
     }
@@ -145,6 +148,7 @@ impl<'a> PAUSE_DBG1_W<'a> {
 #[doc = "Field `PAUSE_DBG0` reader - Pause the watchdog timer when processor 0 is in debug mode"]
 pub struct PAUSE_DBG0_R(crate::FieldReader<bool, bool>);
 impl PAUSE_DBG0_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         PAUSE_DBG0_R(crate::FieldReader::new(bits))
     }
@@ -181,6 +185,7 @@ impl<'a> PAUSE_DBG0_W<'a> {
 #[doc = "Field `PAUSE_JTAG` reader - Pause the watchdog timer when JTAG is accessing the bus fabric"]
 pub struct PAUSE_JTAG_R(crate::FieldReader<bool, bool>);
 impl PAUSE_JTAG_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         PAUSE_JTAG_R(crate::FieldReader::new(bits))
     }
@@ -217,6 +222,7 @@ impl<'a> PAUSE_JTAG_W<'a> {
 #[doc = "Field `TIME` reader - Indicates the number of ticks / 2 (see errata RP2040-E1) before a watchdog reset will be triggered"]
 pub struct TIME_R(crate::FieldReader<u32, u32>);
 impl TIME_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u32) -> Self {
         TIME_R(crate::FieldReader::new(bits))
     }

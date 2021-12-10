@@ -16,6 +16,7 @@ impl From<crate::R<FIFO_LEVELS_SPEC>> for R {
 #[doc = "Field `RAF_LVL` reader - Current Read-Address-FIFO fill level"]
 pub struct RAF_LVL_R(crate::FieldReader<u8, u8>);
 impl RAF_LVL_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         RAF_LVL_R(crate::FieldReader::new(bits))
     }
@@ -30,6 +31,7 @@ impl core::ops::Deref for RAF_LVL_R {
 #[doc = "Field `WAF_LVL` reader - Current Write-Address-FIFO fill level"]
 pub struct WAF_LVL_R(crate::FieldReader<u8, u8>);
 impl WAF_LVL_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         WAF_LVL_R(crate::FieldReader::new(bits))
     }
@@ -44,6 +46,7 @@ impl core::ops::Deref for WAF_LVL_R {
 #[doc = "Field `TDF_LVL` reader - Current Transfer-Data-FIFO fill level"]
 pub struct TDF_LVL_R(crate::FieldReader<u8, u8>);
 impl TDF_LVL_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         TDF_LVL_R(crate::FieldReader::new(bits))
     }

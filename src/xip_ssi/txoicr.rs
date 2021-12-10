@@ -16,6 +16,7 @@ impl From<crate::R<TXOICR_SPEC>> for R {
 #[doc = "Field `TXOICR` reader - Clear-on-read transmit FIFO overflow interrupt"]
 pub struct TXOICR_R(crate::FieldReader<bool, bool>);
 impl TXOICR_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         TXOICR_R(crate::FieldReader::new(bits))
     }

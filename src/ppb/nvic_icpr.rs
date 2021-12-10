@@ -43,6 +43,7 @@ impl From<crate::W<NVIC_ICPR_SPEC>> for W {
  1 = Interrupt is pending."]
 pub struct CLRPEND_R(crate::FieldReader<u32, u32>);
 impl CLRPEND_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u32) -> Self {
         CLRPEND_R(crate::FieldReader::new(bits))
     }
@@ -73,14 +74,26 @@ impl<'a> CLRPEND_W<'a> {
     }
 }
 impl R {
-    #[doc = "Bits 0:31 - Interrupt clear-pending bits. Write: 0 = No effect. 1 = Removes pending state and interrupt. Read: 0 = Interrupt is not pending. 1 = Interrupt is pending."]
+    #[doc = "Bits 0:31 - Interrupt clear-pending bits.  
+ Write:  
+ 0 = No effect.  
+ 1 = Removes pending state and interrupt.  
+ Read:  
+ 0 = Interrupt is not pending.  
+ 1 = Interrupt is pending."]
     #[inline(always)]
     pub fn clrpend(&self) -> CLRPEND_R {
         CLRPEND_R::new((self.bits & 0xffff_ffff) as u32)
     }
 }
 impl W {
-    #[doc = "Bits 0:31 - Interrupt clear-pending bits. Write: 0 = No effect. 1 = Removes pending state and interrupt. Read: 0 = Interrupt is not pending. 1 = Interrupt is pending."]
+    #[doc = "Bits 0:31 - Interrupt clear-pending bits.  
+ Write:  
+ 0 = No effect.  
+ 1 = Removes pending state and interrupt.  
+ Read:  
+ 0 = Interrupt is not pending.  
+ 1 = Interrupt is pending."]
     #[inline(always)]
     pub fn clrpend(&mut self) -> CLRPEND_W {
         CLRPEND_W { w: self }

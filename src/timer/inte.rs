@@ -37,6 +37,7 @@ impl From<crate::W<INTE_SPEC>> for W {
 #[doc = "Field `ALARM_3` reader - "]
 pub struct ALARM_3_R(crate::FieldReader<bool, bool>);
 impl ALARM_3_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         ALARM_3_R(crate::FieldReader::new(bits))
     }
@@ -73,6 +74,7 @@ impl<'a> ALARM_3_W<'a> {
 #[doc = "Field `ALARM_2` reader - "]
 pub struct ALARM_2_R(crate::FieldReader<bool, bool>);
 impl ALARM_2_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         ALARM_2_R(crate::FieldReader::new(bits))
     }
@@ -109,6 +111,7 @@ impl<'a> ALARM_2_W<'a> {
 #[doc = "Field `ALARM_1` reader - "]
 pub struct ALARM_1_R(crate::FieldReader<bool, bool>);
 impl ALARM_1_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         ALARM_1_R(crate::FieldReader::new(bits))
     }
@@ -145,6 +148,7 @@ impl<'a> ALARM_1_W<'a> {
 #[doc = "Field `ALARM_0` reader - "]
 pub struct ALARM_0_R(crate::FieldReader<bool, bool>);
 impl ALARM_0_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         ALARM_0_R(crate::FieldReader::new(bits))
     }

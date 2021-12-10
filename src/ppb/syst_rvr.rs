@@ -37,6 +37,7 @@ impl From<crate::W<SYST_RVR_SPEC>> for W {
 #[doc = "Field `RELOAD` reader - Value to load into the SysTick Current Value Register when the counter reaches 0."]
 pub struct RELOAD_R(crate::FieldReader<u32, u32>);
 impl RELOAD_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u32) -> Self {
         RELOAD_R(crate::FieldReader::new(bits))
     }

@@ -60,6 +60,7 @@ impl From<DIV_A> for u16 {
  this register resets to div=16"]
 pub struct DIV_R(crate::FieldReader<u16, DIV_A>);
 impl DIV_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u16) -> Self {
         DIV_R(crate::FieldReader::new(bits))
     }
@@ -111,14 +112,22 @@ impl<'a> DIV_W<'a> {
     }
 }
 impl R {
-    #[doc = "Bits 0:11 - set to 0xaa0 + div where div = 0 divides by 32 div = 1-31 divides by div any other value sets div=31 this register resets to div=16"]
+    #[doc = "Bits 0:11 - set to 0xaa0 + div where  
+ div = 0 divides by 32  
+ div = 1-31 divides by div  
+ any other value sets div=31  
+ this register resets to div=16"]
     #[inline(always)]
     pub fn div(&self) -> DIV_R {
         DIV_R::new((self.bits & 0x0fff) as u16)
     }
 }
 impl W {
-    #[doc = "Bits 0:11 - set to 0xaa0 + div where div = 0 divides by 32 div = 1-31 divides by div any other value sets div=31 this register resets to div=16"]
+    #[doc = "Bits 0:11 - set to 0xaa0 + div where  
+ div = 0 divides by 32  
+ div = 1-31 divides by div  
+ any other value sets div=31  
+ this register resets to div=16"]
     #[inline(always)]
     pub fn div(&mut self) -> DIV_W {
         DIV_W { w: self }

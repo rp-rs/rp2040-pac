@@ -38,6 +38,7 @@ impl From<crate::W<PWR_SPEC>> for W {
  To save power set high when PLL output not required or bypass=1."]
 pub struct VCOPD_R(crate::FieldReader<bool, bool>);
 impl VCOPD_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         VCOPD_R(crate::FieldReader::new(bits))
     }
@@ -76,6 +77,7 @@ impl<'a> VCOPD_W<'a> {
  To save power set high when PLL output not required or bypass=1."]
 pub struct POSTDIVPD_R(crate::FieldReader<bool, bool>);
 impl POSTDIVPD_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         POSTDIVPD_R(crate::FieldReader::new(bits))
     }
@@ -114,6 +116,7 @@ impl<'a> POSTDIVPD_W<'a> {
  Nothing is achieved by setting this low."]
 pub struct DSMPD_R(crate::FieldReader<bool, bool>);
 impl DSMPD_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         DSMPD_R(crate::FieldReader::new(bits))
     }
@@ -152,6 +155,7 @@ impl<'a> DSMPD_W<'a> {
  To save power set high when PLL output not required."]
 pub struct PD_R(crate::FieldReader<bool, bool>);
 impl PD_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         PD_R(crate::FieldReader::new(bits))
     }
@@ -187,44 +191,52 @@ impl<'a> PD_W<'a> {
     }
 }
 impl R {
-    #[doc = "Bit 5 - PLL VCO powerdown To save power set high when PLL output not required or bypass=1."]
+    #[doc = "Bit 5 - PLL VCO powerdown  
+ To save power set high when PLL output not required or bypass=1."]
     #[inline(always)]
     pub fn vcopd(&self) -> VCOPD_R {
         VCOPD_R::new(((self.bits >> 5) & 0x01) != 0)
     }
-    #[doc = "Bit 3 - PLL post divider powerdown To save power set high when PLL output not required or bypass=1."]
+    #[doc = "Bit 3 - PLL post divider powerdown  
+ To save power set high when PLL output not required or bypass=1."]
     #[inline(always)]
     pub fn postdivpd(&self) -> POSTDIVPD_R {
         POSTDIVPD_R::new(((self.bits >> 3) & 0x01) != 0)
     }
-    #[doc = "Bit 2 - PLL DSM powerdown Nothing is achieved by setting this low."]
+    #[doc = "Bit 2 - PLL DSM powerdown  
+ Nothing is achieved by setting this low."]
     #[inline(always)]
     pub fn dsmpd(&self) -> DSMPD_R {
         DSMPD_R::new(((self.bits >> 2) & 0x01) != 0)
     }
-    #[doc = "Bit 0 - PLL powerdown To save power set high when PLL output not required."]
+    #[doc = "Bit 0 - PLL powerdown  
+ To save power set high when PLL output not required."]
     #[inline(always)]
     pub fn pd(&self) -> PD_R {
         PD_R::new((self.bits & 0x01) != 0)
     }
 }
 impl W {
-    #[doc = "Bit 5 - PLL VCO powerdown To save power set high when PLL output not required or bypass=1."]
+    #[doc = "Bit 5 - PLL VCO powerdown  
+ To save power set high when PLL output not required or bypass=1."]
     #[inline(always)]
     pub fn vcopd(&mut self) -> VCOPD_W {
         VCOPD_W { w: self }
     }
-    #[doc = "Bit 3 - PLL post divider powerdown To save power set high when PLL output not required or bypass=1."]
+    #[doc = "Bit 3 - PLL post divider powerdown  
+ To save power set high when PLL output not required or bypass=1."]
     #[inline(always)]
     pub fn postdivpd(&mut self) -> POSTDIVPD_W {
         POSTDIVPD_W { w: self }
     }
-    #[doc = "Bit 2 - PLL DSM powerdown Nothing is achieved by setting this low."]
+    #[doc = "Bit 2 - PLL DSM powerdown  
+ Nothing is achieved by setting this low."]
     #[inline(always)]
     pub fn dsmpd(&mut self) -> DSMPD_W {
         DSMPD_W { w: self }
     }
-    #[doc = "Bit 0 - PLL powerdown To save power set high when PLL output not required."]
+    #[doc = "Bit 0 - PLL powerdown  
+ To save power set high when PLL output not required."]
     #[inline(always)]
     pub fn pd(&mut self) -> PD_W {
         PD_W { w: self }

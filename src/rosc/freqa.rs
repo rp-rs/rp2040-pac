@@ -54,6 +54,7 @@ impl From<PASSWD_A> for u16 {
  Any other value in this field will set all drive strengths to 0"]
 pub struct PASSWD_R(crate::FieldReader<u16, PASSWD_A>);
 impl PASSWD_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u16) -> Self {
         PASSWD_R(crate::FieldReader::new(bits))
     }
@@ -104,6 +105,7 @@ impl<'a> PASSWD_W<'a> {
 #[doc = "Field `DS3` reader - Stage 3 drive strength"]
 pub struct DS3_R(crate::FieldReader<u8, u8>);
 impl DS3_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         DS3_R(crate::FieldReader::new(bits))
     }
@@ -130,6 +132,7 @@ impl<'a> DS3_W<'a> {
 #[doc = "Field `DS2` reader - Stage 2 drive strength"]
 pub struct DS2_R(crate::FieldReader<u8, u8>);
 impl DS2_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         DS2_R(crate::FieldReader::new(bits))
     }
@@ -156,6 +159,7 @@ impl<'a> DS2_W<'a> {
 #[doc = "Field `DS1` reader - Stage 1 drive strength"]
 pub struct DS1_R(crate::FieldReader<u8, u8>);
 impl DS1_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         DS1_R(crate::FieldReader::new(bits))
     }
@@ -182,6 +186,7 @@ impl<'a> DS1_W<'a> {
 #[doc = "Field `DS0` reader - Stage 0 drive strength"]
 pub struct DS0_R(crate::FieldReader<u8, u8>);
 impl DS0_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         DS0_R(crate::FieldReader::new(bits))
     }
@@ -206,7 +211,8 @@ impl<'a> DS0_W<'a> {
     }
 }
 impl R {
-    #[doc = "Bits 16:31 - Set to 0x9696 to apply the settings Any other value in this field will set all drive strengths to 0"]
+    #[doc = "Bits 16:31 - Set to 0x9696 to apply the settings  
+ Any other value in this field will set all drive strengths to 0"]
     #[inline(always)]
     pub fn passwd(&self) -> PASSWD_R {
         PASSWD_R::new(((self.bits >> 16) & 0xffff) as u16)
@@ -233,7 +239,8 @@ impl R {
     }
 }
 impl W {
-    #[doc = "Bits 16:31 - Set to 0x9696 to apply the settings Any other value in this field will set all drive strengths to 0"]
+    #[doc = "Bits 16:31 - Set to 0x9696 to apply the settings  
+ Any other value in this field will set all drive strengths to 0"]
     #[inline(always)]
     pub fn passwd(&mut self) -> PASSWD_W {
         PASSWD_W { w: self }

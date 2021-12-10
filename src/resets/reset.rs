@@ -37,6 +37,7 @@ impl From<crate::W<RESET_SPEC>> for W {
 #[doc = "Field `usbctrl` reader - "]
 pub struct USBCTRL_R(crate::FieldReader<bool, bool>);
 impl USBCTRL_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         USBCTRL_R(crate::FieldReader::new(bits))
     }
@@ -73,6 +74,7 @@ impl<'a> USBCTRL_W<'a> {
 #[doc = "Field `uart1` reader - "]
 pub struct UART1_R(crate::FieldReader<bool, bool>);
 impl UART1_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         UART1_R(crate::FieldReader::new(bits))
     }
@@ -109,6 +111,7 @@ impl<'a> UART1_W<'a> {
 #[doc = "Field `uart0` reader - "]
 pub struct UART0_R(crate::FieldReader<bool, bool>);
 impl UART0_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         UART0_R(crate::FieldReader::new(bits))
     }
@@ -145,6 +148,7 @@ impl<'a> UART0_W<'a> {
 #[doc = "Field `timer` reader - "]
 pub struct TIMER_R(crate::FieldReader<bool, bool>);
 impl TIMER_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         TIMER_R(crate::FieldReader::new(bits))
     }
@@ -181,6 +185,7 @@ impl<'a> TIMER_W<'a> {
 #[doc = "Field `tbman` reader - "]
 pub struct TBMAN_R(crate::FieldReader<bool, bool>);
 impl TBMAN_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         TBMAN_R(crate::FieldReader::new(bits))
     }
@@ -217,6 +222,7 @@ impl<'a> TBMAN_W<'a> {
 #[doc = "Field `sysinfo` reader - "]
 pub struct SYSINFO_R(crate::FieldReader<bool, bool>);
 impl SYSINFO_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         SYSINFO_R(crate::FieldReader::new(bits))
     }
@@ -253,6 +259,7 @@ impl<'a> SYSINFO_W<'a> {
 #[doc = "Field `syscfg` reader - "]
 pub struct SYSCFG_R(crate::FieldReader<bool, bool>);
 impl SYSCFG_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         SYSCFG_R(crate::FieldReader::new(bits))
     }
@@ -289,6 +296,7 @@ impl<'a> SYSCFG_W<'a> {
 #[doc = "Field `spi1` reader - "]
 pub struct SPI1_R(crate::FieldReader<bool, bool>);
 impl SPI1_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         SPI1_R(crate::FieldReader::new(bits))
     }
@@ -325,6 +333,7 @@ impl<'a> SPI1_W<'a> {
 #[doc = "Field `spi0` reader - "]
 pub struct SPI0_R(crate::FieldReader<bool, bool>);
 impl SPI0_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         SPI0_R(crate::FieldReader::new(bits))
     }
@@ -361,6 +370,7 @@ impl<'a> SPI0_W<'a> {
 #[doc = "Field `rtc` reader - "]
 pub struct RTC_R(crate::FieldReader<bool, bool>);
 impl RTC_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         RTC_R(crate::FieldReader::new(bits))
     }
@@ -397,6 +407,7 @@ impl<'a> RTC_W<'a> {
 #[doc = "Field `pwm` reader - "]
 pub struct PWM_R(crate::FieldReader<bool, bool>);
 impl PWM_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         PWM_R(crate::FieldReader::new(bits))
     }
@@ -433,6 +444,7 @@ impl<'a> PWM_W<'a> {
 #[doc = "Field `pll_usb` reader - "]
 pub struct PLL_USB_R(crate::FieldReader<bool, bool>);
 impl PLL_USB_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         PLL_USB_R(crate::FieldReader::new(bits))
     }
@@ -469,6 +481,7 @@ impl<'a> PLL_USB_W<'a> {
 #[doc = "Field `pll_sys` reader - "]
 pub struct PLL_SYS_R(crate::FieldReader<bool, bool>);
 impl PLL_SYS_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         PLL_SYS_R(crate::FieldReader::new(bits))
     }
@@ -505,6 +518,7 @@ impl<'a> PLL_SYS_W<'a> {
 #[doc = "Field `pio1` reader - "]
 pub struct PIO1_R(crate::FieldReader<bool, bool>);
 impl PIO1_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         PIO1_R(crate::FieldReader::new(bits))
     }
@@ -541,6 +555,7 @@ impl<'a> PIO1_W<'a> {
 #[doc = "Field `pio0` reader - "]
 pub struct PIO0_R(crate::FieldReader<bool, bool>);
 impl PIO0_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         PIO0_R(crate::FieldReader::new(bits))
     }
@@ -577,6 +592,7 @@ impl<'a> PIO0_W<'a> {
 #[doc = "Field `pads_qspi` reader - "]
 pub struct PADS_QSPI_R(crate::FieldReader<bool, bool>);
 impl PADS_QSPI_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         PADS_QSPI_R(crate::FieldReader::new(bits))
     }
@@ -613,6 +629,7 @@ impl<'a> PADS_QSPI_W<'a> {
 #[doc = "Field `pads_bank0` reader - "]
 pub struct PADS_BANK0_R(crate::FieldReader<bool, bool>);
 impl PADS_BANK0_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         PADS_BANK0_R(crate::FieldReader::new(bits))
     }
@@ -649,6 +666,7 @@ impl<'a> PADS_BANK0_W<'a> {
 #[doc = "Field `jtag` reader - "]
 pub struct JTAG_R(crate::FieldReader<bool, bool>);
 impl JTAG_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         JTAG_R(crate::FieldReader::new(bits))
     }
@@ -685,6 +703,7 @@ impl<'a> JTAG_W<'a> {
 #[doc = "Field `io_qspi` reader - "]
 pub struct IO_QSPI_R(crate::FieldReader<bool, bool>);
 impl IO_QSPI_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         IO_QSPI_R(crate::FieldReader::new(bits))
     }
@@ -721,6 +740,7 @@ impl<'a> IO_QSPI_W<'a> {
 #[doc = "Field `io_bank0` reader - "]
 pub struct IO_BANK0_R(crate::FieldReader<bool, bool>);
 impl IO_BANK0_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         IO_BANK0_R(crate::FieldReader::new(bits))
     }
@@ -757,6 +777,7 @@ impl<'a> IO_BANK0_W<'a> {
 #[doc = "Field `i2c1` reader - "]
 pub struct I2C1_R(crate::FieldReader<bool, bool>);
 impl I2C1_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         I2C1_R(crate::FieldReader::new(bits))
     }
@@ -793,6 +814,7 @@ impl<'a> I2C1_W<'a> {
 #[doc = "Field `i2c0` reader - "]
 pub struct I2C0_R(crate::FieldReader<bool, bool>);
 impl I2C0_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         I2C0_R(crate::FieldReader::new(bits))
     }
@@ -829,6 +851,7 @@ impl<'a> I2C0_W<'a> {
 #[doc = "Field `dma` reader - "]
 pub struct DMA_R(crate::FieldReader<bool, bool>);
 impl DMA_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         DMA_R(crate::FieldReader::new(bits))
     }
@@ -865,6 +888,7 @@ impl<'a> DMA_W<'a> {
 #[doc = "Field `busctrl` reader - "]
 pub struct BUSCTRL_R(crate::FieldReader<bool, bool>);
 impl BUSCTRL_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         BUSCTRL_R(crate::FieldReader::new(bits))
     }
@@ -901,6 +925,7 @@ impl<'a> BUSCTRL_W<'a> {
 #[doc = "Field `adc` reader - "]
 pub struct ADC_R(crate::FieldReader<bool, bool>);
 impl ADC_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         ADC_R(crate::FieldReader::new(bits))
     }

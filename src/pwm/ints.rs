@@ -16,6 +16,7 @@ impl From<crate::R<INTS_SPEC>> for R {
 #[doc = "Field `CH7` reader - "]
 pub struct CH7_R(crate::FieldReader<bool, bool>);
 impl CH7_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         CH7_R(crate::FieldReader::new(bits))
     }
@@ -30,6 +31,7 @@ impl core::ops::Deref for CH7_R {
 #[doc = "Field `CH6` reader - "]
 pub struct CH6_R(crate::FieldReader<bool, bool>);
 impl CH6_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         CH6_R(crate::FieldReader::new(bits))
     }
@@ -44,6 +46,7 @@ impl core::ops::Deref for CH6_R {
 #[doc = "Field `CH5` reader - "]
 pub struct CH5_R(crate::FieldReader<bool, bool>);
 impl CH5_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         CH5_R(crate::FieldReader::new(bits))
     }
@@ -58,6 +61,7 @@ impl core::ops::Deref for CH5_R {
 #[doc = "Field `CH4` reader - "]
 pub struct CH4_R(crate::FieldReader<bool, bool>);
 impl CH4_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         CH4_R(crate::FieldReader::new(bits))
     }
@@ -72,6 +76,7 @@ impl core::ops::Deref for CH4_R {
 #[doc = "Field `CH3` reader - "]
 pub struct CH3_R(crate::FieldReader<bool, bool>);
 impl CH3_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         CH3_R(crate::FieldReader::new(bits))
     }
@@ -86,6 +91,7 @@ impl core::ops::Deref for CH3_R {
 #[doc = "Field `CH2` reader - "]
 pub struct CH2_R(crate::FieldReader<bool, bool>);
 impl CH2_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         CH2_R(crate::FieldReader::new(bits))
     }
@@ -100,6 +106,7 @@ impl core::ops::Deref for CH2_R {
 #[doc = "Field `CH1` reader - "]
 pub struct CH1_R(crate::FieldReader<bool, bool>);
 impl CH1_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         CH1_R(crate::FieldReader::new(bits))
     }
@@ -114,6 +121,7 @@ impl core::ops::Deref for CH1_R {
 #[doc = "Field `CH0` reader - "]
 pub struct CH0_R(crate::FieldReader<bool, bool>);
 impl CH0_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         CH0_R(crate::FieldReader::new(bits))
     }

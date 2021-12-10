@@ -37,6 +37,7 @@ impl From<crate::W<SSPDR_SPEC>> for W {
 #[doc = "Field `DATA` reader - Transmit/Receive FIFO: Read Receive FIFO. Write Transmit FIFO. You must right-justify data when the PrimeCell SSP is programmed for a data size that is less than 16 bits. Unused bits at the top are ignored by transmit logic. The receive logic automatically right-justifies."]
 pub struct DATA_R(crate::FieldReader<u16, u16>);
 impl DATA_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u16) -> Self {
         DATA_R(crate::FieldReader::new(bits))
     }

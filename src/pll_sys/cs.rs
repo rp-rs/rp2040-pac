@@ -37,6 +37,7 @@ impl From<crate::W<CS_SPEC>> for W {
 #[doc = "Field `LOCK` reader - PLL is locked"]
 pub struct LOCK_R(crate::FieldReader<bool, bool>);
 impl LOCK_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         LOCK_R(crate::FieldReader::new(bits))
     }
@@ -51,6 +52,7 @@ impl core::ops::Deref for LOCK_R {
 #[doc = "Field `BYPASS` reader - Passes the reference clock to the output instead of the divided VCO. The VCO continues to run so the user can switch between the reference clock and the divided VCO but the output will glitch when doing so."]
 pub struct BYPASS_R(crate::FieldReader<bool, bool>);
 impl BYPASS_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         BYPASS_R(crate::FieldReader::new(bits))
     }
@@ -89,6 +91,7 @@ impl<'a> BYPASS_W<'a> {
  PLL output will be unpredictable during refdiv changes, wait for lock=1 before using it."]
 pub struct REFDIV_R(crate::FieldReader<u8, u8>);
 impl REFDIV_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         REFDIV_R(crate::FieldReader::new(bits))
     }
@@ -125,7 +128,9 @@ impl R {
     pub fn bypass(&self) -> BYPASS_R {
         BYPASS_R::new(((self.bits >> 8) & 0x01) != 0)
     }
-    #[doc = "Bits 0:5 - Divides the PLL input reference clock. Behaviour is undefined for div=0. PLL output will be unpredictable during refdiv changes, wait for lock=1 before using it."]
+    #[doc = "Bits 0:5 - Divides the PLL input reference clock.  
+ Behaviour is undefined for div=0.  
+ PLL output will be unpredictable during refdiv changes, wait for lock=1 before using it."]
     #[inline(always)]
     pub fn refdiv(&self) -> REFDIV_R {
         REFDIV_R::new((self.bits & 0x3f) as u8)
@@ -137,7 +142,9 @@ impl W {
     pub fn bypass(&mut self) -> BYPASS_W {
         BYPASS_W { w: self }
     }
-    #[doc = "Bits 0:5 - Divides the PLL input reference clock. Behaviour is undefined for div=0. PLL output will be unpredictable during refdiv changes, wait for lock=1 before using it."]
+    #[doc = "Bits 0:5 - Divides the PLL input reference clock.  
+ Behaviour is undefined for div=0.  
+ PLL output will be unpredictable during refdiv changes, wait for lock=1 before using it."]
     #[inline(always)]
     pub fn refdiv(&mut self) -> REFDIV_W {
         REFDIV_W { w: self }

@@ -53,6 +53,7 @@ impl From<crate::W<BOD_SPEC>> for W {
  1111 - 1.118V"]
 pub struct VSEL_R(crate::FieldReader<u8, u8>);
 impl VSEL_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         VSEL_R(crate::FieldReader::new(bits))
     }
@@ -96,6 +97,7 @@ impl<'a> VSEL_W<'a> {
  0=not enabled, 1=enabled"]
 pub struct EN_R(crate::FieldReader<bool, bool>);
 impl EN_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         EN_R(crate::FieldReader::new(bits))
     }
@@ -131,24 +133,58 @@ impl<'a> EN_W<'a> {
     }
 }
 impl R {
-    #[doc = "Bits 4:7 - threshold select 0000 - 0.473V 0001 - 0.516V 0010 - 0.559V 0011 - 0.602V 0100 - 0.645V 0101 - 0.688V 0110 - 0.731V 0111 - 0.774V 1000 - 0.817V 1001 - 0.860V (default) 1010 - 0.903V 1011 - 0.946V 1100 - 0.989V 1101 - 1.032V 1110 - 1.075V 1111 - 1.118V"]
+    #[doc = "Bits 4:7 - threshold select  
+ 0000 - 0.473V  
+ 0001 - 0.516V  
+ 0010 - 0.559V  
+ 0011 - 0.602V  
+ 0100 - 0.645V  
+ 0101 - 0.688V  
+ 0110 - 0.731V  
+ 0111 - 0.774V  
+ 1000 - 0.817V  
+ 1001 - 0.860V (default)  
+ 1010 - 0.903V  
+ 1011 - 0.946V  
+ 1100 - 0.989V  
+ 1101 - 1.032V  
+ 1110 - 1.075V  
+ 1111 - 1.118V"]
     #[inline(always)]
     pub fn vsel(&self) -> VSEL_R {
         VSEL_R::new(((self.bits >> 4) & 0x0f) as u8)
     }
-    #[doc = "Bit 0 - enable 0=not enabled, 1=enabled"]
+    #[doc = "Bit 0 - enable  
+ 0=not enabled, 1=enabled"]
     #[inline(always)]
     pub fn en(&self) -> EN_R {
         EN_R::new((self.bits & 0x01) != 0)
     }
 }
 impl W {
-    #[doc = "Bits 4:7 - threshold select 0000 - 0.473V 0001 - 0.516V 0010 - 0.559V 0011 - 0.602V 0100 - 0.645V 0101 - 0.688V 0110 - 0.731V 0111 - 0.774V 1000 - 0.817V 1001 - 0.860V (default) 1010 - 0.903V 1011 - 0.946V 1100 - 0.989V 1101 - 1.032V 1110 - 1.075V 1111 - 1.118V"]
+    #[doc = "Bits 4:7 - threshold select  
+ 0000 - 0.473V  
+ 0001 - 0.516V  
+ 0010 - 0.559V  
+ 0011 - 0.602V  
+ 0100 - 0.645V  
+ 0101 - 0.688V  
+ 0110 - 0.731V  
+ 0111 - 0.774V  
+ 1000 - 0.817V  
+ 1001 - 0.860V (default)  
+ 1010 - 0.903V  
+ 1011 - 0.946V  
+ 1100 - 0.989V  
+ 1101 - 1.032V  
+ 1110 - 1.075V  
+ 1111 - 1.118V"]
     #[inline(always)]
     pub fn vsel(&mut self) -> VSEL_W {
         VSEL_W { w: self }
     }
-    #[doc = "Bit 0 - enable 0=not enabled, 1=enabled"]
+    #[doc = "Bit 0 - enable  
+ 0=not enabled, 1=enabled"]
     #[inline(always)]
     pub fn en(&mut self) -> EN_W {
         EN_W { w: self }

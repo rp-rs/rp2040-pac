@@ -53,6 +53,7 @@ impl From<VOLTAGE_SELECT_A> for bool {
 #[doc = "Field `VOLTAGE_SELECT` reader - "]
 pub struct VOLTAGE_SELECT_R(crate::FieldReader<bool, VOLTAGE_SELECT_A>);
 impl VOLTAGE_SELECT_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         VOLTAGE_SELECT_R(crate::FieldReader::new(bits))
     }

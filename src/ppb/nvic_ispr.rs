@@ -46,6 +46,7 @@ impl From<crate::W<NVIC_ISPR_SPEC>> for W {
  A disabled interrupt sets the state of that interrupt to pending."]
 pub struct SETPEND_R(crate::FieldReader<u32, u32>);
 impl SETPEND_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u32) -> Self {
         SETPEND_R(crate::FieldReader::new(bits))
     }
@@ -79,14 +80,32 @@ impl<'a> SETPEND_W<'a> {
     }
 }
 impl R {
-    #[doc = "Bits 0:31 - Interrupt set-pending bits. Write: 0 = No effect. 1 = Changes interrupt state to pending. Read: 0 = Interrupt is not pending. 1 = Interrupt is pending. Note: Writing 1 to the NVIC_ISPR bit corresponding to: An interrupt that is pending has no effect. A disabled interrupt sets the state of that interrupt to pending."]
+    #[doc = "Bits 0:31 - Interrupt set-pending bits.  
+ Write:  
+ 0 = No effect.  
+ 1 = Changes interrupt state to pending.  
+ Read:  
+ 0 = Interrupt is not pending.  
+ 1 = Interrupt is pending.  
+ Note: Writing 1 to the NVIC_ISPR bit corresponding to:  
+ An interrupt that is pending has no effect.  
+ A disabled interrupt sets the state of that interrupt to pending."]
     #[inline(always)]
     pub fn setpend(&self) -> SETPEND_R {
         SETPEND_R::new((self.bits & 0xffff_ffff) as u32)
     }
 }
 impl W {
-    #[doc = "Bits 0:31 - Interrupt set-pending bits. Write: 0 = No effect. 1 = Changes interrupt state to pending. Read: 0 = Interrupt is not pending. 1 = Interrupt is pending. Note: Writing 1 to the NVIC_ISPR bit corresponding to: An interrupt that is pending has no effect. A disabled interrupt sets the state of that interrupt to pending."]
+    #[doc = "Bits 0:31 - Interrupt set-pending bits.  
+ Write:  
+ 0 = No effect.  
+ 1 = Changes interrupt state to pending.  
+ Read:  
+ 0 = Interrupt is not pending.  
+ 1 = Interrupt is pending.  
+ Note: Writing 1 to the NVIC_ISPR bit corresponding to:  
+ An interrupt that is pending has no effect.  
+ A disabled interrupt sets the state of that interrupt to pending."]
     #[inline(always)]
     pub fn setpend(&mut self) -> SETPEND_W {
         SETPEND_W { w: self }

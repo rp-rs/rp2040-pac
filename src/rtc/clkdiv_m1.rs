@@ -37,6 +37,7 @@ impl From<crate::W<CLKDIV_M1_SPEC>> for W {
 #[doc = "Field `CLKDIV_M1` reader - "]
 pub struct CLKDIV_M1_R(crate::FieldReader<u16, u16>);
 impl CLKDIV_M1_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u16) -> Self {
         CLKDIV_M1_R(crate::FieldReader::new(bits))
     }

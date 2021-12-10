@@ -16,6 +16,7 @@ impl From<crate::R<SSPPCELLID1_SPEC>> for R {
 #[doc = "Field `SSPPCELLID1` reader - These bits read back as 0xF0"]
 pub struct SSPPCELLID1_R(crate::FieldReader<u8, u8>);
 impl SSPPCELLID1_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         SSPPCELLID1_R(crate::FieldReader::new(bits))
     }

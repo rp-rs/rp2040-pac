@@ -90,6 +90,7 @@ impl From<PERFSEL2_A> for u8 {
 #[doc = "Field `PERFSEL2` reader - Select an event for PERFCTR2. Count either contested accesses, or all accesses, on a downstream port of the main crossbar."]
 pub struct PERFSEL2_R(crate::FieldReader<u8, PERFSEL2_A>);
 impl PERFSEL2_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         PERFSEL2_R(crate::FieldReader::new(bits))
     }

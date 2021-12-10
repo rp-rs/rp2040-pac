@@ -37,6 +37,7 @@ impl From<crate::W<FC0_REF_KHZ_SPEC>> for W {
 #[doc = "Field `FC0_REF_KHZ` reader - "]
 pub struct FC0_REF_KHZ_R(crate::FieldReader<u32, u32>);
 impl FC0_REF_KHZ_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u32) -> Self {
         FC0_REF_KHZ_R(crate::FieldReader::new(bits))
     }

@@ -58,6 +58,7 @@ impl From<ENABLE_A> for u16 {
  The 12-bit code is intended to give some protection against accidental writes. An invalid setting will enable the oscillator."]
 pub struct ENABLE_R(crate::FieldReader<u16, ENABLE_A>);
 impl ENABLE_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u16) -> Self {
         ENABLE_R(crate::FieldReader::new(bits))
     }
@@ -141,6 +142,7 @@ impl From<FREQ_RANGE_A> for u16 {
 #[doc = "Field `FREQ_RANGE` reader - Frequency range. This resets to 0xAA0 and cannot be changed."]
 pub struct FREQ_RANGE_R(crate::FieldReader<u16, FREQ_RANGE_A>);
 impl FREQ_RANGE_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u16) -> Self {
         FREQ_RANGE_R(crate::FieldReader::new(bits))
     }
@@ -221,7 +223,9 @@ impl<'a> FREQ_RANGE_W<'a> {
     }
 }
 impl R {
-    #[doc = "Bits 12:23 - On power-up this field is initialised to DISABLE and the chip runs from the ROSC. If the chip has subsequently been programmed to run from the XOSC then setting this field to DISABLE may lock-up the chip. If this is a concern then run the clk_ref from the ROSC and enable the clk_sys RESUS feature. The 12-bit code is intended to give some protection against accidental writes. An invalid setting will enable the oscillator."]
+    #[doc = "Bits 12:23 - On power-up this field is initialised to DISABLE and the chip runs from the ROSC.  
+ If the chip has subsequently been programmed to run from the XOSC then setting this field to DISABLE may lock-up the chip. If this is a concern then run the clk_ref from the ROSC and enable the clk_sys RESUS feature.  
+ The 12-bit code is intended to give some protection against accidental writes. An invalid setting will enable the oscillator."]
     #[inline(always)]
     pub fn enable(&self) -> ENABLE_R {
         ENABLE_R::new(((self.bits >> 12) & 0x0fff) as u16)
@@ -233,7 +237,9 @@ impl R {
     }
 }
 impl W {
-    #[doc = "Bits 12:23 - On power-up this field is initialised to DISABLE and the chip runs from the ROSC. If the chip has subsequently been programmed to run from the XOSC then setting this field to DISABLE may lock-up the chip. If this is a concern then run the clk_ref from the ROSC and enable the clk_sys RESUS feature. The 12-bit code is intended to give some protection against accidental writes. An invalid setting will enable the oscillator."]
+    #[doc = "Bits 12:23 - On power-up this field is initialised to DISABLE and the chip runs from the ROSC.  
+ If the chip has subsequently been programmed to run from the XOSC then setting this field to DISABLE may lock-up the chip. If this is a concern then run the clk_ref from the ROSC and enable the clk_sys RESUS feature.  
+ The 12-bit code is intended to give some protection against accidental writes. An invalid setting will enable the oscillator."]
     #[inline(always)]
     pub fn enable(&mut self) -> ENABLE_W {
         ENABLE_W { w: self }

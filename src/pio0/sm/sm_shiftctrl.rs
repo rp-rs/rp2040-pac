@@ -39,6 +39,7 @@ impl From<crate::W<SM_SHIFTCTRL_SPEC>> for W {
  FIFOs are flushed when this bit is changed."]
 pub struct FJOIN_RX_R(crate::FieldReader<bool, bool>);
 impl FJOIN_RX_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         FJOIN_RX_R(crate::FieldReader::new(bits))
     }
@@ -79,6 +80,7 @@ impl<'a> FJOIN_RX_W<'a> {
  FIFOs are flushed when this bit is changed."]
 pub struct FJOIN_TX_R(crate::FieldReader<bool, bool>);
 impl FJOIN_TX_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         FJOIN_TX_R(crate::FieldReader::new(bits))
     }
@@ -118,6 +120,7 @@ impl<'a> FJOIN_TX_W<'a> {
  Write 0 for value of 32."]
 pub struct PULL_THRESH_R(crate::FieldReader<u8, u8>);
 impl PULL_THRESH_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         PULL_THRESH_R(crate::FieldReader::new(bits))
     }
@@ -146,6 +149,7 @@ impl<'a> PULL_THRESH_W<'a> {
  Write 0 for value of 32."]
 pub struct PUSH_THRESH_R(crate::FieldReader<u8, u8>);
 impl PUSH_THRESH_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         PUSH_THRESH_R(crate::FieldReader::new(bits))
     }
@@ -173,6 +177,7 @@ impl<'a> PUSH_THRESH_W<'a> {
 #[doc = "Field `OUT_SHIFTDIR` reader - 1 = shift out of output shift register to right. 0 = to left."]
 pub struct OUT_SHIFTDIR_R(crate::FieldReader<bool, bool>);
 impl OUT_SHIFTDIR_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         OUT_SHIFTDIR_R(crate::FieldReader::new(bits))
     }
@@ -209,6 +214,7 @@ impl<'a> OUT_SHIFTDIR_W<'a> {
 #[doc = "Field `IN_SHIFTDIR` reader - 1 = shift input shift register to right (data enters from left). 0 = to left."]
 pub struct IN_SHIFTDIR_R(crate::FieldReader<bool, bool>);
 impl IN_SHIFTDIR_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         IN_SHIFTDIR_R(crate::FieldReader::new(bits))
     }
@@ -245,6 +251,7 @@ impl<'a> IN_SHIFTDIR_W<'a> {
 #[doc = "Field `AUTOPULL` reader - Pull automatically when the output shift register is emptied, i.e. on or following an OUT instruction which causes the output shift counter to reach or exceed PULL_THRESH."]
 pub struct AUTOPULL_R(crate::FieldReader<bool, bool>);
 impl AUTOPULL_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         AUTOPULL_R(crate::FieldReader::new(bits))
     }
@@ -281,6 +288,7 @@ impl<'a> AUTOPULL_W<'a> {
 #[doc = "Field `AUTOPUSH` reader - Push automatically when the input shift register is filled, i.e. on an IN instruction which causes the input shift counter to reach or exceed PUSH_THRESH."]
 pub struct AUTOPUSH_R(crate::FieldReader<bool, bool>);
 impl AUTOPUSH_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         AUTOPUSH_R(crate::FieldReader::new(bits))
     }
@@ -315,22 +323,28 @@ impl<'a> AUTOPUSH_W<'a> {
     }
 }
 impl R {
-    #[doc = "Bit 31 - When 1, RX FIFO steals the TX FIFO's storage, and becomes twice as deep. TX FIFO is disabled as a result (always reads as both full and empty). FIFOs are flushed when this bit is changed."]
+    #[doc = "Bit 31 - When 1, RX FIFO steals the TX FIFO's storage, and becomes twice as deep.  
+ TX FIFO is disabled as a result (always reads as both full and empty).  
+ FIFOs are flushed when this bit is changed."]
     #[inline(always)]
     pub fn fjoin_rx(&self) -> FJOIN_RX_R {
         FJOIN_RX_R::new(((self.bits >> 31) & 0x01) != 0)
     }
-    #[doc = "Bit 30 - When 1, TX FIFO steals the RX FIFO's storage, and becomes twice as deep. RX FIFO is disabled as a result (always reads as both full and empty). FIFOs are flushed when this bit is changed."]
+    #[doc = "Bit 30 - When 1, TX FIFO steals the RX FIFO's storage, and becomes twice as deep.  
+ RX FIFO is disabled as a result (always reads as both full and empty).  
+ FIFOs are flushed when this bit is changed."]
     #[inline(always)]
     pub fn fjoin_tx(&self) -> FJOIN_TX_R {
         FJOIN_TX_R::new(((self.bits >> 30) & 0x01) != 0)
     }
-    #[doc = "Bits 25:29 - Number of bits shifted out of OSR before autopull, or conditional pull (PULL IFEMPTY), will take place. Write 0 for value of 32."]
+    #[doc = "Bits 25:29 - Number of bits shifted out of OSR before autopull, or conditional pull (PULL IFEMPTY), will take place.  
+ Write 0 for value of 32."]
     #[inline(always)]
     pub fn pull_thresh(&self) -> PULL_THRESH_R {
         PULL_THRESH_R::new(((self.bits >> 25) & 0x1f) as u8)
     }
-    #[doc = "Bits 20:24 - Number of bits shifted into ISR before autopush, or conditional push (PUSH IFFULL), will take place. Write 0 for value of 32."]
+    #[doc = "Bits 20:24 - Number of bits shifted into ISR before autopush, or conditional push (PUSH IFFULL), will take place.  
+ Write 0 for value of 32."]
     #[inline(always)]
     pub fn push_thresh(&self) -> PUSH_THRESH_R {
         PUSH_THRESH_R::new(((self.bits >> 20) & 0x1f) as u8)
@@ -357,22 +371,28 @@ impl R {
     }
 }
 impl W {
-    #[doc = "Bit 31 - When 1, RX FIFO steals the TX FIFO's storage, and becomes twice as deep. TX FIFO is disabled as a result (always reads as both full and empty). FIFOs are flushed when this bit is changed."]
+    #[doc = "Bit 31 - When 1, RX FIFO steals the TX FIFO's storage, and becomes twice as deep.  
+ TX FIFO is disabled as a result (always reads as both full and empty).  
+ FIFOs are flushed when this bit is changed."]
     #[inline(always)]
     pub fn fjoin_rx(&mut self) -> FJOIN_RX_W {
         FJOIN_RX_W { w: self }
     }
-    #[doc = "Bit 30 - When 1, TX FIFO steals the RX FIFO's storage, and becomes twice as deep. RX FIFO is disabled as a result (always reads as both full and empty). FIFOs are flushed when this bit is changed."]
+    #[doc = "Bit 30 - When 1, TX FIFO steals the RX FIFO's storage, and becomes twice as deep.  
+ RX FIFO is disabled as a result (always reads as both full and empty).  
+ FIFOs are flushed when this bit is changed."]
     #[inline(always)]
     pub fn fjoin_tx(&mut self) -> FJOIN_TX_W {
         FJOIN_TX_W { w: self }
     }
-    #[doc = "Bits 25:29 - Number of bits shifted out of OSR before autopull, or conditional pull (PULL IFEMPTY), will take place. Write 0 for value of 32."]
+    #[doc = "Bits 25:29 - Number of bits shifted out of OSR before autopull, or conditional pull (PULL IFEMPTY), will take place.  
+ Write 0 for value of 32."]
     #[inline(always)]
     pub fn pull_thresh(&mut self) -> PULL_THRESH_W {
         PULL_THRESH_W { w: self }
     }
-    #[doc = "Bits 20:24 - Number of bits shifted into ISR before autopush, or conditional push (PUSH IFFULL), will take place. Write 0 for value of 32."]
+    #[doc = "Bits 20:24 - Number of bits shifted into ISR before autopush, or conditional push (PUSH IFFULL), will take place.  
+ Write 0 for value of 32."]
     #[inline(always)]
     pub fn push_thresh(&mut self) -> PUSH_THRESH_W {
         PUSH_THRESH_W { w: self }

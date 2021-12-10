@@ -16,6 +16,7 @@ impl From<crate::R<SSPPERIPHID3_SPEC>> for R {
 #[doc = "Field `CONFIGURATION` reader - These bits read back as 0x00"]
 pub struct CONFIGURATION_R(crate::FieldReader<u8, u8>);
 impl CONFIGURATION_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         CONFIGURATION_R(crate::FieldReader::new(bits))
     }

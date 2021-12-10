@@ -16,6 +16,7 @@ impl From<crate::R<FIFO_SPEC>> for R {
 #[doc = "Field `ERR` reader - 1 if this particular sample experienced a conversion error. Remains in the same location if the sample is shifted."]
 pub struct ERR_R(crate::FieldReader<bool, bool>);
 impl ERR_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         ERR_R(crate::FieldReader::new(bits))
     }
@@ -30,6 +31,7 @@ impl core::ops::Deref for ERR_R {
 #[doc = "Field `VAL` reader - "]
 pub struct VAL_R(crate::FieldReader<u16, u16>);
 impl VAL_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u16) -> Self {
         VAL_R(crate::FieldReader::new(bits))
     }

@@ -37,6 +37,7 @@ impl From<crate::W<CTR_SPEC>> for W {
 #[doc = "Field `CTR` reader - "]
 pub struct CTR_R(crate::FieldReader<u16, u16>);
 impl CTR_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u16) -> Self {
         CTR_R(crate::FieldReader::new(bits))
     }

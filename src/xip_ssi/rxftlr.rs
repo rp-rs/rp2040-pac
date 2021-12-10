@@ -37,6 +37,7 @@ impl From<crate::W<RXFTLR_SPEC>> for W {
 #[doc = "Field `RFT` reader - Receive FIFO threshold"]
 pub struct RFT_R(crate::FieldReader<u8, u8>);
 impl RFT_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         RFT_R(crate::FieldReader::new(bits))
     }

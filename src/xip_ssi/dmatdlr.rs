@@ -37,6 +37,7 @@ impl From<crate::W<DMATDLR_SPEC>> for W {
 #[doc = "Field `DMATDL` reader - Transmit data watermark level"]
 pub struct DMATDL_R(crate::FieldReader<u8, u8>);
 impl DMATDL_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         DMATDL_R(crate::FieldReader::new(bits))
     }

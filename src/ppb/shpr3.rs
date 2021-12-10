@@ -37,6 +37,7 @@ impl From<crate::W<SHPR3_SPEC>> for W {
 #[doc = "Field `PRI_15` reader - Priority of system handler 15, SysTick"]
 pub struct PRI_15_R(crate::FieldReader<u8, u8>);
 impl PRI_15_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         PRI_15_R(crate::FieldReader::new(bits))
     }
@@ -63,6 +64,7 @@ impl<'a> PRI_15_W<'a> {
 #[doc = "Field `PRI_14` reader - Priority of system handler 14, PendSV"]
 pub struct PRI_14_R(crate::FieldReader<u8, u8>);
 impl PRI_14_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         PRI_14_R(crate::FieldReader::new(bits))
     }

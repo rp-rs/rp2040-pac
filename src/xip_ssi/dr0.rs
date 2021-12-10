@@ -37,6 +37,7 @@ impl From<crate::W<DR0_SPEC>> for W {
 #[doc = "Field `DR` reader - First data register of 36"]
 pub struct DR_R(crate::FieldReader<u32, u32>);
 impl DR_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u32) -> Self {
         DR_R(crate::FieldReader::new(bits))
     }

@@ -37,6 +37,7 @@ impl From<crate::W<USB_PWR_SPEC>> for W {
 #[doc = "Field `OVERCURR_DETECT_EN` reader - "]
 pub struct OVERCURR_DETECT_EN_R(crate::FieldReader<bool, bool>);
 impl OVERCURR_DETECT_EN_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         OVERCURR_DETECT_EN_R(crate::FieldReader::new(bits))
     }
@@ -73,6 +74,7 @@ impl<'a> OVERCURR_DETECT_EN_W<'a> {
 #[doc = "Field `OVERCURR_DETECT` reader - "]
 pub struct OVERCURR_DETECT_R(crate::FieldReader<bool, bool>);
 impl OVERCURR_DETECT_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         OVERCURR_DETECT_R(crate::FieldReader::new(bits))
     }
@@ -109,6 +111,7 @@ impl<'a> OVERCURR_DETECT_W<'a> {
 #[doc = "Field `VBUS_DETECT_OVERRIDE_EN` reader - "]
 pub struct VBUS_DETECT_OVERRIDE_EN_R(crate::FieldReader<bool, bool>);
 impl VBUS_DETECT_OVERRIDE_EN_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         VBUS_DETECT_OVERRIDE_EN_R(crate::FieldReader::new(bits))
     }
@@ -145,6 +148,7 @@ impl<'a> VBUS_DETECT_OVERRIDE_EN_W<'a> {
 #[doc = "Field `VBUS_DETECT` reader - "]
 pub struct VBUS_DETECT_R(crate::FieldReader<bool, bool>);
 impl VBUS_DETECT_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         VBUS_DETECT_R(crate::FieldReader::new(bits))
     }
@@ -181,6 +185,7 @@ impl<'a> VBUS_DETECT_W<'a> {
 #[doc = "Field `VBUS_EN_OVERRIDE_EN` reader - "]
 pub struct VBUS_EN_OVERRIDE_EN_R(crate::FieldReader<bool, bool>);
 impl VBUS_EN_OVERRIDE_EN_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         VBUS_EN_OVERRIDE_EN_R(crate::FieldReader::new(bits))
     }
@@ -217,6 +222,7 @@ impl<'a> VBUS_EN_OVERRIDE_EN_W<'a> {
 #[doc = "Field `VBUS_EN` reader - "]
 pub struct VBUS_EN_R(crate::FieldReader<bool, bool>);
 impl VBUS_EN_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         VBUS_EN_R(crate::FieldReader::new(bits))
     }

@@ -16,6 +16,7 @@ impl From<crate::R<FC0_RESULT_SPEC>> for R {
 #[doc = "Field `KHZ` reader - "]
 pub struct KHZ_R(crate::FieldReader<u32, u32>);
 impl KHZ_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u32) -> Self {
         KHZ_R(crate::FieldReader::new(bits))
     }
@@ -30,6 +31,7 @@ impl core::ops::Deref for KHZ_R {
 #[doc = "Field `FRAC` reader - "]
 pub struct FRAC_R(crate::FieldReader<u8, u8>);
 impl FRAC_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         FRAC_R(crate::FieldReader::new(bits))
     }

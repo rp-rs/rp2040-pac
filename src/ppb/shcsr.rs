@@ -37,6 +37,7 @@ impl From<crate::W<SHCSR_SPEC>> for W {
 #[doc = "Field `SVCALLPENDED` reader - Reads as 1 if SVCall is Pending. Write 1 to set pending SVCall, write 0 to clear pending SVCall."]
 pub struct SVCALLPENDED_R(crate::FieldReader<bool, bool>);
 impl SVCALLPENDED_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         SVCALLPENDED_R(crate::FieldReader::new(bits))
     }

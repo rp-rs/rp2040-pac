@@ -16,6 +16,7 @@ impl From<crate::R<SM_ADDR_SPEC>> for R {
 #[doc = "Field `SM0_ADDR` reader - "]
 pub struct SM0_ADDR_R(crate::FieldReader<u8, u8>);
 impl SM0_ADDR_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         SM0_ADDR_R(crate::FieldReader::new(bits))
     }

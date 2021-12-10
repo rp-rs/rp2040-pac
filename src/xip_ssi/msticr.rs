@@ -16,6 +16,7 @@ impl From<crate::R<MSTICR_SPEC>> for R {
 #[doc = "Field `MSTICR` reader - Clear-on-read multi-master contention interrupt"]
 pub struct MSTICR_R(crate::FieldReader<bool, bool>);
 impl MSTICR_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         MSTICR_R(crate::FieldReader::new(bits))
     }

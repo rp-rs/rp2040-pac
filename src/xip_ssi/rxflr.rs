@@ -16,6 +16,7 @@ impl From<crate::R<RXFLR_SPEC>> for R {
 #[doc = "Field `RXTFL` reader - Receive FIFO level"]
 pub struct RXTFL_R(crate::FieldReader<u8, u8>);
 impl RXTFL_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         RXTFL_R(crate::FieldReader::new(bits))
     }

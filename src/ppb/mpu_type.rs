@@ -16,6 +16,7 @@ impl From<crate::R<MPU_TYPE_SPEC>> for R {
 #[doc = "Field `IREGION` reader - Instruction region. Reads as zero as ARMv6-M only supports a unified MPU."]
 pub struct IREGION_R(crate::FieldReader<u8, u8>);
 impl IREGION_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         IREGION_R(crate::FieldReader::new(bits))
     }
@@ -30,6 +31,7 @@ impl core::ops::Deref for IREGION_R {
 #[doc = "Field `DREGION` reader - Number of regions supported by the MPU."]
 pub struct DREGION_R(crate::FieldReader<u8, u8>);
 impl DREGION_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         DREGION_R(crate::FieldReader::new(bits))
     }
@@ -44,6 +46,7 @@ impl core::ops::Deref for DREGION_R {
 #[doc = "Field `SEPARATE` reader - Indicates support for separate instruction and data address maps. Reads as 0 as ARMv6-M only supports a unified MPU."]
 pub struct SEPARATE_R(crate::FieldReader<bool, bool>);
 impl SEPARATE_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         SEPARATE_R(crate::FieldReader::new(bits))
     }

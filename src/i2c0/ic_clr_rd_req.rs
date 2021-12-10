@@ -18,6 +18,7 @@ impl From<crate::R<IC_CLR_RD_REQ_SPEC>> for R {
  Reset value: 0x0"]
 pub struct CLR_RD_REQ_R(crate::FieldReader<bool, bool>);
 impl CLR_RD_REQ_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         CLR_RD_REQ_R(crate::FieldReader::new(bits))
     }
@@ -30,7 +31,9 @@ impl core::ops::Deref for CLR_RD_REQ_R {
     }
 }
 impl R {
-    #[doc = "Bit 0 - Read this register to clear the RD_REQ interrupt (bit 5) of the IC_RAW_INTR_STAT register. Reset value: 0x0"]
+    #[doc = "Bit 0 - Read this register to clear the RD_REQ interrupt (bit 5) of the IC_RAW_INTR_STAT register.  
+
+ Reset value: 0x0"]
     #[inline(always)]
     pub fn clr_rd_req(&self) -> CLR_RD_REQ_R {
         CLR_RD_REQ_R::new((self.bits & 0x01) != 0)

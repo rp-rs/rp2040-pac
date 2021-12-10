@@ -37,6 +37,7 @@ impl From<crate::W<IRQ_SETUP_1_SPEC>> for W {
 #[doc = "Field `DOTW_ENA` reader - Enable day of the week matching"]
 pub struct DOTW_ENA_R(crate::FieldReader<bool, bool>);
 impl DOTW_ENA_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         DOTW_ENA_R(crate::FieldReader::new(bits))
     }
@@ -73,6 +74,7 @@ impl<'a> DOTW_ENA_W<'a> {
 #[doc = "Field `HOUR_ENA` reader - Enable hour matching"]
 pub struct HOUR_ENA_R(crate::FieldReader<bool, bool>);
 impl HOUR_ENA_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         HOUR_ENA_R(crate::FieldReader::new(bits))
     }
@@ -109,6 +111,7 @@ impl<'a> HOUR_ENA_W<'a> {
 #[doc = "Field `MIN_ENA` reader - Enable minute matching"]
 pub struct MIN_ENA_R(crate::FieldReader<bool, bool>);
 impl MIN_ENA_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         MIN_ENA_R(crate::FieldReader::new(bits))
     }
@@ -145,6 +148,7 @@ impl<'a> MIN_ENA_W<'a> {
 #[doc = "Field `SEC_ENA` reader - Enable second matching"]
 pub struct SEC_ENA_R(crate::FieldReader<bool, bool>);
 impl SEC_ENA_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         SEC_ENA_R(crate::FieldReader::new(bits))
     }
@@ -181,6 +185,7 @@ impl<'a> SEC_ENA_W<'a> {
 #[doc = "Field `DOTW` reader - Day of the week"]
 pub struct DOTW_R(crate::FieldReader<u8, u8>);
 impl DOTW_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         DOTW_R(crate::FieldReader::new(bits))
     }
@@ -207,6 +212,7 @@ impl<'a> DOTW_W<'a> {
 #[doc = "Field `HOUR` reader - Hours"]
 pub struct HOUR_R(crate::FieldReader<u8, u8>);
 impl HOUR_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         HOUR_R(crate::FieldReader::new(bits))
     }
@@ -233,6 +239,7 @@ impl<'a> HOUR_W<'a> {
 #[doc = "Field `MIN` reader - Minutes"]
 pub struct MIN_R(crate::FieldReader<u8, u8>);
 impl MIN_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         MIN_R(crate::FieldReader::new(bits))
     }
@@ -259,6 +266,7 @@ impl<'a> MIN_W<'a> {
 #[doc = "Field `SEC` reader - Seconds"]
 pub struct SEC_R(crate::FieldReader<u8, u8>);
 impl SEC_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         SEC_R(crate::FieldReader::new(bits))
     }

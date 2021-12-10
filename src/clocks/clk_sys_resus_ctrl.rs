@@ -37,6 +37,7 @@ impl From<crate::W<CLK_SYS_RESUS_CTRL_SPEC>> for W {
 #[doc = "Field `CLEAR` reader - For clearing the resus after the fault that triggered it has been corrected"]
 pub struct CLEAR_R(crate::FieldReader<bool, bool>);
 impl CLEAR_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         CLEAR_R(crate::FieldReader::new(bits))
     }
@@ -73,6 +74,7 @@ impl<'a> CLEAR_W<'a> {
 #[doc = "Field `FRCE` reader - Force a resus, for test purposes only"]
 pub struct FRCE_R(crate::FieldReader<bool, bool>);
 impl FRCE_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         FRCE_R(crate::FieldReader::new(bits))
     }
@@ -109,6 +111,7 @@ impl<'a> FRCE_W<'a> {
 #[doc = "Field `ENABLE` reader - Enable resus"]
 pub struct ENABLE_R(crate::FieldReader<bool, bool>);
 impl ENABLE_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         ENABLE_R(crate::FieldReader::new(bits))
     }
@@ -146,6 +149,7 @@ impl<'a> ENABLE_W<'a> {
  and must be >= 2x clk_ref_freq/min_clk_tst_freq"]
 pub struct TIMEOUT_R(crate::FieldReader<u8, u8>);
 impl TIMEOUT_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         TIMEOUT_R(crate::FieldReader::new(bits))
     }
@@ -186,7 +190,8 @@ impl R {
     pub fn enable(&self) -> ENABLE_R {
         ENABLE_R::new(((self.bits >> 8) & 0x01) != 0)
     }
-    #[doc = "Bits 0:7 - This is expressed as a number of clk_ref cycles and must be >= 2x clk_ref_freq/min_clk_tst_freq"]
+    #[doc = "Bits 0:7 - This is expressed as a number of clk_ref cycles  
+ and must be >= 2x clk_ref_freq/min_clk_tst_freq"]
     #[inline(always)]
     pub fn timeout(&self) -> TIMEOUT_R {
         TIMEOUT_R::new((self.bits & 0xff) as u8)
@@ -208,7 +213,8 @@ impl W {
     pub fn enable(&mut self) -> ENABLE_W {
         ENABLE_W { w: self }
     }
-    #[doc = "Bits 0:7 - This is expressed as a number of clk_ref cycles and must be >= 2x clk_ref_freq/min_clk_tst_freq"]
+    #[doc = "Bits 0:7 - This is expressed as a number of clk_ref cycles  
+ and must be >= 2x clk_ref_freq/min_clk_tst_freq"]
     #[inline(always)]
     pub fn timeout(&mut self) -> TIMEOUT_W {
         TIMEOUT_W { w: self }

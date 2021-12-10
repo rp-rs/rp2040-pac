@@ -16,6 +16,7 @@ impl From<crate::R<UARTFR_SPEC>> for R {
 #[doc = "Field `RI` reader - Ring indicator. This bit is the complement of the UART ring indicator, nUARTRI, modem status input. That is, the bit is 1 when nUARTRI is LOW."]
 pub struct RI_R(crate::FieldReader<bool, bool>);
 impl RI_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         RI_R(crate::FieldReader::new(bits))
     }
@@ -30,6 +31,7 @@ impl core::ops::Deref for RI_R {
 #[doc = "Field `TXFE` reader - Transmit FIFO empty. The meaning of this bit depends on the state of the FEN bit in the Line Control Register, UARTLCR_H. If the FIFO is disabled, this bit is set when the transmit holding register is empty. If the FIFO is enabled, the TXFE bit is set when the transmit FIFO is empty. This bit does not indicate if there is data in the transmit shift register."]
 pub struct TXFE_R(crate::FieldReader<bool, bool>);
 impl TXFE_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         TXFE_R(crate::FieldReader::new(bits))
     }
@@ -44,6 +46,7 @@ impl core::ops::Deref for TXFE_R {
 #[doc = "Field `RXFF` reader - Receive FIFO full. The meaning of this bit depends on the state of the FEN bit in the UARTLCR_H Register. If the FIFO is disabled, this bit is set when the receive holding register is full. If the FIFO is enabled, the RXFF bit is set when the receive FIFO is full."]
 pub struct RXFF_R(crate::FieldReader<bool, bool>);
 impl RXFF_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         RXFF_R(crate::FieldReader::new(bits))
     }
@@ -58,6 +61,7 @@ impl core::ops::Deref for RXFF_R {
 #[doc = "Field `TXFF` reader - Transmit FIFO full. The meaning of this bit depends on the state of the FEN bit in the UARTLCR_H Register. If the FIFO is disabled, this bit is set when the transmit holding register is full. If the FIFO is enabled, the TXFF bit is set when the transmit FIFO is full."]
 pub struct TXFF_R(crate::FieldReader<bool, bool>);
 impl TXFF_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         TXFF_R(crate::FieldReader::new(bits))
     }
@@ -72,6 +76,7 @@ impl core::ops::Deref for TXFF_R {
 #[doc = "Field `RXFE` reader - Receive FIFO empty. The meaning of this bit depends on the state of the FEN bit in the UARTLCR_H Register. If the FIFO is disabled, this bit is set when the receive holding register is empty. If the FIFO is enabled, the RXFE bit is set when the receive FIFO is empty."]
 pub struct RXFE_R(crate::FieldReader<bool, bool>);
 impl RXFE_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         RXFE_R(crate::FieldReader::new(bits))
     }
@@ -86,6 +91,7 @@ impl core::ops::Deref for RXFE_R {
 #[doc = "Field `BUSY` reader - UART busy. If this bit is set to 1, the UART is busy transmitting data. This bit remains set until the complete byte, including all the stop bits, has been sent from the shift register. This bit is set as soon as the transmit FIFO becomes non-empty, regardless of whether the UART is enabled or not."]
 pub struct BUSY_R(crate::FieldReader<bool, bool>);
 impl BUSY_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         BUSY_R(crate::FieldReader::new(bits))
     }
@@ -100,6 +106,7 @@ impl core::ops::Deref for BUSY_R {
 #[doc = "Field `DCD` reader - Data carrier detect. This bit is the complement of the UART data carrier detect, nUARTDCD, modem status input. That is, the bit is 1 when nUARTDCD is LOW."]
 pub struct DCD_R(crate::FieldReader<bool, bool>);
 impl DCD_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         DCD_R(crate::FieldReader::new(bits))
     }
@@ -114,6 +121,7 @@ impl core::ops::Deref for DCD_R {
 #[doc = "Field `DSR` reader - Data set ready. This bit is the complement of the UART data set ready, nUARTDSR, modem status input. That is, the bit is 1 when nUARTDSR is LOW."]
 pub struct DSR_R(crate::FieldReader<bool, bool>);
 impl DSR_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         DSR_R(crate::FieldReader::new(bits))
     }
@@ -128,6 +136,7 @@ impl core::ops::Deref for DSR_R {
 #[doc = "Field `CTS` reader - Clear to send. This bit is the complement of the UART clear to send, nUARTCTS, modem status input. That is, the bit is 1 when nUARTCTS is LOW."]
 pub struct CTS_R(crate::FieldReader<bool, bool>);
 impl CTS_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         CTS_R(crate::FieldReader::new(bits))
     }

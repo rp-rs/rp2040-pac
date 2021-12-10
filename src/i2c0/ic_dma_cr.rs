@@ -53,6 +53,7 @@ impl From<TDMAE_A> for bool {
 #[doc = "Field `TDMAE` reader - Transmit DMA Enable. This bit enables/disables the transmit FIFO DMA channel. Reset value: 0x0"]
 pub struct TDMAE_R(crate::FieldReader<bool, TDMAE_A>);
 impl TDMAE_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         TDMAE_R(crate::FieldReader::new(bits))
     }
@@ -138,6 +139,7 @@ impl From<RDMAE_A> for bool {
 #[doc = "Field `RDMAE` reader - Receive DMA Enable. This bit enables/disables the receive FIFO DMA channel. Reset value: 0x0"]
 pub struct RDMAE_R(crate::FieldReader<bool, RDMAE_A>);
 impl RDMAE_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         RDMAE_R(crate::FieldReader::new(bits))
     }

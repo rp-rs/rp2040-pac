@@ -16,6 +16,7 @@ impl From<crate::R<GPIO_IN_SPEC>> for R {
 #[doc = "Field `GPIO_IN` reader - Input value for GPIO0...29"]
 pub struct GPIO_IN_R(crate::FieldReader<u32, u32>);
 impl GPIO_IN_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u32) -> Self {
         GPIO_IN_R(crate::FieldReader::new(bits))
     }

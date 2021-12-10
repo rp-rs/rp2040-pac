@@ -16,6 +16,7 @@ impl From<crate::R<RISR_SPEC>> for R {
 #[doc = "Field `MSTIR` reader - Multi-master contention raw interrupt status"]
 pub struct MSTIR_R(crate::FieldReader<bool, bool>);
 impl MSTIR_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         MSTIR_R(crate::FieldReader::new(bits))
     }
@@ -30,6 +31,7 @@ impl core::ops::Deref for MSTIR_R {
 #[doc = "Field `RXFIR` reader - Receive FIFO full raw interrupt status"]
 pub struct RXFIR_R(crate::FieldReader<bool, bool>);
 impl RXFIR_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         RXFIR_R(crate::FieldReader::new(bits))
     }
@@ -44,6 +46,7 @@ impl core::ops::Deref for RXFIR_R {
 #[doc = "Field `RXOIR` reader - Receive FIFO overflow raw interrupt status"]
 pub struct RXOIR_R(crate::FieldReader<bool, bool>);
 impl RXOIR_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         RXOIR_R(crate::FieldReader::new(bits))
     }
@@ -58,6 +61,7 @@ impl core::ops::Deref for RXOIR_R {
 #[doc = "Field `RXUIR` reader - Receive FIFO underflow raw interrupt status"]
 pub struct RXUIR_R(crate::FieldReader<bool, bool>);
 impl RXUIR_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         RXUIR_R(crate::FieldReader::new(bits))
     }
@@ -72,6 +76,7 @@ impl core::ops::Deref for RXUIR_R {
 #[doc = "Field `TXOIR` reader - Transmit FIFO overflow raw interrupt status"]
 pub struct TXOIR_R(crate::FieldReader<bool, bool>);
 impl TXOIR_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         TXOIR_R(crate::FieldReader::new(bits))
     }
@@ -86,6 +91,7 @@ impl core::ops::Deref for TXOIR_R {
 #[doc = "Field `TXEIR` reader - Transmit FIFO empty raw interrupt status"]
 pub struct TXEIR_R(crate::FieldReader<bool, bool>);
 impl TXEIR_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         TXEIR_R(crate::FieldReader::new(bits))
     }

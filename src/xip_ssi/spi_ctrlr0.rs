@@ -37,6 +37,7 @@ impl From<crate::W<SPI_CTRLR0_SPEC>> for W {
 #[doc = "Field `XIP_CMD` reader - SPI Command to send in XIP mode (INST_L = 8-bit) or to append to Address (INST_L = 0-bit)"]
 pub struct XIP_CMD_R(crate::FieldReader<u8, u8>);
 impl XIP_CMD_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         XIP_CMD_R(crate::FieldReader::new(bits))
     }
@@ -63,6 +64,7 @@ impl<'a> XIP_CMD_W<'a> {
 #[doc = "Field `SPI_RXDS_EN` reader - Read data strobe enable"]
 pub struct SPI_RXDS_EN_R(crate::FieldReader<bool, bool>);
 impl SPI_RXDS_EN_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         SPI_RXDS_EN_R(crate::FieldReader::new(bits))
     }
@@ -99,6 +101,7 @@ impl<'a> SPI_RXDS_EN_W<'a> {
 #[doc = "Field `INST_DDR_EN` reader - Instruction DDR transfer enable"]
 pub struct INST_DDR_EN_R(crate::FieldReader<bool, bool>);
 impl INST_DDR_EN_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         INST_DDR_EN_R(crate::FieldReader::new(bits))
     }
@@ -135,6 +138,7 @@ impl<'a> INST_DDR_EN_W<'a> {
 #[doc = "Field `SPI_DDR_EN` reader - SPI DDR transfer enable"]
 pub struct SPI_DDR_EN_R(crate::FieldReader<bool, bool>);
 impl SPI_DDR_EN_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         SPI_DDR_EN_R(crate::FieldReader::new(bits))
     }
@@ -171,6 +175,7 @@ impl<'a> SPI_DDR_EN_W<'a> {
 #[doc = "Field `WAIT_CYCLES` reader - Wait cycles between control frame transmit and data reception (in SCLK cycles)"]
 pub struct WAIT_CYCLES_R(crate::FieldReader<u8, u8>);
 impl WAIT_CYCLES_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         WAIT_CYCLES_R(crate::FieldReader::new(bits))
     }
@@ -218,6 +223,7 @@ impl From<INST_L_A> for u8 {
 #[doc = "Field `INST_L` reader - Instruction length (0/4/8/16b)"]
 pub struct INST_L_R(crate::FieldReader<u8, INST_L_A>);
 impl INST_L_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         INST_L_R(crate::FieldReader::new(bits))
     }
@@ -300,6 +306,7 @@ impl<'a> INST_L_W<'a> {
 #[doc = "Field `ADDR_L` reader - Address length (0b-60b in 4b increments)"]
 pub struct ADDR_L_R(crate::FieldReader<u8, u8>);
 impl ADDR_L_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         ADDR_L_R(crate::FieldReader::new(bits))
     }
@@ -345,6 +352,7 @@ impl From<TRANS_TYPE_A> for u8 {
 #[doc = "Field `TRANS_TYPE` reader - Address and instruction transfer format"]
 pub struct TRANS_TYPE_R(crate::FieldReader<u8, TRANS_TYPE_A>);
 impl TRANS_TYPE_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u8) -> Self {
         TRANS_TYPE_R(crate::FieldReader::new(bits))
     }

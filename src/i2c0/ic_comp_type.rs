@@ -16,6 +16,7 @@ impl From<crate::R<IC_COMP_TYPE_SPEC>> for R {
 #[doc = "Field `IC_COMP_TYPE` reader - Designware Component Type number = 0x44_57_01_40. This assigned unique hex value is constant and is derived from the two ASCII letters 'DW' followed by a 16-bit unsigned number."]
 pub struct IC_COMP_TYPE_R(crate::FieldReader<u32, u32>);
 impl IC_COMP_TYPE_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u32) -> Self {
         IC_COMP_TYPE_R(crate::FieldReader::new(bits))
     }

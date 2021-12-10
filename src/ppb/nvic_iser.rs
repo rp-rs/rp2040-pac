@@ -43,6 +43,7 @@ impl From<crate::W<NVIC_ISER_SPEC>> for W {
  1 = Interrupt enabled."]
 pub struct SETENA_R(crate::FieldReader<u32, u32>);
 impl SETENA_R {
+    #[inline(always)]
     pub(crate) fn new(bits: u32) -> Self {
         SETENA_R(crate::FieldReader::new(bits))
     }
@@ -73,14 +74,26 @@ impl<'a> SETENA_W<'a> {
     }
 }
 impl R {
-    #[doc = "Bits 0:31 - Interrupt set-enable bits. Write: 0 = No effect. 1 = Enable interrupt. Read: 0 = Interrupt disabled. 1 = Interrupt enabled."]
+    #[doc = "Bits 0:31 - Interrupt set-enable bits.  
+ Write:  
+ 0 = No effect.  
+ 1 = Enable interrupt.  
+ Read:  
+ 0 = Interrupt disabled.  
+ 1 = Interrupt enabled."]
     #[inline(always)]
     pub fn setena(&self) -> SETENA_R {
         SETENA_R::new((self.bits & 0xffff_ffff) as u32)
     }
 }
 impl W {
-    #[doc = "Bits 0:31 - Interrupt set-enable bits. Write: 0 = No effect. 1 = Enable interrupt. Read: 0 = Interrupt disabled. 1 = Interrupt enabled."]
+    #[doc = "Bits 0:31 - Interrupt set-enable bits.  
+ Write:  
+ 0 = No effect.  
+ 1 = Enable interrupt.  
+ Read:  
+ 0 = Interrupt disabled.  
+ 1 = Interrupt enabled."]
     #[inline(always)]
     pub fn setena(&mut self) -> SETENA_W {
         SETENA_W { w: self }

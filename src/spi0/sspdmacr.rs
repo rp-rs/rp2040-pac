@@ -37,6 +37,7 @@ impl From<crate::W<SSPDMACR_SPEC>> for W {
 #[doc = "Field `TXDMAE` reader - Transmit DMA Enable. If this bit is set to 1, DMA for the transmit FIFO is enabled."]
 pub struct TXDMAE_R(crate::FieldReader<bool, bool>);
 impl TXDMAE_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         TXDMAE_R(crate::FieldReader::new(bits))
     }
@@ -73,6 +74,7 @@ impl<'a> TXDMAE_W<'a> {
 #[doc = "Field `RXDMAE` reader - Receive DMA Enable. If this bit is set to 1, DMA for the receive FIFO is enabled."]
 pub struct RXDMAE_R(crate::FieldReader<bool, bool>);
 impl RXDMAE_R {
+    #[inline(always)]
     pub(crate) fn new(bits: bool) -> Self {
         RXDMAE_R(crate::FieldReader::new(bits))
     }
