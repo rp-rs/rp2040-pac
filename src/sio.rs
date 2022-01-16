@@ -161,12 +161,12 @@ pub struct RegisterBlock {
  Each half is sign-extended to 32 bits if that lane's SIGNED flag is set."]
     pub interp1_base_1and0: crate::Reg<interp1_base_1and0::INTERP1_BASE_1AND0_SPEC>,
     #[doc = "0x100..0x180 - Reading from a spinlock address will:  
- - Return %s if lock is already locked  
+ - Return 0 if lock is already locked  
  - Otherwise return nonzero, and simultaneously claim the lock  
 
  Writing (any value) releases the lock.  
- If core %s and core 1 attempt to claim the same lock simultaneously, core %s wins.  
- The value returned on success is %sx1 << lock number."]
+ If core 0 and core 1 attempt to claim the same lock simultaneously, core 0 wins.  
+ The value returned on success is 0x1 << lock number."]
     pub spinlock: [crate::Reg<spinlock::SPINLOCK_SPEC>; 32],
 }
 #[doc = "CPUID register accessor: an alias for `Reg<CPUID_SPEC>`"]
@@ -453,10 +453,10 @@ pub mod interp1_base_1and0;
 #[doc = "SPINLOCK register accessor: an alias for `Reg<SPINLOCK_SPEC>`"]
 pub type SPINLOCK = crate::Reg<spinlock::SPINLOCK_SPEC>;
 #[doc = "Reading from a spinlock address will:  
- - Return %s if lock is already locked  
+ - Return 0 if lock is already locked  
  - Otherwise return nonzero, and simultaneously claim the lock  
 
  Writing (any value) releases the lock.  
- If core %s and core 1 attempt to claim the same lock simultaneously, core %s wins.  
- The value returned on success is %sx1 << lock number."]
+ If core 0 and core 1 attempt to claim the same lock simultaneously, core 0 wins.  
+ The value returned on success is 0x1 << lock number."]
 pub mod spinlock;

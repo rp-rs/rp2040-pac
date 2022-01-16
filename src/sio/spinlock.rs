@@ -43,12 +43,12 @@ impl W {
     }
 }
 #[doc = "Reading from a spinlock address will:  
- - Return %s if lock is already locked  
+ - Return 0 if lock is already locked  
  - Otherwise return nonzero, and simultaneously claim the lock  
 
  Writing (any value) releases the lock.  
- If core %s and core 1 attempt to claim the same lock simultaneously, core %s wins.  
- The value returned on success is %sx1 << lock number.  
+ If core 0 and core 1 attempt to claim the same lock simultaneously, core 0 wins.  
+ The value returned on success is 0x1 << lock number.  
 
 This register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
 
