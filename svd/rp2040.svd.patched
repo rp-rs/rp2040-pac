@@ -20662,11 +20662,11 @@
         <register>
           <dim>32</dim><dimIncrement>0x4</dimIncrement><dimIndex>0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31</dimIndex><name>SPINLOCK%s</name>
           <description>Reading from a spinlock address will:\n
-            - Return %s if lock is already locked\n
+            - Return 0 if lock is already locked\n
             - Otherwise return nonzero, and simultaneously claim the lock\n\n
             Writing (any value) releases the lock.\n
-            If core %s and core 1 attempt to claim the same lock simultaneously, core %s wins.\n
-            The value returned on success is %sx1 &lt;&lt; lock number.</description>
+            If core 0 and core 1 attempt to claim the same lock simultaneously, core 0 wins.\n
+            The value returned on success is 0x1 &lt;&lt; lock number.</description>
           <addressOffset>0x0100</addressOffset>
           <access>read-write</access>
           <resetValue>0x00000000</resetValue>

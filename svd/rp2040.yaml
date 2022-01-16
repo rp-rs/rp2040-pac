@@ -604,6 +604,7 @@ SIO:
   _array:
     "SPINLOCK[0123456789],SPINLOCK[12][0123456789],SPINLOCK3[01]":
       _start_from_zero: true
+      description: _original
       name: SPINLOCK%s
 
 USBCTRL_DPRAM:
