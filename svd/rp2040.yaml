@@ -618,6 +618,13 @@ XOSC:
     # RP2040-E7: ROSC and XOSC COUNT registers are unreliable
     "COUNT":
 
+SIO:
+  _array:
+    "SPINLOCK[0123456789],SPINLOCK[12][0123456789],SPINLOCK3[01]":
+      _start_from_zero: true
+      description: _original
+      name: SPINLOCK%s
+
 USBCTRL_DPRAM:
   _modify:
     "EP1_IN_CONTROL":
