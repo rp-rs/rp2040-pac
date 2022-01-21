@@ -32,7 +32,7 @@ impl R {
     #[doc = "Bits 0:31"]
     #[inline(always)]
     pub fn ic_comp_version(&self) -> IC_COMP_VERSION_R {
-        IC_COMP_VERSION_R::new((self.bits & 0xffff_ffff) as u32)
+        IC_COMP_VERSION_R::new(self.bits)
     }
 }
 #[doc = "I2C Component Version Register  

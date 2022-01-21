@@ -32,7 +32,7 @@ impl R {
     #[doc = "Bits 0:31 - Peripheral dentification code"]
     #[inline(always)]
     pub fn idcode(&self) -> IDCODE_R {
-        IDCODE_R::new((self.bits & 0xffff_ffff) as u32)
+        IDCODE_R::new(self.bits)
     }
 }
 #[doc = "Identification register  

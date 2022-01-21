@@ -69,7 +69,7 @@ impl<'a> CLRPEND_W<'a> {
     #[doc = r"Writes raw bits to the field"]
     #[inline(always)]
     pub unsafe fn bits(self, value: u32) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0xffff_ffff) | (value as u32 & 0xffff_ffff);
+        self.w.bits = value;
         self.w
     }
 }
@@ -83,7 +83,7 @@ impl R {
  1 = Interrupt is pending."]
     #[inline(always)]
     pub fn clrpend(&self) -> CLRPEND_R {
-        CLRPEND_R::new((self.bits & 0xffff_ffff) as u32)
+        CLRPEND_R::new(self.bits)
     }
 }
 impl W {
