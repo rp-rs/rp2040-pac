@@ -32,7 +32,7 @@ impl R {
     #[doc = "Bits 0:31 - SNPS component version (format X.YY)"]
     #[inline(always)]
     pub fn ssi_comp_version(&self) -> SSI_COMP_VERSION_R {
-        SSI_COMP_VERSION_R::new((self.bits & 0xffff_ffff) as u32)
+        SSI_COMP_VERSION_R::new(self.bits)
     }
 }
 #[doc = "Version ID  
