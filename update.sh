@@ -2,8 +2,6 @@
 
 set -ex
 
-# NOTE: Last executed using Rust 1.49.0
-
 cargo install --version 0.21.0 svd2rust
 cargo install --version 0.8.0  form
 rustup component add rustfmt
