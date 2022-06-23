@@ -21,6 +21,57 @@ DMA:
       "CHAIN_TO":
         description: "When this channel completes, it will trigger the channel indicated by CHAIN_TO. Disable by setting CHAIN_TO = _(this channel)_. \\n
         Reset value is 0, which means for channels 1 and above the default will be to chain to channel 0 - set this field to avoid this behaviour."
+
+  "CH*_CTRL*":
+    "TREQ_SEL":
+      # The original enum only contains the values for the timers here
+      _replace_enum:
+        PIO0_TX0: [0, "Select PIO0's TX FIFO 0 as TREQ"]
+        PIO0_TX1: [1, "Select PIO0's TX FIFO 1 as TREQ"]
+        PIO0_TX2: [2, "Select PIO0's TX FIFO 2 as TREQ"]
+        PIO0_TX3: [3, "Select PIO0's TX FIFO 3 as TREQ"]
+        PIO0_RX0: [4, "Select PIO0's RX FIFO 0 as TREQ"]
+        PIO0_RX1: [5, "Select PIO0's RX FIFO 1 as TREQ"]
+        PIO0_RX2: [6, "Select PIO0's RX FIFO 2 as TREQ"]
+        PIO0_RX3: [7, "Select PIO0's RX FIFO 3 as TREQ"]
+        PIO1_TX0: [8, "Select PIO1's TX FIFO 0 as TREQ"]
+        PIO1_TX1: [9, "Select PIO1's TX FIFO 1 as TREQ"]
+        PIO1_TX2: [10, "Select PIO1's TX FIFO 2 as TREQ"]
+        PIO1_TX3: [11, "Select PIO1's TX FIFO 3 as TREQ"]
+        PIO1_RX0: [12, "Select PIO1's RX FIFO 0 as TREQ"]
+        PIO1_RX1: [13, "Select PIO1's RX FIFO 1 as TREQ"]
+        PIO1_RX2: [14, "Select PIO1's RX FIFO 2 as TREQ"]
+        PIO1_RX3: [15, "Select PIO1's RX FIFO 3 as TREQ"]
+        SPI0_TX: [16, "Select SPI0's TX FIFO as TREQ"]
+        SPI0_RX: [17, "Select SPI0's RX FIFO as TREQ"]
+        SPI1_TX: [18, "Select SPI1's TX FIFO as TREQ"]
+        SPI1_RX: [19, "Select SPI1's RX FIFO as TREQ"]
+        UART0_TX: [20, "Select UART0's TX FIFO as TREQ"]
+        UART0_RX: [21, "Select UART0's RX FIFO as TREQ"]
+        UART1_TX: [22, "Select UART1's TX FIFO as TREQ"]
+        UART1_RX: [23, "Select UART1's RX FIFO as TREQ"]
+        PWM_WRAP0: [24, "Select PWM Counter 0's Wrap Value as TREQ"]
+        PWM_WRAP1: [25, "Select PWM Counter 1's Wrap Value as TREQ"]
+        PWM_WRAP2: [26, "Select PWM Counter 2's Wrap Value as TREQ"]
+        PWM_WRAP3: [27, "Select PWM Counter 3's Wrap Value as TREQ"]
+        PWM_WRAP4: [28, "Select PWM Counter 4's Wrap Value as TREQ"]
+        PWM_WRAP5: [29, "Select PWM Counter 5's Wrap Value as TREQ"]
+        PWM_WRAP6: [30, "Select PWM Counter 6's Wrap Value as TREQ"]
+        PWM_WRAP7: [31, "Select PWM Counter 7's Wrap Value as TREQ"]
+        I2C0_TX: [32, "Select I2C0's TX FIFO as TREQ"]
+        I2C0_RX: [33, "Select I2C0's RX FIFO as TREQ"]
+        I2C1_TX: [34, "Select I2C1's TX FIFO as TREQ"]
+        I2C1_RX: [35, "Select I2C1's RX FIFO as TREQ"]
+        ADC: [36, "Select the ADC as TREQ"]
+        XIP_STREAM: [37, "Select the XIP Streaming FIFO as TREQ"]
+        XIP_SSITX: [38, "Select the XIP SSI TX FIFO as TREQ"]
+        XIP_SSIRX: [39, "Select the XIP SSI RX FIFO as TREQ"]
+        TIMER0: [59, "Select Timer 0 as TREQ"]
+        TIMER1: [60, "Select Timer 1 as TREQ"]
+        TIMER2: [61, "Select Timer 2 as TREQ (Optional)"]
+        TIMER3: [62, "Select Timer 3 as TREQ (Optional)"]
+        PERMANENT: [63, "Permanent request, for unpaced transfers."]
+
   _delete:
     "CH*_AL1_CTRL": {}
     "CH*_AL2_CTRL": {}

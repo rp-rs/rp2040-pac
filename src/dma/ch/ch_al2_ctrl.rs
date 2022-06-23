@@ -273,6 +273,86 @@ Value on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq)]
 #[repr(u8)]
 pub enum TREQ_SEL_A {
+    #[doc = "0: Select PIO0's TX FIFO 0 as TREQ"]
+    PIO0_TX0 = 0,
+    #[doc = "1: Select PIO0's TX FIFO 1 as TREQ"]
+    PIO0_TX1 = 1,
+    #[doc = "2: Select PIO0's TX FIFO 2 as TREQ"]
+    PIO0_TX2 = 2,
+    #[doc = "3: Select PIO0's TX FIFO 3 as TREQ"]
+    PIO0_TX3 = 3,
+    #[doc = "4: Select PIO0's RX FIFO 0 as TREQ"]
+    PIO0_RX0 = 4,
+    #[doc = "5: Select PIO0's RX FIFO 1 as TREQ"]
+    PIO0_RX1 = 5,
+    #[doc = "6: Select PIO0's RX FIFO 2 as TREQ"]
+    PIO0_RX2 = 6,
+    #[doc = "7: Select PIO0's RX FIFO 3 as TREQ"]
+    PIO0_RX3 = 7,
+    #[doc = "8: Select PIO1's TX FIFO 0 as TREQ"]
+    PIO1_TX0 = 8,
+    #[doc = "9: Select PIO1's TX FIFO 1 as TREQ"]
+    PIO1_TX1 = 9,
+    #[doc = "10: Select PIO1's TX FIFO 2 as TREQ"]
+    PIO1_TX2 = 10,
+    #[doc = "11: Select PIO1's TX FIFO 3 as TREQ"]
+    PIO1_TX3 = 11,
+    #[doc = "12: Select PIO1's RX FIFO 0 as TREQ"]
+    PIO1_RX0 = 12,
+    #[doc = "13: Select PIO1's RX FIFO 1 as TREQ"]
+    PIO1_RX1 = 13,
+    #[doc = "14: Select PIO1's RX FIFO 2 as TREQ"]
+    PIO1_RX2 = 14,
+    #[doc = "15: Select PIO1's RX FIFO 3 as TREQ"]
+    PIO1_RX3 = 15,
+    #[doc = "16: Select SPI0's TX FIFO as TREQ"]
+    SPI0_TX = 16,
+    #[doc = "17: Select SPI0's RX FIFO as TREQ"]
+    SPI0_RX = 17,
+    #[doc = "18: Select SPI1's TX FIFO as TREQ"]
+    SPI1_TX = 18,
+    #[doc = "19: Select SPI1's RX FIFO as TREQ"]
+    SPI1_RX = 19,
+    #[doc = "20: Select UART0's TX FIFO as TREQ"]
+    UART0_TX = 20,
+    #[doc = "21: Select UART0's RX FIFO as TREQ"]
+    UART0_RX = 21,
+    #[doc = "22: Select UART1's TX FIFO as TREQ"]
+    UART1_TX = 22,
+    #[doc = "23: Select UART1's RX FIFO as TREQ"]
+    UART1_RX = 23,
+    #[doc = "24: Select PWM Counter 0's Wrap Value as TREQ"]
+    PWM_WRAP0 = 24,
+    #[doc = "25: Select PWM Counter 1's Wrap Value as TREQ"]
+    PWM_WRAP1 = 25,
+    #[doc = "26: Select PWM Counter 2's Wrap Value as TREQ"]
+    PWM_WRAP2 = 26,
+    #[doc = "27: Select PWM Counter 3's Wrap Value as TREQ"]
+    PWM_WRAP3 = 27,
+    #[doc = "28: Select PWM Counter 4's Wrap Value as TREQ"]
+    PWM_WRAP4 = 28,
+    #[doc = "29: Select PWM Counter 5's Wrap Value as TREQ"]
+    PWM_WRAP5 = 29,
+    #[doc = "30: Select PWM Counter 6's Wrap Value as TREQ"]
+    PWM_WRAP6 = 30,
+    #[doc = "31: Select PWM Counter 7's Wrap Value as TREQ"]
+    PWM_WRAP7 = 31,
+    #[doc = "32: Select I2C0's TX FIFO as TREQ"]
+    I2C0_TX = 32,
+    #[doc = "33: Select I2C0's RX FIFO as TREQ"]
+    I2C0_RX = 33,
+    #[doc = "34: Select I2C1's TX FIFO as TREQ"]
+    I2C1_TX = 34,
+    #[doc = "35: Select I2C1's RX FIFO as TREQ"]
+    I2C1_RX = 35,
+    #[doc = "36: Select the ADC as TREQ"]
+    ADC = 36,
+    #[doc = "37: Select the XIP Streaming FIFO as TREQ"]
+    XIP_STREAM = 37,
+    #[doc = "38: Select the XIP SSI TX FIFO as TREQ"]
+    XIP_SSITX = 38,
+    #[doc = "39: Select the XIP SSI RX FIFO as TREQ"]
+    XIP_SSIRX = 39,
     #[doc = "59: Select Timer 0 as TREQ"]
     TIMER0 = 59,
     #[doc = "60: Select Timer 1 as TREQ"]
@@ -303,6 +383,46 @@ impl TREQ_SEL_R {
     #[inline(always)]
     pub fn variant(&self) -> Option<TREQ_SEL_A> {
         match self.bits {
+            0 => Some(TREQ_SEL_A::PIO0_TX0),
+            1 => Some(TREQ_SEL_A::PIO0_TX1),
+            2 => Some(TREQ_SEL_A::PIO0_TX2),
+            3 => Some(TREQ_SEL_A::PIO0_TX3),
+            4 => Some(TREQ_SEL_A::PIO0_RX0),
+            5 => Some(TREQ_SEL_A::PIO0_RX1),
+            6 => Some(TREQ_SEL_A::PIO0_RX2),
+            7 => Some(TREQ_SEL_A::PIO0_RX3),
+            8 => Some(TREQ_SEL_A::PIO1_TX0),
+            9 => Some(TREQ_SEL_A::PIO1_TX1),
+            10 => Some(TREQ_SEL_A::PIO1_TX2),
+            11 => Some(TREQ_SEL_A::PIO1_TX3),
+            12 => Some(TREQ_SEL_A::PIO1_RX0),
+            13 => Some(TREQ_SEL_A::PIO1_RX1),
+            14 => Some(TREQ_SEL_A::PIO1_RX2),
+            15 => Some(TREQ_SEL_A::PIO1_RX3),
+            16 => Some(TREQ_SEL_A::SPI0_TX),
+            17 => Some(TREQ_SEL_A::SPI0_RX),
+            18 => Some(TREQ_SEL_A::SPI1_TX),
+            19 => Some(TREQ_SEL_A::SPI1_RX),
+            20 => Some(TREQ_SEL_A::UART0_TX),
+            21 => Some(TREQ_SEL_A::UART0_RX),
+            22 => Some(TREQ_SEL_A::UART1_TX),
+            23 => Some(TREQ_SEL_A::UART1_RX),
+            24 => Some(TREQ_SEL_A::PWM_WRAP0),
+            25 => Some(TREQ_SEL_A::PWM_WRAP1),
+            26 => Some(TREQ_SEL_A::PWM_WRAP2),
+            27 => Some(TREQ_SEL_A::PWM_WRAP3),
+            28 => Some(TREQ_SEL_A::PWM_WRAP4),
+            29 => Some(TREQ_SEL_A::PWM_WRAP5),
+            30 => Some(TREQ_SEL_A::PWM_WRAP6),
+            31 => Some(TREQ_SEL_A::PWM_WRAP7),
+            32 => Some(TREQ_SEL_A::I2C0_TX),
+            33 => Some(TREQ_SEL_A::I2C0_RX),
+            34 => Some(TREQ_SEL_A::I2C1_TX),
+            35 => Some(TREQ_SEL_A::I2C1_RX),
+            36 => Some(TREQ_SEL_A::ADC),
+            37 => Some(TREQ_SEL_A::XIP_STREAM),
+            38 => Some(TREQ_SEL_A::XIP_SSITX),
+            39 => Some(TREQ_SEL_A::XIP_SSIRX),
             59 => Some(TREQ_SEL_A::TIMER0),
             60 => Some(TREQ_SEL_A::TIMER1),
             61 => Some(TREQ_SEL_A::TIMER2),
@@ -310,6 +430,206 @@ impl TREQ_SEL_R {
             63 => Some(TREQ_SEL_A::PERMANENT),
             _ => None,
         }
+    }
+    #[doc = "Checks if the value of the field is `PIO0_TX0`"]
+    #[inline(always)]
+    pub fn is_pio0_tx0(&self) -> bool {
+        **self == TREQ_SEL_A::PIO0_TX0
+    }
+    #[doc = "Checks if the value of the field is `PIO0_TX1`"]
+    #[inline(always)]
+    pub fn is_pio0_tx1(&self) -> bool {
+        **self == TREQ_SEL_A::PIO0_TX1
+    }
+    #[doc = "Checks if the value of the field is `PIO0_TX2`"]
+    #[inline(always)]
+    pub fn is_pio0_tx2(&self) -> bool {
+        **self == TREQ_SEL_A::PIO0_TX2
+    }
+    #[doc = "Checks if the value of the field is `PIO0_TX3`"]
+    #[inline(always)]
+    pub fn is_pio0_tx3(&self) -> bool {
+        **self == TREQ_SEL_A::PIO0_TX3
+    }
+    #[doc = "Checks if the value of the field is `PIO0_RX0`"]
+    #[inline(always)]
+    pub fn is_pio0_rx0(&self) -> bool {
+        **self == TREQ_SEL_A::PIO0_RX0
+    }
+    #[doc = "Checks if the value of the field is `PIO0_RX1`"]
+    #[inline(always)]
+    pub fn is_pio0_rx1(&self) -> bool {
+        **self == TREQ_SEL_A::PIO0_RX1
+    }
+    #[doc = "Checks if the value of the field is `PIO0_RX2`"]
+    #[inline(always)]
+    pub fn is_pio0_rx2(&self) -> bool {
+        **self == TREQ_SEL_A::PIO0_RX2
+    }
+    #[doc = "Checks if the value of the field is `PIO0_RX3`"]
+    #[inline(always)]
+    pub fn is_pio0_rx3(&self) -> bool {
+        **self == TREQ_SEL_A::PIO0_RX3
+    }
+    #[doc = "Checks if the value of the field is `PIO1_TX0`"]
+    #[inline(always)]
+    pub fn is_pio1_tx0(&self) -> bool {
+        **self == TREQ_SEL_A::PIO1_TX0
+    }
+    #[doc = "Checks if the value of the field is `PIO1_TX1`"]
+    #[inline(always)]
+    pub fn is_pio1_tx1(&self) -> bool {
+        **self == TREQ_SEL_A::PIO1_TX1
+    }
+    #[doc = "Checks if the value of the field is `PIO1_TX2`"]
+    #[inline(always)]
+    pub fn is_pio1_tx2(&self) -> bool {
+        **self == TREQ_SEL_A::PIO1_TX2
+    }
+    #[doc = "Checks if the value of the field is `PIO1_TX3`"]
+    #[inline(always)]
+    pub fn is_pio1_tx3(&self) -> bool {
+        **self == TREQ_SEL_A::PIO1_TX3
+    }
+    #[doc = "Checks if the value of the field is `PIO1_RX0`"]
+    #[inline(always)]
+    pub fn is_pio1_rx0(&self) -> bool {
+        **self == TREQ_SEL_A::PIO1_RX0
+    }
+    #[doc = "Checks if the value of the field is `PIO1_RX1`"]
+    #[inline(always)]
+    pub fn is_pio1_rx1(&self) -> bool {
+        **self == TREQ_SEL_A::PIO1_RX1
+    }
+    #[doc = "Checks if the value of the field is `PIO1_RX2`"]
+    #[inline(always)]
+    pub fn is_pio1_rx2(&self) -> bool {
+        **self == TREQ_SEL_A::PIO1_RX2
+    }
+    #[doc = "Checks if the value of the field is `PIO1_RX3`"]
+    #[inline(always)]
+    pub fn is_pio1_rx3(&self) -> bool {
+        **self == TREQ_SEL_A::PIO1_RX3
+    }
+    #[doc = "Checks if the value of the field is `SPI0_TX`"]
+    #[inline(always)]
+    pub fn is_spi0_tx(&self) -> bool {
+        **self == TREQ_SEL_A::SPI0_TX
+    }
+    #[doc = "Checks if the value of the field is `SPI0_RX`"]
+    #[inline(always)]
+    pub fn is_spi0_rx(&self) -> bool {
+        **self == TREQ_SEL_A::SPI0_RX
+    }
+    #[doc = "Checks if the value of the field is `SPI1_TX`"]
+    #[inline(always)]
+    pub fn is_spi1_tx(&self) -> bool {
+        **self == TREQ_SEL_A::SPI1_TX
+    }
+    #[doc = "Checks if the value of the field is `SPI1_RX`"]
+    #[inline(always)]
+    pub fn is_spi1_rx(&self) -> bool {
+        **self == TREQ_SEL_A::SPI1_RX
+    }
+    #[doc = "Checks if the value of the field is `UART0_TX`"]
+    #[inline(always)]
+    pub fn is_uart0_tx(&self) -> bool {
+        **self == TREQ_SEL_A::UART0_TX
+    }
+    #[doc = "Checks if the value of the field is `UART0_RX`"]
+    #[inline(always)]
+    pub fn is_uart0_rx(&self) -> bool {
+        **self == TREQ_SEL_A::UART0_RX
+    }
+    #[doc = "Checks if the value of the field is `UART1_TX`"]
+    #[inline(always)]
+    pub fn is_uart1_tx(&self) -> bool {
+        **self == TREQ_SEL_A::UART1_TX
+    }
+    #[doc = "Checks if the value of the field is `UART1_RX`"]
+    #[inline(always)]
+    pub fn is_uart1_rx(&self) -> bool {
+        **self == TREQ_SEL_A::UART1_RX
+    }
+    #[doc = "Checks if the value of the field is `PWM_WRAP0`"]
+    #[inline(always)]
+    pub fn is_pwm_wrap0(&self) -> bool {
+        **self == TREQ_SEL_A::PWM_WRAP0
+    }
+    #[doc = "Checks if the value of the field is `PWM_WRAP1`"]
+    #[inline(always)]
+    pub fn is_pwm_wrap1(&self) -> bool {
+        **self == TREQ_SEL_A::PWM_WRAP1
+    }
+    #[doc = "Checks if the value of the field is `PWM_WRAP2`"]
+    #[inline(always)]
+    pub fn is_pwm_wrap2(&self) -> bool {
+        **self == TREQ_SEL_A::PWM_WRAP2
+    }
+    #[doc = "Checks if the value of the field is `PWM_WRAP3`"]
+    #[inline(always)]
+    pub fn is_pwm_wrap3(&self) -> bool {
+        **self == TREQ_SEL_A::PWM_WRAP3
+    }
+    #[doc = "Checks if the value of the field is `PWM_WRAP4`"]
+    #[inline(always)]
+    pub fn is_pwm_wrap4(&self) -> bool {
+        **self == TREQ_SEL_A::PWM_WRAP4
+    }
+    #[doc = "Checks if the value of the field is `PWM_WRAP5`"]
+    #[inline(always)]
+    pub fn is_pwm_wrap5(&self) -> bool {
+        **self == TREQ_SEL_A::PWM_WRAP5
+    }
+    #[doc = "Checks if the value of the field is `PWM_WRAP6`"]
+    #[inline(always)]
+    pub fn is_pwm_wrap6(&self) -> bool {
+        **self == TREQ_SEL_A::PWM_WRAP6
+    }
+    #[doc = "Checks if the value of the field is `PWM_WRAP7`"]
+    #[inline(always)]
+    pub fn is_pwm_wrap7(&self) -> bool {
+        **self == TREQ_SEL_A::PWM_WRAP7
+    }
+    #[doc = "Checks if the value of the field is `I2C0_TX`"]
+    #[inline(always)]
+    pub fn is_i2c0_tx(&self) -> bool {
+        **self == TREQ_SEL_A::I2C0_TX
+    }
+    #[doc = "Checks if the value of the field is `I2C0_RX`"]
+    #[inline(always)]
+    pub fn is_i2c0_rx(&self) -> bool {
+        **self == TREQ_SEL_A::I2C0_RX
+    }
+    #[doc = "Checks if the value of the field is `I2C1_TX`"]
+    #[inline(always)]
+    pub fn is_i2c1_tx(&self) -> bool {
+        **self == TREQ_SEL_A::I2C1_TX
+    }
+    #[doc = "Checks if the value of the field is `I2C1_RX`"]
+    #[inline(always)]
+    pub fn is_i2c1_rx(&self) -> bool {
+        **self == TREQ_SEL_A::I2C1_RX
+    }
+    #[doc = "Checks if the value of the field is `ADC`"]
+    #[inline(always)]
+    pub fn is_adc(&self) -> bool {
+        **self == TREQ_SEL_A::ADC
+    }
+    #[doc = "Checks if the value of the field is `XIP_STREAM`"]
+    #[inline(always)]
+    pub fn is_xip_stream(&self) -> bool {
+        **self == TREQ_SEL_A::XIP_STREAM
+    }
+    #[doc = "Checks if the value of the field is `XIP_SSITX`"]
+    #[inline(always)]
+    pub fn is_xip_ssitx(&self) -> bool {
+        **self == TREQ_SEL_A::XIP_SSITX
+    }
+    #[doc = "Checks if the value of the field is `XIP_SSIRX`"]
+    #[inline(always)]
+    pub fn is_xip_ssirx(&self) -> bool {
+        **self == TREQ_SEL_A::XIP_SSIRX
     }
     #[doc = "Checks if the value of the field is `TIMER0`"]
     #[inline(always)]
@@ -355,6 +675,206 @@ impl<'a> TREQ_SEL_W<'a> {
     #[inline(always)]
     pub fn variant(self, variant: TREQ_SEL_A) -> &'a mut W {
         unsafe { self.bits(variant.into()) }
+    }
+    #[doc = "Select PIO0's TX FIFO 0 as TREQ"]
+    #[inline(always)]
+    pub fn pio0_tx0(self) -> &'a mut W {
+        self.variant(TREQ_SEL_A::PIO0_TX0)
+    }
+    #[doc = "Select PIO0's TX FIFO 1 as TREQ"]
+    #[inline(always)]
+    pub fn pio0_tx1(self) -> &'a mut W {
+        self.variant(TREQ_SEL_A::PIO0_TX1)
+    }
+    #[doc = "Select PIO0's TX FIFO 2 as TREQ"]
+    #[inline(always)]
+    pub fn pio0_tx2(self) -> &'a mut W {
+        self.variant(TREQ_SEL_A::PIO0_TX2)
+    }
+    #[doc = "Select PIO0's TX FIFO 3 as TREQ"]
+    #[inline(always)]
+    pub fn pio0_tx3(self) -> &'a mut W {
+        self.variant(TREQ_SEL_A::PIO0_TX3)
+    }
+    #[doc = "Select PIO0's RX FIFO 0 as TREQ"]
+    #[inline(always)]
+    pub fn pio0_rx0(self) -> &'a mut W {
+        self.variant(TREQ_SEL_A::PIO0_RX0)
+    }
+    #[doc = "Select PIO0's RX FIFO 1 as TREQ"]
+    #[inline(always)]
+    pub fn pio0_rx1(self) -> &'a mut W {
+        self.variant(TREQ_SEL_A::PIO0_RX1)
+    }
+    #[doc = "Select PIO0's RX FIFO 2 as TREQ"]
+    #[inline(always)]
+    pub fn pio0_rx2(self) -> &'a mut W {
+        self.variant(TREQ_SEL_A::PIO0_RX2)
+    }
+    #[doc = "Select PIO0's RX FIFO 3 as TREQ"]
+    #[inline(always)]
+    pub fn pio0_rx3(self) -> &'a mut W {
+        self.variant(TREQ_SEL_A::PIO0_RX3)
+    }
+    #[doc = "Select PIO1's TX FIFO 0 as TREQ"]
+    #[inline(always)]
+    pub fn pio1_tx0(self) -> &'a mut W {
+        self.variant(TREQ_SEL_A::PIO1_TX0)
+    }
+    #[doc = "Select PIO1's TX FIFO 1 as TREQ"]
+    #[inline(always)]
+    pub fn pio1_tx1(self) -> &'a mut W {
+        self.variant(TREQ_SEL_A::PIO1_TX1)
+    }
+    #[doc = "Select PIO1's TX FIFO 2 as TREQ"]
+    #[inline(always)]
+    pub fn pio1_tx2(self) -> &'a mut W {
+        self.variant(TREQ_SEL_A::PIO1_TX2)
+    }
+    #[doc = "Select PIO1's TX FIFO 3 as TREQ"]
+    #[inline(always)]
+    pub fn pio1_tx3(self) -> &'a mut W {
+        self.variant(TREQ_SEL_A::PIO1_TX3)
+    }
+    #[doc = "Select PIO1's RX FIFO 0 as TREQ"]
+    #[inline(always)]
+    pub fn pio1_rx0(self) -> &'a mut W {
+        self.variant(TREQ_SEL_A::PIO1_RX0)
+    }
+    #[doc = "Select PIO1's RX FIFO 1 as TREQ"]
+    #[inline(always)]
+    pub fn pio1_rx1(self) -> &'a mut W {
+        self.variant(TREQ_SEL_A::PIO1_RX1)
+    }
+    #[doc = "Select PIO1's RX FIFO 2 as TREQ"]
+    #[inline(always)]
+    pub fn pio1_rx2(self) -> &'a mut W {
+        self.variant(TREQ_SEL_A::PIO1_RX2)
+    }
+    #[doc = "Select PIO1's RX FIFO 3 as TREQ"]
+    #[inline(always)]
+    pub fn pio1_rx3(self) -> &'a mut W {
+        self.variant(TREQ_SEL_A::PIO1_RX3)
+    }
+    #[doc = "Select SPI0's TX FIFO as TREQ"]
+    #[inline(always)]
+    pub fn spi0_tx(self) -> &'a mut W {
+        self.variant(TREQ_SEL_A::SPI0_TX)
+    }
+    #[doc = "Select SPI0's RX FIFO as TREQ"]
+    #[inline(always)]
+    pub fn spi0_rx(self) -> &'a mut W {
+        self.variant(TREQ_SEL_A::SPI0_RX)
+    }
+    #[doc = "Select SPI1's TX FIFO as TREQ"]
+    #[inline(always)]
+    pub fn spi1_tx(self) -> &'a mut W {
+        self.variant(TREQ_SEL_A::SPI1_TX)
+    }
+    #[doc = "Select SPI1's RX FIFO as TREQ"]
+    #[inline(always)]
+    pub fn spi1_rx(self) -> &'a mut W {
+        self.variant(TREQ_SEL_A::SPI1_RX)
+    }
+    #[doc = "Select UART0's TX FIFO as TREQ"]
+    #[inline(always)]
+    pub fn uart0_tx(self) -> &'a mut W {
+        self.variant(TREQ_SEL_A::UART0_TX)
+    }
+    #[doc = "Select UART0's RX FIFO as TREQ"]
+    #[inline(always)]
+    pub fn uart0_rx(self) -> &'a mut W {
+        self.variant(TREQ_SEL_A::UART0_RX)
+    }
+    #[doc = "Select UART1's TX FIFO as TREQ"]
+    #[inline(always)]
+    pub fn uart1_tx(self) -> &'a mut W {
+        self.variant(TREQ_SEL_A::UART1_TX)
+    }
+    #[doc = "Select UART1's RX FIFO as TREQ"]
+    #[inline(always)]
+    pub fn uart1_rx(self) -> &'a mut W {
+        self.variant(TREQ_SEL_A::UART1_RX)
+    }
+    #[doc = "Select PWM Counter 0's Wrap Value as TREQ"]
+    #[inline(always)]
+    pub fn pwm_wrap0(self) -> &'a mut W {
+        self.variant(TREQ_SEL_A::PWM_WRAP0)
+    }
+    #[doc = "Select PWM Counter 1's Wrap Value as TREQ"]
+    #[inline(always)]
+    pub fn pwm_wrap1(self) -> &'a mut W {
+        self.variant(TREQ_SEL_A::PWM_WRAP1)
+    }
+    #[doc = "Select PWM Counter 2's Wrap Value as TREQ"]
+    #[inline(always)]
+    pub fn pwm_wrap2(self) -> &'a mut W {
+        self.variant(TREQ_SEL_A::PWM_WRAP2)
+    }
+    #[doc = "Select PWM Counter 3's Wrap Value as TREQ"]
+    #[inline(always)]
+    pub fn pwm_wrap3(self) -> &'a mut W {
+        self.variant(TREQ_SEL_A::PWM_WRAP3)
+    }
+    #[doc = "Select PWM Counter 4's Wrap Value as TREQ"]
+    #[inline(always)]
+    pub fn pwm_wrap4(self) -> &'a mut W {
+        self.variant(TREQ_SEL_A::PWM_WRAP4)
+    }
+    #[doc = "Select PWM Counter 5's Wrap Value as TREQ"]
+    #[inline(always)]
+    pub fn pwm_wrap5(self) -> &'a mut W {
+        self.variant(TREQ_SEL_A::PWM_WRAP5)
+    }
+    #[doc = "Select PWM Counter 6's Wrap Value as TREQ"]
+    #[inline(always)]
+    pub fn pwm_wrap6(self) -> &'a mut W {
+        self.variant(TREQ_SEL_A::PWM_WRAP6)
+    }
+    #[doc = "Select PWM Counter 7's Wrap Value as TREQ"]
+    #[inline(always)]
+    pub fn pwm_wrap7(self) -> &'a mut W {
+        self.variant(TREQ_SEL_A::PWM_WRAP7)
+    }
+    #[doc = "Select I2C0's TX FIFO as TREQ"]
+    #[inline(always)]
+    pub fn i2c0_tx(self) -> &'a mut W {
+        self.variant(TREQ_SEL_A::I2C0_TX)
+    }
+    #[doc = "Select I2C0's RX FIFO as TREQ"]
+    #[inline(always)]
+    pub fn i2c0_rx(self) -> &'a mut W {
+        self.variant(TREQ_SEL_A::I2C0_RX)
+    }
+    #[doc = "Select I2C1's TX FIFO as TREQ"]
+    #[inline(always)]
+    pub fn i2c1_tx(self) -> &'a mut W {
+        self.variant(TREQ_SEL_A::I2C1_TX)
+    }
+    #[doc = "Select I2C1's RX FIFO as TREQ"]
+    #[inline(always)]
+    pub fn i2c1_rx(self) -> &'a mut W {
+        self.variant(TREQ_SEL_A::I2C1_RX)
+    }
+    #[doc = "Select the ADC as TREQ"]
+    #[inline(always)]
+    pub fn adc(self) -> &'a mut W {
+        self.variant(TREQ_SEL_A::ADC)
+    }
+    #[doc = "Select the XIP Streaming FIFO as TREQ"]
+    #[inline(always)]
+    pub fn xip_stream(self) -> &'a mut W {
+        self.variant(TREQ_SEL_A::XIP_STREAM)
+    }
+    #[doc = "Select the XIP SSI TX FIFO as TREQ"]
+    #[inline(always)]
+    pub fn xip_ssitx(self) -> &'a mut W {
+        self.variant(TREQ_SEL_A::XIP_SSITX)
+    }
+    #[doc = "Select the XIP SSI RX FIFO as TREQ"]
+    #[inline(always)]
+    pub fn xip_ssirx(self) -> &'a mut W {
+        self.variant(TREQ_SEL_A::XIP_SSIRX)
     }
     #[doc = "Select Timer 0 as TREQ"]
     #[inline(always)]
