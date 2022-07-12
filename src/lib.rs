@@ -68,6 +68,12 @@ extern "C" {
     fn I2C0_IRQ();
     fn I2C1_IRQ();
     fn RTC_IRQ();
+    fn SW0_IRQ();
+    fn SW1_IRQ();
+    fn SW2_IRQ();
+    fn SW3_IRQ();
+    fn SW4_IRQ();
+    fn SW5_IRQ();
 }
 #[doc(hidden)]
 pub union Vector {
@@ -78,7 +84,7 @@ pub union Vector {
 #[doc(hidden)]
 #[link_section = ".vector_table.interrupts"]
 #[no_mangle]
-pub static __INTERRUPTS: [Vector; 26] = [
+pub static __INTERRUPTS: [Vector; 32] = [
     Vector {
         _handler: TIMER_IRQ_0,
     },
@@ -145,6 +151,12 @@ pub static __INTERRUPTS: [Vector; 26] = [
     Vector { _handler: I2C0_IRQ },
     Vector { _handler: I2C1_IRQ },
     Vector { _handler: RTC_IRQ },
+    Vector { _handler: SW0_IRQ },
+    Vector { _handler: SW1_IRQ },
+    Vector { _handler: SW2_IRQ },
+    Vector { _handler: SW3_IRQ },
+    Vector { _handler: SW4_IRQ },
+    Vector { _handler: SW5_IRQ },
 ];
 #[doc = r"Enumeration of all the interrupts."]
 #[derive(Copy, Clone, Debug, PartialEq, Eq)]
@@ -202,6 +214,18 @@ pub enum Interrupt {
     I2C1_IRQ = 24,
     #[doc = "25 - RTC_IRQ"]
     RTC_IRQ = 25,
+    #[doc = "26 - Software IRQ 0"]
+    SW0_IRQ = 26,
+    #[doc = "27 - Software IRQ 1"]
+    SW1_IRQ = 27,
+    #[doc = "28 - Software IRQ 2"]
+    SW2_IRQ = 28,
+    #[doc = "29 - Software IRQ 3"]
+    SW3_IRQ = 29,
+    #[doc = "30 - Software IRQ 4"]
+    SW4_IRQ = 30,
+    #[doc = "31 - Software IRQ 5"]
+    SW5_IRQ = 31,
 }
 unsafe impl cortex_m::interrupt::InterruptNumber for Interrupt {
     #[inline(always)]
