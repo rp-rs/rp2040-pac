@@ -76,7 +76,7 @@ DMA:
     "CH*_AL1_CTRL": {}
     "CH*_AL2_CTRL": {}
     "CH*_AL3_CTRL": {}
-  _derive:
+  _copy:
     "CH0_AL1_CTRL":
       _from: "CH0_CTRL_TRIG"
       addressOffset: 0x10
