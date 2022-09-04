@@ -14680,8 +14680,7 @@
               </field>
             <field>
               <name>CHAIN_TO</name>
-            <description>When this channel completes, it will trigger the channel indicated by CHAIN_TO. Disable by setting CHAIN_TO = _(this channel)_.\n
-                Reset value is equal to channel number (0).</description>
+            <description>When this channel completes, it will trigger the channel indicated by CHAIN_TO. Disable by setting CHAIN_TO = _(this channel)_. \n Reset value is 0, which means for channels 1 and above the default will be to chain to channel 0 - set this field to avoid this behaviour.</description>
               <bitRange>[14:11]</bitRange>
               <access>read-write</access>
               </field>
@@ -14848,8 +14847,7 @@
               </field>
             <field>
               <name>CHAIN_TO</name>
-            <description>When this channel completes, it will trigger the channel indicated by CHAIN_TO. Disable by setting CHAIN_TO = _(this channel)_.\n
-                Reset value is equal to channel number (0).</description>
+            <description>When this channel completes, it will trigger the channel indicated by CHAIN_TO. Disable by setting CHAIN_TO = _(this channel)_. \n Reset value is 0, which means for channels 1 and above the default will be to chain to channel 0 - set this field to avoid this behaviour.</description>
               <bitRange>[14:11]</bitRange>
               <access>read-write</access>
               </field>
@@ -15039,8 +15037,7 @@
               </field>
             <field>
               <name>CHAIN_TO</name>
-            <description>When this channel completes, it will trigger the channel indicated by CHAIN_TO. Disable by setting CHAIN_TO = _(this channel)_.\n
-                Reset value is equal to channel number (0).</description>
+            <description>When this channel completes, it will trigger the channel indicated by CHAIN_TO. Disable by setting CHAIN_TO = _(this channel)_. \n Reset value is 0, which means for channels 1 and above the default will be to chain to channel 0 - set this field to avoid this behaviour.</description>
               <bitRange>[14:11]</bitRange>
               <access>read-write</access>
               </field>
@@ -15230,8 +15227,7 @@
               </field>
             <field>
               <name>CHAIN_TO</name>
-            <description>When this channel completes, it will trigger the channel indicated by CHAIN_TO. Disable by setting CHAIN_TO = _(this channel)_.\n
-                Reset value is equal to channel number (0).</description>
+            <description>When this channel completes, it will trigger the channel indicated by CHAIN_TO. Disable by setting CHAIN_TO = _(this channel)_. \n Reset value is 0, which means for channels 1 and above the default will be to chain to channel 0 - set this field to avoid this behaviour.</description>
               <bitRange>[14:11]</bitRange>
               <access>read-write</access>
               </field>

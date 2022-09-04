@@ -388,8 +388,8 @@ impl<'a> TREQ_SEL_W<'a> {
         self.w
     }
 }
-#[doc = "Field `CHAIN_TO` reader - When this channel completes, it will trigger the channel indicated by CHAIN_TO. Disable by setting CHAIN_TO = _(this channel)_.  
- Reset value is equal to channel number (0)."]
+#[doc = "Field `CHAIN_TO` reader - When this channel completes, it will trigger the channel indicated by CHAIN_TO. Disable by setting CHAIN_TO = _(this channel)_.   
+ Reset value is 0, which means for channels 1 and above the default will be to chain to channel 0 - set this field to avoid this behaviour."]
 pub struct CHAIN_TO_R(crate::FieldReader<u8, u8>);
 impl CHAIN_TO_R {
     #[inline(always)]
@@ -404,8 +404,8 @@ impl core::ops::Deref for CHAIN_TO_R {
         &self.0
     }
 }
-#[doc = "Field `CHAIN_TO` writer - When this channel completes, it will trigger the channel indicated by CHAIN_TO. Disable by setting CHAIN_TO = _(this channel)_.  
- Reset value is equal to channel number (0)."]
+#[doc = "Field `CHAIN_TO` writer - When this channel completes, it will trigger the channel indicated by CHAIN_TO. Disable by setting CHAIN_TO = _(this channel)_.   
+ Reset value is 0, which means for channels 1 and above the default will be to chain to channel 0 - set this field to avoid this behaviour."]
 pub struct CHAIN_TO_W<'a> {
     w: &'a mut W,
 }
@@ -832,8 +832,8 @@ impl R {
     pub fn treq_sel(&self) -> TREQ_SEL_R {
         TREQ_SEL_R::new(((self.bits >> 15) & 0x3f) as u8)
     }
-    #[doc = "Bits 11:14 - When this channel completes, it will trigger the channel indicated by CHAIN_TO. Disable by setting CHAIN_TO = _(this channel)_.  
- Reset value is equal to channel number (0)."]
+    #[doc = "Bits 11:14 - When this channel completes, it will trigger the channel indicated by CHAIN_TO. Disable by setting CHAIN_TO = _(this channel)_.   
+ Reset value is 0, which means for channels 1 and above the default will be to chain to channel 0 - set this field to avoid this behaviour."]
     #[inline(always)]
     pub fn chain_to(&self) -> CHAIN_TO_R {
         CHAIN_TO_R::new(((self.bits >> 11) & 0x0f) as u8)
@@ -924,8 +924,8 @@ impl W {
     pub fn treq_sel(&mut self) -> TREQ_SEL_W {
         TREQ_SEL_W { w: self }
     }
-    #[doc = "Bits 11:14 - When this channel completes, it will trigger the channel indicated by CHAIN_TO. Disable by setting CHAIN_TO = _(this channel)_.  
- Reset value is equal to channel number (0)."]
+    #[doc = "Bits 11:14 - When this channel completes, it will trigger the channel indicated by CHAIN_TO. Disable by setting CHAIN_TO = _(this channel)_.   
+ Reset value is 0, which means for channels 1 and above the default will be to chain to channel 0 - set this field to avoid this behaviour."]
     #[inline(always)]
     pub fn chain_to(&mut self) -> CHAIN_TO_W {
         CHAIN_TO_W { w: self }
