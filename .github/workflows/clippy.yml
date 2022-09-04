@@ -17,4 +17,4 @@ jobs:
       - uses: actions-rs/cargo@v1
         with:
           command: clippy
-          args: -- -Dwarnings
+          args: -- -A clippy::derive_partial_eq_without_eq -Dwarnings
