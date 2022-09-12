@@ -5,7 +5,7 @@ set -ex
 cargo install --version 0.21.0 svd2rust
 cargo install --version 0.8.0  form
 rustup component add rustfmt
-pip3 install --upgrade --user "svdtools>=0.1.21"
+pip3 install --upgrade --user "svdtools==0.1.23"
 
 rm -rf src
 mkdir src
