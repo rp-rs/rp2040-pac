@@ -710,3 +710,27 @@ USBCTRL_DPRAM:
     "EP*_IN_CONTROL,EP*_OUT_CONTROL":
         _start_from_zero: true
         name: "EP_CONTROL%s"
+
+_add:
+  SW_IRQ:
+    description: Virtual Peripheral to access unused NVIC software interrupts
+    baseAddress: 0
+    interrupts:
+      sw0_irq:
+        description: "Software IRQ 0"
+        value: 26
+      sw1_irq:
+        description: "Software IRQ 1"
+        value: 27
+      sw2_irq:
+        description: "Software IRQ 2"
+        value: 28
+      sw3_irq:
+        description: "Software IRQ 3"
+        value: 29
+      sw4_irq:
+        description: "Software IRQ 4"
+        value: 30
+      sw5_irq:
+        description: "Software IRQ 5"
+        value: 31

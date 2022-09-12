@@ -21408,5 +21408,12 @@
           </register>
       </registers>
       </peripheral>
-  </peripherals>
+  <peripheral><name>SW_IRQ</name><description>Virtual Peripheral to access unused NVIC software interrupts</description><baseAddress>0</baseAddress><interrupt><name>sw0_irq</name><description>Software IRQ 0</description><value>26</value></interrupt>
+    <interrupt><name>sw1_irq</name><description>Software IRQ 1</description><value>27</value></interrupt>
+    <interrupt><name>sw2_irq</name><description>Software IRQ 2</description><value>28</value></interrupt>
+    <interrupt><name>sw3_irq</name><description>Software IRQ 3</description><value>29</value></interrupt>
+    <interrupt><name>sw4_irq</name><description>Software IRQ 4</description><value>30</value></interrupt>
+    <interrupt><name>sw5_irq</name><description>Software IRQ 5</description><value>31</value></interrupt>
+    </peripheral>
+    </peripherals>
 </device>

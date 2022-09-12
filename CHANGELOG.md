@@ -9,6 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Added all possible variants for DREQ enum in CH*_CTRL*
 - Update rustdoc to clarify DMA CHAIN_TO behaviour
+- Add 6 unused interrupts as sw[0..5]_irq under new SW_IRQ peripheral
 
 ## [0.3.0] [Crates.io](https://crates.io/crates/rp2040-pac/0.3.0) [Github](https://github.com/rp-rs/rp2040-pac/releases/tag/v0.3.0)
 
