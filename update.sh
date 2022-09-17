@@ -1,17 +1,24 @@
 #!/usr/bin/env bash
 
+SVDTOOLS="${SVDTOOLS:-svd}"
+
 set -ex
+
+# Path to `svd`/`svdtools`
 
 cargo install --version 0.25.1 svd2rust
 cargo install --version 0.10.0  form
 rustup component add rustfmt
-#pip3 install --upgrade --user "svdtools==0.1.25"
-cargo install --version 0.2.6  svdtools
+if [ "$SVDTOOLS" == "svdtools" ]; then
+    cargo install --version 0.2.6 svdtools
+else
+    pip3 install --upgrade --user "svdtools==0.1.25"
+fi
 
 rm -rf src
 mkdir src
 
-svdtools patch svd/rp2040.yaml
+$SVDTOOLS patch svd/rp2040.yaml
 
 svd2rust -i svd/rp2040.svd.patched
 
