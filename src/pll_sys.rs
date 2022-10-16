@@ -5,7 +5,7 @@ pub struct RegisterBlock {
  GENERAL CONSTRAINTS:  
  Reference clock frequency min=5MHz, max=800MHz  
  Feedback divider min=16, max=320  
- VCO frequency min=400MHz, max=1600MHz"]
+ VCO frequency min=750MHz, max=1600MHz"]
     pub cs: crate::Reg<cs::CS_SPEC>,
     #[doc = "0x04 - Controls the PLL power modes."]
     pub pwr: crate::Reg<pwr::PWR_SPEC>,
@@ -23,7 +23,7 @@ pub type CS = crate::Reg<cs::CS_SPEC>;
  GENERAL CONSTRAINTS:  
  Reference clock frequency min=5MHz, max=800MHz  
  Feedback divider min=16, max=320  
- VCO frequency min=400MHz, max=1600MHz"]
+ VCO frequency min=750MHz, max=1600MHz"]
 pub mod cs;
 #[doc = "PWR register accessor: an alias for `Reg<PWR_SPEC>`"]
 pub type PWR = crate::Reg<pwr::PWR_SPEC>;

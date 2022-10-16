@@ -45,7 +45,7 @@ impl W {
 #[doc = "Divider unsigned divisor  
  Write to the DIVISOR operand of the divider, i.e. the q in `p / q`.  
  Any operand write starts a new calculation. The results appear in QUOTIENT, REMAINDER.  
- UDIVIDEND/SDIVIDEND are aliases of the same internal register. The U alias starts an  
+ UDIVISOR/SDIVISOR are aliases of the same internal register. The U alias starts an  
  unsigned calculation, and the S alias starts a signed calculation.  
 
 This register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
