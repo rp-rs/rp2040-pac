@@ -160,7 +160,7 @@ impl W {
  GENERAL CONSTRAINTS:  
  Reference clock frequency min=5MHz, max=800MHz  
  Feedback divider min=16, max=320  
- VCO frequency min=400MHz, max=1600MHz  
+ VCO frequency min=750MHz, max=1600MHz  
 
 This register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
 

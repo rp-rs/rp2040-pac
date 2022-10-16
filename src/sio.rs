@@ -64,7 +64,7 @@ pub struct RegisterBlock {
     #[doc = "0x64 - Divider unsigned divisor  
  Write to the DIVISOR operand of the divider, i.e. the q in `p / q`.  
  Any operand write starts a new calculation. The results appear in QUOTIENT, REMAINDER.  
- UDIVIDEND/SDIVIDEND are aliases of the same internal register. The U alias starts an  
+ UDIVISOR/SDIVISOR are aliases of the same internal register. The U alias starts an  
  unsigned calculation, and the S alias starts a signed calculation."]
     pub div_udivisor: crate::Reg<div_udivisor::DIV_UDIVISOR_SPEC>,
     #[doc = "0x68 - Divider signed dividend  
@@ -281,7 +281,7 @@ pub type DIV_UDIVISOR = crate::Reg<div_udivisor::DIV_UDIVISOR_SPEC>;
 #[doc = "Divider unsigned divisor  
  Write to the DIVISOR operand of the divider, i.e. the q in `p / q`.  
  Any operand write starts a new calculation. The results appear in QUOTIENT, REMAINDER.  
- UDIVIDEND/SDIVIDEND are aliases of the same internal register. The U alias starts an  
+ UDIVISOR/SDIVISOR are aliases of the same internal register. The U alias starts an  
  unsigned calculation, and the S alias starts a signed calculation."]
 pub mod div_udivisor;
 #[doc = "DIV_SDIVIDEND register accessor: an alias for `Reg<DIV_SDIVIDEND_SPEC>`"]
