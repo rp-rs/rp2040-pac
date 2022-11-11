@@ -7,6 +7,10 @@ homepage = "https://github.com/rp-rs/rp2040-pac"
 description = "A Peripheral Access Crate for the Raspberry Pi RP2040 SoC"
 license = "BSD-3-Clause"
 
+[package.metadata.docs.rs]
+features = ["rt"]
+targets = ["thumbv6m-none-eabi"]
+
 [dependencies]
 cortex-m = "0.7.3"
 vcell = "0.1.0"
