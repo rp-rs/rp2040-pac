@@ -1677,7 +1677,7 @@ impl Peripherals {
     #[doc = r"Returns all the peripherals *once*"]
     #[inline]
     pub fn take() -> Option<Self> {
-        cortex_m::interrupt::free(|_| {
+        critical_section::with(|_| {
             if unsafe { DEVICE_PERIPHERALS } {
                 None
             } else {
