@@ -1,0 +1,10 @@
+on: [push, pull_request]
+name: Run update.sh and check for changed files
+jobs:
+  check:
+    name: cargo-check
+    runs-on: ubuntu-20.04
+    steps:
+      - uses: actions/checkout@v3
+      - run: ./update.sh
+      - run: git diff --exit-code
