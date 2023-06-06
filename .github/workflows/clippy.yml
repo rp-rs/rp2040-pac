@@ -6,19 +6,9 @@ jobs:
     env:
       RUSTFLAGS: "-D warnings"
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions-rs/toolchain@v1
+      - uses: actions/checkout@v3
+      - uses: dtolnay/rust-toolchain@stable
         with:
-          toolchain: stable
           target: thumbv6m-none-eabi
-          override: true
-          profile: minimal
           components: clippy
-      - uses: actions-rs/cargo@v1
-        with:
-          command: clippy
-          args: >-
-            --
-            -A clippy::derive_partial_eq_without_eq
-            -A clippy::explicit_auto_deref
-            -D warnings
+      - run: cargo clippy -- -A clippy::derive_partial_eq_without_eq -A clippy::explicit_auto_deref -D warnings
