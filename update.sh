@@ -6,7 +6,7 @@ set -ex
 
 # Path to `svd`/`svdtools`
 
-cargo install --version 0.25.1 svd2rust
+cargo install --version 0.27.0 svd2rust
 cargo install --version 0.10.0  form
 rustup component add rustfmt
 if [ "$SVDTOOLS" == "svdtools" ]; then
