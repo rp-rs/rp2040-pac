@@ -73,10 +73,10 @@ DMA:
         PERMANENT: [63, "Permanent request, for unpaced transfers."]
 
   _delete:
-    "CH*_AL1_CTRL": {}
-    "CH*_AL2_CTRL": {}
-    "CH*_AL3_CTRL": {}
-  _derive:
+    - "CH*_AL1_CTRL"
+    - "CH*_AL2_CTRL"
+    - "CH*_AL3_CTRL"
+  _copy:
     "CH0_AL1_CTRL":
       _from: "CH0_CTRL_TRIG"
       addressOffset: 0x10
@@ -656,9 +656,9 @@ USBCTRL_REGS:
 ROSC:
   _delete:
     # RP2040-E7: ROSC and XOSC COUNT registers are unreliable
-    "COUNT":
+    - COUNT
     # RP2040-E10: BADWRITE field in ROSC STATUS register is unreliable
-    "STATUS":
+    - STATUS
 
   # RP2040-E10: BADWRITE field in ROSC STATUS register is unreliable
   # We delete and add again to fix this
@@ -687,7 +687,7 @@ ROSC:
 XOSC:
   _delete:
     # RP2040-E7: ROSC and XOSC COUNT registers are unreliable
-    "COUNT":
+    - COUNT
 
 SIO:
   _array:

@@ -19,5 +19,9 @@ vcell = "0.1.0"
 optional = true
 version = ">=0.6.15,<0.8"
 
+[dependencies.critical-section]
+optional = true
+version = "1.0.0"
+
 [features]
 rt = ["cortex-m-rt/device"]
