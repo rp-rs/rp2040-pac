@@ -11,4 +11,9 @@ jobs:
         with:
           target: thumbv6m-none-eabi
           components: clippy
-      - run: cargo clippy -- -A clippy::derive_partial_eq_without_eq -A clippy::explicit_auto_deref -D warnings
+      - run: >-
+          cargo clippy
+          --
+          -A clippy::explicit_auto_deref
+          -A clippy::unnecessary_cast
+          -D warnings
