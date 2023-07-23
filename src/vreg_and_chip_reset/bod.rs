@@ -34,6 +34,12 @@ impl From<crate::W<BOD_SPEC>> for W {
         W(writer)
     }
 }
+#[doc = "Field `EN` reader - enable  
+ 0=not enabled, 1=enabled"]
+pub type EN_R = crate::BitReader<bool>;
+#[doc = "Field `EN` writer - enable  
+ 0=not enabled, 1=enabled"]
+pub type EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, BOD_SPEC, bool, O>;
 #[doc = "Field `VSEL` reader - threshold select  
  0000 - 0.473V  
  0001 - 0.516V  
@@ -51,20 +57,7 @@ impl From<crate::W<BOD_SPEC>> for W {
  1101 - 1.032V  
  1110 - 1.075V  
  1111 - 1.118V"]
-pub struct VSEL_R(crate::FieldReader<u8, u8>);
-impl VSEL_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        VSEL_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for VSEL_R {
-    type Target = crate::FieldReader<u8, u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type VSEL_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `VSEL` writer - threshold select  
  0000 - 0.473V  
  0001 - 0.516V  
@@ -82,57 +75,14 @@ impl core::ops::Deref for VSEL_R {
  1101 - 1.032V  
  1110 - 1.075V  
  1111 - 1.118V"]
-pub struct VSEL_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> VSEL_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x0f << 4)) | ((value as u32 & 0x0f) << 4);
-        self.w
-    }
-}
-#[doc = "Field `EN` reader - enable  
- 0=not enabled, 1=enabled"]
-pub struct EN_R(crate::FieldReader<bool, bool>);
-impl EN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        EN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for EN_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-#[doc = "Field `EN` writer - enable  
- 0=not enabled, 1=enabled"]
-pub struct EN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> EN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
-        self.w
-    }
-}
+pub type VSEL_W<'a, const O: u8> = crate::FieldWriter<'a, u32, BOD_SPEC, u8, u8, 4, O>;
 impl R {
+    #[doc = "Bit 0 - enable  
+ 0=not enabled, 1=enabled"]
+    #[inline(always)]
+    pub fn en(&self) -> EN_R {
+        EN_R::new((self.bits & 1) != 0)
+    }
     #[doc = "Bits 4:7 - threshold select  
  0000 - 0.473V  
  0001 - 0.516V  
@@ -154,14 +104,15 @@ impl R {
     pub fn vsel(&self) -> VSEL_R {
         VSEL_R::new(((self.bits >> 4) & 0x0f) as u8)
     }
+}
+impl W {
     #[doc = "Bit 0 - enable  
  0=not enabled, 1=enabled"]
     #[inline(always)]
-    pub fn en(&self) -> EN_R {
-        EN_R::new((self.bits & 0x01) != 0)
+    #[must_use]
+    pub fn en(&mut self) -> EN_W<0> {
+        EN_W::new(self)
     }
-}
-impl W {
     #[doc = "Bits 4:7 - threshold select  
  0000 - 0.473V  
  0001 - 0.516V  
@@ -180,14 +131,9 @@ impl W {
  1110 - 1.075V  
  1111 - 1.118V"]
     #[inline(always)]
-    pub fn vsel(&mut self) -> VSEL_W {
-        VSEL_W { w: self }
-    }
-    #[doc = "Bit 0 - enable  
- 0=not enabled, 1=enabled"]
-    #[inline(always)]
-    pub fn en(&mut self) -> EN_W {
-        EN_W { w: self }
+    #[must_use]
+    pub fn vsel(&mut self) -> VSEL_W<4> {
+        VSEL_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
@@ -212,11 +158,10 @@ impl crate::Readable for BOD_SPEC {
 #[doc = "`write(|w| ..)` method takes [bod::W](W) writer structure"]
 impl crate::Writable for BOD_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets BOD to value 0x91"]
 impl crate::Resettable for BOD_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x91
-    }
+    const RESET_VALUE: Self::Ux = 0x91;
 }

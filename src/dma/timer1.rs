@@ -34,82 +34,38 @@ impl From<crate::W<TIMER1_SPEC>> for W {
         W(writer)
     }
 }
-#[doc = "Field `X` reader - Pacing Timer Dividend. Specifies the X value for the (X/Y) fractional timer."]
-pub struct X_R(crate::FieldReader<u16, u16>);
-impl X_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u16) -> Self {
-        X_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for X_R {
-    type Target = crate::FieldReader<u16, u16>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-#[doc = "Field `X` writer - Pacing Timer Dividend. Specifies the X value for the (X/Y) fractional timer."]
-pub struct X_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> X_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u16) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0xffff << 16)) | ((value as u32 & 0xffff) << 16);
-        self.w
-    }
-}
 #[doc = "Field `Y` reader - Pacing Timer Divisor. Specifies the Y value for the (X/Y) fractional timer."]
-pub struct Y_R(crate::FieldReader<u16, u16>);
-impl Y_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u16) -> Self {
-        Y_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for Y_R {
-    type Target = crate::FieldReader<u16, u16>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type Y_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `Y` writer - Pacing Timer Divisor. Specifies the Y value for the (X/Y) fractional timer."]
-pub struct Y_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> Y_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u16) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0xffff) | (value as u32 & 0xffff);
-        self.w
-    }
-}
+pub type Y_W<'a, const O: u8> = crate::FieldWriter<'a, u32, TIMER1_SPEC, u16, u16, 16, O>;
+#[doc = "Field `X` reader - Pacing Timer Dividend. Specifies the X value for the (X/Y) fractional timer."]
+pub type X_R = crate::FieldReader<u16, u16>;
+#[doc = "Field `X` writer - Pacing Timer Dividend. Specifies the X value for the (X/Y) fractional timer."]
+pub type X_W<'a, const O: u8> = crate::FieldWriter<'a, u32, TIMER1_SPEC, u16, u16, 16, O>;
 impl R {
-    #[doc = "Bits 16:31 - Pacing Timer Dividend. Specifies the X value for the (X/Y) fractional timer."]
-    #[inline(always)]
-    pub fn x(&self) -> X_R {
-        X_R::new(((self.bits >> 16) & 0xffff) as u16)
-    }
     #[doc = "Bits 0:15 - Pacing Timer Divisor. Specifies the Y value for the (X/Y) fractional timer."]
     #[inline(always)]
     pub fn y(&self) -> Y_R {
         Y_R::new((self.bits & 0xffff) as u16)
     }
-}
-impl W {
     #[doc = "Bits 16:31 - Pacing Timer Dividend. Specifies the X value for the (X/Y) fractional timer."]
     #[inline(always)]
-    pub fn x(&mut self) -> X_W {
-        X_W { w: self }
+    pub fn x(&self) -> X_R {
+        X_R::new(((self.bits >> 16) & 0xffff) as u16)
     }
+}
+impl W {
     #[doc = "Bits 0:15 - Pacing Timer Divisor. Specifies the Y value for the (X/Y) fractional timer."]
     #[inline(always)]
-    pub fn y(&mut self) -> Y_W {
-        Y_W { w: self }
+    #[must_use]
+    pub fn y(&mut self) -> Y_W<0> {
+        Y_W::new(self)
+    }
+    #[doc = "Bits 16:31 - Pacing Timer Dividend. Specifies the X value for the (X/Y) fractional timer."]
+    #[inline(always)]
+    #[must_use]
+    pub fn x(&mut self) -> X_W<16> {
+        X_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
@@ -135,11 +91,10 @@ impl crate::Readable for TIMER1_SPEC {
 #[doc = "`write(|w| ..)` method takes [timer1::W](W) writer structure"]
 impl crate::Writable for TIMER1_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets TIMER1 to value 0"]
 impl crate::Resettable for TIMER1_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

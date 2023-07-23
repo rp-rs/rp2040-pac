@@ -28,8 +28,5 @@ impl crate::Readable for GITREF_RP2040_SPEC {
 }
 #[doc = "`reset()` method sets GITREF_RP2040 to value 0"]
 impl crate::Resettable for GITREF_RP2040_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

@@ -20,20 +20,7 @@ impl From<crate::R<INTR_SPEC>> for R {
  This can be used vector different channel interrupts to different ISRs: this might be done to allow NVIC IRQ preemption for more time-critical channels, or to spread IRQ load across different cores.  
 
  It is also valid to ignore this behaviour and just use INTE0/INTS0/IRQ 0."]
-pub struct INTR_R(crate::FieldReader<u16, u16>);
-impl INTR_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u16) -> Self {
-        INTR_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for INTR_R {
-    type Target = crate::FieldReader<u16, u16>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type INTR_R = crate::FieldReader<u16, u16>;
 impl R {
     #[doc = "Bits 0:15 - Raw interrupt status for DMA Channels 0..15. Bit n corresponds to channel n. Ignores any masking or forcing. Channel interrupts can be cleared by writing a bit mask to INTR, INTS0 or INTS1.  
 
@@ -62,8 +49,5 @@ impl crate::Readable for INTR_SPEC {
 }
 #[doc = "`reset()` method sets INTR to value 0"]
 impl crate::Resettable for INTR_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

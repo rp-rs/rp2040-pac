@@ -14,20 +14,7 @@ impl From<crate::R<IDR_SPEC>> for R {
     }
 }
 #[doc = "Field `IDCODE` reader - Peripheral dentification code"]
-pub struct IDCODE_R(crate::FieldReader<u32, u32>);
-impl IDCODE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u32) -> Self {
-        IDCODE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for IDCODE_R {
-    type Target = crate::FieldReader<u32, u32>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type IDCODE_R = crate::FieldReader<u32, u32>;
 impl R {
     #[doc = "Bits 0:31 - Peripheral dentification code"]
     #[inline(always)]
@@ -50,8 +37,5 @@ impl crate::Readable for IDR_SPEC {
 }
 #[doc = "`reset()` method sets IDR to value 0x5153_5049"]
 impl crate::Resettable for IDR_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x5153_5049
-    }
+    const RESET_VALUE: Self::Ux = 0x5153_5049;
 }

@@ -35,44 +35,23 @@ impl From<crate::W<FC0_MAX_KHZ_SPEC>> for W {
     }
 }
 #[doc = "Field `FC0_MAX_KHZ` reader - "]
-pub struct FC0_MAX_KHZ_R(crate::FieldReader<u32, u32>);
-impl FC0_MAX_KHZ_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u32) -> Self {
-        FC0_MAX_KHZ_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for FC0_MAX_KHZ_R {
-    type Target = crate::FieldReader<u32, u32>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type FC0_MAX_KHZ_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `FC0_MAX_KHZ` writer - "]
-pub struct FC0_MAX_KHZ_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> FC0_MAX_KHZ_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u32) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01ff_ffff) | (value as u32 & 0x01ff_ffff);
-        self.w
-    }
-}
+pub type FC0_MAX_KHZ_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, FC0_MAX_KHZ_SPEC, u32, u32, 25, O>;
 impl R {
     #[doc = "Bits 0:24"]
     #[inline(always)]
     pub fn fc0_max_khz(&self) -> FC0_MAX_KHZ_R {
-        FC0_MAX_KHZ_R::new((self.bits & 0x01ff_ffff) as u32)
+        FC0_MAX_KHZ_R::new(self.bits & 0x01ff_ffff)
     }
 }
 impl W {
     #[doc = "Bits 0:24"]
     #[inline(always)]
-    pub fn fc0_max_khz(&mut self) -> FC0_MAX_KHZ_W {
-        FC0_MAX_KHZ_W { w: self }
+    #[must_use]
+    pub fn fc0_max_khz(&mut self) -> FC0_MAX_KHZ_W<0> {
+        FC0_MAX_KHZ_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
@@ -97,11 +76,10 @@ impl crate::Readable for FC0_MAX_KHZ_SPEC {
 #[doc = "`write(|w| ..)` method takes [fc0_max_khz::W](W) writer structure"]
 impl crate::Writable for FC0_MAX_KHZ_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets FC0_MAX_KHZ to value 0x01ff_ffff"]
 impl crate::Resettable for FC0_MAX_KHZ_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x01ff_ffff
-    }
+    const RESET_VALUE: Self::Ux = 0x01ff_ffff;
 }

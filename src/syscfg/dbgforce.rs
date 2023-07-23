@@ -34,330 +34,112 @@ impl From<crate::W<DBGFORCE_SPEC>> for W {
         W(writer)
     }
 }
-#[doc = "Field `PROC1_ATTACH` reader - Attach processor 1 debug port to syscfg controls, and disconnect it from external SWD pads."]
-pub struct PROC1_ATTACH_R(crate::FieldReader<bool, bool>);
-impl PROC1_ATTACH_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        PROC1_ATTACH_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PROC1_ATTACH_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-#[doc = "Field `PROC1_ATTACH` writer - Attach processor 1 debug port to syscfg controls, and disconnect it from external SWD pads."]
-pub struct PROC1_ATTACH_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PROC1_ATTACH_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 7)) | ((value as u32 & 0x01) << 7);
-        self.w
-    }
-}
-#[doc = "Field `PROC1_SWCLK` reader - Directly drive processor 1 SWCLK, if PROC1_ATTACH is set"]
-pub struct PROC1_SWCLK_R(crate::FieldReader<bool, bool>);
-impl PROC1_SWCLK_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        PROC1_SWCLK_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PROC1_SWCLK_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-#[doc = "Field `PROC1_SWCLK` writer - Directly drive processor 1 SWCLK, if PROC1_ATTACH is set"]
-pub struct PROC1_SWCLK_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PROC1_SWCLK_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 6)) | ((value as u32 & 0x01) << 6);
-        self.w
-    }
-}
-#[doc = "Field `PROC1_SWDI` reader - Directly drive processor 1 SWDIO input, if PROC1_ATTACH is set"]
-pub struct PROC1_SWDI_R(crate::FieldReader<bool, bool>);
-impl PROC1_SWDI_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        PROC1_SWDI_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PROC1_SWDI_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-#[doc = "Field `PROC1_SWDI` writer - Directly drive processor 1 SWDIO input, if PROC1_ATTACH is set"]
-pub struct PROC1_SWDI_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PROC1_SWDI_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 5)) | ((value as u32 & 0x01) << 5);
-        self.w
-    }
-}
-#[doc = "Field `PROC1_SWDO` reader - Observe the value of processor 1 SWDIO output."]
-pub struct PROC1_SWDO_R(crate::FieldReader<bool, bool>);
-impl PROC1_SWDO_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        PROC1_SWDO_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PROC1_SWDO_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-#[doc = "Field `PROC0_ATTACH` reader - Attach processor 0 debug port to syscfg controls, and disconnect it from external SWD pads."]
-pub struct PROC0_ATTACH_R(crate::FieldReader<bool, bool>);
-impl PROC0_ATTACH_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        PROC0_ATTACH_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PROC0_ATTACH_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-#[doc = "Field `PROC0_ATTACH` writer - Attach processor 0 debug port to syscfg controls, and disconnect it from external SWD pads."]
-pub struct PROC0_ATTACH_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PROC0_ATTACH_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 3)) | ((value as u32 & 0x01) << 3);
-        self.w
-    }
-}
-#[doc = "Field `PROC0_SWCLK` reader - Directly drive processor 0 SWCLK, if PROC0_ATTACH is set"]
-pub struct PROC0_SWCLK_R(crate::FieldReader<bool, bool>);
-impl PROC0_SWCLK_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        PROC0_SWCLK_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PROC0_SWCLK_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-#[doc = "Field `PROC0_SWCLK` writer - Directly drive processor 0 SWCLK, if PROC0_ATTACH is set"]
-pub struct PROC0_SWCLK_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PROC0_SWCLK_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 2)) | ((value as u32 & 0x01) << 2);
-        self.w
-    }
-}
-#[doc = "Field `PROC0_SWDI` reader - Directly drive processor 0 SWDIO input, if PROC0_ATTACH is set"]
-pub struct PROC0_SWDI_R(crate::FieldReader<bool, bool>);
-impl PROC0_SWDI_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        PROC0_SWDI_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PROC0_SWDI_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-#[doc = "Field `PROC0_SWDI` writer - Directly drive processor 0 SWDIO input, if PROC0_ATTACH is set"]
-pub struct PROC0_SWDI_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PROC0_SWDI_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u32 & 0x01) << 1);
-        self.w
-    }
-}
 #[doc = "Field `PROC0_SWDO` reader - Observe the value of processor 0 SWDIO output."]
-pub struct PROC0_SWDO_R(crate::FieldReader<bool, bool>);
-impl PROC0_SWDO_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        PROC0_SWDO_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PROC0_SWDO_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PROC0_SWDO_R = crate::BitReader<bool>;
+#[doc = "Field `PROC0_SWDI` reader - Directly drive processor 0 SWDIO input, if PROC0_ATTACH is set"]
+pub type PROC0_SWDI_R = crate::BitReader<bool>;
+#[doc = "Field `PROC0_SWDI` writer - Directly drive processor 0 SWDIO input, if PROC0_ATTACH is set"]
+pub type PROC0_SWDI_W<'a, const O: u8> = crate::BitWriter<'a, u32, DBGFORCE_SPEC, bool, O>;
+#[doc = "Field `PROC0_SWCLK` reader - Directly drive processor 0 SWCLK, if PROC0_ATTACH is set"]
+pub type PROC0_SWCLK_R = crate::BitReader<bool>;
+#[doc = "Field `PROC0_SWCLK` writer - Directly drive processor 0 SWCLK, if PROC0_ATTACH is set"]
+pub type PROC0_SWCLK_W<'a, const O: u8> = crate::BitWriter<'a, u32, DBGFORCE_SPEC, bool, O>;
+#[doc = "Field `PROC0_ATTACH` reader - Attach processor 0 debug port to syscfg controls, and disconnect it from external SWD pads."]
+pub type PROC0_ATTACH_R = crate::BitReader<bool>;
+#[doc = "Field `PROC0_ATTACH` writer - Attach processor 0 debug port to syscfg controls, and disconnect it from external SWD pads."]
+pub type PROC0_ATTACH_W<'a, const O: u8> = crate::BitWriter<'a, u32, DBGFORCE_SPEC, bool, O>;
+#[doc = "Field `PROC1_SWDO` reader - Observe the value of processor 1 SWDIO output."]
+pub type PROC1_SWDO_R = crate::BitReader<bool>;
+#[doc = "Field `PROC1_SWDI` reader - Directly drive processor 1 SWDIO input, if PROC1_ATTACH is set"]
+pub type PROC1_SWDI_R = crate::BitReader<bool>;
+#[doc = "Field `PROC1_SWDI` writer - Directly drive processor 1 SWDIO input, if PROC1_ATTACH is set"]
+pub type PROC1_SWDI_W<'a, const O: u8> = crate::BitWriter<'a, u32, DBGFORCE_SPEC, bool, O>;
+#[doc = "Field `PROC1_SWCLK` reader - Directly drive processor 1 SWCLK, if PROC1_ATTACH is set"]
+pub type PROC1_SWCLK_R = crate::BitReader<bool>;
+#[doc = "Field `PROC1_SWCLK` writer - Directly drive processor 1 SWCLK, if PROC1_ATTACH is set"]
+pub type PROC1_SWCLK_W<'a, const O: u8> = crate::BitWriter<'a, u32, DBGFORCE_SPEC, bool, O>;
+#[doc = "Field `PROC1_ATTACH` reader - Attach processor 1 debug port to syscfg controls, and disconnect it from external SWD pads."]
+pub type PROC1_ATTACH_R = crate::BitReader<bool>;
+#[doc = "Field `PROC1_ATTACH` writer - Attach processor 1 debug port to syscfg controls, and disconnect it from external SWD pads."]
+pub type PROC1_ATTACH_W<'a, const O: u8> = crate::BitWriter<'a, u32, DBGFORCE_SPEC, bool, O>;
 impl R {
-    #[doc = "Bit 7 - Attach processor 1 debug port to syscfg controls, and disconnect it from external SWD pads."]
+    #[doc = "Bit 0 - Observe the value of processor 0 SWDIO output."]
     #[inline(always)]
-    pub fn proc1_attach(&self) -> PROC1_ATTACH_R {
-        PROC1_ATTACH_R::new(((self.bits >> 7) & 0x01) != 0)
-    }
-    #[doc = "Bit 6 - Directly drive processor 1 SWCLK, if PROC1_ATTACH is set"]
-    #[inline(always)]
-    pub fn proc1_swclk(&self) -> PROC1_SWCLK_R {
-        PROC1_SWCLK_R::new(((self.bits >> 6) & 0x01) != 0)
-    }
-    #[doc = "Bit 5 - Directly drive processor 1 SWDIO input, if PROC1_ATTACH is set"]
-    #[inline(always)]
-    pub fn proc1_swdi(&self) -> PROC1_SWDI_R {
-        PROC1_SWDI_R::new(((self.bits >> 5) & 0x01) != 0)
-    }
-    #[doc = "Bit 4 - Observe the value of processor 1 SWDIO output."]
-    #[inline(always)]
-    pub fn proc1_swdo(&self) -> PROC1_SWDO_R {
-        PROC1_SWDO_R::new(((self.bits >> 4) & 0x01) != 0)
-    }
-    #[doc = "Bit 3 - Attach processor 0 debug port to syscfg controls, and disconnect it from external SWD pads."]
-    #[inline(always)]
-    pub fn proc0_attach(&self) -> PROC0_ATTACH_R {
-        PROC0_ATTACH_R::new(((self.bits >> 3) & 0x01) != 0)
-    }
-    #[doc = "Bit 2 - Directly drive processor 0 SWCLK, if PROC0_ATTACH is set"]
-    #[inline(always)]
-    pub fn proc0_swclk(&self) -> PROC0_SWCLK_R {
-        PROC0_SWCLK_R::new(((self.bits >> 2) & 0x01) != 0)
+    pub fn proc0_swdo(&self) -> PROC0_SWDO_R {
+        PROC0_SWDO_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - Directly drive processor 0 SWDIO input, if PROC0_ATTACH is set"]
     #[inline(always)]
     pub fn proc0_swdi(&self) -> PROC0_SWDI_R {
-        PROC0_SWDI_R::new(((self.bits >> 1) & 0x01) != 0)
-    }
-    #[doc = "Bit 0 - Observe the value of processor 0 SWDIO output."]
-    #[inline(always)]
-    pub fn proc0_swdo(&self) -> PROC0_SWDO_R {
-        PROC0_SWDO_R::new((self.bits & 0x01) != 0)
-    }
-}
-impl W {
-    #[doc = "Bit 7 - Attach processor 1 debug port to syscfg controls, and disconnect it from external SWD pads."]
-    #[inline(always)]
-    pub fn proc1_attach(&mut self) -> PROC1_ATTACH_W {
-        PROC1_ATTACH_W { w: self }
-    }
-    #[doc = "Bit 6 - Directly drive processor 1 SWCLK, if PROC1_ATTACH is set"]
-    #[inline(always)]
-    pub fn proc1_swclk(&mut self) -> PROC1_SWCLK_W {
-        PROC1_SWCLK_W { w: self }
-    }
-    #[doc = "Bit 5 - Directly drive processor 1 SWDIO input, if PROC1_ATTACH is set"]
-    #[inline(always)]
-    pub fn proc1_swdi(&mut self) -> PROC1_SWDI_W {
-        PROC1_SWDI_W { w: self }
-    }
-    #[doc = "Bit 3 - Attach processor 0 debug port to syscfg controls, and disconnect it from external SWD pads."]
-    #[inline(always)]
-    pub fn proc0_attach(&mut self) -> PROC0_ATTACH_W {
-        PROC0_ATTACH_W { w: self }
+        PROC0_SWDI_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2 - Directly drive processor 0 SWCLK, if PROC0_ATTACH is set"]
     #[inline(always)]
-    pub fn proc0_swclk(&mut self) -> PROC0_SWCLK_W {
-        PROC0_SWCLK_W { w: self }
+    pub fn proc0_swclk(&self) -> PROC0_SWCLK_R {
+        PROC0_SWCLK_R::new(((self.bits >> 2) & 1) != 0)
     }
+    #[doc = "Bit 3 - Attach processor 0 debug port to syscfg controls, and disconnect it from external SWD pads."]
+    #[inline(always)]
+    pub fn proc0_attach(&self) -> PROC0_ATTACH_R {
+        PROC0_ATTACH_R::new(((self.bits >> 3) & 1) != 0)
+    }
+    #[doc = "Bit 4 - Observe the value of processor 1 SWDIO output."]
+    #[inline(always)]
+    pub fn proc1_swdo(&self) -> PROC1_SWDO_R {
+        PROC1_SWDO_R::new(((self.bits >> 4) & 1) != 0)
+    }
+    #[doc = "Bit 5 - Directly drive processor 1 SWDIO input, if PROC1_ATTACH is set"]
+    #[inline(always)]
+    pub fn proc1_swdi(&self) -> PROC1_SWDI_R {
+        PROC1_SWDI_R::new(((self.bits >> 5) & 1) != 0)
+    }
+    #[doc = "Bit 6 - Directly drive processor 1 SWCLK, if PROC1_ATTACH is set"]
+    #[inline(always)]
+    pub fn proc1_swclk(&self) -> PROC1_SWCLK_R {
+        PROC1_SWCLK_R::new(((self.bits >> 6) & 1) != 0)
+    }
+    #[doc = "Bit 7 - Attach processor 1 debug port to syscfg controls, and disconnect it from external SWD pads."]
+    #[inline(always)]
+    pub fn proc1_attach(&self) -> PROC1_ATTACH_R {
+        PROC1_ATTACH_R::new(((self.bits >> 7) & 1) != 0)
+    }
+}
+impl W {
     #[doc = "Bit 1 - Directly drive processor 0 SWDIO input, if PROC0_ATTACH is set"]
     #[inline(always)]
-    pub fn proc0_swdi(&mut self) -> PROC0_SWDI_W {
-        PROC0_SWDI_W { w: self }
+    #[must_use]
+    pub fn proc0_swdi(&mut self) -> PROC0_SWDI_W<1> {
+        PROC0_SWDI_W::new(self)
+    }
+    #[doc = "Bit 2 - Directly drive processor 0 SWCLK, if PROC0_ATTACH is set"]
+    #[inline(always)]
+    #[must_use]
+    pub fn proc0_swclk(&mut self) -> PROC0_SWCLK_W<2> {
+        PROC0_SWCLK_W::new(self)
+    }
+    #[doc = "Bit 3 - Attach processor 0 debug port to syscfg controls, and disconnect it from external SWD pads."]
+    #[inline(always)]
+    #[must_use]
+    pub fn proc0_attach(&mut self) -> PROC0_ATTACH_W<3> {
+        PROC0_ATTACH_W::new(self)
+    }
+    #[doc = "Bit 5 - Directly drive processor 1 SWDIO input, if PROC1_ATTACH is set"]
+    #[inline(always)]
+    #[must_use]
+    pub fn proc1_swdi(&mut self) -> PROC1_SWDI_W<5> {
+        PROC1_SWDI_W::new(self)
+    }
+    #[doc = "Bit 6 - Directly drive processor 1 SWCLK, if PROC1_ATTACH is set"]
+    #[inline(always)]
+    #[must_use]
+    pub fn proc1_swclk(&mut self) -> PROC1_SWCLK_W<6> {
+        PROC1_SWCLK_W::new(self)
+    }
+    #[doc = "Bit 7 - Attach processor 1 debug port to syscfg controls, and disconnect it from external SWD pads."]
+    #[inline(always)]
+    #[must_use]
+    pub fn proc1_attach(&mut self) -> PROC1_ATTACH_W<7> {
+        PROC1_ATTACH_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
@@ -382,11 +164,10 @@ impl crate::Readable for DBGFORCE_SPEC {
 #[doc = "`write(|w| ..)` method takes [dbgforce::W](W) writer structure"]
 impl crate::Writable for DBGFORCE_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets DBGFORCE to value 0x66"]
 impl crate::Resettable for DBGFORCE_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x66
-    }
+    const RESET_VALUE: Self::Ux = 0x66;
 }

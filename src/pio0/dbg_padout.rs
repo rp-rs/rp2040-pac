@@ -28,8 +28,5 @@ impl crate::Readable for DBG_PADOUT_SPEC {
 }
 #[doc = "`reset()` method sets DBG_PADOUT to value 0"]
 impl crate::Resettable for DBG_PADOUT_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

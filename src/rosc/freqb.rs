@@ -34,11 +34,30 @@ impl From<crate::W<FREQB_SPEC>> for W {
         W(writer)
     }
 }
+#[doc = "Field `DS4` reader - Stage 4 drive strength"]
+pub type DS4_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `DS4` writer - Stage 4 drive strength"]
+pub type DS4_W<'a, const O: u8> = crate::FieldWriter<'a, u32, FREQB_SPEC, u8, u8, 3, O>;
+#[doc = "Field `DS5` reader - Stage 5 drive strength"]
+pub type DS5_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `DS5` writer - Stage 5 drive strength"]
+pub type DS5_W<'a, const O: u8> = crate::FieldWriter<'a, u32, FREQB_SPEC, u8, u8, 3, O>;
+#[doc = "Field `DS6` reader - Stage 6 drive strength"]
+pub type DS6_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `DS6` writer - Stage 6 drive strength"]
+pub type DS6_W<'a, const O: u8> = crate::FieldWriter<'a, u32, FREQB_SPEC, u8, u8, 3, O>;
+#[doc = "Field `DS7` reader - Stage 7 drive strength"]
+pub type DS7_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `DS7` writer - Stage 7 drive strength"]
+pub type DS7_W<'a, const O: u8> = crate::FieldWriter<'a, u32, FREQB_SPEC, u8, u8, 3, O>;
+#[doc = "Field `PASSWD` reader - Set to 0x9696 to apply the settings  
+ Any other value in this field will set all drive strengths to 0"]
+pub type PASSWD_R = crate::FieldReader<u16, PASSWD_A>;
 #[doc = "Set to 0x9696 to apply the settings  
  Any other value in this field will set all drive strengths to 0  
 
 Value on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u16)]
 pub enum PASSWD_A {
     #[doc = "38550: `1001011010010110`"]
@@ -50,15 +69,8 @@ impl From<PASSWD_A> for u16 {
         variant as _
     }
 }
-#[doc = "Field `PASSWD` reader - Set to 0x9696 to apply the settings  
- Any other value in this field will set all drive strengths to 0"]
-pub struct PASSWD_R(crate::FieldReader<u16, PASSWD_A>);
 impl PASSWD_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u16) -> Self {
-        PASSWD_R(crate::FieldReader::new(bits))
-    }
-    #[doc = r"Get enumerated values variant"]
+    #[doc = "Get enumerated values variant"]
     #[inline(always)]
     pub fn variant(&self) -> Option<PASSWD_A> {
         match self.bits {
@@ -69,201 +81,78 @@ impl PASSWD_R {
     #[doc = "Checks if the value of the field is `PASS`"]
     #[inline(always)]
     pub fn is_pass(&self) -> bool {
-        **self == PASSWD_A::PASS
-    }
-}
-impl core::ops::Deref for PASSWD_R {
-    type Target = crate::FieldReader<u16, PASSWD_A>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
+        *self == PASSWD_A::PASS
     }
 }
 #[doc = "Field `PASSWD` writer - Set to 0x9696 to apply the settings  
  Any other value in this field will set all drive strengths to 0"]
-pub struct PASSWD_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PASSWD_W<'a> {
-    #[doc = r"Writes `variant` to the field"]
-    #[inline(always)]
-    pub fn variant(self, variant: PASSWD_A) -> &'a mut W {
-        unsafe { self.bits(variant.into()) }
-    }
+pub type PASSWD_W<'a, const O: u8> = crate::FieldWriter<'a, u32, FREQB_SPEC, u16, PASSWD_A, 16, O>;
+impl<'a, const O: u8> PASSWD_W<'a, O> {
     #[doc = "`1001011010010110`"]
     #[inline(always)]
     pub fn pass(self) -> &'a mut W {
         self.variant(PASSWD_A::PASS)
     }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u16) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0xffff << 16)) | ((value as u32 & 0xffff) << 16);
-        self.w
-    }
-}
-#[doc = "Field `DS7` reader - Stage 7 drive strength"]
-pub struct DS7_R(crate::FieldReader<u8, u8>);
-impl DS7_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        DS7_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DS7_R {
-    type Target = crate::FieldReader<u8, u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-#[doc = "Field `DS7` writer - Stage 7 drive strength"]
-pub struct DS7_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> DS7_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x07 << 12)) | ((value as u32 & 0x07) << 12);
-        self.w
-    }
-}
-#[doc = "Field `DS6` reader - Stage 6 drive strength"]
-pub struct DS6_R(crate::FieldReader<u8, u8>);
-impl DS6_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        DS6_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DS6_R {
-    type Target = crate::FieldReader<u8, u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-#[doc = "Field `DS6` writer - Stage 6 drive strength"]
-pub struct DS6_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> DS6_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x07 << 8)) | ((value as u32 & 0x07) << 8);
-        self.w
-    }
-}
-#[doc = "Field `DS5` reader - Stage 5 drive strength"]
-pub struct DS5_R(crate::FieldReader<u8, u8>);
-impl DS5_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        DS5_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DS5_R {
-    type Target = crate::FieldReader<u8, u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-#[doc = "Field `DS5` writer - Stage 5 drive strength"]
-pub struct DS5_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> DS5_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x07 << 4)) | ((value as u32 & 0x07) << 4);
-        self.w
-    }
-}
-#[doc = "Field `DS4` reader - Stage 4 drive strength"]
-pub struct DS4_R(crate::FieldReader<u8, u8>);
-impl DS4_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        DS4_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DS4_R {
-    type Target = crate::FieldReader<u8, u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-#[doc = "Field `DS4` writer - Stage 4 drive strength"]
-pub struct DS4_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> DS4_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x07) | (value as u32 & 0x07);
-        self.w
-    }
 }
 impl R {
+    #[doc = "Bits 0:2 - Stage 4 drive strength"]
+    #[inline(always)]
+    pub fn ds4(&self) -> DS4_R {
+        DS4_R::new((self.bits & 7) as u8)
+    }
+    #[doc = "Bits 4:6 - Stage 5 drive strength"]
+    #[inline(always)]
+    pub fn ds5(&self) -> DS5_R {
+        DS5_R::new(((self.bits >> 4) & 7) as u8)
+    }
+    #[doc = "Bits 8:10 - Stage 6 drive strength"]
+    #[inline(always)]
+    pub fn ds6(&self) -> DS6_R {
+        DS6_R::new(((self.bits >> 8) & 7) as u8)
+    }
+    #[doc = "Bits 12:14 - Stage 7 drive strength"]
+    #[inline(always)]
+    pub fn ds7(&self) -> DS7_R {
+        DS7_R::new(((self.bits >> 12) & 7) as u8)
+    }
     #[doc = "Bits 16:31 - Set to 0x9696 to apply the settings  
  Any other value in this field will set all drive strengths to 0"]
     #[inline(always)]
     pub fn passwd(&self) -> PASSWD_R {
         PASSWD_R::new(((self.bits >> 16) & 0xffff) as u16)
     }
-    #[doc = "Bits 12:14 - Stage 7 drive strength"]
+}
+impl W {
+    #[doc = "Bits 0:2 - Stage 4 drive strength"]
     #[inline(always)]
-    pub fn ds7(&self) -> DS7_R {
-        DS7_R::new(((self.bits >> 12) & 0x07) as u8)
-    }
-    #[doc = "Bits 8:10 - Stage 6 drive strength"]
-    #[inline(always)]
-    pub fn ds6(&self) -> DS6_R {
-        DS6_R::new(((self.bits >> 8) & 0x07) as u8)
+    #[must_use]
+    pub fn ds4(&mut self) -> DS4_W<0> {
+        DS4_W::new(self)
     }
     #[doc = "Bits 4:6 - Stage 5 drive strength"]
     #[inline(always)]
-    pub fn ds5(&self) -> DS5_R {
-        DS5_R::new(((self.bits >> 4) & 0x07) as u8)
+    #[must_use]
+    pub fn ds5(&mut self) -> DS5_W<4> {
+        DS5_W::new(self)
     }
-    #[doc = "Bits 0:2 - Stage 4 drive strength"]
+    #[doc = "Bits 8:10 - Stage 6 drive strength"]
     #[inline(always)]
-    pub fn ds4(&self) -> DS4_R {
-        DS4_R::new((self.bits & 0x07) as u8)
+    #[must_use]
+    pub fn ds6(&mut self) -> DS6_W<8> {
+        DS6_W::new(self)
     }
-}
-impl W {
+    #[doc = "Bits 12:14 - Stage 7 drive strength"]
+    #[inline(always)]
+    #[must_use]
+    pub fn ds7(&mut self) -> DS7_W<12> {
+        DS7_W::new(self)
+    }
     #[doc = "Bits 16:31 - Set to 0x9696 to apply the settings  
  Any other value in this field will set all drive strengths to 0"]
     #[inline(always)]
-    pub fn passwd(&mut self) -> PASSWD_W {
-        PASSWD_W { w: self }
-    }
-    #[doc = "Bits 12:14 - Stage 7 drive strength"]
-    #[inline(always)]
-    pub fn ds7(&mut self) -> DS7_W {
-        DS7_W { w: self }
-    }
-    #[doc = "Bits 8:10 - Stage 6 drive strength"]
-    #[inline(always)]
-    pub fn ds6(&mut self) -> DS6_W {
-        DS6_W { w: self }
-    }
-    #[doc = "Bits 4:6 - Stage 5 drive strength"]
-    #[inline(always)]
-    pub fn ds5(&mut self) -> DS5_W {
-        DS5_W { w: self }
-    }
-    #[doc = "Bits 0:2 - Stage 4 drive strength"]
-    #[inline(always)]
-    pub fn ds4(&mut self) -> DS4_W {
-        DS4_W { w: self }
+    #[must_use]
+    pub fn passwd(&mut self) -> PASSWD_W<16> {
+        PASSWD_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
@@ -288,11 +177,10 @@ impl crate::Readable for FREQB_SPEC {
 #[doc = "`write(|w| ..)` method takes [freqb::W](W) writer structure"]
 impl crate::Writable for FREQB_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets FREQB to value 0"]
 impl crate::Resettable for FREQB_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

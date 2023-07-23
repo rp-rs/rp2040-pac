@@ -41,20 +41,7 @@ impl From<crate::W<NVIC_ICPR_SPEC>> for W {
  Read:  
  0 = Interrupt is not pending.  
  1 = Interrupt is pending."]
-pub struct CLRPEND_R(crate::FieldReader<u32, u32>);
-impl CLRPEND_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u32) -> Self {
-        CLRPEND_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CLRPEND_R {
-    type Target = crate::FieldReader<u32, u32>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CLRPEND_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `CLRPEND` writer - Interrupt clear-pending bits.  
  Write:  
  0 = No effect.  
@@ -62,17 +49,7 @@ impl core::ops::Deref for CLRPEND_R {
  Read:  
  0 = Interrupt is not pending.  
  1 = Interrupt is pending."]
-pub struct CLRPEND_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CLRPEND_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u32) -> &'a mut W {
-        self.w.bits = value;
-        self.w
-    }
-}
+pub type CLRPEND_W<'a, const O: u8> = crate::FieldWriter<'a, u32, NVIC_ICPR_SPEC, u32, u32, 32, O>;
 impl R {
     #[doc = "Bits 0:31 - Interrupt clear-pending bits.  
  Write:  
@@ -95,8 +72,9 @@ impl W {
  0 = Interrupt is not pending.  
  1 = Interrupt is pending."]
     #[inline(always)]
-    pub fn clrpend(&mut self) -> CLRPEND_W {
-        CLRPEND_W { w: self }
+    #[must_use]
+    pub fn clrpend(&mut self) -> CLRPEND_W<0> {
+        CLRPEND_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
@@ -121,11 +99,10 @@ impl crate::Readable for NVIC_ICPR_SPEC {
 #[doc = "`write(|w| ..)` method takes [nvic_icpr::W](W) writer structure"]
 impl crate::Writable for NVIC_ICPR_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets NVIC_ICPR to value 0"]
 impl crate::Resettable for NVIC_ICPR_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

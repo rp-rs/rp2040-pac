@@ -13,86 +13,34 @@ impl From<crate::R<SSPMIS_SPEC>> for R {
         R(reader)
     }
 }
-#[doc = "Field `TXMIS` reader - Gives the transmit FIFO masked interrupt state, after masking, of the SSPTXINTR interrupt"]
-pub struct TXMIS_R(crate::FieldReader<bool, bool>);
-impl TXMIS_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        TXMIS_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TXMIS_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-#[doc = "Field `RXMIS` reader - Gives the receive FIFO masked interrupt state, after masking, of the SSPRXINTR interrupt"]
-pub struct RXMIS_R(crate::FieldReader<bool, bool>);
-impl RXMIS_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        RXMIS_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RXMIS_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-#[doc = "Field `RTMIS` reader - Gives the receive timeout masked interrupt state, after masking, of the SSPRTINTR interrupt"]
-pub struct RTMIS_R(crate::FieldReader<bool, bool>);
-impl RTMIS_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        RTMIS_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RTMIS_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
 #[doc = "Field `RORMIS` reader - Gives the receive over run masked interrupt status, after masking, of the SSPRORINTR interrupt"]
-pub struct RORMIS_R(crate::FieldReader<bool, bool>);
-impl RORMIS_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        RORMIS_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RORMIS_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RORMIS_R = crate::BitReader<bool>;
+#[doc = "Field `RTMIS` reader - Gives the receive timeout masked interrupt state, after masking, of the SSPRTINTR interrupt"]
+pub type RTMIS_R = crate::BitReader<bool>;
+#[doc = "Field `RXMIS` reader - Gives the receive FIFO masked interrupt state, after masking, of the SSPRXINTR interrupt"]
+pub type RXMIS_R = crate::BitReader<bool>;
+#[doc = "Field `TXMIS` reader - Gives the transmit FIFO masked interrupt state, after masking, of the SSPTXINTR interrupt"]
+pub type TXMIS_R = crate::BitReader<bool>;
 impl R {
-    #[doc = "Bit 3 - Gives the transmit FIFO masked interrupt state, after masking, of the SSPTXINTR interrupt"]
+    #[doc = "Bit 0 - Gives the receive over run masked interrupt status, after masking, of the SSPRORINTR interrupt"]
     #[inline(always)]
-    pub fn txmis(&self) -> TXMIS_R {
-        TXMIS_R::new(((self.bits >> 3) & 0x01) != 0)
-    }
-    #[doc = "Bit 2 - Gives the receive FIFO masked interrupt state, after masking, of the SSPRXINTR interrupt"]
-    #[inline(always)]
-    pub fn rxmis(&self) -> RXMIS_R {
-        RXMIS_R::new(((self.bits >> 2) & 0x01) != 0)
+    pub fn rormis(&self) -> RORMIS_R {
+        RORMIS_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - Gives the receive timeout masked interrupt state, after masking, of the SSPRTINTR interrupt"]
     #[inline(always)]
     pub fn rtmis(&self) -> RTMIS_R {
-        RTMIS_R::new(((self.bits >> 1) & 0x01) != 0)
+        RTMIS_R::new(((self.bits >> 1) & 1) != 0)
     }
-    #[doc = "Bit 0 - Gives the receive over run masked interrupt status, after masking, of the SSPRORINTR interrupt"]
+    #[doc = "Bit 2 - Gives the receive FIFO masked interrupt state, after masking, of the SSPRXINTR interrupt"]
     #[inline(always)]
-    pub fn rormis(&self) -> RORMIS_R {
-        RORMIS_R::new((self.bits & 0x01) != 0)
+    pub fn rxmis(&self) -> RXMIS_R {
+        RXMIS_R::new(((self.bits >> 2) & 1) != 0)
+    }
+    #[doc = "Bit 3 - Gives the transmit FIFO masked interrupt state, after masking, of the SSPTXINTR interrupt"]
+    #[inline(always)]
+    pub fn txmis(&self) -> TXMIS_R {
+        TXMIS_R::new(((self.bits >> 3) & 1) != 0)
     }
 }
 #[doc = "Masked interrupt status register, SSPMIS on page 3-11  
@@ -110,8 +58,5 @@ impl crate::Readable for SSPMIS_SPEC {
 }
 #[doc = "`reset()` method sets SSPMIS to value 0"]
 impl crate::Resettable for SSPMIS_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

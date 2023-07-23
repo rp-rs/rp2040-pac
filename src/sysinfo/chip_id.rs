@@ -13,66 +13,27 @@ impl From<crate::R<CHIP_ID_SPEC>> for R {
         R(reader)
     }
 }
-#[doc = "Field `REVISION` reader - "]
-pub struct REVISION_R(crate::FieldReader<u8, u8>);
-impl REVISION_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        REVISION_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for REVISION_R {
-    type Target = crate::FieldReader<u8, u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-#[doc = "Field `PART` reader - "]
-pub struct PART_R(crate::FieldReader<u16, u16>);
-impl PART_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u16) -> Self {
-        PART_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PART_R {
-    type Target = crate::FieldReader<u16, u16>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
 #[doc = "Field `MANUFACTURER` reader - "]
-pub struct MANUFACTURER_R(crate::FieldReader<u16, u16>);
-impl MANUFACTURER_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u16) -> Self {
-        MANUFACTURER_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for MANUFACTURER_R {
-    type Target = crate::FieldReader<u16, u16>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type MANUFACTURER_R = crate::FieldReader<u16, u16>;
+#[doc = "Field `PART` reader - "]
+pub type PART_R = crate::FieldReader<u16, u16>;
+#[doc = "Field `REVISION` reader - "]
+pub type REVISION_R = crate::FieldReader<u8, u8>;
 impl R {
-    #[doc = "Bits 28:31"]
+    #[doc = "Bits 0:11"]
     #[inline(always)]
-    pub fn revision(&self) -> REVISION_R {
-        REVISION_R::new(((self.bits >> 28) & 0x0f) as u8)
+    pub fn manufacturer(&self) -> MANUFACTURER_R {
+        MANUFACTURER_R::new((self.bits & 0x0fff) as u16)
     }
     #[doc = "Bits 12:27"]
     #[inline(always)]
     pub fn part(&self) -> PART_R {
         PART_R::new(((self.bits >> 12) & 0xffff) as u16)
     }
-    #[doc = "Bits 0:11"]
+    #[doc = "Bits 28:31"]
     #[inline(always)]
-    pub fn manufacturer(&self) -> MANUFACTURER_R {
-        MANUFACTURER_R::new((self.bits & 0x0fff) as u16)
+    pub fn revision(&self) -> REVISION_R {
+        REVISION_R::new(((self.bits >> 28) & 0x0f) as u8)
     }
 }
 #[doc = "JEDEC JEP-106 compliant chip identifier.  
@@ -90,8 +51,5 @@ impl crate::Readable for CHIP_ID_SPEC {
 }
 #[doc = "`reset()` method sets CHIP_ID to value 0"]
 impl crate::Resettable for CHIP_ID_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

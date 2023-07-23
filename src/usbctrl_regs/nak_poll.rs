@@ -34,82 +34,38 @@ impl From<crate::W<NAK_POLL_SPEC>> for W {
         W(writer)
     }
 }
-#[doc = "Field `DELAY_FS` reader - NAK polling interval for a full speed device"]
-pub struct DELAY_FS_R(crate::FieldReader<u16, u16>);
-impl DELAY_FS_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u16) -> Self {
-        DELAY_FS_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DELAY_FS_R {
-    type Target = crate::FieldReader<u16, u16>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-#[doc = "Field `DELAY_FS` writer - NAK polling interval for a full speed device"]
-pub struct DELAY_FS_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> DELAY_FS_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u16) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03ff << 16)) | ((value as u32 & 0x03ff) << 16);
-        self.w
-    }
-}
 #[doc = "Field `DELAY_LS` reader - NAK polling interval for a low speed device"]
-pub struct DELAY_LS_R(crate::FieldReader<u16, u16>);
-impl DELAY_LS_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u16) -> Self {
-        DELAY_LS_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DELAY_LS_R {
-    type Target = crate::FieldReader<u16, u16>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type DELAY_LS_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `DELAY_LS` writer - NAK polling interval for a low speed device"]
-pub struct DELAY_LS_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> DELAY_LS_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u16) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x03ff) | (value as u32 & 0x03ff);
-        self.w
-    }
-}
+pub type DELAY_LS_W<'a, const O: u8> = crate::FieldWriter<'a, u32, NAK_POLL_SPEC, u16, u16, 10, O>;
+#[doc = "Field `DELAY_FS` reader - NAK polling interval for a full speed device"]
+pub type DELAY_FS_R = crate::FieldReader<u16, u16>;
+#[doc = "Field `DELAY_FS` writer - NAK polling interval for a full speed device"]
+pub type DELAY_FS_W<'a, const O: u8> = crate::FieldWriter<'a, u32, NAK_POLL_SPEC, u16, u16, 10, O>;
 impl R {
-    #[doc = "Bits 16:25 - NAK polling interval for a full speed device"]
-    #[inline(always)]
-    pub fn delay_fs(&self) -> DELAY_FS_R {
-        DELAY_FS_R::new(((self.bits >> 16) & 0x03ff) as u16)
-    }
     #[doc = "Bits 0:9 - NAK polling interval for a low speed device"]
     #[inline(always)]
     pub fn delay_ls(&self) -> DELAY_LS_R {
         DELAY_LS_R::new((self.bits & 0x03ff) as u16)
     }
-}
-impl W {
     #[doc = "Bits 16:25 - NAK polling interval for a full speed device"]
     #[inline(always)]
-    pub fn delay_fs(&mut self) -> DELAY_FS_W {
-        DELAY_FS_W { w: self }
+    pub fn delay_fs(&self) -> DELAY_FS_R {
+        DELAY_FS_R::new(((self.bits >> 16) & 0x03ff) as u16)
     }
+}
+impl W {
     #[doc = "Bits 0:9 - NAK polling interval for a low speed device"]
     #[inline(always)]
-    pub fn delay_ls(&mut self) -> DELAY_LS_W {
-        DELAY_LS_W { w: self }
+    #[must_use]
+    pub fn delay_ls(&mut self) -> DELAY_LS_W<0> {
+        DELAY_LS_W::new(self)
+    }
+    #[doc = "Bits 16:25 - NAK polling interval for a full speed device"]
+    #[inline(always)]
+    #[must_use]
+    pub fn delay_fs(&mut self) -> DELAY_FS_W<16> {
+        DELAY_FS_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
@@ -134,11 +90,10 @@ impl crate::Readable for NAK_POLL_SPEC {
 #[doc = "`write(|w| ..)` method takes [nak_poll::W](W) writer structure"]
 impl crate::Writable for NAK_POLL_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets NAK_POLL to value 0x0010_0010"]
 impl crate::Resettable for NAK_POLL_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x0010_0010
-    }
+    const RESET_VALUE: Self::Ux = 0x0010_0010;
 }

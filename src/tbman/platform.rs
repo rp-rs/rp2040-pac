@@ -13,46 +13,20 @@ impl From<crate::R<PLATFORM_SPEC>> for R {
         R(reader)
     }
 }
-#[doc = "Field `FPGA` reader - Indicates the platform is an FPGA"]
-pub struct FPGA_R(crate::FieldReader<bool, bool>);
-impl FPGA_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        FPGA_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for FPGA_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
 #[doc = "Field `ASIC` reader - Indicates the platform is an ASIC"]
-pub struct ASIC_R(crate::FieldReader<bool, bool>);
-impl ASIC_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        ASIC_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for ASIC_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type ASIC_R = crate::BitReader<bool>;
+#[doc = "Field `FPGA` reader - Indicates the platform is an FPGA"]
+pub type FPGA_R = crate::BitReader<bool>;
 impl R {
-    #[doc = "Bit 1 - Indicates the platform is an FPGA"]
-    #[inline(always)]
-    pub fn fpga(&self) -> FPGA_R {
-        FPGA_R::new(((self.bits >> 1) & 0x01) != 0)
-    }
     #[doc = "Bit 0 - Indicates the platform is an ASIC"]
     #[inline(always)]
     pub fn asic(&self) -> ASIC_R {
-        ASIC_R::new((self.bits & 0x01) != 0)
+        ASIC_R::new((self.bits & 1) != 0)
+    }
+    #[doc = "Bit 1 - Indicates the platform is an FPGA"]
+    #[inline(always)]
+    pub fn fpga(&self) -> FPGA_R {
+        FPGA_R::new(((self.bits >> 1) & 1) != 0)
     }
 }
 #[doc = "Indicates the type of platform in use  
@@ -70,8 +44,5 @@ impl crate::Readable for PLATFORM_SPEC {
 }
 #[doc = "`reset()` method sets PLATFORM to value 0x05"]
 impl crate::Resettable for PLATFORM_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x05
-    }
+    const RESET_VALUE: Self::Ux = 0x05;
 }

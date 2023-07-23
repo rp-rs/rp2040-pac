@@ -16,20 +16,7 @@ impl From<crate::R<IC_TXFLR_SPEC>> for R {
 #[doc = "Field `TXFLR` reader - Transmit FIFO Level. Contains the number of valid data entries in the transmit FIFO.  
 
  Reset value: 0x0"]
-pub struct TXFLR_R(crate::FieldReader<u8, u8>);
-impl TXFLR_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        TXFLR_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TXFLR_R {
-    type Target = crate::FieldReader<u8, u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type TXFLR_R = crate::FieldReader<u8, u8>;
 impl R {
     #[doc = "Bits 0:4 - Transmit FIFO Level. Contains the number of valid data entries in the transmit FIFO.  
 
@@ -54,8 +41,5 @@ impl crate::Readable for IC_TXFLR_SPEC {
 }
 #[doc = "`reset()` method sets IC_TXFLR to value 0"]
 impl crate::Resettable for IC_TXFLR_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

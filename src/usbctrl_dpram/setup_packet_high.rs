@@ -34,82 +34,40 @@ impl From<crate::W<SETUP_PACKET_HIGH_SPEC>> for W {
         W(writer)
     }
 }
-#[doc = "Field `WLENGTH` reader - "]
-pub struct WLENGTH_R(crate::FieldReader<u16, u16>);
-impl WLENGTH_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u16) -> Self {
-        WLENGTH_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for WLENGTH_R {
-    type Target = crate::FieldReader<u16, u16>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-#[doc = "Field `WLENGTH` writer - "]
-pub struct WLENGTH_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> WLENGTH_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u16) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0xffff << 16)) | ((value as u32 & 0xffff) << 16);
-        self.w
-    }
-}
 #[doc = "Field `WINDEX` reader - "]
-pub struct WINDEX_R(crate::FieldReader<u16, u16>);
-impl WINDEX_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u16) -> Self {
-        WINDEX_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for WINDEX_R {
-    type Target = crate::FieldReader<u16, u16>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type WINDEX_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `WINDEX` writer - "]
-pub struct WINDEX_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> WINDEX_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u16) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0xffff) | (value as u32 & 0xffff);
-        self.w
-    }
-}
+pub type WINDEX_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, SETUP_PACKET_HIGH_SPEC, u16, u16, 16, O>;
+#[doc = "Field `WLENGTH` reader - "]
+pub type WLENGTH_R = crate::FieldReader<u16, u16>;
+#[doc = "Field `WLENGTH` writer - "]
+pub type WLENGTH_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, SETUP_PACKET_HIGH_SPEC, u16, u16, 16, O>;
 impl R {
-    #[doc = "Bits 16:31"]
-    #[inline(always)]
-    pub fn wlength(&self) -> WLENGTH_R {
-        WLENGTH_R::new(((self.bits >> 16) & 0xffff) as u16)
-    }
     #[doc = "Bits 0:15"]
     #[inline(always)]
     pub fn windex(&self) -> WINDEX_R {
         WINDEX_R::new((self.bits & 0xffff) as u16)
     }
-}
-impl W {
     #[doc = "Bits 16:31"]
     #[inline(always)]
-    pub fn wlength(&mut self) -> WLENGTH_W {
-        WLENGTH_W { w: self }
+    pub fn wlength(&self) -> WLENGTH_R {
+        WLENGTH_R::new(((self.bits >> 16) & 0xffff) as u16)
     }
+}
+impl W {
     #[doc = "Bits 0:15"]
     #[inline(always)]
-    pub fn windex(&mut self) -> WINDEX_W {
-        WINDEX_W { w: self }
+    #[must_use]
+    pub fn windex(&mut self) -> WINDEX_W<0> {
+        WINDEX_W::new(self)
+    }
+    #[doc = "Bits 16:31"]
+    #[inline(always)]
+    #[must_use]
+    pub fn wlength(&mut self) -> WLENGTH_W<16> {
+        WLENGTH_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
@@ -134,11 +92,10 @@ impl crate::Readable for SETUP_PACKET_HIGH_SPEC {
 #[doc = "`write(|w| ..)` method takes [setup_packet_high::W](W) writer structure"]
 impl crate::Writable for SETUP_PACKET_HIGH_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets SETUP_PACKET_HIGH to value 0"]
 impl crate::Resettable for SETUP_PACKET_HIGH_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

@@ -35,44 +35,23 @@ impl From<crate::W<INTERP1_ACCUM0_ADD_SPEC>> for W {
     }
 }
 #[doc = "Field `INTERP1_ACCUM0_ADD` reader - "]
-pub struct INTERP1_ACCUM0_ADD_R(crate::FieldReader<u32, u32>);
-impl INTERP1_ACCUM0_ADD_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u32) -> Self {
-        INTERP1_ACCUM0_ADD_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for INTERP1_ACCUM0_ADD_R {
-    type Target = crate::FieldReader<u32, u32>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type INTERP1_ACCUM0_ADD_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `INTERP1_ACCUM0_ADD` writer - "]
-pub struct INTERP1_ACCUM0_ADD_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> INTERP1_ACCUM0_ADD_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u32) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x00ff_ffff) | (value as u32 & 0x00ff_ffff);
-        self.w
-    }
-}
+pub type INTERP1_ACCUM0_ADD_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, INTERP1_ACCUM0_ADD_SPEC, u32, u32, 24, O>;
 impl R {
     #[doc = "Bits 0:23"]
     #[inline(always)]
     pub fn interp1_accum0_add(&self) -> INTERP1_ACCUM0_ADD_R {
-        INTERP1_ACCUM0_ADD_R::new((self.bits & 0x00ff_ffff) as u32)
+        INTERP1_ACCUM0_ADD_R::new(self.bits & 0x00ff_ffff)
     }
 }
 impl W {
     #[doc = "Bits 0:23"]
     #[inline(always)]
-    pub fn interp1_accum0_add(&mut self) -> INTERP1_ACCUM0_ADD_W {
-        INTERP1_ACCUM0_ADD_W { w: self }
+    #[must_use]
+    pub fn interp1_accum0_add(&mut self) -> INTERP1_ACCUM0_ADD_W<0> {
+        INTERP1_ACCUM0_ADD_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
@@ -98,11 +77,10 @@ impl crate::Readable for INTERP1_ACCUM0_ADD_SPEC {
 #[doc = "`write(|w| ..)` method takes [interp1_accum0_add::W](W) writer structure"]
 impl crate::Writable for INTERP1_ACCUM0_ADD_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets INTERP1_ACCUM0_ADD to value 0"]
 impl crate::Resettable for INTERP1_ACCUM0_ADD_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

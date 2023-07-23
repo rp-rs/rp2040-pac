@@ -28,8 +28,5 @@ impl crate::Readable for CH4_DBG_TCR_SPEC {
 }
 #[doc = "`reset()` method sets CH4_DBG_TCR to value 0"]
 impl crate::Resettable for CH4_DBG_TCR_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

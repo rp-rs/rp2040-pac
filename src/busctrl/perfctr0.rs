@@ -37,41 +37,18 @@ impl From<crate::W<PERFCTR0_SPEC>> for W {
 #[doc = "Field `PERFCTR0` reader - Busfabric saturating performance counter 0  
  Count some event signal from the busfabric arbiters.  
  Write any value to clear. Select an event to count using PERFSEL0"]
-pub struct PERFCTR0_R(crate::FieldReader<u32, u32>);
-impl PERFCTR0_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u32) -> Self {
-        PERFCTR0_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PERFCTR0_R {
-    type Target = crate::FieldReader<u32, u32>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PERFCTR0_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `PERFCTR0` writer - Busfabric saturating performance counter 0  
  Count some event signal from the busfabric arbiters.  
  Write any value to clear. Select an event to count using PERFSEL0"]
-pub struct PERFCTR0_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PERFCTR0_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u32) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x00ff_ffff) | (value as u32 & 0x00ff_ffff);
-        self.w
-    }
-}
+pub type PERFCTR0_W<'a, const O: u8> = crate::FieldWriter<'a, u32, PERFCTR0_SPEC, u32, u32, 24, O>;
 impl R {
     #[doc = "Bits 0:23 - Busfabric saturating performance counter 0  
  Count some event signal from the busfabric arbiters.  
  Write any value to clear. Select an event to count using PERFSEL0"]
     #[inline(always)]
     pub fn perfctr0(&self) -> PERFCTR0_R {
-        PERFCTR0_R::new((self.bits & 0x00ff_ffff) as u32)
+        PERFCTR0_R::new(self.bits & 0x00ff_ffff)
     }
 }
 impl W {
@@ -79,8 +56,9 @@ impl W {
  Count some event signal from the busfabric arbiters.  
  Write any value to clear. Select an event to count using PERFSEL0"]
     #[inline(always)]
-    pub fn perfctr0(&mut self) -> PERFCTR0_W {
-        PERFCTR0_W { w: self }
+    #[must_use]
+    pub fn perfctr0(&mut self) -> PERFCTR0_W<0> {
+        PERFCTR0_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
@@ -105,11 +83,10 @@ impl crate::Readable for PERFCTR0_SPEC {
 #[doc = "`write(|w| ..)` method takes [perfctr0::W](W) writer structure"]
 impl crate::Writable for PERFCTR0_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0x00ff_ffff;
 }
 #[doc = "`reset()` method sets PERFCTR0 to value 0"]
 impl crate::Resettable for PERFCTR0_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

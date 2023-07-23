@@ -35,44 +35,23 @@ impl From<crate::W<PROC_IN_SYNC_BYPASS_SPEC>> for W {
     }
 }
 #[doc = "Field `PROC_IN_SYNC_BYPASS` reader - "]
-pub struct PROC_IN_SYNC_BYPASS_R(crate::FieldReader<u32, u32>);
-impl PROC_IN_SYNC_BYPASS_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u32) -> Self {
-        PROC_IN_SYNC_BYPASS_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PROC_IN_SYNC_BYPASS_R {
-    type Target = crate::FieldReader<u32, u32>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PROC_IN_SYNC_BYPASS_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `PROC_IN_SYNC_BYPASS` writer - "]
-pub struct PROC_IN_SYNC_BYPASS_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PROC_IN_SYNC_BYPASS_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u32) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x3fff_ffff) | (value as u32 & 0x3fff_ffff);
-        self.w
-    }
-}
+pub type PROC_IN_SYNC_BYPASS_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, PROC_IN_SYNC_BYPASS_SPEC, u32, u32, 30, O>;
 impl R {
     #[doc = "Bits 0:29"]
     #[inline(always)]
     pub fn proc_in_sync_bypass(&self) -> PROC_IN_SYNC_BYPASS_R {
-        PROC_IN_SYNC_BYPASS_R::new((self.bits & 0x3fff_ffff) as u32)
+        PROC_IN_SYNC_BYPASS_R::new(self.bits & 0x3fff_ffff)
     }
 }
 impl W {
     #[doc = "Bits 0:29"]
     #[inline(always)]
-    pub fn proc_in_sync_bypass(&mut self) -> PROC_IN_SYNC_BYPASS_W {
-        PROC_IN_SYNC_BYPASS_W { w: self }
+    #[must_use]
+    pub fn proc_in_sync_bypass(&mut self) -> PROC_IN_SYNC_BYPASS_W<0> {
+        PROC_IN_SYNC_BYPASS_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
@@ -101,11 +80,10 @@ impl crate::Readable for PROC_IN_SYNC_BYPASS_SPEC {
 #[doc = "`write(|w| ..)` method takes [proc_in_sync_bypass::W](W) writer structure"]
 impl crate::Writable for PROC_IN_SYNC_BYPASS_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets PROC_IN_SYNC_BYPASS to value 0"]
 impl crate::Resettable for PROC_IN_SYNC_BYPASS_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

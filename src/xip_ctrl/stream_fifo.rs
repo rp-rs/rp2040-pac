@@ -31,8 +31,5 @@ impl crate::Readable for STREAM_FIFO_SPEC {
 }
 #[doc = "`reset()` method sets STREAM_FIFO to value 0"]
 impl crate::Resettable for STREAM_FIFO_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

@@ -34,212 +34,84 @@ impl From<crate::W<PWR_SPEC>> for W {
         W(writer)
     }
 }
-#[doc = "Field `VCOPD` reader - PLL VCO powerdown  
- To save power set high when PLL output not required or bypass=1."]
-pub struct VCOPD_R(crate::FieldReader<bool, bool>);
-impl VCOPD_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        VCOPD_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for VCOPD_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-#[doc = "Field `VCOPD` writer - PLL VCO powerdown  
- To save power set high when PLL output not required or bypass=1."]
-pub struct VCOPD_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> VCOPD_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 5)) | ((value as u32 & 0x01) << 5);
-        self.w
-    }
-}
-#[doc = "Field `POSTDIVPD` reader - PLL post divider powerdown  
- To save power set high when PLL output not required or bypass=1."]
-pub struct POSTDIVPD_R(crate::FieldReader<bool, bool>);
-impl POSTDIVPD_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        POSTDIVPD_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for POSTDIVPD_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-#[doc = "Field `POSTDIVPD` writer - PLL post divider powerdown  
- To save power set high when PLL output not required or bypass=1."]
-pub struct POSTDIVPD_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> POSTDIVPD_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 3)) | ((value as u32 & 0x01) << 3);
-        self.w
-    }
-}
-#[doc = "Field `DSMPD` reader - PLL DSM powerdown  
- Nothing is achieved by setting this low."]
-pub struct DSMPD_R(crate::FieldReader<bool, bool>);
-impl DSMPD_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        DSMPD_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DSMPD_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-#[doc = "Field `DSMPD` writer - PLL DSM powerdown  
- Nothing is achieved by setting this low."]
-pub struct DSMPD_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> DSMPD_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 2)) | ((value as u32 & 0x01) << 2);
-        self.w
-    }
-}
 #[doc = "Field `PD` reader - PLL powerdown  
  To save power set high when PLL output not required."]
-pub struct PD_R(crate::FieldReader<bool, bool>);
-impl PD_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        PD_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PD_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PD_R = crate::BitReader<bool>;
 #[doc = "Field `PD` writer - PLL powerdown  
  To save power set high when PLL output not required."]
-pub struct PD_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PD_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
-        self.w
-    }
-}
+pub type PD_W<'a, const O: u8> = crate::BitWriter<'a, u32, PWR_SPEC, bool, O>;
+#[doc = "Field `DSMPD` reader - PLL DSM powerdown  
+ Nothing is achieved by setting this low."]
+pub type DSMPD_R = crate::BitReader<bool>;
+#[doc = "Field `DSMPD` writer - PLL DSM powerdown  
+ Nothing is achieved by setting this low."]
+pub type DSMPD_W<'a, const O: u8> = crate::BitWriter<'a, u32, PWR_SPEC, bool, O>;
+#[doc = "Field `POSTDIVPD` reader - PLL post divider powerdown  
+ To save power set high when PLL output not required or bypass=1."]
+pub type POSTDIVPD_R = crate::BitReader<bool>;
+#[doc = "Field `POSTDIVPD` writer - PLL post divider powerdown  
+ To save power set high when PLL output not required or bypass=1."]
+pub type POSTDIVPD_W<'a, const O: u8> = crate::BitWriter<'a, u32, PWR_SPEC, bool, O>;
+#[doc = "Field `VCOPD` reader - PLL VCO powerdown  
+ To save power set high when PLL output not required or bypass=1."]
+pub type VCOPD_R = crate::BitReader<bool>;
+#[doc = "Field `VCOPD` writer - PLL VCO powerdown  
+ To save power set high when PLL output not required or bypass=1."]
+pub type VCOPD_W<'a, const O: u8> = crate::BitWriter<'a, u32, PWR_SPEC, bool, O>;
 impl R {
-    #[doc = "Bit 5 - PLL VCO powerdown  
- To save power set high when PLL output not required or bypass=1."]
+    #[doc = "Bit 0 - PLL powerdown  
+ To save power set high when PLL output not required."]
     #[inline(always)]
-    pub fn vcopd(&self) -> VCOPD_R {
-        VCOPD_R::new(((self.bits >> 5) & 0x01) != 0)
-    }
-    #[doc = "Bit 3 - PLL post divider powerdown  
- To save power set high when PLL output not required or bypass=1."]
-    #[inline(always)]
-    pub fn postdivpd(&self) -> POSTDIVPD_R {
-        POSTDIVPD_R::new(((self.bits >> 3) & 0x01) != 0)
+    pub fn pd(&self) -> PD_R {
+        PD_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 2 - PLL DSM powerdown  
  Nothing is achieved by setting this low."]
     #[inline(always)]
     pub fn dsmpd(&self) -> DSMPD_R {
-        DSMPD_R::new(((self.bits >> 2) & 0x01) != 0)
-    }
-    #[doc = "Bit 0 - PLL powerdown  
- To save power set high when PLL output not required."]
-    #[inline(always)]
-    pub fn pd(&self) -> PD_R {
-        PD_R::new((self.bits & 0x01) != 0)
-    }
-}
-impl W {
-    #[doc = "Bit 5 - PLL VCO powerdown  
- To save power set high when PLL output not required or bypass=1."]
-    #[inline(always)]
-    pub fn vcopd(&mut self) -> VCOPD_W {
-        VCOPD_W { w: self }
+        DSMPD_R::new(((self.bits >> 2) & 1) != 0)
     }
     #[doc = "Bit 3 - PLL post divider powerdown  
  To save power set high when PLL output not required or bypass=1."]
     #[inline(always)]
-    pub fn postdivpd(&mut self) -> POSTDIVPD_W {
-        POSTDIVPD_W { w: self }
+    pub fn postdivpd(&self) -> POSTDIVPD_R {
+        POSTDIVPD_R::new(((self.bits >> 3) & 1) != 0)
+    }
+    #[doc = "Bit 5 - PLL VCO powerdown  
+ To save power set high when PLL output not required or bypass=1."]
+    #[inline(always)]
+    pub fn vcopd(&self) -> VCOPD_R {
+        VCOPD_R::new(((self.bits >> 5) & 1) != 0)
+    }
+}
+impl W {
+    #[doc = "Bit 0 - PLL powerdown  
+ To save power set high when PLL output not required."]
+    #[inline(always)]
+    #[must_use]
+    pub fn pd(&mut self) -> PD_W<0> {
+        PD_W::new(self)
     }
     #[doc = "Bit 2 - PLL DSM powerdown  
  Nothing is achieved by setting this low."]
     #[inline(always)]
-    pub fn dsmpd(&mut self) -> DSMPD_W {
-        DSMPD_W { w: self }
+    #[must_use]
+    pub fn dsmpd(&mut self) -> DSMPD_W<2> {
+        DSMPD_W::new(self)
     }
-    #[doc = "Bit 0 - PLL powerdown  
- To save power set high when PLL output not required."]
+    #[doc = "Bit 3 - PLL post divider powerdown  
+ To save power set high when PLL output not required or bypass=1."]
     #[inline(always)]
-    pub fn pd(&mut self) -> PD_W {
-        PD_W { w: self }
+    #[must_use]
+    pub fn postdivpd(&mut self) -> POSTDIVPD_W<3> {
+        POSTDIVPD_W::new(self)
+    }
+    #[doc = "Bit 5 - PLL VCO powerdown  
+ To save power set high when PLL output not required or bypass=1."]
+    #[inline(always)]
+    #[must_use]
+    pub fn vcopd(&mut self) -> VCOPD_W<5> {
+        VCOPD_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
@@ -264,11 +136,10 @@ impl crate::Readable for PWR_SPEC {
 #[doc = "`write(|w| ..)` method takes [pwr::W](W) writer structure"]
 impl crate::Writable for PWR_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets PWR to value 0x2d"]
 impl crate::Resettable for PWR_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x2d
-    }
+    const RESET_VALUE: Self::Ux = 0x2d;
 }

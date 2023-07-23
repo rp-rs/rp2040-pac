@@ -13,66 +13,27 @@ impl From<crate::R<FIFO_LEVELS_SPEC>> for R {
         R(reader)
     }
 }
-#[doc = "Field `RAF_LVL` reader - Current Read-Address-FIFO fill level"]
-pub struct RAF_LVL_R(crate::FieldReader<u8, u8>);
-impl RAF_LVL_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        RAF_LVL_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RAF_LVL_R {
-    type Target = crate::FieldReader<u8, u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-#[doc = "Field `WAF_LVL` reader - Current Write-Address-FIFO fill level"]
-pub struct WAF_LVL_R(crate::FieldReader<u8, u8>);
-impl WAF_LVL_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        WAF_LVL_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for WAF_LVL_R {
-    type Target = crate::FieldReader<u8, u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
 #[doc = "Field `TDF_LVL` reader - Current Transfer-Data-FIFO fill level"]
-pub struct TDF_LVL_R(crate::FieldReader<u8, u8>);
-impl TDF_LVL_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        TDF_LVL_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TDF_LVL_R {
-    type Target = crate::FieldReader<u8, u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type TDF_LVL_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `WAF_LVL` reader - Current Write-Address-FIFO fill level"]
+pub type WAF_LVL_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `RAF_LVL` reader - Current Read-Address-FIFO fill level"]
+pub type RAF_LVL_R = crate::FieldReader<u8, u8>;
 impl R {
-    #[doc = "Bits 16:23 - Current Read-Address-FIFO fill level"]
+    #[doc = "Bits 0:7 - Current Transfer-Data-FIFO fill level"]
     #[inline(always)]
-    pub fn raf_lvl(&self) -> RAF_LVL_R {
-        RAF_LVL_R::new(((self.bits >> 16) & 0xff) as u8)
+    pub fn tdf_lvl(&self) -> TDF_LVL_R {
+        TDF_LVL_R::new((self.bits & 0xff) as u8)
     }
     #[doc = "Bits 8:15 - Current Write-Address-FIFO fill level"]
     #[inline(always)]
     pub fn waf_lvl(&self) -> WAF_LVL_R {
         WAF_LVL_R::new(((self.bits >> 8) & 0xff) as u8)
     }
-    #[doc = "Bits 0:7 - Current Transfer-Data-FIFO fill level"]
+    #[doc = "Bits 16:23 - Current Read-Address-FIFO fill level"]
     #[inline(always)]
-    pub fn tdf_lvl(&self) -> TDF_LVL_R {
-        TDF_LVL_R::new((self.bits & 0xff) as u8)
+    pub fn raf_lvl(&self) -> RAF_LVL_R {
+        RAF_LVL_R::new(((self.bits >> 16) & 0xff) as u8)
     }
 }
 #[doc = "Debug RAF, WAF, TDF levels  
@@ -90,8 +51,5 @@ impl crate::Readable for FIFO_LEVELS_SPEC {
 }
 #[doc = "`reset()` method sets FIFO_LEVELS to value 0"]
 impl crate::Resettable for FIFO_LEVELS_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

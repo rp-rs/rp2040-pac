@@ -14,20 +14,7 @@ impl From<crate::R<N_CHANNELS_SPEC>> for R {
     }
 }
 #[doc = "Field `N_CHANNELS` reader - "]
-pub struct N_CHANNELS_R(crate::FieldReader<u8, u8>);
-impl N_CHANNELS_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        N_CHANNELS_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for N_CHANNELS_R {
-    type Target = crate::FieldReader<u8, u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type N_CHANNELS_R = crate::FieldReader<u8, u8>;
 impl R {
     #[doc = "Bits 0:4"]
     #[inline(always)]
@@ -50,8 +37,5 @@ impl crate::Readable for N_CHANNELS_SPEC {
 }
 #[doc = "`reset()` method sets N_CHANNELS to value 0"]
 impl crate::Resettable for N_CHANNELS_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

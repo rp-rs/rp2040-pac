@@ -63,11 +63,10 @@ impl crate::Readable for DORMANT_SPEC {
 #[doc = "`write(|w| ..)` method takes [dormant::W](W) writer structure"]
 impl crate::Writable for DORMANT_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets DORMANT to value 0"]
 impl crate::Resettable for DORMANT_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

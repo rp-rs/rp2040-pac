@@ -34,76 +34,25 @@ impl From<crate::W<USBPHY_TRIM_SPEC>> for W {
         W(writer)
     }
 }
-#[doc = "Field `DM_PULLDN_TRIM` reader - Value to drive to USB PHY  
- DM pulldown resistor trim control  
- Experimental data suggests that the reset value will work, but this register allows adjustment if required"]
-pub struct DM_PULLDN_TRIM_R(crate::FieldReader<u8, u8>);
-impl DM_PULLDN_TRIM_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        DM_PULLDN_TRIM_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DM_PULLDN_TRIM_R {
-    type Target = crate::FieldReader<u8, u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-#[doc = "Field `DM_PULLDN_TRIM` writer - Value to drive to USB PHY  
- DM pulldown resistor trim control  
- Experimental data suggests that the reset value will work, but this register allows adjustment if required"]
-pub struct DM_PULLDN_TRIM_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> DM_PULLDN_TRIM_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x1f << 8)) | ((value as u32 & 0x1f) << 8);
-        self.w
-    }
-}
 #[doc = "Field `DP_PULLDN_TRIM` reader - Value to drive to USB PHY  
  DP pulldown resistor trim control  
  Experimental data suggests that the reset value will work, but this register allows adjustment if required"]
-pub struct DP_PULLDN_TRIM_R(crate::FieldReader<u8, u8>);
-impl DP_PULLDN_TRIM_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        DP_PULLDN_TRIM_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DP_PULLDN_TRIM_R {
-    type Target = crate::FieldReader<u8, u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type DP_PULLDN_TRIM_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `DP_PULLDN_TRIM` writer - Value to drive to USB PHY  
  DP pulldown resistor trim control  
  Experimental data suggests that the reset value will work, but this register allows adjustment if required"]
-pub struct DP_PULLDN_TRIM_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> DP_PULLDN_TRIM_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x1f) | (value as u32 & 0x1f);
-        self.w
-    }
-}
-impl R {
-    #[doc = "Bits 8:12 - Value to drive to USB PHY  
+pub type DP_PULLDN_TRIM_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, USBPHY_TRIM_SPEC, u8, u8, 5, O>;
+#[doc = "Field `DM_PULLDN_TRIM` reader - Value to drive to USB PHY  
  DM pulldown resistor trim control  
  Experimental data suggests that the reset value will work, but this register allows adjustment if required"]
-    #[inline(always)]
-    pub fn dm_pulldn_trim(&self) -> DM_PULLDN_TRIM_R {
-        DM_PULLDN_TRIM_R::new(((self.bits >> 8) & 0x1f) as u8)
-    }
+pub type DM_PULLDN_TRIM_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `DM_PULLDN_TRIM` writer - Value to drive to USB PHY  
+ DM pulldown resistor trim control  
+ Experimental data suggests that the reset value will work, but this register allows adjustment if required"]
+pub type DM_PULLDN_TRIM_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, USBPHY_TRIM_SPEC, u8, u8, 5, O>;
+impl R {
     #[doc = "Bits 0:4 - Value to drive to USB PHY  
  DP pulldown resistor trim control  
  Experimental data suggests that the reset value will work, but this register allows adjustment if required"]
@@ -111,21 +60,30 @@ impl R {
     pub fn dp_pulldn_trim(&self) -> DP_PULLDN_TRIM_R {
         DP_PULLDN_TRIM_R::new((self.bits & 0x1f) as u8)
     }
-}
-impl W {
     #[doc = "Bits 8:12 - Value to drive to USB PHY  
  DM pulldown resistor trim control  
  Experimental data suggests that the reset value will work, but this register allows adjustment if required"]
     #[inline(always)]
-    pub fn dm_pulldn_trim(&mut self) -> DM_PULLDN_TRIM_W {
-        DM_PULLDN_TRIM_W { w: self }
+    pub fn dm_pulldn_trim(&self) -> DM_PULLDN_TRIM_R {
+        DM_PULLDN_TRIM_R::new(((self.bits >> 8) & 0x1f) as u8)
     }
+}
+impl W {
     #[doc = "Bits 0:4 - Value to drive to USB PHY  
  DP pulldown resistor trim control  
  Experimental data suggests that the reset value will work, but this register allows adjustment if required"]
     #[inline(always)]
-    pub fn dp_pulldn_trim(&mut self) -> DP_PULLDN_TRIM_W {
-        DP_PULLDN_TRIM_W { w: self }
+    #[must_use]
+    pub fn dp_pulldn_trim(&mut self) -> DP_PULLDN_TRIM_W<0> {
+        DP_PULLDN_TRIM_W::new(self)
+    }
+    #[doc = "Bits 8:12 - Value to drive to USB PHY  
+ DM pulldown resistor trim control  
+ Experimental data suggests that the reset value will work, but this register allows adjustment if required"]
+    #[inline(always)]
+    #[must_use]
+    pub fn dm_pulldn_trim(&mut self) -> DM_PULLDN_TRIM_W<8> {
+        DM_PULLDN_TRIM_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
@@ -150,11 +108,10 @@ impl crate::Readable for USBPHY_TRIM_SPEC {
 #[doc = "`write(|w| ..)` method takes [usbphy_trim::W](W) writer structure"]
 impl crate::Writable for USBPHY_TRIM_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets USBPHY_TRIM to value 0x1f1f"]
 impl crate::Resettable for USBPHY_TRIM_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x1f1f
-    }
+    const RESET_VALUE: Self::Ux = 0x1f1f;
 }

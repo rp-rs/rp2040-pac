@@ -34,90 +34,28 @@ impl From<crate::W<CSR_SPEC>> for W {
         W(writer)
     }
 }
-#[doc = "Field `PH_ADV` reader - Advance the phase of the counter by 1 count, while it is running.  
- Self-clearing. Write a 1, and poll until low. Counter must be running  
- at less than full speed (div_int + div_frac / 16 > 1)"]
-pub struct PH_ADV_R(crate::FieldReader<bool, bool>);
-impl PH_ADV_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        PH_ADV_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PH_ADV_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-#[doc = "Field `PH_ADV` writer - Advance the phase of the counter by 1 count, while it is running.  
- Self-clearing. Write a 1, and poll until low. Counter must be running  
- at less than full speed (div_int + div_frac / 16 > 1)"]
-pub struct PH_ADV_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PH_ADV_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 7)) | ((value as u32 & 0x01) << 7);
-        self.w
-    }
-}
-#[doc = "Field `PH_RET` reader - Retard the phase of the counter by 1 count, while it is running.  
- Self-clearing. Write a 1, and poll until low. Counter must be running."]
-pub struct PH_RET_R(crate::FieldReader<bool, bool>);
-impl PH_RET_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        PH_RET_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PH_RET_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-#[doc = "Field `PH_RET` writer - Retard the phase of the counter by 1 count, while it is running.  
- Self-clearing. Write a 1, and poll until low. Counter must be running."]
-pub struct PH_RET_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PH_RET_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 6)) | ((value as u32 & 0x01) << 6);
-        self.w
-    }
-}
+#[doc = "Field `EN` reader - Enable the PWM channel."]
+pub type EN_R = crate::BitReader<bool>;
+#[doc = "Field `EN` writer - Enable the PWM channel."]
+pub type EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, CSR_SPEC, bool, O>;
+#[doc = "Field `PH_CORRECT` reader - 1: Enable phase-correct modulation. 0: Trailing-edge"]
+pub type PH_CORRECT_R = crate::BitReader<bool>;
+#[doc = "Field `PH_CORRECT` writer - 1: Enable phase-correct modulation. 0: Trailing-edge"]
+pub type PH_CORRECT_W<'a, const O: u8> = crate::BitWriter<'a, u32, CSR_SPEC, bool, O>;
+#[doc = "Field `A_INV` reader - Invert output A"]
+pub type A_INV_R = crate::BitReader<bool>;
+#[doc = "Field `A_INV` writer - Invert output A"]
+pub type A_INV_W<'a, const O: u8> = crate::BitWriter<'a, u32, CSR_SPEC, bool, O>;
+#[doc = "Field `B_INV` reader - Invert output B"]
+pub type B_INV_R = crate::BitReader<bool>;
+#[doc = "Field `B_INV` writer - Invert output B"]
+pub type B_INV_W<'a, const O: u8> = crate::BitWriter<'a, u32, CSR_SPEC, bool, O>;
+#[doc = "Field `DIVMODE` reader - "]
+pub type DIVMODE_R = crate::FieldReader<u8, DIVMODE_A>;
 #[doc = "  
 
 Value on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u8)]
 pub enum DIVMODE_A {
     #[doc = "0: Free-running counting at rate dictated by fractional divider"]
@@ -135,14 +73,8 @@ impl From<DIVMODE_A> for u8 {
         variant as _
     }
 }
-#[doc = "Field `DIVMODE` reader - "]
-pub struct DIVMODE_R(crate::FieldReader<u8, DIVMODE_A>);
 impl DIVMODE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        DIVMODE_R(crate::FieldReader::new(bits))
-    }
-    #[doc = r"Get enumerated values variant"]
+    #[doc = "Get enumerated values variant"]
     #[inline(always)]
     pub fn variant(&self) -> DIVMODE_A {
         match self.bits {
@@ -156,41 +88,28 @@ impl DIVMODE_R {
     #[doc = "Checks if the value of the field is `DIV`"]
     #[inline(always)]
     pub fn is_div(&self) -> bool {
-        **self == DIVMODE_A::DIV
+        *self == DIVMODE_A::DIV
     }
     #[doc = "Checks if the value of the field is `LEVEL`"]
     #[inline(always)]
     pub fn is_level(&self) -> bool {
-        **self == DIVMODE_A::LEVEL
+        *self == DIVMODE_A::LEVEL
     }
     #[doc = "Checks if the value of the field is `RISE`"]
     #[inline(always)]
     pub fn is_rise(&self) -> bool {
-        **self == DIVMODE_A::RISE
+        *self == DIVMODE_A::RISE
     }
     #[doc = "Checks if the value of the field is `FALL`"]
     #[inline(always)]
     pub fn is_fall(&self) -> bool {
-        **self == DIVMODE_A::FALL
-    }
-}
-impl core::ops::Deref for DIVMODE_R {
-    type Target = crate::FieldReader<u8, DIVMODE_A>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
+        *self == DIVMODE_A::FALL
     }
 }
 #[doc = "Field `DIVMODE` writer - "]
-pub struct DIVMODE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> DIVMODE_W<'a> {
-    #[doc = r"Writes `variant` to the field"]
-    #[inline(always)]
-    pub fn variant(self, variant: DIVMODE_A) -> &'a mut W {
-        self.bits(variant.into())
-    }
+pub type DIVMODE_W<'a, const O: u8> =
+    crate::FieldWriterSafe<'a, u32, CSR_SPEC, u8, DIVMODE_A, 2, O>;
+impl<'a, const O: u8> DIVMODE_W<'a, O> {
     #[doc = "Free-running counting at rate dictated by fractional divider"]
     #[inline(always)]
     pub fn div(self) -> &'a mut W {
@@ -211,239 +130,106 @@ impl<'a> DIVMODE_W<'a> {
     pub fn fall(self) -> &'a mut W {
         self.variant(DIVMODE_A::FALL)
     }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 4)) | ((value as u32 & 0x03) << 4);
-        self.w
-    }
 }
-#[doc = "Field `B_INV` reader - Invert output B"]
-pub struct B_INV_R(crate::FieldReader<bool, bool>);
-impl B_INV_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        B_INV_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for B_INV_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-#[doc = "Field `B_INV` writer - Invert output B"]
-pub struct B_INV_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> B_INV_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 3)) | ((value as u32 & 0x01) << 3);
-        self.w
-    }
-}
-#[doc = "Field `A_INV` reader - Invert output A"]
-pub struct A_INV_R(crate::FieldReader<bool, bool>);
-impl A_INV_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        A_INV_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for A_INV_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-#[doc = "Field `A_INV` writer - Invert output A"]
-pub struct A_INV_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> A_INV_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 2)) | ((value as u32 & 0x01) << 2);
-        self.w
-    }
-}
-#[doc = "Field `PH_CORRECT` reader - 1: Enable phase-correct modulation. 0: Trailing-edge"]
-pub struct PH_CORRECT_R(crate::FieldReader<bool, bool>);
-impl PH_CORRECT_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        PH_CORRECT_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PH_CORRECT_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-#[doc = "Field `PH_CORRECT` writer - 1: Enable phase-correct modulation. 0: Trailing-edge"]
-pub struct PH_CORRECT_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PH_CORRECT_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u32 & 0x01) << 1);
-        self.w
-    }
-}
-#[doc = "Field `EN` reader - Enable the PWM channel."]
-pub struct EN_R(crate::FieldReader<bool, bool>);
-impl EN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        EN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for EN_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-#[doc = "Field `EN` writer - Enable the PWM channel."]
-pub struct EN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> EN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
-        self.w
-    }
-}
-impl R {
-    #[doc = "Bit 7 - Advance the phase of the counter by 1 count, while it is running.  
+#[doc = "Field `PH_RET` reader - Retard the phase of the counter by 1 count, while it is running.  
+ Self-clearing. Write a 1, and poll until low. Counter must be running."]
+pub type PH_RET_R = crate::BitReader<bool>;
+#[doc = "Field `PH_RET` writer - Retard the phase of the counter by 1 count, while it is running.  
+ Self-clearing. Write a 1, and poll until low. Counter must be running."]
+pub type PH_RET_W<'a, const O: u8> = crate::BitWriter<'a, u32, CSR_SPEC, bool, O>;
+#[doc = "Field `PH_ADV` reader - Advance the phase of the counter by 1 count, while it is running.  
  Self-clearing. Write a 1, and poll until low. Counter must be running  
  at less than full speed (div_int + div_frac / 16 > 1)"]
+pub type PH_ADV_R = crate::BitReader<bool>;
+#[doc = "Field `PH_ADV` writer - Advance the phase of the counter by 1 count, while it is running.  
+ Self-clearing. Write a 1, and poll until low. Counter must be running  
+ at less than full speed (div_int + div_frac / 16 > 1)"]
+pub type PH_ADV_W<'a, const O: u8> = crate::BitWriter<'a, u32, CSR_SPEC, bool, O>;
+impl R {
+    #[doc = "Bit 0 - Enable the PWM channel."]
     #[inline(always)]
-    pub fn ph_adv(&self) -> PH_ADV_R {
-        PH_ADV_R::new(((self.bits >> 7) & 0x01) != 0)
+    pub fn en(&self) -> EN_R {
+        EN_R::new((self.bits & 1) != 0)
+    }
+    #[doc = "Bit 1 - 1: Enable phase-correct modulation. 0: Trailing-edge"]
+    #[inline(always)]
+    pub fn ph_correct(&self) -> PH_CORRECT_R {
+        PH_CORRECT_R::new(((self.bits >> 1) & 1) != 0)
+    }
+    #[doc = "Bit 2 - Invert output A"]
+    #[inline(always)]
+    pub fn a_inv(&self) -> A_INV_R {
+        A_INV_R::new(((self.bits >> 2) & 1) != 0)
+    }
+    #[doc = "Bit 3 - Invert output B"]
+    #[inline(always)]
+    pub fn b_inv(&self) -> B_INV_R {
+        B_INV_R::new(((self.bits >> 3) & 1) != 0)
+    }
+    #[doc = "Bits 4:5"]
+    #[inline(always)]
+    pub fn divmode(&self) -> DIVMODE_R {
+        DIVMODE_R::new(((self.bits >> 4) & 3) as u8)
     }
     #[doc = "Bit 6 - Retard the phase of the counter by 1 count, while it is running.  
  Self-clearing. Write a 1, and poll until low. Counter must be running."]
     #[inline(always)]
     pub fn ph_ret(&self) -> PH_RET_R {
-        PH_RET_R::new(((self.bits >> 6) & 0x01) != 0)
+        PH_RET_R::new(((self.bits >> 6) & 1) != 0)
     }
-    #[doc = "Bits 4:5"]
-    #[inline(always)]
-    pub fn divmode(&self) -> DIVMODE_R {
-        DIVMODE_R::new(((self.bits >> 4) & 0x03) as u8)
-    }
-    #[doc = "Bit 3 - Invert output B"]
-    #[inline(always)]
-    pub fn b_inv(&self) -> B_INV_R {
-        B_INV_R::new(((self.bits >> 3) & 0x01) != 0)
-    }
-    #[doc = "Bit 2 - Invert output A"]
-    #[inline(always)]
-    pub fn a_inv(&self) -> A_INV_R {
-        A_INV_R::new(((self.bits >> 2) & 0x01) != 0)
-    }
-    #[doc = "Bit 1 - 1: Enable phase-correct modulation. 0: Trailing-edge"]
-    #[inline(always)]
-    pub fn ph_correct(&self) -> PH_CORRECT_R {
-        PH_CORRECT_R::new(((self.bits >> 1) & 0x01) != 0)
-    }
-    #[doc = "Bit 0 - Enable the PWM channel."]
-    #[inline(always)]
-    pub fn en(&self) -> EN_R {
-        EN_R::new((self.bits & 0x01) != 0)
-    }
-}
-impl W {
     #[doc = "Bit 7 - Advance the phase of the counter by 1 count, while it is running.  
  Self-clearing. Write a 1, and poll until low. Counter must be running  
  at less than full speed (div_int + div_frac / 16 > 1)"]
     #[inline(always)]
-    pub fn ph_adv(&mut self) -> PH_ADV_W {
-        PH_ADV_W { w: self }
+    pub fn ph_adv(&self) -> PH_ADV_R {
+        PH_ADV_R::new(((self.bits >> 7) & 1) != 0)
+    }
+}
+impl W {
+    #[doc = "Bit 0 - Enable the PWM channel."]
+    #[inline(always)]
+    #[must_use]
+    pub fn en(&mut self) -> EN_W<0> {
+        EN_W::new(self)
+    }
+    #[doc = "Bit 1 - 1: Enable phase-correct modulation. 0: Trailing-edge"]
+    #[inline(always)]
+    #[must_use]
+    pub fn ph_correct(&mut self) -> PH_CORRECT_W<1> {
+        PH_CORRECT_W::new(self)
+    }
+    #[doc = "Bit 2 - Invert output A"]
+    #[inline(always)]
+    #[must_use]
+    pub fn a_inv(&mut self) -> A_INV_W<2> {
+        A_INV_W::new(self)
+    }
+    #[doc = "Bit 3 - Invert output B"]
+    #[inline(always)]
+    #[must_use]
+    pub fn b_inv(&mut self) -> B_INV_W<3> {
+        B_INV_W::new(self)
+    }
+    #[doc = "Bits 4:5"]
+    #[inline(always)]
+    #[must_use]
+    pub fn divmode(&mut self) -> DIVMODE_W<4> {
+        DIVMODE_W::new(self)
     }
     #[doc = "Bit 6 - Retard the phase of the counter by 1 count, while it is running.  
  Self-clearing. Write a 1, and poll until low. Counter must be running."]
     #[inline(always)]
-    pub fn ph_ret(&mut self) -> PH_RET_W {
-        PH_RET_W { w: self }
+    #[must_use]
+    pub fn ph_ret(&mut self) -> PH_RET_W<6> {
+        PH_RET_W::new(self)
     }
-    #[doc = "Bits 4:5"]
+    #[doc = "Bit 7 - Advance the phase of the counter by 1 count, while it is running.  
+ Self-clearing. Write a 1, and poll until low. Counter must be running  
+ at less than full speed (div_int + div_frac / 16 > 1)"]
     #[inline(always)]
-    pub fn divmode(&mut self) -> DIVMODE_W {
-        DIVMODE_W { w: self }
-    }
-    #[doc = "Bit 3 - Invert output B"]
-    #[inline(always)]
-    pub fn b_inv(&mut self) -> B_INV_W {
-        B_INV_W { w: self }
-    }
-    #[doc = "Bit 2 - Invert output A"]
-    #[inline(always)]
-    pub fn a_inv(&mut self) -> A_INV_W {
-        A_INV_W { w: self }
-    }
-    #[doc = "Bit 1 - 1: Enable phase-correct modulation. 0: Trailing-edge"]
-    #[inline(always)]
-    pub fn ph_correct(&mut self) -> PH_CORRECT_W {
-        PH_CORRECT_W { w: self }
-    }
-    #[doc = "Bit 0 - Enable the PWM channel."]
-    #[inline(always)]
-    pub fn en(&mut self) -> EN_W {
-        EN_W { w: self }
+    #[must_use]
+    pub fn ph_adv(&mut self) -> PH_ADV_W<7> {
+        PH_ADV_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
@@ -468,11 +254,10 @@ impl crate::Readable for CSR_SPEC {
 #[doc = "`write(|w| ..)` method takes [csr::W](W) writer structure"]
 impl crate::Writable for CSR_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets CSR to value 0"]
 impl crate::Resettable for CSR_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

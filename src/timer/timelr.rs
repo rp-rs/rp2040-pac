@@ -28,8 +28,5 @@ impl crate::Readable for TIMELR_SPEC {
 }
 #[doc = "`reset()` method sets TIMELR to value 0"]
 impl crate::Resettable for TIMELR_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

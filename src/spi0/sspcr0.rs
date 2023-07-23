@@ -34,213 +34,83 @@ impl From<crate::W<SSPCR0_SPEC>> for W {
         W(writer)
     }
 }
-#[doc = "Field `SCR` reader - Serial clock rate. The value SCR is used to generate the transmit and receive bit rate of the PrimeCell SSP. The bit rate is: F SSPCLK CPSDVSR x (1+SCR) where CPSDVSR is an even value from 2-254, programmed through the SSPCPSR register and SCR is a value from 0-255."]
-pub struct SCR_R(crate::FieldReader<u8, u8>);
-impl SCR_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        SCR_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SCR_R {
-    type Target = crate::FieldReader<u8, u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-#[doc = "Field `SCR` writer - Serial clock rate. The value SCR is used to generate the transmit and receive bit rate of the PrimeCell SSP. The bit rate is: F SSPCLK CPSDVSR x (1+SCR) where CPSDVSR is an even value from 2-254, programmed through the SSPCPSR register and SCR is a value from 0-255."]
-pub struct SCR_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SCR_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0xff << 8)) | ((value as u32 & 0xff) << 8);
-        self.w
-    }
-}
-#[doc = "Field `SPH` reader - SSPCLKOUT phase, applicable to Motorola SPI frame format only. See Motorola SPI frame format on page 2-10."]
-pub struct SPH_R(crate::FieldReader<bool, bool>);
-impl SPH_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        SPH_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SPH_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-#[doc = "Field `SPH` writer - SSPCLKOUT phase, applicable to Motorola SPI frame format only. See Motorola SPI frame format on page 2-10."]
-pub struct SPH_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SPH_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 7)) | ((value as u32 & 0x01) << 7);
-        self.w
-    }
-}
-#[doc = "Field `SPO` reader - SSPCLKOUT polarity, applicable to Motorola SPI frame format only. See Motorola SPI frame format on page 2-10."]
-pub struct SPO_R(crate::FieldReader<bool, bool>);
-impl SPO_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        SPO_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SPO_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-#[doc = "Field `SPO` writer - SSPCLKOUT polarity, applicable to Motorola SPI frame format only. See Motorola SPI frame format on page 2-10."]
-pub struct SPO_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SPO_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 6)) | ((value as u32 & 0x01) << 6);
-        self.w
-    }
-}
-#[doc = "Field `FRF` reader - Frame format: 00 Motorola SPI frame format. 01 TI synchronous serial frame format. 10 National Microwire frame format. 11 Reserved, undefined operation."]
-pub struct FRF_R(crate::FieldReader<u8, u8>);
-impl FRF_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        FRF_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for FRF_R {
-    type Target = crate::FieldReader<u8, u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-#[doc = "Field `FRF` writer - Frame format: 00 Motorola SPI frame format. 01 TI synchronous serial frame format. 10 National Microwire frame format. 11 Reserved, undefined operation."]
-pub struct FRF_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> FRF_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 4)) | ((value as u32 & 0x03) << 4);
-        self.w
-    }
-}
 #[doc = "Field `DSS` reader - Data Size Select: 0000 Reserved, undefined operation. 0001 Reserved, undefined operation. 0010 Reserved, undefined operation. 0011 4-bit data. 0100 5-bit data. 0101 6-bit data. 0110 7-bit data. 0111 8-bit data. 1000 9-bit data. 1001 10-bit data. 1010 11-bit data. 1011 12-bit data. 1100 13-bit data. 1101 14-bit data. 1110 15-bit data. 1111 16-bit data."]
-pub struct DSS_R(crate::FieldReader<u8, u8>);
-impl DSS_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        DSS_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DSS_R {
-    type Target = crate::FieldReader<u8, u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type DSS_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `DSS` writer - Data Size Select: 0000 Reserved, undefined operation. 0001 Reserved, undefined operation. 0010 Reserved, undefined operation. 0011 4-bit data. 0100 5-bit data. 0101 6-bit data. 0110 7-bit data. 0111 8-bit data. 1000 9-bit data. 1001 10-bit data. 1010 11-bit data. 1011 12-bit data. 1100 13-bit data. 1101 14-bit data. 1110 15-bit data. 1111 16-bit data."]
-pub struct DSS_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> DSS_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x0f) | (value as u32 & 0x0f);
-        self.w
-    }
-}
+pub type DSS_W<'a, const O: u8> = crate::FieldWriter<'a, u32, SSPCR0_SPEC, u8, u8, 4, O>;
+#[doc = "Field `FRF` reader - Frame format: 00 Motorola SPI frame format. 01 TI synchronous serial frame format. 10 National Microwire frame format. 11 Reserved, undefined operation."]
+pub type FRF_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `FRF` writer - Frame format: 00 Motorola SPI frame format. 01 TI synchronous serial frame format. 10 National Microwire frame format. 11 Reserved, undefined operation."]
+pub type FRF_W<'a, const O: u8> = crate::FieldWriter<'a, u32, SSPCR0_SPEC, u8, u8, 2, O>;
+#[doc = "Field `SPO` reader - SSPCLKOUT polarity, applicable to Motorola SPI frame format only. See Motorola SPI frame format on page 2-10."]
+pub type SPO_R = crate::BitReader<bool>;
+#[doc = "Field `SPO` writer - SSPCLKOUT polarity, applicable to Motorola SPI frame format only. See Motorola SPI frame format on page 2-10."]
+pub type SPO_W<'a, const O: u8> = crate::BitWriter<'a, u32, SSPCR0_SPEC, bool, O>;
+#[doc = "Field `SPH` reader - SSPCLKOUT phase, applicable to Motorola SPI frame format only. See Motorola SPI frame format on page 2-10."]
+pub type SPH_R = crate::BitReader<bool>;
+#[doc = "Field `SPH` writer - SSPCLKOUT phase, applicable to Motorola SPI frame format only. See Motorola SPI frame format on page 2-10."]
+pub type SPH_W<'a, const O: u8> = crate::BitWriter<'a, u32, SSPCR0_SPEC, bool, O>;
+#[doc = "Field `SCR` reader - Serial clock rate. The value SCR is used to generate the transmit and receive bit rate of the PrimeCell SSP. The bit rate is: F SSPCLK CPSDVSR x (1+SCR) where CPSDVSR is an even value from 2-254, programmed through the SSPCPSR register and SCR is a value from 0-255."]
+pub type SCR_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `SCR` writer - Serial clock rate. The value SCR is used to generate the transmit and receive bit rate of the PrimeCell SSP. The bit rate is: F SSPCLK CPSDVSR x (1+SCR) where CPSDVSR is an even value from 2-254, programmed through the SSPCPSR register and SCR is a value from 0-255."]
+pub type SCR_W<'a, const O: u8> = crate::FieldWriter<'a, u32, SSPCR0_SPEC, u8, u8, 8, O>;
 impl R {
-    #[doc = "Bits 8:15 - Serial clock rate. The value SCR is used to generate the transmit and receive bit rate of the PrimeCell SSP. The bit rate is: F SSPCLK CPSDVSR x (1+SCR) where CPSDVSR is an even value from 2-254, programmed through the SSPCPSR register and SCR is a value from 0-255."]
-    #[inline(always)]
-    pub fn scr(&self) -> SCR_R {
-        SCR_R::new(((self.bits >> 8) & 0xff) as u8)
-    }
-    #[doc = "Bit 7 - SSPCLKOUT phase, applicable to Motorola SPI frame format only. See Motorola SPI frame format on page 2-10."]
-    #[inline(always)]
-    pub fn sph(&self) -> SPH_R {
-        SPH_R::new(((self.bits >> 7) & 0x01) != 0)
-    }
-    #[doc = "Bit 6 - SSPCLKOUT polarity, applicable to Motorola SPI frame format only. See Motorola SPI frame format on page 2-10."]
-    #[inline(always)]
-    pub fn spo(&self) -> SPO_R {
-        SPO_R::new(((self.bits >> 6) & 0x01) != 0)
-    }
-    #[doc = "Bits 4:5 - Frame format: 00 Motorola SPI frame format. 01 TI synchronous serial frame format. 10 National Microwire frame format. 11 Reserved, undefined operation."]
-    #[inline(always)]
-    pub fn frf(&self) -> FRF_R {
-        FRF_R::new(((self.bits >> 4) & 0x03) as u8)
-    }
     #[doc = "Bits 0:3 - Data Size Select: 0000 Reserved, undefined operation. 0001 Reserved, undefined operation. 0010 Reserved, undefined operation. 0011 4-bit data. 0100 5-bit data. 0101 6-bit data. 0110 7-bit data. 0111 8-bit data. 1000 9-bit data. 1001 10-bit data. 1010 11-bit data. 1011 12-bit data. 1100 13-bit data. 1101 14-bit data. 1110 15-bit data. 1111 16-bit data."]
     #[inline(always)]
     pub fn dss(&self) -> DSS_R {
         DSS_R::new((self.bits & 0x0f) as u8)
     }
-}
-impl W {
-    #[doc = "Bits 8:15 - Serial clock rate. The value SCR is used to generate the transmit and receive bit rate of the PrimeCell SSP. The bit rate is: F SSPCLK CPSDVSR x (1+SCR) where CPSDVSR is an even value from 2-254, programmed through the SSPCPSR register and SCR is a value from 0-255."]
+    #[doc = "Bits 4:5 - Frame format: 00 Motorola SPI frame format. 01 TI synchronous serial frame format. 10 National Microwire frame format. 11 Reserved, undefined operation."]
     #[inline(always)]
-    pub fn scr(&mut self) -> SCR_W {
-        SCR_W { w: self }
-    }
-    #[doc = "Bit 7 - SSPCLKOUT phase, applicable to Motorola SPI frame format only. See Motorola SPI frame format on page 2-10."]
-    #[inline(always)]
-    pub fn sph(&mut self) -> SPH_W {
-        SPH_W { w: self }
+    pub fn frf(&self) -> FRF_R {
+        FRF_R::new(((self.bits >> 4) & 3) as u8)
     }
     #[doc = "Bit 6 - SSPCLKOUT polarity, applicable to Motorola SPI frame format only. See Motorola SPI frame format on page 2-10."]
     #[inline(always)]
-    pub fn spo(&mut self) -> SPO_W {
-        SPO_W { w: self }
+    pub fn spo(&self) -> SPO_R {
+        SPO_R::new(((self.bits >> 6) & 1) != 0)
+    }
+    #[doc = "Bit 7 - SSPCLKOUT phase, applicable to Motorola SPI frame format only. See Motorola SPI frame format on page 2-10."]
+    #[inline(always)]
+    pub fn sph(&self) -> SPH_R {
+        SPH_R::new(((self.bits >> 7) & 1) != 0)
+    }
+    #[doc = "Bits 8:15 - Serial clock rate. The value SCR is used to generate the transmit and receive bit rate of the PrimeCell SSP. The bit rate is: F SSPCLK CPSDVSR x (1+SCR) where CPSDVSR is an even value from 2-254, programmed through the SSPCPSR register and SCR is a value from 0-255."]
+    #[inline(always)]
+    pub fn scr(&self) -> SCR_R {
+        SCR_R::new(((self.bits >> 8) & 0xff) as u8)
+    }
+}
+impl W {
+    #[doc = "Bits 0:3 - Data Size Select: 0000 Reserved, undefined operation. 0001 Reserved, undefined operation. 0010 Reserved, undefined operation. 0011 4-bit data. 0100 5-bit data. 0101 6-bit data. 0110 7-bit data. 0111 8-bit data. 1000 9-bit data. 1001 10-bit data. 1010 11-bit data. 1011 12-bit data. 1100 13-bit data. 1101 14-bit data. 1110 15-bit data. 1111 16-bit data."]
+    #[inline(always)]
+    #[must_use]
+    pub fn dss(&mut self) -> DSS_W<0> {
+        DSS_W::new(self)
     }
     #[doc = "Bits 4:5 - Frame format: 00 Motorola SPI frame format. 01 TI synchronous serial frame format. 10 National Microwire frame format. 11 Reserved, undefined operation."]
     #[inline(always)]
-    pub fn frf(&mut self) -> FRF_W {
-        FRF_W { w: self }
+    #[must_use]
+    pub fn frf(&mut self) -> FRF_W<4> {
+        FRF_W::new(self)
     }
-    #[doc = "Bits 0:3 - Data Size Select: 0000 Reserved, undefined operation. 0001 Reserved, undefined operation. 0010 Reserved, undefined operation. 0011 4-bit data. 0100 5-bit data. 0101 6-bit data. 0110 7-bit data. 0111 8-bit data. 1000 9-bit data. 1001 10-bit data. 1010 11-bit data. 1011 12-bit data. 1100 13-bit data. 1101 14-bit data. 1110 15-bit data. 1111 16-bit data."]
+    #[doc = "Bit 6 - SSPCLKOUT polarity, applicable to Motorola SPI frame format only. See Motorola SPI frame format on page 2-10."]
     #[inline(always)]
-    pub fn dss(&mut self) -> DSS_W {
-        DSS_W { w: self }
+    #[must_use]
+    pub fn spo(&mut self) -> SPO_W<6> {
+        SPO_W::new(self)
+    }
+    #[doc = "Bit 7 - SSPCLKOUT phase, applicable to Motorola SPI frame format only. See Motorola SPI frame format on page 2-10."]
+    #[inline(always)]
+    #[must_use]
+    pub fn sph(&mut self) -> SPH_W<7> {
+        SPH_W::new(self)
+    }
+    #[doc = "Bits 8:15 - Serial clock rate. The value SCR is used to generate the transmit and receive bit rate of the PrimeCell SSP. The bit rate is: F SSPCLK CPSDVSR x (1+SCR) where CPSDVSR is an even value from 2-254, programmed through the SSPCPSR register and SCR is a value from 0-255."]
+    #[inline(always)]
+    #[must_use]
+    pub fn scr(&mut self) -> SCR_W<8> {
+        SCR_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
@@ -265,11 +135,10 @@ impl crate::Readable for SSPCR0_SPEC {
 #[doc = "`write(|w| ..)` method takes [sspcr0::W](W) writer structure"]
 impl crate::Writable for SSPCR0_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets SSPCR0 to value 0"]
 impl crate::Resettable for SSPCR0_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }
