@@ -14,25 +14,12 @@ impl From<crate::R<GPIO_IN_SPEC>> for R {
     }
 }
 #[doc = "Field `GPIO_IN` reader - Input value for GPIO0...29"]
-pub struct GPIO_IN_R(crate::FieldReader<u32, u32>);
-impl GPIO_IN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u32) -> Self {
-        GPIO_IN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for GPIO_IN_R {
-    type Target = crate::FieldReader<u32, u32>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type GPIO_IN_R = crate::FieldReader<u32, u32>;
 impl R {
     #[doc = "Bits 0:29 - Input value for GPIO0...29"]
     #[inline(always)]
     pub fn gpio_in(&self) -> GPIO_IN_R {
-        GPIO_IN_R::new((self.bits & 0x3fff_ffff) as u32)
+        GPIO_IN_R::new(self.bits & 0x3fff_ffff)
     }
 }
 #[doc = "Input value for GPIO pins  
@@ -50,8 +37,5 @@ impl crate::Readable for GPIO_IN_SPEC {
 }
 #[doc = "`reset()` method sets GPIO_IN to value 0"]
 impl crate::Resettable for GPIO_IN_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

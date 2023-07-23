@@ -13,66 +13,27 @@ impl From<crate::R<RTC_1_SPEC>> for R {
         R(reader)
     }
 }
-#[doc = "Field `YEAR` reader - Year"]
-pub struct YEAR_R(crate::FieldReader<u16, u16>);
-impl YEAR_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u16) -> Self {
-        YEAR_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for YEAR_R {
-    type Target = crate::FieldReader<u16, u16>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-#[doc = "Field `MONTH` reader - Month (1..12)"]
-pub struct MONTH_R(crate::FieldReader<u8, u8>);
-impl MONTH_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        MONTH_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for MONTH_R {
-    type Target = crate::FieldReader<u8, u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
 #[doc = "Field `DAY` reader - Day of the month (1..31)"]
-pub struct DAY_R(crate::FieldReader<u8, u8>);
-impl DAY_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        DAY_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DAY_R {
-    type Target = crate::FieldReader<u8, u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type DAY_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `MONTH` reader - Month (1..12)"]
+pub type MONTH_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `YEAR` reader - Year"]
+pub type YEAR_R = crate::FieldReader<u16, u16>;
 impl R {
-    #[doc = "Bits 12:23 - Year"]
+    #[doc = "Bits 0:4 - Day of the month (1..31)"]
     #[inline(always)]
-    pub fn year(&self) -> YEAR_R {
-        YEAR_R::new(((self.bits >> 12) & 0x0fff) as u16)
+    pub fn day(&self) -> DAY_R {
+        DAY_R::new((self.bits & 0x1f) as u8)
     }
     #[doc = "Bits 8:11 - Month (1..12)"]
     #[inline(always)]
     pub fn month(&self) -> MONTH_R {
         MONTH_R::new(((self.bits >> 8) & 0x0f) as u8)
     }
-    #[doc = "Bits 0:4 - Day of the month (1..31)"]
+    #[doc = "Bits 12:23 - Year"]
     #[inline(always)]
-    pub fn day(&self) -> DAY_R {
-        DAY_R::new((self.bits & 0x1f) as u8)
+    pub fn year(&self) -> YEAR_R {
+        YEAR_R::new(((self.bits >> 12) & 0x0fff) as u16)
     }
 }
 #[doc = "RTC register 1.  
@@ -90,8 +51,5 @@ impl crate::Readable for RTC_1_SPEC {
 }
 #[doc = "`reset()` method sets RTC_1 to value 0"]
 impl crate::Resettable for RTC_1_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

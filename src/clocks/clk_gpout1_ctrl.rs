@@ -34,189 +34,12 @@ impl From<crate::W<CLK_GPOUT1_CTRL_SPEC>> for W {
         W(writer)
     }
 }
-#[doc = "Field `NUDGE` reader - An edge on this signal shifts the phase of the output by 1 cycle of the input clock  
- This can be done at any time"]
-pub struct NUDGE_R(crate::FieldReader<bool, bool>);
-impl NUDGE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        NUDGE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for NUDGE_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-#[doc = "Field `NUDGE` writer - An edge on this signal shifts the phase of the output by 1 cycle of the input clock  
- This can be done at any time"]
-pub struct NUDGE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> NUDGE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 20)) | ((value as u32 & 0x01) << 20);
-        self.w
-    }
-}
-#[doc = "Field `PHASE` reader - This delays the enable signal by up to 3 cycles of the input clock  
- This must be set before the clock is enabled to have any effect"]
-pub struct PHASE_R(crate::FieldReader<u8, u8>);
-impl PHASE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        PHASE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PHASE_R {
-    type Target = crate::FieldReader<u8, u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-#[doc = "Field `PHASE` writer - This delays the enable signal by up to 3 cycles of the input clock  
- This must be set before the clock is enabled to have any effect"]
-pub struct PHASE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PHASE_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 16)) | ((value as u32 & 0x03) << 16);
-        self.w
-    }
-}
-#[doc = "Field `DC50` reader - Enables duty cycle correction for odd divisors"]
-pub struct DC50_R(crate::FieldReader<bool, bool>);
-impl DC50_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        DC50_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DC50_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-#[doc = "Field `DC50` writer - Enables duty cycle correction for odd divisors"]
-pub struct DC50_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> DC50_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 12)) | ((value as u32 & 0x01) << 12);
-        self.w
-    }
-}
-#[doc = "Field `ENABLE` reader - Starts and stops the clock generator cleanly"]
-pub struct ENABLE_R(crate::FieldReader<bool, bool>);
-impl ENABLE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        ENABLE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for ENABLE_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-#[doc = "Field `ENABLE` writer - Starts and stops the clock generator cleanly"]
-pub struct ENABLE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> ENABLE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 11)) | ((value as u32 & 0x01) << 11);
-        self.w
-    }
-}
-#[doc = "Field `KILL` reader - Asynchronously kills the clock generator"]
-pub struct KILL_R(crate::FieldReader<bool, bool>);
-impl KILL_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        KILL_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for KILL_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-#[doc = "Field `KILL` writer - Asynchronously kills the clock generator"]
-pub struct KILL_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> KILL_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 10)) | ((value as u32 & 0x01) << 10);
-        self.w
-    }
-}
+#[doc = "Field `AUXSRC` reader - Selects the auxiliary clock source, will glitch when switching"]
+pub type AUXSRC_R = crate::FieldReader<u8, AUXSRC_A>;
 #[doc = "Selects the auxiliary clock source, will glitch when switching  
 
 Value on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u8)]
 pub enum AUXSRC_A {
     #[doc = "0: `0`"]
@@ -248,14 +71,8 @@ impl From<AUXSRC_A> for u8 {
         variant as _
     }
 }
-#[doc = "Field `AUXSRC` reader - Selects the auxiliary clock source, will glitch when switching"]
-pub struct AUXSRC_R(crate::FieldReader<u8, AUXSRC_A>);
 impl AUXSRC_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        AUXSRC_R(crate::FieldReader::new(bits))
-    }
-    #[doc = r"Get enumerated values variant"]
+    #[doc = "Get enumerated values variant"]
     #[inline(always)]
     pub fn variant(&self) -> Option<AUXSRC_A> {
         match self.bits {
@@ -276,76 +93,63 @@ impl AUXSRC_R {
     #[doc = "Checks if the value of the field is `CLKSRC_PLL_SYS`"]
     #[inline(always)]
     pub fn is_clksrc_pll_sys(&self) -> bool {
-        **self == AUXSRC_A::CLKSRC_PLL_SYS
+        *self == AUXSRC_A::CLKSRC_PLL_SYS
     }
     #[doc = "Checks if the value of the field is `CLKSRC_GPIN0`"]
     #[inline(always)]
     pub fn is_clksrc_gpin0(&self) -> bool {
-        **self == AUXSRC_A::CLKSRC_GPIN0
+        *self == AUXSRC_A::CLKSRC_GPIN0
     }
     #[doc = "Checks if the value of the field is `CLKSRC_GPIN1`"]
     #[inline(always)]
     pub fn is_clksrc_gpin1(&self) -> bool {
-        **self == AUXSRC_A::CLKSRC_GPIN1
+        *self == AUXSRC_A::CLKSRC_GPIN1
     }
     #[doc = "Checks if the value of the field is `CLKSRC_PLL_USB`"]
     #[inline(always)]
     pub fn is_clksrc_pll_usb(&self) -> bool {
-        **self == AUXSRC_A::CLKSRC_PLL_USB
+        *self == AUXSRC_A::CLKSRC_PLL_USB
     }
     #[doc = "Checks if the value of the field is `ROSC_CLKSRC`"]
     #[inline(always)]
     pub fn is_rosc_clksrc(&self) -> bool {
-        **self == AUXSRC_A::ROSC_CLKSRC
+        *self == AUXSRC_A::ROSC_CLKSRC
     }
     #[doc = "Checks if the value of the field is `XOSC_CLKSRC`"]
     #[inline(always)]
     pub fn is_xosc_clksrc(&self) -> bool {
-        **self == AUXSRC_A::XOSC_CLKSRC
+        *self == AUXSRC_A::XOSC_CLKSRC
     }
     #[doc = "Checks if the value of the field is `CLK_SYS`"]
     #[inline(always)]
     pub fn is_clk_sys(&self) -> bool {
-        **self == AUXSRC_A::CLK_SYS
+        *self == AUXSRC_A::CLK_SYS
     }
     #[doc = "Checks if the value of the field is `CLK_USB`"]
     #[inline(always)]
     pub fn is_clk_usb(&self) -> bool {
-        **self == AUXSRC_A::CLK_USB
+        *self == AUXSRC_A::CLK_USB
     }
     #[doc = "Checks if the value of the field is `CLK_ADC`"]
     #[inline(always)]
     pub fn is_clk_adc(&self) -> bool {
-        **self == AUXSRC_A::CLK_ADC
+        *self == AUXSRC_A::CLK_ADC
     }
     #[doc = "Checks if the value of the field is `CLK_RTC`"]
     #[inline(always)]
     pub fn is_clk_rtc(&self) -> bool {
-        **self == AUXSRC_A::CLK_RTC
+        *self == AUXSRC_A::CLK_RTC
     }
     #[doc = "Checks if the value of the field is `CLK_REF`"]
     #[inline(always)]
     pub fn is_clk_ref(&self) -> bool {
-        **self == AUXSRC_A::CLK_REF
-    }
-}
-impl core::ops::Deref for AUXSRC_R {
-    type Target = crate::FieldReader<u8, AUXSRC_A>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
+        *self == AUXSRC_A::CLK_REF
     }
 }
 #[doc = "Field `AUXSRC` writer - Selects the auxiliary clock source, will glitch when switching"]
-pub struct AUXSRC_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> AUXSRC_W<'a> {
-    #[doc = r"Writes `variant` to the field"]
-    #[inline(always)]
-    pub fn variant(self, variant: AUXSRC_A) -> &'a mut W {
-        unsafe { self.bits(variant.into()) }
-    }
+pub type AUXSRC_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, CLK_GPOUT1_CTRL_SPEC, u8, AUXSRC_A, 4, O>;
+impl<'a, const O: u8> AUXSRC_W<'a, O> {
     #[doc = "`0`"]
     #[inline(always)]
     pub fn clksrc_pll_sys(self) -> &'a mut W {
@@ -401,79 +205,103 @@ impl<'a> AUXSRC_W<'a> {
     pub fn clk_ref(self) -> &'a mut W {
         self.variant(AUXSRC_A::CLK_REF)
     }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x0f << 5)) | ((value as u32 & 0x0f) << 5);
-        self.w
-    }
 }
-impl R {
-    #[doc = "Bit 20 - An edge on this signal shifts the phase of the output by 1 cycle of the input clock  
- This can be done at any time"]
-    #[inline(always)]
-    pub fn nudge(&self) -> NUDGE_R {
-        NUDGE_R::new(((self.bits >> 20) & 0x01) != 0)
-    }
-    #[doc = "Bits 16:17 - This delays the enable signal by up to 3 cycles of the input clock  
+#[doc = "Field `KILL` reader - Asynchronously kills the clock generator"]
+pub type KILL_R = crate::BitReader<bool>;
+#[doc = "Field `KILL` writer - Asynchronously kills the clock generator"]
+pub type KILL_W<'a, const O: u8> = crate::BitWriter<'a, u32, CLK_GPOUT1_CTRL_SPEC, bool, O>;
+#[doc = "Field `ENABLE` reader - Starts and stops the clock generator cleanly"]
+pub type ENABLE_R = crate::BitReader<bool>;
+#[doc = "Field `ENABLE` writer - Starts and stops the clock generator cleanly"]
+pub type ENABLE_W<'a, const O: u8> = crate::BitWriter<'a, u32, CLK_GPOUT1_CTRL_SPEC, bool, O>;
+#[doc = "Field `DC50` reader - Enables duty cycle correction for odd divisors"]
+pub type DC50_R = crate::BitReader<bool>;
+#[doc = "Field `DC50` writer - Enables duty cycle correction for odd divisors"]
+pub type DC50_W<'a, const O: u8> = crate::BitWriter<'a, u32, CLK_GPOUT1_CTRL_SPEC, bool, O>;
+#[doc = "Field `PHASE` reader - This delays the enable signal by up to 3 cycles of the input clock  
  This must be set before the clock is enabled to have any effect"]
-    #[inline(always)]
-    pub fn phase(&self) -> PHASE_R {
-        PHASE_R::new(((self.bits >> 16) & 0x03) as u8)
-    }
-    #[doc = "Bit 12 - Enables duty cycle correction for odd divisors"]
-    #[inline(always)]
-    pub fn dc50(&self) -> DC50_R {
-        DC50_R::new(((self.bits >> 12) & 0x01) != 0)
-    }
-    #[doc = "Bit 11 - Starts and stops the clock generator cleanly"]
-    #[inline(always)]
-    pub fn enable(&self) -> ENABLE_R {
-        ENABLE_R::new(((self.bits >> 11) & 0x01) != 0)
-    }
-    #[doc = "Bit 10 - Asynchronously kills the clock generator"]
-    #[inline(always)]
-    pub fn kill(&self) -> KILL_R {
-        KILL_R::new(((self.bits >> 10) & 0x01) != 0)
-    }
+pub type PHASE_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `PHASE` writer - This delays the enable signal by up to 3 cycles of the input clock  
+ This must be set before the clock is enabled to have any effect"]
+pub type PHASE_W<'a, const O: u8> = crate::FieldWriter<'a, u32, CLK_GPOUT1_CTRL_SPEC, u8, u8, 2, O>;
+#[doc = "Field `NUDGE` reader - An edge on this signal shifts the phase of the output by 1 cycle of the input clock  
+ This can be done at any time"]
+pub type NUDGE_R = crate::BitReader<bool>;
+#[doc = "Field `NUDGE` writer - An edge on this signal shifts the phase of the output by 1 cycle of the input clock  
+ This can be done at any time"]
+pub type NUDGE_W<'a, const O: u8> = crate::BitWriter<'a, u32, CLK_GPOUT1_CTRL_SPEC, bool, O>;
+impl R {
     #[doc = "Bits 5:8 - Selects the auxiliary clock source, will glitch when switching"]
     #[inline(always)]
     pub fn auxsrc(&self) -> AUXSRC_R {
         AUXSRC_R::new(((self.bits >> 5) & 0x0f) as u8)
     }
-}
-impl W {
-    #[doc = "Bit 20 - An edge on this signal shifts the phase of the output by 1 cycle of the input clock  
- This can be done at any time"]
+    #[doc = "Bit 10 - Asynchronously kills the clock generator"]
     #[inline(always)]
-    pub fn nudge(&mut self) -> NUDGE_W {
-        NUDGE_W { w: self }
+    pub fn kill(&self) -> KILL_R {
+        KILL_R::new(((self.bits >> 10) & 1) != 0)
+    }
+    #[doc = "Bit 11 - Starts and stops the clock generator cleanly"]
+    #[inline(always)]
+    pub fn enable(&self) -> ENABLE_R {
+        ENABLE_R::new(((self.bits >> 11) & 1) != 0)
+    }
+    #[doc = "Bit 12 - Enables duty cycle correction for odd divisors"]
+    #[inline(always)]
+    pub fn dc50(&self) -> DC50_R {
+        DC50_R::new(((self.bits >> 12) & 1) != 0)
     }
     #[doc = "Bits 16:17 - This delays the enable signal by up to 3 cycles of the input clock  
  This must be set before the clock is enabled to have any effect"]
     #[inline(always)]
-    pub fn phase(&mut self) -> PHASE_W {
-        PHASE_W { w: self }
+    pub fn phase(&self) -> PHASE_R {
+        PHASE_R::new(((self.bits >> 16) & 3) as u8)
     }
-    #[doc = "Bit 12 - Enables duty cycle correction for odd divisors"]
+    #[doc = "Bit 20 - An edge on this signal shifts the phase of the output by 1 cycle of the input clock  
+ This can be done at any time"]
     #[inline(always)]
-    pub fn dc50(&mut self) -> DC50_W {
-        DC50_W { w: self }
+    pub fn nudge(&self) -> NUDGE_R {
+        NUDGE_R::new(((self.bits >> 20) & 1) != 0)
     }
-    #[doc = "Bit 11 - Starts and stops the clock generator cleanly"]
+}
+impl W {
+    #[doc = "Bits 5:8 - Selects the auxiliary clock source, will glitch when switching"]
     #[inline(always)]
-    pub fn enable(&mut self) -> ENABLE_W {
-        ENABLE_W { w: self }
+    #[must_use]
+    pub fn auxsrc(&mut self) -> AUXSRC_W<5> {
+        AUXSRC_W::new(self)
     }
     #[doc = "Bit 10 - Asynchronously kills the clock generator"]
     #[inline(always)]
-    pub fn kill(&mut self) -> KILL_W {
-        KILL_W { w: self }
+    #[must_use]
+    pub fn kill(&mut self) -> KILL_W<10> {
+        KILL_W::new(self)
     }
-    #[doc = "Bits 5:8 - Selects the auxiliary clock source, will glitch when switching"]
+    #[doc = "Bit 11 - Starts and stops the clock generator cleanly"]
     #[inline(always)]
-    pub fn auxsrc(&mut self) -> AUXSRC_W {
-        AUXSRC_W { w: self }
+    #[must_use]
+    pub fn enable(&mut self) -> ENABLE_W<11> {
+        ENABLE_W::new(self)
+    }
+    #[doc = "Bit 12 - Enables duty cycle correction for odd divisors"]
+    #[inline(always)]
+    #[must_use]
+    pub fn dc50(&mut self) -> DC50_W<12> {
+        DC50_W::new(self)
+    }
+    #[doc = "Bits 16:17 - This delays the enable signal by up to 3 cycles of the input clock  
+ This must be set before the clock is enabled to have any effect"]
+    #[inline(always)]
+    #[must_use]
+    pub fn phase(&mut self) -> PHASE_W<16> {
+        PHASE_W::new(self)
+    }
+    #[doc = "Bit 20 - An edge on this signal shifts the phase of the output by 1 cycle of the input clock  
+ This can be done at any time"]
+    #[inline(always)]
+    #[must_use]
+    pub fn nudge(&mut self) -> NUDGE_W<20> {
+        NUDGE_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
@@ -498,11 +326,10 @@ impl crate::Readable for CLK_GPOUT1_CTRL_SPEC {
 #[doc = "`write(|w| ..)` method takes [clk_gpout1_ctrl::W](W) writer structure"]
 impl crate::Writable for CLK_GPOUT1_CTRL_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets CLK_GPOUT1_CTRL to value 0"]
 impl crate::Resettable for CLK_GPOUT1_CTRL_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

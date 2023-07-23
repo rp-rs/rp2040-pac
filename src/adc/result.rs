@@ -14,20 +14,7 @@ impl From<crate::R<RESULT_SPEC>> for R {
     }
 }
 #[doc = "Field `RESULT` reader - "]
-pub struct RESULT_R(crate::FieldReader<u16, u16>);
-impl RESULT_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u16) -> Self {
-        RESULT_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RESULT_R {
-    type Target = crate::FieldReader<u16, u16>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RESULT_R = crate::FieldReader<u16, u16>;
 impl R {
     #[doc = "Bits 0:11"]
     #[inline(always)]
@@ -50,8 +37,5 @@ impl crate::Readable for RESULT_SPEC {
 }
 #[doc = "`reset()` method sets RESULT to value 0"]
 impl crate::Resettable for RESULT_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

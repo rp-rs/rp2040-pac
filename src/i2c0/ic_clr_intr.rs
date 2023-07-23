@@ -16,27 +16,14 @@ impl From<crate::R<IC_CLR_INTR_SPEC>> for R {
 #[doc = "Field `CLR_INTR` reader - Read this register to clear the combined interrupt, all individual interrupts, and the IC_TX_ABRT_SOURCE register. This bit does not clear hardware clearable interrupts but software clearable interrupts. Refer to Bit 9 of the IC_TX_ABRT_SOURCE register for an exception to clearing IC_TX_ABRT_SOURCE.  
 
  Reset value: 0x0"]
-pub struct CLR_INTR_R(crate::FieldReader<bool, bool>);
-impl CLR_INTR_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CLR_INTR_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CLR_INTR_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CLR_INTR_R = crate::BitReader<bool>;
 impl R {
     #[doc = "Bit 0 - Read this register to clear the combined interrupt, all individual interrupts, and the IC_TX_ABRT_SOURCE register. This bit does not clear hardware clearable interrupts but software clearable interrupts. Refer to Bit 9 of the IC_TX_ABRT_SOURCE register for an exception to clearing IC_TX_ABRT_SOURCE.  
 
  Reset value: 0x0"]
     #[inline(always)]
     pub fn clr_intr(&self) -> CLR_INTR_R {
-        CLR_INTR_R::new((self.bits & 0x01) != 0)
+        CLR_INTR_R::new((self.bits & 1) != 0)
     }
 }
 #[doc = "Clear Combined and Individual Interrupt Register  
@@ -54,8 +41,5 @@ impl crate::Readable for IC_CLR_INTR_SPEC {
 }
 #[doc = "`reset()` method sets IC_CLR_INTR to value 0"]
 impl crate::Resettable for IC_CLR_INTR_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

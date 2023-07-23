@@ -14,20 +14,7 @@ impl From<crate::R<GPIO_HI_IN_SPEC>> for R {
     }
 }
 #[doc = "Field `GPIO_HI_IN` reader - Input value on QSPI IO in order 0..5: SCLK, SSn, SD0, SD1, SD2, SD3"]
-pub struct GPIO_HI_IN_R(crate::FieldReader<u8, u8>);
-impl GPIO_HI_IN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        GPIO_HI_IN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for GPIO_HI_IN_R {
-    type Target = crate::FieldReader<u8, u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type GPIO_HI_IN_R = crate::FieldReader<u8, u8>;
 impl R {
     #[doc = "Bits 0:5 - Input value on QSPI IO in order 0..5: SCLK, SSn, SD0, SD1, SD2, SD3"]
     #[inline(always)]
@@ -50,8 +37,5 @@ impl crate::Readable for GPIO_HI_IN_SPEC {
 }
 #[doc = "`reset()` method sets GPIO_HI_IN to value 0"]
 impl crate::Resettable for GPIO_HI_IN_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

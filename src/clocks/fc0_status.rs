@@ -13,166 +13,62 @@ impl From<crate::R<FC0_STATUS_SPEC>> for R {
         R(reader)
     }
 }
-#[doc = "Field `DIED` reader - Test clock stopped during test"]
-pub struct DIED_R(crate::FieldReader<bool, bool>);
-impl DIED_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        DIED_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DIED_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-#[doc = "Field `FAST` reader - Test clock faster than expected, only valid when status_done=1"]
-pub struct FAST_R(crate::FieldReader<bool, bool>);
-impl FAST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        FAST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for FAST_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-#[doc = "Field `SLOW` reader - Test clock slower than expected, only valid when status_done=1"]
-pub struct SLOW_R(crate::FieldReader<bool, bool>);
-impl SLOW_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        SLOW_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SLOW_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-#[doc = "Field `FAIL` reader - Test failed"]
-pub struct FAIL_R(crate::FieldReader<bool, bool>);
-impl FAIL_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        FAIL_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for FAIL_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-#[doc = "Field `WAITING` reader - Waiting for test clock to start"]
-pub struct WAITING_R(crate::FieldReader<bool, bool>);
-impl WAITING_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        WAITING_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for WAITING_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-#[doc = "Field `RUNNING` reader - Test running"]
-pub struct RUNNING_R(crate::FieldReader<bool, bool>);
-impl RUNNING_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        RUNNING_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RUNNING_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-#[doc = "Field `DONE` reader - Test complete"]
-pub struct DONE_R(crate::FieldReader<bool, bool>);
-impl DONE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        DONE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DONE_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
 #[doc = "Field `PASS` reader - Test passed"]
-pub struct PASS_R(crate::FieldReader<bool, bool>);
-impl PASS_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        PASS_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PASS_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PASS_R = crate::BitReader<bool>;
+#[doc = "Field `DONE` reader - Test complete"]
+pub type DONE_R = crate::BitReader<bool>;
+#[doc = "Field `RUNNING` reader - Test running"]
+pub type RUNNING_R = crate::BitReader<bool>;
+#[doc = "Field `WAITING` reader - Waiting for test clock to start"]
+pub type WAITING_R = crate::BitReader<bool>;
+#[doc = "Field `FAIL` reader - Test failed"]
+pub type FAIL_R = crate::BitReader<bool>;
+#[doc = "Field `SLOW` reader - Test clock slower than expected, only valid when status_done=1"]
+pub type SLOW_R = crate::BitReader<bool>;
+#[doc = "Field `FAST` reader - Test clock faster than expected, only valid when status_done=1"]
+pub type FAST_R = crate::BitReader<bool>;
+#[doc = "Field `DIED` reader - Test clock stopped during test"]
+pub type DIED_R = crate::BitReader<bool>;
 impl R {
-    #[doc = "Bit 28 - Test clock stopped during test"]
+    #[doc = "Bit 0 - Test passed"]
     #[inline(always)]
-    pub fn died(&self) -> DIED_R {
-        DIED_R::new(((self.bits >> 28) & 0x01) != 0)
-    }
-    #[doc = "Bit 24 - Test clock faster than expected, only valid when status_done=1"]
-    #[inline(always)]
-    pub fn fast(&self) -> FAST_R {
-        FAST_R::new(((self.bits >> 24) & 0x01) != 0)
-    }
-    #[doc = "Bit 20 - Test clock slower than expected, only valid when status_done=1"]
-    #[inline(always)]
-    pub fn slow(&self) -> SLOW_R {
-        SLOW_R::new(((self.bits >> 20) & 0x01) != 0)
-    }
-    #[doc = "Bit 16 - Test failed"]
-    #[inline(always)]
-    pub fn fail(&self) -> FAIL_R {
-        FAIL_R::new(((self.bits >> 16) & 0x01) != 0)
-    }
-    #[doc = "Bit 12 - Waiting for test clock to start"]
-    #[inline(always)]
-    pub fn waiting(&self) -> WAITING_R {
-        WAITING_R::new(((self.bits >> 12) & 0x01) != 0)
-    }
-    #[doc = "Bit 8 - Test running"]
-    #[inline(always)]
-    pub fn running(&self) -> RUNNING_R {
-        RUNNING_R::new(((self.bits >> 8) & 0x01) != 0)
+    pub fn pass(&self) -> PASS_R {
+        PASS_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 4 - Test complete"]
     #[inline(always)]
     pub fn done(&self) -> DONE_R {
-        DONE_R::new(((self.bits >> 4) & 0x01) != 0)
+        DONE_R::new(((self.bits >> 4) & 1) != 0)
     }
-    #[doc = "Bit 0 - Test passed"]
+    #[doc = "Bit 8 - Test running"]
     #[inline(always)]
-    pub fn pass(&self) -> PASS_R {
-        PASS_R::new((self.bits & 0x01) != 0)
+    pub fn running(&self) -> RUNNING_R {
+        RUNNING_R::new(((self.bits >> 8) & 1) != 0)
+    }
+    #[doc = "Bit 12 - Waiting for test clock to start"]
+    #[inline(always)]
+    pub fn waiting(&self) -> WAITING_R {
+        WAITING_R::new(((self.bits >> 12) & 1) != 0)
+    }
+    #[doc = "Bit 16 - Test failed"]
+    #[inline(always)]
+    pub fn fail(&self) -> FAIL_R {
+        FAIL_R::new(((self.bits >> 16) & 1) != 0)
+    }
+    #[doc = "Bit 20 - Test clock slower than expected, only valid when status_done=1"]
+    #[inline(always)]
+    pub fn slow(&self) -> SLOW_R {
+        SLOW_R::new(((self.bits >> 20) & 1) != 0)
+    }
+    #[doc = "Bit 24 - Test clock faster than expected, only valid when status_done=1"]
+    #[inline(always)]
+    pub fn fast(&self) -> FAST_R {
+        FAST_R::new(((self.bits >> 24) & 1) != 0)
+    }
+    #[doc = "Bit 28 - Test clock stopped during test"]
+    #[inline(always)]
+    pub fn died(&self) -> DIED_R {
+        DIED_R::new(((self.bits >> 28) & 1) != 0)
     }
 }
 #[doc = "Frequency counter status  
@@ -190,8 +86,5 @@ impl crate::Readable for FC0_STATUS_SPEC {
 }
 #[doc = "`reset()` method sets FC0_STATUS to value 0"]
 impl crate::Resettable for FC0_STATUS_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

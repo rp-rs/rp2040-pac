@@ -34,96 +34,6 @@ impl From<crate::W<CTRL_SPEC>> for W {
         W(writer)
     }
 }
-#[doc = "Field `POWER_DOWN` reader - When 1, the cache memories are powered down. They retain state,  
- but can not be accessed. This reduces static power dissipation.  
- Writing 1 to this bit forces CTRL_EN to 0, i.e. the cache cannot  
- be enabled when powered down.  
- Cache-as-SRAM accesses will produce a bus error response when  
- the cache is powered down."]
-pub struct POWER_DOWN_R(crate::FieldReader<bool, bool>);
-impl POWER_DOWN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        POWER_DOWN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for POWER_DOWN_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-#[doc = "Field `POWER_DOWN` writer - When 1, the cache memories are powered down. They retain state,  
- but can not be accessed. This reduces static power dissipation.  
- Writing 1 to this bit forces CTRL_EN to 0, i.e. the cache cannot  
- be enabled when powered down.  
- Cache-as-SRAM accesses will produce a bus error response when  
- the cache is powered down."]
-pub struct POWER_DOWN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> POWER_DOWN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 3)) | ((value as u32 & 0x01) << 3);
-        self.w
-    }
-}
-#[doc = "Field `ERR_BADWRITE` reader - When 1, writes to any alias other than 0x0 (caching, allocating)  
- will produce a bus fault. When 0, these writes are silently ignored.  
- In either case, writes to the 0x0 alias will deallocate on tag match,  
- as usual."]
-pub struct ERR_BADWRITE_R(crate::FieldReader<bool, bool>);
-impl ERR_BADWRITE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        ERR_BADWRITE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for ERR_BADWRITE_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-#[doc = "Field `ERR_BADWRITE` writer - When 1, writes to any alias other than 0x0 (caching, allocating)  
- will produce a bus fault. When 0, these writes are silently ignored.  
- In either case, writes to the 0x0 alias will deallocate on tag match,  
- as usual."]
-pub struct ERR_BADWRITE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> ERR_BADWRITE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u32 & 0x01) << 1);
-        self.w
-    }
-}
 #[doc = "Field `EN` reader - When 1, enable the cache. When the cache is disabled, all XIP accesses  
  will go straight to the flash, without querying the cache. When enabled,  
  cacheable XIP accesses will query the cache, and the flash will  
@@ -131,20 +41,7 @@ impl<'a> ERR_BADWRITE_W<'a> {
 
  If the cache is enabled, cache-as-SRAM accesses have no effect on the  
  cache data RAM, and will produce a bus error response."]
-pub struct EN_R(crate::FieldReader<bool, bool>);
-impl EN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        EN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for EN_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type EN_R = crate::BitReader<bool>;
 #[doc = "Field `EN` writer - When 1, enable the cache. When the cache is disabled, all XIP accesses  
  will go straight to the flash, without querying the cache. When enabled,  
  cacheable XIP accesses will query the cache, and the flash will  
@@ -152,46 +49,32 @@ impl core::ops::Deref for EN_R {
 
  If the cache is enabled, cache-as-SRAM accesses have no effect on the  
  cache data RAM, and will produce a bus error response."]
-pub struct EN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> EN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
-        self.w
-    }
-}
-impl R {
-    #[doc = "Bit 3 - When 1, the cache memories are powered down. They retain state,  
+pub type EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, CTRL_SPEC, bool, O>;
+#[doc = "Field `ERR_BADWRITE` reader - When 1, writes to any alias other than 0x0 (caching, allocating)  
+ will produce a bus fault. When 0, these writes are silently ignored.  
+ In either case, writes to the 0x0 alias will deallocate on tag match,  
+ as usual."]
+pub type ERR_BADWRITE_R = crate::BitReader<bool>;
+#[doc = "Field `ERR_BADWRITE` writer - When 1, writes to any alias other than 0x0 (caching, allocating)  
+ will produce a bus fault. When 0, these writes are silently ignored.  
+ In either case, writes to the 0x0 alias will deallocate on tag match,  
+ as usual."]
+pub type ERR_BADWRITE_W<'a, const O: u8> = crate::BitWriter<'a, u32, CTRL_SPEC, bool, O>;
+#[doc = "Field `POWER_DOWN` reader - When 1, the cache memories are powered down. They retain state,  
  but can not be accessed. This reduces static power dissipation.  
  Writing 1 to this bit forces CTRL_EN to 0, i.e. the cache cannot  
  be enabled when powered down.  
  Cache-as-SRAM accesses will produce a bus error response when  
  the cache is powered down."]
-    #[inline(always)]
-    pub fn power_down(&self) -> POWER_DOWN_R {
-        POWER_DOWN_R::new(((self.bits >> 3) & 0x01) != 0)
-    }
-    #[doc = "Bit 1 - When 1, writes to any alias other than 0x0 (caching, allocating)  
- will produce a bus fault. When 0, these writes are silently ignored.  
- In either case, writes to the 0x0 alias will deallocate on tag match,  
- as usual."]
-    #[inline(always)]
-    pub fn err_badwrite(&self) -> ERR_BADWRITE_R {
-        ERR_BADWRITE_R::new(((self.bits >> 1) & 0x01) != 0)
-    }
+pub type POWER_DOWN_R = crate::BitReader<bool>;
+#[doc = "Field `POWER_DOWN` writer - When 1, the cache memories are powered down. They retain state,  
+ but can not be accessed. This reduces static power dissipation.  
+ Writing 1 to this bit forces CTRL_EN to 0, i.e. the cache cannot  
+ be enabled when powered down.  
+ Cache-as-SRAM accesses will produce a bus error response when  
+ the cache is powered down."]
+pub type POWER_DOWN_W<'a, const O: u8> = crate::BitWriter<'a, u32, CTRL_SPEC, bool, O>;
+impl R {
     #[doc = "Bit 0 - When 1, enable the cache. When the cache is disabled, all XIP accesses  
  will go straight to the flash, without querying the cache. When enabled,  
  cacheable XIP accesses will query the cache, and the flash will  
@@ -201,10 +84,16 @@ impl R {
  cache data RAM, and will produce a bus error response."]
     #[inline(always)]
     pub fn en(&self) -> EN_R {
-        EN_R::new((self.bits & 0x01) != 0)
+        EN_R::new((self.bits & 1) != 0)
     }
-}
-impl W {
+    #[doc = "Bit 1 - When 1, writes to any alias other than 0x0 (caching, allocating)  
+ will produce a bus fault. When 0, these writes are silently ignored.  
+ In either case, writes to the 0x0 alias will deallocate on tag match,  
+ as usual."]
+    #[inline(always)]
+    pub fn err_badwrite(&self) -> ERR_BADWRITE_R {
+        ERR_BADWRITE_R::new(((self.bits >> 1) & 1) != 0)
+    }
     #[doc = "Bit 3 - When 1, the cache memories are powered down. They retain state,  
  but can not be accessed. This reduces static power dissipation.  
  Writing 1 to this bit forces CTRL_EN to 0, i.e. the cache cannot  
@@ -212,17 +101,11 @@ impl W {
  Cache-as-SRAM accesses will produce a bus error response when  
  the cache is powered down."]
     #[inline(always)]
-    pub fn power_down(&mut self) -> POWER_DOWN_W {
-        POWER_DOWN_W { w: self }
+    pub fn power_down(&self) -> POWER_DOWN_R {
+        POWER_DOWN_R::new(((self.bits >> 3) & 1) != 0)
     }
-    #[doc = "Bit 1 - When 1, writes to any alias other than 0x0 (caching, allocating)  
- will produce a bus fault. When 0, these writes are silently ignored.  
- In either case, writes to the 0x0 alias will deallocate on tag match,  
- as usual."]
-    #[inline(always)]
-    pub fn err_badwrite(&mut self) -> ERR_BADWRITE_W {
-        ERR_BADWRITE_W { w: self }
-    }
+}
+impl W {
     #[doc = "Bit 0 - When 1, enable the cache. When the cache is disabled, all XIP accesses  
  will go straight to the flash, without querying the cache. When enabled,  
  cacheable XIP accesses will query the cache, and the flash will  
@@ -231,8 +114,29 @@ impl W {
  If the cache is enabled, cache-as-SRAM accesses have no effect on the  
  cache data RAM, and will produce a bus error response."]
     #[inline(always)]
-    pub fn en(&mut self) -> EN_W {
-        EN_W { w: self }
+    #[must_use]
+    pub fn en(&mut self) -> EN_W<0> {
+        EN_W::new(self)
+    }
+    #[doc = "Bit 1 - When 1, writes to any alias other than 0x0 (caching, allocating)  
+ will produce a bus fault. When 0, these writes are silently ignored.  
+ In either case, writes to the 0x0 alias will deallocate on tag match,  
+ as usual."]
+    #[inline(always)]
+    #[must_use]
+    pub fn err_badwrite(&mut self) -> ERR_BADWRITE_W<1> {
+        ERR_BADWRITE_W::new(self)
+    }
+    #[doc = "Bit 3 - When 1, the cache memories are powered down. They retain state,  
+ but can not be accessed. This reduces static power dissipation.  
+ Writing 1 to this bit forces CTRL_EN to 0, i.e. the cache cannot  
+ be enabled when powered down.  
+ Cache-as-SRAM accesses will produce a bus error response when  
+ the cache is powered down."]
+    #[inline(always)]
+    #[must_use]
+    pub fn power_down(&mut self) -> POWER_DOWN_W<3> {
+        POWER_DOWN_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
@@ -257,11 +161,10 @@ impl crate::Readable for CTRL_SPEC {
 #[doc = "`write(|w| ..)` method takes [ctrl::W](W) writer structure"]
 impl crate::Writable for CTRL_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets CTRL to value 0x03"]
 impl crate::Resettable for CTRL_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x03
-    }
+    const RESET_VALUE: Self::Ux = 0x03;
 }

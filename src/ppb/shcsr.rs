@@ -35,54 +35,22 @@ impl From<crate::W<SHCSR_SPEC>> for W {
     }
 }
 #[doc = "Field `SVCALLPENDED` reader - Reads as 1 if SVCall is Pending. Write 1 to set pending SVCall, write 0 to clear pending SVCall."]
-pub struct SVCALLPENDED_R(crate::FieldReader<bool, bool>);
-impl SVCALLPENDED_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        SVCALLPENDED_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SVCALLPENDED_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SVCALLPENDED_R = crate::BitReader<bool>;
 #[doc = "Field `SVCALLPENDED` writer - Reads as 1 if SVCall is Pending. Write 1 to set pending SVCall, write 0 to clear pending SVCall."]
-pub struct SVCALLPENDED_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SVCALLPENDED_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 15)) | ((value as u32 & 0x01) << 15);
-        self.w
-    }
-}
+pub type SVCALLPENDED_W<'a, const O: u8> = crate::BitWriter<'a, u32, SHCSR_SPEC, bool, O>;
 impl R {
     #[doc = "Bit 15 - Reads as 1 if SVCall is Pending. Write 1 to set pending SVCall, write 0 to clear pending SVCall."]
     #[inline(always)]
     pub fn svcallpended(&self) -> SVCALLPENDED_R {
-        SVCALLPENDED_R::new(((self.bits >> 15) & 0x01) != 0)
+        SVCALLPENDED_R::new(((self.bits >> 15) & 1) != 0)
     }
 }
 impl W {
     #[doc = "Bit 15 - Reads as 1 if SVCall is Pending. Write 1 to set pending SVCall, write 0 to clear pending SVCall."]
     #[inline(always)]
-    pub fn svcallpended(&mut self) -> SVCALLPENDED_W {
-        SVCALLPENDED_W { w: self }
+    #[must_use]
+    pub fn svcallpended(&mut self) -> SVCALLPENDED_W<15> {
+        SVCALLPENDED_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
@@ -107,11 +75,10 @@ impl crate::Readable for SHCSR_SPEC {
 #[doc = "`write(|w| ..)` method takes [shcsr::W](W) writer structure"]
 impl crate::Writable for SHCSR_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets SHCSR to value 0"]
 impl crate::Resettable for SHCSR_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

@@ -13,46 +13,20 @@ impl From<crate::R<REASON_SPEC>> for R {
         R(reader)
     }
 }
-#[doc = "Field `FORCE` reader - "]
-pub struct FORCE_R(crate::FieldReader<bool, bool>);
-impl FORCE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        FORCE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for FORCE_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
 #[doc = "Field `TIMER` reader - "]
-pub struct TIMER_R(crate::FieldReader<bool, bool>);
-impl TIMER_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        TIMER_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TIMER_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type TIMER_R = crate::BitReader<bool>;
+#[doc = "Field `FORCE` reader - "]
+pub type FORCE_R = crate::BitReader<bool>;
 impl R {
-    #[doc = "Bit 1"]
-    #[inline(always)]
-    pub fn force(&self) -> FORCE_R {
-        FORCE_R::new(((self.bits >> 1) & 0x01) != 0)
-    }
     #[doc = "Bit 0"]
     #[inline(always)]
     pub fn timer(&self) -> TIMER_R {
-        TIMER_R::new((self.bits & 0x01) != 0)
+        TIMER_R::new((self.bits & 1) != 0)
+    }
+    #[doc = "Bit 1"]
+    #[inline(always)]
+    pub fn force(&self) -> FORCE_R {
+        FORCE_R::new(((self.bits >> 1) & 1) != 0)
     }
 }
 #[doc = "Logs the reason for the last reset. Both bits are zero for the case of a hardware reset.  
@@ -70,8 +44,5 @@ impl crate::Readable for REASON_SPEC {
 }
 #[doc = "`reset()` method sets REASON to value 0"]
 impl crate::Resettable for REASON_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

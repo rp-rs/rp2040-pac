@@ -36,33 +36,10 @@ impl From<crate::W<MPU_RNR_SPEC>> for W {
 }
 #[doc = "Field `REGION` reader - Indicates the MPU region referenced by the MPU_RBAR and MPU_RASR registers.  
  The MPU supports 8 memory regions, so the permitted values of this field are 0-7."]
-pub struct REGION_R(crate::FieldReader<u8, u8>);
-impl REGION_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        REGION_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for REGION_R {
-    type Target = crate::FieldReader<u8, u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type REGION_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `REGION` writer - Indicates the MPU region referenced by the MPU_RBAR and MPU_RASR registers.  
  The MPU supports 8 memory regions, so the permitted values of this field are 0-7."]
-pub struct REGION_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> REGION_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x0f) | (value as u32 & 0x0f);
-        self.w
-    }
-}
+pub type REGION_W<'a, const O: u8> = crate::FieldWriter<'a, u32, MPU_RNR_SPEC, u8, u8, 4, O>;
 impl R {
     #[doc = "Bits 0:3 - Indicates the MPU region referenced by the MPU_RBAR and MPU_RASR registers.  
  The MPU supports 8 memory regions, so the permitted values of this field are 0-7."]
@@ -75,8 +52,9 @@ impl W {
     #[doc = "Bits 0:3 - Indicates the MPU region referenced by the MPU_RBAR and MPU_RASR registers.  
  The MPU supports 8 memory regions, so the permitted values of this field are 0-7."]
     #[inline(always)]
-    pub fn region(&mut self) -> REGION_W {
-        REGION_W { w: self }
+    #[must_use]
+    pub fn region(&mut self) -> REGION_W<0> {
+        REGION_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
@@ -101,11 +79,10 @@ impl crate::Readable for MPU_RNR_SPEC {
 #[doc = "`write(|w| ..)` method takes [mpu_rnr::W](W) writer structure"]
 impl crate::Writable for MPU_RNR_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets MPU_RNR to value 0"]
 impl crate::Resettable for MPU_RNR_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

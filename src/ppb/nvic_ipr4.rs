@@ -34,156 +34,68 @@ impl From<crate::W<NVIC_IPR4_SPEC>> for W {
         W(writer)
     }
 }
-#[doc = "Field `IP_19` reader - Priority of interrupt 19"]
-pub struct IP_19_R(crate::FieldReader<u8, u8>);
-impl IP_19_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        IP_19_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for IP_19_R {
-    type Target = crate::FieldReader<u8, u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-#[doc = "Field `IP_19` writer - Priority of interrupt 19"]
-pub struct IP_19_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> IP_19_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 30)) | ((value as u32 & 0x03) << 30);
-        self.w
-    }
-}
-#[doc = "Field `IP_18` reader - Priority of interrupt 18"]
-pub struct IP_18_R(crate::FieldReader<u8, u8>);
-impl IP_18_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        IP_18_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for IP_18_R {
-    type Target = crate::FieldReader<u8, u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-#[doc = "Field `IP_18` writer - Priority of interrupt 18"]
-pub struct IP_18_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> IP_18_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 22)) | ((value as u32 & 0x03) << 22);
-        self.w
-    }
-}
-#[doc = "Field `IP_17` reader - Priority of interrupt 17"]
-pub struct IP_17_R(crate::FieldReader<u8, u8>);
-impl IP_17_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        IP_17_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for IP_17_R {
-    type Target = crate::FieldReader<u8, u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-#[doc = "Field `IP_17` writer - Priority of interrupt 17"]
-pub struct IP_17_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> IP_17_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 14)) | ((value as u32 & 0x03) << 14);
-        self.w
-    }
-}
 #[doc = "Field `IP_16` reader - Priority of interrupt 16"]
-pub struct IP_16_R(crate::FieldReader<u8, u8>);
-impl IP_16_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        IP_16_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for IP_16_R {
-    type Target = crate::FieldReader<u8, u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type IP_16_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `IP_16` writer - Priority of interrupt 16"]
-pub struct IP_16_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> IP_16_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 6)) | ((value as u32 & 0x03) << 6);
-        self.w
-    }
-}
+pub type IP_16_W<'a, const O: u8> = crate::FieldWriter<'a, u32, NVIC_IPR4_SPEC, u8, u8, 2, O>;
+#[doc = "Field `IP_17` reader - Priority of interrupt 17"]
+pub type IP_17_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `IP_17` writer - Priority of interrupt 17"]
+pub type IP_17_W<'a, const O: u8> = crate::FieldWriter<'a, u32, NVIC_IPR4_SPEC, u8, u8, 2, O>;
+#[doc = "Field `IP_18` reader - Priority of interrupt 18"]
+pub type IP_18_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `IP_18` writer - Priority of interrupt 18"]
+pub type IP_18_W<'a, const O: u8> = crate::FieldWriter<'a, u32, NVIC_IPR4_SPEC, u8, u8, 2, O>;
+#[doc = "Field `IP_19` reader - Priority of interrupt 19"]
+pub type IP_19_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `IP_19` writer - Priority of interrupt 19"]
+pub type IP_19_W<'a, const O: u8> = crate::FieldWriter<'a, u32, NVIC_IPR4_SPEC, u8, u8, 2, O>;
 impl R {
-    #[doc = "Bits 30:31 - Priority of interrupt 19"]
+    #[doc = "Bits 6:7 - Priority of interrupt 16"]
     #[inline(always)]
-    pub fn ip_19(&self) -> IP_19_R {
-        IP_19_R::new(((self.bits >> 30) & 0x03) as u8)
-    }
-    #[doc = "Bits 22:23 - Priority of interrupt 18"]
-    #[inline(always)]
-    pub fn ip_18(&self) -> IP_18_R {
-        IP_18_R::new(((self.bits >> 22) & 0x03) as u8)
+    pub fn ip_16(&self) -> IP_16_R {
+        IP_16_R::new(((self.bits >> 6) & 3) as u8)
     }
     #[doc = "Bits 14:15 - Priority of interrupt 17"]
     #[inline(always)]
     pub fn ip_17(&self) -> IP_17_R {
-        IP_17_R::new(((self.bits >> 14) & 0x03) as u8)
-    }
-    #[doc = "Bits 6:7 - Priority of interrupt 16"]
-    #[inline(always)]
-    pub fn ip_16(&self) -> IP_16_R {
-        IP_16_R::new(((self.bits >> 6) & 0x03) as u8)
-    }
-}
-impl W {
-    #[doc = "Bits 30:31 - Priority of interrupt 19"]
-    #[inline(always)]
-    pub fn ip_19(&mut self) -> IP_19_W {
-        IP_19_W { w: self }
+        IP_17_R::new(((self.bits >> 14) & 3) as u8)
     }
     #[doc = "Bits 22:23 - Priority of interrupt 18"]
     #[inline(always)]
-    pub fn ip_18(&mut self) -> IP_18_W {
-        IP_18_W { w: self }
+    pub fn ip_18(&self) -> IP_18_R {
+        IP_18_R::new(((self.bits >> 22) & 3) as u8)
+    }
+    #[doc = "Bits 30:31 - Priority of interrupt 19"]
+    #[inline(always)]
+    pub fn ip_19(&self) -> IP_19_R {
+        IP_19_R::new(((self.bits >> 30) & 3) as u8)
+    }
+}
+impl W {
+    #[doc = "Bits 6:7 - Priority of interrupt 16"]
+    #[inline(always)]
+    #[must_use]
+    pub fn ip_16(&mut self) -> IP_16_W<6> {
+        IP_16_W::new(self)
     }
     #[doc = "Bits 14:15 - Priority of interrupt 17"]
     #[inline(always)]
-    pub fn ip_17(&mut self) -> IP_17_W {
-        IP_17_W { w: self }
+    #[must_use]
+    pub fn ip_17(&mut self) -> IP_17_W<14> {
+        IP_17_W::new(self)
     }
-    #[doc = "Bits 6:7 - Priority of interrupt 16"]
+    #[doc = "Bits 22:23 - Priority of interrupt 18"]
     #[inline(always)]
-    pub fn ip_16(&mut self) -> IP_16_W {
-        IP_16_W { w: self }
+    #[must_use]
+    pub fn ip_18(&mut self) -> IP_18_W<22> {
+        IP_18_W::new(self)
+    }
+    #[doc = "Bits 30:31 - Priority of interrupt 19"]
+    #[inline(always)]
+    #[must_use]
+    pub fn ip_19(&mut self) -> IP_19_W<30> {
+        IP_19_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
@@ -208,11 +120,10 @@ impl crate::Readable for NVIC_IPR4_SPEC {
 #[doc = "`write(|w| ..)` method takes [nvic_ipr4::W](W) writer structure"]
 impl crate::Writable for NVIC_IPR4_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets NVIC_IPR4 to value 0"]
 impl crate::Resettable for NVIC_IPR4_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

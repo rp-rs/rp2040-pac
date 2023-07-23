@@ -34,344 +34,128 @@ impl From<crate::W<IRQ_SETUP_1_SPEC>> for W {
         W(writer)
     }
 }
-#[doc = "Field `DOTW_ENA` reader - Enable day of the week matching"]
-pub struct DOTW_ENA_R(crate::FieldReader<bool, bool>);
-impl DOTW_ENA_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        DOTW_ENA_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DOTW_ENA_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-#[doc = "Field `DOTW_ENA` writer - Enable day of the week matching"]
-pub struct DOTW_ENA_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> DOTW_ENA_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 31)) | ((value as u32 & 0x01) << 31);
-        self.w
-    }
-}
-#[doc = "Field `HOUR_ENA` reader - Enable hour matching"]
-pub struct HOUR_ENA_R(crate::FieldReader<bool, bool>);
-impl HOUR_ENA_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        HOUR_ENA_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for HOUR_ENA_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-#[doc = "Field `HOUR_ENA` writer - Enable hour matching"]
-pub struct HOUR_ENA_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> HOUR_ENA_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 30)) | ((value as u32 & 0x01) << 30);
-        self.w
-    }
-}
-#[doc = "Field `MIN_ENA` reader - Enable minute matching"]
-pub struct MIN_ENA_R(crate::FieldReader<bool, bool>);
-impl MIN_ENA_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        MIN_ENA_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for MIN_ENA_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-#[doc = "Field `MIN_ENA` writer - Enable minute matching"]
-pub struct MIN_ENA_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> MIN_ENA_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 29)) | ((value as u32 & 0x01) << 29);
-        self.w
-    }
-}
-#[doc = "Field `SEC_ENA` reader - Enable second matching"]
-pub struct SEC_ENA_R(crate::FieldReader<bool, bool>);
-impl SEC_ENA_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        SEC_ENA_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SEC_ENA_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-#[doc = "Field `SEC_ENA` writer - Enable second matching"]
-pub struct SEC_ENA_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SEC_ENA_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 28)) | ((value as u32 & 0x01) << 28);
-        self.w
-    }
-}
-#[doc = "Field `DOTW` reader - Day of the week"]
-pub struct DOTW_R(crate::FieldReader<u8, u8>);
-impl DOTW_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        DOTW_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DOTW_R {
-    type Target = crate::FieldReader<u8, u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-#[doc = "Field `DOTW` writer - Day of the week"]
-pub struct DOTW_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> DOTW_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x07 << 24)) | ((value as u32 & 0x07) << 24);
-        self.w
-    }
-}
-#[doc = "Field `HOUR` reader - Hours"]
-pub struct HOUR_R(crate::FieldReader<u8, u8>);
-impl HOUR_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        HOUR_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for HOUR_R {
-    type Target = crate::FieldReader<u8, u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-#[doc = "Field `HOUR` writer - Hours"]
-pub struct HOUR_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> HOUR_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x1f << 16)) | ((value as u32 & 0x1f) << 16);
-        self.w
-    }
-}
-#[doc = "Field `MIN` reader - Minutes"]
-pub struct MIN_R(crate::FieldReader<u8, u8>);
-impl MIN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        MIN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for MIN_R {
-    type Target = crate::FieldReader<u8, u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-#[doc = "Field `MIN` writer - Minutes"]
-pub struct MIN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> MIN_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x3f << 8)) | ((value as u32 & 0x3f) << 8);
-        self.w
-    }
-}
 #[doc = "Field `SEC` reader - Seconds"]
-pub struct SEC_R(crate::FieldReader<u8, u8>);
-impl SEC_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        SEC_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SEC_R {
-    type Target = crate::FieldReader<u8, u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SEC_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `SEC` writer - Seconds"]
-pub struct SEC_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SEC_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x3f) | (value as u32 & 0x3f);
-        self.w
-    }
-}
+pub type SEC_W<'a, const O: u8> = crate::FieldWriter<'a, u32, IRQ_SETUP_1_SPEC, u8, u8, 6, O>;
+#[doc = "Field `MIN` reader - Minutes"]
+pub type MIN_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `MIN` writer - Minutes"]
+pub type MIN_W<'a, const O: u8> = crate::FieldWriter<'a, u32, IRQ_SETUP_1_SPEC, u8, u8, 6, O>;
+#[doc = "Field `HOUR` reader - Hours"]
+pub type HOUR_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `HOUR` writer - Hours"]
+pub type HOUR_W<'a, const O: u8> = crate::FieldWriter<'a, u32, IRQ_SETUP_1_SPEC, u8, u8, 5, O>;
+#[doc = "Field `DOTW` reader - Day of the week"]
+pub type DOTW_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `DOTW` writer - Day of the week"]
+pub type DOTW_W<'a, const O: u8> = crate::FieldWriter<'a, u32, IRQ_SETUP_1_SPEC, u8, u8, 3, O>;
+#[doc = "Field `SEC_ENA` reader - Enable second matching"]
+pub type SEC_ENA_R = crate::BitReader<bool>;
+#[doc = "Field `SEC_ENA` writer - Enable second matching"]
+pub type SEC_ENA_W<'a, const O: u8> = crate::BitWriter<'a, u32, IRQ_SETUP_1_SPEC, bool, O>;
+#[doc = "Field `MIN_ENA` reader - Enable minute matching"]
+pub type MIN_ENA_R = crate::BitReader<bool>;
+#[doc = "Field `MIN_ENA` writer - Enable minute matching"]
+pub type MIN_ENA_W<'a, const O: u8> = crate::BitWriter<'a, u32, IRQ_SETUP_1_SPEC, bool, O>;
+#[doc = "Field `HOUR_ENA` reader - Enable hour matching"]
+pub type HOUR_ENA_R = crate::BitReader<bool>;
+#[doc = "Field `HOUR_ENA` writer - Enable hour matching"]
+pub type HOUR_ENA_W<'a, const O: u8> = crate::BitWriter<'a, u32, IRQ_SETUP_1_SPEC, bool, O>;
+#[doc = "Field `DOTW_ENA` reader - Enable day of the week matching"]
+pub type DOTW_ENA_R = crate::BitReader<bool>;
+#[doc = "Field `DOTW_ENA` writer - Enable day of the week matching"]
+pub type DOTW_ENA_W<'a, const O: u8> = crate::BitWriter<'a, u32, IRQ_SETUP_1_SPEC, bool, O>;
 impl R {
-    #[doc = "Bit 31 - Enable day of the week matching"]
+    #[doc = "Bits 0:5 - Seconds"]
     #[inline(always)]
-    pub fn dotw_ena(&self) -> DOTW_ENA_R {
-        DOTW_ENA_R::new(((self.bits >> 31) & 0x01) != 0)
-    }
-    #[doc = "Bit 30 - Enable hour matching"]
-    #[inline(always)]
-    pub fn hour_ena(&self) -> HOUR_ENA_R {
-        HOUR_ENA_R::new(((self.bits >> 30) & 0x01) != 0)
-    }
-    #[doc = "Bit 29 - Enable minute matching"]
-    #[inline(always)]
-    pub fn min_ena(&self) -> MIN_ENA_R {
-        MIN_ENA_R::new(((self.bits >> 29) & 0x01) != 0)
-    }
-    #[doc = "Bit 28 - Enable second matching"]
-    #[inline(always)]
-    pub fn sec_ena(&self) -> SEC_ENA_R {
-        SEC_ENA_R::new(((self.bits >> 28) & 0x01) != 0)
-    }
-    #[doc = "Bits 24:26 - Day of the week"]
-    #[inline(always)]
-    pub fn dotw(&self) -> DOTW_R {
-        DOTW_R::new(((self.bits >> 24) & 0x07) as u8)
-    }
-    #[doc = "Bits 16:20 - Hours"]
-    #[inline(always)]
-    pub fn hour(&self) -> HOUR_R {
-        HOUR_R::new(((self.bits >> 16) & 0x1f) as u8)
+    pub fn sec(&self) -> SEC_R {
+        SEC_R::new((self.bits & 0x3f) as u8)
     }
     #[doc = "Bits 8:13 - Minutes"]
     #[inline(always)]
     pub fn min(&self) -> MIN_R {
         MIN_R::new(((self.bits >> 8) & 0x3f) as u8)
     }
-    #[doc = "Bits 0:5 - Seconds"]
+    #[doc = "Bits 16:20 - Hours"]
     #[inline(always)]
-    pub fn sec(&self) -> SEC_R {
-        SEC_R::new((self.bits & 0x3f) as u8)
-    }
-}
-impl W {
-    #[doc = "Bit 31 - Enable day of the week matching"]
-    #[inline(always)]
-    pub fn dotw_ena(&mut self) -> DOTW_ENA_W {
-        DOTW_ENA_W { w: self }
-    }
-    #[doc = "Bit 30 - Enable hour matching"]
-    #[inline(always)]
-    pub fn hour_ena(&mut self) -> HOUR_ENA_W {
-        HOUR_ENA_W { w: self }
-    }
-    #[doc = "Bit 29 - Enable minute matching"]
-    #[inline(always)]
-    pub fn min_ena(&mut self) -> MIN_ENA_W {
-        MIN_ENA_W { w: self }
-    }
-    #[doc = "Bit 28 - Enable second matching"]
-    #[inline(always)]
-    pub fn sec_ena(&mut self) -> SEC_ENA_W {
-        SEC_ENA_W { w: self }
+    pub fn hour(&self) -> HOUR_R {
+        HOUR_R::new(((self.bits >> 16) & 0x1f) as u8)
     }
     #[doc = "Bits 24:26 - Day of the week"]
     #[inline(always)]
-    pub fn dotw(&mut self) -> DOTW_W {
-        DOTW_W { w: self }
+    pub fn dotw(&self) -> DOTW_R {
+        DOTW_R::new(((self.bits >> 24) & 7) as u8)
     }
-    #[doc = "Bits 16:20 - Hours"]
+    #[doc = "Bit 28 - Enable second matching"]
     #[inline(always)]
-    pub fn hour(&mut self) -> HOUR_W {
-        HOUR_W { w: self }
+    pub fn sec_ena(&self) -> SEC_ENA_R {
+        SEC_ENA_R::new(((self.bits >> 28) & 1) != 0)
+    }
+    #[doc = "Bit 29 - Enable minute matching"]
+    #[inline(always)]
+    pub fn min_ena(&self) -> MIN_ENA_R {
+        MIN_ENA_R::new(((self.bits >> 29) & 1) != 0)
+    }
+    #[doc = "Bit 30 - Enable hour matching"]
+    #[inline(always)]
+    pub fn hour_ena(&self) -> HOUR_ENA_R {
+        HOUR_ENA_R::new(((self.bits >> 30) & 1) != 0)
+    }
+    #[doc = "Bit 31 - Enable day of the week matching"]
+    #[inline(always)]
+    pub fn dotw_ena(&self) -> DOTW_ENA_R {
+        DOTW_ENA_R::new(((self.bits >> 31) & 1) != 0)
+    }
+}
+impl W {
+    #[doc = "Bits 0:5 - Seconds"]
+    #[inline(always)]
+    #[must_use]
+    pub fn sec(&mut self) -> SEC_W<0> {
+        SEC_W::new(self)
     }
     #[doc = "Bits 8:13 - Minutes"]
     #[inline(always)]
-    pub fn min(&mut self) -> MIN_W {
-        MIN_W { w: self }
+    #[must_use]
+    pub fn min(&mut self) -> MIN_W<8> {
+        MIN_W::new(self)
     }
-    #[doc = "Bits 0:5 - Seconds"]
+    #[doc = "Bits 16:20 - Hours"]
     #[inline(always)]
-    pub fn sec(&mut self) -> SEC_W {
-        SEC_W { w: self }
+    #[must_use]
+    pub fn hour(&mut self) -> HOUR_W<16> {
+        HOUR_W::new(self)
+    }
+    #[doc = "Bits 24:26 - Day of the week"]
+    #[inline(always)]
+    #[must_use]
+    pub fn dotw(&mut self) -> DOTW_W<24> {
+        DOTW_W::new(self)
+    }
+    #[doc = "Bit 28 - Enable second matching"]
+    #[inline(always)]
+    #[must_use]
+    pub fn sec_ena(&mut self) -> SEC_ENA_W<28> {
+        SEC_ENA_W::new(self)
+    }
+    #[doc = "Bit 29 - Enable minute matching"]
+    #[inline(always)]
+    #[must_use]
+    pub fn min_ena(&mut self) -> MIN_ENA_W<29> {
+        MIN_ENA_W::new(self)
+    }
+    #[doc = "Bit 30 - Enable hour matching"]
+    #[inline(always)]
+    #[must_use]
+    pub fn hour_ena(&mut self) -> HOUR_ENA_W<30> {
+        HOUR_ENA_W::new(self)
+    }
+    #[doc = "Bit 31 - Enable day of the week matching"]
+    #[inline(always)]
+    #[must_use]
+    pub fn dotw_ena(&mut self) -> DOTW_ENA_W<31> {
+        DOTW_ENA_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
@@ -396,11 +180,10 @@ impl crate::Readable for IRQ_SETUP_1_SPEC {
 #[doc = "`write(|w| ..)` method takes [irq_setup_1::W](W) writer structure"]
 impl crate::Writable for IRQ_SETUP_1_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets IRQ_SETUP_1 to value 0"]
 impl crate::Resettable for IRQ_SETUP_1_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

@@ -13,86 +13,34 @@ impl From<crate::R<RTC_0_SPEC>> for R {
         R(reader)
     }
 }
-#[doc = "Field `DOTW` reader - Day of the week"]
-pub struct DOTW_R(crate::FieldReader<u8, u8>);
-impl DOTW_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        DOTW_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DOTW_R {
-    type Target = crate::FieldReader<u8, u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-#[doc = "Field `HOUR` reader - Hours"]
-pub struct HOUR_R(crate::FieldReader<u8, u8>);
-impl HOUR_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        HOUR_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for HOUR_R {
-    type Target = crate::FieldReader<u8, u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-#[doc = "Field `MIN` reader - Minutes"]
-pub struct MIN_R(crate::FieldReader<u8, u8>);
-impl MIN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        MIN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for MIN_R {
-    type Target = crate::FieldReader<u8, u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
 #[doc = "Field `SEC` reader - Seconds"]
-pub struct SEC_R(crate::FieldReader<u8, u8>);
-impl SEC_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        SEC_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SEC_R {
-    type Target = crate::FieldReader<u8, u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SEC_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `MIN` reader - Minutes"]
+pub type MIN_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `HOUR` reader - Hours"]
+pub type HOUR_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `DOTW` reader - Day of the week"]
+pub type DOTW_R = crate::FieldReader<u8, u8>;
 impl R {
-    #[doc = "Bits 24:26 - Day of the week"]
+    #[doc = "Bits 0:5 - Seconds"]
     #[inline(always)]
-    pub fn dotw(&self) -> DOTW_R {
-        DOTW_R::new(((self.bits >> 24) & 0x07) as u8)
-    }
-    #[doc = "Bits 16:20 - Hours"]
-    #[inline(always)]
-    pub fn hour(&self) -> HOUR_R {
-        HOUR_R::new(((self.bits >> 16) & 0x1f) as u8)
+    pub fn sec(&self) -> SEC_R {
+        SEC_R::new((self.bits & 0x3f) as u8)
     }
     #[doc = "Bits 8:13 - Minutes"]
     #[inline(always)]
     pub fn min(&self) -> MIN_R {
         MIN_R::new(((self.bits >> 8) & 0x3f) as u8)
     }
-    #[doc = "Bits 0:5 - Seconds"]
+    #[doc = "Bits 16:20 - Hours"]
     #[inline(always)]
-    pub fn sec(&self) -> SEC_R {
-        SEC_R::new((self.bits & 0x3f) as u8)
+    pub fn hour(&self) -> HOUR_R {
+        HOUR_R::new(((self.bits >> 16) & 0x1f) as u8)
+    }
+    #[doc = "Bits 24:26 - Day of the week"]
+    #[inline(always)]
+    pub fn dotw(&self) -> DOTW_R {
+        DOTW_R::new(((self.bits >> 24) & 7) as u8)
     }
 }
 #[doc = "RTC register 0  
@@ -111,8 +59,5 @@ impl crate::Readable for RTC_0_SPEC {
 }
 #[doc = "`reset()` method sets RTC_0 to value 0"]
 impl crate::Resettable for RTC_0_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

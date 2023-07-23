@@ -34,102 +34,38 @@ impl From<crate::W<EP_STALL_ARM_SPEC>> for W {
         W(writer)
     }
 }
-#[doc = "Field `EP0_OUT` reader - "]
-pub struct EP0_OUT_R(crate::FieldReader<bool, bool>);
-impl EP0_OUT_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        EP0_OUT_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for EP0_OUT_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-#[doc = "Field `EP0_OUT` writer - "]
-pub struct EP0_OUT_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> EP0_OUT_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u32 & 0x01) << 1);
-        self.w
-    }
-}
 #[doc = "Field `EP0_IN` reader - "]
-pub struct EP0_IN_R(crate::FieldReader<bool, bool>);
-impl EP0_IN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        EP0_IN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for EP0_IN_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type EP0_IN_R = crate::BitReader<bool>;
 #[doc = "Field `EP0_IN` writer - "]
-pub struct EP0_IN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> EP0_IN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
-        self.w
-    }
-}
+pub type EP0_IN_W<'a, const O: u8> = crate::BitWriter<'a, u32, EP_STALL_ARM_SPEC, bool, O>;
+#[doc = "Field `EP0_OUT` reader - "]
+pub type EP0_OUT_R = crate::BitReader<bool>;
+#[doc = "Field `EP0_OUT` writer - "]
+pub type EP0_OUT_W<'a, const O: u8> = crate::BitWriter<'a, u32, EP_STALL_ARM_SPEC, bool, O>;
 impl R {
-    #[doc = "Bit 1"]
-    #[inline(always)]
-    pub fn ep0_out(&self) -> EP0_OUT_R {
-        EP0_OUT_R::new(((self.bits >> 1) & 0x01) != 0)
-    }
     #[doc = "Bit 0"]
     #[inline(always)]
     pub fn ep0_in(&self) -> EP0_IN_R {
-        EP0_IN_R::new((self.bits & 0x01) != 0)
+        EP0_IN_R::new((self.bits & 1) != 0)
+    }
+    #[doc = "Bit 1"]
+    #[inline(always)]
+    pub fn ep0_out(&self) -> EP0_OUT_R {
+        EP0_OUT_R::new(((self.bits >> 1) & 1) != 0)
     }
 }
 impl W {
-    #[doc = "Bit 1"]
-    #[inline(always)]
-    pub fn ep0_out(&mut self) -> EP0_OUT_W {
-        EP0_OUT_W { w: self }
-    }
     #[doc = "Bit 0"]
     #[inline(always)]
-    pub fn ep0_in(&mut self) -> EP0_IN_W {
-        EP0_IN_W { w: self }
+    #[must_use]
+    pub fn ep0_in(&mut self) -> EP0_IN_W<0> {
+        EP0_IN_W::new(self)
+    }
+    #[doc = "Bit 1"]
+    #[inline(always)]
+    #[must_use]
+    pub fn ep0_out(&mut self) -> EP0_OUT_W<1> {
+        EP0_OUT_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
@@ -154,11 +90,10 @@ impl crate::Readable for EP_STALL_ARM_SPEC {
 #[doc = "`write(|w| ..)` method takes [ep_stall_arm::W](W) writer structure"]
 impl crate::Writable for EP_STALL_ARM_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets EP_STALL_ARM to value 0"]
 impl crate::Resettable for EP_STALL_ARM_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

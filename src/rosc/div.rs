@@ -34,6 +34,12 @@ impl From<crate::W<DIV_SPEC>> for W {
         W(writer)
     }
 }
+#[doc = "Field `DIV` reader - set to 0xaa0 + div where  
+ div = 0 divides by 32  
+ div = 1-31 divides by div  
+ any other value sets div=31  
+ this register resets to div=16"]
+pub type DIV_R = crate::FieldReader<u16, DIV_A>;
 #[doc = "set to 0xaa0 + div where  
  div = 0 divides by 32  
  div = 1-31 divides by div  
@@ -41,7 +47,7 @@ impl From<crate::W<DIV_SPEC>> for W {
  this register resets to div=16  
 
 Value on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u16)]
 pub enum DIV_A {
     #[doc = "2720: `101010100000`"]
@@ -53,18 +59,8 @@ impl From<DIV_A> for u16 {
         variant as _
     }
 }
-#[doc = "Field `DIV` reader - set to 0xaa0 + div where  
- div = 0 divides by 32  
- div = 1-31 divides by div  
- any other value sets div=31  
- this register resets to div=16"]
-pub struct DIV_R(crate::FieldReader<u16, DIV_A>);
 impl DIV_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u16) -> Self {
-        DIV_R(crate::FieldReader::new(bits))
-    }
-    #[doc = r"Get enumerated values variant"]
+    #[doc = "Get enumerated values variant"]
     #[inline(always)]
     pub fn variant(&self) -> Option<DIV_A> {
         match self.bits {
@@ -75,14 +71,7 @@ impl DIV_R {
     #[doc = "Checks if the value of the field is `PASS`"]
     #[inline(always)]
     pub fn is_pass(&self) -> bool {
-        **self == DIV_A::PASS
-    }
-}
-impl core::ops::Deref for DIV_R {
-    type Target = crate::FieldReader<u16, DIV_A>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
+        *self == DIV_A::PASS
     }
 }
 #[doc = "Field `DIV` writer - set to 0xaa0 + div where  
@@ -90,25 +79,12 @@ impl core::ops::Deref for DIV_R {
  div = 1-31 divides by div  
  any other value sets div=31  
  this register resets to div=16"]
-pub struct DIV_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> DIV_W<'a> {
-    #[doc = r"Writes `variant` to the field"]
-    #[inline(always)]
-    pub fn variant(self, variant: DIV_A) -> &'a mut W {
-        unsafe { self.bits(variant.into()) }
-    }
+pub type DIV_W<'a, const O: u8> = crate::FieldWriter<'a, u32, DIV_SPEC, u16, DIV_A, 12, O>;
+impl<'a, const O: u8> DIV_W<'a, O> {
     #[doc = "`101010100000`"]
     #[inline(always)]
     pub fn pass(self) -> &'a mut W {
         self.variant(DIV_A::PASS)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u16) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x0fff) | (value as u32 & 0x0fff);
-        self.w
     }
 }
 impl R {
@@ -129,8 +105,9 @@ impl W {
  any other value sets div=31  
  this register resets to div=16"]
     #[inline(always)]
-    pub fn div(&mut self) -> DIV_W {
-        DIV_W { w: self }
+    #[must_use]
+    pub fn div(&mut self) -> DIV_W<0> {
+        DIV_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
@@ -155,11 +132,10 @@ impl crate::Readable for DIV_SPEC {
 #[doc = "`write(|w| ..)` method takes [div::W](W) writer structure"]
 impl crate::Writable for DIV_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets DIV to value 0"]
 impl crate::Resettable for DIV_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

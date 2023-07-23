@@ -13,46 +13,20 @@ impl From<crate::R<FIFO_SPEC>> for R {
         R(reader)
     }
 }
-#[doc = "Field `ERR` reader - 1 if this particular sample experienced a conversion error. Remains in the same location if the sample is shifted."]
-pub struct ERR_R(crate::FieldReader<bool, bool>);
-impl ERR_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        ERR_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for ERR_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
 #[doc = "Field `VAL` reader - "]
-pub struct VAL_R(crate::FieldReader<u16, u16>);
-impl VAL_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u16) -> Self {
-        VAL_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for VAL_R {
-    type Target = crate::FieldReader<u16, u16>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type VAL_R = crate::FieldReader<u16, u16>;
+#[doc = "Field `ERR` reader - 1 if this particular sample experienced a conversion error. Remains in the same location if the sample is shifted."]
+pub type ERR_R = crate::BitReader<bool>;
 impl R {
-    #[doc = "Bit 15 - 1 if this particular sample experienced a conversion error. Remains in the same location if the sample is shifted."]
-    #[inline(always)]
-    pub fn err(&self) -> ERR_R {
-        ERR_R::new(((self.bits >> 15) & 0x01) != 0)
-    }
     #[doc = "Bits 0:11"]
     #[inline(always)]
     pub fn val(&self) -> VAL_R {
         VAL_R::new((self.bits & 0x0fff) as u16)
+    }
+    #[doc = "Bit 15 - 1 if this particular sample experienced a conversion error. Remains in the same location if the sample is shifted."]
+    #[inline(always)]
+    pub fn err(&self) -> ERR_R {
+        ERR_R::new(((self.bits >> 15) & 1) != 0)
     }
 }
 #[doc = "Conversion result FIFO  
@@ -70,8 +44,5 @@ impl crate::Readable for FIFO_SPEC {
 }
 #[doc = "`reset()` method sets FIFO to value 0"]
 impl crate::Resettable for FIFO_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

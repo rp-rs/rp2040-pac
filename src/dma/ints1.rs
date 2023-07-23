@@ -36,33 +36,10 @@ impl From<crate::W<INTS1_SPEC>> for W {
 }
 #[doc = "Field `INTS1` reader - Indicates active channel interrupt requests which are currently causing IRQ 1 to be asserted.  
  Channel interrupts can be cleared by writing a bit mask here."]
-pub struct INTS1_R(crate::FieldReader<u16, u16>);
-impl INTS1_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u16) -> Self {
-        INTS1_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for INTS1_R {
-    type Target = crate::FieldReader<u16, u16>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type INTS1_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `INTS1` writer - Indicates active channel interrupt requests which are currently causing IRQ 1 to be asserted.  
  Channel interrupts can be cleared by writing a bit mask here."]
-pub struct INTS1_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> INTS1_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u16) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0xffff) | (value as u32 & 0xffff);
-        self.w
-    }
-}
+pub type INTS1_W<'a, const O: u8> = crate::FieldWriter<'a, u32, INTS1_SPEC, u16, u16, 16, O>;
 impl R {
     #[doc = "Bits 0:15 - Indicates active channel interrupt requests which are currently causing IRQ 1 to be asserted.  
  Channel interrupts can be cleared by writing a bit mask here."]
@@ -75,8 +52,9 @@ impl W {
     #[doc = "Bits 0:15 - Indicates active channel interrupt requests which are currently causing IRQ 1 to be asserted.  
  Channel interrupts can be cleared by writing a bit mask here."]
     #[inline(always)]
-    pub fn ints1(&mut self) -> INTS1_W {
-        INTS1_W { w: self }
+    #[must_use]
+    pub fn ints1(&mut self) -> INTS1_W<0> {
+        INTS1_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
@@ -101,11 +79,10 @@ impl crate::Readable for INTS1_SPEC {
 #[doc = "`write(|w| ..)` method takes [ints1::W](W) writer structure"]
 impl crate::Writable for INTS1_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0xffff;
 }
 #[doc = "`reset()` method sets INTS1 to value 0"]
 impl crate::Resettable for INTS1_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

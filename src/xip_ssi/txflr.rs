@@ -14,20 +14,7 @@ impl From<crate::R<TXFLR_SPEC>> for R {
     }
 }
 #[doc = "Field `TFTFL` reader - Transmit FIFO level"]
-pub struct TFTFL_R(crate::FieldReader<u8, u8>);
-impl TFTFL_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        TFTFL_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TFTFL_R {
-    type Target = crate::FieldReader<u8, u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type TFTFL_R = crate::FieldReader<u8, u8>;
 impl R {
     #[doc = "Bits 0:7 - Transmit FIFO level"]
     #[inline(always)]
@@ -50,8 +37,5 @@ impl crate::Readable for TXFLR_SPEC {
 }
 #[doc = "`reset()` method sets TXFLR to value 0"]
 impl crate::Resettable for TXFLR_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

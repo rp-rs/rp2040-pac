@@ -20,22 +20,13 @@ impl From<crate::W<LOAD_SPEC>> for W {
     }
 }
 #[doc = "Field `LOAD` writer - "]
-pub struct LOAD_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> LOAD_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u32) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x00ff_ffff) | (value as u32 & 0x00ff_ffff);
-        self.w
-    }
-}
+pub type LOAD_W<'a, const O: u8> = crate::FieldWriter<'a, u32, LOAD_SPEC, u32, u32, 24, O>;
 impl W {
     #[doc = "Bits 0:23"]
     #[inline(always)]
-    pub fn load(&mut self) -> LOAD_W {
-        LOAD_W { w: self }
+    #[must_use]
+    pub fn load(&mut self) -> LOAD_W<0> {
+        LOAD_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
@@ -56,11 +47,10 @@ impl crate::RegisterSpec for LOAD_SPEC {
 #[doc = "`write(|w| ..)` method takes [load::W](W) writer structure"]
 impl crate::Writable for LOAD_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets LOAD to value 0"]
 impl crate::Resettable for LOAD_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

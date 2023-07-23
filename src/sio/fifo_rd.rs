@@ -28,8 +28,5 @@ impl crate::Readable for FIFO_RD_SPEC {
 }
 #[doc = "`reset()` method sets FIFO_RD to value 0"]
 impl crate::Resettable for FIFO_RD_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

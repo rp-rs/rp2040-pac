@@ -42,20 +42,7 @@ impl From<crate::W<STREAM_CTR_SPEC>> for W {
  Write 0 to halt an in-progress stream, and discard any in-flight  
  read, so that a new stream can immediately be started (after  
  draining the FIFO and reinitialising STREAM_ADDR)"]
-pub struct STREAM_CTR_R(crate::FieldReader<u32, u32>);
-impl STREAM_CTR_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u32) -> Self {
-        STREAM_CTR_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for STREAM_CTR_R {
-    type Target = crate::FieldReader<u32, u32>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type STREAM_CTR_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `STREAM_CTR` writer - Write a nonzero value to start a streaming read. This will then  
  progress in the background, using flash idle cycles to transfer  
  a linear data block from flash to the streaming FIFO.  
@@ -64,17 +51,8 @@ impl core::ops::Deref for STREAM_CTR_R {
  Write 0 to halt an in-progress stream, and discard any in-flight  
  read, so that a new stream can immediately be started (after  
  draining the FIFO and reinitialising STREAM_ADDR)"]
-pub struct STREAM_CTR_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> STREAM_CTR_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u32) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x003f_ffff) | (value as u32 & 0x003f_ffff);
-        self.w
-    }
-}
+pub type STREAM_CTR_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, STREAM_CTR_SPEC, u32, u32, 22, O>;
 impl R {
     #[doc = "Bits 0:21 - Write a nonzero value to start a streaming read. This will then  
  progress in the background, using flash idle cycles to transfer  
@@ -86,7 +64,7 @@ impl R {
  draining the FIFO and reinitialising STREAM_ADDR)"]
     #[inline(always)]
     pub fn stream_ctr(&self) -> STREAM_CTR_R {
-        STREAM_CTR_R::new((self.bits & 0x003f_ffff) as u32)
+        STREAM_CTR_R::new(self.bits & 0x003f_ffff)
     }
 }
 impl W {
@@ -99,8 +77,9 @@ impl W {
  read, so that a new stream can immediately be started (after  
  draining the FIFO and reinitialising STREAM_ADDR)"]
     #[inline(always)]
-    pub fn stream_ctr(&mut self) -> STREAM_CTR_W {
-        STREAM_CTR_W { w: self }
+    #[must_use]
+    pub fn stream_ctr(&mut self) -> STREAM_CTR_W<0> {
+        STREAM_CTR_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
@@ -125,11 +104,10 @@ impl crate::Readable for STREAM_CTR_SPEC {
 #[doc = "`write(|w| ..)` method takes [stream_ctr::W](W) writer structure"]
 impl crate::Writable for STREAM_CTR_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets STREAM_CTR to value 0"]
 impl crate::Resettable for STREAM_CTR_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

@@ -39,11 +39,10 @@ impl crate::RegisterSpec for FIFO_WR_SPEC {
 #[doc = "`write(|w| ..)` method takes [fifo_wr::W](W) writer structure"]
 impl crate::Writable for FIFO_WR_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets FIFO_WR to value 0"]
 impl crate::Resettable for FIFO_WR_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

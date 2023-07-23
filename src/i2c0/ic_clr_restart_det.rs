@@ -16,27 +16,14 @@ impl From<crate::R<IC_CLR_RESTART_DET_SPEC>> for R {
 #[doc = "Field `CLR_RESTART_DET` reader - Read this register to clear the RESTART_DET interrupt (bit 12) of IC_RAW_INTR_STAT register.  
 
  Reset value: 0x0"]
-pub struct CLR_RESTART_DET_R(crate::FieldReader<bool, bool>);
-impl CLR_RESTART_DET_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CLR_RESTART_DET_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CLR_RESTART_DET_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CLR_RESTART_DET_R = crate::BitReader<bool>;
 impl R {
     #[doc = "Bit 0 - Read this register to clear the RESTART_DET interrupt (bit 12) of IC_RAW_INTR_STAT register.  
 
  Reset value: 0x0"]
     #[inline(always)]
     pub fn clr_restart_det(&self) -> CLR_RESTART_DET_R {
-        CLR_RESTART_DET_R::new((self.bits & 0x01) != 0)
+        CLR_RESTART_DET_R::new((self.bits & 1) != 0)
     }
 }
 #[doc = "Clear RESTART_DET Interrupt Register  
@@ -54,8 +41,5 @@ impl crate::Readable for IC_CLR_RESTART_DET_SPEC {
 }
 #[doc = "`reset()` method sets IC_CLR_RESTART_DET to value 0"]
 impl crate::Resettable for IC_CLR_RESTART_DET_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

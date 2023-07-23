@@ -29,8 +29,5 @@ impl crate::Readable for TIMEHR_SPEC {
 }
 #[doc = "`reset()` method sets TIMEHR to value 0"]
 impl crate::Resettable for TIMEHR_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

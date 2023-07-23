@@ -39,36 +39,14 @@ impl From<crate::W<GPIO_HI_OUT_SPEC>> for W {
  If core 0 and core 1 both write to GPIO_HI_OUT simultaneously (or to a SET/CLR/XOR alias),  
  the result is as though the write from core 0 took place first,  
  and the write from core 1 was then applied to that intermediate result."]
-pub struct GPIO_HI_OUT_R(crate::FieldReader<u8, u8>);
-impl GPIO_HI_OUT_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        GPIO_HI_OUT_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for GPIO_HI_OUT_R {
-    type Target = crate::FieldReader<u8, u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type GPIO_HI_OUT_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `GPIO_HI_OUT` writer - Set output level (1/0 -> high/low) for QSPI IO0...5.  
  Reading back gives the last value written, NOT the input value from the pins.  
  If core 0 and core 1 both write to GPIO_HI_OUT simultaneously (or to a SET/CLR/XOR alias),  
  the result is as though the write from core 0 took place first,  
  and the write from core 1 was then applied to that intermediate result."]
-pub struct GPIO_HI_OUT_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> GPIO_HI_OUT_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x3f) | (value as u32 & 0x3f);
-        self.w
-    }
-}
+pub type GPIO_HI_OUT_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, GPIO_HI_OUT_SPEC, u8, u8, 6, O>;
 impl R {
     #[doc = "Bits 0:5 - Set output level (1/0 -> high/low) for QSPI IO0...5.  
  Reading back gives the last value written, NOT the input value from the pins.  
@@ -87,8 +65,9 @@ impl W {
  the result is as though the write from core 0 took place first,  
  and the write from core 1 was then applied to that intermediate result."]
     #[inline(always)]
-    pub fn gpio_hi_out(&mut self) -> GPIO_HI_OUT_W {
-        GPIO_HI_OUT_W { w: self }
+    #[must_use]
+    pub fn gpio_hi_out(&mut self) -> GPIO_HI_OUT_W<0> {
+        GPIO_HI_OUT_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
@@ -113,11 +92,10 @@ impl crate::Readable for GPIO_HI_OUT_SPEC {
 #[doc = "`write(|w| ..)` method takes [gpio_hi_out::W](W) writer structure"]
 impl crate::Writable for GPIO_HI_OUT_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets GPIO_HI_OUT to value 0"]
 impl crate::Resettable for GPIO_HI_OUT_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

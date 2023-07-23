@@ -34,196 +34,68 @@ impl From<crate::W<USB_MUXING_SPEC>> for W {
         W(writer)
     }
 }
-#[doc = "Field `SOFTCON` reader - "]
-pub struct SOFTCON_R(crate::FieldReader<bool, bool>);
-impl SOFTCON_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        SOFTCON_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SOFTCON_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-#[doc = "Field `SOFTCON` writer - "]
-pub struct SOFTCON_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SOFTCON_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 3)) | ((value as u32 & 0x01) << 3);
-        self.w
-    }
-}
-#[doc = "Field `TO_DIGITAL_PAD` reader - "]
-pub struct TO_DIGITAL_PAD_R(crate::FieldReader<bool, bool>);
-impl TO_DIGITAL_PAD_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        TO_DIGITAL_PAD_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TO_DIGITAL_PAD_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-#[doc = "Field `TO_DIGITAL_PAD` writer - "]
-pub struct TO_DIGITAL_PAD_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TO_DIGITAL_PAD_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 2)) | ((value as u32 & 0x01) << 2);
-        self.w
-    }
-}
-#[doc = "Field `TO_EXTPHY` reader - "]
-pub struct TO_EXTPHY_R(crate::FieldReader<bool, bool>);
-impl TO_EXTPHY_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        TO_EXTPHY_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TO_EXTPHY_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-#[doc = "Field `TO_EXTPHY` writer - "]
-pub struct TO_EXTPHY_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TO_EXTPHY_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u32 & 0x01) << 1);
-        self.w
-    }
-}
 #[doc = "Field `TO_PHY` reader - "]
-pub struct TO_PHY_R(crate::FieldReader<bool, bool>);
-impl TO_PHY_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        TO_PHY_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TO_PHY_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type TO_PHY_R = crate::BitReader<bool>;
 #[doc = "Field `TO_PHY` writer - "]
-pub struct TO_PHY_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TO_PHY_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
-        self.w
-    }
-}
+pub type TO_PHY_W<'a, const O: u8> = crate::BitWriter<'a, u32, USB_MUXING_SPEC, bool, O>;
+#[doc = "Field `TO_EXTPHY` reader - "]
+pub type TO_EXTPHY_R = crate::BitReader<bool>;
+#[doc = "Field `TO_EXTPHY` writer - "]
+pub type TO_EXTPHY_W<'a, const O: u8> = crate::BitWriter<'a, u32, USB_MUXING_SPEC, bool, O>;
+#[doc = "Field `TO_DIGITAL_PAD` reader - "]
+pub type TO_DIGITAL_PAD_R = crate::BitReader<bool>;
+#[doc = "Field `TO_DIGITAL_PAD` writer - "]
+pub type TO_DIGITAL_PAD_W<'a, const O: u8> = crate::BitWriter<'a, u32, USB_MUXING_SPEC, bool, O>;
+#[doc = "Field `SOFTCON` reader - "]
+pub type SOFTCON_R = crate::BitReader<bool>;
+#[doc = "Field `SOFTCON` writer - "]
+pub type SOFTCON_W<'a, const O: u8> = crate::BitWriter<'a, u32, USB_MUXING_SPEC, bool, O>;
 impl R {
-    #[doc = "Bit 3"]
+    #[doc = "Bit 0"]
     #[inline(always)]
-    pub fn softcon(&self) -> SOFTCON_R {
-        SOFTCON_R::new(((self.bits >> 3) & 0x01) != 0)
-    }
-    #[doc = "Bit 2"]
-    #[inline(always)]
-    pub fn to_digital_pad(&self) -> TO_DIGITAL_PAD_R {
-        TO_DIGITAL_PAD_R::new(((self.bits >> 2) & 0x01) != 0)
+    pub fn to_phy(&self) -> TO_PHY_R {
+        TO_PHY_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1"]
     #[inline(always)]
     pub fn to_extphy(&self) -> TO_EXTPHY_R {
-        TO_EXTPHY_R::new(((self.bits >> 1) & 0x01) != 0)
-    }
-    #[doc = "Bit 0"]
-    #[inline(always)]
-    pub fn to_phy(&self) -> TO_PHY_R {
-        TO_PHY_R::new((self.bits & 0x01) != 0)
-    }
-}
-impl W {
-    #[doc = "Bit 3"]
-    #[inline(always)]
-    pub fn softcon(&mut self) -> SOFTCON_W {
-        SOFTCON_W { w: self }
+        TO_EXTPHY_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2"]
     #[inline(always)]
-    pub fn to_digital_pad(&mut self) -> TO_DIGITAL_PAD_W {
-        TO_DIGITAL_PAD_W { w: self }
+    pub fn to_digital_pad(&self) -> TO_DIGITAL_PAD_R {
+        TO_DIGITAL_PAD_R::new(((self.bits >> 2) & 1) != 0)
+    }
+    #[doc = "Bit 3"]
+    #[inline(always)]
+    pub fn softcon(&self) -> SOFTCON_R {
+        SOFTCON_R::new(((self.bits >> 3) & 1) != 0)
+    }
+}
+impl W {
+    #[doc = "Bit 0"]
+    #[inline(always)]
+    #[must_use]
+    pub fn to_phy(&mut self) -> TO_PHY_W<0> {
+        TO_PHY_W::new(self)
     }
     #[doc = "Bit 1"]
     #[inline(always)]
-    pub fn to_extphy(&mut self) -> TO_EXTPHY_W {
-        TO_EXTPHY_W { w: self }
+    #[must_use]
+    pub fn to_extphy(&mut self) -> TO_EXTPHY_W<1> {
+        TO_EXTPHY_W::new(self)
     }
-    #[doc = "Bit 0"]
+    #[doc = "Bit 2"]
     #[inline(always)]
-    pub fn to_phy(&mut self) -> TO_PHY_W {
-        TO_PHY_W { w: self }
+    #[must_use]
+    pub fn to_digital_pad(&mut self) -> TO_DIGITAL_PAD_W<2> {
+        TO_DIGITAL_PAD_W::new(self)
+    }
+    #[doc = "Bit 3"]
+    #[inline(always)]
+    #[must_use]
+    pub fn softcon(&mut self) -> SOFTCON_W<3> {
+        SOFTCON_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
@@ -248,11 +120,10 @@ impl crate::Readable for USB_MUXING_SPEC {
 #[doc = "`write(|w| ..)` method takes [usb_muxing::W](W) writer structure"]
 impl crate::Writable for USB_MUXING_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets USB_MUXING to value 0"]
 impl crate::Resettable for USB_MUXING_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

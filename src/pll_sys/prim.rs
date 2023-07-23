@@ -34,82 +34,38 @@ impl From<crate::W<PRIM_SPEC>> for W {
         W(writer)
     }
 }
-#[doc = "Field `POSTDIV1` reader - divide by 1-7"]
-pub struct POSTDIV1_R(crate::FieldReader<u8, u8>);
-impl POSTDIV1_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        POSTDIV1_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for POSTDIV1_R {
-    type Target = crate::FieldReader<u8, u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-#[doc = "Field `POSTDIV1` writer - divide by 1-7"]
-pub struct POSTDIV1_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> POSTDIV1_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x07 << 16)) | ((value as u32 & 0x07) << 16);
-        self.w
-    }
-}
 #[doc = "Field `POSTDIV2` reader - divide by 1-7"]
-pub struct POSTDIV2_R(crate::FieldReader<u8, u8>);
-impl POSTDIV2_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        POSTDIV2_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for POSTDIV2_R {
-    type Target = crate::FieldReader<u8, u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type POSTDIV2_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `POSTDIV2` writer - divide by 1-7"]
-pub struct POSTDIV2_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> POSTDIV2_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x07 << 12)) | ((value as u32 & 0x07) << 12);
-        self.w
-    }
-}
+pub type POSTDIV2_W<'a, const O: u8> = crate::FieldWriter<'a, u32, PRIM_SPEC, u8, u8, 3, O>;
+#[doc = "Field `POSTDIV1` reader - divide by 1-7"]
+pub type POSTDIV1_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `POSTDIV1` writer - divide by 1-7"]
+pub type POSTDIV1_W<'a, const O: u8> = crate::FieldWriter<'a, u32, PRIM_SPEC, u8, u8, 3, O>;
 impl R {
-    #[doc = "Bits 16:18 - divide by 1-7"]
-    #[inline(always)]
-    pub fn postdiv1(&self) -> POSTDIV1_R {
-        POSTDIV1_R::new(((self.bits >> 16) & 0x07) as u8)
-    }
     #[doc = "Bits 12:14 - divide by 1-7"]
     #[inline(always)]
     pub fn postdiv2(&self) -> POSTDIV2_R {
-        POSTDIV2_R::new(((self.bits >> 12) & 0x07) as u8)
+        POSTDIV2_R::new(((self.bits >> 12) & 7) as u8)
+    }
+    #[doc = "Bits 16:18 - divide by 1-7"]
+    #[inline(always)]
+    pub fn postdiv1(&self) -> POSTDIV1_R {
+        POSTDIV1_R::new(((self.bits >> 16) & 7) as u8)
     }
 }
 impl W {
-    #[doc = "Bits 16:18 - divide by 1-7"]
-    #[inline(always)]
-    pub fn postdiv1(&mut self) -> POSTDIV1_W {
-        POSTDIV1_W { w: self }
-    }
     #[doc = "Bits 12:14 - divide by 1-7"]
     #[inline(always)]
-    pub fn postdiv2(&mut self) -> POSTDIV2_W {
-        POSTDIV2_W { w: self }
+    #[must_use]
+    pub fn postdiv2(&mut self) -> POSTDIV2_W<12> {
+        POSTDIV2_W::new(self)
+    }
+    #[doc = "Bits 16:18 - divide by 1-7"]
+    #[inline(always)]
+    #[must_use]
+    pub fn postdiv1(&mut self) -> POSTDIV1_W<16> {
+        POSTDIV1_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
@@ -136,11 +92,10 @@ impl crate::Readable for PRIM_SPEC {
 #[doc = "`write(|w| ..)` method takes [prim::W](W) writer structure"]
 impl crate::Writable for PRIM_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets PRIM to value 0x0007_7000"]
 impl crate::Resettable for PRIM_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x0007_7000
-    }
+    const RESET_VALUE: Self::Ux = 0x0007_7000;
 }

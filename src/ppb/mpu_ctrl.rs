@@ -34,144 +34,43 @@ impl From<crate::W<MPU_CTRL_SPEC>> for W {
         W(writer)
     }
 }
+#[doc = "Field `ENABLE` reader - Enables the MPU. If the MPU is disabled, privileged and unprivileged accesses use the default memory map.  
+ 0 = MPU disabled.  
+ 1 = MPU enabled."]
+pub type ENABLE_R = crate::BitReader<bool>;
+#[doc = "Field `ENABLE` writer - Enables the MPU. If the MPU is disabled, privileged and unprivileged accesses use the default memory map.  
+ 0 = MPU disabled.  
+ 1 = MPU enabled."]
+pub type ENABLE_W<'a, const O: u8> = crate::BitWriter<'a, u32, MPU_CTRL_SPEC, bool, O>;
+#[doc = "Field `HFNMIENA` reader - Controls the use of the MPU for HardFaults and NMIs. Setting this bit when ENABLE is clear results in UNPREDICTABLE behaviour.  
+ When the MPU is enabled:  
+ 0 = MPU is disabled during HardFault and NMI handlers, regardless of the value of the ENABLE bit.  
+ 1 = the MPU is enabled during HardFault and NMI handlers."]
+pub type HFNMIENA_R = crate::BitReader<bool>;
+#[doc = "Field `HFNMIENA` writer - Controls the use of the MPU for HardFaults and NMIs. Setting this bit when ENABLE is clear results in UNPREDICTABLE behaviour.  
+ When the MPU is enabled:  
+ 0 = MPU is disabled during HardFault and NMI handlers, regardless of the value of the ENABLE bit.  
+ 1 = the MPU is enabled during HardFault and NMI handlers."]
+pub type HFNMIENA_W<'a, const O: u8> = crate::BitWriter<'a, u32, MPU_CTRL_SPEC, bool, O>;
 #[doc = "Field `PRIVDEFENA` reader - Controls whether the default memory map is enabled as a background region for privileged accesses. This bit is ignored when ENABLE is clear.  
  0 = If the MPU is enabled, disables use of the default memory map. Any memory access to a location not  
  covered by any enabled region causes a fault.  
  1 = If the MPU is enabled, enables use of the default memory map as a background region for privileged software accesses.  
  When enabled, the background region acts as if it is region number -1. Any region that is defined and enabled has priority over this default map."]
-pub struct PRIVDEFENA_R(crate::FieldReader<bool, bool>);
-impl PRIVDEFENA_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        PRIVDEFENA_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PRIVDEFENA_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PRIVDEFENA_R = crate::BitReader<bool>;
 #[doc = "Field `PRIVDEFENA` writer - Controls whether the default memory map is enabled as a background region for privileged accesses. This bit is ignored when ENABLE is clear.  
  0 = If the MPU is enabled, disables use of the default memory map. Any memory access to a location not  
  covered by any enabled region causes a fault.  
  1 = If the MPU is enabled, enables use of the default memory map as a background region for privileged software accesses.  
  When enabled, the background region acts as if it is region number -1. Any region that is defined and enabled has priority over this default map."]
-pub struct PRIVDEFENA_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PRIVDEFENA_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 2)) | ((value as u32 & 0x01) << 2);
-        self.w
-    }
-}
-#[doc = "Field `HFNMIENA` reader - Controls the use of the MPU for HardFaults and NMIs. Setting this bit when ENABLE is clear results in UNPREDICTABLE behaviour.  
- When the MPU is enabled:  
- 0 = MPU is disabled during HardFault and NMI handlers, regardless of the value of the ENABLE bit.  
- 1 = the MPU is enabled during HardFault and NMI handlers."]
-pub struct HFNMIENA_R(crate::FieldReader<bool, bool>);
-impl HFNMIENA_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        HFNMIENA_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for HFNMIENA_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-#[doc = "Field `HFNMIENA` writer - Controls the use of the MPU for HardFaults and NMIs. Setting this bit when ENABLE is clear results in UNPREDICTABLE behaviour.  
- When the MPU is enabled:  
- 0 = MPU is disabled during HardFault and NMI handlers, regardless of the value of the ENABLE bit.  
- 1 = the MPU is enabled during HardFault and NMI handlers."]
-pub struct HFNMIENA_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> HFNMIENA_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u32 & 0x01) << 1);
-        self.w
-    }
-}
-#[doc = "Field `ENABLE` reader - Enables the MPU. If the MPU is disabled, privileged and unprivileged accesses use the default memory map.  
- 0 = MPU disabled.  
- 1 = MPU enabled."]
-pub struct ENABLE_R(crate::FieldReader<bool, bool>);
-impl ENABLE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        ENABLE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for ENABLE_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-#[doc = "Field `ENABLE` writer - Enables the MPU. If the MPU is disabled, privileged and unprivileged accesses use the default memory map.  
- 0 = MPU disabled.  
- 1 = MPU enabled."]
-pub struct ENABLE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> ENABLE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
-        self.w
-    }
-}
+pub type PRIVDEFENA_W<'a, const O: u8> = crate::BitWriter<'a, u32, MPU_CTRL_SPEC, bool, O>;
 impl R {
-    #[doc = "Bit 2 - Controls whether the default memory map is enabled as a background region for privileged accesses. This bit is ignored when ENABLE is clear.  
- 0 = If the MPU is enabled, disables use of the default memory map. Any memory access to a location not  
- covered by any enabled region causes a fault.  
- 1 = If the MPU is enabled, enables use of the default memory map as a background region for privileged software accesses.  
- When enabled, the background region acts as if it is region number -1. Any region that is defined and enabled has priority over this default map."]
+    #[doc = "Bit 0 - Enables the MPU. If the MPU is disabled, privileged and unprivileged accesses use the default memory map.  
+ 0 = MPU disabled.  
+ 1 = MPU enabled."]
     #[inline(always)]
-    pub fn privdefena(&self) -> PRIVDEFENA_R {
-        PRIVDEFENA_R::new(((self.bits >> 2) & 0x01) != 0)
+    pub fn enable(&self) -> ENABLE_R {
+        ENABLE_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - Controls the use of the MPU for HardFaults and NMIs. Setting this bit when ENABLE is clear results in UNPREDICTABLE behaviour.  
  When the MPU is enabled:  
@@ -179,40 +78,45 @@ impl R {
  1 = the MPU is enabled during HardFault and NMI handlers."]
     #[inline(always)]
     pub fn hfnmiena(&self) -> HFNMIENA_R {
-        HFNMIENA_R::new(((self.bits >> 1) & 0x01) != 0)
+        HFNMIENA_R::new(((self.bits >> 1) & 1) != 0)
     }
-    #[doc = "Bit 0 - Enables the MPU. If the MPU is disabled, privileged and unprivileged accesses use the default memory map.  
- 0 = MPU disabled.  
- 1 = MPU enabled."]
-    #[inline(always)]
-    pub fn enable(&self) -> ENABLE_R {
-        ENABLE_R::new((self.bits & 0x01) != 0)
-    }
-}
-impl W {
     #[doc = "Bit 2 - Controls whether the default memory map is enabled as a background region for privileged accesses. This bit is ignored when ENABLE is clear.  
  0 = If the MPU is enabled, disables use of the default memory map. Any memory access to a location not  
  covered by any enabled region causes a fault.  
  1 = If the MPU is enabled, enables use of the default memory map as a background region for privileged software accesses.  
  When enabled, the background region acts as if it is region number -1. Any region that is defined and enabled has priority over this default map."]
     #[inline(always)]
-    pub fn privdefena(&mut self) -> PRIVDEFENA_W {
-        PRIVDEFENA_W { w: self }
+    pub fn privdefena(&self) -> PRIVDEFENA_R {
+        PRIVDEFENA_R::new(((self.bits >> 2) & 1) != 0)
+    }
+}
+impl W {
+    #[doc = "Bit 0 - Enables the MPU. If the MPU is disabled, privileged and unprivileged accesses use the default memory map.  
+ 0 = MPU disabled.  
+ 1 = MPU enabled."]
+    #[inline(always)]
+    #[must_use]
+    pub fn enable(&mut self) -> ENABLE_W<0> {
+        ENABLE_W::new(self)
     }
     #[doc = "Bit 1 - Controls the use of the MPU for HardFaults and NMIs. Setting this bit when ENABLE is clear results in UNPREDICTABLE behaviour.  
  When the MPU is enabled:  
  0 = MPU is disabled during HardFault and NMI handlers, regardless of the value of the ENABLE bit.  
  1 = the MPU is enabled during HardFault and NMI handlers."]
     #[inline(always)]
-    pub fn hfnmiena(&mut self) -> HFNMIENA_W {
-        HFNMIENA_W { w: self }
+    #[must_use]
+    pub fn hfnmiena(&mut self) -> HFNMIENA_W<1> {
+        HFNMIENA_W::new(self)
     }
-    #[doc = "Bit 0 - Enables the MPU. If the MPU is disabled, privileged and unprivileged accesses use the default memory map.  
- 0 = MPU disabled.  
- 1 = MPU enabled."]
+    #[doc = "Bit 2 - Controls whether the default memory map is enabled as a background region for privileged accesses. This bit is ignored when ENABLE is clear.  
+ 0 = If the MPU is enabled, disables use of the default memory map. Any memory access to a location not  
+ covered by any enabled region causes a fault.  
+ 1 = If the MPU is enabled, enables use of the default memory map as a background region for privileged software accesses.  
+ When enabled, the background region acts as if it is region number -1. Any region that is defined and enabled has priority over this default map."]
     #[inline(always)]
-    pub fn enable(&mut self) -> ENABLE_W {
-        ENABLE_W { w: self }
+    #[must_use]
+    pub fn privdefena(&mut self) -> PRIVDEFENA_W<2> {
+        PRIVDEFENA_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
@@ -237,11 +141,10 @@ impl crate::Readable for MPU_CTRL_SPEC {
 #[doc = "`write(|w| ..)` method takes [mpu_ctrl::W](W) writer structure"]
 impl crate::Writable for MPU_CTRL_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets MPU_CTRL to value 0"]
 impl crate::Resettable for MPU_CTRL_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

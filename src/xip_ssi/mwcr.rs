@@ -34,149 +34,53 @@ impl From<crate::W<MWCR_SPEC>> for W {
         W(writer)
     }
 }
-#[doc = "Field `MHS` reader - Microwire handshaking"]
-pub struct MHS_R(crate::FieldReader<bool, bool>);
-impl MHS_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        MHS_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for MHS_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-#[doc = "Field `MHS` writer - Microwire handshaking"]
-pub struct MHS_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> MHS_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 2)) | ((value as u32 & 0x01) << 2);
-        self.w
-    }
-}
-#[doc = "Field `MDD` reader - Microwire control"]
-pub struct MDD_R(crate::FieldReader<bool, bool>);
-impl MDD_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        MDD_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for MDD_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-#[doc = "Field `MDD` writer - Microwire control"]
-pub struct MDD_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> MDD_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u32 & 0x01) << 1);
-        self.w
-    }
-}
 #[doc = "Field `MWMOD` reader - Microwire transfer mode"]
-pub struct MWMOD_R(crate::FieldReader<bool, bool>);
-impl MWMOD_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        MWMOD_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for MWMOD_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type MWMOD_R = crate::BitReader<bool>;
 #[doc = "Field `MWMOD` writer - Microwire transfer mode"]
-pub struct MWMOD_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> MWMOD_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
-        self.w
-    }
-}
+pub type MWMOD_W<'a, const O: u8> = crate::BitWriter<'a, u32, MWCR_SPEC, bool, O>;
+#[doc = "Field `MDD` reader - Microwire control"]
+pub type MDD_R = crate::BitReader<bool>;
+#[doc = "Field `MDD` writer - Microwire control"]
+pub type MDD_W<'a, const O: u8> = crate::BitWriter<'a, u32, MWCR_SPEC, bool, O>;
+#[doc = "Field `MHS` reader - Microwire handshaking"]
+pub type MHS_R = crate::BitReader<bool>;
+#[doc = "Field `MHS` writer - Microwire handshaking"]
+pub type MHS_W<'a, const O: u8> = crate::BitWriter<'a, u32, MWCR_SPEC, bool, O>;
 impl R {
-    #[doc = "Bit 2 - Microwire handshaking"]
+    #[doc = "Bit 0 - Microwire transfer mode"]
     #[inline(always)]
-    pub fn mhs(&self) -> MHS_R {
-        MHS_R::new(((self.bits >> 2) & 0x01) != 0)
+    pub fn mwmod(&self) -> MWMOD_R {
+        MWMOD_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - Microwire control"]
     #[inline(always)]
     pub fn mdd(&self) -> MDD_R {
-        MDD_R::new(((self.bits >> 1) & 0x01) != 0)
+        MDD_R::new(((self.bits >> 1) & 1) != 0)
     }
-    #[doc = "Bit 0 - Microwire transfer mode"]
+    #[doc = "Bit 2 - Microwire handshaking"]
     #[inline(always)]
-    pub fn mwmod(&self) -> MWMOD_R {
-        MWMOD_R::new((self.bits & 0x01) != 0)
+    pub fn mhs(&self) -> MHS_R {
+        MHS_R::new(((self.bits >> 2) & 1) != 0)
     }
 }
 impl W {
-    #[doc = "Bit 2 - Microwire handshaking"]
+    #[doc = "Bit 0 - Microwire transfer mode"]
     #[inline(always)]
-    pub fn mhs(&mut self) -> MHS_W {
-        MHS_W { w: self }
+    #[must_use]
+    pub fn mwmod(&mut self) -> MWMOD_W<0> {
+        MWMOD_W::new(self)
     }
     #[doc = "Bit 1 - Microwire control"]
     #[inline(always)]
-    pub fn mdd(&mut self) -> MDD_W {
-        MDD_W { w: self }
+    #[must_use]
+    pub fn mdd(&mut self) -> MDD_W<1> {
+        MDD_W::new(self)
     }
-    #[doc = "Bit 0 - Microwire transfer mode"]
+    #[doc = "Bit 2 - Microwire handshaking"]
     #[inline(always)]
-    pub fn mwmod(&mut self) -> MWMOD_W {
-        MWMOD_W { w: self }
+    #[must_use]
+    pub fn mhs(&mut self) -> MHS_W<2> {
+        MHS_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
@@ -201,11 +105,10 @@ impl crate::Readable for MWCR_SPEC {
 #[doc = "`write(|w| ..)` method takes [mwcr::W](W) writer structure"]
 impl crate::Writable for MWCR_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets MWCR to value 0"]
 impl crate::Resettable for MWCR_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

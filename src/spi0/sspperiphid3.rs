@@ -14,20 +14,7 @@ impl From<crate::R<SSPPERIPHID3_SPEC>> for R {
     }
 }
 #[doc = "Field `CONFIGURATION` reader - These bits read back as 0x00"]
-pub struct CONFIGURATION_R(crate::FieldReader<u8, u8>);
-impl CONFIGURATION_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        CONFIGURATION_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CONFIGURATION_R {
-    type Target = crate::FieldReader<u8, u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CONFIGURATION_R = crate::FieldReader<u8, u8>;
 impl R {
     #[doc = "Bits 0:7 - These bits read back as 0x00"]
     #[inline(always)]
@@ -50,8 +37,5 @@ impl crate::Readable for SSPPERIPHID3_SPEC {
 }
 #[doc = "`reset()` method sets SSPPERIPHID3 to value 0"]
 impl crate::Resettable for SSPPERIPHID3_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

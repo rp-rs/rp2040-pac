@@ -34,290 +34,99 @@ impl From<crate::W<USB_PWR_SPEC>> for W {
         W(writer)
     }
 }
-#[doc = "Field `OVERCURR_DETECT_EN` reader - "]
-pub struct OVERCURR_DETECT_EN_R(crate::FieldReader<bool, bool>);
-impl OVERCURR_DETECT_EN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        OVERCURR_DETECT_EN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for OVERCURR_DETECT_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-#[doc = "Field `OVERCURR_DETECT_EN` writer - "]
-pub struct OVERCURR_DETECT_EN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> OVERCURR_DETECT_EN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 5)) | ((value as u32 & 0x01) << 5);
-        self.w
-    }
-}
-#[doc = "Field `OVERCURR_DETECT` reader - "]
-pub struct OVERCURR_DETECT_R(crate::FieldReader<bool, bool>);
-impl OVERCURR_DETECT_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        OVERCURR_DETECT_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for OVERCURR_DETECT_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-#[doc = "Field `OVERCURR_DETECT` writer - "]
-pub struct OVERCURR_DETECT_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> OVERCURR_DETECT_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 4)) | ((value as u32 & 0x01) << 4);
-        self.w
-    }
-}
-#[doc = "Field `VBUS_DETECT_OVERRIDE_EN` reader - "]
-pub struct VBUS_DETECT_OVERRIDE_EN_R(crate::FieldReader<bool, bool>);
-impl VBUS_DETECT_OVERRIDE_EN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        VBUS_DETECT_OVERRIDE_EN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for VBUS_DETECT_OVERRIDE_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-#[doc = "Field `VBUS_DETECT_OVERRIDE_EN` writer - "]
-pub struct VBUS_DETECT_OVERRIDE_EN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> VBUS_DETECT_OVERRIDE_EN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 3)) | ((value as u32 & 0x01) << 3);
-        self.w
-    }
-}
-#[doc = "Field `VBUS_DETECT` reader - "]
-pub struct VBUS_DETECT_R(crate::FieldReader<bool, bool>);
-impl VBUS_DETECT_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        VBUS_DETECT_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for VBUS_DETECT_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-#[doc = "Field `VBUS_DETECT` writer - "]
-pub struct VBUS_DETECT_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> VBUS_DETECT_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 2)) | ((value as u32 & 0x01) << 2);
-        self.w
-    }
-}
-#[doc = "Field `VBUS_EN_OVERRIDE_EN` reader - "]
-pub struct VBUS_EN_OVERRIDE_EN_R(crate::FieldReader<bool, bool>);
-impl VBUS_EN_OVERRIDE_EN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        VBUS_EN_OVERRIDE_EN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for VBUS_EN_OVERRIDE_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-#[doc = "Field `VBUS_EN_OVERRIDE_EN` writer - "]
-pub struct VBUS_EN_OVERRIDE_EN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> VBUS_EN_OVERRIDE_EN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u32 & 0x01) << 1);
-        self.w
-    }
-}
 #[doc = "Field `VBUS_EN` reader - "]
-pub struct VBUS_EN_R(crate::FieldReader<bool, bool>);
-impl VBUS_EN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        VBUS_EN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for VBUS_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type VBUS_EN_R = crate::BitReader<bool>;
 #[doc = "Field `VBUS_EN` writer - "]
-pub struct VBUS_EN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> VBUS_EN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
-        self.w
-    }
-}
+pub type VBUS_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, USB_PWR_SPEC, bool, O>;
+#[doc = "Field `VBUS_EN_OVERRIDE_EN` reader - "]
+pub type VBUS_EN_OVERRIDE_EN_R = crate::BitReader<bool>;
+#[doc = "Field `VBUS_EN_OVERRIDE_EN` writer - "]
+pub type VBUS_EN_OVERRIDE_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, USB_PWR_SPEC, bool, O>;
+#[doc = "Field `VBUS_DETECT` reader - "]
+pub type VBUS_DETECT_R = crate::BitReader<bool>;
+#[doc = "Field `VBUS_DETECT` writer - "]
+pub type VBUS_DETECT_W<'a, const O: u8> = crate::BitWriter<'a, u32, USB_PWR_SPEC, bool, O>;
+#[doc = "Field `VBUS_DETECT_OVERRIDE_EN` reader - "]
+pub type VBUS_DETECT_OVERRIDE_EN_R = crate::BitReader<bool>;
+#[doc = "Field `VBUS_DETECT_OVERRIDE_EN` writer - "]
+pub type VBUS_DETECT_OVERRIDE_EN_W<'a, const O: u8> =
+    crate::BitWriter<'a, u32, USB_PWR_SPEC, bool, O>;
+#[doc = "Field `OVERCURR_DETECT` reader - "]
+pub type OVERCURR_DETECT_R = crate::BitReader<bool>;
+#[doc = "Field `OVERCURR_DETECT` writer - "]
+pub type OVERCURR_DETECT_W<'a, const O: u8> = crate::BitWriter<'a, u32, USB_PWR_SPEC, bool, O>;
+#[doc = "Field `OVERCURR_DETECT_EN` reader - "]
+pub type OVERCURR_DETECT_EN_R = crate::BitReader<bool>;
+#[doc = "Field `OVERCURR_DETECT_EN` writer - "]
+pub type OVERCURR_DETECT_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, USB_PWR_SPEC, bool, O>;
 impl R {
-    #[doc = "Bit 5"]
+    #[doc = "Bit 0"]
     #[inline(always)]
-    pub fn overcurr_detect_en(&self) -> OVERCURR_DETECT_EN_R {
-        OVERCURR_DETECT_EN_R::new(((self.bits >> 5) & 0x01) != 0)
-    }
-    #[doc = "Bit 4"]
-    #[inline(always)]
-    pub fn overcurr_detect(&self) -> OVERCURR_DETECT_R {
-        OVERCURR_DETECT_R::new(((self.bits >> 4) & 0x01) != 0)
-    }
-    #[doc = "Bit 3"]
-    #[inline(always)]
-    pub fn vbus_detect_override_en(&self) -> VBUS_DETECT_OVERRIDE_EN_R {
-        VBUS_DETECT_OVERRIDE_EN_R::new(((self.bits >> 3) & 0x01) != 0)
-    }
-    #[doc = "Bit 2"]
-    #[inline(always)]
-    pub fn vbus_detect(&self) -> VBUS_DETECT_R {
-        VBUS_DETECT_R::new(((self.bits >> 2) & 0x01) != 0)
+    pub fn vbus_en(&self) -> VBUS_EN_R {
+        VBUS_EN_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1"]
     #[inline(always)]
     pub fn vbus_en_override_en(&self) -> VBUS_EN_OVERRIDE_EN_R {
-        VBUS_EN_OVERRIDE_EN_R::new(((self.bits >> 1) & 0x01) != 0)
-    }
-    #[doc = "Bit 0"]
-    #[inline(always)]
-    pub fn vbus_en(&self) -> VBUS_EN_R {
-        VBUS_EN_R::new((self.bits & 0x01) != 0)
-    }
-}
-impl W {
-    #[doc = "Bit 5"]
-    #[inline(always)]
-    pub fn overcurr_detect_en(&mut self) -> OVERCURR_DETECT_EN_W {
-        OVERCURR_DETECT_EN_W { w: self }
-    }
-    #[doc = "Bit 4"]
-    #[inline(always)]
-    pub fn overcurr_detect(&mut self) -> OVERCURR_DETECT_W {
-        OVERCURR_DETECT_W { w: self }
-    }
-    #[doc = "Bit 3"]
-    #[inline(always)]
-    pub fn vbus_detect_override_en(&mut self) -> VBUS_DETECT_OVERRIDE_EN_W {
-        VBUS_DETECT_OVERRIDE_EN_W { w: self }
+        VBUS_EN_OVERRIDE_EN_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2"]
     #[inline(always)]
-    pub fn vbus_detect(&mut self) -> VBUS_DETECT_W {
-        VBUS_DETECT_W { w: self }
+    pub fn vbus_detect(&self) -> VBUS_DETECT_R {
+        VBUS_DETECT_R::new(((self.bits >> 2) & 1) != 0)
+    }
+    #[doc = "Bit 3"]
+    #[inline(always)]
+    pub fn vbus_detect_override_en(&self) -> VBUS_DETECT_OVERRIDE_EN_R {
+        VBUS_DETECT_OVERRIDE_EN_R::new(((self.bits >> 3) & 1) != 0)
+    }
+    #[doc = "Bit 4"]
+    #[inline(always)]
+    pub fn overcurr_detect(&self) -> OVERCURR_DETECT_R {
+        OVERCURR_DETECT_R::new(((self.bits >> 4) & 1) != 0)
+    }
+    #[doc = "Bit 5"]
+    #[inline(always)]
+    pub fn overcurr_detect_en(&self) -> OVERCURR_DETECT_EN_R {
+        OVERCURR_DETECT_EN_R::new(((self.bits >> 5) & 1) != 0)
+    }
+}
+impl W {
+    #[doc = "Bit 0"]
+    #[inline(always)]
+    #[must_use]
+    pub fn vbus_en(&mut self) -> VBUS_EN_W<0> {
+        VBUS_EN_W::new(self)
     }
     #[doc = "Bit 1"]
     #[inline(always)]
-    pub fn vbus_en_override_en(&mut self) -> VBUS_EN_OVERRIDE_EN_W {
-        VBUS_EN_OVERRIDE_EN_W { w: self }
+    #[must_use]
+    pub fn vbus_en_override_en(&mut self) -> VBUS_EN_OVERRIDE_EN_W<1> {
+        VBUS_EN_OVERRIDE_EN_W::new(self)
     }
-    #[doc = "Bit 0"]
+    #[doc = "Bit 2"]
     #[inline(always)]
-    pub fn vbus_en(&mut self) -> VBUS_EN_W {
-        VBUS_EN_W { w: self }
+    #[must_use]
+    pub fn vbus_detect(&mut self) -> VBUS_DETECT_W<2> {
+        VBUS_DETECT_W::new(self)
+    }
+    #[doc = "Bit 3"]
+    #[inline(always)]
+    #[must_use]
+    pub fn vbus_detect_override_en(&mut self) -> VBUS_DETECT_OVERRIDE_EN_W<3> {
+        VBUS_DETECT_OVERRIDE_EN_W::new(self)
+    }
+    #[doc = "Bit 4"]
+    #[inline(always)]
+    #[must_use]
+    pub fn overcurr_detect(&mut self) -> OVERCURR_DETECT_W<4> {
+        OVERCURR_DETECT_W::new(self)
+    }
+    #[doc = "Bit 5"]
+    #[inline(always)]
+    #[must_use]
+    pub fn overcurr_detect_en(&mut self) -> OVERCURR_DETECT_EN_W<5> {
+        OVERCURR_DETECT_EN_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
@@ -342,11 +151,10 @@ impl crate::Readable for USB_PWR_SPEC {
 #[doc = "`write(|w| ..)` method takes [usb_pwr::W](W) writer structure"]
 impl crate::Writable for USB_PWR_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets USB_PWR to value 0"]
 impl crate::Resettable for USB_PWR_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

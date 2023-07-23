@@ -36,33 +36,10 @@ impl From<crate::W<VTOR_SPEC>> for W {
 }
 #[doc = "Field `TBLOFF` reader - Bits \\[31:8\\]
 of the indicate the vector table offset address."]
-pub struct TBLOFF_R(crate::FieldReader<u32, u32>);
-impl TBLOFF_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u32) -> Self {
-        TBLOFF_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TBLOFF_R {
-    type Target = crate::FieldReader<u32, u32>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type TBLOFF_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `TBLOFF` writer - Bits \\[31:8\\]
 of the indicate the vector table offset address."]
-pub struct TBLOFF_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TBLOFF_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u32) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x00ff_ffff << 8)) | ((value as u32 & 0x00ff_ffff) << 8);
-        self.w
-    }
-}
+pub type TBLOFF_W<'a, const O: u8> = crate::FieldWriter<'a, u32, VTOR_SPEC, u32, u32, 24, O>;
 impl R {
     #[doc = "Bits 8:31 - Bits \\[31:8\\]
 of the indicate the vector table offset address."]
@@ -75,8 +52,9 @@ impl W {
     #[doc = "Bits 8:31 - Bits \\[31:8\\]
 of the indicate the vector table offset address."]
     #[inline(always)]
-    pub fn tbloff(&mut self) -> TBLOFF_W {
-        TBLOFF_W { w: self }
+    #[must_use]
+    pub fn tbloff(&mut self) -> TBLOFF_W<8> {
+        TBLOFF_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
@@ -101,11 +79,10 @@ impl crate::Readable for VTOR_SPEC {
 #[doc = "`write(|w| ..)` method takes [vtor::W](W) writer structure"]
 impl crate::Writable for VTOR_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets VTOR to value 0"]
 impl crate::Resettable for VTOR_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

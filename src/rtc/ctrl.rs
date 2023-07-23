@@ -34,173 +34,64 @@ impl From<crate::W<CTRL_SPEC>> for W {
         W(writer)
     }
 }
+#[doc = "Field `RTC_ENABLE` reader - Enable RTC"]
+pub type RTC_ENABLE_R = crate::BitReader<bool>;
+#[doc = "Field `RTC_ENABLE` writer - Enable RTC"]
+pub type RTC_ENABLE_W<'a, const O: u8> = crate::BitWriter<'a, u32, CTRL_SPEC, bool, O>;
+#[doc = "Field `RTC_ACTIVE` reader - RTC enabled (running)"]
+pub type RTC_ACTIVE_R = crate::BitReader<bool>;
+#[doc = "Field `LOAD` reader - Load RTC"]
+pub type LOAD_R = crate::BitReader<bool>;
+#[doc = "Field `LOAD` writer - Load RTC"]
+pub type LOAD_W<'a, const O: u8> = crate::BitWriter<'a, u32, CTRL_SPEC, bool, O>;
 #[doc = "Field `FORCE_NOTLEAPYEAR` reader - If set, leapyear is forced off.  
  Useful for years divisible by 100 but not by 400"]
-pub struct FORCE_NOTLEAPYEAR_R(crate::FieldReader<bool, bool>);
-impl FORCE_NOTLEAPYEAR_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        FORCE_NOTLEAPYEAR_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for FORCE_NOTLEAPYEAR_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type FORCE_NOTLEAPYEAR_R = crate::BitReader<bool>;
 #[doc = "Field `FORCE_NOTLEAPYEAR` writer - If set, leapyear is forced off.  
  Useful for years divisible by 100 but not by 400"]
-pub struct FORCE_NOTLEAPYEAR_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> FORCE_NOTLEAPYEAR_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 8)) | ((value as u32 & 0x01) << 8);
-        self.w
-    }
-}
-#[doc = "Field `LOAD` reader - Load RTC"]
-pub struct LOAD_R(crate::FieldReader<bool, bool>);
-impl LOAD_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        LOAD_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for LOAD_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-#[doc = "Field `LOAD` writer - Load RTC"]
-pub struct LOAD_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> LOAD_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 4)) | ((value as u32 & 0x01) << 4);
-        self.w
-    }
-}
-#[doc = "Field `RTC_ACTIVE` reader - RTC enabled (running)"]
-pub struct RTC_ACTIVE_R(crate::FieldReader<bool, bool>);
-impl RTC_ACTIVE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        RTC_ACTIVE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RTC_ACTIVE_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-#[doc = "Field `RTC_ENABLE` reader - Enable RTC"]
-pub struct RTC_ENABLE_R(crate::FieldReader<bool, bool>);
-impl RTC_ENABLE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        RTC_ENABLE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RTC_ENABLE_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-#[doc = "Field `RTC_ENABLE` writer - Enable RTC"]
-pub struct RTC_ENABLE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> RTC_ENABLE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
-        self.w
-    }
-}
+pub type FORCE_NOTLEAPYEAR_W<'a, const O: u8> = crate::BitWriter<'a, u32, CTRL_SPEC, bool, O>;
 impl R {
-    #[doc = "Bit 8 - If set, leapyear is forced off.  
- Useful for years divisible by 100 but not by 400"]
+    #[doc = "Bit 0 - Enable RTC"]
     #[inline(always)]
-    pub fn force_notleapyear(&self) -> FORCE_NOTLEAPYEAR_R {
-        FORCE_NOTLEAPYEAR_R::new(((self.bits >> 8) & 0x01) != 0)
-    }
-    #[doc = "Bit 4 - Load RTC"]
-    #[inline(always)]
-    pub fn load(&self) -> LOAD_R {
-        LOAD_R::new(((self.bits >> 4) & 0x01) != 0)
+    pub fn rtc_enable(&self) -> RTC_ENABLE_R {
+        RTC_ENABLE_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - RTC enabled (running)"]
     #[inline(always)]
     pub fn rtc_active(&self) -> RTC_ACTIVE_R {
-        RTC_ACTIVE_R::new(((self.bits >> 1) & 0x01) != 0)
-    }
-    #[doc = "Bit 0 - Enable RTC"]
-    #[inline(always)]
-    pub fn rtc_enable(&self) -> RTC_ENABLE_R {
-        RTC_ENABLE_R::new((self.bits & 0x01) != 0)
-    }
-}
-impl W {
-    #[doc = "Bit 8 - If set, leapyear is forced off.  
- Useful for years divisible by 100 but not by 400"]
-    #[inline(always)]
-    pub fn force_notleapyear(&mut self) -> FORCE_NOTLEAPYEAR_W {
-        FORCE_NOTLEAPYEAR_W { w: self }
+        RTC_ACTIVE_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 4 - Load RTC"]
     #[inline(always)]
-    pub fn load(&mut self) -> LOAD_W {
-        LOAD_W { w: self }
+    pub fn load(&self) -> LOAD_R {
+        LOAD_R::new(((self.bits >> 4) & 1) != 0)
     }
+    #[doc = "Bit 8 - If set, leapyear is forced off.  
+ Useful for years divisible by 100 but not by 400"]
+    #[inline(always)]
+    pub fn force_notleapyear(&self) -> FORCE_NOTLEAPYEAR_R {
+        FORCE_NOTLEAPYEAR_R::new(((self.bits >> 8) & 1) != 0)
+    }
+}
+impl W {
     #[doc = "Bit 0 - Enable RTC"]
     #[inline(always)]
-    pub fn rtc_enable(&mut self) -> RTC_ENABLE_W {
-        RTC_ENABLE_W { w: self }
+    #[must_use]
+    pub fn rtc_enable(&mut self) -> RTC_ENABLE_W<0> {
+        RTC_ENABLE_W::new(self)
+    }
+    #[doc = "Bit 4 - Load RTC"]
+    #[inline(always)]
+    #[must_use]
+    pub fn load(&mut self) -> LOAD_W<4> {
+        LOAD_W::new(self)
+    }
+    #[doc = "Bit 8 - If set, leapyear is forced off.  
+ Useful for years divisible by 100 but not by 400"]
+    #[inline(always)]
+    #[must_use]
+    pub fn force_notleapyear(&mut self) -> FORCE_NOTLEAPYEAR_W<8> {
+        FORCE_NOTLEAPYEAR_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
@@ -225,11 +116,10 @@ impl crate::Readable for CTRL_SPEC {
 #[doc = "`write(|w| ..)` method takes [ctrl::W](W) writer structure"]
 impl crate::Writable for CTRL_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets CTRL to value 0"]
 impl crate::Resettable for CTRL_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

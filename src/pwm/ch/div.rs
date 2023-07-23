@@ -34,82 +34,38 @@ impl From<crate::W<DIV_SPEC>> for W {
         W(writer)
     }
 }
-#[doc = "Field `INT` reader - "]
-pub struct INT_R(crate::FieldReader<u8, u8>);
-impl INT_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        INT_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for INT_R {
-    type Target = crate::FieldReader<u8, u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-#[doc = "Field `INT` writer - "]
-pub struct INT_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> INT_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0xff << 4)) | ((value as u32 & 0xff) << 4);
-        self.w
-    }
-}
 #[doc = "Field `FRAC` reader - "]
-pub struct FRAC_R(crate::FieldReader<u8, u8>);
-impl FRAC_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        FRAC_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for FRAC_R {
-    type Target = crate::FieldReader<u8, u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type FRAC_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `FRAC` writer - "]
-pub struct FRAC_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> FRAC_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x0f) | (value as u32 & 0x0f);
-        self.w
-    }
-}
+pub type FRAC_W<'a, const O: u8> = crate::FieldWriter<'a, u32, DIV_SPEC, u8, u8, 4, O>;
+#[doc = "Field `INT` reader - "]
+pub type INT_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `INT` writer - "]
+pub type INT_W<'a, const O: u8> = crate::FieldWriter<'a, u32, DIV_SPEC, u8, u8, 8, O>;
 impl R {
-    #[doc = "Bits 4:11"]
-    #[inline(always)]
-    pub fn int(&self) -> INT_R {
-        INT_R::new(((self.bits >> 4) & 0xff) as u8)
-    }
     #[doc = "Bits 0:3"]
     #[inline(always)]
     pub fn frac(&self) -> FRAC_R {
         FRAC_R::new((self.bits & 0x0f) as u8)
     }
-}
-impl W {
     #[doc = "Bits 4:11"]
     #[inline(always)]
-    pub fn int(&mut self) -> INT_W {
-        INT_W { w: self }
+    pub fn int(&self) -> INT_R {
+        INT_R::new(((self.bits >> 4) & 0xff) as u8)
     }
+}
+impl W {
     #[doc = "Bits 0:3"]
     #[inline(always)]
-    pub fn frac(&mut self) -> FRAC_W {
-        FRAC_W { w: self }
+    #[must_use]
+    pub fn frac(&mut self) -> FRAC_W<0> {
+        FRAC_W::new(self)
+    }
+    #[doc = "Bits 4:11"]
+    #[inline(always)]
+    #[must_use]
+    pub fn int(&mut self) -> INT_W<4> {
+        INT_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
@@ -136,11 +92,10 @@ impl crate::Readable for DIV_SPEC {
 #[doc = "`write(|w| ..)` method takes [div::W](W) writer structure"]
 impl crate::Writable for DIV_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets DIV to value 0x10"]
 impl crate::Resettable for DIV_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x10
-    }
+    const RESET_VALUE: Self::Ux = 0x10;
 }

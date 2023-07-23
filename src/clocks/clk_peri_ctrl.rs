@@ -34,84 +34,12 @@ impl From<crate::W<CLK_PERI_CTRL_SPEC>> for W {
         W(writer)
     }
 }
-#[doc = "Field `ENABLE` reader - Starts and stops the clock generator cleanly"]
-pub struct ENABLE_R(crate::FieldReader<bool, bool>);
-impl ENABLE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        ENABLE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for ENABLE_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-#[doc = "Field `ENABLE` writer - Starts and stops the clock generator cleanly"]
-pub struct ENABLE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> ENABLE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 11)) | ((value as u32 & 0x01) << 11);
-        self.w
-    }
-}
-#[doc = "Field `KILL` reader - Asynchronously kills the clock generator"]
-pub struct KILL_R(crate::FieldReader<bool, bool>);
-impl KILL_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        KILL_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for KILL_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-#[doc = "Field `KILL` writer - Asynchronously kills the clock generator"]
-pub struct KILL_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> KILL_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 10)) | ((value as u32 & 0x01) << 10);
-        self.w
-    }
-}
+#[doc = "Field `AUXSRC` reader - Selects the auxiliary clock source, will glitch when switching"]
+pub type AUXSRC_R = crate::FieldReader<u8, AUXSRC_A>;
 #[doc = "Selects the auxiliary clock source, will glitch when switching  
 
 Value on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u8)]
 pub enum AUXSRC_A {
     #[doc = "0: `0`"]
@@ -135,14 +63,8 @@ impl From<AUXSRC_A> for u8 {
         variant as _
     }
 }
-#[doc = "Field `AUXSRC` reader - Selects the auxiliary clock source, will glitch when switching"]
-pub struct AUXSRC_R(crate::FieldReader<u8, AUXSRC_A>);
 impl AUXSRC_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        AUXSRC_R(crate::FieldReader::new(bits))
-    }
-    #[doc = r"Get enumerated values variant"]
+    #[doc = "Get enumerated values variant"]
     #[inline(always)]
     pub fn variant(&self) -> Option<AUXSRC_A> {
         match self.bits {
@@ -159,56 +81,43 @@ impl AUXSRC_R {
     #[doc = "Checks if the value of the field is `CLK_SYS`"]
     #[inline(always)]
     pub fn is_clk_sys(&self) -> bool {
-        **self == AUXSRC_A::CLK_SYS
+        *self == AUXSRC_A::CLK_SYS
     }
     #[doc = "Checks if the value of the field is `CLKSRC_PLL_SYS`"]
     #[inline(always)]
     pub fn is_clksrc_pll_sys(&self) -> bool {
-        **self == AUXSRC_A::CLKSRC_PLL_SYS
+        *self == AUXSRC_A::CLKSRC_PLL_SYS
     }
     #[doc = "Checks if the value of the field is `CLKSRC_PLL_USB`"]
     #[inline(always)]
     pub fn is_clksrc_pll_usb(&self) -> bool {
-        **self == AUXSRC_A::CLKSRC_PLL_USB
+        *self == AUXSRC_A::CLKSRC_PLL_USB
     }
     #[doc = "Checks if the value of the field is `ROSC_CLKSRC_PH`"]
     #[inline(always)]
     pub fn is_rosc_clksrc_ph(&self) -> bool {
-        **self == AUXSRC_A::ROSC_CLKSRC_PH
+        *self == AUXSRC_A::ROSC_CLKSRC_PH
     }
     #[doc = "Checks if the value of the field is `XOSC_CLKSRC`"]
     #[inline(always)]
     pub fn is_xosc_clksrc(&self) -> bool {
-        **self == AUXSRC_A::XOSC_CLKSRC
+        *self == AUXSRC_A::XOSC_CLKSRC
     }
     #[doc = "Checks if the value of the field is `CLKSRC_GPIN0`"]
     #[inline(always)]
     pub fn is_clksrc_gpin0(&self) -> bool {
-        **self == AUXSRC_A::CLKSRC_GPIN0
+        *self == AUXSRC_A::CLKSRC_GPIN0
     }
     #[doc = "Checks if the value of the field is `CLKSRC_GPIN1`"]
     #[inline(always)]
     pub fn is_clksrc_gpin1(&self) -> bool {
-        **self == AUXSRC_A::CLKSRC_GPIN1
-    }
-}
-impl core::ops::Deref for AUXSRC_R {
-    type Target = crate::FieldReader<u8, AUXSRC_A>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
+        *self == AUXSRC_A::CLKSRC_GPIN1
     }
 }
 #[doc = "Field `AUXSRC` writer - Selects the auxiliary clock source, will glitch when switching"]
-pub struct AUXSRC_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> AUXSRC_W<'a> {
-    #[doc = r"Writes `variant` to the field"]
-    #[inline(always)]
-    pub fn variant(self, variant: AUXSRC_A) -> &'a mut W {
-        unsafe { self.bits(variant.into()) }
-    }
+pub type AUXSRC_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, CLK_PERI_CTRL_SPEC, u8, AUXSRC_A, 3, O>;
+impl<'a, const O: u8> AUXSRC_W<'a, O> {
     #[doc = "`0`"]
     #[inline(always)]
     pub fn clk_sys(self) -> &'a mut W {
@@ -244,45 +153,50 @@ impl<'a> AUXSRC_W<'a> {
     pub fn clksrc_gpin1(self) -> &'a mut W {
         self.variant(AUXSRC_A::CLKSRC_GPIN1)
     }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x07 << 5)) | ((value as u32 & 0x07) << 5);
-        self.w
-    }
 }
+#[doc = "Field `KILL` reader - Asynchronously kills the clock generator"]
+pub type KILL_R = crate::BitReader<bool>;
+#[doc = "Field `KILL` writer - Asynchronously kills the clock generator"]
+pub type KILL_W<'a, const O: u8> = crate::BitWriter<'a, u32, CLK_PERI_CTRL_SPEC, bool, O>;
+#[doc = "Field `ENABLE` reader - Starts and stops the clock generator cleanly"]
+pub type ENABLE_R = crate::BitReader<bool>;
+#[doc = "Field `ENABLE` writer - Starts and stops the clock generator cleanly"]
+pub type ENABLE_W<'a, const O: u8> = crate::BitWriter<'a, u32, CLK_PERI_CTRL_SPEC, bool, O>;
 impl R {
-    #[doc = "Bit 11 - Starts and stops the clock generator cleanly"]
+    #[doc = "Bits 5:7 - Selects the auxiliary clock source, will glitch when switching"]
     #[inline(always)]
-    pub fn enable(&self) -> ENABLE_R {
-        ENABLE_R::new(((self.bits >> 11) & 0x01) != 0)
+    pub fn auxsrc(&self) -> AUXSRC_R {
+        AUXSRC_R::new(((self.bits >> 5) & 7) as u8)
     }
     #[doc = "Bit 10 - Asynchronously kills the clock generator"]
     #[inline(always)]
     pub fn kill(&self) -> KILL_R {
-        KILL_R::new(((self.bits >> 10) & 0x01) != 0)
+        KILL_R::new(((self.bits >> 10) & 1) != 0)
     }
-    #[doc = "Bits 5:7 - Selects the auxiliary clock source, will glitch when switching"]
+    #[doc = "Bit 11 - Starts and stops the clock generator cleanly"]
     #[inline(always)]
-    pub fn auxsrc(&self) -> AUXSRC_R {
-        AUXSRC_R::new(((self.bits >> 5) & 0x07) as u8)
+    pub fn enable(&self) -> ENABLE_R {
+        ENABLE_R::new(((self.bits >> 11) & 1) != 0)
     }
 }
 impl W {
-    #[doc = "Bit 11 - Starts and stops the clock generator cleanly"]
+    #[doc = "Bits 5:7 - Selects the auxiliary clock source, will glitch when switching"]
     #[inline(always)]
-    pub fn enable(&mut self) -> ENABLE_W {
-        ENABLE_W { w: self }
+    #[must_use]
+    pub fn auxsrc(&mut self) -> AUXSRC_W<5> {
+        AUXSRC_W::new(self)
     }
     #[doc = "Bit 10 - Asynchronously kills the clock generator"]
     #[inline(always)]
-    pub fn kill(&mut self) -> KILL_W {
-        KILL_W { w: self }
+    #[must_use]
+    pub fn kill(&mut self) -> KILL_W<10> {
+        KILL_W::new(self)
     }
-    #[doc = "Bits 5:7 - Selects the auxiliary clock source, will glitch when switching"]
+    #[doc = "Bit 11 - Starts and stops the clock generator cleanly"]
     #[inline(always)]
-    pub fn auxsrc(&mut self) -> AUXSRC_W {
-        AUXSRC_W { w: self }
+    #[must_use]
+    pub fn enable(&mut self) -> ENABLE_W<11> {
+        ENABLE_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
@@ -307,11 +221,10 @@ impl crate::Readable for CLK_PERI_CTRL_SPEC {
 #[doc = "`write(|w| ..)` method takes [clk_peri_ctrl::W](W) writer structure"]
 impl crate::Writable for CLK_PERI_CTRL_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets CLK_PERI_CTRL to value 0"]
 impl crate::Resettable for CLK_PERI_CTRL_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

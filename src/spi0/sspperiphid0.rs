@@ -14,20 +14,7 @@ impl From<crate::R<SSPPERIPHID0_SPEC>> for R {
     }
 }
 #[doc = "Field `PARTNUMBER0` reader - These bits read back as 0x22"]
-pub struct PARTNUMBER0_R(crate::FieldReader<u8, u8>);
-impl PARTNUMBER0_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        PARTNUMBER0_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PARTNUMBER0_R {
-    type Target = crate::FieldReader<u8, u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PARTNUMBER0_R = crate::FieldReader<u8, u8>;
 impl R {
     #[doc = "Bits 0:7 - These bits read back as 0x22"]
     #[inline(always)]
@@ -50,8 +37,5 @@ impl crate::Readable for SSPPERIPHID0_SPEC {
 }
 #[doc = "`reset()` method sets SSPPERIPHID0 to value 0x22"]
 impl crate::Resettable for SSPPERIPHID0_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x22
-    }
+    const RESET_VALUE: Self::Ux = 0x22;
 }

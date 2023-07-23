@@ -28,8 +28,5 @@ impl crate::Readable for DBG_PADOE_SPEC {
 }
 #[doc = "`reset()` method sets DBG_PADOE to value 0"]
 impl crate::Resettable for DBG_PADOE_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

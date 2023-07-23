@@ -34,290 +34,98 @@ impl From<crate::W<IMR_SPEC>> for W {
         W(writer)
     }
 }
-#[doc = "Field `MSTIM` reader - Multi-master contention interrupt mask"]
-pub struct MSTIM_R(crate::FieldReader<bool, bool>);
-impl MSTIM_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        MSTIM_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for MSTIM_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-#[doc = "Field `MSTIM` writer - Multi-master contention interrupt mask"]
-pub struct MSTIM_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> MSTIM_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 5)) | ((value as u32 & 0x01) << 5);
-        self.w
-    }
-}
-#[doc = "Field `RXFIM` reader - Receive FIFO full interrupt mask"]
-pub struct RXFIM_R(crate::FieldReader<bool, bool>);
-impl RXFIM_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        RXFIM_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RXFIM_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-#[doc = "Field `RXFIM` writer - Receive FIFO full interrupt mask"]
-pub struct RXFIM_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> RXFIM_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 4)) | ((value as u32 & 0x01) << 4);
-        self.w
-    }
-}
-#[doc = "Field `RXOIM` reader - Receive FIFO overflow interrupt mask"]
-pub struct RXOIM_R(crate::FieldReader<bool, bool>);
-impl RXOIM_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        RXOIM_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RXOIM_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-#[doc = "Field `RXOIM` writer - Receive FIFO overflow interrupt mask"]
-pub struct RXOIM_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> RXOIM_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 3)) | ((value as u32 & 0x01) << 3);
-        self.w
-    }
-}
-#[doc = "Field `RXUIM` reader - Receive FIFO underflow interrupt mask"]
-pub struct RXUIM_R(crate::FieldReader<bool, bool>);
-impl RXUIM_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        RXUIM_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RXUIM_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-#[doc = "Field `RXUIM` writer - Receive FIFO underflow interrupt mask"]
-pub struct RXUIM_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> RXUIM_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 2)) | ((value as u32 & 0x01) << 2);
-        self.w
-    }
-}
-#[doc = "Field `TXOIM` reader - Transmit FIFO overflow interrupt mask"]
-pub struct TXOIM_R(crate::FieldReader<bool, bool>);
-impl TXOIM_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        TXOIM_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TXOIM_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-#[doc = "Field `TXOIM` writer - Transmit FIFO overflow interrupt mask"]
-pub struct TXOIM_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TXOIM_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u32 & 0x01) << 1);
-        self.w
-    }
-}
 #[doc = "Field `TXEIM` reader - Transmit FIFO empty interrupt mask"]
-pub struct TXEIM_R(crate::FieldReader<bool, bool>);
-impl TXEIM_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        TXEIM_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TXEIM_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type TXEIM_R = crate::BitReader<bool>;
 #[doc = "Field `TXEIM` writer - Transmit FIFO empty interrupt mask"]
-pub struct TXEIM_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TXEIM_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
-        self.w
-    }
-}
+pub type TXEIM_W<'a, const O: u8> = crate::BitWriter<'a, u32, IMR_SPEC, bool, O>;
+#[doc = "Field `TXOIM` reader - Transmit FIFO overflow interrupt mask"]
+pub type TXOIM_R = crate::BitReader<bool>;
+#[doc = "Field `TXOIM` writer - Transmit FIFO overflow interrupt mask"]
+pub type TXOIM_W<'a, const O: u8> = crate::BitWriter<'a, u32, IMR_SPEC, bool, O>;
+#[doc = "Field `RXUIM` reader - Receive FIFO underflow interrupt mask"]
+pub type RXUIM_R = crate::BitReader<bool>;
+#[doc = "Field `RXUIM` writer - Receive FIFO underflow interrupt mask"]
+pub type RXUIM_W<'a, const O: u8> = crate::BitWriter<'a, u32, IMR_SPEC, bool, O>;
+#[doc = "Field `RXOIM` reader - Receive FIFO overflow interrupt mask"]
+pub type RXOIM_R = crate::BitReader<bool>;
+#[doc = "Field `RXOIM` writer - Receive FIFO overflow interrupt mask"]
+pub type RXOIM_W<'a, const O: u8> = crate::BitWriter<'a, u32, IMR_SPEC, bool, O>;
+#[doc = "Field `RXFIM` reader - Receive FIFO full interrupt mask"]
+pub type RXFIM_R = crate::BitReader<bool>;
+#[doc = "Field `RXFIM` writer - Receive FIFO full interrupt mask"]
+pub type RXFIM_W<'a, const O: u8> = crate::BitWriter<'a, u32, IMR_SPEC, bool, O>;
+#[doc = "Field `MSTIM` reader - Multi-master contention interrupt mask"]
+pub type MSTIM_R = crate::BitReader<bool>;
+#[doc = "Field `MSTIM` writer - Multi-master contention interrupt mask"]
+pub type MSTIM_W<'a, const O: u8> = crate::BitWriter<'a, u32, IMR_SPEC, bool, O>;
 impl R {
-    #[doc = "Bit 5 - Multi-master contention interrupt mask"]
+    #[doc = "Bit 0 - Transmit FIFO empty interrupt mask"]
     #[inline(always)]
-    pub fn mstim(&self) -> MSTIM_R {
-        MSTIM_R::new(((self.bits >> 5) & 0x01) != 0)
-    }
-    #[doc = "Bit 4 - Receive FIFO full interrupt mask"]
-    #[inline(always)]
-    pub fn rxfim(&self) -> RXFIM_R {
-        RXFIM_R::new(((self.bits >> 4) & 0x01) != 0)
-    }
-    #[doc = "Bit 3 - Receive FIFO overflow interrupt mask"]
-    #[inline(always)]
-    pub fn rxoim(&self) -> RXOIM_R {
-        RXOIM_R::new(((self.bits >> 3) & 0x01) != 0)
-    }
-    #[doc = "Bit 2 - Receive FIFO underflow interrupt mask"]
-    #[inline(always)]
-    pub fn rxuim(&self) -> RXUIM_R {
-        RXUIM_R::new(((self.bits >> 2) & 0x01) != 0)
+    pub fn txeim(&self) -> TXEIM_R {
+        TXEIM_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - Transmit FIFO overflow interrupt mask"]
     #[inline(always)]
     pub fn txoim(&self) -> TXOIM_R {
-        TXOIM_R::new(((self.bits >> 1) & 0x01) != 0)
-    }
-    #[doc = "Bit 0 - Transmit FIFO empty interrupt mask"]
-    #[inline(always)]
-    pub fn txeim(&self) -> TXEIM_R {
-        TXEIM_R::new((self.bits & 0x01) != 0)
-    }
-}
-impl W {
-    #[doc = "Bit 5 - Multi-master contention interrupt mask"]
-    #[inline(always)]
-    pub fn mstim(&mut self) -> MSTIM_W {
-        MSTIM_W { w: self }
-    }
-    #[doc = "Bit 4 - Receive FIFO full interrupt mask"]
-    #[inline(always)]
-    pub fn rxfim(&mut self) -> RXFIM_W {
-        RXFIM_W { w: self }
-    }
-    #[doc = "Bit 3 - Receive FIFO overflow interrupt mask"]
-    #[inline(always)]
-    pub fn rxoim(&mut self) -> RXOIM_W {
-        RXOIM_W { w: self }
+        TXOIM_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2 - Receive FIFO underflow interrupt mask"]
     #[inline(always)]
-    pub fn rxuim(&mut self) -> RXUIM_W {
-        RXUIM_W { w: self }
+    pub fn rxuim(&self) -> RXUIM_R {
+        RXUIM_R::new(((self.bits >> 2) & 1) != 0)
+    }
+    #[doc = "Bit 3 - Receive FIFO overflow interrupt mask"]
+    #[inline(always)]
+    pub fn rxoim(&self) -> RXOIM_R {
+        RXOIM_R::new(((self.bits >> 3) & 1) != 0)
+    }
+    #[doc = "Bit 4 - Receive FIFO full interrupt mask"]
+    #[inline(always)]
+    pub fn rxfim(&self) -> RXFIM_R {
+        RXFIM_R::new(((self.bits >> 4) & 1) != 0)
+    }
+    #[doc = "Bit 5 - Multi-master contention interrupt mask"]
+    #[inline(always)]
+    pub fn mstim(&self) -> MSTIM_R {
+        MSTIM_R::new(((self.bits >> 5) & 1) != 0)
+    }
+}
+impl W {
+    #[doc = "Bit 0 - Transmit FIFO empty interrupt mask"]
+    #[inline(always)]
+    #[must_use]
+    pub fn txeim(&mut self) -> TXEIM_W<0> {
+        TXEIM_W::new(self)
     }
     #[doc = "Bit 1 - Transmit FIFO overflow interrupt mask"]
     #[inline(always)]
-    pub fn txoim(&mut self) -> TXOIM_W {
-        TXOIM_W { w: self }
+    #[must_use]
+    pub fn txoim(&mut self) -> TXOIM_W<1> {
+        TXOIM_W::new(self)
     }
-    #[doc = "Bit 0 - Transmit FIFO empty interrupt mask"]
+    #[doc = "Bit 2 - Receive FIFO underflow interrupt mask"]
     #[inline(always)]
-    pub fn txeim(&mut self) -> TXEIM_W {
-        TXEIM_W { w: self }
+    #[must_use]
+    pub fn rxuim(&mut self) -> RXUIM_W<2> {
+        RXUIM_W::new(self)
+    }
+    #[doc = "Bit 3 - Receive FIFO overflow interrupt mask"]
+    #[inline(always)]
+    #[must_use]
+    pub fn rxoim(&mut self) -> RXOIM_W<3> {
+        RXOIM_W::new(self)
+    }
+    #[doc = "Bit 4 - Receive FIFO full interrupt mask"]
+    #[inline(always)]
+    #[must_use]
+    pub fn rxfim(&mut self) -> RXFIM_W<4> {
+        RXFIM_W::new(self)
+    }
+    #[doc = "Bit 5 - Multi-master contention interrupt mask"]
+    #[inline(always)]
+    #[must_use]
+    pub fn mstim(&mut self) -> MSTIM_W<5> {
+        MSTIM_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
@@ -342,11 +150,10 @@ impl crate::Readable for IMR_SPEC {
 #[doc = "`write(|w| ..)` method takes [imr::W](W) writer structure"]
 impl crate::Writable for IMR_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets IMR to value 0"]
 impl crate::Resettable for IMR_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

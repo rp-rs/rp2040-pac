@@ -20,22 +20,13 @@ impl From<crate::W<IRQ_FORCE_SPEC>> for W {
     }
 }
 #[doc = "Field `IRQ_FORCE` writer - "]
-pub struct IRQ_FORCE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> IRQ_FORCE_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0xff) | (value as u32 & 0xff);
-        self.w
-    }
-}
+pub type IRQ_FORCE_W<'a, const O: u8> = crate::FieldWriter<'a, u32, IRQ_FORCE_SPEC, u8, u8, 8, O>;
 impl W {
     #[doc = "Bits 0:7"]
     #[inline(always)]
-    pub fn irq_force(&mut self) -> IRQ_FORCE_W {
-        IRQ_FORCE_W { w: self }
+    #[must_use]
+    pub fn irq_force(&mut self) -> IRQ_FORCE_W<0> {
+        IRQ_FORCE_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
@@ -56,11 +47,10 @@ impl crate::RegisterSpec for IRQ_FORCE_SPEC {
 #[doc = "`write(|w| ..)` method takes [irq_force::W](W) writer structure"]
 impl crate::Writable for IRQ_FORCE_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets IRQ_FORCE to value 0"]
 impl crate::Resettable for IRQ_FORCE_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }
