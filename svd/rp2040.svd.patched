@@ -9891,9 +9891,28 @@
             </field>
             <field>
               <name>FRF</name>
-              <description>Frame format: 00 Motorola SPI frame format. 01 TI synchronous serial frame format. 10 National Microwire frame format. 11 Reserved, undefined operation.</description>
+              <description>Frame format.</description>
               <bitRange>[5:4]</bitRange>
               <access>read-write</access>
+              <enumeratedValues>
+                <name>FRF</name>
+                <usage>read-write</usage>
+                <enumeratedValue>
+                  <name>Motorola</name>
+                  <description>Motorola SPI frame format</description>
+                  <value>0</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>Texas_Instruments</name>
+                  <description>Texas Instruments synchronous serial frame format</description>
+                  <value>1</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>National_Semiconductor_Microwire</name>
+                  <description>National Semiconductor Microwire frame format</description>
+                  <value>2</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
             <field>
               <name>DSS</name>
