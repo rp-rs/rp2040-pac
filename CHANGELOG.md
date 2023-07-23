@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+- Rebuild with svd2rust 0.27.0, svdtools 0.2.65 (rust version)
+- Add docs.rs metadata to include documentation gated by the `rt` feature
+- Add enum for SPI frame format
+
 ## [0.4.0] [Crates.io](https://crates.io/crates/rp2040-pac/0.4.0) [Github](https://github.com/rp-rs/rp2040-pac/releases/tag/v0.4.0)
 
 - Added all possible variants for DREQ enum in CH*_CTRL*
@@ -73,7 +77,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Initialized crate
 
-[Unreleased]: https://github.com/rp-rs/rp2040-pac/compare/v0.3.0...HEAD
+[Unreleased]: https://github.com/rp-rs/rp2040-pac/compare/v0.4.0...HEAD
+[0.4.0]: https://github.com/rp-rs/rp2040-pac/compare/v0.3.0...v0.4.0
 [0.3.0]: https://github.com/rp-rs/rp2040-pac/compare/v0.2.1...v0.3.0
 [0.2.1]: https://github.com/rp-rs/rp2040-pac/compare/v0.2.0...v0.2.1
 [0.2.0]: https://github.com/rp-rs/rp2040-pac/compare/v0.1.4...v0.2.0
