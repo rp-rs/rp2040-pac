@@ -5,13 +5,8 @@ jobs:
     name: cargo-check
     runs-on: ubuntu-20.04
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions-rs/toolchain@v1
+      - uses: actions/checkout@v3
+      - uses: dtolnay/rust-toolchain@stable
         with:
-          toolchain: stable
           target: thumbv6m-none-eabi
-          override: true
-          profile: minimal
-      - uses: actions-rs/cargo@v1
-        with:
-          command: build
+      - run: cargo build
