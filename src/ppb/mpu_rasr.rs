@@ -35,17 +35,17 @@ impl From<crate::W<MPU_RASR_SPEC>> for W {
     }
 }
 #[doc = "Field `ENABLE` reader - Enables the region."]
-pub type ENABLE_R = crate::BitReader<bool>;
+pub type ENABLE_R = crate::BitReader;
 #[doc = "Field `ENABLE` writer - Enables the region."]
-pub type ENABLE_W<'a, const O: u8> = crate::BitWriter<'a, u32, MPU_RASR_SPEC, bool, O>;
+pub type ENABLE_W<'a, const O: u8> = crate::BitWriter<'a, MPU_RASR_SPEC, O>;
 #[doc = "Field `SIZE` reader - Indicates the region size. Region size in bytes = 2^(SIZE+1). The minimum permitted value is 7 (b00111) = 256Bytes"]
-pub type SIZE_R = crate::FieldReader<u8, u8>;
+pub type SIZE_R = crate::FieldReader;
 #[doc = "Field `SIZE` writer - Indicates the region size. Region size in bytes = 2^(SIZE+1). The minimum permitted value is 7 (b00111) = 256Bytes"]
-pub type SIZE_W<'a, const O: u8> = crate::FieldWriter<'a, u32, MPU_RASR_SPEC, u8, u8, 5, O>;
+pub type SIZE_W<'a, const O: u8> = crate::FieldWriter<'a, MPU_RASR_SPEC, 5, O>;
 #[doc = "Field `SRD` reader - Subregion Disable. For regions of 256 bytes or larger, each bit of this field controls whether one of the eight equal subregions is enabled."]
-pub type SRD_R = crate::FieldReader<u8, u8>;
+pub type SRD_R = crate::FieldReader;
 #[doc = "Field `SRD` writer - Subregion Disable. For regions of 256 bytes or larger, each bit of this field controls whether one of the eight equal subregions is enabled."]
-pub type SRD_W<'a, const O: u8> = crate::FieldWriter<'a, u32, MPU_RASR_SPEC, u8, u8, 8, O>;
+pub type SRD_W<'a, const O: u8> = crate::FieldWriter<'a, MPU_RASR_SPEC, 8, O>;
 #[doc = "Field `ATTRS` reader - The MPU Region Attribute field. Use to define the region attribute control.  
  28 = XN: Instruction access disable bit:  
  0 = Instruction fetches enabled.  
@@ -54,7 +54,7 @@ pub type SRD_W<'a, const O: u8> = crate::FieldWriter<'a, u32, MPU_RASR_SPEC, u8,
  18 = S: Shareable bit  
  17 = C: Cacheable bit  
  16 = B: Bufferable bit"]
-pub type ATTRS_R = crate::FieldReader<u16, u16>;
+pub type ATTRS_R = crate::FieldReader<u16>;
 #[doc = "Field `ATTRS` writer - The MPU Region Attribute field. Use to define the region attribute control.  
  28 = XN: Instruction access disable bit:  
  0 = Instruction fetches enabled.  
@@ -63,7 +63,7 @@ pub type ATTRS_R = crate::FieldReader<u16, u16>;
  18 = S: Shareable bit  
  17 = C: Cacheable bit  
  16 = B: Bufferable bit"]
-pub type ATTRS_W<'a, const O: u8> = crate::FieldWriter<'a, u32, MPU_RASR_SPEC, u16, u16, 16, O>;
+pub type ATTRS_W<'a, const O: u8> = crate::FieldWriter<'a, MPU_RASR_SPEC, 16, O, u16>;
 impl R {
     #[doc = "Bit 0 - Enables the region."]
     #[inline(always)]

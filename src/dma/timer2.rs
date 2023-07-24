@@ -35,13 +35,13 @@ impl From<crate::W<TIMER2_SPEC>> for W {
     }
 }
 #[doc = "Field `Y` reader - Pacing Timer Divisor. Specifies the Y value for the (X/Y) fractional timer."]
-pub type Y_R = crate::FieldReader<u16, u16>;
+pub type Y_R = crate::FieldReader<u16>;
 #[doc = "Field `Y` writer - Pacing Timer Divisor. Specifies the Y value for the (X/Y) fractional timer."]
-pub type Y_W<'a, const O: u8> = crate::FieldWriter<'a, u32, TIMER2_SPEC, u16, u16, 16, O>;
+pub type Y_W<'a, const O: u8> = crate::FieldWriter<'a, TIMER2_SPEC, 16, O, u16>;
 #[doc = "Field `X` reader - Pacing Timer Dividend. Specifies the X value for the (X/Y) fractional timer."]
-pub type X_R = crate::FieldReader<u16, u16>;
+pub type X_R = crate::FieldReader<u16>;
 #[doc = "Field `X` writer - Pacing Timer Dividend. Specifies the X value for the (X/Y) fractional timer."]
-pub type X_W<'a, const O: u8> = crate::FieldWriter<'a, u32, TIMER2_SPEC, u16, u16, 16, O>;
+pub type X_W<'a, const O: u8> = crate::FieldWriter<'a, TIMER2_SPEC, 16, O, u16>;
 impl R {
     #[doc = "Bits 0:15 - Pacing Timer Divisor. Specifies the Y value for the (X/Y) fractional timer."]
     #[inline(always)]

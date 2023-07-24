@@ -35,10 +35,9 @@ impl From<crate::W<INT_EP_CTRL_SPEC>> for W {
     }
 }
 #[doc = "Field `INT_EP_ACTIVE` reader - Host: Enable interrupt endpoint 1 -> 15"]
-pub type INT_EP_ACTIVE_R = crate::FieldReader<u16, u16>;
+pub type INT_EP_ACTIVE_R = crate::FieldReader<u16>;
 #[doc = "Field `INT_EP_ACTIVE` writer - Host: Enable interrupt endpoint 1 -> 15"]
-pub type INT_EP_ACTIVE_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, INT_EP_CTRL_SPEC, u16, u16, 15, O>;
+pub type INT_EP_ACTIVE_W<'a, const O: u8> = crate::FieldWriter<'a, INT_EP_CTRL_SPEC, 15, O, u16>;
 impl R {
     #[doc = "Bits 1:15 - Host: Enable interrupt endpoint 1 -> 15"]
     #[inline(always)]

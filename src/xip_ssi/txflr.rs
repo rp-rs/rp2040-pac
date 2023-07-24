@@ -14,7 +14,7 @@ impl From<crate::R<TXFLR_SPEC>> for R {
     }
 }
 #[doc = "Field `TFTFL` reader - Transmit FIFO level"]
-pub type TFTFL_R = crate::FieldReader<u8, u8>;
+pub type TFTFL_R = crate::FieldReader;
 impl R {
     #[doc = "Bits 0:7 - Transmit FIFO level"]
     #[inline(always)]

@@ -37,17 +37,17 @@ impl From<crate::W<CS_SPEC>> for W {
 #[doc = "Field `REFDIV` reader - Divides the PLL input reference clock.  
  Behaviour is undefined for div=0.  
  PLL output will be unpredictable during refdiv changes, wait for lock=1 before using it."]
-pub type REFDIV_R = crate::FieldReader<u8, u8>;
+pub type REFDIV_R = crate::FieldReader;
 #[doc = "Field `REFDIV` writer - Divides the PLL input reference clock.  
  Behaviour is undefined for div=0.  
  PLL output will be unpredictable during refdiv changes, wait for lock=1 before using it."]
-pub type REFDIV_W<'a, const O: u8> = crate::FieldWriter<'a, u32, CS_SPEC, u8, u8, 6, O>;
+pub type REFDIV_W<'a, const O: u8> = crate::FieldWriter<'a, CS_SPEC, 6, O>;
 #[doc = "Field `BYPASS` reader - Passes the reference clock to the output instead of the divided VCO. The VCO continues to run so the user can switch between the reference clock and the divided VCO but the output will glitch when doing so."]
-pub type BYPASS_R = crate::BitReader<bool>;
+pub type BYPASS_R = crate::BitReader;
 #[doc = "Field `BYPASS` writer - Passes the reference clock to the output instead of the divided VCO. The VCO continues to run so the user can switch between the reference clock and the divided VCO but the output will glitch when doing so."]
-pub type BYPASS_W<'a, const O: u8> = crate::BitWriter<'a, u32, CS_SPEC, bool, O>;
+pub type BYPASS_W<'a, const O: u8> = crate::BitWriter<'a, CS_SPEC, O>;
 #[doc = "Field `LOCK` reader - PLL is locked"]
-pub type LOCK_R = crate::BitReader<bool>;
+pub type LOCK_R = crate::BitReader;
 impl R {
     #[doc = "Bits 0:5 - Divides the PLL input reference clock.  
  Behaviour is undefined for div=0.  

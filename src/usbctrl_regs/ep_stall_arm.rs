@@ -35,13 +35,13 @@ impl From<crate::W<EP_STALL_ARM_SPEC>> for W {
     }
 }
 #[doc = "Field `EP0_IN` reader - "]
-pub type EP0_IN_R = crate::BitReader<bool>;
+pub type EP0_IN_R = crate::BitReader;
 #[doc = "Field `EP0_IN` writer - "]
-pub type EP0_IN_W<'a, const O: u8> = crate::BitWriter<'a, u32, EP_STALL_ARM_SPEC, bool, O>;
+pub type EP0_IN_W<'a, const O: u8> = crate::BitWriter<'a, EP_STALL_ARM_SPEC, O>;
 #[doc = "Field `EP0_OUT` reader - "]
-pub type EP0_OUT_R = crate::BitReader<bool>;
+pub type EP0_OUT_R = crate::BitReader;
 #[doc = "Field `EP0_OUT` writer - "]
-pub type EP0_OUT_W<'a, const O: u8> = crate::BitWriter<'a, u32, EP_STALL_ARM_SPEC, bool, O>;
+pub type EP0_OUT_W<'a, const O: u8> = crate::BitWriter<'a, EP_STALL_ARM_SPEC, O>;
 impl R {
     #[doc = "Bit 0"]
     #[inline(always)]

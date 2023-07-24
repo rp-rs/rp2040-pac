@@ -35,17 +35,17 @@ impl From<crate::W<UARTDMACR_SPEC>> for W {
     }
 }
 #[doc = "Field `RXDMAE` reader - Receive DMA enable. If this bit is set to 1, DMA for the receive FIFO is enabled."]
-pub type RXDMAE_R = crate::BitReader<bool>;
+pub type RXDMAE_R = crate::BitReader;
 #[doc = "Field `RXDMAE` writer - Receive DMA enable. If this bit is set to 1, DMA for the receive FIFO is enabled."]
-pub type RXDMAE_W<'a, const O: u8> = crate::BitWriter<'a, u32, UARTDMACR_SPEC, bool, O>;
+pub type RXDMAE_W<'a, const O: u8> = crate::BitWriter<'a, UARTDMACR_SPEC, O>;
 #[doc = "Field `TXDMAE` reader - Transmit DMA enable. If this bit is set to 1, DMA for the transmit FIFO is enabled."]
-pub type TXDMAE_R = crate::BitReader<bool>;
+pub type TXDMAE_R = crate::BitReader;
 #[doc = "Field `TXDMAE` writer - Transmit DMA enable. If this bit is set to 1, DMA for the transmit FIFO is enabled."]
-pub type TXDMAE_W<'a, const O: u8> = crate::BitWriter<'a, u32, UARTDMACR_SPEC, bool, O>;
+pub type TXDMAE_W<'a, const O: u8> = crate::BitWriter<'a, UARTDMACR_SPEC, O>;
 #[doc = "Field `DMAONERR` reader - DMA on error. If this bit is set to 1, the DMA receive request outputs, UARTRXDMASREQ or UARTRXDMABREQ, are disabled when the UART error interrupt is asserted."]
-pub type DMAONERR_R = crate::BitReader<bool>;
+pub type DMAONERR_R = crate::BitReader;
 #[doc = "Field `DMAONERR` writer - DMA on error. If this bit is set to 1, the DMA receive request outputs, UARTRXDMASREQ or UARTRXDMABREQ, are disabled when the UART error interrupt is asserted."]
-pub type DMAONERR_W<'a, const O: u8> = crate::BitWriter<'a, u32, UARTDMACR_SPEC, bool, O>;
+pub type DMAONERR_W<'a, const O: u8> = crate::BitWriter<'a, UARTDMACR_SPEC, O>;
 impl R {
     #[doc = "Bit 0 - Receive DMA enable. If this bit is set to 1, DMA for the receive FIFO is enabled."]
     #[inline(always)]

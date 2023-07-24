@@ -14,7 +14,7 @@ impl From<crate::R<IDR_SPEC>> for R {
     }
 }
 #[doc = "Field `IDCODE` reader - Peripheral dentification code"]
-pub type IDCODE_R = crate::FieldReader<u32, u32>;
+pub type IDCODE_R = crate::FieldReader<u32>;
 impl R {
     #[doc = "Bits 0:31 - Peripheral dentification code"]
     #[inline(always)]

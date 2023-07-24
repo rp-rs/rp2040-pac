@@ -14,7 +14,7 @@ impl From<crate::R<RANDOMBIT_SPEC>> for R {
     }
 }
 #[doc = "Field `RANDOMBIT` reader - "]
-pub type RANDOMBIT_R = crate::BitReader<bool>;
+pub type RANDOMBIT_R = crate::BitReader;
 impl R {
     #[doc = "Bit 0"]
     #[inline(always)]

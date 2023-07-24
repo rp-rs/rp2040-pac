@@ -35,9 +35,9 @@ impl From<crate::W<CLK_REF_DIV_SPEC>> for W {
     }
 }
 #[doc = "Field `INT` reader - Integer component of the divisor, 0 -> divide by 2^16"]
-pub type INT_R = crate::FieldReader<u8, u8>;
+pub type INT_R = crate::FieldReader;
 #[doc = "Field `INT` writer - Integer component of the divisor, 0 -> divide by 2^16"]
-pub type INT_W<'a, const O: u8> = crate::FieldWriter<'a, u32, CLK_REF_DIV_SPEC, u8, u8, 2, O>;
+pub type INT_W<'a, const O: u8> = crate::FieldWriter<'a, CLK_REF_DIV_SPEC, 2, O>;
 impl R {
     #[doc = "Bits 8:9 - Integer component of the divisor, 0 -> divide by 2^16"]
     #[inline(always)]

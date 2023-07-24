@@ -35,9 +35,9 @@ impl From<crate::W<RXFTLR_SPEC>> for W {
     }
 }
 #[doc = "Field `RFT` reader - Receive FIFO threshold"]
-pub type RFT_R = crate::FieldReader<u8, u8>;
+pub type RFT_R = crate::FieldReader;
 #[doc = "Field `RFT` writer - Receive FIFO threshold"]
-pub type RFT_W<'a, const O: u8> = crate::FieldWriter<'a, u32, RXFTLR_SPEC, u8, u8, 8, O>;
+pub type RFT_W<'a, const O: u8> = crate::FieldWriter<'a, RXFTLR_SPEC, 8, O>;
 impl R {
     #[doc = "Bits 0:7 - Receive FIFO threshold"]
     #[inline(always)]

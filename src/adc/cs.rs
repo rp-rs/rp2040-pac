@@ -36,45 +36,45 @@ impl From<crate::W<CS_SPEC>> for W {
 }
 #[doc = "Field `EN` reader - Power on ADC and enable its clock.  
  1 - enabled. 0 - disabled."]
-pub type EN_R = crate::BitReader<bool>;
+pub type EN_R = crate::BitReader;
 #[doc = "Field `EN` writer - Power on ADC and enable its clock.  
  1 - enabled. 0 - disabled."]
-pub type EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, CS_SPEC, bool, O>;
+pub type EN_W<'a, const O: u8> = crate::BitWriter<'a, CS_SPEC, O>;
 #[doc = "Field `TS_EN` reader - Power on temperature sensor. 1 - enabled. 0 - disabled."]
-pub type TS_EN_R = crate::BitReader<bool>;
+pub type TS_EN_R = crate::BitReader;
 #[doc = "Field `TS_EN` writer - Power on temperature sensor. 1 - enabled. 0 - disabled."]
-pub type TS_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, CS_SPEC, bool, O>;
+pub type TS_EN_W<'a, const O: u8> = crate::BitWriter<'a, CS_SPEC, O>;
 #[doc = "Field `START_ONCE` reader - Start a single conversion. Self-clearing. Ignored if start_many is asserted."]
-pub type START_ONCE_R = crate::BitReader<bool>;
+pub type START_ONCE_R = crate::BitReader;
 #[doc = "Field `START_ONCE` writer - Start a single conversion. Self-clearing. Ignored if start_many is asserted."]
-pub type START_ONCE_W<'a, const O: u8> = crate::BitWriter<'a, u32, CS_SPEC, bool, O>;
+pub type START_ONCE_W<'a, const O: u8> = crate::BitWriter<'a, CS_SPEC, O>;
 #[doc = "Field `START_MANY` reader - Continuously perform conversions whilst this bit is 1. A new conversion will start immediately after the previous finishes."]
-pub type START_MANY_R = crate::BitReader<bool>;
+pub type START_MANY_R = crate::BitReader;
 #[doc = "Field `START_MANY` writer - Continuously perform conversions whilst this bit is 1. A new conversion will start immediately after the previous finishes."]
-pub type START_MANY_W<'a, const O: u8> = crate::BitWriter<'a, u32, CS_SPEC, bool, O>;
+pub type START_MANY_W<'a, const O: u8> = crate::BitWriter<'a, CS_SPEC, O>;
 #[doc = "Field `READY` reader - 1 if the ADC is ready to start a new conversion. Implies any previous conversion has completed.  
  0 whilst conversion in progress."]
-pub type READY_R = crate::BitReader<bool>;
+pub type READY_R = crate::BitReader;
 #[doc = "Field `ERR` reader - The most recent ADC conversion encountered an error; result is undefined or noisy."]
-pub type ERR_R = crate::BitReader<bool>;
+pub type ERR_R = crate::BitReader;
 #[doc = "Field `ERR_STICKY` reader - Some past ADC conversion encountered an error. Write 1 to clear."]
-pub type ERR_STICKY_R = crate::BitReader<bool>;
+pub type ERR_STICKY_R = crate::BitReader;
 #[doc = "Field `ERR_STICKY` writer - Some past ADC conversion encountered an error. Write 1 to clear."]
-pub type ERR_STICKY_W<'a, const O: u8> = crate::BitWriter1C<'a, u32, CS_SPEC, bool, O>;
+pub type ERR_STICKY_W<'a, const O: u8> = crate::BitWriter1C<'a, CS_SPEC, O>;
 #[doc = "Field `AINSEL` reader - Select analog mux input. Updated automatically in round-robin mode."]
-pub type AINSEL_R = crate::FieldReader<u8, u8>;
+pub type AINSEL_R = crate::FieldReader;
 #[doc = "Field `AINSEL` writer - Select analog mux input. Updated automatically in round-robin mode."]
-pub type AINSEL_W<'a, const O: u8> = crate::FieldWriter<'a, u32, CS_SPEC, u8, u8, 3, O>;
+pub type AINSEL_W<'a, const O: u8> = crate::FieldWriter<'a, CS_SPEC, 3, O>;
 #[doc = "Field `RROBIN` reader - Round-robin sampling. 1 bit per channel. Set all bits to 0 to disable.  
  Otherwise, the ADC will cycle through each enabled channel in a round-robin fashion.  
  The first channel to be sampled will be the one currently indicated by AINSEL.  
  AINSEL will be updated after each conversion with the newly-selected channel."]
-pub type RROBIN_R = crate::FieldReader<u8, u8>;
+pub type RROBIN_R = crate::FieldReader;
 #[doc = "Field `RROBIN` writer - Round-robin sampling. 1 bit per channel. Set all bits to 0 to disable.  
  Otherwise, the ADC will cycle through each enabled channel in a round-robin fashion.  
  The first channel to be sampled will be the one currently indicated by AINSEL.  
  AINSEL will be updated after each conversion with the newly-selected channel."]
-pub type RROBIN_W<'a, const O: u8> = crate::FieldWriter<'a, u32, CS_SPEC, u8, u8, 5, O>;
+pub type RROBIN_W<'a, const O: u8> = crate::FieldWriter<'a, CS_SPEC, 5, O>;
 impl R {
     #[doc = "Bit 0 - Power on ADC and enable its clock.  
  1 - enabled. 0 - disabled."]

@@ -35,21 +35,21 @@ impl From<crate::W<INTE_SPEC>> for W {
     }
 }
 #[doc = "Field `ALARM_0` reader - "]
-pub type ALARM_0_R = crate::BitReader<bool>;
+pub type ALARM_0_R = crate::BitReader;
 #[doc = "Field `ALARM_0` writer - "]
-pub type ALARM_0_W<'a, const O: u8> = crate::BitWriter<'a, u32, INTE_SPEC, bool, O>;
+pub type ALARM_0_W<'a, const O: u8> = crate::BitWriter<'a, INTE_SPEC, O>;
 #[doc = "Field `ALARM_1` reader - "]
-pub type ALARM_1_R = crate::BitReader<bool>;
+pub type ALARM_1_R = crate::BitReader;
 #[doc = "Field `ALARM_1` writer - "]
-pub type ALARM_1_W<'a, const O: u8> = crate::BitWriter<'a, u32, INTE_SPEC, bool, O>;
+pub type ALARM_1_W<'a, const O: u8> = crate::BitWriter<'a, INTE_SPEC, O>;
 #[doc = "Field `ALARM_2` reader - "]
-pub type ALARM_2_R = crate::BitReader<bool>;
+pub type ALARM_2_R = crate::BitReader;
 #[doc = "Field `ALARM_2` writer - "]
-pub type ALARM_2_W<'a, const O: u8> = crate::BitWriter<'a, u32, INTE_SPEC, bool, O>;
+pub type ALARM_2_W<'a, const O: u8> = crate::BitWriter<'a, INTE_SPEC, O>;
 #[doc = "Field `ALARM_3` reader - "]
-pub type ALARM_3_R = crate::BitReader<bool>;
+pub type ALARM_3_R = crate::BitReader;
 #[doc = "Field `ALARM_3` writer - "]
-pub type ALARM_3_W<'a, const O: u8> = crate::BitWriter<'a, u32, INTE_SPEC, bool, O>;
+pub type ALARM_3_W<'a, const O: u8> = crate::BitWriter<'a, INTE_SPEC, O>;
 impl R {
     #[doc = "Bit 0"]
     #[inline(always)]

@@ -35,21 +35,21 @@ impl From<crate::W<USB_MUXING_SPEC>> for W {
     }
 }
 #[doc = "Field `TO_PHY` reader - "]
-pub type TO_PHY_R = crate::BitReader<bool>;
+pub type TO_PHY_R = crate::BitReader;
 #[doc = "Field `TO_PHY` writer - "]
-pub type TO_PHY_W<'a, const O: u8> = crate::BitWriter<'a, u32, USB_MUXING_SPEC, bool, O>;
+pub type TO_PHY_W<'a, const O: u8> = crate::BitWriter<'a, USB_MUXING_SPEC, O>;
 #[doc = "Field `TO_EXTPHY` reader - "]
-pub type TO_EXTPHY_R = crate::BitReader<bool>;
+pub type TO_EXTPHY_R = crate::BitReader;
 #[doc = "Field `TO_EXTPHY` writer - "]
-pub type TO_EXTPHY_W<'a, const O: u8> = crate::BitWriter<'a, u32, USB_MUXING_SPEC, bool, O>;
+pub type TO_EXTPHY_W<'a, const O: u8> = crate::BitWriter<'a, USB_MUXING_SPEC, O>;
 #[doc = "Field `TO_DIGITAL_PAD` reader - "]
-pub type TO_DIGITAL_PAD_R = crate::BitReader<bool>;
+pub type TO_DIGITAL_PAD_R = crate::BitReader;
 #[doc = "Field `TO_DIGITAL_PAD` writer - "]
-pub type TO_DIGITAL_PAD_W<'a, const O: u8> = crate::BitWriter<'a, u32, USB_MUXING_SPEC, bool, O>;
+pub type TO_DIGITAL_PAD_W<'a, const O: u8> = crate::BitWriter<'a, USB_MUXING_SPEC, O>;
 #[doc = "Field `SOFTCON` reader - "]
-pub type SOFTCON_R = crate::BitReader<bool>;
+pub type SOFTCON_R = crate::BitReader;
 #[doc = "Field `SOFTCON` writer - "]
-pub type SOFTCON_W<'a, const O: u8> = crate::BitWriter<'a, u32, USB_MUXING_SPEC, bool, O>;
+pub type SOFTCON_W<'a, const O: u8> = crate::BitWriter<'a, USB_MUXING_SPEC, O>;
 impl R {
     #[doc = "Bit 0"]
     #[inline(always)]

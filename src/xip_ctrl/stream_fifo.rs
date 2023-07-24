@@ -13,6 +13,16 @@ impl From<crate::R<STREAM_FIFO_SPEC>> for R {
         R(reader)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        write!(f, "{}", self.bits())
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<STREAM_FIFO_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 #[doc = "FIFO stream data  
  Streamed data is buffered here, for retrieval by the system DMA.  
  This FIFO can also be accessed via the XIP_AUX slave, to avoid exposing  

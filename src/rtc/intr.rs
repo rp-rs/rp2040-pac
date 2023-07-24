@@ -14,7 +14,7 @@ impl From<crate::R<INTR_SPEC>> for R {
     }
 }
 #[doc = "Field `RTC` reader - "]
-pub type RTC_R = crate::BitReader<bool>;
+pub type RTC_R = crate::BitReader;
 impl R {
     #[doc = "Bit 0"]
     #[inline(always)]

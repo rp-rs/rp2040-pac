@@ -35,7 +35,7 @@ impl From<crate::W<STATUS_SPEC>> for W {
     }
 }
 #[doc = "Field `FREQ_RANGE` reader - The current frequency range setting, always reads 0"]
-pub type FREQ_RANGE_R = crate::FieldReader<u8, FREQ_RANGE_A>;
+pub type FREQ_RANGE_R = crate::FieldReader<FREQ_RANGE_A>;
 #[doc = "The current frequency range setting, always reads 0  
 
 Value on reset: 0"]
@@ -56,6 +56,9 @@ impl From<FREQ_RANGE_A> for u8 {
     fn from(variant: FREQ_RANGE_A) -> Self {
         variant as _
     }
+}
+impl crate::FieldSpec for FREQ_RANGE_A {
+    type Ux = u8;
 }
 impl FREQ_RANGE_R {
     #[doc = "Get enumerated values variant"]
@@ -91,13 +94,13 @@ impl FREQ_RANGE_R {
     }
 }
 #[doc = "Field `ENABLED` reader - Oscillator is enabled but not necessarily running and stable, resets to 0"]
-pub type ENABLED_R = crate::BitReader<bool>;
+pub type ENABLED_R = crate::BitReader;
 #[doc = "Field `BADWRITE` reader - An invalid value has been written to CTRL_ENABLE or CTRL_FREQ_RANGE or DORMANT"]
-pub type BADWRITE_R = crate::BitReader<bool>;
+pub type BADWRITE_R = crate::BitReader;
 #[doc = "Field `BADWRITE` writer - An invalid value has been written to CTRL_ENABLE or CTRL_FREQ_RANGE or DORMANT"]
-pub type BADWRITE_W<'a, const O: u8> = crate::BitWriter1C<'a, u32, STATUS_SPEC, bool, O>;
+pub type BADWRITE_W<'a, const O: u8> = crate::BitWriter1C<'a, STATUS_SPEC, O>;
 #[doc = "Field `STABLE` reader - Oscillator is running and stable"]
-pub type STABLE_R = crate::BitReader<bool>;
+pub type STABLE_R = crate::BitReader;
 impl R {
     #[doc = "Bits 0:1 - The current frequency range setting, always reads 0"]
     #[inline(always)]

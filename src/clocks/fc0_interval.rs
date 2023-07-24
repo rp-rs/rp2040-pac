@@ -35,10 +35,9 @@ impl From<crate::W<FC0_INTERVAL_SPEC>> for W {
     }
 }
 #[doc = "Field `FC0_INTERVAL` reader - "]
-pub type FC0_INTERVAL_R = crate::FieldReader<u8, u8>;
+pub type FC0_INTERVAL_R = crate::FieldReader;
 #[doc = "Field `FC0_INTERVAL` writer - "]
-pub type FC0_INTERVAL_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, FC0_INTERVAL_SPEC, u8, u8, 4, O>;
+pub type FC0_INTERVAL_W<'a, const O: u8> = crate::FieldWriter<'a, FC0_INTERVAL_SPEC, 4, O>;
 impl R {
     #[doc = "Bits 0:3"]
     #[inline(always)]

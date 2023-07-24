@@ -35,13 +35,13 @@ impl From<crate::W<DBGPAUSE_SPEC>> for W {
     }
 }
 #[doc = "Field `DBG0` reader - Pause when processor 0 is in debug mode"]
-pub type DBG0_R = crate::BitReader<bool>;
+pub type DBG0_R = crate::BitReader;
 #[doc = "Field `DBG0` writer - Pause when processor 0 is in debug mode"]
-pub type DBG0_W<'a, const O: u8> = crate::BitWriter<'a, u32, DBGPAUSE_SPEC, bool, O>;
+pub type DBG0_W<'a, const O: u8> = crate::BitWriter<'a, DBGPAUSE_SPEC, O>;
 #[doc = "Field `DBG1` reader - Pause when processor 1 is in debug mode"]
-pub type DBG1_R = crate::BitReader<bool>;
+pub type DBG1_R = crate::BitReader;
 #[doc = "Field `DBG1` writer - Pause when processor 1 is in debug mode"]
-pub type DBG1_W<'a, const O: u8> = crate::BitWriter<'a, u32, DBGPAUSE_SPEC, bool, O>;
+pub type DBG1_W<'a, const O: u8> = crate::BitWriter<'a, DBGPAUSE_SPEC, O>;
 impl R {
     #[doc = "Bit 1 - Pause when processor 0 is in debug mode"]
     #[inline(always)]

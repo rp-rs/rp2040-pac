@@ -37,29 +37,29 @@ impl From<crate::W<PHASE_SPEC>> for W {
 #[doc = "Field `SHIFT` reader - phase shift the phase-shifted output by SHIFT input clocks  
  this can be changed on-the-fly  
  must be set to 0 before setting div=1"]
-pub type SHIFT_R = crate::FieldReader<u8, u8>;
+pub type SHIFT_R = crate::FieldReader;
 #[doc = "Field `SHIFT` writer - phase shift the phase-shifted output by SHIFT input clocks  
  this can be changed on-the-fly  
  must be set to 0 before setting div=1"]
-pub type SHIFT_W<'a, const O: u8> = crate::FieldWriter<'a, u32, PHASE_SPEC, u8, u8, 2, O>;
+pub type SHIFT_W<'a, const O: u8> = crate::FieldWriter<'a, PHASE_SPEC, 2, O>;
 #[doc = "Field `FLIP` reader - invert the phase-shifted output  
  this is ignored when div=1"]
-pub type FLIP_R = crate::BitReader<bool>;
+pub type FLIP_R = crate::BitReader;
 #[doc = "Field `FLIP` writer - invert the phase-shifted output  
  this is ignored when div=1"]
-pub type FLIP_W<'a, const O: u8> = crate::BitWriter<'a, u32, PHASE_SPEC, bool, O>;
+pub type FLIP_W<'a, const O: u8> = crate::BitWriter<'a, PHASE_SPEC, O>;
 #[doc = "Field `ENABLE` reader - enable the phase-shifted output  
  this can be changed on-the-fly"]
-pub type ENABLE_R = crate::BitReader<bool>;
+pub type ENABLE_R = crate::BitReader;
 #[doc = "Field `ENABLE` writer - enable the phase-shifted output  
  this can be changed on-the-fly"]
-pub type ENABLE_W<'a, const O: u8> = crate::BitWriter<'a, u32, PHASE_SPEC, bool, O>;
+pub type ENABLE_W<'a, const O: u8> = crate::BitWriter<'a, PHASE_SPEC, O>;
 #[doc = "Field `PASSWD` reader - set to 0xaa  
  any other value enables the output with shift=0"]
-pub type PASSWD_R = crate::FieldReader<u8, u8>;
+pub type PASSWD_R = crate::FieldReader;
 #[doc = "Field `PASSWD` writer - set to 0xaa  
  any other value enables the output with shift=0"]
-pub type PASSWD_W<'a, const O: u8> = crate::FieldWriter<'a, u32, PHASE_SPEC, u8, u8, 8, O>;
+pub type PASSWD_W<'a, const O: u8> = crate::FieldWriter<'a, PHASE_SPEC, 8, O>;
 impl R {
     #[doc = "Bits 0:1 - phase shift the phase-shifted output by SHIFT input clocks  
  this can be changed on-the-fly  

@@ -35,17 +35,17 @@ impl From<crate::W<UARTDR_SPEC>> for W {
     }
 }
 #[doc = "Field `DATA` reader - Receive (read) data character. Transmit (write) data character."]
-pub type DATA_R = crate::FieldReader<u8, u8>;
+pub type DATA_R = crate::FieldReader;
 #[doc = "Field `DATA` writer - Receive (read) data character. Transmit (write) data character."]
-pub type DATA_W<'a, const O: u8> = crate::FieldWriter<'a, u32, UARTDR_SPEC, u8, u8, 8, O>;
+pub type DATA_W<'a, const O: u8> = crate::FieldWriter<'a, UARTDR_SPEC, 8, O>;
 #[doc = "Field `FE` reader - Framing error. When set to 1, it indicates that the received character did not have a valid stop bit (a valid stop bit is 1). In FIFO mode, this error is associated with the character at the top of the FIFO."]
-pub type FE_R = crate::BitReader<bool>;
+pub type FE_R = crate::BitReader;
 #[doc = "Field `PE` reader - Parity error. When set to 1, it indicates that the parity of the received data character does not match the parity that the EPS and SPS bits in the Line Control Register, UARTLCR_H. In FIFO mode, this error is associated with the character at the top of the FIFO."]
-pub type PE_R = crate::BitReader<bool>;
+pub type PE_R = crate::BitReader;
 #[doc = "Field `BE` reader - Break error. This bit is set to 1 if a break condition was detected, indicating that the received data input was held LOW for longer than a full-word transmission time (defined as start, data, parity and stop bits). In FIFO mode, this error is associated with the character at the top of the FIFO. When a break occurs, only one 0 character is loaded into the FIFO. The next character is only enabled after the receive data input goes to a 1 (marking state), and the next valid start bit is received."]
-pub type BE_R = crate::BitReader<bool>;
+pub type BE_R = crate::BitReader;
 #[doc = "Field `OE` reader - Overrun error. This bit is set to 1 if data is received and the receive FIFO is already full. This is cleared to 0 once there is an empty space in the FIFO and a new character can be written to it."]
-pub type OE_R = crate::BitReader<bool>;
+pub type OE_R = crate::BitReader;
 impl R {
     #[doc = "Bits 0:7 - Receive (read) data character. Transmit (write) data character."]
     #[inline(always)]

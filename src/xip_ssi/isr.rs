@@ -14,17 +14,17 @@ impl From<crate::R<ISR_SPEC>> for R {
     }
 }
 #[doc = "Field `TXEIS` reader - Transmit FIFO empty interrupt status"]
-pub type TXEIS_R = crate::BitReader<bool>;
+pub type TXEIS_R = crate::BitReader;
 #[doc = "Field `TXOIS` reader - Transmit FIFO overflow interrupt status"]
-pub type TXOIS_R = crate::BitReader<bool>;
+pub type TXOIS_R = crate::BitReader;
 #[doc = "Field `RXUIS` reader - Receive FIFO underflow interrupt status"]
-pub type RXUIS_R = crate::BitReader<bool>;
+pub type RXUIS_R = crate::BitReader;
 #[doc = "Field `RXOIS` reader - Receive FIFO overflow interrupt status"]
-pub type RXOIS_R = crate::BitReader<bool>;
+pub type RXOIS_R = crate::BitReader;
 #[doc = "Field `RXFIS` reader - Receive FIFO full interrupt status"]
-pub type RXFIS_R = crate::BitReader<bool>;
+pub type RXFIS_R = crate::BitReader;
 #[doc = "Field `MSTIS` reader - Multi-master contention interrupt status"]
-pub type MSTIS_R = crate::BitReader<bool>;
+pub type MSTIS_R = crate::BitReader;
 impl R {
     #[doc = "Bit 0 - Transmit FIFO empty interrupt status"]
     #[inline(always)]

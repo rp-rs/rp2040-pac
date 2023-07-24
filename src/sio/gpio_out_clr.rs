@@ -19,11 +19,10 @@ impl From<crate::W<GPIO_OUT_CLR_SPEC>> for W {
         W(writer)
     }
 }
-#[doc = "Field `GPIO_OUT_CLR` writer - Perform an atomic bit-clear on GPIO_OUT, i.e. `GPIO_OUT &= ~wdata`"]
-pub type GPIO_OUT_CLR_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, GPIO_OUT_CLR_SPEC, u32, u32, 30, O>;
+#[doc = "Field `GPIO_OUT_CLR` writer - Perform an atomic bit-clear on GPIO_OUT, i.e. `GPIO_OUT &amp;= ~wdata`"]
+pub type GPIO_OUT_CLR_W<'a, const O: u8> = crate::FieldWriter<'a, GPIO_OUT_CLR_SPEC, 30, O, u32>;
 impl W {
-    #[doc = "Bits 0:29 - Perform an atomic bit-clear on GPIO_OUT, i.e. `GPIO_OUT &= ~wdata`"]
+    #[doc = "Bits 0:29 - Perform an atomic bit-clear on GPIO_OUT, i.e. `GPIO_OUT &amp;= ~wdata`"]
     #[inline(always)]
     #[must_use]
     pub fn gpio_out_clr(&mut self) -> GPIO_OUT_CLR_W<0> {

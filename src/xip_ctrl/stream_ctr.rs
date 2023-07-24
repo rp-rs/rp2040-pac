@@ -42,7 +42,7 @@ impl From<crate::W<STREAM_CTR_SPEC>> for W {
  Write 0 to halt an in-progress stream, and discard any in-flight  
  read, so that a new stream can immediately be started (after  
  draining the FIFO and reinitialising STREAM_ADDR)"]
-pub type STREAM_CTR_R = crate::FieldReader<u32, u32>;
+pub type STREAM_CTR_R = crate::FieldReader<u32>;
 #[doc = "Field `STREAM_CTR` writer - Write a nonzero value to start a streaming read. This will then  
  progress in the background, using flash idle cycles to transfer  
  a linear data block from flash to the streaming FIFO.  
@@ -51,8 +51,7 @@ pub type STREAM_CTR_R = crate::FieldReader<u32, u32>;
  Write 0 to halt an in-progress stream, and discard any in-flight  
  read, so that a new stream can immediately be started (after  
  draining the FIFO and reinitialising STREAM_ADDR)"]
-pub type STREAM_CTR_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, STREAM_CTR_SPEC, u32, u32, 22, O>;
+pub type STREAM_CTR_W<'a, const O: u8> = crate::FieldWriter<'a, STREAM_CTR_SPEC, 22, O, u32>;
 impl R {
     #[doc = "Bits 0:21 - Write a nonzero value to start a streaming read. This will then  
  progress in the background, using flash idle cycles to transfer  

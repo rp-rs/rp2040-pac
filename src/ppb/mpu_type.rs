@@ -14,11 +14,11 @@ impl From<crate::R<MPU_TYPE_SPEC>> for R {
     }
 }
 #[doc = "Field `SEPARATE` reader - Indicates support for separate instruction and data address maps. Reads as 0 as ARMv6-M only supports a unified MPU."]
-pub type SEPARATE_R = crate::BitReader<bool>;
+pub type SEPARATE_R = crate::BitReader;
 #[doc = "Field `DREGION` reader - Number of regions supported by the MPU."]
-pub type DREGION_R = crate::FieldReader<u8, u8>;
+pub type DREGION_R = crate::FieldReader;
 #[doc = "Field `IREGION` reader - Instruction region. Reads as zero as ARMv6-M only supports a unified MPU."]
-pub type IREGION_R = crate::FieldReader<u8, u8>;
+pub type IREGION_R = crate::FieldReader;
 impl R {
     #[doc = "Bit 0 - Indicates support for separate instruction and data address maps. Reads as 0 as ARMv6-M only supports a unified MPU."]
     #[inline(always)]

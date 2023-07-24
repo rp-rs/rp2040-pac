@@ -35,9 +35,9 @@ impl From<crate::W<SSIENR_SPEC>> for W {
     }
 }
 #[doc = "Field `SSI_EN` reader - SSI enable"]
-pub type SSI_EN_R = crate::BitReader<bool>;
+pub type SSI_EN_R = crate::BitReader;
 #[doc = "Field `SSI_EN` writer - SSI enable"]
-pub type SSI_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, SSIENR_SPEC, bool, O>;
+pub type SSI_EN_W<'a, const O: u8> = crate::BitWriter<'a, SSIENR_SPEC, O>;
 impl R {
     #[doc = "Bit 0 - SSI enable"]
     #[inline(always)]

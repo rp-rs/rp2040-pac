@@ -35,48 +35,44 @@ impl From<crate::W<EP_BUFFER_CONTROL_SPEC>> for W {
     }
 }
 #[doc = "Field `LENGTH_0` reader - The length of the data in buffer 0."]
-pub type LENGTH_0_R = crate::FieldReader<u16, u16>;
+pub type LENGTH_0_R = crate::FieldReader<u16>;
 #[doc = "Field `LENGTH_0` writer - The length of the data in buffer 0."]
-pub type LENGTH_0_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, EP_BUFFER_CONTROL_SPEC, u16, u16, 10, O>;
+pub type LENGTH_0_W<'a, const O: u8> = crate::FieldWriter<'a, EP_BUFFER_CONTROL_SPEC, 10, O, u16>;
 #[doc = "Field `AVAILABLE_0` reader - Buffer 0 is available. This bit is set to indicate the buffer can be used by the controller. The controller clears the available bit when writing the status back."]
-pub type AVAILABLE_0_R = crate::BitReader<bool>;
+pub type AVAILABLE_0_R = crate::BitReader;
 #[doc = "Field `AVAILABLE_0` writer - Buffer 0 is available. This bit is set to indicate the buffer can be used by the controller. The controller clears the available bit when writing the status back."]
-pub type AVAILABLE_0_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, EP_BUFFER_CONTROL_SPEC, bool, O>;
+pub type AVAILABLE_0_W<'a, const O: u8> = crate::BitWriter<'a, EP_BUFFER_CONTROL_SPEC, O>;
 #[doc = "Field `STALL` reader - Reply with a stall (valid for both buffers)."]
-pub type STALL_R = crate::BitReader<bool>;
+pub type STALL_R = crate::BitReader;
 #[doc = "Field `STALL` writer - Reply with a stall (valid for both buffers)."]
-pub type STALL_W<'a, const O: u8> = crate::BitWriter<'a, u32, EP_BUFFER_CONTROL_SPEC, bool, O>;
+pub type STALL_W<'a, const O: u8> = crate::BitWriter<'a, EP_BUFFER_CONTROL_SPEC, O>;
 #[doc = "Field `RESET` reader - Reset the buffer selector to buffer 0."]
-pub type RESET_R = crate::BitReader<bool>;
+pub type RESET_R = crate::BitReader;
 #[doc = "Field `RESET` writer - Reset the buffer selector to buffer 0."]
-pub type RESET_W<'a, const O: u8> = crate::BitWriter<'a, u32, EP_BUFFER_CONTROL_SPEC, bool, O>;
+pub type RESET_W<'a, const O: u8> = crate::BitWriter<'a, EP_BUFFER_CONTROL_SPEC, O>;
 #[doc = "Field `PID_0` reader - The data pid of buffer 0."]
-pub type PID_0_R = crate::BitReader<bool>;
+pub type PID_0_R = crate::BitReader;
 #[doc = "Field `PID_0` writer - The data pid of buffer 0."]
-pub type PID_0_W<'a, const O: u8> = crate::BitWriter<'a, u32, EP_BUFFER_CONTROL_SPEC, bool, O>;
+pub type PID_0_W<'a, const O: u8> = crate::BitWriter<'a, EP_BUFFER_CONTROL_SPEC, O>;
 #[doc = "Field `LAST_0` reader - Buffer 0 is the last buffer of the transfer."]
-pub type LAST_0_R = crate::BitReader<bool>;
+pub type LAST_0_R = crate::BitReader;
 #[doc = "Field `LAST_0` writer - Buffer 0 is the last buffer of the transfer."]
-pub type LAST_0_W<'a, const O: u8> = crate::BitWriter<'a, u32, EP_BUFFER_CONTROL_SPEC, bool, O>;
+pub type LAST_0_W<'a, const O: u8> = crate::BitWriter<'a, EP_BUFFER_CONTROL_SPEC, O>;
 #[doc = "Field `FULL_0` reader - Buffer 0 is full. For an IN transfer (TX to the host) the bit is set to indicate the data is valid. For an OUT transfer (RX from the host) this bit should be left as a 0. The host will set it when it has filled the buffer with data."]
-pub type FULL_0_R = crate::BitReader<bool>;
+pub type FULL_0_R = crate::BitReader;
 #[doc = "Field `FULL_0` writer - Buffer 0 is full. For an IN transfer (TX to the host) the bit is set to indicate the data is valid. For an OUT transfer (RX from the host) this bit should be left as a 0. The host will set it when it has filled the buffer with data."]
-pub type FULL_0_W<'a, const O: u8> = crate::BitWriter<'a, u32, EP_BUFFER_CONTROL_SPEC, bool, O>;
+pub type FULL_0_W<'a, const O: u8> = crate::BitWriter<'a, EP_BUFFER_CONTROL_SPEC, O>;
 #[doc = "Field `LENGTH_1` reader - The length of the data in buffer 1."]
-pub type LENGTH_1_R = crate::FieldReader<u16, u16>;
+pub type LENGTH_1_R = crate::FieldReader<u16>;
 #[doc = "Field `LENGTH_1` writer - The length of the data in buffer 1."]
-pub type LENGTH_1_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, EP_BUFFER_CONTROL_SPEC, u16, u16, 10, O>;
+pub type LENGTH_1_W<'a, const O: u8> = crate::FieldWriter<'a, EP_BUFFER_CONTROL_SPEC, 10, O, u16>;
 #[doc = "Field `AVAILABLE_1` reader - Buffer 1 is available. This bit is set to indicate the buffer can be used by the controller. The controller clears the available bit when writing the status back."]
-pub type AVAILABLE_1_R = crate::BitReader<bool>;
+pub type AVAILABLE_1_R = crate::BitReader;
 #[doc = "Field `AVAILABLE_1` writer - Buffer 1 is available. This bit is set to indicate the buffer can be used by the controller. The controller clears the available bit when writing the status back."]
-pub type AVAILABLE_1_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, EP_BUFFER_CONTROL_SPEC, bool, O>;
+pub type AVAILABLE_1_W<'a, const O: u8> = crate::BitWriter<'a, EP_BUFFER_CONTROL_SPEC, O>;
 #[doc = "Field `DOUBLE_BUFFER_ISO_OFFSET` reader - The number of bytes buffer 1 is offset from buffer 0 in Isochronous mode. Only valid in double buffered mode for an Isochronous endpoint.  
  For a non Isochronous endpoint the offset is always 64 bytes."]
-pub type DOUBLE_BUFFER_ISO_OFFSET_R = crate::FieldReader<u8, DOUBLE_BUFFER_ISO_OFFSET_A>;
+pub type DOUBLE_BUFFER_ISO_OFFSET_R = crate::FieldReader<DOUBLE_BUFFER_ISO_OFFSET_A>;
 #[doc = "The number of bytes buffer 1 is offset from buffer 0 in Isochronous mode. Only valid in double buffered mode for an Isochronous endpoint.  
  For a non Isochronous endpoint the offset is always 64 bytes.  
 
@@ -98,6 +94,9 @@ impl From<DOUBLE_BUFFER_ISO_OFFSET_A> for u8 {
     fn from(variant: DOUBLE_BUFFER_ISO_OFFSET_A) -> Self {
         variant as _
     }
+}
+impl crate::FieldSpec for DOUBLE_BUFFER_ISO_OFFSET_A {
+    type Ux = u8;
 }
 impl DOUBLE_BUFFER_ISO_OFFSET_R {
     #[doc = "Get enumerated values variant"]
@@ -135,7 +134,7 @@ impl DOUBLE_BUFFER_ISO_OFFSET_R {
 #[doc = "Field `DOUBLE_BUFFER_ISO_OFFSET` writer - The number of bytes buffer 1 is offset from buffer 0 in Isochronous mode. Only valid in double buffered mode for an Isochronous endpoint.  
  For a non Isochronous endpoint the offset is always 64 bytes."]
 pub type DOUBLE_BUFFER_ISO_OFFSET_W<'a, const O: u8> =
-    crate::FieldWriterSafe<'a, u32, EP_BUFFER_CONTROL_SPEC, u8, DOUBLE_BUFFER_ISO_OFFSET_A, 2, O>;
+    crate::FieldWriterSafe<'a, EP_BUFFER_CONTROL_SPEC, 2, O, DOUBLE_BUFFER_ISO_OFFSET_A>;
 impl<'a, const O: u8> DOUBLE_BUFFER_ISO_OFFSET_W<'a, O> {
     #[doc = "`0`"]
     #[inline(always)]
@@ -159,17 +158,17 @@ impl<'a, const O: u8> DOUBLE_BUFFER_ISO_OFFSET_W<'a, O> {
     }
 }
 #[doc = "Field `PID_1` reader - The data pid of buffer 1."]
-pub type PID_1_R = crate::BitReader<bool>;
+pub type PID_1_R = crate::BitReader;
 #[doc = "Field `PID_1` writer - The data pid of buffer 1."]
-pub type PID_1_W<'a, const O: u8> = crate::BitWriter<'a, u32, EP_BUFFER_CONTROL_SPEC, bool, O>;
+pub type PID_1_W<'a, const O: u8> = crate::BitWriter<'a, EP_BUFFER_CONTROL_SPEC, O>;
 #[doc = "Field `LAST_1` reader - Buffer 1 is the last buffer of the transfer."]
-pub type LAST_1_R = crate::BitReader<bool>;
+pub type LAST_1_R = crate::BitReader;
 #[doc = "Field `LAST_1` writer - Buffer 1 is the last buffer of the transfer."]
-pub type LAST_1_W<'a, const O: u8> = crate::BitWriter<'a, u32, EP_BUFFER_CONTROL_SPEC, bool, O>;
+pub type LAST_1_W<'a, const O: u8> = crate::BitWriter<'a, EP_BUFFER_CONTROL_SPEC, O>;
 #[doc = "Field `FULL_1` reader - Buffer 1 is full. For an IN transfer (TX to the host) the bit is set to indicate the data is valid. For an OUT transfer (RX from the host) this bit should be left as a 0. The host will set it when it has filled the buffer with data."]
-pub type FULL_1_R = crate::BitReader<bool>;
+pub type FULL_1_R = crate::BitReader;
 #[doc = "Field `FULL_1` writer - Buffer 1 is full. For an IN transfer (TX to the host) the bit is set to indicate the data is valid. For an OUT transfer (RX from the host) this bit should be left as a 0. The host will set it when it has filled the buffer with data."]
-pub type FULL_1_W<'a, const O: u8> = crate::BitWriter<'a, u32, EP_BUFFER_CONTROL_SPEC, bool, O>;
+pub type FULL_1_W<'a, const O: u8> = crate::BitWriter<'a, EP_BUFFER_CONTROL_SPEC, O>;
 impl R {
     #[doc = "Bits 0:9 - The length of the data in buffer 0."]
     #[inline(always)]

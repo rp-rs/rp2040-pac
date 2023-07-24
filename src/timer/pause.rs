@@ -35,9 +35,9 @@ impl From<crate::W<PAUSE_SPEC>> for W {
     }
 }
 #[doc = "Field `PAUSE` reader - "]
-pub type PAUSE_R = crate::BitReader<bool>;
+pub type PAUSE_R = crate::BitReader;
 #[doc = "Field `PAUSE` writer - "]
-pub type PAUSE_W<'a, const O: u8> = crate::BitWriter<'a, u32, PAUSE_SPEC, bool, O>;
+pub type PAUSE_W<'a, const O: u8> = crate::BitWriter<'a, PAUSE_SPEC, O>;
 impl R {
     #[doc = "Bit 0"]
     #[inline(always)]

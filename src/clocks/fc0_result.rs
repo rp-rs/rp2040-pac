@@ -14,9 +14,9 @@ impl From<crate::R<FC0_RESULT_SPEC>> for R {
     }
 }
 #[doc = "Field `FRAC` reader - "]
-pub type FRAC_R = crate::FieldReader<u8, u8>;
+pub type FRAC_R = crate::FieldReader;
 #[doc = "Field `KHZ` reader - "]
-pub type KHZ_R = crate::FieldReader<u32, u32>;
+pub type KHZ_R = crate::FieldReader<u32>;
 impl R {
     #[doc = "Bits 0:4"]
     #[inline(always)]
@@ -26,7 +26,7 @@ impl R {
     #[doc = "Bits 5:29"]
     #[inline(always)]
     pub fn khz(&self) -> KHZ_R {
-        KHZ_R::new(((self.bits >> 5) & 0x01ff_ffff) as u32)
+        KHZ_R::new((self.bits >> 5) & 0x01ff_ffff)
     }
 }
 #[doc = "Result of frequency measurement, only valid when status_done=1  

@@ -35,17 +35,17 @@ impl From<crate::W<MAIN_CTRL_SPEC>> for W {
     }
 }
 #[doc = "Field `CONTROLLER_EN` reader - Enable controller"]
-pub type CONTROLLER_EN_R = crate::BitReader<bool>;
+pub type CONTROLLER_EN_R = crate::BitReader;
 #[doc = "Field `CONTROLLER_EN` writer - Enable controller"]
-pub type CONTROLLER_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, MAIN_CTRL_SPEC, bool, O>;
+pub type CONTROLLER_EN_W<'a, const O: u8> = crate::BitWriter<'a, MAIN_CTRL_SPEC, O>;
 #[doc = "Field `HOST_NDEVICE` reader - Device mode = 0, Host mode = 1"]
-pub type HOST_NDEVICE_R = crate::BitReader<bool>;
+pub type HOST_NDEVICE_R = crate::BitReader;
 #[doc = "Field `HOST_NDEVICE` writer - Device mode = 0, Host mode = 1"]
-pub type HOST_NDEVICE_W<'a, const O: u8> = crate::BitWriter<'a, u32, MAIN_CTRL_SPEC, bool, O>;
+pub type HOST_NDEVICE_W<'a, const O: u8> = crate::BitWriter<'a, MAIN_CTRL_SPEC, O>;
 #[doc = "Field `SIM_TIMING` reader - Reduced timings for simulation"]
-pub type SIM_TIMING_R = crate::BitReader<bool>;
+pub type SIM_TIMING_R = crate::BitReader;
 #[doc = "Field `SIM_TIMING` writer - Reduced timings for simulation"]
-pub type SIM_TIMING_W<'a, const O: u8> = crate::BitWriter<'a, u32, MAIN_CTRL_SPEC, bool, O>;
+pub type SIM_TIMING_W<'a, const O: u8> = crate::BitWriter<'a, MAIN_CTRL_SPEC, O>;
 impl R {
     #[doc = "Bit 0 - Enable controller"]
     #[inline(always)]

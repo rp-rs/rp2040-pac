@@ -73,7 +73,7 @@ impl RDMAE_R {
     }
 }
 #[doc = "Field `RDMAE` writer - Receive DMA Enable. This bit enables/disables the receive FIFO DMA channel. Reset value: 0x0"]
-pub type RDMAE_W<'a, const O: u8> = crate::BitWriter<'a, u32, IC_DMA_CR_SPEC, RDMAE_A, O>;
+pub type RDMAE_W<'a, const O: u8> = crate::BitWriter<'a, IC_DMA_CR_SPEC, O, RDMAE_A>;
 impl<'a, const O: u8> RDMAE_W<'a, O> {
     #[doc = "Receive FIFO DMA channel disabled"]
     #[inline(always)]
@@ -125,7 +125,7 @@ impl TDMAE_R {
     }
 }
 #[doc = "Field `TDMAE` writer - Transmit DMA Enable. This bit enables/disables the transmit FIFO DMA channel. Reset value: 0x0"]
-pub type TDMAE_W<'a, const O: u8> = crate::BitWriter<'a, u32, IC_DMA_CR_SPEC, TDMAE_A, O>;
+pub type TDMAE_W<'a, const O: u8> = crate::BitWriter<'a, IC_DMA_CR_SPEC, O, TDMAE_A>;
 impl<'a, const O: u8> TDMAE_W<'a, O> {
     #[doc = "transmit FIFO DMA channel disabled"]
     #[inline(always)]

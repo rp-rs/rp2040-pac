@@ -14,7 +14,7 @@ impl From<crate::R<GPIO_HI_IN_SPEC>> for R {
     }
 }
 #[doc = "Field `GPIO_HI_IN` reader - Input value on QSPI IO in order 0..5: SCLK, SSn, SD0, SD1, SD2, SD3"]
-pub type GPIO_HI_IN_R = crate::FieldReader<u8, u8>;
+pub type GPIO_HI_IN_R = crate::FieldReader;
 impl R {
     #[doc = "Bits 0:5 - Input value on QSPI IO in order 0..5: SCLK, SSn, SD0, SD1, SD2, SD3"]
     #[inline(always)]

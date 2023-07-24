@@ -35,10 +35,9 @@ impl From<crate::W<FBDIV_INT_SPEC>> for W {
     }
 }
 #[doc = "Field `FBDIV_INT` reader - see ctrl reg description for constraints"]
-pub type FBDIV_INT_R = crate::FieldReader<u16, u16>;
+pub type FBDIV_INT_R = crate::FieldReader<u16>;
 #[doc = "Field `FBDIV_INT` writer - see ctrl reg description for constraints"]
-pub type FBDIV_INT_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, FBDIV_INT_SPEC, u16, u16, 12, O>;
+pub type FBDIV_INT_W<'a, const O: u8> = crate::FieldWriter<'a, FBDIV_INT_SPEC, 12, O, u16>;
 impl R {
     #[doc = "Bits 0:11 - see ctrl reg description for constraints"]
     #[inline(always)]

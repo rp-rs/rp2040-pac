@@ -35,9 +35,9 @@ impl From<crate::W<SSPCPSR_SPEC>> for W {
     }
 }
 #[doc = "Field `CPSDVSR` reader - Clock prescale divisor. Must be an even number from 2-254, depending on the frequency of SSPCLK. The least significant bit always returns zero on reads."]
-pub type CPSDVSR_R = crate::FieldReader<u8, u8>;
+pub type CPSDVSR_R = crate::FieldReader;
 #[doc = "Field `CPSDVSR` writer - Clock prescale divisor. Must be an even number from 2-254, depending on the frequency of SSPCLK. The least significant bit always returns zero on reads."]
-pub type CPSDVSR_W<'a, const O: u8> = crate::FieldWriter<'a, u32, SSPCPSR_SPEC, u8, u8, 8, O>;
+pub type CPSDVSR_W<'a, const O: u8> = crate::FieldWriter<'a, SSPCPSR_SPEC, 8, O>;
 impl R {
     #[doc = "Bits 0:7 - Clock prescale divisor. Must be an even number from 2-254, depending on the frequency of SSPCLK. The least significant bit always returns zero on reads."]
     #[inline(always)]

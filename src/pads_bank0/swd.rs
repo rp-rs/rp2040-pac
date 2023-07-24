@@ -35,23 +35,23 @@ impl From<crate::W<SWD_SPEC>> for W {
     }
 }
 #[doc = "Field `SLEWFAST` reader - Slew rate control. 1 = Fast, 0 = Slow"]
-pub type SLEWFAST_R = crate::BitReader<bool>;
+pub type SLEWFAST_R = crate::BitReader;
 #[doc = "Field `SLEWFAST` writer - Slew rate control. 1 = Fast, 0 = Slow"]
-pub type SLEWFAST_W<'a, const O: u8> = crate::BitWriter<'a, u32, SWD_SPEC, bool, O>;
+pub type SLEWFAST_W<'a, const O: u8> = crate::BitWriter<'a, SWD_SPEC, O>;
 #[doc = "Field `SCHMITT` reader - Enable schmitt trigger"]
-pub type SCHMITT_R = crate::BitReader<bool>;
+pub type SCHMITT_R = crate::BitReader;
 #[doc = "Field `SCHMITT` writer - Enable schmitt trigger"]
-pub type SCHMITT_W<'a, const O: u8> = crate::BitWriter<'a, u32, SWD_SPEC, bool, O>;
+pub type SCHMITT_W<'a, const O: u8> = crate::BitWriter<'a, SWD_SPEC, O>;
 #[doc = "Field `PDE` reader - Pull down enable"]
-pub type PDE_R = crate::BitReader<bool>;
+pub type PDE_R = crate::BitReader;
 #[doc = "Field `PDE` writer - Pull down enable"]
-pub type PDE_W<'a, const O: u8> = crate::BitWriter<'a, u32, SWD_SPEC, bool, O>;
+pub type PDE_W<'a, const O: u8> = crate::BitWriter<'a, SWD_SPEC, O>;
 #[doc = "Field `PUE` reader - Pull up enable"]
-pub type PUE_R = crate::BitReader<bool>;
+pub type PUE_R = crate::BitReader;
 #[doc = "Field `PUE` writer - Pull up enable"]
-pub type PUE_W<'a, const O: u8> = crate::BitWriter<'a, u32, SWD_SPEC, bool, O>;
+pub type PUE_W<'a, const O: u8> = crate::BitWriter<'a, SWD_SPEC, O>;
 #[doc = "Field `DRIVE` reader - Drive strength."]
-pub type DRIVE_R = crate::FieldReader<u8, DRIVE_A>;
+pub type DRIVE_R = crate::FieldReader<DRIVE_A>;
 #[doc = "Drive strength.  
 
 Value on reset: 1"]
@@ -72,6 +72,9 @@ impl From<DRIVE_A> for u8 {
     fn from(variant: DRIVE_A) -> Self {
         variant as _
     }
+}
+impl crate::FieldSpec for DRIVE_A {
+    type Ux = u8;
 }
 impl DRIVE_R {
     #[doc = "Get enumerated values variant"]
@@ -107,7 +110,7 @@ impl DRIVE_R {
     }
 }
 #[doc = "Field `DRIVE` writer - Drive strength."]
-pub type DRIVE_W<'a, const O: u8> = crate::FieldWriterSafe<'a, u32, SWD_SPEC, u8, DRIVE_A, 2, O>;
+pub type DRIVE_W<'a, const O: u8> = crate::FieldWriterSafe<'a, SWD_SPEC, 2, O, DRIVE_A>;
 impl<'a, const O: u8> DRIVE_W<'a, O> {
     #[doc = "`0`"]
     #[inline(always)]
@@ -131,13 +134,13 @@ impl<'a, const O: u8> DRIVE_W<'a, O> {
     }
 }
 #[doc = "Field `IE` reader - Input enable"]
-pub type IE_R = crate::BitReader<bool>;
+pub type IE_R = crate::BitReader;
 #[doc = "Field `IE` writer - Input enable"]
-pub type IE_W<'a, const O: u8> = crate::BitWriter<'a, u32, SWD_SPEC, bool, O>;
+pub type IE_W<'a, const O: u8> = crate::BitWriter<'a, SWD_SPEC, O>;
 #[doc = "Field `OD` reader - Output disable. Has priority over output enable from peripherals"]
-pub type OD_R = crate::BitReader<bool>;
+pub type OD_R = crate::BitReader;
 #[doc = "Field `OD` writer - Output disable. Has priority over output enable from peripherals"]
-pub type OD_W<'a, const O: u8> = crate::BitWriter<'a, u32, SWD_SPEC, bool, O>;
+pub type OD_W<'a, const O: u8> = crate::BitWriter<'a, SWD_SPEC, O>;
 impl R {
     #[doc = "Bit 0 - Slew rate control. 1 = Fast, 0 = Slow"]
     #[inline(always)]

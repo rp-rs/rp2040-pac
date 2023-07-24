@@ -35,11 +35,11 @@ impl From<crate::W<SSPCR0_SPEC>> for W {
     }
 }
 #[doc = "Field `DSS` reader - Data Size Select: 0000 Reserved, undefined operation. 0001 Reserved, undefined operation. 0010 Reserved, undefined operation. 0011 4-bit data. 0100 5-bit data. 0101 6-bit data. 0110 7-bit data. 0111 8-bit data. 1000 9-bit data. 1001 10-bit data. 1010 11-bit data. 1011 12-bit data. 1100 13-bit data. 1101 14-bit data. 1110 15-bit data. 1111 16-bit data."]
-pub type DSS_R = crate::FieldReader<u8, u8>;
+pub type DSS_R = crate::FieldReader;
 #[doc = "Field `DSS` writer - Data Size Select: 0000 Reserved, undefined operation. 0001 Reserved, undefined operation. 0010 Reserved, undefined operation. 0011 4-bit data. 0100 5-bit data. 0101 6-bit data. 0110 7-bit data. 0111 8-bit data. 1000 9-bit data. 1001 10-bit data. 1010 11-bit data. 1011 12-bit data. 1100 13-bit data. 1101 14-bit data. 1110 15-bit data. 1111 16-bit data."]
-pub type DSS_W<'a, const O: u8> = crate::FieldWriter<'a, u32, SSPCR0_SPEC, u8, u8, 4, O>;
+pub type DSS_W<'a, const O: u8> = crate::FieldWriter<'a, SSPCR0_SPEC, 4, O>;
 #[doc = "Field `FRF` reader - Frame format."]
-pub type FRF_R = crate::FieldReader<u8, FRF_A>;
+pub type FRF_R = crate::FieldReader<FRF_A>;
 #[doc = "Frame format.  
 
 Value on reset: 0"]
@@ -58,6 +58,9 @@ impl From<FRF_A> for u8 {
     fn from(variant: FRF_A) -> Self {
         variant as _
     }
+}
+impl crate::FieldSpec for FRF_A {
+    type Ux = u8;
 }
 impl FRF_R {
     #[doc = "Get enumerated values variant"]
@@ -87,7 +90,7 @@ impl FRF_R {
     }
 }
 #[doc = "Field `FRF` writer - Frame format."]
-pub type FRF_W<'a, const O: u8> = crate::FieldWriter<'a, u32, SSPCR0_SPEC, u8, FRF_A, 2, O>;
+pub type FRF_W<'a, const O: u8> = crate::FieldWriter<'a, SSPCR0_SPEC, 2, O, FRF_A>;
 impl<'a, const O: u8> FRF_W<'a, O> {
     #[doc = "Motorola SPI frame format"]
     #[inline(always)]
@@ -106,17 +109,17 @@ impl<'a, const O: u8> FRF_W<'a, O> {
     }
 }
 #[doc = "Field `SPO` reader - SSPCLKOUT polarity, applicable to Motorola SPI frame format only. See Motorola SPI frame format on page 2-10."]
-pub type SPO_R = crate::BitReader<bool>;
+pub type SPO_R = crate::BitReader;
 #[doc = "Field `SPO` writer - SSPCLKOUT polarity, applicable to Motorola SPI frame format only. See Motorola SPI frame format on page 2-10."]
-pub type SPO_W<'a, const O: u8> = crate::BitWriter<'a, u32, SSPCR0_SPEC, bool, O>;
+pub type SPO_W<'a, const O: u8> = crate::BitWriter<'a, SSPCR0_SPEC, O>;
 #[doc = "Field `SPH` reader - SSPCLKOUT phase, applicable to Motorola SPI frame format only. See Motorola SPI frame format on page 2-10."]
-pub type SPH_R = crate::BitReader<bool>;
+pub type SPH_R = crate::BitReader;
 #[doc = "Field `SPH` writer - SSPCLKOUT phase, applicable to Motorola SPI frame format only. See Motorola SPI frame format on page 2-10."]
-pub type SPH_W<'a, const O: u8> = crate::BitWriter<'a, u32, SSPCR0_SPEC, bool, O>;
+pub type SPH_W<'a, const O: u8> = crate::BitWriter<'a, SSPCR0_SPEC, O>;
 #[doc = "Field `SCR` reader - Serial clock rate. The value SCR is used to generate the transmit and receive bit rate of the PrimeCell SSP. The bit rate is: F SSPCLK CPSDVSR x (1+SCR) where CPSDVSR is an even value from 2-254, programmed through the SSPCPSR register and SCR is a value from 0-255."]
-pub type SCR_R = crate::FieldReader<u8, u8>;
+pub type SCR_R = crate::FieldReader;
 #[doc = "Field `SCR` writer - Serial clock rate. The value SCR is used to generate the transmit and receive bit rate of the PrimeCell SSP. The bit rate is: F SSPCLK CPSDVSR x (1+SCR) where CPSDVSR is an even value from 2-254, programmed through the SSPCPSR register and SCR is a value from 0-255."]
-pub type SCR_W<'a, const O: u8> = crate::FieldWriter<'a, u32, SSPCR0_SPEC, u8, u8, 8, O>;
+pub type SCR_W<'a, const O: u8> = crate::FieldWriter<'a, SSPCR0_SPEC, 8, O>;
 impl R {
     #[doc = "Bits 0:3 - Data Size Select: 0000 Reserved, undefined operation. 0001 Reserved, undefined operation. 0010 Reserved, undefined operation. 0011 4-bit data. 0100 5-bit data. 0101 6-bit data. 0110 7-bit data. 0111 8-bit data. 1000 9-bit data. 1001 10-bit data. 1010 11-bit data. 1011 12-bit data. 1100 13-bit data. 1101 14-bit data. 1110 15-bit data. 1111 16-bit data."]
     #[inline(always)]

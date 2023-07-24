@@ -16,7 +16,7 @@ impl From<crate::R<IC_CLR_GEN_CALL_SPEC>> for R {
 #[doc = "Field `CLR_GEN_CALL` reader - Read this register to clear the GEN_CALL interrupt (bit 11) of IC_RAW_INTR_STAT register.  
 
  Reset value: 0x0"]
-pub type CLR_GEN_CALL_R = crate::BitReader<bool>;
+pub type CLR_GEN_CALL_R = crate::BitReader;
 impl R {
     #[doc = "Bit 0 - Read this register to clear the GEN_CALL interrupt (bit 11) of IC_RAW_INTR_STAT register.  
 

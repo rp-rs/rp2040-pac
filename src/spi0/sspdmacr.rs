@@ -35,13 +35,13 @@ impl From<crate::W<SSPDMACR_SPEC>> for W {
     }
 }
 #[doc = "Field `RXDMAE` reader - Receive DMA Enable. If this bit is set to 1, DMA for the receive FIFO is enabled."]
-pub type RXDMAE_R = crate::BitReader<bool>;
+pub type RXDMAE_R = crate::BitReader;
 #[doc = "Field `RXDMAE` writer - Receive DMA Enable. If this bit is set to 1, DMA for the receive FIFO is enabled."]
-pub type RXDMAE_W<'a, const O: u8> = crate::BitWriter<'a, u32, SSPDMACR_SPEC, bool, O>;
+pub type RXDMAE_W<'a, const O: u8> = crate::BitWriter<'a, SSPDMACR_SPEC, O>;
 #[doc = "Field `TXDMAE` reader - Transmit DMA Enable. If this bit is set to 1, DMA for the transmit FIFO is enabled."]
-pub type TXDMAE_R = crate::BitReader<bool>;
+pub type TXDMAE_R = crate::BitReader;
 #[doc = "Field `TXDMAE` writer - Transmit DMA Enable. If this bit is set to 1, DMA for the transmit FIFO is enabled."]
-pub type TXDMAE_W<'a, const O: u8> = crate::BitWriter<'a, u32, SSPDMACR_SPEC, bool, O>;
+pub type TXDMAE_W<'a, const O: u8> = crate::BitWriter<'a, SSPDMACR_SPEC, O>;
 impl R {
     #[doc = "Bit 0 - Receive DMA Enable. If this bit is set to 1, DMA for the receive FIFO is enabled."]
     #[inline(always)]

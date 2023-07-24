@@ -35,13 +35,13 @@ impl From<crate::W<DIV_SPEC>> for W {
     }
 }
 #[doc = "Field `FRAC` reader - "]
-pub type FRAC_R = crate::FieldReader<u8, u8>;
+pub type FRAC_R = crate::FieldReader;
 #[doc = "Field `FRAC` writer - "]
-pub type FRAC_W<'a, const O: u8> = crate::FieldWriter<'a, u32, DIV_SPEC, u8, u8, 4, O>;
+pub type FRAC_W<'a, const O: u8> = crate::FieldWriter<'a, DIV_SPEC, 4, O>;
 #[doc = "Field `INT` reader - "]
-pub type INT_R = crate::FieldReader<u8, u8>;
+pub type INT_R = crate::FieldReader;
 #[doc = "Field `INT` writer - "]
-pub type INT_W<'a, const O: u8> = crate::FieldWriter<'a, u32, DIV_SPEC, u8, u8, 8, O>;
+pub type INT_W<'a, const O: u8> = crate::FieldWriter<'a, DIV_SPEC, 8, O>;
 impl R {
     #[doc = "Bits 0:3"]
     #[inline(always)]

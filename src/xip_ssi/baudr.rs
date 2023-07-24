@@ -35,9 +35,9 @@ impl From<crate::W<BAUDR_SPEC>> for W {
     }
 }
 #[doc = "Field `SCKDV` reader - SSI clock divider"]
-pub type SCKDV_R = crate::FieldReader<u16, u16>;
+pub type SCKDV_R = crate::FieldReader<u16>;
 #[doc = "Field `SCKDV` writer - SSI clock divider"]
-pub type SCKDV_W<'a, const O: u8> = crate::FieldWriter<'a, u32, BAUDR_SPEC, u16, u16, 16, O>;
+pub type SCKDV_W<'a, const O: u8> = crate::FieldWriter<'a, BAUDR_SPEC, 16, O, u16>;
 impl R {
     #[doc = "Bits 0:15 - SSI clock divider"]
     #[inline(always)]

@@ -35,15 +35,15 @@ impl From<crate::W<SNIFF_CTRL_SPEC>> for W {
     }
 }
 #[doc = "Field `EN` reader - Enable sniffer"]
-pub type EN_R = crate::BitReader<bool>;
+pub type EN_R = crate::BitReader;
 #[doc = "Field `EN` writer - Enable sniffer"]
-pub type EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, SNIFF_CTRL_SPEC, bool, O>;
+pub type EN_W<'a, const O: u8> = crate::BitWriter<'a, SNIFF_CTRL_SPEC, O>;
 #[doc = "Field `DMACH` reader - DMA channel for Sniffer to observe"]
-pub type DMACH_R = crate::FieldReader<u8, u8>;
+pub type DMACH_R = crate::FieldReader;
 #[doc = "Field `DMACH` writer - DMA channel for Sniffer to observe"]
-pub type DMACH_W<'a, const O: u8> = crate::FieldWriter<'a, u32, SNIFF_CTRL_SPEC, u8, u8, 4, O>;
+pub type DMACH_W<'a, const O: u8> = crate::FieldWriter<'a, SNIFF_CTRL_SPEC, 4, O>;
 #[doc = "Field `CALC` reader - "]
-pub type CALC_R = crate::FieldReader<u8, CALC_A>;
+pub type CALC_R = crate::FieldReader<CALC_A>;
 #[doc = "  
 
 Value on reset: 0"]
@@ -68,6 +68,9 @@ impl From<CALC_A> for u8 {
     fn from(variant: CALC_A) -> Self {
         variant as _
     }
+}
+impl crate::FieldSpec for CALC_A {
+    type Ux = u8;
 }
 impl CALC_R {
     #[doc = "Get enumerated values variant"]
@@ -115,7 +118,7 @@ impl CALC_R {
     }
 }
 #[doc = "Field `CALC` writer - "]
-pub type CALC_W<'a, const O: u8> = crate::FieldWriter<'a, u32, SNIFF_CTRL_SPEC, u8, CALC_A, 4, O>;
+pub type CALC_W<'a, const O: u8> = crate::FieldWriter<'a, SNIFF_CTRL_SPEC, 4, O, CALC_A>;
 impl<'a, const O: u8> CALC_W<'a, O> {
     #[doc = "Calculate a CRC-32 (IEEE802.3 polynomial)"]
     #[inline(always)]
@@ -151,19 +154,19 @@ impl<'a, const O: u8> CALC_W<'a, O> {
 #[doc = "Field `BSWAP` reader - Locally perform a byte reverse on the sniffed data, before feeding into checksum.  
 
  Note that the sniff hardware is downstream of the DMA channel byteswap performed in the read master: if channel CTRL_BSWAP and SNIFF_CTRL_BSWAP are both enabled, their effects cancel from the sniffer's point of view."]
-pub type BSWAP_R = crate::BitReader<bool>;
+pub type BSWAP_R = crate::BitReader;
 #[doc = "Field `BSWAP` writer - Locally perform a byte reverse on the sniffed data, before feeding into checksum.  
 
  Note that the sniff hardware is downstream of the DMA channel byteswap performed in the read master: if channel CTRL_BSWAP and SNIFF_CTRL_BSWAP are both enabled, their effects cancel from the sniffer's point of view."]
-pub type BSWAP_W<'a, const O: u8> = crate::BitWriter<'a, u32, SNIFF_CTRL_SPEC, bool, O>;
+pub type BSWAP_W<'a, const O: u8> = crate::BitWriter<'a, SNIFF_CTRL_SPEC, O>;
 #[doc = "Field `OUT_REV` reader - If set, the result appears bit-reversed when read. This does not affect the way the checksum is calculated; the result is transformed on-the-fly between the result register and the bus."]
-pub type OUT_REV_R = crate::BitReader<bool>;
+pub type OUT_REV_R = crate::BitReader;
 #[doc = "Field `OUT_REV` writer - If set, the result appears bit-reversed when read. This does not affect the way the checksum is calculated; the result is transformed on-the-fly between the result register and the bus."]
-pub type OUT_REV_W<'a, const O: u8> = crate::BitWriter<'a, u32, SNIFF_CTRL_SPEC, bool, O>;
+pub type OUT_REV_W<'a, const O: u8> = crate::BitWriter<'a, SNIFF_CTRL_SPEC, O>;
 #[doc = "Field `OUT_INV` reader - If set, the result appears inverted (bitwise complement) when read. This does not affect the way the checksum is calculated; the result is transformed on-the-fly between the result register and the bus."]
-pub type OUT_INV_R = crate::BitReader<bool>;
+pub type OUT_INV_R = crate::BitReader;
 #[doc = "Field `OUT_INV` writer - If set, the result appears inverted (bitwise complement) when read. This does not affect the way the checksum is calculated; the result is transformed on-the-fly between the result register and the bus."]
-pub type OUT_INV_W<'a, const O: u8> = crate::BitWriter<'a, u32, SNIFF_CTRL_SPEC, bool, O>;
+pub type OUT_INV_W<'a, const O: u8> = crate::BitWriter<'a, SNIFF_CTRL_SPEC, O>;
 impl R {
     #[doc = "Bit 0 - Enable sniffer"]
     #[inline(always)]

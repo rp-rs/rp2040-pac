@@ -73,7 +73,7 @@ impl SRC_R {
     }
 }
 #[doc = "Field `SRC` writer - Selects the clock source glitchlessly, can be changed on-the-fly"]
-pub type SRC_W<'a, const O: u8> = crate::BitWriter<'a, u32, CLK_SYS_CTRL_SPEC, SRC_A, O>;
+pub type SRC_W<'a, const O: u8> = crate::BitWriter<'a, CLK_SYS_CTRL_SPEC, O, SRC_A>;
 impl<'a, const O: u8> SRC_W<'a, O> {
     #[doc = "`0`"]
     #[inline(always)]
@@ -87,7 +87,7 @@ impl<'a, const O: u8> SRC_W<'a, O> {
     }
 }
 #[doc = "Field `AUXSRC` reader - Selects the auxiliary clock source, will glitch when switching"]
-pub type AUXSRC_R = crate::FieldReader<u8, AUXSRC_A>;
+pub type AUXSRC_R = crate::FieldReader<AUXSRC_A>;
 #[doc = "Selects the auxiliary clock source, will glitch when switching  
 
 Value on reset: 0"]
@@ -112,6 +112,9 @@ impl From<AUXSRC_A> for u8 {
     fn from(variant: AUXSRC_A) -> Self {
         variant as _
     }
+}
+impl crate::FieldSpec for AUXSRC_A {
+    type Ux = u8;
 }
 impl AUXSRC_R {
     #[doc = "Get enumerated values variant"]
@@ -159,8 +162,7 @@ impl AUXSRC_R {
     }
 }
 #[doc = "Field `AUXSRC` writer - Selects the auxiliary clock source, will glitch when switching"]
-pub type AUXSRC_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, CLK_SYS_CTRL_SPEC, u8, AUXSRC_A, 3, O>;
+pub type AUXSRC_W<'a, const O: u8> = crate::FieldWriter<'a, CLK_SYS_CTRL_SPEC, 3, O, AUXSRC_A>;
 impl<'a, const O: u8> AUXSRC_W<'a, O> {
     #[doc = "`0`"]
     #[inline(always)]

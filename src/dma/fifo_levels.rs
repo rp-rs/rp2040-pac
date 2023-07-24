@@ -14,11 +14,11 @@ impl From<crate::R<FIFO_LEVELS_SPEC>> for R {
     }
 }
 #[doc = "Field `TDF_LVL` reader - Current Transfer-Data-FIFO fill level"]
-pub type TDF_LVL_R = crate::FieldReader<u8, u8>;
+pub type TDF_LVL_R = crate::FieldReader;
 #[doc = "Field `WAF_LVL` reader - Current Write-Address-FIFO fill level"]
-pub type WAF_LVL_R = crate::FieldReader<u8, u8>;
+pub type WAF_LVL_R = crate::FieldReader;
 #[doc = "Field `RAF_LVL` reader - Current Read-Address-FIFO fill level"]
-pub type RAF_LVL_R = crate::FieldReader<u8, u8>;
+pub type RAF_LVL_R = crate::FieldReader;
 impl R {
     #[doc = "Bits 0:7 - Current Transfer-Data-FIFO fill level"]
     #[inline(always)]

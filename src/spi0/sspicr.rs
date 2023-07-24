@@ -35,13 +35,13 @@ impl From<crate::W<SSPICR_SPEC>> for W {
     }
 }
 #[doc = "Field `RORIC` reader - Clears the SSPRORINTR interrupt"]
-pub type RORIC_R = crate::BitReader<bool>;
+pub type RORIC_R = crate::BitReader;
 #[doc = "Field `RORIC` writer - Clears the SSPRORINTR interrupt"]
-pub type RORIC_W<'a, const O: u8> = crate::BitWriter1C<'a, u32, SSPICR_SPEC, bool, O>;
+pub type RORIC_W<'a, const O: u8> = crate::BitWriter1C<'a, SSPICR_SPEC, O>;
 #[doc = "Field `RTIC` reader - Clears the SSPRTINTR interrupt"]
-pub type RTIC_R = crate::BitReader<bool>;
+pub type RTIC_R = crate::BitReader;
 #[doc = "Field `RTIC` writer - Clears the SSPRTINTR interrupt"]
-pub type RTIC_W<'a, const O: u8> = crate::BitWriter1C<'a, u32, SSPICR_SPEC, bool, O>;
+pub type RTIC_W<'a, const O: u8> = crate::BitWriter1C<'a, SSPICR_SPEC, O>;
 impl R {
     #[doc = "Bit 0 - Clears the SSPRORINTR interrupt"]
     #[inline(always)]

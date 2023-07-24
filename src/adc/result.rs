@@ -14,7 +14,7 @@ impl From<crate::R<RESULT_SPEC>> for R {
     }
 }
 #[doc = "Field `RESULT` reader - "]
-pub type RESULT_R = crate::FieldReader<u16, u16>;
+pub type RESULT_R = crate::FieldReader<u16>;
 impl R {
     #[doc = "Bits 0:11"]
     #[inline(always)]

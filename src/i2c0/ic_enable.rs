@@ -91,7 +91,7 @@ impl ENABLE_R {
  In systems with asynchronous pclk and ic_clk when IC_CLK_TYPE parameter set to asynchronous (1), there is a two ic_clk delay when enabling or disabling the DW_apb_i2c. For a detailed description on how to disable DW_apb_i2c, refer to 'Disabling DW_apb_i2c'  
 
  Reset value: 0x0"]
-pub type ENABLE_W<'a, const O: u8> = crate::BitWriter<'a, u32, IC_ENABLE_SPEC, ENABLE_A, O>;
+pub type ENABLE_W<'a, const O: u8> = crate::BitWriter<'a, IC_ENABLE_SPEC, O, ENABLE_A>;
 impl<'a, const O: u8> ENABLE_W<'a, O> {
     #[doc = "I2C is disabled"]
     #[inline(always)]
@@ -155,7 +155,7 @@ impl ABORT_R {
  For a detailed description on how to abort I2C transfers, refer to 'Aborting I2C Transfers'.  
 
  Reset value: 0x0"]
-pub type ABORT_W<'a, const O: u8> = crate::BitWriter<'a, u32, IC_ENABLE_SPEC, ABORT_A, O>;
+pub type ABORT_W<'a, const O: u8> = crate::BitWriter<'a, IC_ENABLE_SPEC, O, ABORT_A>;
 impl<'a, const O: u8> ABORT_W<'a, O> {
     #[doc = "ABORT operation not in progress"]
     #[inline(always)]
@@ -210,8 +210,7 @@ impl TX_CMD_BLOCK_R {
 }
 #[doc = "Field `TX_CMD_BLOCK` writer - In Master mode: - 1'b1: Blocks the transmission of data on I2C bus even if Tx FIFO has data to transmit. - 1'b0: The transmission of data starts on I2C bus automatically, as soon as the first data is available in the Tx FIFO. Note: To block the execution of Master commands, set the TX_CMD_BLOCK bit only when Tx FIFO is empty (IC_STATUS\\[2\\]==1) and Master is in Idle state (IC_STATUS\\[5\\]
 == 0). Any further commands put in the Tx FIFO are not executed until TX_CMD_BLOCK bit is unset. Reset value: IC_TX_CMD_BLOCK_DEFAULT"]
-pub type TX_CMD_BLOCK_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, IC_ENABLE_SPEC, TX_CMD_BLOCK_A, O>;
+pub type TX_CMD_BLOCK_W<'a, const O: u8> = crate::BitWriter<'a, IC_ENABLE_SPEC, O, TX_CMD_BLOCK_A>;
 impl<'a, const O: u8> TX_CMD_BLOCK_W<'a, O> {
     #[doc = "Tx Command execution not blocked"]
     #[inline(always)]

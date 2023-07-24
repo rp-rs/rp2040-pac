@@ -35,7 +35,7 @@ impl From<crate::W<PERFSEL0_SPEC>> for W {
     }
 }
 #[doc = "Field `PERFSEL0` reader - Select an event for PERFCTR0. Count either contested accesses, or all accesses, on a downstream port of the main crossbar."]
-pub type PERFSEL0_R = crate::FieldReader<u8, PERFSEL0_A>;
+pub type PERFSEL0_R = crate::FieldReader<PERFSEL0_A>;
 #[doc = "Select an event for PERFCTR0. Count either contested accesses, or all accesses, on a downstream port of the main crossbar.  
 
 Value on reset: 31"]
@@ -88,6 +88,9 @@ impl From<PERFSEL0_A> for u8 {
     fn from(variant: PERFSEL0_A) -> Self {
         variant as _
     }
+}
+impl crate::FieldSpec for PERFSEL0_A {
+    type Ux = u8;
 }
 impl PERFSEL0_R {
     #[doc = "Get enumerated values variant"]
@@ -219,8 +222,7 @@ impl PERFSEL0_R {
     }
 }
 #[doc = "Field `PERFSEL0` writer - Select an event for PERFCTR0. Count either contested accesses, or all accesses, on a downstream port of the main crossbar."]
-pub type PERFSEL0_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, PERFSEL0_SPEC, u8, PERFSEL0_A, 5, O>;
+pub type PERFSEL0_W<'a, const O: u8> = crate::FieldWriter<'a, PERFSEL0_SPEC, 5, O, PERFSEL0_A>;
 impl<'a, const O: u8> PERFSEL0_W<'a, O> {
     #[doc = "`0`"]
     #[inline(always)]

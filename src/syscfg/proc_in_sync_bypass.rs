@@ -35,10 +35,10 @@ impl From<crate::W<PROC_IN_SYNC_BYPASS_SPEC>> for W {
     }
 }
 #[doc = "Field `PROC_IN_SYNC_BYPASS` reader - "]
-pub type PROC_IN_SYNC_BYPASS_R = crate::FieldReader<u32, u32>;
+pub type PROC_IN_SYNC_BYPASS_R = crate::FieldReader<u32>;
 #[doc = "Field `PROC_IN_SYNC_BYPASS` writer - "]
 pub type PROC_IN_SYNC_BYPASS_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, PROC_IN_SYNC_BYPASS_SPEC, u32, u32, 30, O>;
+    crate::FieldWriter<'a, PROC_IN_SYNC_BYPASS_SPEC, 30, O, u32>;
 impl R {
     #[doc = "Bits 0:29"]
     #[inline(always)]

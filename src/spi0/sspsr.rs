@@ -14,15 +14,15 @@ impl From<crate::R<SSPSR_SPEC>> for R {
     }
 }
 #[doc = "Field `TFE` reader - Transmit FIFO empty, RO: 0 Transmit FIFO is not empty. 1 Transmit FIFO is empty."]
-pub type TFE_R = crate::BitReader<bool>;
+pub type TFE_R = crate::BitReader;
 #[doc = "Field `TNF` reader - Transmit FIFO not full, RO: 0 Transmit FIFO is full. 1 Transmit FIFO is not full."]
-pub type TNF_R = crate::BitReader<bool>;
+pub type TNF_R = crate::BitReader;
 #[doc = "Field `RNE` reader - Receive FIFO not empty, RO: 0 Receive FIFO is empty. 1 Receive FIFO is not empty."]
-pub type RNE_R = crate::BitReader<bool>;
+pub type RNE_R = crate::BitReader;
 #[doc = "Field `RFF` reader - Receive FIFO full, RO: 0 Receive FIFO is not full. 1 Receive FIFO is full."]
-pub type RFF_R = crate::BitReader<bool>;
+pub type RFF_R = crate::BitReader;
 #[doc = "Field `BSY` reader - PrimeCell SSP busy flag, RO: 0 SSP is idle. 1 SSP is currently transmitting and/or receiving a frame or the transmit FIFO is not empty."]
-pub type BSY_R = crate::BitReader<bool>;
+pub type BSY_R = crate::BitReader;
 impl R {
     #[doc = "Bit 0 - Transmit FIFO empty, RO: 0 Transmit FIFO is not empty. 1 Transmit FIFO is empty."]
     #[inline(always)]

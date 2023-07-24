@@ -36,10 +36,10 @@ impl From<crate::W<INTF_SPEC>> for W {
 }
 #[doc = "Field `FIFO` reader - Triggered when the sample FIFO reaches a certain level.  
  This level can be programmed via the FCS_THRESH field."]
-pub type FIFO_R = crate::BitReader<bool>;
+pub type FIFO_R = crate::BitReader;
 #[doc = "Field `FIFO` writer - Triggered when the sample FIFO reaches a certain level.  
  This level can be programmed via the FCS_THRESH field."]
-pub type FIFO_W<'a, const O: u8> = crate::BitWriter<'a, u32, INTF_SPEC, bool, O>;
+pub type FIFO_W<'a, const O: u8> = crate::BitWriter<'a, INTF_SPEC, O>;
 impl R {
     #[doc = "Bit 0 - Triggered when the sample FIFO reaches a certain level.  
  This level can be programmed via the FCS_THRESH field."]

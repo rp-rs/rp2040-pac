@@ -14,7 +14,7 @@ impl From<crate::R<GPIO_IN_SPEC>> for R {
     }
 }
 #[doc = "Field `GPIO_IN` reader - Input value for GPIO0...29"]
-pub type GPIO_IN_R = crate::FieldReader<u32, u32>;
+pub type GPIO_IN_R = crate::FieldReader<u32>;
 impl R {
     #[doc = "Bits 0:29 - Input value for GPIO0...29"]
     #[inline(always)]

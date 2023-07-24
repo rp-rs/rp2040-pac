@@ -35,13 +35,13 @@ impl From<crate::W<ADDR_ENDP_SPEC>> for W {
     }
 }
 #[doc = "Field `ADDRESS` reader - In device mode, the address that the device should respond to. Set in response to a SET_ADDR setup packet from the host. In host mode set to the address of the device to communicate with."]
-pub type ADDRESS_R = crate::FieldReader<u8, u8>;
+pub type ADDRESS_R = crate::FieldReader;
 #[doc = "Field `ADDRESS` writer - In device mode, the address that the device should respond to. Set in response to a SET_ADDR setup packet from the host. In host mode set to the address of the device to communicate with."]
-pub type ADDRESS_W<'a, const O: u8> = crate::FieldWriter<'a, u32, ADDR_ENDP_SPEC, u8, u8, 7, O>;
+pub type ADDRESS_W<'a, const O: u8> = crate::FieldWriter<'a, ADDR_ENDP_SPEC, 7, O>;
 #[doc = "Field `ENDPOINT` reader - Device endpoint to send data to. Only valid for HOST mode."]
-pub type ENDPOINT_R = crate::FieldReader<u8, u8>;
+pub type ENDPOINT_R = crate::FieldReader;
 #[doc = "Field `ENDPOINT` writer - Device endpoint to send data to. Only valid for HOST mode."]
-pub type ENDPOINT_W<'a, const O: u8> = crate::FieldWriter<'a, u32, ADDR_ENDP_SPEC, u8, u8, 4, O>;
+pub type ENDPOINT_W<'a, const O: u8> = crate::FieldWriter<'a, ADDR_ENDP_SPEC, 4, O>;
 impl R {
     #[doc = "Bits 0:6 - In device mode, the address that the device should respond to. Set in response to a SET_ADDR setup packet from the host. In host mode set to the address of the device to communicate with."]
     #[inline(always)]

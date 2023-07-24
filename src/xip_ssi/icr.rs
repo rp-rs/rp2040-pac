@@ -14,7 +14,7 @@ impl From<crate::R<ICR_SPEC>> for R {
     }
 }
 #[doc = "Field `ICR` reader - Clear-on-read all active interrupts"]
-pub type ICR_R = crate::BitReader<bool>;
+pub type ICR_R = crate::BitReader;
 impl R {
     #[doc = "Bit 0 - Clear-on-read all active interrupts"]
     #[inline(always)]

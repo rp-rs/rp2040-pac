@@ -14,69 +14,69 @@ impl From<crate::R<PROC0_INTS_SPEC>> for R {
     }
 }
 #[doc = "Field `GPIO0_LEVEL_LOW` reader - "]
-pub type GPIO0_LEVEL_LOW_R = crate::BitReader<bool>;
+pub type GPIO0_LEVEL_LOW_R = crate::BitReader;
 #[doc = "Field `GPIO0_LEVEL_HIGH` reader - "]
-pub type GPIO0_LEVEL_HIGH_R = crate::BitReader<bool>;
+pub type GPIO0_LEVEL_HIGH_R = crate::BitReader;
 #[doc = "Field `GPIO0_EDGE_LOW` reader - "]
-pub type GPIO0_EDGE_LOW_R = crate::BitReader<bool>;
+pub type GPIO0_EDGE_LOW_R = crate::BitReader;
 #[doc = "Field `GPIO0_EDGE_HIGH` reader - "]
-pub type GPIO0_EDGE_HIGH_R = crate::BitReader<bool>;
+pub type GPIO0_EDGE_HIGH_R = crate::BitReader;
 #[doc = "Field `GPIO1_LEVEL_LOW` reader - "]
-pub type GPIO1_LEVEL_LOW_R = crate::BitReader<bool>;
+pub type GPIO1_LEVEL_LOW_R = crate::BitReader;
 #[doc = "Field `GPIO1_LEVEL_HIGH` reader - "]
-pub type GPIO1_LEVEL_HIGH_R = crate::BitReader<bool>;
+pub type GPIO1_LEVEL_HIGH_R = crate::BitReader;
 #[doc = "Field `GPIO1_EDGE_LOW` reader - "]
-pub type GPIO1_EDGE_LOW_R = crate::BitReader<bool>;
+pub type GPIO1_EDGE_LOW_R = crate::BitReader;
 #[doc = "Field `GPIO1_EDGE_HIGH` reader - "]
-pub type GPIO1_EDGE_HIGH_R = crate::BitReader<bool>;
+pub type GPIO1_EDGE_HIGH_R = crate::BitReader;
 #[doc = "Field `GPIO2_LEVEL_LOW` reader - "]
-pub type GPIO2_LEVEL_LOW_R = crate::BitReader<bool>;
+pub type GPIO2_LEVEL_LOW_R = crate::BitReader;
 #[doc = "Field `GPIO2_LEVEL_HIGH` reader - "]
-pub type GPIO2_LEVEL_HIGH_R = crate::BitReader<bool>;
+pub type GPIO2_LEVEL_HIGH_R = crate::BitReader;
 #[doc = "Field `GPIO2_EDGE_LOW` reader - "]
-pub type GPIO2_EDGE_LOW_R = crate::BitReader<bool>;
+pub type GPIO2_EDGE_LOW_R = crate::BitReader;
 #[doc = "Field `GPIO2_EDGE_HIGH` reader - "]
-pub type GPIO2_EDGE_HIGH_R = crate::BitReader<bool>;
+pub type GPIO2_EDGE_HIGH_R = crate::BitReader;
 #[doc = "Field `GPIO3_LEVEL_LOW` reader - "]
-pub type GPIO3_LEVEL_LOW_R = crate::BitReader<bool>;
+pub type GPIO3_LEVEL_LOW_R = crate::BitReader;
 #[doc = "Field `GPIO3_LEVEL_HIGH` reader - "]
-pub type GPIO3_LEVEL_HIGH_R = crate::BitReader<bool>;
+pub type GPIO3_LEVEL_HIGH_R = crate::BitReader;
 #[doc = "Field `GPIO3_EDGE_LOW` reader - "]
-pub type GPIO3_EDGE_LOW_R = crate::BitReader<bool>;
+pub type GPIO3_EDGE_LOW_R = crate::BitReader;
 #[doc = "Field `GPIO3_EDGE_HIGH` reader - "]
-pub type GPIO3_EDGE_HIGH_R = crate::BitReader<bool>;
+pub type GPIO3_EDGE_HIGH_R = crate::BitReader;
 #[doc = "Field `GPIO4_LEVEL_LOW` reader - "]
-pub type GPIO4_LEVEL_LOW_R = crate::BitReader<bool>;
+pub type GPIO4_LEVEL_LOW_R = crate::BitReader;
 #[doc = "Field `GPIO4_LEVEL_HIGH` reader - "]
-pub type GPIO4_LEVEL_HIGH_R = crate::BitReader<bool>;
+pub type GPIO4_LEVEL_HIGH_R = crate::BitReader;
 #[doc = "Field `GPIO4_EDGE_LOW` reader - "]
-pub type GPIO4_EDGE_LOW_R = crate::BitReader<bool>;
+pub type GPIO4_EDGE_LOW_R = crate::BitReader;
 #[doc = "Field `GPIO4_EDGE_HIGH` reader - "]
-pub type GPIO4_EDGE_HIGH_R = crate::BitReader<bool>;
+pub type GPIO4_EDGE_HIGH_R = crate::BitReader;
 #[doc = "Field `GPIO5_LEVEL_LOW` reader - "]
-pub type GPIO5_LEVEL_LOW_R = crate::BitReader<bool>;
+pub type GPIO5_LEVEL_LOW_R = crate::BitReader;
 #[doc = "Field `GPIO5_LEVEL_HIGH` reader - "]
-pub type GPIO5_LEVEL_HIGH_R = crate::BitReader<bool>;
+pub type GPIO5_LEVEL_HIGH_R = crate::BitReader;
 #[doc = "Field `GPIO5_EDGE_LOW` reader - "]
-pub type GPIO5_EDGE_LOW_R = crate::BitReader<bool>;
+pub type GPIO5_EDGE_LOW_R = crate::BitReader;
 #[doc = "Field `GPIO5_EDGE_HIGH` reader - "]
-pub type GPIO5_EDGE_HIGH_R = crate::BitReader<bool>;
+pub type GPIO5_EDGE_HIGH_R = crate::BitReader;
 #[doc = "Field `GPIO6_LEVEL_LOW` reader - "]
-pub type GPIO6_LEVEL_LOW_R = crate::BitReader<bool>;
+pub type GPIO6_LEVEL_LOW_R = crate::BitReader;
 #[doc = "Field `GPIO6_LEVEL_HIGH` reader - "]
-pub type GPIO6_LEVEL_HIGH_R = crate::BitReader<bool>;
+pub type GPIO6_LEVEL_HIGH_R = crate::BitReader;
 #[doc = "Field `GPIO6_EDGE_LOW` reader - "]
-pub type GPIO6_EDGE_LOW_R = crate::BitReader<bool>;
+pub type GPIO6_EDGE_LOW_R = crate::BitReader;
 #[doc = "Field `GPIO6_EDGE_HIGH` reader - "]
-pub type GPIO6_EDGE_HIGH_R = crate::BitReader<bool>;
+pub type GPIO6_EDGE_HIGH_R = crate::BitReader;
 #[doc = "Field `GPIO7_LEVEL_LOW` reader - "]
-pub type GPIO7_LEVEL_LOW_R = crate::BitReader<bool>;
+pub type GPIO7_LEVEL_LOW_R = crate::BitReader;
 #[doc = "Field `GPIO7_LEVEL_HIGH` reader - "]
-pub type GPIO7_LEVEL_HIGH_R = crate::BitReader<bool>;
+pub type GPIO7_LEVEL_HIGH_R = crate::BitReader;
 #[doc = "Field `GPIO7_EDGE_LOW` reader - "]
-pub type GPIO7_EDGE_LOW_R = crate::BitReader<bool>;
+pub type GPIO7_EDGE_LOW_R = crate::BitReader;
 #[doc = "Field `GPIO7_EDGE_HIGH` reader - "]
-pub type GPIO7_EDGE_HIGH_R = crate::BitReader<bool>;
+pub type GPIO7_EDGE_HIGH_R = crate::BitReader;
 impl R {
     #[doc = "Bit 0"]
     #[inline(always)]
@@ -239,7 +239,7 @@ impl R {
         GPIO7_EDGE_HIGH_R::new(((self.bits >> 31) & 1) != 0)
     }
 }
-#[doc = "Interrupt status after masking & forcing for proc%s  
+#[doc = "Interrupt status after masking &amp; forcing for proc%s  
 
 This register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
 

@@ -14,7 +14,7 @@ impl From<crate::R<RXOICR_SPEC>> for R {
     }
 }
 #[doc = "Field `RXOICR` reader - Clear-on-read receive FIFO overflow interrupt"]
-pub type RXOICR_R = crate::BitReader<bool>;
+pub type RXOICR_R = crate::BitReader;
 impl R {
     #[doc = "Bit 0 - Clear-on-read receive FIFO overflow interrupt"]
     #[inline(always)]

@@ -14,9 +14,9 @@ impl From<crate::R<UARTPERIPHID2_SPEC>> for R {
     }
 }
 #[doc = "Field `DESIGNER1` reader - These bits read back as 0x4"]
-pub type DESIGNER1_R = crate::FieldReader<u8, u8>;
+pub type DESIGNER1_R = crate::FieldReader;
 #[doc = "Field `REVISION` reader - This field depends on the revision of the UART: r1p0 0x0 r1p1 0x1 r1p3 0x2 r1p4 0x2 r1p5 0x3"]
-pub type REVISION_R = crate::FieldReader<u8, u8>;
+pub type REVISION_R = crate::FieldReader;
 impl R {
     #[doc = "Bits 0:3 - These bits read back as 0x4"]
     #[inline(always)]

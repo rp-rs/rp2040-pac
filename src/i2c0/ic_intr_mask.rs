@@ -79,8 +79,7 @@ impl M_RX_UNDER_R {
 #[doc = "Field `M_RX_UNDER` writer - This bit masks the R_RX_UNDER interrupt in IC_INTR_STAT register.  
 
  Reset value: 0x1"]
-pub type M_RX_UNDER_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, IC_INTR_MASK_SPEC, M_RX_UNDER_A, O>;
+pub type M_RX_UNDER_W<'a, const O: u8> = crate::BitWriter<'a, IC_INTR_MASK_SPEC, O, M_RX_UNDER_A>;
 impl<'a, const O: u8> M_RX_UNDER_W<'a, O> {
     #[doc = "RX_UNDER interrupt is masked"]
     #[inline(always)]
@@ -138,8 +137,7 @@ impl M_RX_OVER_R {
 #[doc = "Field `M_RX_OVER` writer - This bit masks the R_RX_OVER interrupt in IC_INTR_STAT register.  
 
  Reset value: 0x1"]
-pub type M_RX_OVER_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, IC_INTR_MASK_SPEC, M_RX_OVER_A, O>;
+pub type M_RX_OVER_W<'a, const O: u8> = crate::BitWriter<'a, IC_INTR_MASK_SPEC, O, M_RX_OVER_A>;
 impl<'a, const O: u8> M_RX_OVER_W<'a, O> {
     #[doc = "RX_OVER interrupt is masked"]
     #[inline(always)]
@@ -197,8 +195,7 @@ impl M_RX_FULL_R {
 #[doc = "Field `M_RX_FULL` writer - This bit masks the R_RX_FULL interrupt in IC_INTR_STAT register.  
 
  Reset value: 0x1"]
-pub type M_RX_FULL_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, IC_INTR_MASK_SPEC, M_RX_FULL_A, O>;
+pub type M_RX_FULL_W<'a, const O: u8> = crate::BitWriter<'a, IC_INTR_MASK_SPEC, O, M_RX_FULL_A>;
 impl<'a, const O: u8> M_RX_FULL_W<'a, O> {
     #[doc = "RX_FULL interrupt is masked"]
     #[inline(always)]
@@ -256,8 +253,7 @@ impl M_TX_OVER_R {
 #[doc = "Field `M_TX_OVER` writer - This bit masks the R_TX_OVER interrupt in IC_INTR_STAT register.  
 
  Reset value: 0x1"]
-pub type M_TX_OVER_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, IC_INTR_MASK_SPEC, M_TX_OVER_A, O>;
+pub type M_TX_OVER_W<'a, const O: u8> = crate::BitWriter<'a, IC_INTR_MASK_SPEC, O, M_TX_OVER_A>;
 impl<'a, const O: u8> M_TX_OVER_W<'a, O> {
     #[doc = "TX_OVER interrupt is masked"]
     #[inline(always)]
@@ -315,8 +311,7 @@ impl M_TX_EMPTY_R {
 #[doc = "Field `M_TX_EMPTY` writer - This bit masks the R_TX_EMPTY interrupt in IC_INTR_STAT register.  
 
  Reset value: 0x1"]
-pub type M_TX_EMPTY_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, IC_INTR_MASK_SPEC, M_TX_EMPTY_A, O>;
+pub type M_TX_EMPTY_W<'a, const O: u8> = crate::BitWriter<'a, IC_INTR_MASK_SPEC, O, M_TX_EMPTY_A>;
 impl<'a, const O: u8> M_TX_EMPTY_W<'a, O> {
     #[doc = "TX_EMPTY interrupt is masked"]
     #[inline(always)]
@@ -374,7 +369,7 @@ impl M_RD_REQ_R {
 #[doc = "Field `M_RD_REQ` writer - This bit masks the R_RD_REQ interrupt in IC_INTR_STAT register.  
 
  Reset value: 0x1"]
-pub type M_RD_REQ_W<'a, const O: u8> = crate::BitWriter<'a, u32, IC_INTR_MASK_SPEC, M_RD_REQ_A, O>;
+pub type M_RD_REQ_W<'a, const O: u8> = crate::BitWriter<'a, IC_INTR_MASK_SPEC, O, M_RD_REQ_A>;
 impl<'a, const O: u8> M_RD_REQ_W<'a, O> {
     #[doc = "RD_REQ interrupt is masked"]
     #[inline(always)]
@@ -432,8 +427,7 @@ impl M_TX_ABRT_R {
 #[doc = "Field `M_TX_ABRT` writer - This bit masks the R_TX_ABRT interrupt in IC_INTR_STAT register.  
 
  Reset value: 0x1"]
-pub type M_TX_ABRT_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, IC_INTR_MASK_SPEC, M_TX_ABRT_A, O>;
+pub type M_TX_ABRT_W<'a, const O: u8> = crate::BitWriter<'a, IC_INTR_MASK_SPEC, O, M_TX_ABRT_A>;
 impl<'a, const O: u8> M_TX_ABRT_W<'a, O> {
     #[doc = "TX_ABORT interrupt is masked"]
     #[inline(always)]
@@ -491,8 +485,7 @@ impl M_RX_DONE_R {
 #[doc = "Field `M_RX_DONE` writer - This bit masks the R_RX_DONE interrupt in IC_INTR_STAT register.  
 
  Reset value: 0x1"]
-pub type M_RX_DONE_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, IC_INTR_MASK_SPEC, M_RX_DONE_A, O>;
+pub type M_RX_DONE_W<'a, const O: u8> = crate::BitWriter<'a, IC_INTR_MASK_SPEC, O, M_RX_DONE_A>;
 impl<'a, const O: u8> M_RX_DONE_W<'a, O> {
     #[doc = "RX_DONE interrupt is masked"]
     #[inline(always)]
@@ -550,8 +543,7 @@ impl M_ACTIVITY_R {
 #[doc = "Field `M_ACTIVITY` writer - This bit masks the R_ACTIVITY interrupt in IC_INTR_STAT register.  
 
  Reset value: 0x0"]
-pub type M_ACTIVITY_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, IC_INTR_MASK_SPEC, M_ACTIVITY_A, O>;
+pub type M_ACTIVITY_W<'a, const O: u8> = crate::BitWriter<'a, IC_INTR_MASK_SPEC, O, M_ACTIVITY_A>;
 impl<'a, const O: u8> M_ACTIVITY_W<'a, O> {
     #[doc = "ACTIVITY interrupt is masked"]
     #[inline(always)]
@@ -609,8 +601,7 @@ impl M_STOP_DET_R {
 #[doc = "Field `M_STOP_DET` writer - This bit masks the R_STOP_DET interrupt in IC_INTR_STAT register.  
 
  Reset value: 0x0"]
-pub type M_STOP_DET_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, IC_INTR_MASK_SPEC, M_STOP_DET_A, O>;
+pub type M_STOP_DET_W<'a, const O: u8> = crate::BitWriter<'a, IC_INTR_MASK_SPEC, O, M_STOP_DET_A>;
 impl<'a, const O: u8> M_STOP_DET_W<'a, O> {
     #[doc = "STOP_DET interrupt is masked"]
     #[inline(always)]
@@ -668,8 +659,7 @@ impl M_START_DET_R {
 #[doc = "Field `M_START_DET` writer - This bit masks the R_START_DET interrupt in IC_INTR_STAT register.  
 
  Reset value: 0x0"]
-pub type M_START_DET_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, IC_INTR_MASK_SPEC, M_START_DET_A, O>;
+pub type M_START_DET_W<'a, const O: u8> = crate::BitWriter<'a, IC_INTR_MASK_SPEC, O, M_START_DET_A>;
 impl<'a, const O: u8> M_START_DET_W<'a, O> {
     #[doc = "START_DET interrupt is masked"]
     #[inline(always)]
@@ -727,8 +717,7 @@ impl M_GEN_CALL_R {
 #[doc = "Field `M_GEN_CALL` writer - This bit masks the R_GEN_CALL interrupt in IC_INTR_STAT register.  
 
  Reset value: 0x1"]
-pub type M_GEN_CALL_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, IC_INTR_MASK_SPEC, M_GEN_CALL_A, O>;
+pub type M_GEN_CALL_W<'a, const O: u8> = crate::BitWriter<'a, IC_INTR_MASK_SPEC, O, M_GEN_CALL_A>;
 impl<'a, const O: u8> M_GEN_CALL_W<'a, O> {
     #[doc = "GEN_CALL interrupt is masked"]
     #[inline(always)]
@@ -787,7 +776,7 @@ impl M_RESTART_DET_R {
 
  Reset value: 0x0"]
 pub type M_RESTART_DET_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, IC_INTR_MASK_SPEC, M_RESTART_DET_A, O>;
+    crate::BitWriter<'a, IC_INTR_MASK_SPEC, O, M_RESTART_DET_A>;
 impl<'a, const O: u8> M_RESTART_DET_W<'a, O> {
     #[doc = "RESTART_DET interrupt is masked"]
     #[inline(always)]

@@ -35,7 +35,7 @@ impl From<crate::W<FC0_SRC_SPEC>> for W {
     }
 }
 #[doc = "Field `FC0_SRC` reader - "]
-pub type FC0_SRC_R = crate::FieldReader<u8, FC0_SRC_A>;
+pub type FC0_SRC_R = crate::FieldReader<FC0_SRC_A>;
 #[doc = "  
 
 Value on reset: 0"]
@@ -76,6 +76,9 @@ impl From<FC0_SRC_A> for u8 {
     fn from(variant: FC0_SRC_A) -> Self {
         variant as _
     }
+}
+impl crate::FieldSpec for FC0_SRC_A {
+    type Ux = u8;
 }
 impl FC0_SRC_R {
     #[doc = "Get enumerated values variant"]
@@ -171,8 +174,7 @@ impl FC0_SRC_R {
     }
 }
 #[doc = "Field `FC0_SRC` writer - "]
-pub type FC0_SRC_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, FC0_SRC_SPEC, u8, FC0_SRC_A, 8, O>;
+pub type FC0_SRC_W<'a, const O: u8> = crate::FieldWriter<'a, FC0_SRC_SPEC, 8, O, FC0_SRC_A>;
 impl<'a, const O: u8> FC0_SRC_W<'a, O> {
     #[doc = "`0`"]
     #[inline(always)]

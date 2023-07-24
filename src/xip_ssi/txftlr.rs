@@ -35,9 +35,9 @@ impl From<crate::W<TXFTLR_SPEC>> for W {
     }
 }
 #[doc = "Field `TFT` reader - Transmit FIFO threshold"]
-pub type TFT_R = crate::FieldReader<u8, u8>;
+pub type TFT_R = crate::FieldReader;
 #[doc = "Field `TFT` writer - Transmit FIFO threshold"]
-pub type TFT_W<'a, const O: u8> = crate::FieldWriter<'a, u32, TXFTLR_SPEC, u8, u8, 8, O>;
+pub type TFT_W<'a, const O: u8> = crate::FieldWriter<'a, TXFTLR_SPEC, 8, O>;
 impl R {
     #[doc = "Bits 0:7 - Transmit FIFO threshold"]
     #[inline(always)]

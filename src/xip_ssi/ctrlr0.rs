@@ -35,23 +35,23 @@ impl From<crate::W<CTRLR0_SPEC>> for W {
     }
 }
 #[doc = "Field `DFS` reader - Data frame size"]
-pub type DFS_R = crate::FieldReader<u8, u8>;
+pub type DFS_R = crate::FieldReader;
 #[doc = "Field `DFS` writer - Data frame size"]
-pub type DFS_W<'a, const O: u8> = crate::FieldWriter<'a, u32, CTRLR0_SPEC, u8, u8, 4, O>;
+pub type DFS_W<'a, const O: u8> = crate::FieldWriter<'a, CTRLR0_SPEC, 4, O>;
 #[doc = "Field `FRF` reader - Frame format"]
-pub type FRF_R = crate::FieldReader<u8, u8>;
+pub type FRF_R = crate::FieldReader;
 #[doc = "Field `FRF` writer - Frame format"]
-pub type FRF_W<'a, const O: u8> = crate::FieldWriter<'a, u32, CTRLR0_SPEC, u8, u8, 2, O>;
+pub type FRF_W<'a, const O: u8> = crate::FieldWriter<'a, CTRLR0_SPEC, 2, O>;
 #[doc = "Field `SCPH` reader - Serial clock phase"]
-pub type SCPH_R = crate::BitReader<bool>;
+pub type SCPH_R = crate::BitReader;
 #[doc = "Field `SCPH` writer - Serial clock phase"]
-pub type SCPH_W<'a, const O: u8> = crate::BitWriter<'a, u32, CTRLR0_SPEC, bool, O>;
+pub type SCPH_W<'a, const O: u8> = crate::BitWriter<'a, CTRLR0_SPEC, O>;
 #[doc = "Field `SCPOL` reader - Serial clock polarity"]
-pub type SCPOL_R = crate::BitReader<bool>;
+pub type SCPOL_R = crate::BitReader;
 #[doc = "Field `SCPOL` writer - Serial clock polarity"]
-pub type SCPOL_W<'a, const O: u8> = crate::BitWriter<'a, u32, CTRLR0_SPEC, bool, O>;
+pub type SCPOL_W<'a, const O: u8> = crate::BitWriter<'a, CTRLR0_SPEC, O>;
 #[doc = "Field `TMOD` reader - Transfer mode"]
-pub type TMOD_R = crate::FieldReader<u8, TMOD_A>;
+pub type TMOD_R = crate::FieldReader<TMOD_A>;
 #[doc = "Transfer mode  
 
 Value on reset: 0"]
@@ -72,6 +72,9 @@ impl From<TMOD_A> for u8 {
     fn from(variant: TMOD_A) -> Self {
         variant as _
     }
+}
+impl crate::FieldSpec for TMOD_A {
+    type Ux = u8;
 }
 impl TMOD_R {
     #[doc = "Get enumerated values variant"]
@@ -107,7 +110,7 @@ impl TMOD_R {
     }
 }
 #[doc = "Field `TMOD` writer - Transfer mode"]
-pub type TMOD_W<'a, const O: u8> = crate::FieldWriterSafe<'a, u32, CTRLR0_SPEC, u8, TMOD_A, 2, O>;
+pub type TMOD_W<'a, const O: u8> = crate::FieldWriterSafe<'a, CTRLR0_SPEC, 2, O, TMOD_A>;
 impl<'a, const O: u8> TMOD_W<'a, O> {
     #[doc = "Both transmit and receive"]
     #[inline(always)]
@@ -131,27 +134,27 @@ impl<'a, const O: u8> TMOD_W<'a, O> {
     }
 }
 #[doc = "Field `SLV_OE` reader - Slave output enable"]
-pub type SLV_OE_R = crate::BitReader<bool>;
+pub type SLV_OE_R = crate::BitReader;
 #[doc = "Field `SLV_OE` writer - Slave output enable"]
-pub type SLV_OE_W<'a, const O: u8> = crate::BitWriter<'a, u32, CTRLR0_SPEC, bool, O>;
+pub type SLV_OE_W<'a, const O: u8> = crate::BitWriter<'a, CTRLR0_SPEC, O>;
 #[doc = "Field `SRL` reader - Shift register loop (test mode)"]
-pub type SRL_R = crate::BitReader<bool>;
+pub type SRL_R = crate::BitReader;
 #[doc = "Field `SRL` writer - Shift register loop (test mode)"]
-pub type SRL_W<'a, const O: u8> = crate::BitWriter<'a, u32, CTRLR0_SPEC, bool, O>;
+pub type SRL_W<'a, const O: u8> = crate::BitWriter<'a, CTRLR0_SPEC, O>;
 #[doc = "Field `CFS` reader - Control frame size  
  Value of n -> n+1 clocks per frame."]
-pub type CFS_R = crate::FieldReader<u8, u8>;
+pub type CFS_R = crate::FieldReader;
 #[doc = "Field `CFS` writer - Control frame size  
  Value of n -> n+1 clocks per frame."]
-pub type CFS_W<'a, const O: u8> = crate::FieldWriter<'a, u32, CTRLR0_SPEC, u8, u8, 4, O>;
+pub type CFS_W<'a, const O: u8> = crate::FieldWriter<'a, CTRLR0_SPEC, 4, O>;
 #[doc = "Field `DFS_32` reader - Data frame size in 32b transfer mode  
  Value of n -> n+1 clocks per frame."]
-pub type DFS_32_R = crate::FieldReader<u8, u8>;
+pub type DFS_32_R = crate::FieldReader;
 #[doc = "Field `DFS_32` writer - Data frame size in 32b transfer mode  
  Value of n -> n+1 clocks per frame."]
-pub type DFS_32_W<'a, const O: u8> = crate::FieldWriter<'a, u32, CTRLR0_SPEC, u8, u8, 5, O>;
+pub type DFS_32_W<'a, const O: u8> = crate::FieldWriter<'a, CTRLR0_SPEC, 5, O>;
 #[doc = "Field `SPI_FRF` reader - SPI frame format"]
-pub type SPI_FRF_R = crate::FieldReader<u8, SPI_FRF_A>;
+pub type SPI_FRF_R = crate::FieldReader<SPI_FRF_A>;
 #[doc = "SPI frame format  
 
 Value on reset: 0"]
@@ -170,6 +173,9 @@ impl From<SPI_FRF_A> for u8 {
     fn from(variant: SPI_FRF_A) -> Self {
         variant as _
     }
+}
+impl crate::FieldSpec for SPI_FRF_A {
+    type Ux = u8;
 }
 impl SPI_FRF_R {
     #[doc = "Get enumerated values variant"]
@@ -199,7 +205,7 @@ impl SPI_FRF_R {
     }
 }
 #[doc = "Field `SPI_FRF` writer - SPI frame format"]
-pub type SPI_FRF_W<'a, const O: u8> = crate::FieldWriter<'a, u32, CTRLR0_SPEC, u8, SPI_FRF_A, 2, O>;
+pub type SPI_FRF_W<'a, const O: u8> = crate::FieldWriter<'a, CTRLR0_SPEC, 2, O, SPI_FRF_A>;
 impl<'a, const O: u8> SPI_FRF_W<'a, O> {
     #[doc = "Standard 1-bit SPI frame format; 1 bit per SCK, full-duplex"]
     #[inline(always)]
@@ -218,9 +224,9 @@ impl<'a, const O: u8> SPI_FRF_W<'a, O> {
     }
 }
 #[doc = "Field `SSTE` reader - Slave select toggle enable"]
-pub type SSTE_R = crate::BitReader<bool>;
+pub type SSTE_R = crate::BitReader;
 #[doc = "Field `SSTE` writer - Slave select toggle enable"]
-pub type SSTE_W<'a, const O: u8> = crate::BitWriter<'a, u32, CTRLR0_SPEC, bool, O>;
+pub type SSTE_W<'a, const O: u8> = crate::BitWriter<'a, CTRLR0_SPEC, O>;
 impl R {
     #[doc = "Bits 0:3 - Data frame size"]
     #[inline(always)]

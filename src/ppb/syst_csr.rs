@@ -37,31 +37,31 @@ impl From<crate::W<SYST_CSR_SPEC>> for W {
 #[doc = "Field `ENABLE` reader - Enable SysTick counter:  
  0 = Counter disabled.  
  1 = Counter enabled."]
-pub type ENABLE_R = crate::BitReader<bool>;
+pub type ENABLE_R = crate::BitReader;
 #[doc = "Field `ENABLE` writer - Enable SysTick counter:  
  0 = Counter disabled.  
  1 = Counter enabled."]
-pub type ENABLE_W<'a, const O: u8> = crate::BitWriter<'a, u32, SYST_CSR_SPEC, bool, O>;
+pub type ENABLE_W<'a, const O: u8> = crate::BitWriter<'a, SYST_CSR_SPEC, O>;
 #[doc = "Field `TICKINT` reader - Enables SysTick exception request:  
  0 = Counting down to zero does not assert the SysTick exception request.  
  1 = Counting down to zero to asserts the SysTick exception request."]
-pub type TICKINT_R = crate::BitReader<bool>;
+pub type TICKINT_R = crate::BitReader;
 #[doc = "Field `TICKINT` writer - Enables SysTick exception request:  
  0 = Counting down to zero does not assert the SysTick exception request.  
  1 = Counting down to zero to asserts the SysTick exception request."]
-pub type TICKINT_W<'a, const O: u8> = crate::BitWriter<'a, u32, SYST_CSR_SPEC, bool, O>;
+pub type TICKINT_W<'a, const O: u8> = crate::BitWriter<'a, SYST_CSR_SPEC, O>;
 #[doc = "Field `CLKSOURCE` reader - SysTick clock source. Always reads as one if SYST_CALIB reports NOREF.  
  Selects the SysTick timer clock source:  
  0 = External reference clock.  
  1 = Processor clock."]
-pub type CLKSOURCE_R = crate::BitReader<bool>;
+pub type CLKSOURCE_R = crate::BitReader;
 #[doc = "Field `CLKSOURCE` writer - SysTick clock source. Always reads as one if SYST_CALIB reports NOREF.  
  Selects the SysTick timer clock source:  
  0 = External reference clock.  
  1 = Processor clock."]
-pub type CLKSOURCE_W<'a, const O: u8> = crate::BitWriter<'a, u32, SYST_CSR_SPEC, bool, O>;
+pub type CLKSOURCE_W<'a, const O: u8> = crate::BitWriter<'a, SYST_CSR_SPEC, O>;
 #[doc = "Field `COUNTFLAG` reader - Returns 1 if timer counted to 0 since last time this was read. Clears on read by application or debugger."]
-pub type COUNTFLAG_R = crate::BitReader<bool>;
+pub type COUNTFLAG_R = crate::BitReader;
 impl R {
     #[doc = "Bit 0 - Enable SysTick counter:  
  0 = Counter disabled.  

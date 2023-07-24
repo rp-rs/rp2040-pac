@@ -14,13 +14,13 @@ impl From<crate::R<SSPRIS_SPEC>> for R {
     }
 }
 #[doc = "Field `RORRIS` reader - Gives the raw interrupt state, prior to masking, of the SSPRORINTR interrupt"]
-pub type RORRIS_R = crate::BitReader<bool>;
+pub type RORRIS_R = crate::BitReader;
 #[doc = "Field `RTRIS` reader - Gives the raw interrupt state, prior to masking, of the SSPRTINTR interrupt"]
-pub type RTRIS_R = crate::BitReader<bool>;
+pub type RTRIS_R = crate::BitReader;
 #[doc = "Field `RXRIS` reader - Gives the raw interrupt state, prior to masking, of the SSPRXINTR interrupt"]
-pub type RXRIS_R = crate::BitReader<bool>;
+pub type RXRIS_R = crate::BitReader;
 #[doc = "Field `TXRIS` reader - Gives the raw interrupt state, prior to masking, of the SSPTXINTR interrupt"]
-pub type TXRIS_R = crate::BitReader<bool>;
+pub type TXRIS_R = crate::BitReader;
 impl R {
     #[doc = "Bit 0 - Gives the raw interrupt state, prior to masking, of the SSPRORINTR interrupt"]
     #[inline(always)]

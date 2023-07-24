@@ -35,13 +35,13 @@ impl From<crate::W<DIV_SPEC>> for W {
     }
 }
 #[doc = "Field `FRAC` reader - Fractional part of clock divisor. First-order delta-sigma."]
-pub type FRAC_R = crate::FieldReader<u8, u8>;
+pub type FRAC_R = crate::FieldReader;
 #[doc = "Field `FRAC` writer - Fractional part of clock divisor. First-order delta-sigma."]
-pub type FRAC_W<'a, const O: u8> = crate::FieldWriter<'a, u32, DIV_SPEC, u8, u8, 8, O>;
+pub type FRAC_W<'a, const O: u8> = crate::FieldWriter<'a, DIV_SPEC, 8, O>;
 #[doc = "Field `INT` reader - Integer part of clock divisor."]
-pub type INT_R = crate::FieldReader<u16, u16>;
+pub type INT_R = crate::FieldReader<u16>;
 #[doc = "Field `INT` writer - Integer part of clock divisor."]
-pub type INT_W<'a, const O: u8> = crate::FieldWriter<'a, u32, DIV_SPEC, u16, u16, 16, O>;
+pub type INT_W<'a, const O: u8> = crate::FieldWriter<'a, DIV_SPEC, 16, O, u16>;
 impl R {
     #[doc = "Bits 0:7 - Fractional part of clock divisor. First-order delta-sigma."]
     #[inline(always)]

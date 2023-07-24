@@ -35,13 +35,13 @@ impl From<crate::W<CLK_GPOUT1_DIV_SPEC>> for W {
     }
 }
 #[doc = "Field `FRAC` reader - Fractional component of the divisor"]
-pub type FRAC_R = crate::FieldReader<u8, u8>;
+pub type FRAC_R = crate::FieldReader;
 #[doc = "Field `FRAC` writer - Fractional component of the divisor"]
-pub type FRAC_W<'a, const O: u8> = crate::FieldWriter<'a, u32, CLK_GPOUT1_DIV_SPEC, u8, u8, 8, O>;
+pub type FRAC_W<'a, const O: u8> = crate::FieldWriter<'a, CLK_GPOUT1_DIV_SPEC, 8, O>;
 #[doc = "Field `INT` reader - Integer component of the divisor, 0 -> divide by 2^16"]
-pub type INT_R = crate::FieldReader<u32, u32>;
+pub type INT_R = crate::FieldReader<u32>;
 #[doc = "Field `INT` writer - Integer component of the divisor, 0 -> divide by 2^16"]
-pub type INT_W<'a, const O: u8> = crate::FieldWriter<'a, u32, CLK_GPOUT1_DIV_SPEC, u32, u32, 24, O>;
+pub type INT_W<'a, const O: u8> = crate::FieldWriter<'a, CLK_GPOUT1_DIV_SPEC, 24, O, u32>;
 impl R {
     #[doc = "Bits 0:7 - Fractional component of the divisor"]
     #[inline(always)]
@@ -51,7 +51,7 @@ impl R {
     #[doc = "Bits 8:31 - Integer component of the divisor, 0 -> divide by 2^16"]
     #[inline(always)]
     pub fn int(&self) -> INT_R {
-        INT_R::new(((self.bits >> 8) & 0x00ff_ffff) as u32)
+        INT_R::new((self.bits >> 8) & 0x00ff_ffff)
     }
 }
 impl W {

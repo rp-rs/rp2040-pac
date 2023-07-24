@@ -42,7 +42,7 @@ impl From<crate::W<CTRL_SPEC>> for W {
  The clock output will not glitch when changing the range up one step at a time  
  The clock output will glitch when changing the range down  
  Note: the values here are gray coded which is why HIGH comes before TOOHIGH"]
-pub type FREQ_RANGE_R = crate::FieldReader<u16, FREQ_RANGE_A>;
+pub type FREQ_RANGE_R = crate::FieldReader<FREQ_RANGE_A>;
 #[doc = "Controls the number of delay stages in the ROSC ring  
  LOW uses stages 0 to 7  
  MEDIUM uses stages 0 to 5  
@@ -70,6 +70,9 @@ impl From<FREQ_RANGE_A> for u16 {
     fn from(variant: FREQ_RANGE_A) -> Self {
         variant as _
     }
+}
+impl crate::FieldSpec for FREQ_RANGE_A {
+    type Ux = u16;
 }
 impl FREQ_RANGE_R {
     #[doc = "Get enumerated values variant"]
@@ -112,8 +115,7 @@ impl FREQ_RANGE_R {
  The clock output will not glitch when changing the range up one step at a time  
  The clock output will glitch when changing the range down  
  Note: the values here are gray coded which is why HIGH comes before TOOHIGH"]
-pub type FREQ_RANGE_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, CTRL_SPEC, u16, FREQ_RANGE_A, 12, O>;
+pub type FREQ_RANGE_W<'a, const O: u8> = crate::FieldWriter<'a, CTRL_SPEC, 12, O, FREQ_RANGE_A>;
 impl<'a, const O: u8> FREQ_RANGE_W<'a, O> {
     #[doc = "`111110100100`"]
     #[inline(always)]
@@ -139,7 +141,7 @@ impl<'a, const O: u8> FREQ_RANGE_W<'a, O> {
 #[doc = "Field `ENABLE` reader - On power-up this field is initialised to ENABLE  
  The system clock must be switched to another source before setting this field to DISABLE otherwise the chip will lock up  
  The 12-bit code is intended to give some protection against accidental writes. An invalid setting will enable the oscillator."]
-pub type ENABLE_R = crate::FieldReader<u16, ENABLE_A>;
+pub type ENABLE_R = crate::FieldReader<ENABLE_A>;
 #[doc = "On power-up this field is initialised to ENABLE  
  The system clock must be switched to another source before setting this field to DISABLE otherwise the chip will lock up  
  The 12-bit code is intended to give some protection against accidental writes. An invalid setting will enable the oscillator.  
@@ -158,6 +160,9 @@ impl From<ENABLE_A> for u16 {
     fn from(variant: ENABLE_A) -> Self {
         variant as _
     }
+}
+impl crate::FieldSpec for ENABLE_A {
+    type Ux = u16;
 }
 impl ENABLE_R {
     #[doc = "Get enumerated values variant"]
@@ -183,7 +188,7 @@ impl ENABLE_R {
 #[doc = "Field `ENABLE` writer - On power-up this field is initialised to ENABLE  
  The system clock must be switched to another source before setting this field to DISABLE otherwise the chip will lock up  
  The 12-bit code is intended to give some protection against accidental writes. An invalid setting will enable the oscillator."]
-pub type ENABLE_W<'a, const O: u8> = crate::FieldWriter<'a, u32, CTRL_SPEC, u16, ENABLE_A, 12, O>;
+pub type ENABLE_W<'a, const O: u8> = crate::FieldWriter<'a, CTRL_SPEC, 12, O, ENABLE_A>;
 impl<'a, const O: u8> ENABLE_W<'a, O> {
     #[doc = "`110100011110`"]
     #[inline(always)]

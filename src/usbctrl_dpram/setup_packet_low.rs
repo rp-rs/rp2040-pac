@@ -35,20 +35,17 @@ impl From<crate::W<SETUP_PACKET_LOW_SPEC>> for W {
     }
 }
 #[doc = "Field `BMREQUESTTYPE` reader - "]
-pub type BMREQUESTTYPE_R = crate::FieldReader<u8, u8>;
+pub type BMREQUESTTYPE_R = crate::FieldReader;
 #[doc = "Field `BMREQUESTTYPE` writer - "]
-pub type BMREQUESTTYPE_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SETUP_PACKET_LOW_SPEC, u8, u8, 8, O>;
+pub type BMREQUESTTYPE_W<'a, const O: u8> = crate::FieldWriter<'a, SETUP_PACKET_LOW_SPEC, 8, O>;
 #[doc = "Field `BREQUEST` reader - "]
-pub type BREQUEST_R = crate::FieldReader<u8, u8>;
+pub type BREQUEST_R = crate::FieldReader;
 #[doc = "Field `BREQUEST` writer - "]
-pub type BREQUEST_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SETUP_PACKET_LOW_SPEC, u8, u8, 8, O>;
+pub type BREQUEST_W<'a, const O: u8> = crate::FieldWriter<'a, SETUP_PACKET_LOW_SPEC, 8, O>;
 #[doc = "Field `WVALUE` reader - "]
-pub type WVALUE_R = crate::FieldReader<u16, u16>;
+pub type WVALUE_R = crate::FieldReader<u16>;
 #[doc = "Field `WVALUE` writer - "]
-pub type WVALUE_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SETUP_PACKET_LOW_SPEC, u16, u16, 16, O>;
+pub type WVALUE_W<'a, const O: u8> = crate::FieldWriter<'a, SETUP_PACKET_LOW_SPEC, 16, O, u16>;
 impl R {
     #[doc = "Bits 0:7"]
     #[inline(always)]

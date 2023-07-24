@@ -14,7 +14,7 @@ impl From<crate::R<SOF_RD_SPEC>> for R {
     }
 }
 #[doc = "Field `COUNT` reader - "]
-pub type COUNT_R = crate::FieldReader<u16, u16>;
+pub type COUNT_R = crate::FieldReader<u16>;
 impl R {
     #[doc = "Bits 0:10"]
     #[inline(always)]

@@ -18,12 +18,12 @@ impl From<crate::R<DIV_CSR_SPEC>> for R {
  matter if one is already in progress.  
  Writing to a result register will immediately terminate any in-progress calculation  
  and set the READY and DIRTY flags."]
-pub type READY_R = crate::BitReader<bool>;
+pub type READY_R = crate::BitReader;
 #[doc = "Field `DIRTY` reader - Changes to 1 when any register is written, and back to 0 when QUOTIENT is read.  
  Software can use this flag to make save/restore more efficient (skip if not DIRTY).  
  If the flag is used in this way, it's recommended to either read QUOTIENT only,  
  or REMAINDER and then QUOTIENT, to prevent data loss on context switch."]
-pub type DIRTY_R = crate::BitReader<bool>;
+pub type DIRTY_R = crate::BitReader;
 impl R {
     #[doc = "Bit 0 - Reads as 0 when a calculation is in progress, 1 otherwise.  
  Writing an operand (xDIVIDEND, xDIVISOR) will immediately start a new calculation, no  

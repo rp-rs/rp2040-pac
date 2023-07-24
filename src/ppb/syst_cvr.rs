@@ -35,9 +35,9 @@ impl From<crate::W<SYST_CVR_SPEC>> for W {
     }
 }
 #[doc = "Field `CURRENT` reader - Reads return the current value of the SysTick counter. This register is write-clear. Writing to it with any value clears the register to 0. Clearing this register also clears the COUNTFLAG bit of the SysTick Control and Status Register."]
-pub type CURRENT_R = crate::FieldReader<u32, u32>;
+pub type CURRENT_R = crate::FieldReader<u32>;
 #[doc = "Field `CURRENT` writer - Reads return the current value of the SysTick counter. This register is write-clear. Writing to it with any value clears the register to 0. Clearing this register also clears the COUNTFLAG bit of the SysTick Control and Status Register."]
-pub type CURRENT_W<'a, const O: u8> = crate::FieldWriter<'a, u32, SYST_CVR_SPEC, u32, u32, 24, O>;
+pub type CURRENT_W<'a, const O: u8> = crate::FieldWriter<'a, SYST_CVR_SPEC, 24, O, u32>;
 impl R {
     #[doc = "Bits 0:23 - Reads return the current value of the SysTick counter. This register is write-clear. Writing to it with any value clears the register to 0. Clearing this register also clears the COUNTFLAG bit of the SysTick Control and Status Register."]
     #[inline(always)]

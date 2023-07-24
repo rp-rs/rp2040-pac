@@ -35,25 +35,25 @@ impl From<crate::W<ICSR_SPEC>> for W {
     }
 }
 #[doc = "Field `VECTACTIVE` reader - Active exception number field. Reset clears the VECTACTIVE field."]
-pub type VECTACTIVE_R = crate::FieldReader<u16, u16>;
+pub type VECTACTIVE_R = crate::FieldReader<u16>;
 #[doc = "Field `VECTPENDING` reader - Indicates the exception number for the highest priority pending exception: 0 = no pending exceptions. Non zero = The pending state includes the effect of memory-mapped enable and mask registers. It does not include the PRIMASK special-purpose register qualifier."]
-pub type VECTPENDING_R = crate::FieldReader<u16, u16>;
+pub type VECTPENDING_R = crate::FieldReader<u16>;
 #[doc = "Field `ISRPENDING` reader - External interrupt pending flag"]
-pub type ISRPENDING_R = crate::BitReader<bool>;
+pub type ISRPENDING_R = crate::BitReader;
 #[doc = "Field `ISRPREEMPT` reader - The system can only access this bit when the core is halted. It indicates that a pending interrupt is to be taken in the next running cycle. If C_MASKINTS is clear in the Debug Halting Control and Status Register, the interrupt is serviced."]
-pub type ISRPREEMPT_R = crate::BitReader<bool>;
+pub type ISRPREEMPT_R = crate::BitReader;
 #[doc = "Field `PENDSTCLR` reader - SysTick exception clear-pending bit.  
  Write:  
  0 = No effect.  
  1 = Removes the pending state from the SysTick exception.  
  This bit is WO. On a register read its value is Unknown."]
-pub type PENDSTCLR_R = crate::BitReader<bool>;
+pub type PENDSTCLR_R = crate::BitReader;
 #[doc = "Field `PENDSTCLR` writer - SysTick exception clear-pending bit.  
  Write:  
  0 = No effect.  
  1 = Removes the pending state from the SysTick exception.  
  This bit is WO. On a register read its value is Unknown."]
-pub type PENDSTCLR_W<'a, const O: u8> = crate::BitWriter<'a, u32, ICSR_SPEC, bool, O>;
+pub type PENDSTCLR_W<'a, const O: u8> = crate::BitWriter<'a, ICSR_SPEC, O>;
 #[doc = "Field `PENDSTSET` reader - SysTick exception set-pending bit.  
  Write:  
  0 = No effect.  
@@ -61,7 +61,7 @@ pub type PENDSTCLR_W<'a, const O: u8> = crate::BitWriter<'a, u32, ICSR_SPEC, boo
  Read:  
  0 = SysTick exception is not pending.  
  1 = SysTick exception is pending."]
-pub type PENDSTSET_R = crate::BitReader<bool>;
+pub type PENDSTSET_R = crate::BitReader;
 #[doc = "Field `PENDSTSET` writer - SysTick exception set-pending bit.  
  Write:  
  0 = No effect.  
@@ -69,17 +69,17 @@ pub type PENDSTSET_R = crate::BitReader<bool>;
  Read:  
  0 = SysTick exception is not pending.  
  1 = SysTick exception is pending."]
-pub type PENDSTSET_W<'a, const O: u8> = crate::BitWriter<'a, u32, ICSR_SPEC, bool, O>;
+pub type PENDSTSET_W<'a, const O: u8> = crate::BitWriter<'a, ICSR_SPEC, O>;
 #[doc = "Field `PENDSVCLR` reader - PendSV clear-pending bit.  
  Write:  
  0 = No effect.  
  1 = Removes the pending state from the PendSV exception."]
-pub type PENDSVCLR_R = crate::BitReader<bool>;
+pub type PENDSVCLR_R = crate::BitReader;
 #[doc = "Field `PENDSVCLR` writer - PendSV clear-pending bit.  
  Write:  
  0 = No effect.  
  1 = Removes the pending state from the PendSV exception."]
-pub type PENDSVCLR_W<'a, const O: u8> = crate::BitWriter<'a, u32, ICSR_SPEC, bool, O>;
+pub type PENDSVCLR_W<'a, const O: u8> = crate::BitWriter<'a, ICSR_SPEC, O>;
 #[doc = "Field `PENDSVSET` reader - PendSV set-pending bit.  
  Write:  
  0 = No effect.  
@@ -88,7 +88,7 @@ pub type PENDSVCLR_W<'a, const O: u8> = crate::BitWriter<'a, u32, ICSR_SPEC, boo
  0 = PendSV exception is not pending.  
  1 = PendSV exception is pending.  
  Writing 1 to this bit is the only way to set the PendSV exception state to pending."]
-pub type PENDSVSET_R = crate::BitReader<bool>;
+pub type PENDSVSET_R = crate::BitReader;
 #[doc = "Field `PENDSVSET` writer - PendSV set-pending bit.  
  Write:  
  0 = No effect.  
@@ -97,7 +97,7 @@ pub type PENDSVSET_R = crate::BitReader<bool>;
  0 = PendSV exception is not pending.  
  1 = PendSV exception is pending.  
  Writing 1 to this bit is the only way to set the PendSV exception state to pending."]
-pub type PENDSVSET_W<'a, const O: u8> = crate::BitWriter<'a, u32, ICSR_SPEC, bool, O>;
+pub type PENDSVSET_W<'a, const O: u8> = crate::BitWriter<'a, ICSR_SPEC, O>;
 #[doc = "Field `NMIPENDSET` reader - Setting this bit will activate an NMI. Since NMI is the highest priority exception, it will activate as soon as it is registered.  
  NMI set-pending bit.  
  Write:  
@@ -110,7 +110,7 @@ pub type PENDSVSET_W<'a, const O: u8> = crate::BitWriter<'a, u32, ICSR_SPEC, boo
  exception handler as soon as it detects a write of 1 to this bit. Entering the handler then clears  
  this bit to 0. This means a read of this bit by the NMI exception handler returns 1 only if the  
  NMI signal is reasserted while the processor is executing that handler."]
-pub type NMIPENDSET_R = crate::BitReader<bool>;
+pub type NMIPENDSET_R = crate::BitReader;
 #[doc = "Field `NMIPENDSET` writer - Setting this bit will activate an NMI. Since NMI is the highest priority exception, it will activate as soon as it is registered.  
  NMI set-pending bit.  
  Write:  
@@ -123,7 +123,7 @@ pub type NMIPENDSET_R = crate::BitReader<bool>;
  exception handler as soon as it detects a write of 1 to this bit. Entering the handler then clears  
  this bit to 0. This means a read of this bit by the NMI exception handler returns 1 only if the  
  NMI signal is reasserted while the processor is executing that handler."]
-pub type NMIPENDSET_W<'a, const O: u8> = crate::BitWriter<'a, u32, ICSR_SPEC, bool, O>;
+pub type NMIPENDSET_W<'a, const O: u8> = crate::BitWriter<'a, ICSR_SPEC, O>;
 impl R {
     #[doc = "Bits 0:8 - Active exception number field. Reset clears the VECTACTIVE field."]
     #[inline(always)]

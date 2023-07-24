@@ -35,9 +35,9 @@ impl From<crate::W<UARTILPR_SPEC>> for W {
     }
 }
 #[doc = "Field `ILPDVSR` reader - 8-bit low-power divisor value. These bits are cleared to 0 at reset."]
-pub type ILPDVSR_R = crate::FieldReader<u8, u8>;
+pub type ILPDVSR_R = crate::FieldReader;
 #[doc = "Field `ILPDVSR` writer - 8-bit low-power divisor value. These bits are cleared to 0 at reset."]
-pub type ILPDVSR_W<'a, const O: u8> = crate::FieldWriter<'a, u32, UARTILPR_SPEC, u8, u8, 8, O>;
+pub type ILPDVSR_W<'a, const O: u8> = crate::FieldWriter<'a, UARTILPR_SPEC, 8, O>;
 impl R {
     #[doc = "Bits 0:7 - 8-bit low-power divisor value. These bits are cleared to 0 at reset."]
     #[inline(always)]

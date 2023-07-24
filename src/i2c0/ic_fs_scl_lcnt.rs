@@ -42,7 +42,7 @@ impl From<crate::W<IC_FS_SCL_LCNT_SPEC>> for W {
 register being set to 0. Writes at other times have no effect.  
 
  The minimum valid value is 8; hardware prevents values less than this being written, and if attempted results in 8 being set. For designs with APB_DATA_WIDTH = 8 the order of programming is important to ensure the correct operation of the DW_apb_i2c. The lower byte must be programmed first. Then the upper byte is programmed. If the value is less than 8 then the count value gets changed to 8."]
-pub type IC_FS_SCL_LCNT_R = crate::FieldReader<u16, u16>;
+pub type IC_FS_SCL_LCNT_R = crate::FieldReader<u16>;
 #[doc = "Field `IC_FS_SCL_LCNT` writer - This register must be set before any I2C bus transaction can take place to ensure proper I/O timing. This register sets the SCL clock low period count for fast speed. It is used in high-speed mode to send the Master Code and START BYTE or General CALL. For more information, refer to 'IC_CLK Frequency Configuration'.  
 
  This register goes away and becomes read-only returning 0s if IC_MAX_SPEED_MODE = standard.  
@@ -52,7 +52,7 @@ register being set to 0. Writes at other times have no effect.
 
  The minimum valid value is 8; hardware prevents values less than this being written, and if attempted results in 8 being set. For designs with APB_DATA_WIDTH = 8 the order of programming is important to ensure the correct operation of the DW_apb_i2c. The lower byte must be programmed first. Then the upper byte is programmed. If the value is less than 8 then the count value gets changed to 8."]
 pub type IC_FS_SCL_LCNT_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, IC_FS_SCL_LCNT_SPEC, u16, u16, 16, O>;
+    crate::FieldWriter<'a, IC_FS_SCL_LCNT_SPEC, 16, O, u16>;
 impl R {
     #[doc = "Bits 0:15 - This register must be set before any I2C bus transaction can take place to ensure proper I/O timing. This register sets the SCL clock low period count for fast speed. It is used in high-speed mode to send the Master Code and START BYTE or General CALL. For more information, refer to 'IC_CLK Frequency Configuration'.  
 

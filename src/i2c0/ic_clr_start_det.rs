@@ -16,7 +16,7 @@ impl From<crate::R<IC_CLR_START_DET_SPEC>> for R {
 #[doc = "Field `CLR_START_DET` reader - Read this register to clear the START_DET interrupt (bit 10) of the IC_RAW_INTR_STAT register.  
 
  Reset value: 0x0"]
-pub type CLR_START_DET_R = crate::BitReader<bool>;
+pub type CLR_START_DET_R = crate::BitReader;
 impl R {
     #[doc = "Bit 0 - Read this register to clear the START_DET interrupt (bit 10) of the IC_RAW_INTR_STAT register.  
 

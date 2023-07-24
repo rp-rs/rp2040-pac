@@ -35,9 +35,9 @@ impl From<crate::W<UARTFBRD_SPEC>> for W {
     }
 }
 #[doc = "Field `BAUD_DIVFRAC` reader - The fractional baud rate divisor. These bits are cleared to 0 on reset."]
-pub type BAUD_DIVFRAC_R = crate::FieldReader<u8, u8>;
+pub type BAUD_DIVFRAC_R = crate::FieldReader;
 #[doc = "Field `BAUD_DIVFRAC` writer - The fractional baud rate divisor. These bits are cleared to 0 on reset."]
-pub type BAUD_DIVFRAC_W<'a, const O: u8> = crate::FieldWriter<'a, u32, UARTFBRD_SPEC, u8, u8, 6, O>;
+pub type BAUD_DIVFRAC_W<'a, const O: u8> = crate::FieldWriter<'a, UARTFBRD_SPEC, 6, O>;
 impl R {
     #[doc = "Bits 0:5 - The fractional baud rate divisor. These bits are cleared to 0 on reset."]
     #[inline(always)]

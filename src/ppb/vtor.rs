@@ -36,16 +36,16 @@ impl From<crate::W<VTOR_SPEC>> for W {
 }
 #[doc = "Field `TBLOFF` reader - Bits \\[31:8\\]
 of the indicate the vector table offset address."]
-pub type TBLOFF_R = crate::FieldReader<u32, u32>;
+pub type TBLOFF_R = crate::FieldReader<u32>;
 #[doc = "Field `TBLOFF` writer - Bits \\[31:8\\]
 of the indicate the vector table offset address."]
-pub type TBLOFF_W<'a, const O: u8> = crate::FieldWriter<'a, u32, VTOR_SPEC, u32, u32, 24, O>;
+pub type TBLOFF_W<'a, const O: u8> = crate::FieldWriter<'a, VTOR_SPEC, 24, O, u32>;
 impl R {
     #[doc = "Bits 8:31 - Bits \\[31:8\\]
 of the indicate the vector table offset address."]
     #[inline(always)]
     pub fn tbloff(&self) -> TBLOFF_R {
-        TBLOFF_R::new(((self.bits >> 8) & 0x00ff_ffff) as u32)
+        TBLOFF_R::new((self.bits >> 8) & 0x00ff_ffff)
     }
 }
 impl W {

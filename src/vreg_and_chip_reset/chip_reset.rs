@@ -35,20 +35,19 @@ impl From<crate::W<CHIP_RESET_SPEC>> for W {
     }
 }
 #[doc = "Field `HAD_POR` reader - Last reset was from the power-on reset or brown-out detection blocks"]
-pub type HAD_POR_R = crate::BitReader<bool>;
+pub type HAD_POR_R = crate::BitReader;
 #[doc = "Field `HAD_RUN` reader - Last reset was from the RUN pin"]
-pub type HAD_RUN_R = crate::BitReader<bool>;
+pub type HAD_RUN_R = crate::BitReader;
 #[doc = "Field `HAD_PSM_RESTART` reader - Last reset was from the debug port"]
-pub type HAD_PSM_RESTART_R = crate::BitReader<bool>;
+pub type HAD_PSM_RESTART_R = crate::BitReader;
 #[doc = "Field `PSM_RESTART_FLAG` reader - This is set by psm_restart from the debugger.  
  Its purpose is to branch bootcode to a safe mode when the debugger has issued a psm_restart in order to recover from a boot lock-up.  
  In the safe mode the debugger can repair the boot code, clear this flag then reboot the processor."]
-pub type PSM_RESTART_FLAG_R = crate::BitReader<bool>;
+pub type PSM_RESTART_FLAG_R = crate::BitReader;
 #[doc = "Field `PSM_RESTART_FLAG` writer - This is set by psm_restart from the debugger.  
  Its purpose is to branch bootcode to a safe mode when the debugger has issued a psm_restart in order to recover from a boot lock-up.  
  In the safe mode the debugger can repair the boot code, clear this flag then reboot the processor."]
-pub type PSM_RESTART_FLAG_W<'a, const O: u8> =
-    crate::BitWriter1C<'a, u32, CHIP_RESET_SPEC, bool, O>;
+pub type PSM_RESTART_FLAG_W<'a, const O: u8> = crate::BitWriter1C<'a, CHIP_RESET_SPEC, O>;
 impl R {
     #[doc = "Bit 8 - Last reset was from the power-on reset or brown-out detection blocks"]
     #[inline(always)]

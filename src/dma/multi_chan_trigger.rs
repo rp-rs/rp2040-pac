@@ -35,10 +35,10 @@ impl From<crate::W<MULTI_CHAN_TRIGGER_SPEC>> for W {
     }
 }
 #[doc = "Field `MULTI_CHAN_TRIGGER` reader - Each bit in this register corresponds to a DMA channel. Writing a 1 to the relevant bit is the same as writing to that channel's trigger register; the channel will start if it is currently enabled and not already busy."]
-pub type MULTI_CHAN_TRIGGER_R = crate::FieldReader<u16, u16>;
+pub type MULTI_CHAN_TRIGGER_R = crate::FieldReader<u16>;
 #[doc = "Field `MULTI_CHAN_TRIGGER` writer - Each bit in this register corresponds to a DMA channel. Writing a 1 to the relevant bit is the same as writing to that channel's trigger register; the channel will start if it is currently enabled and not already busy."]
 pub type MULTI_CHAN_TRIGGER_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, MULTI_CHAN_TRIGGER_SPEC, u16, u16, 16, O>;
+    crate::FieldWriter<'a, MULTI_CHAN_TRIGGER_SPEC, 16, O, u16>;
 impl R {
     #[doc = "Bits 0:15 - Each bit in this register corresponds to a DMA channel. Writing a 1 to the relevant bit is the same as writing to that channel's trigger register; the channel will start if it is currently enabled and not already busy."]
     #[inline(always)]

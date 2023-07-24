@@ -14,21 +14,21 @@ impl From<crate::R<INTS_SPEC>> for R {
     }
 }
 #[doc = "Field `CH0` reader - "]
-pub type CH0_R = crate::BitReader<bool>;
+pub type CH0_R = crate::BitReader;
 #[doc = "Field `CH1` reader - "]
-pub type CH1_R = crate::BitReader<bool>;
+pub type CH1_R = crate::BitReader;
 #[doc = "Field `CH2` reader - "]
-pub type CH2_R = crate::BitReader<bool>;
+pub type CH2_R = crate::BitReader;
 #[doc = "Field `CH3` reader - "]
-pub type CH3_R = crate::BitReader<bool>;
+pub type CH3_R = crate::BitReader;
 #[doc = "Field `CH4` reader - "]
-pub type CH4_R = crate::BitReader<bool>;
+pub type CH4_R = crate::BitReader;
 #[doc = "Field `CH5` reader - "]
-pub type CH5_R = crate::BitReader<bool>;
+pub type CH5_R = crate::BitReader;
 #[doc = "Field `CH6` reader - "]
-pub type CH6_R = crate::BitReader<bool>;
+pub type CH6_R = crate::BitReader;
 #[doc = "Field `CH7` reader - "]
-pub type CH7_R = crate::BitReader<bool>;
+pub type CH7_R = crate::BitReader;
 impl R {
     #[doc = "Bit 0"]
     #[inline(always)]
@@ -71,7 +71,7 @@ impl R {
         CH7_R::new(((self.bits >> 7) & 1) != 0)
     }
 }
-#[doc = "Interrupt status after masking & forcing  
+#[doc = "Interrupt status after masking &amp; forcing  
 
 This register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
 

@@ -74,7 +74,7 @@ impl ACK_GEN_CALL_R {
 }
 #[doc = "Field `ACK_GEN_CALL` writer - ACK General Call. When set to 1, DW_apb_i2c responds with a ACK (by asserting ic_data_oe) when it receives a General Call. Otherwise, DW_apb_i2c responds with a NACK (by negating ic_data_oe)."]
 pub type ACK_GEN_CALL_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, IC_ACK_GENERAL_CALL_SPEC, ACK_GEN_CALL_A, O>;
+    crate::BitWriter<'a, IC_ACK_GENERAL_CALL_SPEC, O, ACK_GEN_CALL_A>;
 impl<'a, const O: u8> ACK_GEN_CALL_W<'a, O> {
     #[doc = "Generate NACK for a General Call"]
     #[inline(always)]

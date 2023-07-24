@@ -14,11 +14,11 @@ impl From<crate::R<RTC_1_SPEC>> for R {
     }
 }
 #[doc = "Field `DAY` reader - Day of the month (1..31)"]
-pub type DAY_R = crate::FieldReader<u8, u8>;
+pub type DAY_R = crate::FieldReader;
 #[doc = "Field `MONTH` reader - Month (1..12)"]
-pub type MONTH_R = crate::FieldReader<u8, u8>;
+pub type MONTH_R = crate::FieldReader;
 #[doc = "Field `YEAR` reader - Year"]
-pub type YEAR_R = crate::FieldReader<u16, u16>;
+pub type YEAR_R = crate::FieldReader<u16>;
 impl R {
     #[doc = "Bits 0:4 - Day of the month (1..31)"]
     #[inline(always)]

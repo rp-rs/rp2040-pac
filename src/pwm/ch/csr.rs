@@ -35,23 +35,23 @@ impl From<crate::W<CSR_SPEC>> for W {
     }
 }
 #[doc = "Field `EN` reader - Enable the PWM channel."]
-pub type EN_R = crate::BitReader<bool>;
+pub type EN_R = crate::BitReader;
 #[doc = "Field `EN` writer - Enable the PWM channel."]
-pub type EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, CSR_SPEC, bool, O>;
+pub type EN_W<'a, const O: u8> = crate::BitWriter<'a, CSR_SPEC, O>;
 #[doc = "Field `PH_CORRECT` reader - 1: Enable phase-correct modulation. 0: Trailing-edge"]
-pub type PH_CORRECT_R = crate::BitReader<bool>;
+pub type PH_CORRECT_R = crate::BitReader;
 #[doc = "Field `PH_CORRECT` writer - 1: Enable phase-correct modulation. 0: Trailing-edge"]
-pub type PH_CORRECT_W<'a, const O: u8> = crate::BitWriter<'a, u32, CSR_SPEC, bool, O>;
+pub type PH_CORRECT_W<'a, const O: u8> = crate::BitWriter<'a, CSR_SPEC, O>;
 #[doc = "Field `A_INV` reader - Invert output A"]
-pub type A_INV_R = crate::BitReader<bool>;
+pub type A_INV_R = crate::BitReader;
 #[doc = "Field `A_INV` writer - Invert output A"]
-pub type A_INV_W<'a, const O: u8> = crate::BitWriter<'a, u32, CSR_SPEC, bool, O>;
+pub type A_INV_W<'a, const O: u8> = crate::BitWriter<'a, CSR_SPEC, O>;
 #[doc = "Field `B_INV` reader - Invert output B"]
-pub type B_INV_R = crate::BitReader<bool>;
+pub type B_INV_R = crate::BitReader;
 #[doc = "Field `B_INV` writer - Invert output B"]
-pub type B_INV_W<'a, const O: u8> = crate::BitWriter<'a, u32, CSR_SPEC, bool, O>;
+pub type B_INV_W<'a, const O: u8> = crate::BitWriter<'a, CSR_SPEC, O>;
 #[doc = "Field `DIVMODE` reader - "]
-pub type DIVMODE_R = crate::FieldReader<u8, DIVMODE_A>;
+pub type DIVMODE_R = crate::FieldReader<DIVMODE_A>;
 #[doc = "  
 
 Value on reset: 0"]
@@ -72,6 +72,9 @@ impl From<DIVMODE_A> for u8 {
     fn from(variant: DIVMODE_A) -> Self {
         variant as _
     }
+}
+impl crate::FieldSpec for DIVMODE_A {
+    type Ux = u8;
 }
 impl DIVMODE_R {
     #[doc = "Get enumerated values variant"]
@@ -107,8 +110,7 @@ impl DIVMODE_R {
     }
 }
 #[doc = "Field `DIVMODE` writer - "]
-pub type DIVMODE_W<'a, const O: u8> =
-    crate::FieldWriterSafe<'a, u32, CSR_SPEC, u8, DIVMODE_A, 2, O>;
+pub type DIVMODE_W<'a, const O: u8> = crate::FieldWriterSafe<'a, CSR_SPEC, 2, O, DIVMODE_A>;
 impl<'a, const O: u8> DIVMODE_W<'a, O> {
     #[doc = "Free-running counting at rate dictated by fractional divider"]
     #[inline(always)]
@@ -133,18 +135,18 @@ impl<'a, const O: u8> DIVMODE_W<'a, O> {
 }
 #[doc = "Field `PH_RET` reader - Retard the phase of the counter by 1 count, while it is running.  
  Self-clearing. Write a 1, and poll until low. Counter must be running."]
-pub type PH_RET_R = crate::BitReader<bool>;
+pub type PH_RET_R = crate::BitReader;
 #[doc = "Field `PH_RET` writer - Retard the phase of the counter by 1 count, while it is running.  
  Self-clearing. Write a 1, and poll until low. Counter must be running."]
-pub type PH_RET_W<'a, const O: u8> = crate::BitWriter<'a, u32, CSR_SPEC, bool, O>;
+pub type PH_RET_W<'a, const O: u8> = crate::BitWriter<'a, CSR_SPEC, O>;
 #[doc = "Field `PH_ADV` reader - Advance the phase of the counter by 1 count, while it is running.  
  Self-clearing. Write a 1, and poll until low. Counter must be running  
  at less than full speed (div_int + div_frac / 16 > 1)"]
-pub type PH_ADV_R = crate::BitReader<bool>;
+pub type PH_ADV_R = crate::BitReader;
 #[doc = "Field `PH_ADV` writer - Advance the phase of the counter by 1 count, while it is running.  
  Self-clearing. Write a 1, and poll until low. Counter must be running  
  at less than full speed (div_int + div_frac / 16 > 1)"]
-pub type PH_ADV_W<'a, const O: u8> = crate::BitWriter<'a, u32, CSR_SPEC, bool, O>;
+pub type PH_ADV_W<'a, const O: u8> = crate::BitWriter<'a, CSR_SPEC, O>;
 impl R {
     #[doc = "Bit 0 - Enable the PWM channel."]
     #[inline(always)]

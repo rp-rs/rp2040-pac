@@ -35,21 +35,21 @@ impl From<crate::W<CTRL_SPEC>> for W {
     }
 }
 #[doc = "Field `RTC_ENABLE` reader - Enable RTC"]
-pub type RTC_ENABLE_R = crate::BitReader<bool>;
+pub type RTC_ENABLE_R = crate::BitReader;
 #[doc = "Field `RTC_ENABLE` writer - Enable RTC"]
-pub type RTC_ENABLE_W<'a, const O: u8> = crate::BitWriter<'a, u32, CTRL_SPEC, bool, O>;
+pub type RTC_ENABLE_W<'a, const O: u8> = crate::BitWriter<'a, CTRL_SPEC, O>;
 #[doc = "Field `RTC_ACTIVE` reader - RTC enabled (running)"]
-pub type RTC_ACTIVE_R = crate::BitReader<bool>;
+pub type RTC_ACTIVE_R = crate::BitReader;
 #[doc = "Field `LOAD` reader - Load RTC"]
-pub type LOAD_R = crate::BitReader<bool>;
+pub type LOAD_R = crate::BitReader;
 #[doc = "Field `LOAD` writer - Load RTC"]
-pub type LOAD_W<'a, const O: u8> = crate::BitWriter<'a, u32, CTRL_SPEC, bool, O>;
+pub type LOAD_W<'a, const O: u8> = crate::BitWriter<'a, CTRL_SPEC, O>;
 #[doc = "Field `FORCE_NOTLEAPYEAR` reader - If set, leapyear is forced off.  
  Useful for years divisible by 100 but not by 400"]
-pub type FORCE_NOTLEAPYEAR_R = crate::BitReader<bool>;
+pub type FORCE_NOTLEAPYEAR_R = crate::BitReader;
 #[doc = "Field `FORCE_NOTLEAPYEAR` writer - If set, leapyear is forced off.  
  Useful for years divisible by 100 but not by 400"]
-pub type FORCE_NOTLEAPYEAR_W<'a, const O: u8> = crate::BitWriter<'a, u32, CTRL_SPEC, bool, O>;
+pub type FORCE_NOTLEAPYEAR_W<'a, const O: u8> = crate::BitWriter<'a, CTRL_SPEC, O>;
 impl R {
     #[doc = "Bit 0 - Enable RTC"]
     #[inline(always)]

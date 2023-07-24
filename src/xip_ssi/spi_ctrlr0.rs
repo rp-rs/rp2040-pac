@@ -35,7 +35,7 @@ impl From<crate::W<SPI_CTRLR0_SPEC>> for W {
     }
 }
 #[doc = "Field `TRANS_TYPE` reader - Address and instruction transfer format"]
-pub type TRANS_TYPE_R = crate::FieldReader<u8, TRANS_TYPE_A>;
+pub type TRANS_TYPE_R = crate::FieldReader<TRANS_TYPE_A>;
 #[doc = "Address and instruction transfer format  
 
 Value on reset: 0"]
@@ -54,6 +54,9 @@ impl From<TRANS_TYPE_A> for u8 {
     fn from(variant: TRANS_TYPE_A) -> Self {
         variant as _
     }
+}
+impl crate::FieldSpec for TRANS_TYPE_A {
+    type Ux = u8;
 }
 impl TRANS_TYPE_R {
     #[doc = "Get enumerated values variant"]
@@ -84,7 +87,7 @@ impl TRANS_TYPE_R {
 }
 #[doc = "Field `TRANS_TYPE` writer - Address and instruction transfer format"]
 pub type TRANS_TYPE_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SPI_CTRLR0_SPEC, u8, TRANS_TYPE_A, 2, O>;
+    crate::FieldWriter<'a, SPI_CTRLR0_SPEC, 2, O, TRANS_TYPE_A>;
 impl<'a, const O: u8> TRANS_TYPE_W<'a, O> {
     #[doc = "Command and address both in standard SPI frame format"]
     #[inline(always)]
@@ -103,11 +106,11 @@ impl<'a, const O: u8> TRANS_TYPE_W<'a, O> {
     }
 }
 #[doc = "Field `ADDR_L` reader - Address length (0b-60b in 4b increments)"]
-pub type ADDR_L_R = crate::FieldReader<u8, u8>;
+pub type ADDR_L_R = crate::FieldReader;
 #[doc = "Field `ADDR_L` writer - Address length (0b-60b in 4b increments)"]
-pub type ADDR_L_W<'a, const O: u8> = crate::FieldWriter<'a, u32, SPI_CTRLR0_SPEC, u8, u8, 4, O>;
+pub type ADDR_L_W<'a, const O: u8> = crate::FieldWriter<'a, SPI_CTRLR0_SPEC, 4, O>;
 #[doc = "Field `INST_L` reader - Instruction length (0/4/8/16b)"]
-pub type INST_L_R = crate::FieldReader<u8, INST_L_A>;
+pub type INST_L_R = crate::FieldReader<INST_L_A>;
 #[doc = "Instruction length (0/4/8/16b)  
 
 Value on reset: 0"]
@@ -128,6 +131,9 @@ impl From<INST_L_A> for u8 {
     fn from(variant: INST_L_A) -> Self {
         variant as _
     }
+}
+impl crate::FieldSpec for INST_L_A {
+    type Ux = u8;
 }
 impl INST_L_R {
     #[doc = "Get enumerated values variant"]
@@ -163,8 +169,7 @@ impl INST_L_R {
     }
 }
 #[doc = "Field `INST_L` writer - Instruction length (0/4/8/16b)"]
-pub type INST_L_W<'a, const O: u8> =
-    crate::FieldWriterSafe<'a, u32, SPI_CTRLR0_SPEC, u8, INST_L_A, 2, O>;
+pub type INST_L_W<'a, const O: u8> = crate::FieldWriterSafe<'a, SPI_CTRLR0_SPEC, 2, O, INST_L_A>;
 impl<'a, const O: u8> INST_L_W<'a, O> {
     #[doc = "No instruction"]
     #[inline(always)]
@@ -188,26 +193,25 @@ impl<'a, const O: u8> INST_L_W<'a, O> {
     }
 }
 #[doc = "Field `WAIT_CYCLES` reader - Wait cycles between control frame transmit and data reception (in SCLK cycles)"]
-pub type WAIT_CYCLES_R = crate::FieldReader<u8, u8>;
+pub type WAIT_CYCLES_R = crate::FieldReader;
 #[doc = "Field `WAIT_CYCLES` writer - Wait cycles between control frame transmit and data reception (in SCLK cycles)"]
-pub type WAIT_CYCLES_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SPI_CTRLR0_SPEC, u8, u8, 5, O>;
+pub type WAIT_CYCLES_W<'a, const O: u8> = crate::FieldWriter<'a, SPI_CTRLR0_SPEC, 5, O>;
 #[doc = "Field `SPI_DDR_EN` reader - SPI DDR transfer enable"]
-pub type SPI_DDR_EN_R = crate::BitReader<bool>;
+pub type SPI_DDR_EN_R = crate::BitReader;
 #[doc = "Field `SPI_DDR_EN` writer - SPI DDR transfer enable"]
-pub type SPI_DDR_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, SPI_CTRLR0_SPEC, bool, O>;
+pub type SPI_DDR_EN_W<'a, const O: u8> = crate::BitWriter<'a, SPI_CTRLR0_SPEC, O>;
 #[doc = "Field `INST_DDR_EN` reader - Instruction DDR transfer enable"]
-pub type INST_DDR_EN_R = crate::BitReader<bool>;
+pub type INST_DDR_EN_R = crate::BitReader;
 #[doc = "Field `INST_DDR_EN` writer - Instruction DDR transfer enable"]
-pub type INST_DDR_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, SPI_CTRLR0_SPEC, bool, O>;
+pub type INST_DDR_EN_W<'a, const O: u8> = crate::BitWriter<'a, SPI_CTRLR0_SPEC, O>;
 #[doc = "Field `SPI_RXDS_EN` reader - Read data strobe enable"]
-pub type SPI_RXDS_EN_R = crate::BitReader<bool>;
+pub type SPI_RXDS_EN_R = crate::BitReader;
 #[doc = "Field `SPI_RXDS_EN` writer - Read data strobe enable"]
-pub type SPI_RXDS_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, SPI_CTRLR0_SPEC, bool, O>;
+pub type SPI_RXDS_EN_W<'a, const O: u8> = crate::BitWriter<'a, SPI_CTRLR0_SPEC, O>;
 #[doc = "Field `XIP_CMD` reader - SPI Command to send in XIP mode (INST_L = 8-bit) or to append to Address (INST_L = 0-bit)"]
-pub type XIP_CMD_R = crate::FieldReader<u8, u8>;
+pub type XIP_CMD_R = crate::FieldReader;
 #[doc = "Field `XIP_CMD` writer - SPI Command to send in XIP mode (INST_L = 8-bit) or to append to Address (INST_L = 0-bit)"]
-pub type XIP_CMD_W<'a, const O: u8> = crate::FieldWriter<'a, u32, SPI_CTRLR0_SPEC, u8, u8, 8, O>;
+pub type XIP_CMD_W<'a, const O: u8> = crate::FieldWriter<'a, SPI_CTRLR0_SPEC, 8, O>;
 impl R {
     #[doc = "Bits 0:1 - Address and instruction transfer format"]
     #[inline(always)]

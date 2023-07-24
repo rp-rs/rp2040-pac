@@ -35,15 +35,15 @@ impl From<crate::W<SM_CLKDIV_SPEC>> for W {
     }
 }
 #[doc = "Field `FRAC` reader - Fractional part of clock divisor"]
-pub type FRAC_R = crate::FieldReader<u8, u8>;
+pub type FRAC_R = crate::FieldReader;
 #[doc = "Field `FRAC` writer - Fractional part of clock divisor"]
-pub type FRAC_W<'a, const O: u8> = crate::FieldWriter<'a, u32, SM_CLKDIV_SPEC, u8, u8, 8, O>;
+pub type FRAC_W<'a, const O: u8> = crate::FieldWriter<'a, SM_CLKDIV_SPEC, 8, O>;
 #[doc = "Field `INT` reader - Effective frequency is sysclk/(int + frac/256).  
  Value of 0 is interpreted as 65536. If INT is 0, FRAC must also be 0."]
-pub type INT_R = crate::FieldReader<u16, u16>;
+pub type INT_R = crate::FieldReader<u16>;
 #[doc = "Field `INT` writer - Effective frequency is sysclk/(int + frac/256).  
  Value of 0 is interpreted as 65536. If INT is 0, FRAC must also be 0."]
-pub type INT_W<'a, const O: u8> = crate::FieldWriter<'a, u32, SM_CLKDIV_SPEC, u16, u16, 16, O>;
+pub type INT_W<'a, const O: u8> = crate::FieldWriter<'a, SM_CLKDIV_SPEC, 16, O, u16>;
 impl R {
     #[doc = "Bits 8:15 - Fractional part of clock divisor"]
     #[inline(always)]

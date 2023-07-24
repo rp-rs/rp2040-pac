@@ -166,7 +166,7 @@ pub struct RegisterBlock {
 
  Writing (any value) releases the lock.  
  If core 0 and core 1 attempt to claim the same lock simultaneously, core 0 wins.  
- The value returned on success is 0x1 << lock number."]
+ The value returned on success is 0x1 &lt;&lt; lock number."]
     pub spinlock: [SPINLOCK; 32],
 }
 #[doc = "CPUID (r) register accessor: an alias for `Reg<CPUID_SPEC>`"]
@@ -458,5 +458,5 @@ pub type SPINLOCK = crate::Reg<spinlock::SPINLOCK_SPEC>;
 
  Writing (any value) releases the lock.  
  If core 0 and core 1 attempt to claim the same lock simultaneously, core 0 wins.  
- The value returned on success is 0x1 << lock number."]
+ The value returned on success is 0x1 &lt;&lt; lock number."]
 pub mod spinlock;

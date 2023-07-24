@@ -14,7 +14,7 @@ impl From<crate::R<INTR_SPEC>> for R {
     }
 }
 #[doc = "Field `CLK_SYS_RESUS` reader - "]
-pub type CLK_SYS_RESUS_R = crate::BitReader<bool>;
+pub type CLK_SYS_RESUS_R = crate::BitReader;
 impl R {
     #[doc = "Bit 0"]
     #[inline(always)]

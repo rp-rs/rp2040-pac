@@ -35,24 +35,24 @@ impl From<crate::W<FREQA_SPEC>> for W {
     }
 }
 #[doc = "Field `DS0` reader - Stage 0 drive strength"]
-pub type DS0_R = crate::FieldReader<u8, u8>;
+pub type DS0_R = crate::FieldReader;
 #[doc = "Field `DS0` writer - Stage 0 drive strength"]
-pub type DS0_W<'a, const O: u8> = crate::FieldWriter<'a, u32, FREQA_SPEC, u8, u8, 3, O>;
+pub type DS0_W<'a, const O: u8> = crate::FieldWriter<'a, FREQA_SPEC, 3, O>;
 #[doc = "Field `DS1` reader - Stage 1 drive strength"]
-pub type DS1_R = crate::FieldReader<u8, u8>;
+pub type DS1_R = crate::FieldReader;
 #[doc = "Field `DS1` writer - Stage 1 drive strength"]
-pub type DS1_W<'a, const O: u8> = crate::FieldWriter<'a, u32, FREQA_SPEC, u8, u8, 3, O>;
+pub type DS1_W<'a, const O: u8> = crate::FieldWriter<'a, FREQA_SPEC, 3, O>;
 #[doc = "Field `DS2` reader - Stage 2 drive strength"]
-pub type DS2_R = crate::FieldReader<u8, u8>;
+pub type DS2_R = crate::FieldReader;
 #[doc = "Field `DS2` writer - Stage 2 drive strength"]
-pub type DS2_W<'a, const O: u8> = crate::FieldWriter<'a, u32, FREQA_SPEC, u8, u8, 3, O>;
+pub type DS2_W<'a, const O: u8> = crate::FieldWriter<'a, FREQA_SPEC, 3, O>;
 #[doc = "Field `DS3` reader - Stage 3 drive strength"]
-pub type DS3_R = crate::FieldReader<u8, u8>;
+pub type DS3_R = crate::FieldReader;
 #[doc = "Field `DS3` writer - Stage 3 drive strength"]
-pub type DS3_W<'a, const O: u8> = crate::FieldWriter<'a, u32, FREQA_SPEC, u8, u8, 3, O>;
+pub type DS3_W<'a, const O: u8> = crate::FieldWriter<'a, FREQA_SPEC, 3, O>;
 #[doc = "Field `PASSWD` reader - Set to 0x9696 to apply the settings  
  Any other value in this field will set all drive strengths to 0"]
-pub type PASSWD_R = crate::FieldReader<u16, PASSWD_A>;
+pub type PASSWD_R = crate::FieldReader<PASSWD_A>;
 #[doc = "Set to 0x9696 to apply the settings  
  Any other value in this field will set all drive strengths to 0  
 
@@ -68,6 +68,9 @@ impl From<PASSWD_A> for u16 {
     fn from(variant: PASSWD_A) -> Self {
         variant as _
     }
+}
+impl crate::FieldSpec for PASSWD_A {
+    type Ux = u16;
 }
 impl PASSWD_R {
     #[doc = "Get enumerated values variant"]
@@ -86,7 +89,7 @@ impl PASSWD_R {
 }
 #[doc = "Field `PASSWD` writer - Set to 0x9696 to apply the settings  
  Any other value in this field will set all drive strengths to 0"]
-pub type PASSWD_W<'a, const O: u8> = crate::FieldWriter<'a, u32, FREQA_SPEC, u16, PASSWD_A, 16, O>;
+pub type PASSWD_W<'a, const O: u8> = crate::FieldWriter<'a, FREQA_SPEC, 16, O, PASSWD_A>;
 impl<'a, const O: u8> PASSWD_W<'a, O> {
     #[doc = "`1001011010010110`"]
     #[inline(always)]
@@ -161,7 +164,7 @@ impl W {
         self
     }
 }
-#[doc = "The FREQA & FREQB registers control the frequency by controlling the drive strength of each stage  
+#[doc = "The FREQA &amp; FREQB registers control the frequency by controlling the drive strength of each stage  
  The drive strength has 4 levels determined by the number of bits set  
  Increasing the number of bits set increases the drive strength and increases the oscillation frequency  
  0 bits set is the default drive strength  

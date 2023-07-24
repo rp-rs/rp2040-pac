@@ -35,9 +35,9 @@ impl From<crate::W<SSPDR_SPEC>> for W {
     }
 }
 #[doc = "Field `DATA` reader - Transmit/Receive FIFO: Read Receive FIFO. Write Transmit FIFO. You must right-justify data when the PrimeCell SSP is programmed for a data size that is less than 16 bits. Unused bits at the top are ignored by transmit logic. The receive logic automatically right-justifies."]
-pub type DATA_R = crate::FieldReader<u16, u16>;
+pub type DATA_R = crate::FieldReader<u16>;
 #[doc = "Field `DATA` writer - Transmit/Receive FIFO: Read Receive FIFO. Write Transmit FIFO. You must right-justify data when the PrimeCell SSP is programmed for a data size that is less than 16 bits. Unused bits at the top are ignored by transmit logic. The receive logic automatically right-justifies."]
-pub type DATA_W<'a, const O: u8> = crate::FieldWriter<'a, u32, SSPDR_SPEC, u16, u16, 16, O>;
+pub type DATA_W<'a, const O: u8> = crate::FieldWriter<'a, SSPDR_SPEC, 16, O, u16>;
 impl R {
     #[doc = "Bits 0:15 - Transmit/Receive FIFO: Read Receive FIFO. Write Transmit FIFO. You must right-justify data when the PrimeCell SSP is programmed for a data size that is less than 16 bits. Unused bits at the top are ignored by transmit logic. The receive logic automatically right-justifies."]
     #[inline(always)]

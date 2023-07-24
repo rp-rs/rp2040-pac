@@ -35,9 +35,9 @@ impl From<crate::W<CTRLR1_SPEC>> for W {
     }
 }
 #[doc = "Field `NDF` reader - Number of data frames"]
-pub type NDF_R = crate::FieldReader<u16, u16>;
+pub type NDF_R = crate::FieldReader<u16>;
 #[doc = "Field `NDF` writer - Number of data frames"]
-pub type NDF_W<'a, const O: u8> = crate::FieldWriter<'a, u32, CTRLR1_SPEC, u16, u16, 16, O>;
+pub type NDF_W<'a, const O: u8> = crate::FieldWriter<'a, CTRLR1_SPEC, 16, O, u16>;
 impl R {
     #[doc = "Bits 0:15 - Number of data frames"]
     #[inline(always)]

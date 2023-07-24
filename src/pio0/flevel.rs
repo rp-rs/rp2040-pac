@@ -14,21 +14,21 @@ impl From<crate::R<FLEVEL_SPEC>> for R {
     }
 }
 #[doc = "Field `TX0` reader - "]
-pub type TX0_R = crate::FieldReader<u8, u8>;
+pub type TX0_R = crate::FieldReader;
 #[doc = "Field `RX0` reader - "]
-pub type RX0_R = crate::FieldReader<u8, u8>;
+pub type RX0_R = crate::FieldReader;
 #[doc = "Field `TX1` reader - "]
-pub type TX1_R = crate::FieldReader<u8, u8>;
+pub type TX1_R = crate::FieldReader;
 #[doc = "Field `RX1` reader - "]
-pub type RX1_R = crate::FieldReader<u8, u8>;
+pub type RX1_R = crate::FieldReader;
 #[doc = "Field `TX2` reader - "]
-pub type TX2_R = crate::FieldReader<u8, u8>;
+pub type TX2_R = crate::FieldReader;
 #[doc = "Field `RX2` reader - "]
-pub type RX2_R = crate::FieldReader<u8, u8>;
+pub type RX2_R = crate::FieldReader;
 #[doc = "Field `TX3` reader - "]
-pub type TX3_R = crate::FieldReader<u8, u8>;
+pub type TX3_R = crate::FieldReader;
 #[doc = "Field `RX3` reader - "]
-pub type RX3_R = crate::FieldReader<u8, u8>;
+pub type RX3_R = crate::FieldReader;
 impl R {
     #[doc = "Bits 0:3"]
     #[inline(always)]

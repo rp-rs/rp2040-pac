@@ -35,9 +35,9 @@ impl From<crate::W<CTR_SPEC>> for W {
     }
 }
 #[doc = "Field `CTR` reader - "]
-pub type CTR_R = crate::FieldReader<u16, u16>;
+pub type CTR_R = crate::FieldReader<u16>;
 #[doc = "Field `CTR` writer - "]
-pub type CTR_W<'a, const O: u8> = crate::FieldWriter<'a, u32, CTR_SPEC, u16, u16, 16, O>;
+pub type CTR_W<'a, const O: u8> = crate::FieldWriter<'a, CTR_SPEC, 16, O, u16>;
 impl R {
     #[doc = "Bits 0:15"]
     #[inline(always)]

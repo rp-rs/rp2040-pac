@@ -79,7 +79,7 @@ impl NACK_R {
 #[doc = "Field `NACK` writer - Generate NACK. This NACK generation only occurs when DW_apb_i2c is a slave-receiver. If this register is set to a value of 1, it can only generate a NACK after a data byte is received; hence, the data transfer is aborted and the data received is not pushed to the receive buffer.  
 
  When the register is set to a value of 0, it generates NACK/ACK, depending on normal criteria. - 1: generate NACK after data byte received - 0: generate NACK/ACK normally Reset value: 0x0"]
-pub type NACK_W<'a, const O: u8> = crate::BitWriter<'a, u32, IC_SLV_DATA_NACK_ONLY_SPEC, NACK_A, O>;
+pub type NACK_W<'a, const O: u8> = crate::BitWriter<'a, IC_SLV_DATA_NACK_ONLY_SPEC, O, NACK_A>;
 impl<'a, const O: u8> NACK_W<'a, O> {
     #[doc = "Slave receiver generates NACK normally"]
     #[inline(always)]

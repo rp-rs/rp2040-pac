@@ -14,19 +14,19 @@ impl From<crate::R<SR_SPEC>> for R {
     }
 }
 #[doc = "Field `BUSY` reader - SSI busy flag"]
-pub type BUSY_R = crate::BitReader<bool>;
+pub type BUSY_R = crate::BitReader;
 #[doc = "Field `TFNF` reader - Transmit FIFO not full"]
-pub type TFNF_R = crate::BitReader<bool>;
+pub type TFNF_R = crate::BitReader;
 #[doc = "Field `TFE` reader - Transmit FIFO empty"]
-pub type TFE_R = crate::BitReader<bool>;
+pub type TFE_R = crate::BitReader;
 #[doc = "Field `RFNE` reader - Receive FIFO not empty"]
-pub type RFNE_R = crate::BitReader<bool>;
+pub type RFNE_R = crate::BitReader;
 #[doc = "Field `RFF` reader - Receive FIFO full"]
-pub type RFF_R = crate::BitReader<bool>;
+pub type RFF_R = crate::BitReader;
 #[doc = "Field `TXE` reader - Transmission error"]
-pub type TXE_R = crate::BitReader<bool>;
+pub type TXE_R = crate::BitReader;
 #[doc = "Field `DCOL` reader - Data collision error"]
-pub type DCOL_R = crate::BitReader<bool>;
+pub type DCOL_R = crate::BitReader;
 impl R {
     #[doc = "Bit 0 - SSI busy flag"]
     #[inline(always)]

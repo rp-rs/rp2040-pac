@@ -37,11 +37,11 @@ impl From<crate::W<SER_SPEC>> for W {
 #[doc = "Field `SER` reader - For each bit:  
  0 -> slave not selected  
  1 -> slave selected"]
-pub type SER_R = crate::BitReader<bool>;
+pub type SER_R = crate::BitReader;
 #[doc = "Field `SER` writer - For each bit:  
  0 -> slave not selected  
  1 -> slave selected"]
-pub type SER_W<'a, const O: u8> = crate::BitWriter<'a, u32, SER_SPEC, bool, O>;
+pub type SER_W<'a, const O: u8> = crate::BitWriter<'a, SER_SPEC, O>;
 impl R {
     #[doc = "Bit 0 - For each bit:  
  0 -> slave not selected  

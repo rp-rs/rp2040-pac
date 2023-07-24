@@ -35,21 +35,21 @@ impl From<crate::W<FDEBUG_SPEC>> for W {
     }
 }
 #[doc = "Field `RXSTALL` reader - State machine has stalled on full RX FIFO during a blocking PUSH, or an IN with autopush enabled. This flag is also set when a nonblocking PUSH to a full FIFO took place, in which case the state machine has dropped data. Write 1 to clear."]
-pub type RXSTALL_R = crate::FieldReader<u8, u8>;
+pub type RXSTALL_R = crate::FieldReader;
 #[doc = "Field `RXSTALL` writer - State machine has stalled on full RX FIFO during a blocking PUSH, or an IN with autopush enabled. This flag is also set when a nonblocking PUSH to a full FIFO took place, in which case the state machine has dropped data. Write 1 to clear."]
-pub type RXSTALL_W<'a, const O: u8> = crate::FieldWriter<'a, u32, FDEBUG_SPEC, u8, u8, 4, O>;
+pub type RXSTALL_W<'a, const O: u8> = crate::FieldWriter<'a, FDEBUG_SPEC, 4, O>;
 #[doc = "Field `RXUNDER` reader - RX FIFO underflow (i.e. read-on-empty by the system) has occurred. Write 1 to clear. Note that read-on-empty does not perturb the state of the FIFO in any way, but the data returned by reading from an empty FIFO is undefined, so this flag generally only becomes set due to some kind of software error."]
-pub type RXUNDER_R = crate::FieldReader<u8, u8>;
+pub type RXUNDER_R = crate::FieldReader;
 #[doc = "Field `RXUNDER` writer - RX FIFO underflow (i.e. read-on-empty by the system) has occurred. Write 1 to clear. Note that read-on-empty does not perturb the state of the FIFO in any way, but the data returned by reading from an empty FIFO is undefined, so this flag generally only becomes set due to some kind of software error."]
-pub type RXUNDER_W<'a, const O: u8> = crate::FieldWriter<'a, u32, FDEBUG_SPEC, u8, u8, 4, O>;
+pub type RXUNDER_W<'a, const O: u8> = crate::FieldWriter<'a, FDEBUG_SPEC, 4, O>;
 #[doc = "Field `TXOVER` reader - TX FIFO overflow (i.e. write-on-full by the system) has occurred. Write 1 to clear. Note that write-on-full does not alter the state or contents of the FIFO in any way, but the data that the system attempted to write is dropped, so if this flag is set, your software has quite likely dropped some data on the floor."]
-pub type TXOVER_R = crate::FieldReader<u8, u8>;
+pub type TXOVER_R = crate::FieldReader;
 #[doc = "Field `TXOVER` writer - TX FIFO overflow (i.e. write-on-full by the system) has occurred. Write 1 to clear. Note that write-on-full does not alter the state or contents of the FIFO in any way, but the data that the system attempted to write is dropped, so if this flag is set, your software has quite likely dropped some data on the floor."]
-pub type TXOVER_W<'a, const O: u8> = crate::FieldWriter<'a, u32, FDEBUG_SPEC, u8, u8, 4, O>;
+pub type TXOVER_W<'a, const O: u8> = crate::FieldWriter<'a, FDEBUG_SPEC, 4, O>;
 #[doc = "Field `TXSTALL` reader - State machine has stalled on empty TX FIFO during a blocking PULL, or an OUT with autopull enabled. Write 1 to clear."]
-pub type TXSTALL_R = crate::FieldReader<u8, u8>;
+pub type TXSTALL_R = crate::FieldReader;
 #[doc = "Field `TXSTALL` writer - State machine has stalled on empty TX FIFO during a blocking PULL, or an OUT with autopull enabled. Write 1 to clear."]
-pub type TXSTALL_W<'a, const O: u8> = crate::FieldWriter<'a, u32, FDEBUG_SPEC, u8, u8, 4, O>;
+pub type TXSTALL_W<'a, const O: u8> = crate::FieldWriter<'a, FDEBUG_SPEC, 4, O>;
 impl R {
     #[doc = "Bits 0:3 - State machine has stalled on full RX FIFO during a blocking PUSH, or an IN with autopush enabled. This flag is also set when a nonblocking PUSH to a full FIFO took place, in which case the state machine has dropped data. Write 1 to clear."]
     #[inline(always)]

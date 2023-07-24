@@ -14,45 +14,45 @@ impl From<crate::R<INTS_SPEC>> for R {
     }
 }
 #[doc = "Field `HOST_CONN_DIS` reader - Host: raised when a device is connected or disconnected (i.e. when SIE_STATUS.SPEED changes). Cleared by writing to SIE_STATUS.SPEED"]
-pub type HOST_CONN_DIS_R = crate::BitReader<bool>;
+pub type HOST_CONN_DIS_R = crate::BitReader;
 #[doc = "Field `HOST_RESUME` reader - Host: raised when a device wakes up the host. Cleared by writing to SIE_STATUS.RESUME"]
-pub type HOST_RESUME_R = crate::BitReader<bool>;
+pub type HOST_RESUME_R = crate::BitReader;
 #[doc = "Field `HOST_SOF` reader - Host: raised every time the host sends a SOF (Start of Frame). Cleared by reading SOF_RD"]
-pub type HOST_SOF_R = crate::BitReader<bool>;
+pub type HOST_SOF_R = crate::BitReader;
 #[doc = "Field `TRANS_COMPLETE` reader - Raised every time SIE_STATUS.TRANS_COMPLETE is set. Clear by writing to this bit."]
-pub type TRANS_COMPLETE_R = crate::BitReader<bool>;
+pub type TRANS_COMPLETE_R = crate::BitReader;
 #[doc = "Field `BUFF_STATUS` reader - Raised when any bit in BUFF_STATUS is set. Clear by clearing all bits in BUFF_STATUS."]
-pub type BUFF_STATUS_R = crate::BitReader<bool>;
+pub type BUFF_STATUS_R = crate::BitReader;
 #[doc = "Field `ERROR_DATA_SEQ` reader - Source: SIE_STATUS.DATA_SEQ_ERROR"]
-pub type ERROR_DATA_SEQ_R = crate::BitReader<bool>;
+pub type ERROR_DATA_SEQ_R = crate::BitReader;
 #[doc = "Field `ERROR_RX_TIMEOUT` reader - Source: SIE_STATUS.RX_TIMEOUT"]
-pub type ERROR_RX_TIMEOUT_R = crate::BitReader<bool>;
+pub type ERROR_RX_TIMEOUT_R = crate::BitReader;
 #[doc = "Field `ERROR_RX_OVERFLOW` reader - Source: SIE_STATUS.RX_OVERFLOW"]
-pub type ERROR_RX_OVERFLOW_R = crate::BitReader<bool>;
+pub type ERROR_RX_OVERFLOW_R = crate::BitReader;
 #[doc = "Field `ERROR_BIT_STUFF` reader - Source: SIE_STATUS.BIT_STUFF_ERROR"]
-pub type ERROR_BIT_STUFF_R = crate::BitReader<bool>;
+pub type ERROR_BIT_STUFF_R = crate::BitReader;
 #[doc = "Field `ERROR_CRC` reader - Source: SIE_STATUS.CRC_ERROR"]
-pub type ERROR_CRC_R = crate::BitReader<bool>;
+pub type ERROR_CRC_R = crate::BitReader;
 #[doc = "Field `STALL` reader - Source: SIE_STATUS.STALL_REC"]
-pub type STALL_R = crate::BitReader<bool>;
+pub type STALL_R = crate::BitReader;
 #[doc = "Field `VBUS_DETECT` reader - Source: SIE_STATUS.VBUS_DETECTED"]
-pub type VBUS_DETECT_R = crate::BitReader<bool>;
+pub type VBUS_DETECT_R = crate::BitReader;
 #[doc = "Field `BUS_RESET` reader - Source: SIE_STATUS.BUS_RESET"]
-pub type BUS_RESET_R = crate::BitReader<bool>;
+pub type BUS_RESET_R = crate::BitReader;
 #[doc = "Field `DEV_CONN_DIS` reader - Set when the device connection state changes. Cleared by writing to SIE_STATUS.CONNECTED"]
-pub type DEV_CONN_DIS_R = crate::BitReader<bool>;
+pub type DEV_CONN_DIS_R = crate::BitReader;
 #[doc = "Field `DEV_SUSPEND` reader - Set when the device suspend state changes. Cleared by writing to SIE_STATUS.SUSPENDED"]
-pub type DEV_SUSPEND_R = crate::BitReader<bool>;
+pub type DEV_SUSPEND_R = crate::BitReader;
 #[doc = "Field `DEV_RESUME_FROM_HOST` reader - Set when the device receives a resume from the host. Cleared by writing to SIE_STATUS.RESUME"]
-pub type DEV_RESUME_FROM_HOST_R = crate::BitReader<bool>;
+pub type DEV_RESUME_FROM_HOST_R = crate::BitReader;
 #[doc = "Field `SETUP_REQ` reader - Device. Source: SIE_STATUS.SETUP_REC"]
-pub type SETUP_REQ_R = crate::BitReader<bool>;
+pub type SETUP_REQ_R = crate::BitReader;
 #[doc = "Field `DEV_SOF` reader - Set every time the device receives a SOF (Start of Frame) packet. Cleared by reading SOF_RD"]
-pub type DEV_SOF_R = crate::BitReader<bool>;
+pub type DEV_SOF_R = crate::BitReader;
 #[doc = "Field `ABORT_DONE` reader - Raised when any bit in ABORT_DONE is set. Clear by clearing all bits in ABORT_DONE."]
-pub type ABORT_DONE_R = crate::BitReader<bool>;
+pub type ABORT_DONE_R = crate::BitReader;
 #[doc = "Field `EP_STALL_NAK` reader - Raised when any bit in EP_STATUS_STALL_NAK is set. Clear by clearing all bits in EP_STATUS_STALL_NAK."]
-pub type EP_STALL_NAK_R = crate::BitReader<bool>;
+pub type EP_STALL_NAK_R = crate::BitReader;
 impl R {
     #[doc = "Bit 0 - Host: raised when a device is connected or disconnected (i.e. when SIE_STATUS.SPEED changes). Cleared by writing to SIE_STATUS.SPEED"]
     #[inline(always)]
@@ -155,7 +155,7 @@ impl R {
         EP_STALL_NAK_R::new(((self.bits >> 19) & 1) != 0)
     }
 }
-#[doc = "Interrupt status after masking & forcing  
+#[doc = "Interrupt status after masking &amp; forcing  
 
 This register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
 

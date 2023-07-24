@@ -111,7 +111,7 @@ pub struct RegisterBlock {
     pub inte: INTE,
     #[doc = "0xc0 - Interrupt Force"]
     pub intf: INTF,
-    #[doc = "0xc4 - Interrupt status after masking & forcing"]
+    #[doc = "0xc4 - Interrupt status after masking &amp; forcing"]
     pub ints: INTS,
 }
 #[doc = "CLK_GPOUT0_CTRL (rw) register accessor: an alias for `Reg<CLK_GPOUT0_CTRL_SPEC>`"]
@@ -321,5 +321,5 @@ pub type INTF = crate::Reg<intf::INTF_SPEC>;
 pub mod intf;
 #[doc = "INTS (r) register accessor: an alias for `Reg<INTS_SPEC>`"]
 pub type INTS = crate::Reg<ints::INTS_SPEC>;
-#[doc = "Interrupt status after masking & forcing"]
+#[doc = "Interrupt status after masking &amp; forcing"]
 pub mod ints;

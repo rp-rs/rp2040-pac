@@ -20,8 +20,7 @@ impl From<crate::W<GPIO_HI_OUT_SET_SPEC>> for W {
     }
 }
 #[doc = "Field `GPIO_HI_OUT_SET` writer - Perform an atomic bit-set on GPIO_HI_OUT, i.e. `GPIO_HI_OUT |= wdata`"]
-pub type GPIO_HI_OUT_SET_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, GPIO_HI_OUT_SET_SPEC, u8, u8, 6, O>;
+pub type GPIO_HI_OUT_SET_W<'a, const O: u8> = crate::FieldWriter<'a, GPIO_HI_OUT_SET_SPEC, 6, O>;
 impl W {
     #[doc = "Bits 0:5 - Perform an atomic bit-set on GPIO_HI_OUT, i.e. `GPIO_HI_OUT |= wdata`"]
     #[inline(always)]

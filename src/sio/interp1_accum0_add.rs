@@ -35,10 +35,10 @@ impl From<crate::W<INTERP1_ACCUM0_ADD_SPEC>> for W {
     }
 }
 #[doc = "Field `INTERP1_ACCUM0_ADD` reader - "]
-pub type INTERP1_ACCUM0_ADD_R = crate::FieldReader<u32, u32>;
+pub type INTERP1_ACCUM0_ADD_R = crate::FieldReader<u32>;
 #[doc = "Field `INTERP1_ACCUM0_ADD` writer - "]
 pub type INTERP1_ACCUM0_ADD_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, INTERP1_ACCUM0_ADD_SPEC, u32, u32, 24, O>;
+    crate::FieldWriter<'a, INTERP1_ACCUM0_ADD_SPEC, 24, O, u32>;
 impl R {
     #[doc = "Bits 0:23"]
     #[inline(always)]

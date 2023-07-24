@@ -14,11 +14,11 @@ impl From<crate::R<CHIP_ID_SPEC>> for R {
     }
 }
 #[doc = "Field `MANUFACTURER` reader - "]
-pub type MANUFACTURER_R = crate::FieldReader<u16, u16>;
+pub type MANUFACTURER_R = crate::FieldReader<u16>;
 #[doc = "Field `PART` reader - "]
-pub type PART_R = crate::FieldReader<u16, u16>;
+pub type PART_R = crate::FieldReader<u16>;
 #[doc = "Field `REVISION` reader - "]
-pub type REVISION_R = crate::FieldReader<u8, u8>;
+pub type REVISION_R = crate::FieldReader;
 impl R {
     #[doc = "Bits 0:11"]
     #[inline(always)]

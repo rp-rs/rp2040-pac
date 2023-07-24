@@ -35,17 +35,17 @@ impl From<crate::W<FIFO_ST_SPEC>> for W {
     }
 }
 #[doc = "Field `VLD` reader - Value is 1 if this core's RX FIFO is not empty (i.e. if FIFO_RD is valid)"]
-pub type VLD_R = crate::BitReader<bool>;
+pub type VLD_R = crate::BitReader;
 #[doc = "Field `RDY` reader - Value is 1 if this core's TX FIFO is not full (i.e. if FIFO_WR is ready for more data)"]
-pub type RDY_R = crate::BitReader<bool>;
+pub type RDY_R = crate::BitReader;
 #[doc = "Field `WOF` reader - Sticky flag indicating the TX FIFO was written when full. This write was ignored by the FIFO."]
-pub type WOF_R = crate::BitReader<bool>;
+pub type WOF_R = crate::BitReader;
 #[doc = "Field `WOF` writer - Sticky flag indicating the TX FIFO was written when full. This write was ignored by the FIFO."]
-pub type WOF_W<'a, const O: u8> = crate::BitWriter1C<'a, u32, FIFO_ST_SPEC, bool, O>;
+pub type WOF_W<'a, const O: u8> = crate::BitWriter1C<'a, FIFO_ST_SPEC, O>;
 #[doc = "Field `ROE` reader - Sticky flag indicating the RX FIFO was read when empty. This read was ignored by the FIFO."]
-pub type ROE_R = crate::BitReader<bool>;
+pub type ROE_R = crate::BitReader;
 #[doc = "Field `ROE` writer - Sticky flag indicating the RX FIFO was read when empty. This read was ignored by the FIFO."]
-pub type ROE_W<'a, const O: u8> = crate::BitWriter1C<'a, u32, FIFO_ST_SPEC, bool, O>;
+pub type ROE_W<'a, const O: u8> = crate::BitWriter1C<'a, FIFO_ST_SPEC, O>;
 impl R {
     #[doc = "Bit 0 - Value is 1 if this core's RX FIFO is not empty (i.e. if FIFO_RD is valid)"]
     #[inline(always)]

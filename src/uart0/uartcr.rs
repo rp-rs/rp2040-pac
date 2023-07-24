@@ -35,53 +35,53 @@ impl From<crate::W<UARTCR_SPEC>> for W {
     }
 }
 #[doc = "Field `UARTEN` reader - UART enable: 0 = UART is disabled. If the UART is disabled in the middle of transmission or reception, it completes the current character before stopping. 1 = the UART is enabled. Data transmission and reception occurs for either UART signals or SIR signals depending on the setting of the SIREN bit."]
-pub type UARTEN_R = crate::BitReader<bool>;
+pub type UARTEN_R = crate::BitReader;
 #[doc = "Field `UARTEN` writer - UART enable: 0 = UART is disabled. If the UART is disabled in the middle of transmission or reception, it completes the current character before stopping. 1 = the UART is enabled. Data transmission and reception occurs for either UART signals or SIR signals depending on the setting of the SIREN bit."]
-pub type UARTEN_W<'a, const O: u8> = crate::BitWriter<'a, u32, UARTCR_SPEC, bool, O>;
+pub type UARTEN_W<'a, const O: u8> = crate::BitWriter<'a, UARTCR_SPEC, O>;
 #[doc = "Field `SIREN` reader - SIR enable: 0 = IrDA SIR ENDEC is disabled. nSIROUT remains LOW (no light pulse generated), and signal transitions on SIRIN have no effect. 1 = IrDA SIR ENDEC is enabled. Data is transmitted and received on nSIROUT and SIRIN. UARTTXD remains HIGH, in the marking state. Signal transitions on UARTRXD or modem status inputs have no effect. This bit has no effect if the UARTEN bit disables the UART."]
-pub type SIREN_R = crate::BitReader<bool>;
+pub type SIREN_R = crate::BitReader;
 #[doc = "Field `SIREN` writer - SIR enable: 0 = IrDA SIR ENDEC is disabled. nSIROUT remains LOW (no light pulse generated), and signal transitions on SIRIN have no effect. 1 = IrDA SIR ENDEC is enabled. Data is transmitted and received on nSIROUT and SIRIN. UARTTXD remains HIGH, in the marking state. Signal transitions on UARTRXD or modem status inputs have no effect. This bit has no effect if the UARTEN bit disables the UART."]
-pub type SIREN_W<'a, const O: u8> = crate::BitWriter<'a, u32, UARTCR_SPEC, bool, O>;
+pub type SIREN_W<'a, const O: u8> = crate::BitWriter<'a, UARTCR_SPEC, O>;
 #[doc = "Field `SIRLP` reader - SIR low-power IrDA mode. This bit selects the IrDA encoding mode. If this bit is cleared to 0, low-level bits are transmitted as an active high pulse with a width of 3 / 16th of the bit period. If this bit is set to 1, low-level bits are transmitted with a pulse width that is 3 times the period of the IrLPBaud16 input signal, regardless of the selected bit rate. Setting this bit uses less power, but might reduce transmission distances."]
-pub type SIRLP_R = crate::BitReader<bool>;
+pub type SIRLP_R = crate::BitReader;
 #[doc = "Field `SIRLP` writer - SIR low-power IrDA mode. This bit selects the IrDA encoding mode. If this bit is cleared to 0, low-level bits are transmitted as an active high pulse with a width of 3 / 16th of the bit period. If this bit is set to 1, low-level bits are transmitted with a pulse width that is 3 times the period of the IrLPBaud16 input signal, regardless of the selected bit rate. Setting this bit uses less power, but might reduce transmission distances."]
-pub type SIRLP_W<'a, const O: u8> = crate::BitWriter<'a, u32, UARTCR_SPEC, bool, O>;
+pub type SIRLP_W<'a, const O: u8> = crate::BitWriter<'a, UARTCR_SPEC, O>;
 #[doc = "Field `LBE` reader - Loopback enable. If this bit is set to 1 and the SIREN bit is set to 1 and the SIRTEST bit in the Test Control Register, UARTTCR is set to 1, then the nSIROUT path is inverted, and fed through to the SIRIN path. The SIRTEST bit in the test register must be set to 1 to override the normal half-duplex SIR operation. This must be the requirement for accessing the test registers during normal operation, and SIRTEST must be cleared to 0 when loopback testing is finished. This feature reduces the amount of external coupling required during system test. If this bit is set to 1, and the SIRTEST bit is set to 0, the UARTTXD path is fed through to the UARTRXD path. In either SIR mode or UART mode, when this bit is set, the modem outputs are also fed through to the modem inputs. This bit is cleared to 0 on reset, to disable loopback."]
-pub type LBE_R = crate::BitReader<bool>;
+pub type LBE_R = crate::BitReader;
 #[doc = "Field `LBE` writer - Loopback enable. If this bit is set to 1 and the SIREN bit is set to 1 and the SIRTEST bit in the Test Control Register, UARTTCR is set to 1, then the nSIROUT path is inverted, and fed through to the SIRIN path. The SIRTEST bit in the test register must be set to 1 to override the normal half-duplex SIR operation. This must be the requirement for accessing the test registers during normal operation, and SIRTEST must be cleared to 0 when loopback testing is finished. This feature reduces the amount of external coupling required during system test. If this bit is set to 1, and the SIRTEST bit is set to 0, the UARTTXD path is fed through to the UARTRXD path. In either SIR mode or UART mode, when this bit is set, the modem outputs are also fed through to the modem inputs. This bit is cleared to 0 on reset, to disable loopback."]
-pub type LBE_W<'a, const O: u8> = crate::BitWriter<'a, u32, UARTCR_SPEC, bool, O>;
+pub type LBE_W<'a, const O: u8> = crate::BitWriter<'a, UARTCR_SPEC, O>;
 #[doc = "Field `TXE` reader - Transmit enable. If this bit is set to 1, the transmit section of the UART is enabled. Data transmission occurs for either UART signals, or SIR signals depending on the setting of the SIREN bit. When the UART is disabled in the middle of transmission, it completes the current character before stopping."]
-pub type TXE_R = crate::BitReader<bool>;
+pub type TXE_R = crate::BitReader;
 #[doc = "Field `TXE` writer - Transmit enable. If this bit is set to 1, the transmit section of the UART is enabled. Data transmission occurs for either UART signals, or SIR signals depending on the setting of the SIREN bit. When the UART is disabled in the middle of transmission, it completes the current character before stopping."]
-pub type TXE_W<'a, const O: u8> = crate::BitWriter<'a, u32, UARTCR_SPEC, bool, O>;
+pub type TXE_W<'a, const O: u8> = crate::BitWriter<'a, UARTCR_SPEC, O>;
 #[doc = "Field `RXE` reader - Receive enable. If this bit is set to 1, the receive section of the UART is enabled. Data reception occurs for either UART signals or SIR signals depending on the setting of the SIREN bit. When the UART is disabled in the middle of reception, it completes the current character before stopping."]
-pub type RXE_R = crate::BitReader<bool>;
+pub type RXE_R = crate::BitReader;
 #[doc = "Field `RXE` writer - Receive enable. If this bit is set to 1, the receive section of the UART is enabled. Data reception occurs for either UART signals or SIR signals depending on the setting of the SIREN bit. When the UART is disabled in the middle of reception, it completes the current character before stopping."]
-pub type RXE_W<'a, const O: u8> = crate::BitWriter<'a, u32, UARTCR_SPEC, bool, O>;
+pub type RXE_W<'a, const O: u8> = crate::BitWriter<'a, UARTCR_SPEC, O>;
 #[doc = "Field `DTR` reader - Data transmit ready. This bit is the complement of the UART data transmit ready, nUARTDTR, modem status output. That is, when the bit is programmed to a 1 then nUARTDTR is LOW."]
-pub type DTR_R = crate::BitReader<bool>;
+pub type DTR_R = crate::BitReader;
 #[doc = "Field `DTR` writer - Data transmit ready. This bit is the complement of the UART data transmit ready, nUARTDTR, modem status output. That is, when the bit is programmed to a 1 then nUARTDTR is LOW."]
-pub type DTR_W<'a, const O: u8> = crate::BitWriter<'a, u32, UARTCR_SPEC, bool, O>;
+pub type DTR_W<'a, const O: u8> = crate::BitWriter<'a, UARTCR_SPEC, O>;
 #[doc = "Field `RTS` reader - Request to send. This bit is the complement of the UART request to send, nUARTRTS, modem status output. That is, when the bit is programmed to a 1 then nUARTRTS is LOW."]
-pub type RTS_R = crate::BitReader<bool>;
+pub type RTS_R = crate::BitReader;
 #[doc = "Field `RTS` writer - Request to send. This bit is the complement of the UART request to send, nUARTRTS, modem status output. That is, when the bit is programmed to a 1 then nUARTRTS is LOW."]
-pub type RTS_W<'a, const O: u8> = crate::BitWriter<'a, u32, UARTCR_SPEC, bool, O>;
+pub type RTS_W<'a, const O: u8> = crate::BitWriter<'a, UARTCR_SPEC, O>;
 #[doc = "Field `OUT1` reader - This bit is the complement of the UART Out1 (nUARTOut1) modem status output. That is, when the bit is programmed to a 1 the output is 0. For DTE this can be used as Data Carrier Detect (DCD)."]
-pub type OUT1_R = crate::BitReader<bool>;
+pub type OUT1_R = crate::BitReader;
 #[doc = "Field `OUT1` writer - This bit is the complement of the UART Out1 (nUARTOut1) modem status output. That is, when the bit is programmed to a 1 the output is 0. For DTE this can be used as Data Carrier Detect (DCD)."]
-pub type OUT1_W<'a, const O: u8> = crate::BitWriter<'a, u32, UARTCR_SPEC, bool, O>;
+pub type OUT1_W<'a, const O: u8> = crate::BitWriter<'a, UARTCR_SPEC, O>;
 #[doc = "Field `OUT2` reader - This bit is the complement of the UART Out2 (nUARTOut2) modem status output. That is, when the bit is programmed to a 1, the output is 0. For DTE this can be used as Ring Indicator (RI)."]
-pub type OUT2_R = crate::BitReader<bool>;
+pub type OUT2_R = crate::BitReader;
 #[doc = "Field `OUT2` writer - This bit is the complement of the UART Out2 (nUARTOut2) modem status output. That is, when the bit is programmed to a 1, the output is 0. For DTE this can be used as Ring Indicator (RI)."]
-pub type OUT2_W<'a, const O: u8> = crate::BitWriter<'a, u32, UARTCR_SPEC, bool, O>;
+pub type OUT2_W<'a, const O: u8> = crate::BitWriter<'a, UARTCR_SPEC, O>;
 #[doc = "Field `RTSEN` reader - RTS hardware flow control enable. If this bit is set to 1, RTS hardware flow control is enabled. Data is only requested when there is space in the receive FIFO for it to be received."]
-pub type RTSEN_R = crate::BitReader<bool>;
+pub type RTSEN_R = crate::BitReader;
 #[doc = "Field `RTSEN` writer - RTS hardware flow control enable. If this bit is set to 1, RTS hardware flow control is enabled. Data is only requested when there is space in the receive FIFO for it to be received."]
-pub type RTSEN_W<'a, const O: u8> = crate::BitWriter<'a, u32, UARTCR_SPEC, bool, O>;
+pub type RTSEN_W<'a, const O: u8> = crate::BitWriter<'a, UARTCR_SPEC, O>;
 #[doc = "Field `CTSEN` reader - CTS hardware flow control enable. If this bit is set to 1, CTS hardware flow control is enabled. Data is only transmitted when the nUARTCTS signal is asserted."]
-pub type CTSEN_R = crate::BitReader<bool>;
+pub type CTSEN_R = crate::BitReader;
 #[doc = "Field `CTSEN` writer - CTS hardware flow control enable. If this bit is set to 1, CTS hardware flow control is enabled. Data is only transmitted when the nUARTCTS signal is asserted."]
-pub type CTSEN_W<'a, const O: u8> = crate::BitWriter<'a, u32, UARTCR_SPEC, bool, O>;
+pub type CTSEN_W<'a, const O: u8> = crate::BitWriter<'a, UARTCR_SPEC, O>;
 impl R {
     #[doc = "Bit 0 - UART enable: 0 = UART is disabled. If the UART is disabled in the middle of transmission or reception, it completes the current character before stopping. 1 = the UART is enabled. Data transmission and reception occurs for either UART signals or SIR signals depending on the setting of the SIREN bit."]
     #[inline(always)]

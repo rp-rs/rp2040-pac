@@ -35,37 +35,37 @@ impl From<crate::W<IRQ_SETUP_1_SPEC>> for W {
     }
 }
 #[doc = "Field `SEC` reader - Seconds"]
-pub type SEC_R = crate::FieldReader<u8, u8>;
+pub type SEC_R = crate::FieldReader;
 #[doc = "Field `SEC` writer - Seconds"]
-pub type SEC_W<'a, const O: u8> = crate::FieldWriter<'a, u32, IRQ_SETUP_1_SPEC, u8, u8, 6, O>;
+pub type SEC_W<'a, const O: u8> = crate::FieldWriter<'a, IRQ_SETUP_1_SPEC, 6, O>;
 #[doc = "Field `MIN` reader - Minutes"]
-pub type MIN_R = crate::FieldReader<u8, u8>;
+pub type MIN_R = crate::FieldReader;
 #[doc = "Field `MIN` writer - Minutes"]
-pub type MIN_W<'a, const O: u8> = crate::FieldWriter<'a, u32, IRQ_SETUP_1_SPEC, u8, u8, 6, O>;
+pub type MIN_W<'a, const O: u8> = crate::FieldWriter<'a, IRQ_SETUP_1_SPEC, 6, O>;
 #[doc = "Field `HOUR` reader - Hours"]
-pub type HOUR_R = crate::FieldReader<u8, u8>;
+pub type HOUR_R = crate::FieldReader;
 #[doc = "Field `HOUR` writer - Hours"]
-pub type HOUR_W<'a, const O: u8> = crate::FieldWriter<'a, u32, IRQ_SETUP_1_SPEC, u8, u8, 5, O>;
+pub type HOUR_W<'a, const O: u8> = crate::FieldWriter<'a, IRQ_SETUP_1_SPEC, 5, O>;
 #[doc = "Field `DOTW` reader - Day of the week"]
-pub type DOTW_R = crate::FieldReader<u8, u8>;
+pub type DOTW_R = crate::FieldReader;
 #[doc = "Field `DOTW` writer - Day of the week"]
-pub type DOTW_W<'a, const O: u8> = crate::FieldWriter<'a, u32, IRQ_SETUP_1_SPEC, u8, u8, 3, O>;
+pub type DOTW_W<'a, const O: u8> = crate::FieldWriter<'a, IRQ_SETUP_1_SPEC, 3, O>;
 #[doc = "Field `SEC_ENA` reader - Enable second matching"]
-pub type SEC_ENA_R = crate::BitReader<bool>;
+pub type SEC_ENA_R = crate::BitReader;
 #[doc = "Field `SEC_ENA` writer - Enable second matching"]
-pub type SEC_ENA_W<'a, const O: u8> = crate::BitWriter<'a, u32, IRQ_SETUP_1_SPEC, bool, O>;
+pub type SEC_ENA_W<'a, const O: u8> = crate::BitWriter<'a, IRQ_SETUP_1_SPEC, O>;
 #[doc = "Field `MIN_ENA` reader - Enable minute matching"]
-pub type MIN_ENA_R = crate::BitReader<bool>;
+pub type MIN_ENA_R = crate::BitReader;
 #[doc = "Field `MIN_ENA` writer - Enable minute matching"]
-pub type MIN_ENA_W<'a, const O: u8> = crate::BitWriter<'a, u32, IRQ_SETUP_1_SPEC, bool, O>;
+pub type MIN_ENA_W<'a, const O: u8> = crate::BitWriter<'a, IRQ_SETUP_1_SPEC, O>;
 #[doc = "Field `HOUR_ENA` reader - Enable hour matching"]
-pub type HOUR_ENA_R = crate::BitReader<bool>;
+pub type HOUR_ENA_R = crate::BitReader;
 #[doc = "Field `HOUR_ENA` writer - Enable hour matching"]
-pub type HOUR_ENA_W<'a, const O: u8> = crate::BitWriter<'a, u32, IRQ_SETUP_1_SPEC, bool, O>;
+pub type HOUR_ENA_W<'a, const O: u8> = crate::BitWriter<'a, IRQ_SETUP_1_SPEC, O>;
 #[doc = "Field `DOTW_ENA` reader - Enable day of the week matching"]
-pub type DOTW_ENA_R = crate::BitReader<bool>;
+pub type DOTW_ENA_R = crate::BitReader;
 #[doc = "Field `DOTW_ENA` writer - Enable day of the week matching"]
-pub type DOTW_ENA_W<'a, const O: u8> = crate::BitWriter<'a, u32, IRQ_SETUP_1_SPEC, bool, O>;
+pub type DOTW_ENA_W<'a, const O: u8> = crate::BitWriter<'a, IRQ_SETUP_1_SPEC, O>;
 impl R {
     #[doc = "Bits 0:5 - Seconds"]
     #[inline(always)]

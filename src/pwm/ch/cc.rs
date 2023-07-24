@@ -35,13 +35,13 @@ impl From<crate::W<CC_SPEC>> for W {
     }
 }
 #[doc = "Field `A` reader - "]
-pub type A_R = crate::FieldReader<u16, u16>;
+pub type A_R = crate::FieldReader<u16>;
 #[doc = "Field `A` writer - "]
-pub type A_W<'a, const O: u8> = crate::FieldWriter<'a, u32, CC_SPEC, u16, u16, 16, O>;
+pub type A_W<'a, const O: u8> = crate::FieldWriter<'a, CC_SPEC, 16, O, u16>;
 #[doc = "Field `B` reader - "]
-pub type B_R = crate::FieldReader<u16, u16>;
+pub type B_R = crate::FieldReader<u16>;
 #[doc = "Field `B` writer - "]
-pub type B_W<'a, const O: u8> = crate::FieldWriter<'a, u32, CC_SPEC, u16, u16, 16, O>;
+pub type B_W<'a, const O: u8> = crate::FieldWriter<'a, CC_SPEC, 16, O, u16>;
 impl R {
     #[doc = "Bits 0:15"]
     #[inline(always)]

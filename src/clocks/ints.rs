@@ -14,7 +14,7 @@ impl From<crate::R<INTS_SPEC>> for R {
     }
 }
 #[doc = "Field `CLK_SYS_RESUS` reader - "]
-pub type CLK_SYS_RESUS_R = crate::BitReader<bool>;
+pub type CLK_SYS_RESUS_R = crate::BitReader;
 impl R {
     #[doc = "Bit 0"]
     #[inline(always)]
@@ -22,7 +22,7 @@ impl R {
         CLK_SYS_RESUS_R::new((self.bits & 1) != 0)
     }
 }
-#[doc = "Interrupt status after masking & forcing  
+#[doc = "Interrupt status after masking &amp; forcing  
 
 This register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
 

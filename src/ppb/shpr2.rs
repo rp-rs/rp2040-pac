@@ -35,9 +35,9 @@ impl From<crate::W<SHPR2_SPEC>> for W {
     }
 }
 #[doc = "Field `PRI_11` reader - Priority of system handler 11, SVCall"]
-pub type PRI_11_R = crate::FieldReader<u8, u8>;
+pub type PRI_11_R = crate::FieldReader;
 #[doc = "Field `PRI_11` writer - Priority of system handler 11, SVCall"]
-pub type PRI_11_W<'a, const O: u8> = crate::FieldWriter<'a, u32, SHPR2_SPEC, u8, u8, 2, O>;
+pub type PRI_11_W<'a, const O: u8> = crate::FieldWriter<'a, SHPR2_SPEC, 2, O>;
 impl R {
     #[doc = "Bits 30:31 - Priority of system handler 11, SVCall"]
     #[inline(always)]

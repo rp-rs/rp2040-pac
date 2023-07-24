@@ -35,17 +35,17 @@ impl From<crate::W<MWCR_SPEC>> for W {
     }
 }
 #[doc = "Field `MWMOD` reader - Microwire transfer mode"]
-pub type MWMOD_R = crate::BitReader<bool>;
+pub type MWMOD_R = crate::BitReader;
 #[doc = "Field `MWMOD` writer - Microwire transfer mode"]
-pub type MWMOD_W<'a, const O: u8> = crate::BitWriter<'a, u32, MWCR_SPEC, bool, O>;
+pub type MWMOD_W<'a, const O: u8> = crate::BitWriter<'a, MWCR_SPEC, O>;
 #[doc = "Field `MDD` reader - Microwire control"]
-pub type MDD_R = crate::BitReader<bool>;
+pub type MDD_R = crate::BitReader;
 #[doc = "Field `MDD` writer - Microwire control"]
-pub type MDD_W<'a, const O: u8> = crate::BitWriter<'a, u32, MWCR_SPEC, bool, O>;
+pub type MDD_W<'a, const O: u8> = crate::BitWriter<'a, MWCR_SPEC, O>;
 #[doc = "Field `MHS` reader - Microwire handshaking"]
-pub type MHS_R = crate::BitReader<bool>;
+pub type MHS_R = crate::BitReader;
 #[doc = "Field `MHS` writer - Microwire handshaking"]
-pub type MHS_W<'a, const O: u8> = crate::BitWriter<'a, u32, MWCR_SPEC, bool, O>;
+pub type MHS_W<'a, const O: u8> = crate::BitWriter<'a, MWCR_SPEC, O>;
 impl R {
     #[doc = "Bit 0 - Microwire transfer mode"]
     #[inline(always)]

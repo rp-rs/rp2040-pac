@@ -35,35 +35,35 @@ impl From<crate::W<IRQ_SETUP_0_SPEC>> for W {
     }
 }
 #[doc = "Field `DAY` reader - Day of the month (1..31)"]
-pub type DAY_R = crate::FieldReader<u8, u8>;
+pub type DAY_R = crate::FieldReader;
 #[doc = "Field `DAY` writer - Day of the month (1..31)"]
-pub type DAY_W<'a, const O: u8> = crate::FieldWriter<'a, u32, IRQ_SETUP_0_SPEC, u8, u8, 5, O>;
+pub type DAY_W<'a, const O: u8> = crate::FieldWriter<'a, IRQ_SETUP_0_SPEC, 5, O>;
 #[doc = "Field `MONTH` reader - Month (1..12)"]
-pub type MONTH_R = crate::FieldReader<u8, u8>;
+pub type MONTH_R = crate::FieldReader;
 #[doc = "Field `MONTH` writer - Month (1..12)"]
-pub type MONTH_W<'a, const O: u8> = crate::FieldWriter<'a, u32, IRQ_SETUP_0_SPEC, u8, u8, 4, O>;
+pub type MONTH_W<'a, const O: u8> = crate::FieldWriter<'a, IRQ_SETUP_0_SPEC, 4, O>;
 #[doc = "Field `YEAR` reader - Year"]
-pub type YEAR_R = crate::FieldReader<u16, u16>;
+pub type YEAR_R = crate::FieldReader<u16>;
 #[doc = "Field `YEAR` writer - Year"]
-pub type YEAR_W<'a, const O: u8> = crate::FieldWriter<'a, u32, IRQ_SETUP_0_SPEC, u16, u16, 12, O>;
+pub type YEAR_W<'a, const O: u8> = crate::FieldWriter<'a, IRQ_SETUP_0_SPEC, 12, O, u16>;
 #[doc = "Field `DAY_ENA` reader - Enable day matching"]
-pub type DAY_ENA_R = crate::BitReader<bool>;
+pub type DAY_ENA_R = crate::BitReader;
 #[doc = "Field `DAY_ENA` writer - Enable day matching"]
-pub type DAY_ENA_W<'a, const O: u8> = crate::BitWriter<'a, u32, IRQ_SETUP_0_SPEC, bool, O>;
+pub type DAY_ENA_W<'a, const O: u8> = crate::BitWriter<'a, IRQ_SETUP_0_SPEC, O>;
 #[doc = "Field `MONTH_ENA` reader - Enable month matching"]
-pub type MONTH_ENA_R = crate::BitReader<bool>;
+pub type MONTH_ENA_R = crate::BitReader;
 #[doc = "Field `MONTH_ENA` writer - Enable month matching"]
-pub type MONTH_ENA_W<'a, const O: u8> = crate::BitWriter<'a, u32, IRQ_SETUP_0_SPEC, bool, O>;
+pub type MONTH_ENA_W<'a, const O: u8> = crate::BitWriter<'a, IRQ_SETUP_0_SPEC, O>;
 #[doc = "Field `YEAR_ENA` reader - Enable year matching"]
-pub type YEAR_ENA_R = crate::BitReader<bool>;
+pub type YEAR_ENA_R = crate::BitReader;
 #[doc = "Field `YEAR_ENA` writer - Enable year matching"]
-pub type YEAR_ENA_W<'a, const O: u8> = crate::BitWriter<'a, u32, IRQ_SETUP_0_SPEC, bool, O>;
+pub type YEAR_ENA_W<'a, const O: u8> = crate::BitWriter<'a, IRQ_SETUP_0_SPEC, O>;
 #[doc = "Field `MATCH_ENA` reader - Global match enable. Don't change any other value while this one is enabled"]
-pub type MATCH_ENA_R = crate::BitReader<bool>;
+pub type MATCH_ENA_R = crate::BitReader;
 #[doc = "Field `MATCH_ENA` writer - Global match enable. Don't change any other value while this one is enabled"]
-pub type MATCH_ENA_W<'a, const O: u8> = crate::BitWriter<'a, u32, IRQ_SETUP_0_SPEC, bool, O>;
+pub type MATCH_ENA_W<'a, const O: u8> = crate::BitWriter<'a, IRQ_SETUP_0_SPEC, O>;
 #[doc = "Field `MATCH_ACTIVE` reader - "]
-pub type MATCH_ACTIVE_R = crate::BitReader<bool>;
+pub type MATCH_ACTIVE_R = crate::BitReader;
 impl R {
     #[doc = "Bits 0:4 - Day of the month (1..31)"]
     #[inline(always)]

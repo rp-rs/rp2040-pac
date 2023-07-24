@@ -35,9 +35,9 @@ impl From<crate::W<INTF0_SPEC>> for W {
     }
 }
 #[doc = "Field `INTF0` reader - Write 1s to force the corresponding bits in INTE0. The interrupt remains asserted until INTF0 is cleared."]
-pub type INTF0_R = crate::FieldReader<u16, u16>;
+pub type INTF0_R = crate::FieldReader<u16>;
 #[doc = "Field `INTF0` writer - Write 1s to force the corresponding bits in INTE0. The interrupt remains asserted until INTF0 is cleared."]
-pub type INTF0_W<'a, const O: u8> = crate::FieldWriter<'a, u32, INTF0_SPEC, u16, u16, 16, O>;
+pub type INTF0_W<'a, const O: u8> = crate::FieldWriter<'a, INTF0_SPEC, 16, O, u16>;
 impl R {
     #[doc = "Bits 0:15 - Write 1s to force the corresponding bits in INTE0. The interrupt remains asserted until INTF0 is cleared."]
     #[inline(always)]

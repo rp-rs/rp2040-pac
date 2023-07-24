@@ -35,30 +35,29 @@ impl From<crate::W<USB_PWR_SPEC>> for W {
     }
 }
 #[doc = "Field `VBUS_EN` reader - "]
-pub type VBUS_EN_R = crate::BitReader<bool>;
+pub type VBUS_EN_R = crate::BitReader;
 #[doc = "Field `VBUS_EN` writer - "]
-pub type VBUS_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, USB_PWR_SPEC, bool, O>;
+pub type VBUS_EN_W<'a, const O: u8> = crate::BitWriter<'a, USB_PWR_SPEC, O>;
 #[doc = "Field `VBUS_EN_OVERRIDE_EN` reader - "]
-pub type VBUS_EN_OVERRIDE_EN_R = crate::BitReader<bool>;
+pub type VBUS_EN_OVERRIDE_EN_R = crate::BitReader;
 #[doc = "Field `VBUS_EN_OVERRIDE_EN` writer - "]
-pub type VBUS_EN_OVERRIDE_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, USB_PWR_SPEC, bool, O>;
+pub type VBUS_EN_OVERRIDE_EN_W<'a, const O: u8> = crate::BitWriter<'a, USB_PWR_SPEC, O>;
 #[doc = "Field `VBUS_DETECT` reader - "]
-pub type VBUS_DETECT_R = crate::BitReader<bool>;
+pub type VBUS_DETECT_R = crate::BitReader;
 #[doc = "Field `VBUS_DETECT` writer - "]
-pub type VBUS_DETECT_W<'a, const O: u8> = crate::BitWriter<'a, u32, USB_PWR_SPEC, bool, O>;
+pub type VBUS_DETECT_W<'a, const O: u8> = crate::BitWriter<'a, USB_PWR_SPEC, O>;
 #[doc = "Field `VBUS_DETECT_OVERRIDE_EN` reader - "]
-pub type VBUS_DETECT_OVERRIDE_EN_R = crate::BitReader<bool>;
+pub type VBUS_DETECT_OVERRIDE_EN_R = crate::BitReader;
 #[doc = "Field `VBUS_DETECT_OVERRIDE_EN` writer - "]
-pub type VBUS_DETECT_OVERRIDE_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, USB_PWR_SPEC, bool, O>;
+pub type VBUS_DETECT_OVERRIDE_EN_W<'a, const O: u8> = crate::BitWriter<'a, USB_PWR_SPEC, O>;
 #[doc = "Field `OVERCURR_DETECT` reader - "]
-pub type OVERCURR_DETECT_R = crate::BitReader<bool>;
+pub type OVERCURR_DETECT_R = crate::BitReader;
 #[doc = "Field `OVERCURR_DETECT` writer - "]
-pub type OVERCURR_DETECT_W<'a, const O: u8> = crate::BitWriter<'a, u32, USB_PWR_SPEC, bool, O>;
+pub type OVERCURR_DETECT_W<'a, const O: u8> = crate::BitWriter<'a, USB_PWR_SPEC, O>;
 #[doc = "Field `OVERCURR_DETECT_EN` reader - "]
-pub type OVERCURR_DETECT_EN_R = crate::BitReader<bool>;
+pub type OVERCURR_DETECT_EN_R = crate::BitReader;
 #[doc = "Field `OVERCURR_DETECT_EN` writer - "]
-pub type OVERCURR_DETECT_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, USB_PWR_SPEC, bool, O>;
+pub type OVERCURR_DETECT_EN_W<'a, const O: u8> = crate::BitWriter<'a, USB_PWR_SPEC, O>;
 impl R {
     #[doc = "Bit 0"]
     #[inline(always)]

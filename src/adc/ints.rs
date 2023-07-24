@@ -15,7 +15,7 @@ impl From<crate::R<INTS_SPEC>> for R {
 }
 #[doc = "Field `FIFO` reader - Triggered when the sample FIFO reaches a certain level.  
  This level can be programmed via the FCS_THRESH field."]
-pub type FIFO_R = crate::BitReader<bool>;
+pub type FIFO_R = crate::BitReader;
 impl R {
     #[doc = "Bit 0 - Triggered when the sample FIFO reaches a certain level.  
  This level can be programmed via the FCS_THRESH field."]
@@ -24,7 +24,7 @@ impl R {
         FIFO_R::new((self.bits & 1) != 0)
     }
 }
-#[doc = "Interrupt status after masking & forcing  
+#[doc = "Interrupt status after masking &amp; forcing  
 
 This register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
 

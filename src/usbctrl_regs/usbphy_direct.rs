@@ -35,89 +35,87 @@ impl From<crate::W<USBPHY_DIRECT_SPEC>> for W {
     }
 }
 #[doc = "Field `DP_PULLUP_HISEL` reader - Enable the second DP pull up resistor. 0 - Pull = Rpu2; 1 - Pull = Rpu1 + Rpu2"]
-pub type DP_PULLUP_HISEL_R = crate::BitReader<bool>;
+pub type DP_PULLUP_HISEL_R = crate::BitReader;
 #[doc = "Field `DP_PULLUP_HISEL` writer - Enable the second DP pull up resistor. 0 - Pull = Rpu2; 1 - Pull = Rpu1 + Rpu2"]
-pub type DP_PULLUP_HISEL_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, USBPHY_DIRECT_SPEC, bool, O>;
+pub type DP_PULLUP_HISEL_W<'a, const O: u8> = crate::BitWriter<'a, USBPHY_DIRECT_SPEC, O>;
 #[doc = "Field `DP_PULLUP_EN` reader - DP pull up enable"]
-pub type DP_PULLUP_EN_R = crate::BitReader<bool>;
+pub type DP_PULLUP_EN_R = crate::BitReader;
 #[doc = "Field `DP_PULLUP_EN` writer - DP pull up enable"]
-pub type DP_PULLUP_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, USBPHY_DIRECT_SPEC, bool, O>;
+pub type DP_PULLUP_EN_W<'a, const O: u8> = crate::BitWriter<'a, USBPHY_DIRECT_SPEC, O>;
 #[doc = "Field `DP_PULLDN_EN` reader - DP pull down enable"]
-pub type DP_PULLDN_EN_R = crate::BitReader<bool>;
+pub type DP_PULLDN_EN_R = crate::BitReader;
 #[doc = "Field `DP_PULLDN_EN` writer - DP pull down enable"]
-pub type DP_PULLDN_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, USBPHY_DIRECT_SPEC, bool, O>;
+pub type DP_PULLDN_EN_W<'a, const O: u8> = crate::BitWriter<'a, USBPHY_DIRECT_SPEC, O>;
 #[doc = "Field `DM_PULLUP_HISEL` reader - Enable the second DM pull up resistor. 0 - Pull = Rpu2; 1 - Pull = Rpu1 + Rpu2"]
-pub type DM_PULLUP_HISEL_R = crate::BitReader<bool>;
+pub type DM_PULLUP_HISEL_R = crate::BitReader;
 #[doc = "Field `DM_PULLUP_HISEL` writer - Enable the second DM pull up resistor. 0 - Pull = Rpu2; 1 - Pull = Rpu1 + Rpu2"]
-pub type DM_PULLUP_HISEL_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, USBPHY_DIRECT_SPEC, bool, O>;
+pub type DM_PULLUP_HISEL_W<'a, const O: u8> = crate::BitWriter<'a, USBPHY_DIRECT_SPEC, O>;
 #[doc = "Field `DM_PULLUP_EN` reader - DM pull up enable"]
-pub type DM_PULLUP_EN_R = crate::BitReader<bool>;
+pub type DM_PULLUP_EN_R = crate::BitReader;
 #[doc = "Field `DM_PULLUP_EN` writer - DM pull up enable"]
-pub type DM_PULLUP_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, USBPHY_DIRECT_SPEC, bool, O>;
+pub type DM_PULLUP_EN_W<'a, const O: u8> = crate::BitWriter<'a, USBPHY_DIRECT_SPEC, O>;
 #[doc = "Field `DM_PULLDN_EN` reader - DM pull down enable"]
-pub type DM_PULLDN_EN_R = crate::BitReader<bool>;
+pub type DM_PULLDN_EN_R = crate::BitReader;
 #[doc = "Field `DM_PULLDN_EN` writer - DM pull down enable"]
-pub type DM_PULLDN_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, USBPHY_DIRECT_SPEC, bool, O>;
+pub type DM_PULLDN_EN_W<'a, const O: u8> = crate::BitWriter<'a, USBPHY_DIRECT_SPEC, O>;
 #[doc = "Field `TX_DP_OE` reader - Output enable. If TX_DIFFMODE=1, OE for DPP/DPM diff pair. 0 - DPP/DPM in Hi-Z state; 1 - DPP/DPM driving  
  If TX_DIFFMODE=0, OE for DPP only. 0 - DPP in Hi-Z state; 1 - DPP driving"]
-pub type TX_DP_OE_R = crate::BitReader<bool>;
+pub type TX_DP_OE_R = crate::BitReader;
 #[doc = "Field `TX_DP_OE` writer - Output enable. If TX_DIFFMODE=1, OE for DPP/DPM diff pair. 0 - DPP/DPM in Hi-Z state; 1 - DPP/DPM driving  
  If TX_DIFFMODE=0, OE for DPP only. 0 - DPP in Hi-Z state; 1 - DPP driving"]
-pub type TX_DP_OE_W<'a, const O: u8> = crate::BitWriter<'a, u32, USBPHY_DIRECT_SPEC, bool, O>;
+pub type TX_DP_OE_W<'a, const O: u8> = crate::BitWriter<'a, USBPHY_DIRECT_SPEC, O>;
 #[doc = "Field `TX_DM_OE` reader - Output enable. If TX_DIFFMODE=1, Ignored.  
  If TX_DIFFMODE=0, OE for DPM only. 0 - DPM in Hi-Z state; 1 - DPM driving"]
-pub type TX_DM_OE_R = crate::BitReader<bool>;
+pub type TX_DM_OE_R = crate::BitReader;
 #[doc = "Field `TX_DM_OE` writer - Output enable. If TX_DIFFMODE=1, Ignored.  
  If TX_DIFFMODE=0, OE for DPM only. 0 - DPM in Hi-Z state; 1 - DPM driving"]
-pub type TX_DM_OE_W<'a, const O: u8> = crate::BitWriter<'a, u32, USBPHY_DIRECT_SPEC, bool, O>;
+pub type TX_DM_OE_W<'a, const O: u8> = crate::BitWriter<'a, USBPHY_DIRECT_SPEC, O>;
 #[doc = "Field `TX_DP` reader - Output data. If TX_DIFFMODE=1, Drives DPP/DPM diff pair. TX_DP_OE=1 to enable drive. DPP=TX_DP, DPM=~TX_DP  
  If TX_DIFFMODE=0, Drives DPP only. TX_DP_OE=1 to enable drive. DPP=TX_DP"]
-pub type TX_DP_R = crate::BitReader<bool>;
+pub type TX_DP_R = crate::BitReader;
 #[doc = "Field `TX_DP` writer - Output data. If TX_DIFFMODE=1, Drives DPP/DPM diff pair. TX_DP_OE=1 to enable drive. DPP=TX_DP, DPM=~TX_DP  
  If TX_DIFFMODE=0, Drives DPP only. TX_DP_OE=1 to enable drive. DPP=TX_DP"]
-pub type TX_DP_W<'a, const O: u8> = crate::BitWriter<'a, u32, USBPHY_DIRECT_SPEC, bool, O>;
+pub type TX_DP_W<'a, const O: u8> = crate::BitWriter<'a, USBPHY_DIRECT_SPEC, O>;
 #[doc = "Field `TX_DM` reader - Output data. TX_DIFFMODE=1, Ignored  
  TX_DIFFMODE=0, Drives DPM only. TX_DM_OE=1 to enable drive. DPM=TX_DM"]
-pub type TX_DM_R = crate::BitReader<bool>;
+pub type TX_DM_R = crate::BitReader;
 #[doc = "Field `TX_DM` writer - Output data. TX_DIFFMODE=1, Ignored  
  TX_DIFFMODE=0, Drives DPM only. TX_DM_OE=1 to enable drive. DPM=TX_DM"]
-pub type TX_DM_W<'a, const O: u8> = crate::BitWriter<'a, u32, USBPHY_DIRECT_SPEC, bool, O>;
+pub type TX_DM_W<'a, const O: u8> = crate::BitWriter<'a, USBPHY_DIRECT_SPEC, O>;
 #[doc = "Field `RX_PD` reader - RX power down override (if override enable is set). 1 = powered down."]
-pub type RX_PD_R = crate::BitReader<bool>;
+pub type RX_PD_R = crate::BitReader;
 #[doc = "Field `RX_PD` writer - RX power down override (if override enable is set). 1 = powered down."]
-pub type RX_PD_W<'a, const O: u8> = crate::BitWriter<'a, u32, USBPHY_DIRECT_SPEC, bool, O>;
+pub type RX_PD_W<'a, const O: u8> = crate::BitWriter<'a, USBPHY_DIRECT_SPEC, O>;
 #[doc = "Field `TX_PD` reader - TX power down override (if override enable is set). 1 = powered down."]
-pub type TX_PD_R = crate::BitReader<bool>;
+pub type TX_PD_R = crate::BitReader;
 #[doc = "Field `TX_PD` writer - TX power down override (if override enable is set). 1 = powered down."]
-pub type TX_PD_W<'a, const O: u8> = crate::BitWriter<'a, u32, USBPHY_DIRECT_SPEC, bool, O>;
+pub type TX_PD_W<'a, const O: u8> = crate::BitWriter<'a, USBPHY_DIRECT_SPEC, O>;
 #[doc = "Field `TX_FSSLEW` reader - TX_FSSLEW=0: Low speed slew rate  
  TX_FSSLEW=1: Full speed slew rate"]
-pub type TX_FSSLEW_R = crate::BitReader<bool>;
+pub type TX_FSSLEW_R = crate::BitReader;
 #[doc = "Field `TX_FSSLEW` writer - TX_FSSLEW=0: Low speed slew rate  
  TX_FSSLEW=1: Full speed slew rate"]
-pub type TX_FSSLEW_W<'a, const O: u8> = crate::BitWriter<'a, u32, USBPHY_DIRECT_SPEC, bool, O>;
+pub type TX_FSSLEW_W<'a, const O: u8> = crate::BitWriter<'a, USBPHY_DIRECT_SPEC, O>;
 #[doc = "Field `TX_DIFFMODE` reader - TX_DIFFMODE=0: Single ended mode  
  TX_DIFFMODE=1: Differential drive mode (TX_DM, TX_DM_OE ignored)"]
-pub type TX_DIFFMODE_R = crate::BitReader<bool>;
+pub type TX_DIFFMODE_R = crate::BitReader;
 #[doc = "Field `TX_DIFFMODE` writer - TX_DIFFMODE=0: Single ended mode  
  TX_DIFFMODE=1: Differential drive mode (TX_DM, TX_DM_OE ignored)"]
-pub type TX_DIFFMODE_W<'a, const O: u8> = crate::BitWriter<'a, u32, USBPHY_DIRECT_SPEC, bool, O>;
+pub type TX_DIFFMODE_W<'a, const O: u8> = crate::BitWriter<'a, USBPHY_DIRECT_SPEC, O>;
 #[doc = "Field `RX_DD` reader - Differential RX"]
-pub type RX_DD_R = crate::BitReader<bool>;
+pub type RX_DD_R = crate::BitReader;
 #[doc = "Field `RX_DP` reader - DPP pin state"]
-pub type RX_DP_R = crate::BitReader<bool>;
+pub type RX_DP_R = crate::BitReader;
 #[doc = "Field `RX_DM` reader - DPM pin state"]
-pub type RX_DM_R = crate::BitReader<bool>;
+pub type RX_DM_R = crate::BitReader;
 #[doc = "Field `DP_OVCN` reader - DP overcurrent"]
-pub type DP_OVCN_R = crate::BitReader<bool>;
+pub type DP_OVCN_R = crate::BitReader;
 #[doc = "Field `DM_OVCN` reader - DM overcurrent"]
-pub type DM_OVCN_R = crate::BitReader<bool>;
+pub type DM_OVCN_R = crate::BitReader;
 #[doc = "Field `DP_OVV` reader - DP over voltage"]
-pub type DP_OVV_R = crate::BitReader<bool>;
+pub type DP_OVV_R = crate::BitReader;
 #[doc = "Field `DM_OVV` reader - DM over voltage"]
-pub type DM_OVV_R = crate::BitReader<bool>;
+pub type DM_OVV_R = crate::BitReader;
 impl R {
     #[doc = "Bit 0 - Enable the second DP pull up resistor. 0 - Pull = Rpu2; 1 - Pull = Rpu1 + Rpu2"]
     #[inline(always)]

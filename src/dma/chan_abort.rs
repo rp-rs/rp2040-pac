@@ -37,12 +37,11 @@ impl From<crate::W<CHAN_ABORT_SPEC>> for W {
 #[doc = "Field `CHAN_ABORT` reader - Each bit corresponds to a channel. Writing a 1 aborts whatever transfer sequence is in progress on that channel. The bit will remain high until any in-flight transfers have been flushed through the address and data FIFOs.  
 
  After writing, this register must be polled until it returns all-zero. Until this point, it is unsafe to restart the channel."]
-pub type CHAN_ABORT_R = crate::FieldReader<u16, u16>;
+pub type CHAN_ABORT_R = crate::FieldReader<u16>;
 #[doc = "Field `CHAN_ABORT` writer - Each bit corresponds to a channel. Writing a 1 aborts whatever transfer sequence is in progress on that channel. The bit will remain high until any in-flight transfers have been flushed through the address and data FIFOs.  
 
  After writing, this register must be polled until it returns all-zero. Until this point, it is unsafe to restart the channel."]
-pub type CHAN_ABORT_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, CHAN_ABORT_SPEC, u16, u16, 16, O>;
+pub type CHAN_ABORT_W<'a, const O: u8> = crate::FieldWriter<'a, CHAN_ABORT_SPEC, 16, O, u16>;
 impl R {
     #[doc = "Bits 0:15 - Each bit corresponds to a channel. Writing a 1 aborts whatever transfer sequence is in progress on that channel. The bit will remain high until any in-flight transfers have been flushed through the address and data FIFOs.  
 

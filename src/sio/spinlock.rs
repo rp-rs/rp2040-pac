@@ -34,6 +34,16 @@ impl From<crate::W<SPINLOCK_SPEC>> for W {
         W(writer)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        write!(f, "{}", self.bits())
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<SPINLOCK_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 impl W {
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
@@ -48,7 +58,7 @@ impl W {
 
  Writing (any value) releases the lock.  
  If core 0 and core 1 attempt to claim the same lock simultaneously, core 0 wins.  
- The value returned on success is 0x1 << lock number.  
+ The value returned on success is 0x1 &lt;&lt; lock number.  
 
 This register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
 

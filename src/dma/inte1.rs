@@ -35,9 +35,9 @@ impl From<crate::W<INTE1_SPEC>> for W {
     }
 }
 #[doc = "Field `INTE1` reader - Set bit n to pass interrupts from channel n to DMA IRQ 1."]
-pub type INTE1_R = crate::FieldReader<u16, u16>;
+pub type INTE1_R = crate::FieldReader<u16>;
 #[doc = "Field `INTE1` writer - Set bit n to pass interrupts from channel n to DMA IRQ 1."]
-pub type INTE1_W<'a, const O: u8> = crate::FieldWriter<'a, u32, INTE1_SPEC, u16, u16, 16, O>;
+pub type INTE1_W<'a, const O: u8> = crate::FieldWriter<'a, INTE1_SPEC, 16, O, u16>;
 impl R {
     #[doc = "Bits 0:15 - Set bit n to pass interrupts from channel n to DMA IRQ 1."]
     #[inline(always)]

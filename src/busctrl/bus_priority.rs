@@ -35,21 +35,21 @@ impl From<crate::W<BUS_PRIORITY_SPEC>> for W {
     }
 }
 #[doc = "Field `PROC0` reader - 0 - low priority, 1 - high priority"]
-pub type PROC0_R = crate::BitReader<bool>;
+pub type PROC0_R = crate::BitReader;
 #[doc = "Field `PROC0` writer - 0 - low priority, 1 - high priority"]
-pub type PROC0_W<'a, const O: u8> = crate::BitWriter<'a, u32, BUS_PRIORITY_SPEC, bool, O>;
+pub type PROC0_W<'a, const O: u8> = crate::BitWriter<'a, BUS_PRIORITY_SPEC, O>;
 #[doc = "Field `PROC1` reader - 0 - low priority, 1 - high priority"]
-pub type PROC1_R = crate::BitReader<bool>;
+pub type PROC1_R = crate::BitReader;
 #[doc = "Field `PROC1` writer - 0 - low priority, 1 - high priority"]
-pub type PROC1_W<'a, const O: u8> = crate::BitWriter<'a, u32, BUS_PRIORITY_SPEC, bool, O>;
+pub type PROC1_W<'a, const O: u8> = crate::BitWriter<'a, BUS_PRIORITY_SPEC, O>;
 #[doc = "Field `DMA_R` reader - 0 - low priority, 1 - high priority"]
-pub type DMA_R_R = crate::BitReader<bool>;
+pub type DMA_R_R = crate::BitReader;
 #[doc = "Field `DMA_R` writer - 0 - low priority, 1 - high priority"]
-pub type DMA_R_W<'a, const O: u8> = crate::BitWriter<'a, u32, BUS_PRIORITY_SPEC, bool, O>;
+pub type DMA_R_W<'a, const O: u8> = crate::BitWriter<'a, BUS_PRIORITY_SPEC, O>;
 #[doc = "Field `DMA_W` reader - 0 - low priority, 1 - high priority"]
-pub type DMA_W_R = crate::BitReader<bool>;
+pub type DMA_W_R = crate::BitReader;
 #[doc = "Field `DMA_W` writer - 0 - low priority, 1 - high priority"]
-pub type DMA_W_W<'a, const O: u8> = crate::BitWriter<'a, u32, BUS_PRIORITY_SPEC, bool, O>;
+pub type DMA_W_W<'a, const O: u8> = crate::BitWriter<'a, BUS_PRIORITY_SPEC, O>;
 impl R {
     #[doc = "Bit 0 - 0 - low priority, 1 - high priority"]
     #[inline(always)]
