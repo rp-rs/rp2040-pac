@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-SVDTOOLS="${SVDTOOLS:-svd}"
+SVDTOOLS="${SVDTOOLS:-svdtools}"
 
 set -ex
 
