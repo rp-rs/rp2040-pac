@@ -14,25 +14,12 @@ impl From<crate::R<RXUICR_SPEC>> for R {
     }
 }
 #[doc = "Field `RXUICR` reader - Clear-on-read receive FIFO underflow interrupt"]
-pub struct RXUICR_R(crate::FieldReader<bool, bool>);
-impl RXUICR_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        RXUICR_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RXUICR_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RXUICR_R = crate::BitReader<bool>;
 impl R {
     #[doc = "Bit 0 - Clear-on-read receive FIFO underflow interrupt"]
     #[inline(always)]
     pub fn rxuicr(&self) -> RXUICR_R {
-        RXUICR_R::new((self.bits & 0x01) != 0)
+        RXUICR_R::new((self.bits & 1) != 0)
     }
 }
 #[doc = "RX FIFO underflow interrupt clear  
@@ -50,8 +37,5 @@ impl crate::Readable for RXUICR_SPEC {
 }
 #[doc = "`reset()` method sets RXUICR to value 0"]
 impl crate::Resettable for RXUICR_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

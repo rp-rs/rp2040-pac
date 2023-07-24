@@ -34,94 +34,38 @@ impl From<crate::W<GPIO_SPEC>> for W {
         W(writer)
     }
 }
-#[doc = "Field `OD` reader - Output disable. Has priority over output enable from peripherals"]
-pub struct OD_R(crate::FieldReader<bool, bool>);
-impl OD_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        OD_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for OD_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-#[doc = "Field `OD` writer - Output disable. Has priority over output enable from peripherals"]
-pub struct OD_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> OD_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 7)) | ((value as u32 & 0x01) << 7);
-        self.w
-    }
-}
-#[doc = "Field `IE` reader - Input enable"]
-pub struct IE_R(crate::FieldReader<bool, bool>);
-impl IE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        IE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for IE_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-#[doc = "Field `IE` writer - Input enable"]
-pub struct IE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> IE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 6)) | ((value as u32 & 0x01) << 6);
-        self.w
-    }
-}
+#[doc = "Field `SLEWFAST` reader - Slew rate control. 1 = Fast, 0 = Slow"]
+pub type SLEWFAST_R = crate::BitReader<bool>;
+#[doc = "Field `SLEWFAST` writer - Slew rate control. 1 = Fast, 0 = Slow"]
+pub type SLEWFAST_W<'a, const O: u8> = crate::BitWriter<'a, u32, GPIO_SPEC, bool, O>;
+#[doc = "Field `SCHMITT` reader - Enable schmitt trigger"]
+pub type SCHMITT_R = crate::BitReader<bool>;
+#[doc = "Field `SCHMITT` writer - Enable schmitt trigger"]
+pub type SCHMITT_W<'a, const O: u8> = crate::BitWriter<'a, u32, GPIO_SPEC, bool, O>;
+#[doc = "Field `PDE` reader - Pull down enable"]
+pub type PDE_R = crate::BitReader<bool>;
+#[doc = "Field `PDE` writer - Pull down enable"]
+pub type PDE_W<'a, const O: u8> = crate::BitWriter<'a, u32, GPIO_SPEC, bool, O>;
+#[doc = "Field `PUE` reader - Pull up enable"]
+pub type PUE_R = crate::BitReader<bool>;
+#[doc = "Field `PUE` writer - Pull up enable"]
+pub type PUE_W<'a, const O: u8> = crate::BitWriter<'a, u32, GPIO_SPEC, bool, O>;
+#[doc = "Field `DRIVE` reader - Drive strength."]
+pub type DRIVE_R = crate::FieldReader<u8, DRIVE_A>;
 #[doc = "Drive strength.  
 
 Value on reset: 1"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u8)]
 pub enum DRIVE_A {
     #[doc = "0: `0`"]
-    _2MA = 0,
+    _2M_A = 0,
     #[doc = "1: `1`"]
-    _4MA = 1,
+    _4M_A = 1,
     #[doc = "2: `10`"]
-    _8MA = 2,
+    _8M_A = 2,
     #[doc = "3: `11`"]
-    _12MA = 3,
+    _12M_A = 3,
 }
 impl From<DRIVE_A> for u8 {
     #[inline(always)]
@@ -129,309 +73,150 @@ impl From<DRIVE_A> for u8 {
         variant as _
     }
 }
-#[doc = "Field `DRIVE` reader - Drive strength."]
-pub struct DRIVE_R(crate::FieldReader<u8, DRIVE_A>);
 impl DRIVE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        DRIVE_R(crate::FieldReader::new(bits))
-    }
-    #[doc = r"Get enumerated values variant"]
+    #[doc = "Get enumerated values variant"]
     #[inline(always)]
     pub fn variant(&self) -> DRIVE_A {
         match self.bits {
-            0 => DRIVE_A::_2MA,
-            1 => DRIVE_A::_4MA,
-            2 => DRIVE_A::_8MA,
-            3 => DRIVE_A::_12MA,
+            0 => DRIVE_A::_2M_A,
+            1 => DRIVE_A::_4M_A,
+            2 => DRIVE_A::_8M_A,
+            3 => DRIVE_A::_12M_A,
             _ => unreachable!(),
         }
     }
-    #[doc = "Checks if the value of the field is `_2MA`"]
+    #[doc = "Checks if the value of the field is `_2M_A`"]
     #[inline(always)]
     pub fn is_2m_a(&self) -> bool {
-        **self == DRIVE_A::_2MA
+        *self == DRIVE_A::_2M_A
     }
-    #[doc = "Checks if the value of the field is `_4MA`"]
+    #[doc = "Checks if the value of the field is `_4M_A`"]
     #[inline(always)]
     pub fn is_4m_a(&self) -> bool {
-        **self == DRIVE_A::_4MA
+        *self == DRIVE_A::_4M_A
     }
-    #[doc = "Checks if the value of the field is `_8MA`"]
+    #[doc = "Checks if the value of the field is `_8M_A`"]
     #[inline(always)]
     pub fn is_8m_a(&self) -> bool {
-        **self == DRIVE_A::_8MA
+        *self == DRIVE_A::_8M_A
     }
-    #[doc = "Checks if the value of the field is `_12MA`"]
+    #[doc = "Checks if the value of the field is `_12M_A`"]
     #[inline(always)]
     pub fn is_12m_a(&self) -> bool {
-        **self == DRIVE_A::_12MA
-    }
-}
-impl core::ops::Deref for DRIVE_R {
-    type Target = crate::FieldReader<u8, DRIVE_A>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
+        *self == DRIVE_A::_12M_A
     }
 }
 #[doc = "Field `DRIVE` writer - Drive strength."]
-pub struct DRIVE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> DRIVE_W<'a> {
-    #[doc = r"Writes `variant` to the field"]
-    #[inline(always)]
-    pub fn variant(self, variant: DRIVE_A) -> &'a mut W {
-        self.bits(variant.into())
-    }
+pub type DRIVE_W<'a, const O: u8> = crate::FieldWriterSafe<'a, u32, GPIO_SPEC, u8, DRIVE_A, 2, O>;
+impl<'a, const O: u8> DRIVE_W<'a, O> {
     #[doc = "`0`"]
     #[inline(always)]
     pub fn _2m_a(self) -> &'a mut W {
-        self.variant(DRIVE_A::_2MA)
+        self.variant(DRIVE_A::_2M_A)
     }
     #[doc = "`1`"]
     #[inline(always)]
     pub fn _4m_a(self) -> &'a mut W {
-        self.variant(DRIVE_A::_4MA)
+        self.variant(DRIVE_A::_4M_A)
     }
     #[doc = "`10`"]
     #[inline(always)]
     pub fn _8m_a(self) -> &'a mut W {
-        self.variant(DRIVE_A::_8MA)
+        self.variant(DRIVE_A::_8M_A)
     }
     #[doc = "`11`"]
     #[inline(always)]
     pub fn _12m_a(self) -> &'a mut W {
-        self.variant(DRIVE_A::_12MA)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x03 << 4)) | ((value as u32 & 0x03) << 4);
-        self.w
+        self.variant(DRIVE_A::_12M_A)
     }
 }
-#[doc = "Field `PUE` reader - Pull up enable"]
-pub struct PUE_R(crate::FieldReader<bool, bool>);
-impl PUE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        PUE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PUE_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-#[doc = "Field `PUE` writer - Pull up enable"]
-pub struct PUE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PUE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 3)) | ((value as u32 & 0x01) << 3);
-        self.w
-    }
-}
-#[doc = "Field `PDE` reader - Pull down enable"]
-pub struct PDE_R(crate::FieldReader<bool, bool>);
-impl PDE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        PDE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PDE_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-#[doc = "Field `PDE` writer - Pull down enable"]
-pub struct PDE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PDE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 2)) | ((value as u32 & 0x01) << 2);
-        self.w
-    }
-}
-#[doc = "Field `SCHMITT` reader - Enable schmitt trigger"]
-pub struct SCHMITT_R(crate::FieldReader<bool, bool>);
-impl SCHMITT_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        SCHMITT_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SCHMITT_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-#[doc = "Field `SCHMITT` writer - Enable schmitt trigger"]
-pub struct SCHMITT_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SCHMITT_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u32 & 0x01) << 1);
-        self.w
-    }
-}
-#[doc = "Field `SLEWFAST` reader - Slew rate control. 1 = Fast, 0 = Slow"]
-pub struct SLEWFAST_R(crate::FieldReader<bool, bool>);
-impl SLEWFAST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        SLEWFAST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SLEWFAST_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-#[doc = "Field `SLEWFAST` writer - Slew rate control. 1 = Fast, 0 = Slow"]
-pub struct SLEWFAST_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SLEWFAST_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
-        self.w
-    }
-}
+#[doc = "Field `IE` reader - Input enable"]
+pub type IE_R = crate::BitReader<bool>;
+#[doc = "Field `IE` writer - Input enable"]
+pub type IE_W<'a, const O: u8> = crate::BitWriter<'a, u32, GPIO_SPEC, bool, O>;
+#[doc = "Field `OD` reader - Output disable. Has priority over output enable from peripherals"]
+pub type OD_R = crate::BitReader<bool>;
+#[doc = "Field `OD` writer - Output disable. Has priority over output enable from peripherals"]
+pub type OD_W<'a, const O: u8> = crate::BitWriter<'a, u32, GPIO_SPEC, bool, O>;
 impl R {
-    #[doc = "Bit 7 - Output disable. Has priority over output enable from peripherals"]
+    #[doc = "Bit 0 - Slew rate control. 1 = Fast, 0 = Slow"]
     #[inline(always)]
-    pub fn od(&self) -> OD_R {
-        OD_R::new(((self.bits >> 7) & 0x01) != 0)
-    }
-    #[doc = "Bit 6 - Input enable"]
-    #[inline(always)]
-    pub fn ie(&self) -> IE_R {
-        IE_R::new(((self.bits >> 6) & 0x01) != 0)
-    }
-    #[doc = "Bits 4:5 - Drive strength."]
-    #[inline(always)]
-    pub fn drive(&self) -> DRIVE_R {
-        DRIVE_R::new(((self.bits >> 4) & 0x03) as u8)
-    }
-    #[doc = "Bit 3 - Pull up enable"]
-    #[inline(always)]
-    pub fn pue(&self) -> PUE_R {
-        PUE_R::new(((self.bits >> 3) & 0x01) != 0)
-    }
-    #[doc = "Bit 2 - Pull down enable"]
-    #[inline(always)]
-    pub fn pde(&self) -> PDE_R {
-        PDE_R::new(((self.bits >> 2) & 0x01) != 0)
+    pub fn slewfast(&self) -> SLEWFAST_R {
+        SLEWFAST_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - Enable schmitt trigger"]
     #[inline(always)]
     pub fn schmitt(&self) -> SCHMITT_R {
-        SCHMITT_R::new(((self.bits >> 1) & 0x01) != 0)
-    }
-    #[doc = "Bit 0 - Slew rate control. 1 = Fast, 0 = Slow"]
-    #[inline(always)]
-    pub fn slewfast(&self) -> SLEWFAST_R {
-        SLEWFAST_R::new((self.bits & 0x01) != 0)
-    }
-}
-impl W {
-    #[doc = "Bit 7 - Output disable. Has priority over output enable from peripherals"]
-    #[inline(always)]
-    pub fn od(&mut self) -> OD_W {
-        OD_W { w: self }
-    }
-    #[doc = "Bit 6 - Input enable"]
-    #[inline(always)]
-    pub fn ie(&mut self) -> IE_W {
-        IE_W { w: self }
-    }
-    #[doc = "Bits 4:5 - Drive strength."]
-    #[inline(always)]
-    pub fn drive(&mut self) -> DRIVE_W {
-        DRIVE_W { w: self }
-    }
-    #[doc = "Bit 3 - Pull up enable"]
-    #[inline(always)]
-    pub fn pue(&mut self) -> PUE_W {
-        PUE_W { w: self }
+        SCHMITT_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2 - Pull down enable"]
     #[inline(always)]
-    pub fn pde(&mut self) -> PDE_W {
-        PDE_W { w: self }
+    pub fn pde(&self) -> PDE_R {
+        PDE_R::new(((self.bits >> 2) & 1) != 0)
+    }
+    #[doc = "Bit 3 - Pull up enable"]
+    #[inline(always)]
+    pub fn pue(&self) -> PUE_R {
+        PUE_R::new(((self.bits >> 3) & 1) != 0)
+    }
+    #[doc = "Bits 4:5 - Drive strength."]
+    #[inline(always)]
+    pub fn drive(&self) -> DRIVE_R {
+        DRIVE_R::new(((self.bits >> 4) & 3) as u8)
+    }
+    #[doc = "Bit 6 - Input enable"]
+    #[inline(always)]
+    pub fn ie(&self) -> IE_R {
+        IE_R::new(((self.bits >> 6) & 1) != 0)
+    }
+    #[doc = "Bit 7 - Output disable. Has priority over output enable from peripherals"]
+    #[inline(always)]
+    pub fn od(&self) -> OD_R {
+        OD_R::new(((self.bits >> 7) & 1) != 0)
+    }
+}
+impl W {
+    #[doc = "Bit 0 - Slew rate control. 1 = Fast, 0 = Slow"]
+    #[inline(always)]
+    #[must_use]
+    pub fn slewfast(&mut self) -> SLEWFAST_W<0> {
+        SLEWFAST_W::new(self)
     }
     #[doc = "Bit 1 - Enable schmitt trigger"]
     #[inline(always)]
-    pub fn schmitt(&mut self) -> SCHMITT_W {
-        SCHMITT_W { w: self }
+    #[must_use]
+    pub fn schmitt(&mut self) -> SCHMITT_W<1> {
+        SCHMITT_W::new(self)
     }
-    #[doc = "Bit 0 - Slew rate control. 1 = Fast, 0 = Slow"]
+    #[doc = "Bit 2 - Pull down enable"]
     #[inline(always)]
-    pub fn slewfast(&mut self) -> SLEWFAST_W {
-        SLEWFAST_W { w: self }
+    #[must_use]
+    pub fn pde(&mut self) -> PDE_W<2> {
+        PDE_W::new(self)
+    }
+    #[doc = "Bit 3 - Pull up enable"]
+    #[inline(always)]
+    #[must_use]
+    pub fn pue(&mut self) -> PUE_W<3> {
+        PUE_W::new(self)
+    }
+    #[doc = "Bits 4:5 - Drive strength."]
+    #[inline(always)]
+    #[must_use]
+    pub fn drive(&mut self) -> DRIVE_W<4> {
+        DRIVE_W::new(self)
+    }
+    #[doc = "Bit 6 - Input enable"]
+    #[inline(always)]
+    #[must_use]
+    pub fn ie(&mut self) -> IE_W<6> {
+        IE_W::new(self)
+    }
+    #[doc = "Bit 7 - Output disable. Has priority over output enable from peripherals"]
+    #[inline(always)]
+    #[must_use]
+    pub fn od(&mut self) -> OD_W<7> {
+        OD_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
@@ -456,11 +241,10 @@ impl crate::Readable for GPIO_SPEC {
 #[doc = "`write(|w| ..)` method takes [gpio::W](W) writer structure"]
 impl crate::Writable for GPIO_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets GPIO%s to value 0x56"]
 impl crate::Resettable for GPIO_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x56
-    }
+    const RESET_VALUE: Self::Ux = 0x56;
 }

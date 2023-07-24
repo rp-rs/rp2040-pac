@@ -15,26 +15,13 @@ impl From<crate::R<INTR_SPEC>> for R {
 }
 #[doc = "Field `FIFO` reader - Triggered when the sample FIFO reaches a certain level.  
  This level can be programmed via the FCS_THRESH field."]
-pub struct FIFO_R(crate::FieldReader<bool, bool>);
-impl FIFO_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        FIFO_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for FIFO_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type FIFO_R = crate::BitReader<bool>;
 impl R {
     #[doc = "Bit 0 - Triggered when the sample FIFO reaches a certain level.  
  This level can be programmed via the FCS_THRESH field."]
     #[inline(always)]
     pub fn fifo(&self) -> FIFO_R {
-        FIFO_R::new((self.bits & 0x01) != 0)
+        FIFO_R::new((self.bits & 1) != 0)
     }
 }
 #[doc = "Raw Interrupts  
@@ -52,8 +39,5 @@ impl crate::Readable for INTR_SPEC {
 }
 #[doc = "`reset()` method sets INTR to value 0"]
 impl crate::Resettable for INTR_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

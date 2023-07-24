@@ -44,20 +44,7 @@ impl From<crate::W<NVIC_ISPR_SPEC>> for W {
  Note: Writing 1 to the NVIC_ISPR bit corresponding to:  
  An interrupt that is pending has no effect.  
  A disabled interrupt sets the state of that interrupt to pending."]
-pub struct SETPEND_R(crate::FieldReader<u32, u32>);
-impl SETPEND_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u32) -> Self {
-        SETPEND_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SETPEND_R {
-    type Target = crate::FieldReader<u32, u32>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SETPEND_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `SETPEND` writer - Interrupt set-pending bits.  
  Write:  
  0 = No effect.  
@@ -68,17 +55,7 @@ impl core::ops::Deref for SETPEND_R {
  Note: Writing 1 to the NVIC_ISPR bit corresponding to:  
  An interrupt that is pending has no effect.  
  A disabled interrupt sets the state of that interrupt to pending."]
-pub struct SETPEND_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SETPEND_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u32) -> &'a mut W {
-        self.w.bits = value;
-        self.w
-    }
-}
+pub type SETPEND_W<'a, const O: u8> = crate::FieldWriter<'a, u32, NVIC_ISPR_SPEC, u32, u32, 32, O>;
 impl R {
     #[doc = "Bits 0:31 - Interrupt set-pending bits.  
  Write:  
@@ -107,8 +84,9 @@ impl W {
  An interrupt that is pending has no effect.  
  A disabled interrupt sets the state of that interrupt to pending."]
     #[inline(always)]
-    pub fn setpend(&mut self) -> SETPEND_W {
-        SETPEND_W { w: self }
+    #[must_use]
+    pub fn setpend(&mut self) -> SETPEND_W<0> {
+        SETPEND_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
@@ -133,11 +111,10 @@ impl crate::Readable for NVIC_ISPR_SPEC {
 #[doc = "`write(|w| ..)` method takes [nvic_ispr::W](W) writer structure"]
 impl crate::Writable for NVIC_ISPR_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets NVIC_ISPR to value 0"]
 impl crate::Resettable for NVIC_ISPR_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

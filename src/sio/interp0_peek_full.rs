@@ -28,8 +28,5 @@ impl crate::Readable for INTERP0_PEEK_FULL_SPEC {
 }
 #[doc = "`reset()` method sets INTERP0_PEEK_FULL to value 0"]
 impl crate::Resettable for INTERP0_PEEK_FULL_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

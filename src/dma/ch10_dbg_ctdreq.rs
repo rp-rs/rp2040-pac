@@ -35,32 +35,10 @@ impl From<crate::W<CH10_DBG_CTDREQ_SPEC>> for W {
     }
 }
 #[doc = "Field `CH10_DBG_CTDREQ` reader - "]
-pub struct CH10_DBG_CTDREQ_R(crate::FieldReader<u8, u8>);
-impl CH10_DBG_CTDREQ_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        CH10_DBG_CTDREQ_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CH10_DBG_CTDREQ_R {
-    type Target = crate::FieldReader<u8, u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CH10_DBG_CTDREQ_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `CH10_DBG_CTDREQ` writer - "]
-pub struct CH10_DBG_CTDREQ_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CH10_DBG_CTDREQ_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x3f) | (value as u32 & 0x3f);
-        self.w
-    }
-}
+pub type CH10_DBG_CTDREQ_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, CH10_DBG_CTDREQ_SPEC, u8, u8, 6, O>;
 impl R {
     #[doc = "Bits 0:5"]
     #[inline(always)]
@@ -71,8 +49,9 @@ impl R {
 impl W {
     #[doc = "Bits 0:5"]
     #[inline(always)]
-    pub fn ch10_dbg_ctdreq(&mut self) -> CH10_DBG_CTDREQ_W {
-        CH10_DBG_CTDREQ_W { w: self }
+    #[must_use]
+    pub fn ch10_dbg_ctdreq(&mut self) -> CH10_DBG_CTDREQ_W<0> {
+        CH10_DBG_CTDREQ_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
@@ -97,11 +76,10 @@ impl crate::Readable for CH10_DBG_CTDREQ_SPEC {
 #[doc = "`write(|w| ..)` method takes [ch10_dbg_ctdreq::W](W) writer structure"]
 impl crate::Writable for CH10_DBG_CTDREQ_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0x3f;
 }
 #[doc = "`reset()` method sets CH10_DBG_CTDREQ to value 0"]
 impl crate::Resettable for CH10_DBG_CTDREQ_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

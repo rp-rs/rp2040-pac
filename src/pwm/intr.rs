@@ -34,384 +34,128 @@ impl From<crate::W<INTR_SPEC>> for W {
         W(writer)
     }
 }
-#[doc = "Field `CH7` reader - "]
-pub struct CH7_R(crate::FieldReader<bool, bool>);
-impl CH7_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CH7_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CH7_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-#[doc = "Field `CH7` writer - "]
-pub struct CH7_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CH7_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 7)) | ((value as u32 & 0x01) << 7);
-        self.w
-    }
-}
-#[doc = "Field `CH6` reader - "]
-pub struct CH6_R(crate::FieldReader<bool, bool>);
-impl CH6_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CH6_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CH6_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-#[doc = "Field `CH6` writer - "]
-pub struct CH6_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CH6_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 6)) | ((value as u32 & 0x01) << 6);
-        self.w
-    }
-}
-#[doc = "Field `CH5` reader - "]
-pub struct CH5_R(crate::FieldReader<bool, bool>);
-impl CH5_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CH5_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CH5_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-#[doc = "Field `CH5` writer - "]
-pub struct CH5_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CH5_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 5)) | ((value as u32 & 0x01) << 5);
-        self.w
-    }
-}
-#[doc = "Field `CH4` reader - "]
-pub struct CH4_R(crate::FieldReader<bool, bool>);
-impl CH4_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CH4_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CH4_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-#[doc = "Field `CH4` writer - "]
-pub struct CH4_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CH4_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 4)) | ((value as u32 & 0x01) << 4);
-        self.w
-    }
-}
-#[doc = "Field `CH3` reader - "]
-pub struct CH3_R(crate::FieldReader<bool, bool>);
-impl CH3_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CH3_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CH3_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-#[doc = "Field `CH3` writer - "]
-pub struct CH3_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CH3_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 3)) | ((value as u32 & 0x01) << 3);
-        self.w
-    }
-}
-#[doc = "Field `CH2` reader - "]
-pub struct CH2_R(crate::FieldReader<bool, bool>);
-impl CH2_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CH2_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CH2_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-#[doc = "Field `CH2` writer - "]
-pub struct CH2_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CH2_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 2)) | ((value as u32 & 0x01) << 2);
-        self.w
-    }
-}
-#[doc = "Field `CH1` reader - "]
-pub struct CH1_R(crate::FieldReader<bool, bool>);
-impl CH1_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CH1_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CH1_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-#[doc = "Field `CH1` writer - "]
-pub struct CH1_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CH1_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u32 & 0x01) << 1);
-        self.w
-    }
-}
 #[doc = "Field `CH0` reader - "]
-pub struct CH0_R(crate::FieldReader<bool, bool>);
-impl CH0_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CH0_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CH0_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CH0_R = crate::BitReader<bool>;
 #[doc = "Field `CH0` writer - "]
-pub struct CH0_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CH0_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
-        self.w
-    }
-}
+pub type CH0_W<'a, const O: u8> = crate::BitWriter1C<'a, u32, INTR_SPEC, bool, O>;
+#[doc = "Field `CH1` reader - "]
+pub type CH1_R = crate::BitReader<bool>;
+#[doc = "Field `CH1` writer - "]
+pub type CH1_W<'a, const O: u8> = crate::BitWriter1C<'a, u32, INTR_SPEC, bool, O>;
+#[doc = "Field `CH2` reader - "]
+pub type CH2_R = crate::BitReader<bool>;
+#[doc = "Field `CH2` writer - "]
+pub type CH2_W<'a, const O: u8> = crate::BitWriter1C<'a, u32, INTR_SPEC, bool, O>;
+#[doc = "Field `CH3` reader - "]
+pub type CH3_R = crate::BitReader<bool>;
+#[doc = "Field `CH3` writer - "]
+pub type CH3_W<'a, const O: u8> = crate::BitWriter1C<'a, u32, INTR_SPEC, bool, O>;
+#[doc = "Field `CH4` reader - "]
+pub type CH4_R = crate::BitReader<bool>;
+#[doc = "Field `CH4` writer - "]
+pub type CH4_W<'a, const O: u8> = crate::BitWriter1C<'a, u32, INTR_SPEC, bool, O>;
+#[doc = "Field `CH5` reader - "]
+pub type CH5_R = crate::BitReader<bool>;
+#[doc = "Field `CH5` writer - "]
+pub type CH5_W<'a, const O: u8> = crate::BitWriter1C<'a, u32, INTR_SPEC, bool, O>;
+#[doc = "Field `CH6` reader - "]
+pub type CH6_R = crate::BitReader<bool>;
+#[doc = "Field `CH6` writer - "]
+pub type CH6_W<'a, const O: u8> = crate::BitWriter1C<'a, u32, INTR_SPEC, bool, O>;
+#[doc = "Field `CH7` reader - "]
+pub type CH7_R = crate::BitReader<bool>;
+#[doc = "Field `CH7` writer - "]
+pub type CH7_W<'a, const O: u8> = crate::BitWriter1C<'a, u32, INTR_SPEC, bool, O>;
 impl R {
-    #[doc = "Bit 7"]
+    #[doc = "Bit 0"]
     #[inline(always)]
-    pub fn ch7(&self) -> CH7_R {
-        CH7_R::new(((self.bits >> 7) & 0x01) != 0)
-    }
-    #[doc = "Bit 6"]
-    #[inline(always)]
-    pub fn ch6(&self) -> CH6_R {
-        CH6_R::new(((self.bits >> 6) & 0x01) != 0)
-    }
-    #[doc = "Bit 5"]
-    #[inline(always)]
-    pub fn ch5(&self) -> CH5_R {
-        CH5_R::new(((self.bits >> 5) & 0x01) != 0)
-    }
-    #[doc = "Bit 4"]
-    #[inline(always)]
-    pub fn ch4(&self) -> CH4_R {
-        CH4_R::new(((self.bits >> 4) & 0x01) != 0)
-    }
-    #[doc = "Bit 3"]
-    #[inline(always)]
-    pub fn ch3(&self) -> CH3_R {
-        CH3_R::new(((self.bits >> 3) & 0x01) != 0)
-    }
-    #[doc = "Bit 2"]
-    #[inline(always)]
-    pub fn ch2(&self) -> CH2_R {
-        CH2_R::new(((self.bits >> 2) & 0x01) != 0)
+    pub fn ch0(&self) -> CH0_R {
+        CH0_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1"]
     #[inline(always)]
     pub fn ch1(&self) -> CH1_R {
-        CH1_R::new(((self.bits >> 1) & 0x01) != 0)
-    }
-    #[doc = "Bit 0"]
-    #[inline(always)]
-    pub fn ch0(&self) -> CH0_R {
-        CH0_R::new((self.bits & 0x01) != 0)
-    }
-}
-impl W {
-    #[doc = "Bit 7"]
-    #[inline(always)]
-    pub fn ch7(&mut self) -> CH7_W {
-        CH7_W { w: self }
-    }
-    #[doc = "Bit 6"]
-    #[inline(always)]
-    pub fn ch6(&mut self) -> CH6_W {
-        CH6_W { w: self }
-    }
-    #[doc = "Bit 5"]
-    #[inline(always)]
-    pub fn ch5(&mut self) -> CH5_W {
-        CH5_W { w: self }
-    }
-    #[doc = "Bit 4"]
-    #[inline(always)]
-    pub fn ch4(&mut self) -> CH4_W {
-        CH4_W { w: self }
-    }
-    #[doc = "Bit 3"]
-    #[inline(always)]
-    pub fn ch3(&mut self) -> CH3_W {
-        CH3_W { w: self }
+        CH1_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2"]
     #[inline(always)]
-    pub fn ch2(&mut self) -> CH2_W {
-        CH2_W { w: self }
+    pub fn ch2(&self) -> CH2_R {
+        CH2_R::new(((self.bits >> 2) & 1) != 0)
+    }
+    #[doc = "Bit 3"]
+    #[inline(always)]
+    pub fn ch3(&self) -> CH3_R {
+        CH3_R::new(((self.bits >> 3) & 1) != 0)
+    }
+    #[doc = "Bit 4"]
+    #[inline(always)]
+    pub fn ch4(&self) -> CH4_R {
+        CH4_R::new(((self.bits >> 4) & 1) != 0)
+    }
+    #[doc = "Bit 5"]
+    #[inline(always)]
+    pub fn ch5(&self) -> CH5_R {
+        CH5_R::new(((self.bits >> 5) & 1) != 0)
+    }
+    #[doc = "Bit 6"]
+    #[inline(always)]
+    pub fn ch6(&self) -> CH6_R {
+        CH6_R::new(((self.bits >> 6) & 1) != 0)
+    }
+    #[doc = "Bit 7"]
+    #[inline(always)]
+    pub fn ch7(&self) -> CH7_R {
+        CH7_R::new(((self.bits >> 7) & 1) != 0)
+    }
+}
+impl W {
+    #[doc = "Bit 0"]
+    #[inline(always)]
+    #[must_use]
+    pub fn ch0(&mut self) -> CH0_W<0> {
+        CH0_W::new(self)
     }
     #[doc = "Bit 1"]
     #[inline(always)]
-    pub fn ch1(&mut self) -> CH1_W {
-        CH1_W { w: self }
+    #[must_use]
+    pub fn ch1(&mut self) -> CH1_W<1> {
+        CH1_W::new(self)
     }
-    #[doc = "Bit 0"]
+    #[doc = "Bit 2"]
     #[inline(always)]
-    pub fn ch0(&mut self) -> CH0_W {
-        CH0_W { w: self }
+    #[must_use]
+    pub fn ch2(&mut self) -> CH2_W<2> {
+        CH2_W::new(self)
+    }
+    #[doc = "Bit 3"]
+    #[inline(always)]
+    #[must_use]
+    pub fn ch3(&mut self) -> CH3_W<3> {
+        CH3_W::new(self)
+    }
+    #[doc = "Bit 4"]
+    #[inline(always)]
+    #[must_use]
+    pub fn ch4(&mut self) -> CH4_W<4> {
+        CH4_W::new(self)
+    }
+    #[doc = "Bit 5"]
+    #[inline(always)]
+    #[must_use]
+    pub fn ch5(&mut self) -> CH5_W<5> {
+        CH5_W::new(self)
+    }
+    #[doc = "Bit 6"]
+    #[inline(always)]
+    #[must_use]
+    pub fn ch6(&mut self) -> CH6_W<6> {
+        CH6_W::new(self)
+    }
+    #[doc = "Bit 7"]
+    #[inline(always)]
+    #[must_use]
+    pub fn ch7(&mut self) -> CH7_W<7> {
+        CH7_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
@@ -436,11 +180,10 @@ impl crate::Readable for INTR_SPEC {
 #[doc = "`write(|w| ..)` method takes [intr::W](W) writer structure"]
 impl crate::Writable for INTR_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0xff;
 }
 #[doc = "`reset()` method sets INTR to value 0"]
 impl crate::Resettable for INTR_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

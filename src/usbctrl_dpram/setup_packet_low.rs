@@ -34,119 +34,56 @@ impl From<crate::W<SETUP_PACKET_LOW_SPEC>> for W {
         W(writer)
     }
 }
-#[doc = "Field `WVALUE` reader - "]
-pub struct WVALUE_R(crate::FieldReader<u16, u16>);
-impl WVALUE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u16) -> Self {
-        WVALUE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for WVALUE_R {
-    type Target = crate::FieldReader<u16, u16>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-#[doc = "Field `WVALUE` writer - "]
-pub struct WVALUE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> WVALUE_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u16) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0xffff << 16)) | ((value as u32 & 0xffff) << 16);
-        self.w
-    }
-}
-#[doc = "Field `BREQUEST` reader - "]
-pub struct BREQUEST_R(crate::FieldReader<u8, u8>);
-impl BREQUEST_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        BREQUEST_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for BREQUEST_R {
-    type Target = crate::FieldReader<u8, u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-#[doc = "Field `BREQUEST` writer - "]
-pub struct BREQUEST_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> BREQUEST_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0xff << 8)) | ((value as u32 & 0xff) << 8);
-        self.w
-    }
-}
 #[doc = "Field `BMREQUESTTYPE` reader - "]
-pub struct BMREQUESTTYPE_R(crate::FieldReader<u8, u8>);
-impl BMREQUESTTYPE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        BMREQUESTTYPE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for BMREQUESTTYPE_R {
-    type Target = crate::FieldReader<u8, u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type BMREQUESTTYPE_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `BMREQUESTTYPE` writer - "]
-pub struct BMREQUESTTYPE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> BMREQUESTTYPE_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0xff) | (value as u32 & 0xff);
-        self.w
-    }
-}
+pub type BMREQUESTTYPE_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, SETUP_PACKET_LOW_SPEC, u8, u8, 8, O>;
+#[doc = "Field `BREQUEST` reader - "]
+pub type BREQUEST_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `BREQUEST` writer - "]
+pub type BREQUEST_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, SETUP_PACKET_LOW_SPEC, u8, u8, 8, O>;
+#[doc = "Field `WVALUE` reader - "]
+pub type WVALUE_R = crate::FieldReader<u16, u16>;
+#[doc = "Field `WVALUE` writer - "]
+pub type WVALUE_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, SETUP_PACKET_LOW_SPEC, u16, u16, 16, O>;
 impl R {
-    #[doc = "Bits 16:31"]
+    #[doc = "Bits 0:7"]
     #[inline(always)]
-    pub fn wvalue(&self) -> WVALUE_R {
-        WVALUE_R::new(((self.bits >> 16) & 0xffff) as u16)
+    pub fn bmrequesttype(&self) -> BMREQUESTTYPE_R {
+        BMREQUESTTYPE_R::new((self.bits & 0xff) as u8)
     }
     #[doc = "Bits 8:15"]
     #[inline(always)]
     pub fn brequest(&self) -> BREQUEST_R {
         BREQUEST_R::new(((self.bits >> 8) & 0xff) as u8)
     }
-    #[doc = "Bits 0:7"]
+    #[doc = "Bits 16:31"]
     #[inline(always)]
-    pub fn bmrequesttype(&self) -> BMREQUESTTYPE_R {
-        BMREQUESTTYPE_R::new((self.bits & 0xff) as u8)
+    pub fn wvalue(&self) -> WVALUE_R {
+        WVALUE_R::new(((self.bits >> 16) & 0xffff) as u16)
     }
 }
 impl W {
-    #[doc = "Bits 16:31"]
+    #[doc = "Bits 0:7"]
     #[inline(always)]
-    pub fn wvalue(&mut self) -> WVALUE_W {
-        WVALUE_W { w: self }
+    #[must_use]
+    pub fn bmrequesttype(&mut self) -> BMREQUESTTYPE_W<0> {
+        BMREQUESTTYPE_W::new(self)
     }
     #[doc = "Bits 8:15"]
     #[inline(always)]
-    pub fn brequest(&mut self) -> BREQUEST_W {
-        BREQUEST_W { w: self }
+    #[must_use]
+    pub fn brequest(&mut self) -> BREQUEST_W<8> {
+        BREQUEST_W::new(self)
     }
-    #[doc = "Bits 0:7"]
+    #[doc = "Bits 16:31"]
     #[inline(always)]
-    pub fn bmrequesttype(&mut self) -> BMREQUESTTYPE_W {
-        BMREQUESTTYPE_W { w: self }
+    #[must_use]
+    pub fn wvalue(&mut self) -> WVALUE_W<16> {
+        WVALUE_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
@@ -171,11 +108,10 @@ impl crate::Readable for SETUP_PACKET_LOW_SPEC {
 #[doc = "`write(|w| ..)` method takes [setup_packet_low::W](W) writer structure"]
 impl crate::Writable for SETUP_PACKET_LOW_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets SETUP_PACKET_LOW to value 0"]
 impl crate::Resettable for SETUP_PACKET_LOW_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

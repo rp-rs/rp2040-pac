@@ -34,10 +34,12 @@ impl From<crate::W<VOLTAGE_SELECT_SPEC>> for W {
         W(writer)
     }
 }
+#[doc = "Field `VOLTAGE_SELECT` reader - "]
+pub type VOLTAGE_SELECT_R = crate::BitReader<VOLTAGE_SELECT_A>;
 #[doc = "  
 
 Value on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum VOLTAGE_SELECT_A {
     #[doc = "0: Set voltage to 3.3V (DVDD >= 2V5)"]
     _3V3 = 0,
@@ -50,14 +52,8 @@ impl From<VOLTAGE_SELECT_A> for bool {
         variant as u8 != 0
     }
 }
-#[doc = "Field `VOLTAGE_SELECT` reader - "]
-pub struct VOLTAGE_SELECT_R(crate::FieldReader<bool, VOLTAGE_SELECT_A>);
 impl VOLTAGE_SELECT_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        VOLTAGE_SELECT_R(crate::FieldReader::new(bits))
-    }
-    #[doc = r"Get enumerated values variant"]
+    #[doc = "Get enumerated values variant"]
     #[inline(always)]
     pub fn variant(&self) -> VOLTAGE_SELECT_A {
         match self.bits {
@@ -68,31 +64,18 @@ impl VOLTAGE_SELECT_R {
     #[doc = "Checks if the value of the field is `_3V3`"]
     #[inline(always)]
     pub fn is_3v3(&self) -> bool {
-        **self == VOLTAGE_SELECT_A::_3V3
+        *self == VOLTAGE_SELECT_A::_3V3
     }
     #[doc = "Checks if the value of the field is `_1V8`"]
     #[inline(always)]
     pub fn is_1v8(&self) -> bool {
-        **self == VOLTAGE_SELECT_A::_1V8
-    }
-}
-impl core::ops::Deref for VOLTAGE_SELECT_R {
-    type Target = crate::FieldReader<bool, VOLTAGE_SELECT_A>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
+        *self == VOLTAGE_SELECT_A::_1V8
     }
 }
 #[doc = "Field `VOLTAGE_SELECT` writer - "]
-pub struct VOLTAGE_SELECT_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> VOLTAGE_SELECT_W<'a> {
-    #[doc = r"Writes `variant` to the field"]
-    #[inline(always)]
-    pub fn variant(self, variant: VOLTAGE_SELECT_A) -> &'a mut W {
-        self.bit(variant.into())
-    }
+pub type VOLTAGE_SELECT_W<'a, const O: u8> =
+    crate::BitWriter<'a, u32, VOLTAGE_SELECT_SPEC, VOLTAGE_SELECT_A, O>;
+impl<'a, const O: u8> VOLTAGE_SELECT_W<'a, O> {
     #[doc = "Set voltage to 3.3V (DVDD >= 2V5)"]
     #[inline(always)]
     pub fn _3v3(self) -> &'a mut W {
@@ -103,35 +86,20 @@ impl<'a> VOLTAGE_SELECT_W<'a> {
     pub fn _1v8(self) -> &'a mut W {
         self.variant(VOLTAGE_SELECT_A::_1V8)
     }
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
-        self.w
-    }
 }
 impl R {
     #[doc = "Bit 0"]
     #[inline(always)]
     pub fn voltage_select(&self) -> VOLTAGE_SELECT_R {
-        VOLTAGE_SELECT_R::new((self.bits & 0x01) != 0)
+        VOLTAGE_SELECT_R::new((self.bits & 1) != 0)
     }
 }
 impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
-    pub fn voltage_select(&mut self) -> VOLTAGE_SELECT_W {
-        VOLTAGE_SELECT_W { w: self }
+    #[must_use]
+    pub fn voltage_select(&mut self) -> VOLTAGE_SELECT_W<0> {
+        VOLTAGE_SELECT_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
@@ -156,11 +124,10 @@ impl crate::Readable for VOLTAGE_SELECT_SPEC {
 #[doc = "`write(|w| ..)` method takes [voltage_select::W](W) writer structure"]
 impl crate::Writable for VOLTAGE_SELECT_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets VOLTAGE_SELECT to value 0"]
 impl crate::Resettable for VOLTAGE_SELECT_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

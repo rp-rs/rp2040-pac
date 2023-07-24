@@ -34,149 +34,53 @@ impl From<crate::W<MAIN_CTRL_SPEC>> for W {
         W(writer)
     }
 }
-#[doc = "Field `SIM_TIMING` reader - Reduced timings for simulation"]
-pub struct SIM_TIMING_R(crate::FieldReader<bool, bool>);
-impl SIM_TIMING_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        SIM_TIMING_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SIM_TIMING_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-#[doc = "Field `SIM_TIMING` writer - Reduced timings for simulation"]
-pub struct SIM_TIMING_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SIM_TIMING_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 31)) | ((value as u32 & 0x01) << 31);
-        self.w
-    }
-}
-#[doc = "Field `HOST_NDEVICE` reader - Device mode = 0, Host mode = 1"]
-pub struct HOST_NDEVICE_R(crate::FieldReader<bool, bool>);
-impl HOST_NDEVICE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        HOST_NDEVICE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for HOST_NDEVICE_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-#[doc = "Field `HOST_NDEVICE` writer - Device mode = 0, Host mode = 1"]
-pub struct HOST_NDEVICE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> HOST_NDEVICE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u32 & 0x01) << 1);
-        self.w
-    }
-}
 #[doc = "Field `CONTROLLER_EN` reader - Enable controller"]
-pub struct CONTROLLER_EN_R(crate::FieldReader<bool, bool>);
-impl CONTROLLER_EN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CONTROLLER_EN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CONTROLLER_EN_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CONTROLLER_EN_R = crate::BitReader<bool>;
 #[doc = "Field `CONTROLLER_EN` writer - Enable controller"]
-pub struct CONTROLLER_EN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CONTROLLER_EN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
-        self.w
-    }
-}
+pub type CONTROLLER_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, MAIN_CTRL_SPEC, bool, O>;
+#[doc = "Field `HOST_NDEVICE` reader - Device mode = 0, Host mode = 1"]
+pub type HOST_NDEVICE_R = crate::BitReader<bool>;
+#[doc = "Field `HOST_NDEVICE` writer - Device mode = 0, Host mode = 1"]
+pub type HOST_NDEVICE_W<'a, const O: u8> = crate::BitWriter<'a, u32, MAIN_CTRL_SPEC, bool, O>;
+#[doc = "Field `SIM_TIMING` reader - Reduced timings for simulation"]
+pub type SIM_TIMING_R = crate::BitReader<bool>;
+#[doc = "Field `SIM_TIMING` writer - Reduced timings for simulation"]
+pub type SIM_TIMING_W<'a, const O: u8> = crate::BitWriter<'a, u32, MAIN_CTRL_SPEC, bool, O>;
 impl R {
-    #[doc = "Bit 31 - Reduced timings for simulation"]
+    #[doc = "Bit 0 - Enable controller"]
     #[inline(always)]
-    pub fn sim_timing(&self) -> SIM_TIMING_R {
-        SIM_TIMING_R::new(((self.bits >> 31) & 0x01) != 0)
+    pub fn controller_en(&self) -> CONTROLLER_EN_R {
+        CONTROLLER_EN_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - Device mode = 0, Host mode = 1"]
     #[inline(always)]
     pub fn host_ndevice(&self) -> HOST_NDEVICE_R {
-        HOST_NDEVICE_R::new(((self.bits >> 1) & 0x01) != 0)
+        HOST_NDEVICE_R::new(((self.bits >> 1) & 1) != 0)
     }
-    #[doc = "Bit 0 - Enable controller"]
+    #[doc = "Bit 31 - Reduced timings for simulation"]
     #[inline(always)]
-    pub fn controller_en(&self) -> CONTROLLER_EN_R {
-        CONTROLLER_EN_R::new((self.bits & 0x01) != 0)
+    pub fn sim_timing(&self) -> SIM_TIMING_R {
+        SIM_TIMING_R::new(((self.bits >> 31) & 1) != 0)
     }
 }
 impl W {
-    #[doc = "Bit 31 - Reduced timings for simulation"]
+    #[doc = "Bit 0 - Enable controller"]
     #[inline(always)]
-    pub fn sim_timing(&mut self) -> SIM_TIMING_W {
-        SIM_TIMING_W { w: self }
+    #[must_use]
+    pub fn controller_en(&mut self) -> CONTROLLER_EN_W<0> {
+        CONTROLLER_EN_W::new(self)
     }
     #[doc = "Bit 1 - Device mode = 0, Host mode = 1"]
     #[inline(always)]
-    pub fn host_ndevice(&mut self) -> HOST_NDEVICE_W {
-        HOST_NDEVICE_W { w: self }
+    #[must_use]
+    pub fn host_ndevice(&mut self) -> HOST_NDEVICE_W<1> {
+        HOST_NDEVICE_W::new(self)
     }
-    #[doc = "Bit 0 - Enable controller"]
+    #[doc = "Bit 31 - Reduced timings for simulation"]
     #[inline(always)]
-    pub fn controller_en(&mut self) -> CONTROLLER_EN_W {
-        CONTROLLER_EN_W { w: self }
+    #[must_use]
+    pub fn sim_timing(&mut self) -> SIM_TIMING_W<31> {
+        SIM_TIMING_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
@@ -201,11 +105,10 @@ impl crate::Readable for MAIN_CTRL_SPEC {
 #[doc = "`write(|w| ..)` method takes [main_ctrl::W](W) writer structure"]
 impl crate::Writable for MAIN_CTRL_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets MAIN_CTRL to value 0"]
 impl crate::Resettable for MAIN_CTRL_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

@@ -64,11 +64,10 @@ impl crate::Readable for DIV_QUOTIENT_SPEC {
 #[doc = "`write(|w| ..)` method takes [div_quotient::W](W) writer structure"]
 impl crate::Writable for DIV_QUOTIENT_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets DIV_QUOTIENT to value 0"]
 impl crate::Resettable for DIV_QUOTIENT_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

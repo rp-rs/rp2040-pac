@@ -37,51 +37,18 @@ impl From<crate::W<SER_SPEC>> for W {
 #[doc = "Field `SER` reader - For each bit:  
  0 -> slave not selected  
  1 -> slave selected"]
-pub struct SER_R(crate::FieldReader<bool, bool>);
-impl SER_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        SER_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for SER_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type SER_R = crate::BitReader<bool>;
 #[doc = "Field `SER` writer - For each bit:  
  0 -> slave not selected  
  1 -> slave selected"]
-pub struct SER_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> SER_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
-        self.w
-    }
-}
+pub type SER_W<'a, const O: u8> = crate::BitWriter<'a, u32, SER_SPEC, bool, O>;
 impl R {
     #[doc = "Bit 0 - For each bit:  
  0 -> slave not selected  
  1 -> slave selected"]
     #[inline(always)]
     pub fn ser(&self) -> SER_R {
-        SER_R::new((self.bits & 0x01) != 0)
+        SER_R::new((self.bits & 1) != 0)
     }
 }
 impl W {
@@ -89,8 +56,9 @@ impl W {
  0 -> slave not selected  
  1 -> slave selected"]
     #[inline(always)]
-    pub fn ser(&mut self) -> SER_W {
-        SER_W { w: self }
+    #[must_use]
+    pub fn ser(&mut self) -> SER_W<0> {
+        SER_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
@@ -115,11 +83,10 @@ impl crate::Readable for SER_SPEC {
 #[doc = "`write(|w| ..)` method takes [ser::W](W) writer structure"]
 impl crate::Writable for SER_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets SER to value 0"]
 impl crate::Resettable for SER_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

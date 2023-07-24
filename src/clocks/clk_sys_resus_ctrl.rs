@@ -34,190 +34,73 @@ impl From<crate::W<CLK_SYS_RESUS_CTRL_SPEC>> for W {
         W(writer)
     }
 }
-#[doc = "Field `CLEAR` reader - For clearing the resus after the fault that triggered it has been corrected"]
-pub struct CLEAR_R(crate::FieldReader<bool, bool>);
-impl CLEAR_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CLEAR_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CLEAR_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-#[doc = "Field `CLEAR` writer - For clearing the resus after the fault that triggered it has been corrected"]
-pub struct CLEAR_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CLEAR_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 16)) | ((value as u32 & 0x01) << 16);
-        self.w
-    }
-}
-#[doc = "Field `FRCE` reader - Force a resus, for test purposes only"]
-pub struct FRCE_R(crate::FieldReader<bool, bool>);
-impl FRCE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        FRCE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for FRCE_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-#[doc = "Field `FRCE` writer - Force a resus, for test purposes only"]
-pub struct FRCE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> FRCE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 12)) | ((value as u32 & 0x01) << 12);
-        self.w
-    }
-}
-#[doc = "Field `ENABLE` reader - Enable resus"]
-pub struct ENABLE_R(crate::FieldReader<bool, bool>);
-impl ENABLE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        ENABLE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for ENABLE_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-#[doc = "Field `ENABLE` writer - Enable resus"]
-pub struct ENABLE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> ENABLE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 8)) | ((value as u32 & 0x01) << 8);
-        self.w
-    }
-}
 #[doc = "Field `TIMEOUT` reader - This is expressed as a number of clk_ref cycles  
  and must be >= 2x clk_ref_freq/min_clk_tst_freq"]
-pub struct TIMEOUT_R(crate::FieldReader<u8, u8>);
-impl TIMEOUT_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        TIMEOUT_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TIMEOUT_R {
-    type Target = crate::FieldReader<u8, u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type TIMEOUT_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `TIMEOUT` writer - This is expressed as a number of clk_ref cycles  
  and must be >= 2x clk_ref_freq/min_clk_tst_freq"]
-pub struct TIMEOUT_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TIMEOUT_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0xff) | (value as u32 & 0xff);
-        self.w
-    }
-}
+pub type TIMEOUT_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, CLK_SYS_RESUS_CTRL_SPEC, u8, u8, 8, O>;
+#[doc = "Field `ENABLE` reader - Enable resus"]
+pub type ENABLE_R = crate::BitReader<bool>;
+#[doc = "Field `ENABLE` writer - Enable resus"]
+pub type ENABLE_W<'a, const O: u8> = crate::BitWriter<'a, u32, CLK_SYS_RESUS_CTRL_SPEC, bool, O>;
+#[doc = "Field `FRCE` reader - Force a resus, for test purposes only"]
+pub type FRCE_R = crate::BitReader<bool>;
+#[doc = "Field `FRCE` writer - Force a resus, for test purposes only"]
+pub type FRCE_W<'a, const O: u8> = crate::BitWriter<'a, u32, CLK_SYS_RESUS_CTRL_SPEC, bool, O>;
+#[doc = "Field `CLEAR` reader - For clearing the resus after the fault that triggered it has been corrected"]
+pub type CLEAR_R = crate::BitReader<bool>;
+#[doc = "Field `CLEAR` writer - For clearing the resus after the fault that triggered it has been corrected"]
+pub type CLEAR_W<'a, const O: u8> = crate::BitWriter<'a, u32, CLK_SYS_RESUS_CTRL_SPEC, bool, O>;
 impl R {
-    #[doc = "Bit 16 - For clearing the resus after the fault that triggered it has been corrected"]
-    #[inline(always)]
-    pub fn clear(&self) -> CLEAR_R {
-        CLEAR_R::new(((self.bits >> 16) & 0x01) != 0)
-    }
-    #[doc = "Bit 12 - Force a resus, for test purposes only"]
-    #[inline(always)]
-    pub fn frce(&self) -> FRCE_R {
-        FRCE_R::new(((self.bits >> 12) & 0x01) != 0)
-    }
-    #[doc = "Bit 8 - Enable resus"]
-    #[inline(always)]
-    pub fn enable(&self) -> ENABLE_R {
-        ENABLE_R::new(((self.bits >> 8) & 0x01) != 0)
-    }
     #[doc = "Bits 0:7 - This is expressed as a number of clk_ref cycles  
  and must be >= 2x clk_ref_freq/min_clk_tst_freq"]
     #[inline(always)]
     pub fn timeout(&self) -> TIMEOUT_R {
         TIMEOUT_R::new((self.bits & 0xff) as u8)
     }
-}
-impl W {
-    #[doc = "Bit 16 - For clearing the resus after the fault that triggered it has been corrected"]
+    #[doc = "Bit 8 - Enable resus"]
     #[inline(always)]
-    pub fn clear(&mut self) -> CLEAR_W {
-        CLEAR_W { w: self }
+    pub fn enable(&self) -> ENABLE_R {
+        ENABLE_R::new(((self.bits >> 8) & 1) != 0)
     }
     #[doc = "Bit 12 - Force a resus, for test purposes only"]
     #[inline(always)]
-    pub fn frce(&mut self) -> FRCE_W {
-        FRCE_W { w: self }
+    pub fn frce(&self) -> FRCE_R {
+        FRCE_R::new(((self.bits >> 12) & 1) != 0)
     }
-    #[doc = "Bit 8 - Enable resus"]
+    #[doc = "Bit 16 - For clearing the resus after the fault that triggered it has been corrected"]
     #[inline(always)]
-    pub fn enable(&mut self) -> ENABLE_W {
-        ENABLE_W { w: self }
+    pub fn clear(&self) -> CLEAR_R {
+        CLEAR_R::new(((self.bits >> 16) & 1) != 0)
     }
+}
+impl W {
     #[doc = "Bits 0:7 - This is expressed as a number of clk_ref cycles  
  and must be >= 2x clk_ref_freq/min_clk_tst_freq"]
     #[inline(always)]
-    pub fn timeout(&mut self) -> TIMEOUT_W {
-        TIMEOUT_W { w: self }
+    #[must_use]
+    pub fn timeout(&mut self) -> TIMEOUT_W<0> {
+        TIMEOUT_W::new(self)
+    }
+    #[doc = "Bit 8 - Enable resus"]
+    #[inline(always)]
+    #[must_use]
+    pub fn enable(&mut self) -> ENABLE_W<8> {
+        ENABLE_W::new(self)
+    }
+    #[doc = "Bit 12 - Force a resus, for test purposes only"]
+    #[inline(always)]
+    #[must_use]
+    pub fn frce(&mut self) -> FRCE_W<12> {
+        FRCE_W::new(self)
+    }
+    #[doc = "Bit 16 - For clearing the resus after the fault that triggered it has been corrected"]
+    #[inline(always)]
+    #[must_use]
+    pub fn clear(&mut self) -> CLEAR_W<16> {
+        CLEAR_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
@@ -242,11 +125,10 @@ impl crate::Readable for CLK_SYS_RESUS_CTRL_SPEC {
 #[doc = "`write(|w| ..)` method takes [clk_sys_resus_ctrl::W](W) writer structure"]
 impl crate::Writable for CLK_SYS_RESUS_CTRL_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets CLK_SYS_RESUS_CTRL to value 0xff"]
 impl crate::Resettable for CLK_SYS_RESUS_CTRL_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0xff
-    }
+    const RESET_VALUE: Self::Ux = 0xff;
 }

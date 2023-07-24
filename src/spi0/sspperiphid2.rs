@@ -13,46 +13,20 @@ impl From<crate::R<SSPPERIPHID2_SPEC>> for R {
         R(reader)
     }
 }
-#[doc = "Field `REVISION` reader - These bits return the peripheral revision"]
-pub struct REVISION_R(crate::FieldReader<u8, u8>);
-impl REVISION_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        REVISION_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for REVISION_R {
-    type Target = crate::FieldReader<u8, u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
 #[doc = "Field `DESIGNER1` reader - These bits read back as 0x4"]
-pub struct DESIGNER1_R(crate::FieldReader<u8, u8>);
-impl DESIGNER1_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        DESIGNER1_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DESIGNER1_R {
-    type Target = crate::FieldReader<u8, u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type DESIGNER1_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `REVISION` reader - These bits return the peripheral revision"]
+pub type REVISION_R = crate::FieldReader<u8, u8>;
 impl R {
-    #[doc = "Bits 4:7 - These bits return the peripheral revision"]
-    #[inline(always)]
-    pub fn revision(&self) -> REVISION_R {
-        REVISION_R::new(((self.bits >> 4) & 0x0f) as u8)
-    }
     #[doc = "Bits 0:3 - These bits read back as 0x4"]
     #[inline(always)]
     pub fn designer1(&self) -> DESIGNER1_R {
         DESIGNER1_R::new((self.bits & 0x0f) as u8)
+    }
+    #[doc = "Bits 4:7 - These bits return the peripheral revision"]
+    #[inline(always)]
+    pub fn revision(&self) -> REVISION_R {
+        REVISION_R::new(((self.bits >> 4) & 0x0f) as u8)
     }
 }
 #[doc = "Peripheral identification registers, SSPPeriphID0-3 on page 3-13  
@@ -70,8 +44,5 @@ impl crate::Readable for SSPPERIPHID2_SPEC {
 }
 #[doc = "`reset()` method sets SSPPERIPHID2 to value 0x34"]
 impl crate::Resettable for SSPPERIPHID2_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x34
-    }
+    const RESET_VALUE: Self::Ux = 0x34;
 }

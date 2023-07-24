@@ -36,57 +36,25 @@ impl From<crate::W<INTE_SPEC>> for W {
 }
 #[doc = "Field `FIFO` reader - Triggered when the sample FIFO reaches a certain level.  
  This level can be programmed via the FCS_THRESH field."]
-pub struct FIFO_R(crate::FieldReader<bool, bool>);
-impl FIFO_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        FIFO_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for FIFO_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type FIFO_R = crate::BitReader<bool>;
 #[doc = "Field `FIFO` writer - Triggered when the sample FIFO reaches a certain level.  
  This level can be programmed via the FCS_THRESH field."]
-pub struct FIFO_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> FIFO_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
-        self.w
-    }
-}
+pub type FIFO_W<'a, const O: u8> = crate::BitWriter<'a, u32, INTE_SPEC, bool, O>;
 impl R {
     #[doc = "Bit 0 - Triggered when the sample FIFO reaches a certain level.  
  This level can be programmed via the FCS_THRESH field."]
     #[inline(always)]
     pub fn fifo(&self) -> FIFO_R {
-        FIFO_R::new((self.bits & 0x01) != 0)
+        FIFO_R::new((self.bits & 1) != 0)
     }
 }
 impl W {
     #[doc = "Bit 0 - Triggered when the sample FIFO reaches a certain level.  
  This level can be programmed via the FCS_THRESH field."]
     #[inline(always)]
-    pub fn fifo(&mut self) -> FIFO_W {
-        FIFO_W { w: self }
+    #[must_use]
+    pub fn fifo(&mut self) -> FIFO_W<0> {
+        FIFO_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
@@ -111,11 +79,10 @@ impl crate::Readable for INTE_SPEC {
 #[doc = "`write(|w| ..)` method takes [inte::W](W) writer structure"]
 impl crate::Writable for INTE_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets INTE to value 0"]
 impl crate::Resettable for INTE_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

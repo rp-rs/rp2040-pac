@@ -37,34 +37,11 @@ impl From<crate::W<IC_DMA_RDLR_SPEC>> for W {
 #[doc = "Field `DMARDL` reader - Receive Data Level. This bit field controls the level at which a DMA request is made by the receive logic. The watermark level = DMARDL+1; that is, dma_rx_req is generated when the number of valid data entries in the receive FIFO is equal to or more than this field value + 1, and RDMAE =1. For instance, when DMARDL is 0, then dma_rx_req is asserted when 1 or more data entries are present in the receive FIFO.  
 
  Reset value: 0x0"]
-pub struct DMARDL_R(crate::FieldReader<u8, u8>);
-impl DMARDL_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        DMARDL_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for DMARDL_R {
-    type Target = crate::FieldReader<u8, u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type DMARDL_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `DMARDL` writer - Receive Data Level. This bit field controls the level at which a DMA request is made by the receive logic. The watermark level = DMARDL+1; that is, dma_rx_req is generated when the number of valid data entries in the receive FIFO is equal to or more than this field value + 1, and RDMAE =1. For instance, when DMARDL is 0, then dma_rx_req is asserted when 1 or more data entries are present in the receive FIFO.  
 
  Reset value: 0x0"]
-pub struct DMARDL_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> DMARDL_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x0f) | (value as u32 & 0x0f);
-        self.w
-    }
-}
+pub type DMARDL_W<'a, const O: u8> = crate::FieldWriter<'a, u32, IC_DMA_RDLR_SPEC, u8, u8, 4, O>;
 impl R {
     #[doc = "Bits 0:3 - Receive Data Level. This bit field controls the level at which a DMA request is made by the receive logic. The watermark level = DMARDL+1; that is, dma_rx_req is generated when the number of valid data entries in the receive FIFO is equal to or more than this field value + 1, and RDMAE =1. For instance, when DMARDL is 0, then dma_rx_req is asserted when 1 or more data entries are present in the receive FIFO.  
 
@@ -79,8 +56,9 @@ impl W {
 
  Reset value: 0x0"]
     #[inline(always)]
-    pub fn dmardl(&mut self) -> DMARDL_W {
-        DMARDL_W { w: self }
+    #[must_use]
+    pub fn dmardl(&mut self) -> DMARDL_W<0> {
+        DMARDL_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
@@ -105,11 +83,10 @@ impl crate::Readable for IC_DMA_RDLR_SPEC {
 #[doc = "`write(|w| ..)` method takes [ic_dma_rdlr::W](W) writer structure"]
 impl crate::Writable for IC_DMA_RDLR_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets IC_DMA_RDLR to value 0"]
 impl crate::Resettable for IC_DMA_RDLR_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

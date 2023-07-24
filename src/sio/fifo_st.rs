@@ -34,142 +34,52 @@ impl From<crate::W<FIFO_ST_SPEC>> for W {
         W(writer)
     }
 }
-#[doc = "Field `ROE` reader - Sticky flag indicating the RX FIFO was read when empty. This read was ignored by the FIFO."]
-pub struct ROE_R(crate::FieldReader<bool, bool>);
-impl ROE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        ROE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for ROE_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-#[doc = "Field `ROE` writer - Sticky flag indicating the RX FIFO was read when empty. This read was ignored by the FIFO."]
-pub struct ROE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> ROE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 3)) | ((value as u32 & 0x01) << 3);
-        self.w
-    }
-}
-#[doc = "Field `WOF` reader - Sticky flag indicating the TX FIFO was written when full. This write was ignored by the FIFO."]
-pub struct WOF_R(crate::FieldReader<bool, bool>);
-impl WOF_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        WOF_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for WOF_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-#[doc = "Field `WOF` writer - Sticky flag indicating the TX FIFO was written when full. This write was ignored by the FIFO."]
-pub struct WOF_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> WOF_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 2)) | ((value as u32 & 0x01) << 2);
-        self.w
-    }
-}
-#[doc = "Field `RDY` reader - Value is 1 if this core's TX FIFO is not full (i.e. if FIFO_WR is ready for more data)"]
-pub struct RDY_R(crate::FieldReader<bool, bool>);
-impl RDY_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        RDY_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RDY_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
 #[doc = "Field `VLD` reader - Value is 1 if this core's RX FIFO is not empty (i.e. if FIFO_RD is valid)"]
-pub struct VLD_R(crate::FieldReader<bool, bool>);
-impl VLD_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        VLD_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for VLD_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type VLD_R = crate::BitReader<bool>;
+#[doc = "Field `RDY` reader - Value is 1 if this core's TX FIFO is not full (i.e. if FIFO_WR is ready for more data)"]
+pub type RDY_R = crate::BitReader<bool>;
+#[doc = "Field `WOF` reader - Sticky flag indicating the TX FIFO was written when full. This write was ignored by the FIFO."]
+pub type WOF_R = crate::BitReader<bool>;
+#[doc = "Field `WOF` writer - Sticky flag indicating the TX FIFO was written when full. This write was ignored by the FIFO."]
+pub type WOF_W<'a, const O: u8> = crate::BitWriter1C<'a, u32, FIFO_ST_SPEC, bool, O>;
+#[doc = "Field `ROE` reader - Sticky flag indicating the RX FIFO was read when empty. This read was ignored by the FIFO."]
+pub type ROE_R = crate::BitReader<bool>;
+#[doc = "Field `ROE` writer - Sticky flag indicating the RX FIFO was read when empty. This read was ignored by the FIFO."]
+pub type ROE_W<'a, const O: u8> = crate::BitWriter1C<'a, u32, FIFO_ST_SPEC, bool, O>;
 impl R {
-    #[doc = "Bit 3 - Sticky flag indicating the RX FIFO was read when empty. This read was ignored by the FIFO."]
+    #[doc = "Bit 0 - Value is 1 if this core's RX FIFO is not empty (i.e. if FIFO_RD is valid)"]
     #[inline(always)]
-    pub fn roe(&self) -> ROE_R {
-        ROE_R::new(((self.bits >> 3) & 0x01) != 0)
-    }
-    #[doc = "Bit 2 - Sticky flag indicating the TX FIFO was written when full. This write was ignored by the FIFO."]
-    #[inline(always)]
-    pub fn wof(&self) -> WOF_R {
-        WOF_R::new(((self.bits >> 2) & 0x01) != 0)
+    pub fn vld(&self) -> VLD_R {
+        VLD_R::new((self.bits & 1) != 0)
     }
     #[doc = "Bit 1 - Value is 1 if this core's TX FIFO is not full (i.e. if FIFO_WR is ready for more data)"]
     #[inline(always)]
     pub fn rdy(&self) -> RDY_R {
-        RDY_R::new(((self.bits >> 1) & 0x01) != 0)
-    }
-    #[doc = "Bit 0 - Value is 1 if this core's RX FIFO is not empty (i.e. if FIFO_RD is valid)"]
-    #[inline(always)]
-    pub fn vld(&self) -> VLD_R {
-        VLD_R::new((self.bits & 0x01) != 0)
-    }
-}
-impl W {
-    #[doc = "Bit 3 - Sticky flag indicating the RX FIFO was read when empty. This read was ignored by the FIFO."]
-    #[inline(always)]
-    pub fn roe(&mut self) -> ROE_W {
-        ROE_W { w: self }
+        RDY_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bit 2 - Sticky flag indicating the TX FIFO was written when full. This write was ignored by the FIFO."]
     #[inline(always)]
-    pub fn wof(&mut self) -> WOF_W {
-        WOF_W { w: self }
+    pub fn wof(&self) -> WOF_R {
+        WOF_R::new(((self.bits >> 2) & 1) != 0)
+    }
+    #[doc = "Bit 3 - Sticky flag indicating the RX FIFO was read when empty. This read was ignored by the FIFO."]
+    #[inline(always)]
+    pub fn roe(&self) -> ROE_R {
+        ROE_R::new(((self.bits >> 3) & 1) != 0)
+    }
+}
+impl W {
+    #[doc = "Bit 2 - Sticky flag indicating the TX FIFO was written when full. This write was ignored by the FIFO."]
+    #[inline(always)]
+    #[must_use]
+    pub fn wof(&mut self) -> WOF_W<2> {
+        WOF_W::new(self)
+    }
+    #[doc = "Bit 3 - Sticky flag indicating the RX FIFO was read when empty. This read was ignored by the FIFO."]
+    #[inline(always)]
+    #[must_use]
+    pub fn roe(&mut self) -> ROE_W<3> {
+        ROE_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
@@ -198,11 +108,10 @@ impl crate::Readable for FIFO_ST_SPEC {
 #[doc = "`write(|w| ..)` method takes [fifo_st::W](W) writer structure"]
 impl crate::Writable for FIFO_ST_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0x0c;
 }
 #[doc = "`reset()` method sets FIFO_ST to value 0x02"]
 impl crate::Resettable for FIFO_ST_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x02
-    }
+    const RESET_VALUE: Self::Ux = 0x02;
 }

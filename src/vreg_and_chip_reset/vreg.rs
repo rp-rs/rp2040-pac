@@ -34,22 +34,18 @@ impl From<crate::W<VREG_SPEC>> for W {
         W(writer)
     }
 }
-#[doc = "Field `ROK` reader - regulation status  
- 0=not in regulation, 1=in regulation"]
-pub struct ROK_R(crate::FieldReader<bool, bool>);
-impl ROK_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        ROK_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for ROK_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+#[doc = "Field `EN` reader - enable  
+ 0=not enabled, 1=enabled"]
+pub type EN_R = crate::BitReader<bool>;
+#[doc = "Field `EN` writer - enable  
+ 0=not enabled, 1=enabled"]
+pub type EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, VREG_SPEC, bool, O>;
+#[doc = "Field `HIZ` reader - high impedance mode select  
+ 0=not in high impedance mode, 1=in high impedance mode"]
+pub type HIZ_R = crate::BitReader<bool>;
+#[doc = "Field `HIZ` writer - high impedance mode select  
+ 0=not in high impedance mode, 1=in high impedance mode"]
+pub type HIZ_W<'a, const O: u8> = crate::BitWriter<'a, u32, VREG_SPEC, bool, O>;
 #[doc = "Field `VSEL` reader - output voltage select  
  0000 to 0101 - 0.80V  
  0110 - 0.85V  
@@ -62,20 +58,7 @@ impl core::ops::Deref for ROK_R {
  1101 - 1.20V  
  1110 - 1.25V  
  1111 - 1.30V"]
-pub struct VSEL_R(crate::FieldReader<u8, u8>);
-impl VSEL_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        VSEL_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for VSEL_R {
-    type Target = crate::FieldReader<u8, u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type VSEL_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `VSEL` writer - output voltage select  
  0000 to 0101 - 0.80V  
  0110 - 0.85V  
@@ -88,101 +71,22 @@ impl core::ops::Deref for VSEL_R {
  1101 - 1.20V  
  1110 - 1.25V  
  1111 - 1.30V"]
-pub struct VSEL_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> VSEL_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x0f << 4)) | ((value as u32 & 0x0f) << 4);
-        self.w
-    }
-}
-#[doc = "Field `HIZ` reader - high impedance mode select  
- 0=not in high impedance mode, 1=in high impedance mode"]
-pub struct HIZ_R(crate::FieldReader<bool, bool>);
-impl HIZ_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        HIZ_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for HIZ_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-#[doc = "Field `HIZ` writer - high impedance mode select  
- 0=not in high impedance mode, 1=in high impedance mode"]
-pub struct HIZ_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> HIZ_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u32 & 0x01) << 1);
-        self.w
-    }
-}
-#[doc = "Field `EN` reader - enable  
- 0=not enabled, 1=enabled"]
-pub struct EN_R(crate::FieldReader<bool, bool>);
-impl EN_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        EN_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for EN_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-#[doc = "Field `EN` writer - enable  
- 0=not enabled, 1=enabled"]
-pub struct EN_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> EN_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
-        self.w
-    }
-}
-impl R {
-    #[doc = "Bit 12 - regulation status  
+pub type VSEL_W<'a, const O: u8> = crate::FieldWriter<'a, u32, VREG_SPEC, u8, u8, 4, O>;
+#[doc = "Field `ROK` reader - regulation status  
  0=not in regulation, 1=in regulation"]
+pub type ROK_R = crate::BitReader<bool>;
+impl R {
+    #[doc = "Bit 0 - enable  
+ 0=not enabled, 1=enabled"]
     #[inline(always)]
-    pub fn rok(&self) -> ROK_R {
-        ROK_R::new(((self.bits >> 12) & 0x01) != 0)
+    pub fn en(&self) -> EN_R {
+        EN_R::new((self.bits & 1) != 0)
+    }
+    #[doc = "Bit 1 - high impedance mode select  
+ 0=not in high impedance mode, 1=in high impedance mode"]
+    #[inline(always)]
+    pub fn hiz(&self) -> HIZ_R {
+        HIZ_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bits 4:7 - output voltage select  
  0000 to 0101 - 0.80V  
@@ -200,20 +104,28 @@ impl R {
     pub fn vsel(&self) -> VSEL_R {
         VSEL_R::new(((self.bits >> 4) & 0x0f) as u8)
     }
-    #[doc = "Bit 1 - high impedance mode select  
- 0=not in high impedance mode, 1=in high impedance mode"]
+    #[doc = "Bit 12 - regulation status  
+ 0=not in regulation, 1=in regulation"]
     #[inline(always)]
-    pub fn hiz(&self) -> HIZ_R {
-        HIZ_R::new(((self.bits >> 1) & 0x01) != 0)
-    }
-    #[doc = "Bit 0 - enable  
- 0=not enabled, 1=enabled"]
-    #[inline(always)]
-    pub fn en(&self) -> EN_R {
-        EN_R::new((self.bits & 0x01) != 0)
+    pub fn rok(&self) -> ROK_R {
+        ROK_R::new(((self.bits >> 12) & 1) != 0)
     }
 }
 impl W {
+    #[doc = "Bit 0 - enable  
+ 0=not enabled, 1=enabled"]
+    #[inline(always)]
+    #[must_use]
+    pub fn en(&mut self) -> EN_W<0> {
+        EN_W::new(self)
+    }
+    #[doc = "Bit 1 - high impedance mode select  
+ 0=not in high impedance mode, 1=in high impedance mode"]
+    #[inline(always)]
+    #[must_use]
+    pub fn hiz(&mut self) -> HIZ_W<1> {
+        HIZ_W::new(self)
+    }
     #[doc = "Bits 4:7 - output voltage select  
  0000 to 0101 - 0.80V  
  0110 - 0.85V  
@@ -227,20 +139,9 @@ impl W {
  1110 - 1.25V  
  1111 - 1.30V"]
     #[inline(always)]
-    pub fn vsel(&mut self) -> VSEL_W {
-        VSEL_W { w: self }
-    }
-    #[doc = "Bit 1 - high impedance mode select  
- 0=not in high impedance mode, 1=in high impedance mode"]
-    #[inline(always)]
-    pub fn hiz(&mut self) -> HIZ_W {
-        HIZ_W { w: self }
-    }
-    #[doc = "Bit 0 - enable  
- 0=not enabled, 1=enabled"]
-    #[inline(always)]
-    pub fn en(&mut self) -> EN_W {
-        EN_W { w: self }
+    #[must_use]
+    pub fn vsel(&mut self) -> VSEL_W<4> {
+        VSEL_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
@@ -265,11 +166,10 @@ impl crate::Readable for VREG_SPEC {
 #[doc = "`write(|w| ..)` method takes [vreg::W](W) writer structure"]
 impl crate::Writable for VREG_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets VREG to value 0xb1"]
 impl crate::Resettable for VREG_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0xb1
-    }
+    const RESET_VALUE: Self::Ux = 0xb1;
 }

@@ -14,20 +14,7 @@ impl From<crate::R<UARTPCELLID1_SPEC>> for R {
     }
 }
 #[doc = "Field `UARTPCELLID1` reader - These bits read back as 0xF0"]
-pub struct UARTPCELLID1_R(crate::FieldReader<u8, u8>);
-impl UARTPCELLID1_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        UARTPCELLID1_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for UARTPCELLID1_R {
-    type Target = crate::FieldReader<u8, u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type UARTPCELLID1_R = crate::FieldReader<u8, u8>;
 impl R {
     #[doc = "Bits 0:7 - These bits read back as 0xF0"]
     #[inline(always)]
@@ -50,8 +37,5 @@ impl crate::Readable for UARTPCELLID1_SPEC {
 }
 #[doc = "`reset()` method sets UARTPCELLID1 to value 0xf0"]
 impl crate::Resettable for UARTPCELLID1_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0xf0
-    }
+    const RESET_VALUE: Self::Ux = 0xf0;
 }

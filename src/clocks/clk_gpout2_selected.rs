@@ -29,8 +29,5 @@ impl crate::Readable for CLK_GPOUT2_SELECTED_SPEC {
 }
 #[doc = "`reset()` method sets CLK_GPOUT2_SELECTED to value 0x01"]
 impl crate::Resettable for CLK_GPOUT2_SELECTED_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x01
-    }
+    const RESET_VALUE: Self::Ux = 0x01;
 }

@@ -14,25 +14,12 @@ impl From<crate::R<TXOICR_SPEC>> for R {
     }
 }
 #[doc = "Field `TXOICR` reader - Clear-on-read transmit FIFO overflow interrupt"]
-pub struct TXOICR_R(crate::FieldReader<bool, bool>);
-impl TXOICR_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        TXOICR_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TXOICR_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type TXOICR_R = crate::BitReader<bool>;
 impl R {
     #[doc = "Bit 0 - Clear-on-read transmit FIFO overflow interrupt"]
     #[inline(always)]
     pub fn txoicr(&self) -> TXOICR_R {
-        TXOICR_R::new((self.bits & 0x01) != 0)
+        TXOICR_R::new((self.bits & 1) != 0)
     }
 }
 #[doc = "TX FIFO overflow interrupt clear  
@@ -50,8 +37,5 @@ impl crate::Readable for TXOICR_SPEC {
 }
 #[doc = "`reset()` method sets TXOICR to value 0"]
 impl crate::Resettable for TXOICR_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

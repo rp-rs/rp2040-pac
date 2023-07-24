@@ -34,102 +34,38 @@ impl From<crate::W<DMACR_SPEC>> for W {
         W(writer)
     }
 }
-#[doc = "Field `TDMAE` reader - Transmit DMA enable"]
-pub struct TDMAE_R(crate::FieldReader<bool, bool>);
-impl TDMAE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        TDMAE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TDMAE_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-#[doc = "Field `TDMAE` writer - Transmit DMA enable"]
-pub struct TDMAE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TDMAE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 1)) | ((value as u32 & 0x01) << 1);
-        self.w
-    }
-}
 #[doc = "Field `RDMAE` reader - Receive DMA enable"]
-pub struct RDMAE_R(crate::FieldReader<bool, bool>);
-impl RDMAE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        RDMAE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RDMAE_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RDMAE_R = crate::BitReader<bool>;
 #[doc = "Field `RDMAE` writer - Receive DMA enable"]
-pub struct RDMAE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> RDMAE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01) | (value as u32 & 0x01);
-        self.w
-    }
-}
+pub type RDMAE_W<'a, const O: u8> = crate::BitWriter<'a, u32, DMACR_SPEC, bool, O>;
+#[doc = "Field `TDMAE` reader - Transmit DMA enable"]
+pub type TDMAE_R = crate::BitReader<bool>;
+#[doc = "Field `TDMAE` writer - Transmit DMA enable"]
+pub type TDMAE_W<'a, const O: u8> = crate::BitWriter<'a, u32, DMACR_SPEC, bool, O>;
 impl R {
-    #[doc = "Bit 1 - Transmit DMA enable"]
-    #[inline(always)]
-    pub fn tdmae(&self) -> TDMAE_R {
-        TDMAE_R::new(((self.bits >> 1) & 0x01) != 0)
-    }
     #[doc = "Bit 0 - Receive DMA enable"]
     #[inline(always)]
     pub fn rdmae(&self) -> RDMAE_R {
-        RDMAE_R::new((self.bits & 0x01) != 0)
+        RDMAE_R::new((self.bits & 1) != 0)
+    }
+    #[doc = "Bit 1 - Transmit DMA enable"]
+    #[inline(always)]
+    pub fn tdmae(&self) -> TDMAE_R {
+        TDMAE_R::new(((self.bits >> 1) & 1) != 0)
     }
 }
 impl W {
-    #[doc = "Bit 1 - Transmit DMA enable"]
-    #[inline(always)]
-    pub fn tdmae(&mut self) -> TDMAE_W {
-        TDMAE_W { w: self }
-    }
     #[doc = "Bit 0 - Receive DMA enable"]
     #[inline(always)]
-    pub fn rdmae(&mut self) -> RDMAE_W {
-        RDMAE_W { w: self }
+    #[must_use]
+    pub fn rdmae(&mut self) -> RDMAE_W<0> {
+        RDMAE_W::new(self)
+    }
+    #[doc = "Bit 1 - Transmit DMA enable"]
+    #[inline(always)]
+    #[must_use]
+    pub fn tdmae(&mut self) -> TDMAE_W<1> {
+        TDMAE_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
@@ -154,11 +90,10 @@ impl crate::Readable for DMACR_SPEC {
 #[doc = "`write(|w| ..)` method takes [dmacr::W](W) writer structure"]
 impl crate::Writable for DMACR_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets DMACR to value 0"]
 impl crate::Resettable for DMACR_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

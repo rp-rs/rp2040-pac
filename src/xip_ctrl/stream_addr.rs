@@ -37,34 +37,12 @@ impl From<crate::W<STREAM_ADDR_SPEC>> for W {
 #[doc = "Field `STREAM_ADDR` reader - The address of the next word to be streamed from flash to the streaming FIFO.  
  Increments automatically after each flash access.  
  Write the initial access address here before starting a streaming read."]
-pub struct STREAM_ADDR_R(crate::FieldReader<u32, u32>);
-impl STREAM_ADDR_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u32) -> Self {
-        STREAM_ADDR_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for STREAM_ADDR_R {
-    type Target = crate::FieldReader<u32, u32>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type STREAM_ADDR_R = crate::FieldReader<u32, u32>;
 #[doc = "Field `STREAM_ADDR` writer - The address of the next word to be streamed from flash to the streaming FIFO.  
  Increments automatically after each flash access.  
  Write the initial access address here before starting a streaming read."]
-pub struct STREAM_ADDR_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> STREAM_ADDR_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u32) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x3fff_ffff << 2)) | ((value as u32 & 0x3fff_ffff) << 2);
-        self.w
-    }
-}
+pub type STREAM_ADDR_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, STREAM_ADDR_SPEC, u32, u32, 30, O>;
 impl R {
     #[doc = "Bits 2:31 - The address of the next word to be streamed from flash to the streaming FIFO.  
  Increments automatically after each flash access.  
@@ -79,8 +57,9 @@ impl W {
  Increments automatically after each flash access.  
  Write the initial access address here before starting a streaming read."]
     #[inline(always)]
-    pub fn stream_addr(&mut self) -> STREAM_ADDR_W {
-        STREAM_ADDR_W { w: self }
+    #[must_use]
+    pub fn stream_addr(&mut self) -> STREAM_ADDR_W<2> {
+        STREAM_ADDR_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
@@ -105,11 +84,10 @@ impl crate::Readable for STREAM_ADDR_SPEC {
 #[doc = "`write(|w| ..)` method takes [stream_addr::W](W) writer structure"]
 impl crate::Writable for STREAM_ADDR_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets STREAM_ADDR to value 0"]
 impl crate::Resettable for STREAM_ADDR_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

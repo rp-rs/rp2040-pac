@@ -34,105 +34,38 @@ impl From<crate::W<PROC_CONFIG_SPEC>> for W {
         W(writer)
     }
 }
-#[doc = "Field `PROC1_DAP_INSTID` reader - Configure proc1 DAP instance ID.  
- Recommend that this is NOT changed until you require debug access in multi-chip environment  
- WARNING: do not set to 15 as this is reserved for RescueDP"]
-pub struct PROC1_DAP_INSTID_R(crate::FieldReader<u8, u8>);
-impl PROC1_DAP_INSTID_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        PROC1_DAP_INSTID_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PROC1_DAP_INSTID_R {
-    type Target = crate::FieldReader<u8, u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-#[doc = "Field `PROC1_DAP_INSTID` writer - Configure proc1 DAP instance ID.  
- Recommend that this is NOT changed until you require debug access in multi-chip environment  
- WARNING: do not set to 15 as this is reserved for RescueDP"]
-pub struct PROC1_DAP_INSTID_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PROC1_DAP_INSTID_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x0f << 28)) | ((value as u32 & 0x0f) << 28);
-        self.w
-    }
-}
+#[doc = "Field `PROC0_HALTED` reader - Indication that proc0 has halted"]
+pub type PROC0_HALTED_R = crate::BitReader<bool>;
+#[doc = "Field `PROC1_HALTED` reader - Indication that proc1 has halted"]
+pub type PROC1_HALTED_R = crate::BitReader<bool>;
 #[doc = "Field `PROC0_DAP_INSTID` reader - Configure proc0 DAP instance ID.  
  Recommend that this is NOT changed until you require debug access in multi-chip environment  
  WARNING: do not set to 15 as this is reserved for RescueDP"]
-pub struct PROC0_DAP_INSTID_R(crate::FieldReader<u8, u8>);
-impl PROC0_DAP_INSTID_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        PROC0_DAP_INSTID_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PROC0_DAP_INSTID_R {
-    type Target = crate::FieldReader<u8, u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type PROC0_DAP_INSTID_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `PROC0_DAP_INSTID` writer - Configure proc0 DAP instance ID.  
  Recommend that this is NOT changed until you require debug access in multi-chip environment  
  WARNING: do not set to 15 as this is reserved for RescueDP"]
-pub struct PROC0_DAP_INSTID_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> PROC0_DAP_INSTID_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x0f << 24)) | ((value as u32 & 0x0f) << 24);
-        self.w
-    }
-}
-#[doc = "Field `PROC1_HALTED` reader - Indication that proc1 has halted"]
-pub struct PROC1_HALTED_R(crate::FieldReader<bool, bool>);
-impl PROC1_HALTED_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        PROC1_HALTED_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PROC1_HALTED_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-#[doc = "Field `PROC0_HALTED` reader - Indication that proc0 has halted"]
-pub struct PROC0_HALTED_R(crate::FieldReader<bool, bool>);
-impl PROC0_HALTED_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        PROC0_HALTED_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for PROC0_HALTED_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl R {
-    #[doc = "Bits 28:31 - Configure proc1 DAP instance ID.  
+pub type PROC0_DAP_INSTID_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, PROC_CONFIG_SPEC, u8, u8, 4, O>;
+#[doc = "Field `PROC1_DAP_INSTID` reader - Configure proc1 DAP instance ID.  
  Recommend that this is NOT changed until you require debug access in multi-chip environment  
  WARNING: do not set to 15 as this is reserved for RescueDP"]
+pub type PROC1_DAP_INSTID_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `PROC1_DAP_INSTID` writer - Configure proc1 DAP instance ID.  
+ Recommend that this is NOT changed until you require debug access in multi-chip environment  
+ WARNING: do not set to 15 as this is reserved for RescueDP"]
+pub type PROC1_DAP_INSTID_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, PROC_CONFIG_SPEC, u8, u8, 4, O>;
+impl R {
+    #[doc = "Bit 0 - Indication that proc0 has halted"]
     #[inline(always)]
-    pub fn proc1_dap_instid(&self) -> PROC1_DAP_INSTID_R {
-        PROC1_DAP_INSTID_R::new(((self.bits >> 28) & 0x0f) as u8)
+    pub fn proc0_halted(&self) -> PROC0_HALTED_R {
+        PROC0_HALTED_R::new((self.bits & 1) != 0)
+    }
+    #[doc = "Bit 1 - Indication that proc1 has halted"]
+    #[inline(always)]
+    pub fn proc1_halted(&self) -> PROC1_HALTED_R {
+        PROC1_HALTED_R::new(((self.bits >> 1) & 1) != 0)
     }
     #[doc = "Bits 24:27 - Configure proc0 DAP instance ID.  
  Recommend that this is NOT changed until you require debug access in multi-chip environment  
@@ -141,31 +74,30 @@ impl R {
     pub fn proc0_dap_instid(&self) -> PROC0_DAP_INSTID_R {
         PROC0_DAP_INSTID_R::new(((self.bits >> 24) & 0x0f) as u8)
     }
-    #[doc = "Bit 1 - Indication that proc1 has halted"]
-    #[inline(always)]
-    pub fn proc1_halted(&self) -> PROC1_HALTED_R {
-        PROC1_HALTED_R::new(((self.bits >> 1) & 0x01) != 0)
-    }
-    #[doc = "Bit 0 - Indication that proc0 has halted"]
-    #[inline(always)]
-    pub fn proc0_halted(&self) -> PROC0_HALTED_R {
-        PROC0_HALTED_R::new((self.bits & 0x01) != 0)
-    }
-}
-impl W {
     #[doc = "Bits 28:31 - Configure proc1 DAP instance ID.  
  Recommend that this is NOT changed until you require debug access in multi-chip environment  
  WARNING: do not set to 15 as this is reserved for RescueDP"]
     #[inline(always)]
-    pub fn proc1_dap_instid(&mut self) -> PROC1_DAP_INSTID_W {
-        PROC1_DAP_INSTID_W { w: self }
+    pub fn proc1_dap_instid(&self) -> PROC1_DAP_INSTID_R {
+        PROC1_DAP_INSTID_R::new(((self.bits >> 28) & 0x0f) as u8)
     }
+}
+impl W {
     #[doc = "Bits 24:27 - Configure proc0 DAP instance ID.  
  Recommend that this is NOT changed until you require debug access in multi-chip environment  
  WARNING: do not set to 15 as this is reserved for RescueDP"]
     #[inline(always)]
-    pub fn proc0_dap_instid(&mut self) -> PROC0_DAP_INSTID_W {
-        PROC0_DAP_INSTID_W { w: self }
+    #[must_use]
+    pub fn proc0_dap_instid(&mut self) -> PROC0_DAP_INSTID_W<24> {
+        PROC0_DAP_INSTID_W::new(self)
+    }
+    #[doc = "Bits 28:31 - Configure proc1 DAP instance ID.  
+ Recommend that this is NOT changed until you require debug access in multi-chip environment  
+ WARNING: do not set to 15 as this is reserved for RescueDP"]
+    #[inline(always)]
+    #[must_use]
+    pub fn proc1_dap_instid(&mut self) -> PROC1_DAP_INSTID_W<28> {
+        PROC1_DAP_INSTID_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
@@ -190,11 +122,10 @@ impl crate::Readable for PROC_CONFIG_SPEC {
 #[doc = "`write(|w| ..)` method takes [proc_config::W](W) writer structure"]
 impl crate::Writable for PROC_CONFIG_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets PROC_CONFIG to value 0x1000_0000"]
 impl crate::Resettable for PROC_CONFIG_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x1000_0000
-    }
+    const RESET_VALUE: Self::Ux = 0x1000_0000;
 }

@@ -14,25 +14,12 @@ impl From<crate::R<INTS_SPEC>> for R {
     }
 }
 #[doc = "Field `CLK_SYS_RESUS` reader - "]
-pub struct CLK_SYS_RESUS_R(crate::FieldReader<bool, bool>);
-impl CLK_SYS_RESUS_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        CLK_SYS_RESUS_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CLK_SYS_RESUS_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CLK_SYS_RESUS_R = crate::BitReader<bool>;
 impl R {
     #[doc = "Bit 0"]
     #[inline(always)]
     pub fn clk_sys_resus(&self) -> CLK_SYS_RESUS_R {
-        CLK_SYS_RESUS_R::new((self.bits & 0x01) != 0)
+        CLK_SYS_RESUS_R::new((self.bits & 1) != 0)
     }
 }
 #[doc = "Interrupt status after masking & forcing  
@@ -50,8 +37,5 @@ impl crate::Readable for INTS_SPEC {
 }
 #[doc = "`reset()` method sets INTS to value 0"]
 impl crate::Resettable for INTS_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

@@ -34,76 +34,25 @@ impl From<crate::W<IC_SDA_HOLD_SPEC>> for W {
         W(writer)
     }
 }
-#[doc = "Field `IC_SDA_RX_HOLD` reader - Sets the required SDA hold time in units of ic_clk period, when DW_apb_i2c acts as a receiver.  
-
- Reset value: IC_DEFAULT_SDA_HOLD\\[23:16\\]."]
-pub struct IC_SDA_RX_HOLD_R(crate::FieldReader<u8, u8>);
-impl IC_SDA_RX_HOLD_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        IC_SDA_RX_HOLD_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for IC_SDA_RX_HOLD_R {
-    type Target = crate::FieldReader<u8, u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-#[doc = "Field `IC_SDA_RX_HOLD` writer - Sets the required SDA hold time in units of ic_clk period, when DW_apb_i2c acts as a receiver.  
-
- Reset value: IC_DEFAULT_SDA_HOLD\\[23:16\\]."]
-pub struct IC_SDA_RX_HOLD_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> IC_SDA_RX_HOLD_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0xff << 16)) | ((value as u32 & 0xff) << 16);
-        self.w
-    }
-}
 #[doc = "Field `IC_SDA_TX_HOLD` reader - Sets the required SDA hold time in units of ic_clk period, when DW_apb_i2c acts as a transmitter.  
 
  Reset value: IC_DEFAULT_SDA_HOLD\\[15:0\\]."]
-pub struct IC_SDA_TX_HOLD_R(crate::FieldReader<u16, u16>);
-impl IC_SDA_TX_HOLD_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u16) -> Self {
-        IC_SDA_TX_HOLD_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for IC_SDA_TX_HOLD_R {
-    type Target = crate::FieldReader<u16, u16>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type IC_SDA_TX_HOLD_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `IC_SDA_TX_HOLD` writer - Sets the required SDA hold time in units of ic_clk period, when DW_apb_i2c acts as a transmitter.  
 
  Reset value: IC_DEFAULT_SDA_HOLD\\[15:0\\]."]
-pub struct IC_SDA_TX_HOLD_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> IC_SDA_TX_HOLD_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u16) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0xffff) | (value as u32 & 0xffff);
-        self.w
-    }
-}
-impl R {
-    #[doc = "Bits 16:23 - Sets the required SDA hold time in units of ic_clk period, when DW_apb_i2c acts as a receiver.  
+pub type IC_SDA_TX_HOLD_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, IC_SDA_HOLD_SPEC, u16, u16, 16, O>;
+#[doc = "Field `IC_SDA_RX_HOLD` reader - Sets the required SDA hold time in units of ic_clk period, when DW_apb_i2c acts as a receiver.  
 
  Reset value: IC_DEFAULT_SDA_HOLD\\[23:16\\]."]
-    #[inline(always)]
-    pub fn ic_sda_rx_hold(&self) -> IC_SDA_RX_HOLD_R {
-        IC_SDA_RX_HOLD_R::new(((self.bits >> 16) & 0xff) as u8)
-    }
+pub type IC_SDA_RX_HOLD_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `IC_SDA_RX_HOLD` writer - Sets the required SDA hold time in units of ic_clk period, when DW_apb_i2c acts as a receiver.  
+
+ Reset value: IC_DEFAULT_SDA_HOLD\\[23:16\\]."]
+pub type IC_SDA_RX_HOLD_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, IC_SDA_HOLD_SPEC, u8, u8, 8, O>;
+impl R {
     #[doc = "Bits 0:15 - Sets the required SDA hold time in units of ic_clk period, when DW_apb_i2c acts as a transmitter.  
 
  Reset value: IC_DEFAULT_SDA_HOLD\\[15:0\\]."]
@@ -111,21 +60,30 @@ impl R {
     pub fn ic_sda_tx_hold(&self) -> IC_SDA_TX_HOLD_R {
         IC_SDA_TX_HOLD_R::new((self.bits & 0xffff) as u16)
     }
-}
-impl W {
     #[doc = "Bits 16:23 - Sets the required SDA hold time in units of ic_clk period, when DW_apb_i2c acts as a receiver.  
 
  Reset value: IC_DEFAULT_SDA_HOLD\\[23:16\\]."]
     #[inline(always)]
-    pub fn ic_sda_rx_hold(&mut self) -> IC_SDA_RX_HOLD_W {
-        IC_SDA_RX_HOLD_W { w: self }
+    pub fn ic_sda_rx_hold(&self) -> IC_SDA_RX_HOLD_R {
+        IC_SDA_RX_HOLD_R::new(((self.bits >> 16) & 0xff) as u8)
     }
+}
+impl W {
     #[doc = "Bits 0:15 - Sets the required SDA hold time in units of ic_clk period, when DW_apb_i2c acts as a transmitter.  
 
  Reset value: IC_DEFAULT_SDA_HOLD\\[15:0\\]."]
     #[inline(always)]
-    pub fn ic_sda_tx_hold(&mut self) -> IC_SDA_TX_HOLD_W {
-        IC_SDA_TX_HOLD_W { w: self }
+    #[must_use]
+    pub fn ic_sda_tx_hold(&mut self) -> IC_SDA_TX_HOLD_W<0> {
+        IC_SDA_TX_HOLD_W::new(self)
+    }
+    #[doc = "Bits 16:23 - Sets the required SDA hold time in units of ic_clk period, when DW_apb_i2c acts as a receiver.  
+
+ Reset value: IC_DEFAULT_SDA_HOLD\\[23:16\\]."]
+    #[inline(always)]
+    #[must_use]
+    pub fn ic_sda_rx_hold(&mut self) -> IC_SDA_RX_HOLD_W<16> {
+        IC_SDA_RX_HOLD_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
@@ -162,11 +120,10 @@ impl crate::Readable for IC_SDA_HOLD_SPEC {
 #[doc = "`write(|w| ..)` method takes [ic_sda_hold::W](W) writer structure"]
 impl crate::Writable for IC_SDA_HOLD_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets IC_SDA_HOLD to value 0x01"]
 impl crate::Resettable for IC_SDA_HOLD_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x01
-    }
+    const RESET_VALUE: Self::Ux = 0x01;
 }

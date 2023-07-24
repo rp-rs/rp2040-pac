@@ -34,90 +34,15 @@ impl From<crate::W<CTRL_SPEC>> for W {
         W(writer)
     }
 }
-#[doc = "On power-up this field is initialised to ENABLE  
- The system clock must be switched to another source before setting this field to DISABLE otherwise the chip will lock up  
- The 12-bit code is intended to give some protection against accidental writes. An invalid setting will enable the oscillator.  
-
-Value on reset: 0"]
-#[derive(Clone, Copy, Debug, PartialEq)]
-#[repr(u16)]
-pub enum ENABLE_A {
-    #[doc = "3358: `110100011110`"]
-    DISABLE = 3358,
-    #[doc = "4011: `111110101011`"]
-    ENABLE = 4011,
-}
-impl From<ENABLE_A> for u16 {
-    #[inline(always)]
-    fn from(variant: ENABLE_A) -> Self {
-        variant as _
-    }
-}
-#[doc = "Field `ENABLE` reader - On power-up this field is initialised to ENABLE  
- The system clock must be switched to another source before setting this field to DISABLE otherwise the chip will lock up  
- The 12-bit code is intended to give some protection against accidental writes. An invalid setting will enable the oscillator."]
-pub struct ENABLE_R(crate::FieldReader<u16, ENABLE_A>);
-impl ENABLE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u16) -> Self {
-        ENABLE_R(crate::FieldReader::new(bits))
-    }
-    #[doc = r"Get enumerated values variant"]
-    #[inline(always)]
-    pub fn variant(&self) -> Option<ENABLE_A> {
-        match self.bits {
-            3358 => Some(ENABLE_A::DISABLE),
-            4011 => Some(ENABLE_A::ENABLE),
-            _ => None,
-        }
-    }
-    #[doc = "Checks if the value of the field is `DISABLE`"]
-    #[inline(always)]
-    pub fn is_disable(&self) -> bool {
-        **self == ENABLE_A::DISABLE
-    }
-    #[doc = "Checks if the value of the field is `ENABLE`"]
-    #[inline(always)]
-    pub fn is_enable(&self) -> bool {
-        **self == ENABLE_A::ENABLE
-    }
-}
-impl core::ops::Deref for ENABLE_R {
-    type Target = crate::FieldReader<u16, ENABLE_A>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-#[doc = "Field `ENABLE` writer - On power-up this field is initialised to ENABLE  
- The system clock must be switched to another source before setting this field to DISABLE otherwise the chip will lock up  
- The 12-bit code is intended to give some protection against accidental writes. An invalid setting will enable the oscillator."]
-pub struct ENABLE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> ENABLE_W<'a> {
-    #[doc = r"Writes `variant` to the field"]
-    #[inline(always)]
-    pub fn variant(self, variant: ENABLE_A) -> &'a mut W {
-        unsafe { self.bits(variant.into()) }
-    }
-    #[doc = "`110100011110`"]
-    #[inline(always)]
-    pub fn disable(self) -> &'a mut W {
-        self.variant(ENABLE_A::DISABLE)
-    }
-    #[doc = "`111110101011`"]
-    #[inline(always)]
-    pub fn enable(self) -> &'a mut W {
-        self.variant(ENABLE_A::ENABLE)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u16) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x0fff << 12)) | ((value as u32 & 0x0fff) << 12);
-        self.w
-    }
-}
+#[doc = "Field `FREQ_RANGE` reader - Controls the number of delay stages in the ROSC ring  
+ LOW uses stages 0 to 7  
+ MEDIUM uses stages 0 to 5  
+ HIGH uses stages 0 to 3  
+ TOOHIGH uses stages 0 to 1 and should not be used because its frequency exceeds design specifications  
+ The clock output will not glitch when changing the range up one step at a time  
+ The clock output will glitch when changing the range down  
+ Note: the values here are gray coded which is why HIGH comes before TOOHIGH"]
+pub type FREQ_RANGE_R = crate::FieldReader<u16, FREQ_RANGE_A>;
 #[doc = "Controls the number of delay stages in the ROSC ring  
  LOW uses stages 0 to 7  
  MEDIUM uses stages 0 to 5  
@@ -128,7 +53,7 @@ impl<'a> ENABLE_W<'a> {
  Note: the values here are gray coded which is why HIGH comes before TOOHIGH  
 
 Value on reset: 2720"]
-#[derive(Clone, Copy, Debug, PartialEq)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u16)]
 pub enum FREQ_RANGE_A {
     #[doc = "4004: `111110100100`"]
@@ -146,21 +71,8 @@ impl From<FREQ_RANGE_A> for u16 {
         variant as _
     }
 }
-#[doc = "Field `FREQ_RANGE` reader - Controls the number of delay stages in the ROSC ring  
- LOW uses stages 0 to 7  
- MEDIUM uses stages 0 to 5  
- HIGH uses stages 0 to 3  
- TOOHIGH uses stages 0 to 1 and should not be used because its frequency exceeds design specifications  
- The clock output will not glitch when changing the range up one step at a time  
- The clock output will glitch when changing the range down  
- Note: the values here are gray coded which is why HIGH comes before TOOHIGH"]
-pub struct FREQ_RANGE_R(crate::FieldReader<u16, FREQ_RANGE_A>);
 impl FREQ_RANGE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u16) -> Self {
-        FREQ_RANGE_R(crate::FieldReader::new(bits))
-    }
-    #[doc = r"Get enumerated values variant"]
+    #[doc = "Get enumerated values variant"]
     #[inline(always)]
     pub fn variant(&self) -> Option<FREQ_RANGE_A> {
         match self.bits {
@@ -174,29 +86,22 @@ impl FREQ_RANGE_R {
     #[doc = "Checks if the value of the field is `LOW`"]
     #[inline(always)]
     pub fn is_low(&self) -> bool {
-        **self == FREQ_RANGE_A::LOW
+        *self == FREQ_RANGE_A::LOW
     }
     #[doc = "Checks if the value of the field is `MEDIUM`"]
     #[inline(always)]
     pub fn is_medium(&self) -> bool {
-        **self == FREQ_RANGE_A::MEDIUM
+        *self == FREQ_RANGE_A::MEDIUM
     }
     #[doc = "Checks if the value of the field is `HIGH`"]
     #[inline(always)]
     pub fn is_high(&self) -> bool {
-        **self == FREQ_RANGE_A::HIGH
+        *self == FREQ_RANGE_A::HIGH
     }
     #[doc = "Checks if the value of the field is `TOOHIGH`"]
     #[inline(always)]
     pub fn is_toohigh(&self) -> bool {
-        **self == FREQ_RANGE_A::TOOHIGH
-    }
-}
-impl core::ops::Deref for FREQ_RANGE_R {
-    type Target = crate::FieldReader<u16, FREQ_RANGE_A>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
+        *self == FREQ_RANGE_A::TOOHIGH
     }
 }
 #[doc = "Field `FREQ_RANGE` writer - Controls the number of delay stages in the ROSC ring  
@@ -207,15 +112,9 @@ impl core::ops::Deref for FREQ_RANGE_R {
  The clock output will not glitch when changing the range up one step at a time  
  The clock output will glitch when changing the range down  
  Note: the values here are gray coded which is why HIGH comes before TOOHIGH"]
-pub struct FREQ_RANGE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> FREQ_RANGE_W<'a> {
-    #[doc = r"Writes `variant` to the field"]
-    #[inline(always)]
-    pub fn variant(self, variant: FREQ_RANGE_A) -> &'a mut W {
-        unsafe { self.bits(variant.into()) }
-    }
+pub type FREQ_RANGE_W<'a, const O: u8> =
+    crate::FieldWriter<'a, u32, CTRL_SPEC, u16, FREQ_RANGE_A, 12, O>;
+impl<'a, const O: u8> FREQ_RANGE_W<'a, O> {
     #[doc = "`111110100100`"]
     #[inline(always)]
     pub fn low(self) -> &'a mut W {
@@ -236,21 +135,68 @@ impl<'a> FREQ_RANGE_W<'a> {
     pub fn toohigh(self) -> &'a mut W {
         self.variant(FREQ_RANGE_A::TOOHIGH)
     }
-    #[doc = r"Writes raw bits to the field"]
+}
+#[doc = "Field `ENABLE` reader - On power-up this field is initialised to ENABLE  
+ The system clock must be switched to another source before setting this field to DISABLE otherwise the chip will lock up  
+ The 12-bit code is intended to give some protection against accidental writes. An invalid setting will enable the oscillator."]
+pub type ENABLE_R = crate::FieldReader<u16, ENABLE_A>;
+#[doc = "On power-up this field is initialised to ENABLE  
+ The system clock must be switched to another source before setting this field to DISABLE otherwise the chip will lock up  
+ The 12-bit code is intended to give some protection against accidental writes. An invalid setting will enable the oscillator.  
+
+Value on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[repr(u16)]
+pub enum ENABLE_A {
+    #[doc = "3358: `110100011110`"]
+    DISABLE = 3358,
+    #[doc = "4011: `111110101011`"]
+    ENABLE = 4011,
+}
+impl From<ENABLE_A> for u16 {
     #[inline(always)]
-    pub unsafe fn bits(self, value: u16) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x0fff) | (value as u32 & 0x0fff);
-        self.w
+    fn from(variant: ENABLE_A) -> Self {
+        variant as _
+    }
+}
+impl ENABLE_R {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub fn variant(&self) -> Option<ENABLE_A> {
+        match self.bits {
+            3358 => Some(ENABLE_A::DISABLE),
+            4011 => Some(ENABLE_A::ENABLE),
+            _ => None,
+        }
+    }
+    #[doc = "Checks if the value of the field is `DISABLE`"]
+    #[inline(always)]
+    pub fn is_disable(&self) -> bool {
+        *self == ENABLE_A::DISABLE
+    }
+    #[doc = "Checks if the value of the field is `ENABLE`"]
+    #[inline(always)]
+    pub fn is_enable(&self) -> bool {
+        *self == ENABLE_A::ENABLE
+    }
+}
+#[doc = "Field `ENABLE` writer - On power-up this field is initialised to ENABLE  
+ The system clock must be switched to another source before setting this field to DISABLE otherwise the chip will lock up  
+ The 12-bit code is intended to give some protection against accidental writes. An invalid setting will enable the oscillator."]
+pub type ENABLE_W<'a, const O: u8> = crate::FieldWriter<'a, u32, CTRL_SPEC, u16, ENABLE_A, 12, O>;
+impl<'a, const O: u8> ENABLE_W<'a, O> {
+    #[doc = "`110100011110`"]
+    #[inline(always)]
+    pub fn disable(self) -> &'a mut W {
+        self.variant(ENABLE_A::DISABLE)
+    }
+    #[doc = "`111110101011`"]
+    #[inline(always)]
+    pub fn enable(self) -> &'a mut W {
+        self.variant(ENABLE_A::ENABLE)
     }
 }
 impl R {
-    #[doc = "Bits 12:23 - On power-up this field is initialised to ENABLE  
- The system clock must be switched to another source before setting this field to DISABLE otherwise the chip will lock up  
- The 12-bit code is intended to give some protection against accidental writes. An invalid setting will enable the oscillator."]
-    #[inline(always)]
-    pub fn enable(&self) -> ENABLE_R {
-        ENABLE_R::new(((self.bits >> 12) & 0x0fff) as u16)
-    }
     #[doc = "Bits 0:11 - Controls the number of delay stages in the ROSC ring  
  LOW uses stages 0 to 7  
  MEDIUM uses stages 0 to 5  
@@ -263,15 +209,15 @@ impl R {
     pub fn freq_range(&self) -> FREQ_RANGE_R {
         FREQ_RANGE_R::new((self.bits & 0x0fff) as u16)
     }
-}
-impl W {
     #[doc = "Bits 12:23 - On power-up this field is initialised to ENABLE  
  The system clock must be switched to another source before setting this field to DISABLE otherwise the chip will lock up  
  The 12-bit code is intended to give some protection against accidental writes. An invalid setting will enable the oscillator."]
     #[inline(always)]
-    pub fn enable(&mut self) -> ENABLE_W {
-        ENABLE_W { w: self }
+    pub fn enable(&self) -> ENABLE_R {
+        ENABLE_R::new(((self.bits >> 12) & 0x0fff) as u16)
     }
+}
+impl W {
     #[doc = "Bits 0:11 - Controls the number of delay stages in the ROSC ring  
  LOW uses stages 0 to 7  
  MEDIUM uses stages 0 to 5  
@@ -281,8 +227,17 @@ impl W {
  The clock output will glitch when changing the range down  
  Note: the values here are gray coded which is why HIGH comes before TOOHIGH"]
     #[inline(always)]
-    pub fn freq_range(&mut self) -> FREQ_RANGE_W {
-        FREQ_RANGE_W { w: self }
+    #[must_use]
+    pub fn freq_range(&mut self) -> FREQ_RANGE_W<0> {
+        FREQ_RANGE_W::new(self)
+    }
+    #[doc = "Bits 12:23 - On power-up this field is initialised to ENABLE  
+ The system clock must be switched to another source before setting this field to DISABLE otherwise the chip will lock up  
+ The 12-bit code is intended to give some protection against accidental writes. An invalid setting will enable the oscillator."]
+    #[inline(always)]
+    #[must_use]
+    pub fn enable(&mut self) -> ENABLE_W<12> {
+        ENABLE_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
@@ -307,11 +262,10 @@ impl crate::Readable for CTRL_SPEC {
 #[doc = "`write(|w| ..)` method takes [ctrl::W](W) writer structure"]
 impl crate::Writable for CTRL_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets CTRL to value 0x0aa0"]
 impl crate::Resettable for CTRL_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x0aa0
-    }
+    const RESET_VALUE: Self::Ux = 0x0aa0;
 }

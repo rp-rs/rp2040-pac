@@ -34,132 +34,52 @@ impl From<crate::W<TICK_SPEC>> for W {
         W(writer)
     }
 }
-#[doc = "Field `COUNT` reader - Count down timer: the remaining number clk_tick cycles before the next tick is generated."]
-pub struct COUNT_R(crate::FieldReader<u16, u16>);
-impl COUNT_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u16) -> Self {
-        COUNT_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for COUNT_R {
-    type Target = crate::FieldReader<u16, u16>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-#[doc = "Field `RUNNING` reader - Is the tick generator running?"]
-pub struct RUNNING_R(crate::FieldReader<bool, bool>);
-impl RUNNING_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        RUNNING_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RUNNING_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-#[doc = "Field `ENABLE` reader - start / stop tick generation"]
-pub struct ENABLE_R(crate::FieldReader<bool, bool>);
-impl ENABLE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        ENABLE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for ENABLE_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-#[doc = "Field `ENABLE` writer - start / stop tick generation"]
-pub struct ENABLE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> ENABLE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 9)) | ((value as u32 & 0x01) << 9);
-        self.w
-    }
-}
 #[doc = "Field `CYCLES` reader - Total number of clk_tick cycles before the next tick."]
-pub struct CYCLES_R(crate::FieldReader<u16, u16>);
-impl CYCLES_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u16) -> Self {
-        CYCLES_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for CYCLES_R {
-    type Target = crate::FieldReader<u16, u16>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type CYCLES_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `CYCLES` writer - Total number of clk_tick cycles before the next tick."]
-pub struct CYCLES_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> CYCLES_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u16) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x01ff) | (value as u32 & 0x01ff);
-        self.w
-    }
-}
+pub type CYCLES_W<'a, const O: u8> = crate::FieldWriter<'a, u32, TICK_SPEC, u16, u16, 9, O>;
+#[doc = "Field `ENABLE` reader - start / stop tick generation"]
+pub type ENABLE_R = crate::BitReader<bool>;
+#[doc = "Field `ENABLE` writer - start / stop tick generation"]
+pub type ENABLE_W<'a, const O: u8> = crate::BitWriter<'a, u32, TICK_SPEC, bool, O>;
+#[doc = "Field `RUNNING` reader - Is the tick generator running?"]
+pub type RUNNING_R = crate::BitReader<bool>;
+#[doc = "Field `COUNT` reader - Count down timer: the remaining number clk_tick cycles before the next tick is generated."]
+pub type COUNT_R = crate::FieldReader<u16, u16>;
 impl R {
-    #[doc = "Bits 11:19 - Count down timer: the remaining number clk_tick cycles before the next tick is generated."]
-    #[inline(always)]
-    pub fn count(&self) -> COUNT_R {
-        COUNT_R::new(((self.bits >> 11) & 0x01ff) as u16)
-    }
-    #[doc = "Bit 10 - Is the tick generator running?"]
-    #[inline(always)]
-    pub fn running(&self) -> RUNNING_R {
-        RUNNING_R::new(((self.bits >> 10) & 0x01) != 0)
-    }
-    #[doc = "Bit 9 - start / stop tick generation"]
-    #[inline(always)]
-    pub fn enable(&self) -> ENABLE_R {
-        ENABLE_R::new(((self.bits >> 9) & 0x01) != 0)
-    }
     #[doc = "Bits 0:8 - Total number of clk_tick cycles before the next tick."]
     #[inline(always)]
     pub fn cycles(&self) -> CYCLES_R {
         CYCLES_R::new((self.bits & 0x01ff) as u16)
     }
-}
-impl W {
     #[doc = "Bit 9 - start / stop tick generation"]
     #[inline(always)]
-    pub fn enable(&mut self) -> ENABLE_W {
-        ENABLE_W { w: self }
+    pub fn enable(&self) -> ENABLE_R {
+        ENABLE_R::new(((self.bits >> 9) & 1) != 0)
     }
+    #[doc = "Bit 10 - Is the tick generator running?"]
+    #[inline(always)]
+    pub fn running(&self) -> RUNNING_R {
+        RUNNING_R::new(((self.bits >> 10) & 1) != 0)
+    }
+    #[doc = "Bits 11:19 - Count down timer: the remaining number clk_tick cycles before the next tick is generated."]
+    #[inline(always)]
+    pub fn count(&self) -> COUNT_R {
+        COUNT_R::new(((self.bits >> 11) & 0x01ff) as u16)
+    }
+}
+impl W {
     #[doc = "Bits 0:8 - Total number of clk_tick cycles before the next tick."]
     #[inline(always)]
-    pub fn cycles(&mut self) -> CYCLES_W {
-        CYCLES_W { w: self }
+    #[must_use]
+    pub fn cycles(&mut self) -> CYCLES_W<0> {
+        CYCLES_W::new(self)
+    }
+    #[doc = "Bit 9 - start / stop tick generation"]
+    #[inline(always)]
+    #[must_use]
+    pub fn enable(&mut self) -> ENABLE_W<9> {
+        ENABLE_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
@@ -184,11 +104,10 @@ impl crate::Readable for TICK_SPEC {
 #[doc = "`write(|w| ..)` method takes [tick::W](W) writer structure"]
 impl crate::Writable for TICK_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets TICK to value 0x0200"]
 impl crate::Resettable for TICK_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x0200
-    }
+    const RESET_VALUE: Self::Ux = 0x0200;
 }

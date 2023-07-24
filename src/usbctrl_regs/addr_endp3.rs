@@ -34,176 +34,68 @@ impl From<crate::W<ADDR_ENDP3_SPEC>> for W {
         W(writer)
     }
 }
-#[doc = "Field `INTEP_PREAMBLE` reader - Interrupt EP requires preamble (is a low speed device on a full speed hub)"]
-pub struct INTEP_PREAMBLE_R(crate::FieldReader<bool, bool>);
-impl INTEP_PREAMBLE_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        INTEP_PREAMBLE_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for INTEP_PREAMBLE_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-#[doc = "Field `INTEP_PREAMBLE` writer - Interrupt EP requires preamble (is a low speed device on a full speed hub)"]
-pub struct INTEP_PREAMBLE_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> INTEP_PREAMBLE_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 26)) | ((value as u32 & 0x01) << 26);
-        self.w
-    }
-}
-#[doc = "Field `INTEP_DIR` reader - Direction of the interrupt endpoint. In=0, Out=1"]
-pub struct INTEP_DIR_R(crate::FieldReader<bool, bool>);
-impl INTEP_DIR_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        INTEP_DIR_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for INTEP_DIR_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-#[doc = "Field `INTEP_DIR` writer - Direction of the interrupt endpoint. In=0, Out=1"]
-pub struct INTEP_DIR_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> INTEP_DIR_W<'a> {
-    #[doc = r"Sets the field bit"]
-    #[inline(always)]
-    pub fn set_bit(self) -> &'a mut W {
-        self.bit(true)
-    }
-    #[doc = r"Clears the field bit"]
-    #[inline(always)]
-    pub fn clear_bit(self) -> &'a mut W {
-        self.bit(false)
-    }
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub fn bit(self, value: bool) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x01 << 25)) | ((value as u32 & 0x01) << 25);
-        self.w
-    }
-}
-#[doc = "Field `ENDPOINT` reader - Endpoint number of the interrupt endpoint"]
-pub struct ENDPOINT_R(crate::FieldReader<u8, u8>);
-impl ENDPOINT_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        ENDPOINT_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for ENDPOINT_R {
-    type Target = crate::FieldReader<u8, u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-#[doc = "Field `ENDPOINT` writer - Endpoint number of the interrupt endpoint"]
-pub struct ENDPOINT_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> ENDPOINT_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0x0f << 16)) | ((value as u32 & 0x0f) << 16);
-        self.w
-    }
-}
 #[doc = "Field `ADDRESS` reader - Device address"]
-pub struct ADDRESS_R(crate::FieldReader<u8, u8>);
-impl ADDRESS_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        ADDRESS_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for ADDRESS_R {
-    type Target = crate::FieldReader<u8, u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type ADDRESS_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `ADDRESS` writer - Device address"]
-pub struct ADDRESS_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> ADDRESS_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0x7f) | (value as u32 & 0x7f);
-        self.w
-    }
-}
+pub type ADDRESS_W<'a, const O: u8> = crate::FieldWriter<'a, u32, ADDR_ENDP3_SPEC, u8, u8, 7, O>;
+#[doc = "Field `ENDPOINT` reader - Endpoint number of the interrupt endpoint"]
+pub type ENDPOINT_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `ENDPOINT` writer - Endpoint number of the interrupt endpoint"]
+pub type ENDPOINT_W<'a, const O: u8> = crate::FieldWriter<'a, u32, ADDR_ENDP3_SPEC, u8, u8, 4, O>;
+#[doc = "Field `INTEP_DIR` reader - Direction of the interrupt endpoint. In=0, Out=1"]
+pub type INTEP_DIR_R = crate::BitReader<bool>;
+#[doc = "Field `INTEP_DIR` writer - Direction of the interrupt endpoint. In=0, Out=1"]
+pub type INTEP_DIR_W<'a, const O: u8> = crate::BitWriter<'a, u32, ADDR_ENDP3_SPEC, bool, O>;
+#[doc = "Field `INTEP_PREAMBLE` reader - Interrupt EP requires preamble (is a low speed device on a full speed hub)"]
+pub type INTEP_PREAMBLE_R = crate::BitReader<bool>;
+#[doc = "Field `INTEP_PREAMBLE` writer - Interrupt EP requires preamble (is a low speed device on a full speed hub)"]
+pub type INTEP_PREAMBLE_W<'a, const O: u8> = crate::BitWriter<'a, u32, ADDR_ENDP3_SPEC, bool, O>;
 impl R {
-    #[doc = "Bit 26 - Interrupt EP requires preamble (is a low speed device on a full speed hub)"]
+    #[doc = "Bits 0:6 - Device address"]
     #[inline(always)]
-    pub fn intep_preamble(&self) -> INTEP_PREAMBLE_R {
-        INTEP_PREAMBLE_R::new(((self.bits >> 26) & 0x01) != 0)
-    }
-    #[doc = "Bit 25 - Direction of the interrupt endpoint. In=0, Out=1"]
-    #[inline(always)]
-    pub fn intep_dir(&self) -> INTEP_DIR_R {
-        INTEP_DIR_R::new(((self.bits >> 25) & 0x01) != 0)
+    pub fn address(&self) -> ADDRESS_R {
+        ADDRESS_R::new((self.bits & 0x7f) as u8)
     }
     #[doc = "Bits 16:19 - Endpoint number of the interrupt endpoint"]
     #[inline(always)]
     pub fn endpoint(&self) -> ENDPOINT_R {
         ENDPOINT_R::new(((self.bits >> 16) & 0x0f) as u8)
     }
-    #[doc = "Bits 0:6 - Device address"]
+    #[doc = "Bit 25 - Direction of the interrupt endpoint. In=0, Out=1"]
     #[inline(always)]
-    pub fn address(&self) -> ADDRESS_R {
-        ADDRESS_R::new((self.bits & 0x7f) as u8)
+    pub fn intep_dir(&self) -> INTEP_DIR_R {
+        INTEP_DIR_R::new(((self.bits >> 25) & 1) != 0)
+    }
+    #[doc = "Bit 26 - Interrupt EP requires preamble (is a low speed device on a full speed hub)"]
+    #[inline(always)]
+    pub fn intep_preamble(&self) -> INTEP_PREAMBLE_R {
+        INTEP_PREAMBLE_R::new(((self.bits >> 26) & 1) != 0)
     }
 }
 impl W {
-    #[doc = "Bit 26 - Interrupt EP requires preamble (is a low speed device on a full speed hub)"]
+    #[doc = "Bits 0:6 - Device address"]
     #[inline(always)]
-    pub fn intep_preamble(&mut self) -> INTEP_PREAMBLE_W {
-        INTEP_PREAMBLE_W { w: self }
-    }
-    #[doc = "Bit 25 - Direction of the interrupt endpoint. In=0, Out=1"]
-    #[inline(always)]
-    pub fn intep_dir(&mut self) -> INTEP_DIR_W {
-        INTEP_DIR_W { w: self }
+    #[must_use]
+    pub fn address(&mut self) -> ADDRESS_W<0> {
+        ADDRESS_W::new(self)
     }
     #[doc = "Bits 16:19 - Endpoint number of the interrupt endpoint"]
     #[inline(always)]
-    pub fn endpoint(&mut self) -> ENDPOINT_W {
-        ENDPOINT_W { w: self }
+    #[must_use]
+    pub fn endpoint(&mut self) -> ENDPOINT_W<16> {
+        ENDPOINT_W::new(self)
     }
-    #[doc = "Bits 0:6 - Device address"]
+    #[doc = "Bit 25 - Direction of the interrupt endpoint. In=0, Out=1"]
     #[inline(always)]
-    pub fn address(&mut self) -> ADDRESS_W {
-        ADDRESS_W { w: self }
+    #[must_use]
+    pub fn intep_dir(&mut self) -> INTEP_DIR_W<25> {
+        INTEP_DIR_W::new(self)
+    }
+    #[doc = "Bit 26 - Interrupt EP requires preamble (is a low speed device on a full speed hub)"]
+    #[inline(always)]
+    #[must_use]
+    pub fn intep_preamble(&mut self) -> INTEP_PREAMBLE_W<26> {
+        INTEP_PREAMBLE_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
@@ -228,11 +120,10 @@ impl crate::Readable for ADDR_ENDP3_SPEC {
 #[doc = "`write(|w| ..)` method takes [addr_endp3::W](W) writer structure"]
 impl crate::Writable for ADDR_ENDP3_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets ADDR_ENDP3 to value 0"]
 impl crate::Resettable for ADDR_ENDP3_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

@@ -35,32 +35,9 @@ impl From<crate::W<TOP_SPEC>> for W {
     }
 }
 #[doc = "Field `TOP` reader - "]
-pub struct TOP_R(crate::FieldReader<u16, u16>);
-impl TOP_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u16) -> Self {
-        TOP_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for TOP_R {
-    type Target = crate::FieldReader<u16, u16>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type TOP_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `TOP` writer - "]
-pub struct TOP_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> TOP_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u16) -> &'a mut W {
-        self.w.bits = (self.w.bits & !0xffff) | (value as u32 & 0xffff);
-        self.w
-    }
-}
+pub type TOP_W<'a, const O: u8> = crate::FieldWriter<'a, u32, TOP_SPEC, u16, u16, 16, O>;
 impl R {
     #[doc = "Bits 0:15"]
     #[inline(always)]
@@ -71,8 +48,9 @@ impl R {
 impl W {
     #[doc = "Bits 0:15"]
     #[inline(always)]
-    pub fn top(&mut self) -> TOP_W {
-        TOP_W { w: self }
+    #[must_use]
+    pub fn top(&mut self) -> TOP_W<0> {
+        TOP_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
@@ -97,11 +75,10 @@ impl crate::Readable for TOP_SPEC {
 #[doc = "`write(|w| ..)` method takes [top::W](W) writer structure"]
 impl crate::Writable for TOP_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets TOP to value 0xffff"]
 impl crate::Resettable for TOP_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0xffff
-    }
+    const RESET_VALUE: Self::Ux = 0xffff;
 }

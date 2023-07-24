@@ -14,25 +14,12 @@ impl From<crate::R<CLK_SYS_RESUS_STATUS_SPEC>> for R {
     }
 }
 #[doc = "Field `RESUSSED` reader - Clock has been resuscitated, correct the error then send ctrl_clear=1"]
-pub struct RESUSSED_R(crate::FieldReader<bool, bool>);
-impl RESUSSED_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: bool) -> Self {
-        RESUSSED_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for RESUSSED_R {
-    type Target = crate::FieldReader<bool, bool>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type RESUSSED_R = crate::BitReader<bool>;
 impl R {
     #[doc = "Bit 0 - Clock has been resuscitated, correct the error then send ctrl_clear=1"]
     #[inline(always)]
     pub fn resussed(&self) -> RESUSSED_R {
-        RESUSSED_R::new((self.bits & 0x01) != 0)
+        RESUSSED_R::new((self.bits & 1) != 0)
     }
 }
 #[doc = "  
@@ -50,8 +37,5 @@ impl crate::Readable for CLK_SYS_RESUS_STATUS_SPEC {
 }
 #[doc = "`reset()` method sets CLK_SYS_RESUS_STATUS to value 0"]
 impl crate::Resettable for CLK_SYS_RESUS_STATUS_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }

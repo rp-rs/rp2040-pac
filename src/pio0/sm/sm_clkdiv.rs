@@ -34,86 +34,42 @@ impl From<crate::W<SM_CLKDIV_SPEC>> for W {
         W(writer)
     }
 }
+#[doc = "Field `FRAC` reader - Fractional part of clock divisor"]
+pub type FRAC_R = crate::FieldReader<u8, u8>;
+#[doc = "Field `FRAC` writer - Fractional part of clock divisor"]
+pub type FRAC_W<'a, const O: u8> = crate::FieldWriter<'a, u32, SM_CLKDIV_SPEC, u8, u8, 8, O>;
 #[doc = "Field `INT` reader - Effective frequency is sysclk/(int + frac/256).  
  Value of 0 is interpreted as 65536. If INT is 0, FRAC must also be 0."]
-pub struct INT_R(crate::FieldReader<u16, u16>);
-impl INT_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u16) -> Self {
-        INT_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for INT_R {
-    type Target = crate::FieldReader<u16, u16>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
+pub type INT_R = crate::FieldReader<u16, u16>;
 #[doc = "Field `INT` writer - Effective frequency is sysclk/(int + frac/256).  
  Value of 0 is interpreted as 65536. If INT is 0, FRAC must also be 0."]
-pub struct INT_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> INT_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u16) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0xffff << 16)) | ((value as u32 & 0xffff) << 16);
-        self.w
-    }
-}
-#[doc = "Field `FRAC` reader - Fractional part of clock divisor"]
-pub struct FRAC_R(crate::FieldReader<u8, u8>);
-impl FRAC_R {
-    #[inline(always)]
-    pub(crate) fn new(bits: u8) -> Self {
-        FRAC_R(crate::FieldReader::new(bits))
-    }
-}
-impl core::ops::Deref for FRAC_R {
-    type Target = crate::FieldReader<u8, u8>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-#[doc = "Field `FRAC` writer - Fractional part of clock divisor"]
-pub struct FRAC_W<'a> {
-    w: &'a mut W,
-}
-impl<'a> FRAC_W<'a> {
-    #[doc = r"Writes raw bits to the field"]
-    #[inline(always)]
-    pub unsafe fn bits(self, value: u8) -> &'a mut W {
-        self.w.bits = (self.w.bits & !(0xff << 8)) | ((value as u32 & 0xff) << 8);
-        self.w
-    }
-}
+pub type INT_W<'a, const O: u8> = crate::FieldWriter<'a, u32, SM_CLKDIV_SPEC, u16, u16, 16, O>;
 impl R {
+    #[doc = "Bits 8:15 - Fractional part of clock divisor"]
+    #[inline(always)]
+    pub fn frac(&self) -> FRAC_R {
+        FRAC_R::new(((self.bits >> 8) & 0xff) as u8)
+    }
     #[doc = "Bits 16:31 - Effective frequency is sysclk/(int + frac/256).  
  Value of 0 is interpreted as 65536. If INT is 0, FRAC must also be 0."]
     #[inline(always)]
     pub fn int(&self) -> INT_R {
         INT_R::new(((self.bits >> 16) & 0xffff) as u16)
     }
-    #[doc = "Bits 8:15 - Fractional part of clock divisor"]
-    #[inline(always)]
-    pub fn frac(&self) -> FRAC_R {
-        FRAC_R::new(((self.bits >> 8) & 0xff) as u8)
-    }
 }
 impl W {
+    #[doc = "Bits 8:15 - Fractional part of clock divisor"]
+    #[inline(always)]
+    #[must_use]
+    pub fn frac(&mut self) -> FRAC_W<8> {
+        FRAC_W::new(self)
+    }
     #[doc = "Bits 16:31 - Effective frequency is sysclk/(int + frac/256).  
  Value of 0 is interpreted as 65536. If INT is 0, FRAC must also be 0."]
     #[inline(always)]
-    pub fn int(&mut self) -> INT_W {
-        INT_W { w: self }
-    }
-    #[doc = "Bits 8:15 - Fractional part of clock divisor"]
-    #[inline(always)]
-    pub fn frac(&mut self) -> FRAC_W {
-        FRAC_W { w: self }
+    #[must_use]
+    pub fn int(&mut self) -> INT_W<16> {
+        INT_W::new(self)
     }
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]
@@ -139,11 +95,10 @@ impl crate::Readable for SM_CLKDIV_SPEC {
 #[doc = "`write(|w| ..)` method takes [sm_clkdiv::W](W) writer structure"]
 impl crate::Writable for SM_CLKDIV_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets SM_CLKDIV to value 0x0001_0000"]
 impl crate::Resettable for SM_CLKDIV_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0x0001_0000
-    }
+    const RESET_VALUE: Self::Ux = 0x0001_0000;
 }

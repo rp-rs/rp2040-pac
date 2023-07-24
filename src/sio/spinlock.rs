@@ -64,11 +64,10 @@ impl crate::Readable for SPINLOCK_SPEC {
 #[doc = "`write(|w| ..)` method takes [spinlock::W](W) writer structure"]
 impl crate::Writable for SPINLOCK_SPEC {
     type Writer = W;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
 #[doc = "`reset()` method sets SPINLOCK%s to value 0"]
 impl crate::Resettable for SPINLOCK_SPEC {
-    #[inline(always)]
-    fn reset_value() -> Self::Ux {
-        0
-    }
+    const RESET_VALUE: Self::Ux = 0;
 }
