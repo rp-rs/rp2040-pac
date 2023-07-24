@@ -633,6 +633,17 @@ IO_BANK0:
       "GPIO*_STATUS": {}
       "GPIO*_CTRL": {}
 
+SPI0:
+  SSPCR0:
+    _modify:
+      FRF:
+        description: "Frame format."
+    FRF:
+      _replace_enum:
+        Motorola: [0, "Motorola SPI frame format"]
+        Texas_Instruments: [1, "Texas Instruments synchronous serial frame format"]
+        National_Semiconductor_Microwire: [2, "National Semiconductor Microwire frame format"]
+
 IO_QSPI:
   _cluster:
     "GPIO_QSPI%s":

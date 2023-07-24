@@ -38,10 +38,73 @@ impl From<crate::W<SSPCR0_SPEC>> for W {
 pub type DSS_R = crate::FieldReader<u8, u8>;
 #[doc = "Field `DSS` writer - Data Size Select: 0000 Reserved, undefined operation. 0001 Reserved, undefined operation. 0010 Reserved, undefined operation. 0011 4-bit data. 0100 5-bit data. 0101 6-bit data. 0110 7-bit data. 0111 8-bit data. 1000 9-bit data. 1001 10-bit data. 1010 11-bit data. 1011 12-bit data. 1100 13-bit data. 1101 14-bit data. 1110 15-bit data. 1111 16-bit data."]
 pub type DSS_W<'a, const O: u8> = crate::FieldWriter<'a, u32, SSPCR0_SPEC, u8, u8, 4, O>;
-#[doc = "Field `FRF` reader - Frame format: 00 Motorola SPI frame format. 01 TI synchronous serial frame format. 10 National Microwire frame format. 11 Reserved, undefined operation."]
-pub type FRF_R = crate::FieldReader<u8, u8>;
-#[doc = "Field `FRF` writer - Frame format: 00 Motorola SPI frame format. 01 TI synchronous serial frame format. 10 National Microwire frame format. 11 Reserved, undefined operation."]
-pub type FRF_W<'a, const O: u8> = crate::FieldWriter<'a, u32, SSPCR0_SPEC, u8, u8, 2, O>;
+#[doc = "Field `FRF` reader - Frame format."]
+pub type FRF_R = crate::FieldReader<u8, FRF_A>;
+#[doc = "Frame format.  
+
+Value on reset: 0"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[repr(u8)]
+pub enum FRF_A {
+    #[doc = "0: Motorola SPI frame format"]
+    MOTOROLA = 0,
+    #[doc = "1: Texas Instruments synchronous serial frame format"]
+    TEXAS_INSTRUMENTS = 1,
+    #[doc = "2: National Semiconductor Microwire frame format"]
+    NATIONAL_SEMICONDUCTOR_MICROWIRE = 2,
+}
+impl From<FRF_A> for u8 {
+    #[inline(always)]
+    fn from(variant: FRF_A) -> Self {
+        variant as _
+    }
+}
+impl FRF_R {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub fn variant(&self) -> Option<FRF_A> {
+        match self.bits {
+            0 => Some(FRF_A::MOTOROLA),
+            1 => Some(FRF_A::TEXAS_INSTRUMENTS),
+            2 => Some(FRF_A::NATIONAL_SEMICONDUCTOR_MICROWIRE),
+            _ => None,
+        }
+    }
+    #[doc = "Checks if the value of the field is `MOTOROLA`"]
+    #[inline(always)]
+    pub fn is_motorola(&self) -> bool {
+        *self == FRF_A::MOTOROLA
+    }
+    #[doc = "Checks if the value of the field is `TEXAS_INSTRUMENTS`"]
+    #[inline(always)]
+    pub fn is_texas_instruments(&self) -> bool {
+        *self == FRF_A::TEXAS_INSTRUMENTS
+    }
+    #[doc = "Checks if the value of the field is `NATIONAL_SEMICONDUCTOR_MICROWIRE`"]
+    #[inline(always)]
+    pub fn is_national_semiconductor_microwire(&self) -> bool {
+        *self == FRF_A::NATIONAL_SEMICONDUCTOR_MICROWIRE
+    }
+}
+#[doc = "Field `FRF` writer - Frame format."]
+pub type FRF_W<'a, const O: u8> = crate::FieldWriter<'a, u32, SSPCR0_SPEC, u8, FRF_A, 2, O>;
+impl<'a, const O: u8> FRF_W<'a, O> {
+    #[doc = "Motorola SPI frame format"]
+    #[inline(always)]
+    pub fn motorola(self) -> &'a mut W {
+        self.variant(FRF_A::MOTOROLA)
+    }
+    #[doc = "Texas Instruments synchronous serial frame format"]
+    #[inline(always)]
+    pub fn texas_instruments(self) -> &'a mut W {
+        self.variant(FRF_A::TEXAS_INSTRUMENTS)
+    }
+    #[doc = "National Semiconductor Microwire frame format"]
+    #[inline(always)]
+    pub fn national_semiconductor_microwire(self) -> &'a mut W {
+        self.variant(FRF_A::NATIONAL_SEMICONDUCTOR_MICROWIRE)
+    }
+}
 #[doc = "Field `SPO` reader - SSPCLKOUT polarity, applicable to Motorola SPI frame format only. See Motorola SPI frame format on page 2-10."]
 pub type SPO_R = crate::BitReader<bool>;
 #[doc = "Field `SPO` writer - SSPCLKOUT polarity, applicable to Motorola SPI frame format only. See Motorola SPI frame format on page 2-10."]
@@ -60,7 +123,7 @@ impl R {
     pub fn dss(&self) -> DSS_R {
         DSS_R::new((self.bits & 0x0f) as u8)
     }
-    #[doc = "Bits 4:5 - Frame format: 00 Motorola SPI frame format. 01 TI synchronous serial frame format. 10 National Microwire frame format. 11 Reserved, undefined operation."]
+    #[doc = "Bits 4:5 - Frame format."]
     #[inline(always)]
     pub fn frf(&self) -> FRF_R {
         FRF_R::new(((self.bits >> 4) & 3) as u8)
@@ -88,7 +151,7 @@ impl W {
     pub fn dss(&mut self) -> DSS_W<0> {
         DSS_W::new(self)
     }
-    #[doc = "Bits 4:5 - Frame format: 00 Motorola SPI frame format. 01 TI synchronous serial frame format. 10 National Microwire frame format. 11 Reserved, undefined operation."]
+    #[doc = "Bits 4:5 - Frame format."]
     #[inline(always)]
     #[must_use]
     pub fn frf(&mut self) -> FRF_W<4> {
