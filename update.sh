@@ -1,10 +1,9 @@
 #!/usr/bin/env bash
 
+# Path to `svd`/`svdtools`
 SVDTOOLS="${SVDTOOLS:-svdtools}"
 
 set -ex
-
-# Path to `svd`/`svdtools`
 
 cargo install --version 0.29.0 svd2rust
 cargo install --version 0.10.0  form
