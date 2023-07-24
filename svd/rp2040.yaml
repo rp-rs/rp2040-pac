@@ -641,7 +641,7 @@ SPI0:
     FRF:
       _replace_enum:
         Motorola: [0, "Motorola SPI frame format"]
-        Texas_Instrument: [1, "TI synchronous serial frame format"]
+        Texas_Instruments: [1, "Texas Instruments synchronous serial frame format"]
         National_Semiconductor_Microwire: [2, "National Semiconductor Microwire frame format"]
 
 IO_QSPI:
