@@ -39,13 +39,13 @@ impl From<crate::W<FLUSH_SPEC>> for W {
  contents is not affected by flush or reset.)  
  Reading will hold the bus (stall the processor) until the flush  
  completes. Alternatively STAT can be polled until completion."]
-pub type FLUSH_R = crate::BitReader<bool>;
+pub type FLUSH_R = crate::BitReader;
 #[doc = "Field `FLUSH` writer - Write 1 to flush the cache. This clears the tag memory, but  
  the data memory retains its contents. (This means cache-as-SRAM  
  contents is not affected by flush or reset.)  
  Reading will hold the bus (stall the processor) until the flush  
  completes. Alternatively STAT can be polled until completion."]
-pub type FLUSH_W<'a, const O: u8> = crate::BitWriter<'a, u32, FLUSH_SPEC, bool, O>;
+pub type FLUSH_W<'a, const O: u8> = crate::BitWriter<'a, FLUSH_SPEC, O>;
 impl R {
     #[doc = "Bit 0 - Write 1 to flush the cache. This clears the tag memory, but  
  the data memory retains its contents. (This means cache-as-SRAM  

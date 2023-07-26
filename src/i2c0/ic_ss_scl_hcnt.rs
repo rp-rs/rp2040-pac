@@ -42,7 +42,7 @@ register being set to 0. Writes at other times have no effect.
  The minimum valid value is 6; hardware prevents values less than this being written, and if attempted results in 6 being set. For designs with APB_DATA_WIDTH = 8, the order of programming is important to ensure the correct operation of the DW_apb_i2c. The lower byte must be programmed first. Then the upper byte is programmed.  
 
  NOTE: This register must not be programmed to a value higher than 65525, because DW_apb_i2c uses a 16-bit counter to flag an I2C bus idle condition when this counter reaches a value of IC_SS_SCL_HCNT + 10."]
-pub type IC_SS_SCL_HCNT_R = crate::FieldReader<u16, u16>;
+pub type IC_SS_SCL_HCNT_R = crate::FieldReader<u16>;
 #[doc = "Field `IC_SS_SCL_HCNT` writer - This register must be set before any I2C bus transaction can take place to ensure proper I/O timing. This register sets the SCL clock high-period count for standard speed. For more information, refer to 'IC_CLK Frequency Configuration'.  
 
  This register can be written only when the I2C interface is disabled which corresponds to the IC_ENABLE\\[0\\]
@@ -52,7 +52,7 @@ register being set to 0. Writes at other times have no effect.
 
  NOTE: This register must not be programmed to a value higher than 65525, because DW_apb_i2c uses a 16-bit counter to flag an I2C bus idle condition when this counter reaches a value of IC_SS_SCL_HCNT + 10."]
 pub type IC_SS_SCL_HCNT_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, IC_SS_SCL_HCNT_SPEC, u16, u16, 16, O>;
+    crate::FieldWriter<'a, IC_SS_SCL_HCNT_SPEC, 16, O, u16>;
 impl R {
     #[doc = "Bits 0:15 - This register must be set before any I2C bus transaction can take place to ensure proper I/O timing. This register sets the SCL clock high-period count for standard speed. For more information, refer to 'IC_CLK Frequency Configuration'.  
 

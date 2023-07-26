@@ -15,17 +15,17 @@ impl From<crate::R<CPUID_SPEC>> for R {
 }
 #[doc = "Field `REVISION` reader - Minor revision number m in the rnpm revision status:  
  0x1 = Patch 1."]
-pub type REVISION_R = crate::FieldReader<u8, u8>;
+pub type REVISION_R = crate::FieldReader;
 #[doc = "Field `PARTNO` reader - Number of processor within family: 0xC60 = Cortex-M0+"]
-pub type PARTNO_R = crate::FieldReader<u16, u16>;
+pub type PARTNO_R = crate::FieldReader<u16>;
 #[doc = "Field `ARCHITECTURE` reader - Constant that defines the architecture of the processor:  
  0xC = ARMv6-M architecture."]
-pub type ARCHITECTURE_R = crate::FieldReader<u8, u8>;
+pub type ARCHITECTURE_R = crate::FieldReader;
 #[doc = "Field `VARIANT` reader - Major revision number n in the rnpm revision status:  
  0x0 = Revision 0."]
-pub type VARIANT_R = crate::FieldReader<u8, u8>;
+pub type VARIANT_R = crate::FieldReader;
 #[doc = "Field `IMPLEMENTER` reader - Implementor code: 0x41 = ARM"]
-pub type IMPLEMENTER_R = crate::FieldReader<u8, u8>;
+pub type IMPLEMENTER_R = crate::FieldReader;
 impl R {
     #[doc = "Bits 0:3 - Minor revision number m in the rnpm revision status:  
  0x1 = Patch 1."]

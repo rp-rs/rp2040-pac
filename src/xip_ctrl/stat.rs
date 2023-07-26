@@ -16,13 +16,13 @@ impl From<crate::R<STAT_SPEC>> for R {
 #[doc = "Field `FLUSH_READY` reader - Reads as 0 while a cache flush is in progress, and 1 otherwise.  
  The cache is flushed whenever the XIP block is reset, and also  
  when requested via the FLUSH register."]
-pub type FLUSH_READY_R = crate::BitReader<bool>;
+pub type FLUSH_READY_R = crate::BitReader;
 #[doc = "Field `FIFO_EMPTY` reader - When 1, indicates the XIP streaming FIFO is completely empty."]
-pub type FIFO_EMPTY_R = crate::BitReader<bool>;
+pub type FIFO_EMPTY_R = crate::BitReader;
 #[doc = "Field `FIFO_FULL` reader - When 1, indicates the XIP streaming FIFO is completely full.  
  The streaming FIFO is 2 entries deep, so the full and empty  
  flag allow its level to be ascertained."]
-pub type FIFO_FULL_R = crate::BitReader<bool>;
+pub type FIFO_FULL_R = crate::BitReader;
 impl R {
     #[doc = "Bit 0 - Reads as 0 while a cache flush is in progress, and 1 otherwise.  
  The cache is flushed whenever the XIP block is reset, and also  

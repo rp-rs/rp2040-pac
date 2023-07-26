@@ -14,9 +14,9 @@ impl From<crate::R<REASON_SPEC>> for R {
     }
 }
 #[doc = "Field `TIMER` reader - "]
-pub type TIMER_R = crate::BitReader<bool>;
+pub type TIMER_R = crate::BitReader;
 #[doc = "Field `FORCE` reader - "]
-pub type FORCE_R = crate::BitReader<bool>;
+pub type FORCE_R = crate::BitReader;
 impl R {
     #[doc = "Bit 0"]
     #[inline(always)]

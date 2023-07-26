@@ -35,17 +35,17 @@ impl From<crate::W<TICK_SPEC>> for W {
     }
 }
 #[doc = "Field `CYCLES` reader - Total number of clk_tick cycles before the next tick."]
-pub type CYCLES_R = crate::FieldReader<u16, u16>;
+pub type CYCLES_R = crate::FieldReader<u16>;
 #[doc = "Field `CYCLES` writer - Total number of clk_tick cycles before the next tick."]
-pub type CYCLES_W<'a, const O: u8> = crate::FieldWriter<'a, u32, TICK_SPEC, u16, u16, 9, O>;
+pub type CYCLES_W<'a, const O: u8> = crate::FieldWriter<'a, TICK_SPEC, 9, O, u16>;
 #[doc = "Field `ENABLE` reader - start / stop tick generation"]
-pub type ENABLE_R = crate::BitReader<bool>;
+pub type ENABLE_R = crate::BitReader;
 #[doc = "Field `ENABLE` writer - start / stop tick generation"]
-pub type ENABLE_W<'a, const O: u8> = crate::BitWriter<'a, u32, TICK_SPEC, bool, O>;
+pub type ENABLE_W<'a, const O: u8> = crate::BitWriter<'a, TICK_SPEC, O>;
 #[doc = "Field `RUNNING` reader - Is the tick generator running?"]
-pub type RUNNING_R = crate::BitReader<bool>;
+pub type RUNNING_R = crate::BitReader;
 #[doc = "Field `COUNT` reader - Count down timer: the remaining number clk_tick cycles before the next tick is generated."]
-pub type COUNT_R = crate::FieldReader<u16, u16>;
+pub type COUNT_R = crate::FieldReader<u16>;
 impl R {
     #[doc = "Bits 0:8 - Total number of clk_tick cycles before the next tick."]
     #[inline(always)]

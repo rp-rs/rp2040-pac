@@ -14,10 +14,10 @@ impl From<crate::R<CCR_SPEC>> for R {
     }
 }
 #[doc = "Field `UNALIGN_TRP` reader - Always reads as one, indicates that all unaligned accesses generate a HardFault."]
-pub type UNALIGN_TRP_R = crate::BitReader<bool>;
+pub type UNALIGN_TRP_R = crate::BitReader;
 #[doc = "Field `STKALIGN` reader - Always reads as one, indicates 8-byte stack alignment on exception entry. On exception entry, the processor uses bit\\[9\\]
 of the stacked PSR to indicate the stack alignment. On return from the exception it uses this stacked bit to restore the correct stack alignment."]
-pub type STKALIGN_R = crate::BitReader<bool>;
+pub type STKALIGN_R = crate::BitReader;
 impl R {
     #[doc = "Bit 3 - Always reads as one, indicates that all unaligned accesses generate a HardFault."]
     #[inline(always)]

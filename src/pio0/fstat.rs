@@ -14,13 +14,13 @@ impl From<crate::R<FSTAT_SPEC>> for R {
     }
 }
 #[doc = "Field `RXFULL` reader - State machine RX FIFO is full"]
-pub type RXFULL_R = crate::FieldReader<u8, u8>;
+pub type RXFULL_R = crate::FieldReader;
 #[doc = "Field `RXEMPTY` reader - State machine RX FIFO is empty"]
-pub type RXEMPTY_R = crate::FieldReader<u8, u8>;
+pub type RXEMPTY_R = crate::FieldReader;
 #[doc = "Field `TXFULL` reader - State machine TX FIFO is full"]
-pub type TXFULL_R = crate::FieldReader<u8, u8>;
+pub type TXFULL_R = crate::FieldReader;
 #[doc = "Field `TXEMPTY` reader - State machine TX FIFO is empty"]
-pub type TXEMPTY_R = crate::FieldReader<u8, u8>;
+pub type TXEMPTY_R = crate::FieldReader;
 impl R {
     #[doc = "Bits 0:3 - State machine RX FIFO is full"]
     #[inline(always)]

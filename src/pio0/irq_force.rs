@@ -20,7 +20,7 @@ impl From<crate::W<IRQ_FORCE_SPEC>> for W {
     }
 }
 #[doc = "Field `IRQ_FORCE` writer - "]
-pub type IRQ_FORCE_W<'a, const O: u8> = crate::FieldWriter<'a, u32, IRQ_FORCE_SPEC, u8, u8, 8, O>;
+pub type IRQ_FORCE_W<'a, const O: u8> = crate::FieldWriter<'a, IRQ_FORCE_SPEC, 8, O>;
 impl W {
     #[doc = "Bits 0:7"]
     #[inline(always)]

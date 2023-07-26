@@ -35,21 +35,21 @@ impl From<crate::W<NVIC_IPR6_SPEC>> for W {
     }
 }
 #[doc = "Field `IP_24` reader - Priority of interrupt 24"]
-pub type IP_24_R = crate::FieldReader<u8, u8>;
+pub type IP_24_R = crate::FieldReader;
 #[doc = "Field `IP_24` writer - Priority of interrupt 24"]
-pub type IP_24_W<'a, const O: u8> = crate::FieldWriter<'a, u32, NVIC_IPR6_SPEC, u8, u8, 2, O>;
+pub type IP_24_W<'a, const O: u8> = crate::FieldWriter<'a, NVIC_IPR6_SPEC, 2, O>;
 #[doc = "Field `IP_25` reader - Priority of interrupt 25"]
-pub type IP_25_R = crate::FieldReader<u8, u8>;
+pub type IP_25_R = crate::FieldReader;
 #[doc = "Field `IP_25` writer - Priority of interrupt 25"]
-pub type IP_25_W<'a, const O: u8> = crate::FieldWriter<'a, u32, NVIC_IPR6_SPEC, u8, u8, 2, O>;
+pub type IP_25_W<'a, const O: u8> = crate::FieldWriter<'a, NVIC_IPR6_SPEC, 2, O>;
 #[doc = "Field `IP_26` reader - Priority of interrupt 26"]
-pub type IP_26_R = crate::FieldReader<u8, u8>;
+pub type IP_26_R = crate::FieldReader;
 #[doc = "Field `IP_26` writer - Priority of interrupt 26"]
-pub type IP_26_W<'a, const O: u8> = crate::FieldWriter<'a, u32, NVIC_IPR6_SPEC, u8, u8, 2, O>;
+pub type IP_26_W<'a, const O: u8> = crate::FieldWriter<'a, NVIC_IPR6_SPEC, 2, O>;
 #[doc = "Field `IP_27` reader - Priority of interrupt 27"]
-pub type IP_27_R = crate::FieldReader<u8, u8>;
+pub type IP_27_R = crate::FieldReader;
 #[doc = "Field `IP_27` writer - Priority of interrupt 27"]
-pub type IP_27_W<'a, const O: u8> = crate::FieldWriter<'a, u32, NVIC_IPR6_SPEC, u8, u8, 2, O>;
+pub type IP_27_W<'a, const O: u8> = crate::FieldWriter<'a, NVIC_IPR6_SPEC, 2, O>;
 impl R {
     #[doc = "Bits 6:7 - Priority of interrupt 24"]
     #[inline(always)]

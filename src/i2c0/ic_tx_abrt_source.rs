@@ -806,7 +806,7 @@ impl ABRT_USER_ABRT_R {
  Reset value: 0x0  
 
  Role of DW_apb_i2c: Master-Transmitter or Slave-Transmitter"]
-pub type TX_FLUSH_CNT_R = crate::FieldReader<u16, u16>;
+pub type TX_FLUSH_CNT_R = crate::FieldReader<u16>;
 impl R {
     #[doc = "Bit 0 - This field indicates that the Master is in 7-bit addressing mode and the address sent was not acknowledged by any slave.  
 

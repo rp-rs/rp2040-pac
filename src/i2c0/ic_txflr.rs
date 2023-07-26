@@ -16,7 +16,7 @@ impl From<crate::R<IC_TXFLR_SPEC>> for R {
 #[doc = "Field `TXFLR` reader - Transmit FIFO Level. Contains the number of valid data entries in the transmit FIFO.  
 
  Reset value: 0x0"]
-pub type TXFLR_R = crate::FieldReader<u8, u8>;
+pub type TXFLR_R = crate::FieldReader;
 impl R {
     #[doc = "Bits 0:4 - Transmit FIFO Level. Contains the number of valid data entries in the transmit FIFO.  
 

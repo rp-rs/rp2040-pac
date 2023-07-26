@@ -35,10 +35,9 @@ impl From<crate::W<UARTIBRD_SPEC>> for W {
     }
 }
 #[doc = "Field `BAUD_DIVINT` reader - The integer baud rate divisor. These bits are cleared to 0 on reset."]
-pub type BAUD_DIVINT_R = crate::FieldReader<u16, u16>;
+pub type BAUD_DIVINT_R = crate::FieldReader<u16>;
 #[doc = "Field `BAUD_DIVINT` writer - The integer baud rate divisor. These bits are cleared to 0 on reset."]
-pub type BAUD_DIVINT_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, UARTIBRD_SPEC, u16, u16, 16, O>;
+pub type BAUD_DIVINT_W<'a, const O: u8> = crate::FieldWriter<'a, UARTIBRD_SPEC, 16, O, u16>;
 impl R {
     #[doc = "Bits 0:15 - The integer baud rate divisor. These bits are cleared to 0 on reset."]
     #[inline(always)]

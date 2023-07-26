@@ -35,13 +35,13 @@ impl From<crate::W<PRIM_SPEC>> for W {
     }
 }
 #[doc = "Field `POSTDIV2` reader - divide by 1-7"]
-pub type POSTDIV2_R = crate::FieldReader<u8, u8>;
+pub type POSTDIV2_R = crate::FieldReader;
 #[doc = "Field `POSTDIV2` writer - divide by 1-7"]
-pub type POSTDIV2_W<'a, const O: u8> = crate::FieldWriter<'a, u32, PRIM_SPEC, u8, u8, 3, O>;
+pub type POSTDIV2_W<'a, const O: u8> = crate::FieldWriter<'a, PRIM_SPEC, 3, O>;
 #[doc = "Field `POSTDIV1` reader - divide by 1-7"]
-pub type POSTDIV1_R = crate::FieldReader<u8, u8>;
+pub type POSTDIV1_R = crate::FieldReader;
 #[doc = "Field `POSTDIV1` writer - divide by 1-7"]
-pub type POSTDIV1_W<'a, const O: u8> = crate::FieldWriter<'a, u32, PRIM_SPEC, u8, u8, 3, O>;
+pub type POSTDIV1_W<'a, const O: u8> = crate::FieldWriter<'a, PRIM_SPEC, 3, O>;
 impl R {
     #[doc = "Bits 12:14 - divide by 1-7"]
     #[inline(always)]

@@ -14,13 +14,13 @@ impl From<crate::R<SSPMIS_SPEC>> for R {
     }
 }
 #[doc = "Field `RORMIS` reader - Gives the receive over run masked interrupt status, after masking, of the SSPRORINTR interrupt"]
-pub type RORMIS_R = crate::BitReader<bool>;
+pub type RORMIS_R = crate::BitReader;
 #[doc = "Field `RTMIS` reader - Gives the receive timeout masked interrupt state, after masking, of the SSPRTINTR interrupt"]
-pub type RTMIS_R = crate::BitReader<bool>;
+pub type RTMIS_R = crate::BitReader;
 #[doc = "Field `RXMIS` reader - Gives the receive FIFO masked interrupt state, after masking, of the SSPRXINTR interrupt"]
-pub type RXMIS_R = crate::BitReader<bool>;
+pub type RXMIS_R = crate::BitReader;
 #[doc = "Field `TXMIS` reader - Gives the transmit FIFO masked interrupt state, after masking, of the SSPTXINTR interrupt"]
-pub type TXMIS_R = crate::BitReader<bool>;
+pub type TXMIS_R = crate::BitReader;
 impl R {
     #[doc = "Bit 0 - Gives the receive over run masked interrupt status, after masking, of the SSPRORINTR interrupt"]
     #[inline(always)]

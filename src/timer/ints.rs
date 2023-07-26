@@ -14,13 +14,13 @@ impl From<crate::R<INTS_SPEC>> for R {
     }
 }
 #[doc = "Field `ALARM_0` reader - "]
-pub type ALARM_0_R = crate::BitReader<bool>;
+pub type ALARM_0_R = crate::BitReader;
 #[doc = "Field `ALARM_1` reader - "]
-pub type ALARM_1_R = crate::BitReader<bool>;
+pub type ALARM_1_R = crate::BitReader;
 #[doc = "Field `ALARM_2` reader - "]
-pub type ALARM_2_R = crate::BitReader<bool>;
+pub type ALARM_2_R = crate::BitReader;
 #[doc = "Field `ALARM_3` reader - "]
-pub type ALARM_3_R = crate::BitReader<bool>;
+pub type ALARM_3_R = crate::BitReader;
 impl R {
     #[doc = "Bit 0"]
     #[inline(always)]
@@ -43,7 +43,7 @@ impl R {
         ALARM_3_R::new(((self.bits >> 3) & 1) != 0)
     }
 }
-#[doc = "Interrupt status after masking & forcing  
+#[doc = "Interrupt status after masking &amp; forcing  
 
 This register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
 

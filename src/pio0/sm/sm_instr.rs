@@ -35,9 +35,9 @@ impl From<crate::W<SM_INSTR_SPEC>> for W {
     }
 }
 #[doc = "Field `SM0_INSTR` reader - "]
-pub type SM0_INSTR_R = crate::FieldReader<u16, u16>;
+pub type SM0_INSTR_R = crate::FieldReader<u16>;
 #[doc = "Field `SM0_INSTR` writer - "]
-pub type SM0_INSTR_W<'a, const O: u8> = crate::FieldWriter<'a, u32, SM_INSTR_SPEC, u16, u16, 16, O>;
+pub type SM0_INSTR_W<'a, const O: u8> = crate::FieldWriter<'a, SM_INSTR_SPEC, 16, O, u16>;
 impl R {
     #[doc = "Bits 0:15"]
     #[inline(always)]

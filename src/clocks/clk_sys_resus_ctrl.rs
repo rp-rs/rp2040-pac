@@ -36,23 +36,22 @@ impl From<crate::W<CLK_SYS_RESUS_CTRL_SPEC>> for W {
 }
 #[doc = "Field `TIMEOUT` reader - This is expressed as a number of clk_ref cycles  
  and must be >= 2x clk_ref_freq/min_clk_tst_freq"]
-pub type TIMEOUT_R = crate::FieldReader<u8, u8>;
+pub type TIMEOUT_R = crate::FieldReader;
 #[doc = "Field `TIMEOUT` writer - This is expressed as a number of clk_ref cycles  
  and must be >= 2x clk_ref_freq/min_clk_tst_freq"]
-pub type TIMEOUT_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, CLK_SYS_RESUS_CTRL_SPEC, u8, u8, 8, O>;
+pub type TIMEOUT_W<'a, const O: u8> = crate::FieldWriter<'a, CLK_SYS_RESUS_CTRL_SPEC, 8, O>;
 #[doc = "Field `ENABLE` reader - Enable resus"]
-pub type ENABLE_R = crate::BitReader<bool>;
+pub type ENABLE_R = crate::BitReader;
 #[doc = "Field `ENABLE` writer - Enable resus"]
-pub type ENABLE_W<'a, const O: u8> = crate::BitWriter<'a, u32, CLK_SYS_RESUS_CTRL_SPEC, bool, O>;
+pub type ENABLE_W<'a, const O: u8> = crate::BitWriter<'a, CLK_SYS_RESUS_CTRL_SPEC, O>;
 #[doc = "Field `FRCE` reader - Force a resus, for test purposes only"]
-pub type FRCE_R = crate::BitReader<bool>;
+pub type FRCE_R = crate::BitReader;
 #[doc = "Field `FRCE` writer - Force a resus, for test purposes only"]
-pub type FRCE_W<'a, const O: u8> = crate::BitWriter<'a, u32, CLK_SYS_RESUS_CTRL_SPEC, bool, O>;
+pub type FRCE_W<'a, const O: u8> = crate::BitWriter<'a, CLK_SYS_RESUS_CTRL_SPEC, O>;
 #[doc = "Field `CLEAR` reader - For clearing the resus after the fault that triggered it has been corrected"]
-pub type CLEAR_R = crate::BitReader<bool>;
+pub type CLEAR_R = crate::BitReader;
 #[doc = "Field `CLEAR` writer - For clearing the resus after the fault that triggered it has been corrected"]
-pub type CLEAR_W<'a, const O: u8> = crate::BitWriter<'a, u32, CLK_SYS_RESUS_CTRL_SPEC, bool, O>;
+pub type CLEAR_W<'a, const O: u8> = crate::BitWriter<'a, CLK_SYS_RESUS_CTRL_SPEC, O>;
 impl R {
     #[doc = "Bits 0:7 - This is expressed as a number of clk_ref cycles  
  and must be >= 2x clk_ref_freq/min_clk_tst_freq"]

@@ -14,7 +14,7 @@ impl From<crate::R<N_CHANNELS_SPEC>> for R {
     }
 }
 #[doc = "Field `N_CHANNELS` reader - "]
-pub type N_CHANNELS_R = crate::FieldReader<u8, u8>;
+pub type N_CHANNELS_R = crate::FieldReader;
 impl R {
     #[doc = "Bits 0:4"]
     #[inline(always)]

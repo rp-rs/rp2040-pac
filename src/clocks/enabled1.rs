@@ -14,35 +14,35 @@ impl From<crate::R<ENABLED1_SPEC>> for R {
     }
 }
 #[doc = "Field `clk_sys_sram4` reader - "]
-pub type CLK_SYS_SRAM4_R = crate::BitReader<bool>;
+pub type CLK_SYS_SRAM4_R = crate::BitReader;
 #[doc = "Field `clk_sys_sram5` reader - "]
-pub type CLK_SYS_SRAM5_R = crate::BitReader<bool>;
+pub type CLK_SYS_SRAM5_R = crate::BitReader;
 #[doc = "Field `clk_sys_syscfg` reader - "]
-pub type CLK_SYS_SYSCFG_R = crate::BitReader<bool>;
+pub type CLK_SYS_SYSCFG_R = crate::BitReader;
 #[doc = "Field `clk_sys_sysinfo` reader - "]
-pub type CLK_SYS_SYSINFO_R = crate::BitReader<bool>;
+pub type CLK_SYS_SYSINFO_R = crate::BitReader;
 #[doc = "Field `clk_sys_tbman` reader - "]
-pub type CLK_SYS_TBMAN_R = crate::BitReader<bool>;
+pub type CLK_SYS_TBMAN_R = crate::BitReader;
 #[doc = "Field `clk_sys_timer` reader - "]
-pub type CLK_SYS_TIMER_R = crate::BitReader<bool>;
+pub type CLK_SYS_TIMER_R = crate::BitReader;
 #[doc = "Field `clk_peri_uart0` reader - "]
-pub type CLK_PERI_UART0_R = crate::BitReader<bool>;
+pub type CLK_PERI_UART0_R = crate::BitReader;
 #[doc = "Field `clk_sys_uart0` reader - "]
-pub type CLK_SYS_UART0_R = crate::BitReader<bool>;
+pub type CLK_SYS_UART0_R = crate::BitReader;
 #[doc = "Field `clk_peri_uart1` reader - "]
-pub type CLK_PERI_UART1_R = crate::BitReader<bool>;
+pub type CLK_PERI_UART1_R = crate::BitReader;
 #[doc = "Field `clk_sys_uart1` reader - "]
-pub type CLK_SYS_UART1_R = crate::BitReader<bool>;
+pub type CLK_SYS_UART1_R = crate::BitReader;
 #[doc = "Field `clk_sys_usbctrl` reader - "]
-pub type CLK_SYS_USBCTRL_R = crate::BitReader<bool>;
+pub type CLK_SYS_USBCTRL_R = crate::BitReader;
 #[doc = "Field `clk_usb_usbctrl` reader - "]
-pub type CLK_USB_USBCTRL_R = crate::BitReader<bool>;
+pub type CLK_USB_USBCTRL_R = crate::BitReader;
 #[doc = "Field `clk_sys_watchdog` reader - "]
-pub type CLK_SYS_WATCHDOG_R = crate::BitReader<bool>;
+pub type CLK_SYS_WATCHDOG_R = crate::BitReader;
 #[doc = "Field `clk_sys_xip` reader - "]
-pub type CLK_SYS_XIP_R = crate::BitReader<bool>;
+pub type CLK_SYS_XIP_R = crate::BitReader;
 #[doc = "Field `clk_sys_xosc` reader - "]
-pub type CLK_SYS_XOSC_R = crate::BitReader<bool>;
+pub type CLK_SYS_XOSC_R = crate::BitReader;
 impl R {
     #[doc = "Bit 0"]
     #[inline(always)]

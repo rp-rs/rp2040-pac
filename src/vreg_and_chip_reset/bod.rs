@@ -36,10 +36,10 @@ impl From<crate::W<BOD_SPEC>> for W {
 }
 #[doc = "Field `EN` reader - enable  
  0=not enabled, 1=enabled"]
-pub type EN_R = crate::BitReader<bool>;
+pub type EN_R = crate::BitReader;
 #[doc = "Field `EN` writer - enable  
  0=not enabled, 1=enabled"]
-pub type EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, BOD_SPEC, bool, O>;
+pub type EN_W<'a, const O: u8> = crate::BitWriter<'a, BOD_SPEC, O>;
 #[doc = "Field `VSEL` reader - threshold select  
  0000 - 0.473V  
  0001 - 0.516V  
@@ -57,7 +57,7 @@ pub type EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, BOD_SPEC, bool, O>;
  1101 - 1.032V  
  1110 - 1.075V  
  1111 - 1.118V"]
-pub type VSEL_R = crate::FieldReader<u8, u8>;
+pub type VSEL_R = crate::FieldReader;
 #[doc = "Field `VSEL` writer - threshold select  
  0000 - 0.473V  
  0001 - 0.516V  
@@ -75,7 +75,7 @@ pub type VSEL_R = crate::FieldReader<u8, u8>;
  1101 - 1.032V  
  1110 - 1.075V  
  1111 - 1.118V"]
-pub type VSEL_W<'a, const O: u8> = crate::FieldWriter<'a, u32, BOD_SPEC, u8, u8, 4, O>;
+pub type VSEL_W<'a, const O: u8> = crate::FieldWriter<'a, BOD_SPEC, 4, O>;
 impl R {
     #[doc = "Bit 0 - enable  
  0=not enabled, 1=enabled"]

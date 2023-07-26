@@ -16,7 +16,7 @@ impl From<crate::R<BUS_PRIORITY_ACK_SPEC>> for R {
 #[doc = "Field `BUS_PRIORITY_ACK` reader - Goes to 1 once all arbiters have registered the new global priority levels.  
  Arbiters update their local priority when servicing a new nonsequential access.  
  In normal circumstances this will happen almost immediately."]
-pub type BUS_PRIORITY_ACK_R = crate::BitReader<bool>;
+pub type BUS_PRIORITY_ACK_R = crate::BitReader;
 impl R {
     #[doc = "Bit 0 - Goes to 1 once all arbiters have registered the new global priority levels.  
  Arbiters update their local priority when servicing a new nonsequential access.  

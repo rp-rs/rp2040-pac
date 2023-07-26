@@ -35,9 +35,9 @@ impl From<crate::W<IRQ_SPEC>> for W {
     }
 }
 #[doc = "Field `IRQ` reader - "]
-pub type IRQ_R = crate::FieldReader<u8, u8>;
+pub type IRQ_R = crate::FieldReader;
 #[doc = "Field `IRQ` writer - "]
-pub type IRQ_W<'a, const O: u8> = crate::FieldWriter<'a, u32, IRQ_SPEC, u8, u8, 8, O>;
+pub type IRQ_W<'a, const O: u8> = crate::FieldWriter<'a, IRQ_SPEC, 8, O>;
 impl R {
     #[doc = "Bits 0:7"]
     #[inline(always)]

@@ -35,21 +35,19 @@ impl From<crate::W<EP_CONTROL_SPEC>> for W {
     }
 }
 #[doc = "Field `BUFFER_ADDRESS` reader - 64 byte aligned buffer address for this EP (bits 0-5 are ignored). Relative to the start of the DPRAM."]
-pub type BUFFER_ADDRESS_R = crate::FieldReader<u16, u16>;
+pub type BUFFER_ADDRESS_R = crate::FieldReader<u16>;
 #[doc = "Field `BUFFER_ADDRESS` writer - 64 byte aligned buffer address for this EP (bits 0-5 are ignored). Relative to the start of the DPRAM."]
-pub type BUFFER_ADDRESS_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, EP_CONTROL_SPEC, u16, u16, 16, O>;
+pub type BUFFER_ADDRESS_W<'a, const O: u8> = crate::FieldWriter<'a, EP_CONTROL_SPEC, 16, O, u16>;
 #[doc = "Field `INTERRUPT_ON_NAK` reader - Trigger an interrupt if a NAK is sent. Intended for debug only."]
-pub type INTERRUPT_ON_NAK_R = crate::BitReader<bool>;
+pub type INTERRUPT_ON_NAK_R = crate::BitReader;
 #[doc = "Field `INTERRUPT_ON_NAK` writer - Trigger an interrupt if a NAK is sent. Intended for debug only."]
-pub type INTERRUPT_ON_NAK_W<'a, const O: u8> = crate::BitWriter<'a, u32, EP_CONTROL_SPEC, bool, O>;
+pub type INTERRUPT_ON_NAK_W<'a, const O: u8> = crate::BitWriter<'a, EP_CONTROL_SPEC, O>;
 #[doc = "Field `INTERRUPT_ON_STALL` reader - Trigger an interrupt if a STALL is sent. Intended for debug only."]
-pub type INTERRUPT_ON_STALL_R = crate::BitReader<bool>;
+pub type INTERRUPT_ON_STALL_R = crate::BitReader;
 #[doc = "Field `INTERRUPT_ON_STALL` writer - Trigger an interrupt if a STALL is sent. Intended for debug only."]
-pub type INTERRUPT_ON_STALL_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, EP_CONTROL_SPEC, bool, O>;
+pub type INTERRUPT_ON_STALL_W<'a, const O: u8> = crate::BitWriter<'a, EP_CONTROL_SPEC, O>;
 #[doc = "Field `ENDPOINT_TYPE` reader - "]
-pub type ENDPOINT_TYPE_R = crate::FieldReader<u8, ENDPOINT_TYPE_A>;
+pub type ENDPOINT_TYPE_R = crate::FieldReader<ENDPOINT_TYPE_A>;
 #[doc = "  
 
 Value on reset: 0"]
@@ -70,6 +68,9 @@ impl From<ENDPOINT_TYPE_A> for u8 {
     fn from(variant: ENDPOINT_TYPE_A) -> Self {
         variant as _
     }
+}
+impl crate::FieldSpec for ENDPOINT_TYPE_A {
+    type Ux = u8;
 }
 impl ENDPOINT_TYPE_R {
     #[doc = "Get enumerated values variant"]
@@ -106,7 +107,7 @@ impl ENDPOINT_TYPE_R {
 }
 #[doc = "Field `ENDPOINT_TYPE` writer - "]
 pub type ENDPOINT_TYPE_W<'a, const O: u8> =
-    crate::FieldWriterSafe<'a, u32, EP_CONTROL_SPEC, u8, ENDPOINT_TYPE_A, 2, O>;
+    crate::FieldWriterSafe<'a, EP_CONTROL_SPEC, 2, O, ENDPOINT_TYPE_A>;
 impl<'a, const O: u8> ENDPOINT_TYPE_W<'a, O> {
     #[doc = "`0`"]
     #[inline(always)]
@@ -130,23 +131,21 @@ impl<'a, const O: u8> ENDPOINT_TYPE_W<'a, O> {
     }
 }
 #[doc = "Field `INTERRUPT_PER_DOUBLE_BUFF` reader - Trigger an interrupt each time both buffers are done. Only valid in double buffered mode."]
-pub type INTERRUPT_PER_DOUBLE_BUFF_R = crate::BitReader<bool>;
+pub type INTERRUPT_PER_DOUBLE_BUFF_R = crate::BitReader;
 #[doc = "Field `INTERRUPT_PER_DOUBLE_BUFF` writer - Trigger an interrupt each time both buffers are done. Only valid in double buffered mode."]
-pub type INTERRUPT_PER_DOUBLE_BUFF_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, EP_CONTROL_SPEC, bool, O>;
+pub type INTERRUPT_PER_DOUBLE_BUFF_W<'a, const O: u8> = crate::BitWriter<'a, EP_CONTROL_SPEC, O>;
 #[doc = "Field `INTERRUPT_PER_BUFF` reader - Trigger an interrupt each time a buffer is done."]
-pub type INTERRUPT_PER_BUFF_R = crate::BitReader<bool>;
+pub type INTERRUPT_PER_BUFF_R = crate::BitReader;
 #[doc = "Field `INTERRUPT_PER_BUFF` writer - Trigger an interrupt each time a buffer is done."]
-pub type INTERRUPT_PER_BUFF_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, EP_CONTROL_SPEC, bool, O>;
+pub type INTERRUPT_PER_BUFF_W<'a, const O: u8> = crate::BitWriter<'a, EP_CONTROL_SPEC, O>;
 #[doc = "Field `DOUBLE_BUFFERED` reader - This endpoint is double buffered."]
-pub type DOUBLE_BUFFERED_R = crate::BitReader<bool>;
+pub type DOUBLE_BUFFERED_R = crate::BitReader;
 #[doc = "Field `DOUBLE_BUFFERED` writer - This endpoint is double buffered."]
-pub type DOUBLE_BUFFERED_W<'a, const O: u8> = crate::BitWriter<'a, u32, EP_CONTROL_SPEC, bool, O>;
+pub type DOUBLE_BUFFERED_W<'a, const O: u8> = crate::BitWriter<'a, EP_CONTROL_SPEC, O>;
 #[doc = "Field `ENABLE` reader - Enable this endpoint. The device will not reply to any packets for this endpoint if this bit is not set."]
-pub type ENABLE_R = crate::BitReader<bool>;
+pub type ENABLE_R = crate::BitReader;
 #[doc = "Field `ENABLE` writer - Enable this endpoint. The device will not reply to any packets for this endpoint if this bit is not set."]
-pub type ENABLE_W<'a, const O: u8> = crate::BitWriter<'a, u32, EP_CONTROL_SPEC, bool, O>;
+pub type ENABLE_W<'a, const O: u8> = crate::BitWriter<'a, EP_CONTROL_SPEC, O>;
 impl R {
     #[doc = "Bits 0:15 - 64 byte aligned buffer address for this EP (bits 0-5 are ignored). Relative to the start of the DPRAM."]
     #[inline(always)]

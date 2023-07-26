@@ -35,35 +35,33 @@ impl From<crate::W<SM_PINCTRL_SPEC>> for W {
     }
 }
 #[doc = "Field `OUT_BASE` reader - The lowest-numbered pin that will be affected by an OUT PINS, OUT PINDIRS or MOV PINS instruction. The data written to this pin will always be the least-significant bit of the OUT or MOV data."]
-pub type OUT_BASE_R = crate::FieldReader<u8, u8>;
+pub type OUT_BASE_R = crate::FieldReader;
 #[doc = "Field `OUT_BASE` writer - The lowest-numbered pin that will be affected by an OUT PINS, OUT PINDIRS or MOV PINS instruction. The data written to this pin will always be the least-significant bit of the OUT or MOV data."]
-pub type OUT_BASE_W<'a, const O: u8> = crate::FieldWriter<'a, u32, SM_PINCTRL_SPEC, u8, u8, 5, O>;
+pub type OUT_BASE_W<'a, const O: u8> = crate::FieldWriter<'a, SM_PINCTRL_SPEC, 5, O>;
 #[doc = "Field `SET_BASE` reader - The lowest-numbered pin that will be affected by a SET PINS or SET PINDIRS instruction. The data written to this pin is the least-significant bit of the SET data."]
-pub type SET_BASE_R = crate::FieldReader<u8, u8>;
+pub type SET_BASE_R = crate::FieldReader;
 #[doc = "Field `SET_BASE` writer - The lowest-numbered pin that will be affected by a SET PINS or SET PINDIRS instruction. The data written to this pin is the least-significant bit of the SET data."]
-pub type SET_BASE_W<'a, const O: u8> = crate::FieldWriter<'a, u32, SM_PINCTRL_SPEC, u8, u8, 5, O>;
+pub type SET_BASE_W<'a, const O: u8> = crate::FieldWriter<'a, SM_PINCTRL_SPEC, 5, O>;
 #[doc = "Field `SIDESET_BASE` reader - The lowest-numbered pin that will be affected by a side-set operation. The MSBs of an instruction's side-set/delay field (up to 5, determined by SIDESET_COUNT) are used for side-set data, with the remaining LSBs used for delay. The least-significant bit of the side-set portion is the bit written to this pin, with more-significant bits written to higher-numbered pins."]
-pub type SIDESET_BASE_R = crate::FieldReader<u8, u8>;
+pub type SIDESET_BASE_R = crate::FieldReader;
 #[doc = "Field `SIDESET_BASE` writer - The lowest-numbered pin that will be affected by a side-set operation. The MSBs of an instruction's side-set/delay field (up to 5, determined by SIDESET_COUNT) are used for side-set data, with the remaining LSBs used for delay. The least-significant bit of the side-set portion is the bit written to this pin, with more-significant bits written to higher-numbered pins."]
-pub type SIDESET_BASE_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SM_PINCTRL_SPEC, u8, u8, 5, O>;
+pub type SIDESET_BASE_W<'a, const O: u8> = crate::FieldWriter<'a, SM_PINCTRL_SPEC, 5, O>;
 #[doc = "Field `IN_BASE` reader - The pin which is mapped to the least-significant bit of a state machine's IN data bus. Higher-numbered pins are mapped to consecutively more-significant data bits, with a modulo of 32 applied to pin number."]
-pub type IN_BASE_R = crate::FieldReader<u8, u8>;
+pub type IN_BASE_R = crate::FieldReader;
 #[doc = "Field `IN_BASE` writer - The pin which is mapped to the least-significant bit of a state machine's IN data bus. Higher-numbered pins are mapped to consecutively more-significant data bits, with a modulo of 32 applied to pin number."]
-pub type IN_BASE_W<'a, const O: u8> = crate::FieldWriter<'a, u32, SM_PINCTRL_SPEC, u8, u8, 5, O>;
+pub type IN_BASE_W<'a, const O: u8> = crate::FieldWriter<'a, SM_PINCTRL_SPEC, 5, O>;
 #[doc = "Field `OUT_COUNT` reader - The number of pins asserted by an OUT PINS, OUT PINDIRS or MOV PINS instruction. In the range 0 to 32 inclusive."]
-pub type OUT_COUNT_R = crate::FieldReader<u8, u8>;
+pub type OUT_COUNT_R = crate::FieldReader;
 #[doc = "Field `OUT_COUNT` writer - The number of pins asserted by an OUT PINS, OUT PINDIRS or MOV PINS instruction. In the range 0 to 32 inclusive."]
-pub type OUT_COUNT_W<'a, const O: u8> = crate::FieldWriter<'a, u32, SM_PINCTRL_SPEC, u8, u8, 6, O>;
+pub type OUT_COUNT_W<'a, const O: u8> = crate::FieldWriter<'a, SM_PINCTRL_SPEC, 6, O>;
 #[doc = "Field `SET_COUNT` reader - The number of pins asserted by a SET. In the range 0 to 5 inclusive."]
-pub type SET_COUNT_R = crate::FieldReader<u8, u8>;
+pub type SET_COUNT_R = crate::FieldReader;
 #[doc = "Field `SET_COUNT` writer - The number of pins asserted by a SET. In the range 0 to 5 inclusive."]
-pub type SET_COUNT_W<'a, const O: u8> = crate::FieldWriter<'a, u32, SM_PINCTRL_SPEC, u8, u8, 3, O>;
+pub type SET_COUNT_W<'a, const O: u8> = crate::FieldWriter<'a, SM_PINCTRL_SPEC, 3, O>;
 #[doc = "Field `SIDESET_COUNT` reader - The number of MSBs of the Delay/Side-set instruction field which are used for side-set. Inclusive of the enable bit, if present. Minimum of 0 (all delay bits, no side-set) and maximum of 5 (all side-set, no delay)."]
-pub type SIDESET_COUNT_R = crate::FieldReader<u8, u8>;
+pub type SIDESET_COUNT_R = crate::FieldReader;
 #[doc = "Field `SIDESET_COUNT` writer - The number of MSBs of the Delay/Side-set instruction field which are used for side-set. Inclusive of the enable bit, if present. Minimum of 0 (all delay bits, no side-set) and maximum of 5 (all side-set, no delay)."]
-pub type SIDESET_COUNT_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SM_PINCTRL_SPEC, u8, u8, 3, O>;
+pub type SIDESET_COUNT_W<'a, const O: u8> = crate::FieldWriter<'a, SM_PINCTRL_SPEC, 3, O>;
 impl R {
     #[doc = "Bits 0:4 - The lowest-numbered pin that will be affected by an OUT PINS, OUT PINDIRS or MOV PINS instruction. The data written to this pin will always be the least-significant bit of the OUT or MOV data."]
     #[inline(always)]

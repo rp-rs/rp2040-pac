@@ -35,9 +35,9 @@ impl From<crate::W<ARMED_SPEC>> for W {
     }
 }
 #[doc = "Field `ARMED` reader - "]
-pub type ARMED_R = crate::FieldReader<u8, u8>;
+pub type ARMED_R = crate::FieldReader;
 #[doc = "Field `ARMED` writer - "]
-pub type ARMED_W<'a, const O: u8> = crate::FieldWriter<'a, u32, ARMED_SPEC, u8, u8, 4, O>;
+pub type ARMED_W<'a, const O: u8> = crate::FieldWriter<'a, ARMED_SPEC, 4, O>;
 impl R {
     #[doc = "Bits 0:3"]
     #[inline(always)]

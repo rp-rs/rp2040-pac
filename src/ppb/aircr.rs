@@ -35,24 +35,24 @@ impl From<crate::W<AIRCR_SPEC>> for W {
     }
 }
 #[doc = "Field `VECTCLRACTIVE` reader - Clears all active state information for fixed and configurable exceptions. This bit: is self-clearing, can only be set by the DAP when the core is halted. When set: clears all active exception status of the processor, forces a return to Thread mode, forces an IPSR of 0. A debugger must re-initialize the stack."]
-pub type VECTCLRACTIVE_R = crate::BitReader<bool>;
+pub type VECTCLRACTIVE_R = crate::BitReader;
 #[doc = "Field `VECTCLRACTIVE` writer - Clears all active state information for fixed and configurable exceptions. This bit: is self-clearing, can only be set by the DAP when the core is halted. When set: clears all active exception status of the processor, forces a return to Thread mode, forces an IPSR of 0. A debugger must re-initialize the stack."]
-pub type VECTCLRACTIVE_W<'a, const O: u8> = crate::BitWriter<'a, u32, AIRCR_SPEC, bool, O>;
+pub type VECTCLRACTIVE_W<'a, const O: u8> = crate::BitWriter<'a, AIRCR_SPEC, O>;
 #[doc = "Field `SYSRESETREQ` reader - Writing 1 to this bit causes the SYSRESETREQ signal to the outer system to be asserted to request a reset. The intention is to force a large system reset of all major components except for debug. The C_HALT bit in the DHCSR is cleared as a result of the system reset requested. The debugger does not lose contact with the device."]
-pub type SYSRESETREQ_R = crate::BitReader<bool>;
+pub type SYSRESETREQ_R = crate::BitReader;
 #[doc = "Field `SYSRESETREQ` writer - Writing 1 to this bit causes the SYSRESETREQ signal to the outer system to be asserted to request a reset. The intention is to force a large system reset of all major components except for debug. The C_HALT bit in the DHCSR is cleared as a result of the system reset requested. The debugger does not lose contact with the device."]
-pub type SYSRESETREQ_W<'a, const O: u8> = crate::BitWriter<'a, u32, AIRCR_SPEC, bool, O>;
+pub type SYSRESETREQ_W<'a, const O: u8> = crate::BitWriter<'a, AIRCR_SPEC, O>;
 #[doc = "Field `ENDIANESS` reader - Data endianness implemented:  
  0 = Little-endian."]
-pub type ENDIANESS_R = crate::BitReader<bool>;
+pub type ENDIANESS_R = crate::BitReader;
 #[doc = "Field `VECTKEY` reader - Register key:  
  Reads as Unknown  
  On writes, write 0x05FA to VECTKEY, otherwise the write is ignored."]
-pub type VECTKEY_R = crate::FieldReader<u16, u16>;
+pub type VECTKEY_R = crate::FieldReader<u16>;
 #[doc = "Field `VECTKEY` writer - Register key:  
  Reads as Unknown  
  On writes, write 0x05FA to VECTKEY, otherwise the write is ignored."]
-pub type VECTKEY_W<'a, const O: u8> = crate::FieldWriter<'a, u32, AIRCR_SPEC, u16, u16, 16, O>;
+pub type VECTKEY_W<'a, const O: u8> = crate::FieldWriter<'a, AIRCR_SPEC, 16, O, u16>;
 impl R {
     #[doc = "Bit 1 - Clears all active state information for fixed and configurable exceptions. This bit: is self-clearing, can only be set by the DAP when the core is halted. When set: clears all active exception status of the processor, forces a return to Thread mode, forces an IPSR of 0. A debugger must re-initialize the stack."]
     #[inline(always)]

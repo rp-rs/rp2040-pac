@@ -35,9 +35,9 @@ impl From<crate::W<INTE_SPEC>> for W {
     }
 }
 #[doc = "Field `RTC` reader - "]
-pub type RTC_R = crate::BitReader<bool>;
+pub type RTC_R = crate::BitReader;
 #[doc = "Field `RTC` writer - "]
-pub type RTC_W<'a, const O: u8> = crate::BitWriter<'a, u32, INTE_SPEC, bool, O>;
+pub type RTC_W<'a, const O: u8> = crate::BitWriter<'a, INTE_SPEC, O>;
 impl R {
     #[doc = "Bit 0"]
     #[inline(always)]

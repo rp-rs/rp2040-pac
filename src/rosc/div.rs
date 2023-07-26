@@ -39,7 +39,7 @@ impl From<crate::W<DIV_SPEC>> for W {
  div = 1-31 divides by div  
  any other value sets div=31  
  this register resets to div=16"]
-pub type DIV_R = crate::FieldReader<u16, DIV_A>;
+pub type DIV_R = crate::FieldReader<DIV_A>;
 #[doc = "set to 0xaa0 + div where  
  div = 0 divides by 32  
  div = 1-31 divides by div  
@@ -58,6 +58,9 @@ impl From<DIV_A> for u16 {
     fn from(variant: DIV_A) -> Self {
         variant as _
     }
+}
+impl crate::FieldSpec for DIV_A {
+    type Ux = u16;
 }
 impl DIV_R {
     #[doc = "Get enumerated values variant"]
@@ -79,7 +82,7 @@ impl DIV_R {
  div = 1-31 divides by div  
  any other value sets div=31  
  this register resets to div=16"]
-pub type DIV_W<'a, const O: u8> = crate::FieldWriter<'a, u32, DIV_SPEC, u16, DIV_A, 12, O>;
+pub type DIV_W<'a, const O: u8> = crate::FieldWriter<'a, DIV_SPEC, 12, O, DIV_A>;
 impl<'a, const O: u8> DIV_W<'a, O> {
     #[doc = "`101010100000`"]
     #[inline(always)]

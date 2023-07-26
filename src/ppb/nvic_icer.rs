@@ -41,7 +41,7 @@ impl From<crate::W<NVIC_ICER_SPEC>> for W {
  Read:  
  0 = Interrupt disabled.  
  1 = Interrupt enabled."]
-pub type CLRENA_R = crate::FieldReader<u32, u32>;
+pub type CLRENA_R = crate::FieldReader<u32>;
 #[doc = "Field `CLRENA` writer - Interrupt clear-enable bits.  
  Write:  
  0 = No effect.  
@@ -49,7 +49,7 @@ pub type CLRENA_R = crate::FieldReader<u32, u32>;
  Read:  
  0 = Interrupt disabled.  
  1 = Interrupt enabled."]
-pub type CLRENA_W<'a, const O: u8> = crate::FieldWriter<'a, u32, NVIC_ICER_SPEC, u32, u32, 32, O>;
+pub type CLRENA_W<'a, const O: u8> = crate::FieldWriter<'a, NVIC_ICER_SPEC, 32, O, u32>;
 impl R {
     #[doc = "Bits 0:31 - Interrupt clear-enable bits.  
  Write:  

@@ -13,6 +13,16 @@ impl From<crate::R<GITREF_RP2040_SPEC>> for R {
         R(reader)
     }
 }
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        write!(f, "{}", self.bits())
+    }
+}
+impl core::fmt::Debug for crate::generic::Reg<GITREF_RP2040_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        self.read().fmt(f)
+    }
+}
 #[doc = "Git hash of the chip source. Used to identify chip version.  
 
 This register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  

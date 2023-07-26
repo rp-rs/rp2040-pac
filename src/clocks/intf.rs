@@ -35,9 +35,9 @@ impl From<crate::W<INTF_SPEC>> for W {
     }
 }
 #[doc = "Field `CLK_SYS_RESUS` reader - "]
-pub type CLK_SYS_RESUS_R = crate::BitReader<bool>;
+pub type CLK_SYS_RESUS_R = crate::BitReader;
 #[doc = "Field `CLK_SYS_RESUS` writer - "]
-pub type CLK_SYS_RESUS_W<'a, const O: u8> = crate::BitWriter<'a, u32, INTF_SPEC, bool, O>;
+pub type CLK_SYS_RESUS_W<'a, const O: u8> = crate::BitWriter<'a, INTF_SPEC, O>;
 impl R {
     #[doc = "Bit 0"]
     #[inline(always)]

@@ -16,7 +16,7 @@ impl From<crate::R<IC_CLR_ACTIVITY_SPEC>> for R {
 #[doc = "Field `CLR_ACTIVITY` reader - Reading this register clears the ACTIVITY interrupt if the I2C is not active anymore. If the I2C module is still active on the bus, the ACTIVITY interrupt bit continues to be set. It is automatically cleared by hardware if the module is disabled and if there is no further activity on the bus. The value read from this register to get status of the ACTIVITY interrupt (bit 8) of the IC_RAW_INTR_STAT register.  
 
  Reset value: 0x0"]
-pub type CLR_ACTIVITY_R = crate::BitReader<bool>;
+pub type CLR_ACTIVITY_R = crate::BitReader;
 impl R {
     #[doc = "Bit 0 - Reading this register clears the ACTIVITY interrupt if the I2C is not active anymore. If the I2C module is still active on the bus, the ACTIVITY interrupt bit continues to be set. It is automatically cleared by hardware if the module is disabled and if there is no further activity on the bus. The value read from this register to get status of the ACTIVITY interrupt (bit 8) of the IC_RAW_INTR_STAT register.  
 

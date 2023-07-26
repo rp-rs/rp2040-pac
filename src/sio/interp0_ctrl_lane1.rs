@@ -35,53 +35,47 @@ impl From<crate::W<INTERP0_CTRL_LANE1_SPEC>> for W {
     }
 }
 #[doc = "Field `SHIFT` reader - Logical right-shift applied to accumulator before masking"]
-pub type SHIFT_R = crate::FieldReader<u8, u8>;
+pub type SHIFT_R = crate::FieldReader;
 #[doc = "Field `SHIFT` writer - Logical right-shift applied to accumulator before masking"]
-pub type SHIFT_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, INTERP0_CTRL_LANE1_SPEC, u8, u8, 5, O>;
+pub type SHIFT_W<'a, const O: u8> = crate::FieldWriter<'a, INTERP0_CTRL_LANE1_SPEC, 5, O>;
 #[doc = "Field `MASK_LSB` reader - The least-significant bit allowed to pass by the mask (inclusive)"]
-pub type MASK_LSB_R = crate::FieldReader<u8, u8>;
+pub type MASK_LSB_R = crate::FieldReader;
 #[doc = "Field `MASK_LSB` writer - The least-significant bit allowed to pass by the mask (inclusive)"]
-pub type MASK_LSB_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, INTERP0_CTRL_LANE1_SPEC, u8, u8, 5, O>;
+pub type MASK_LSB_W<'a, const O: u8> = crate::FieldWriter<'a, INTERP0_CTRL_LANE1_SPEC, 5, O>;
 #[doc = "Field `MASK_MSB` reader - The most-significant bit allowed to pass by the mask (inclusive)  
- Setting MSB < LSB may cause chip to turn inside-out"]
-pub type MASK_MSB_R = crate::FieldReader<u8, u8>;
+ Setting MSB &lt; LSB may cause chip to turn inside-out"]
+pub type MASK_MSB_R = crate::FieldReader;
 #[doc = "Field `MASK_MSB` writer - The most-significant bit allowed to pass by the mask (inclusive)  
- Setting MSB < LSB may cause chip to turn inside-out"]
-pub type MASK_MSB_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, INTERP0_CTRL_LANE1_SPEC, u8, u8, 5, O>;
+ Setting MSB &lt; LSB may cause chip to turn inside-out"]
+pub type MASK_MSB_W<'a, const O: u8> = crate::FieldWriter<'a, INTERP0_CTRL_LANE1_SPEC, 5, O>;
 #[doc = "Field `SIGNED` reader - If SIGNED is set, the shifted and masked accumulator value is sign-extended to 32 bits  
  before adding to BASE1, and LANE1 PEEK/POP appear extended to 32 bits when read by processor."]
-pub type SIGNED_R = crate::BitReader<bool>;
+pub type SIGNED_R = crate::BitReader;
 #[doc = "Field `SIGNED` writer - If SIGNED is set, the shifted and masked accumulator value is sign-extended to 32 bits  
  before adding to BASE1, and LANE1 PEEK/POP appear extended to 32 bits when read by processor."]
-pub type SIGNED_W<'a, const O: u8> = crate::BitWriter<'a, u32, INTERP0_CTRL_LANE1_SPEC, bool, O>;
+pub type SIGNED_W<'a, const O: u8> = crate::BitWriter<'a, INTERP0_CTRL_LANE1_SPEC, O>;
 #[doc = "Field `CROSS_INPUT` reader - If 1, feed the opposite lane's accumulator into this lane's shift + mask hardware.  
  Takes effect even if ADD_RAW is set (the CROSS_INPUT mux is before the shift+mask bypass)"]
-pub type CROSS_INPUT_R = crate::BitReader<bool>;
+pub type CROSS_INPUT_R = crate::BitReader;
 #[doc = "Field `CROSS_INPUT` writer - If 1, feed the opposite lane's accumulator into this lane's shift + mask hardware.  
  Takes effect even if ADD_RAW is set (the CROSS_INPUT mux is before the shift+mask bypass)"]
-pub type CROSS_INPUT_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, INTERP0_CTRL_LANE1_SPEC, bool, O>;
+pub type CROSS_INPUT_W<'a, const O: u8> = crate::BitWriter<'a, INTERP0_CTRL_LANE1_SPEC, O>;
 #[doc = "Field `CROSS_RESULT` reader - If 1, feed the opposite lane's result into this lane's accumulator on POP."]
-pub type CROSS_RESULT_R = crate::BitReader<bool>;
+pub type CROSS_RESULT_R = crate::BitReader;
 #[doc = "Field `CROSS_RESULT` writer - If 1, feed the opposite lane's result into this lane's accumulator on POP."]
-pub type CROSS_RESULT_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, INTERP0_CTRL_LANE1_SPEC, bool, O>;
+pub type CROSS_RESULT_W<'a, const O: u8> = crate::BitWriter<'a, INTERP0_CTRL_LANE1_SPEC, O>;
 #[doc = "Field `ADD_RAW` reader - If 1, mask + shift is bypassed for LANE1 result. This does not affect FULL result."]
-pub type ADD_RAW_R = crate::BitReader<bool>;
+pub type ADD_RAW_R = crate::BitReader;
 #[doc = "Field `ADD_RAW` writer - If 1, mask + shift is bypassed for LANE1 result. This does not affect FULL result."]
-pub type ADD_RAW_W<'a, const O: u8> = crate::BitWriter<'a, u32, INTERP0_CTRL_LANE1_SPEC, bool, O>;
+pub type ADD_RAW_W<'a, const O: u8> = crate::BitWriter<'a, INTERP0_CTRL_LANE1_SPEC, O>;
 #[doc = "Field `FORCE_MSB` reader - ORed into bits 29:28 of the lane result presented to the processor on the bus.  
  No effect on the internal 32-bit datapath. Handy for using a lane to generate sequence  
  of pointers into flash or SRAM."]
-pub type FORCE_MSB_R = crate::FieldReader<u8, u8>;
+pub type FORCE_MSB_R = crate::FieldReader;
 #[doc = "Field `FORCE_MSB` writer - ORed into bits 29:28 of the lane result presented to the processor on the bus.  
  No effect on the internal 32-bit datapath. Handy for using a lane to generate sequence  
  of pointers into flash or SRAM."]
-pub type FORCE_MSB_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, INTERP0_CTRL_LANE1_SPEC, u8, u8, 2, O>;
+pub type FORCE_MSB_W<'a, const O: u8> = crate::FieldWriter<'a, INTERP0_CTRL_LANE1_SPEC, 2, O>;
 impl R {
     #[doc = "Bits 0:4 - Logical right-shift applied to accumulator before masking"]
     #[inline(always)]
@@ -94,7 +88,7 @@ impl R {
         MASK_LSB_R::new(((self.bits >> 5) & 0x1f) as u8)
     }
     #[doc = "Bits 10:14 - The most-significant bit allowed to pass by the mask (inclusive)  
- Setting MSB < LSB may cause chip to turn inside-out"]
+ Setting MSB &lt; LSB may cause chip to turn inside-out"]
     #[inline(always)]
     pub fn mask_msb(&self) -> MASK_MSB_R {
         MASK_MSB_R::new(((self.bits >> 10) & 0x1f) as u8)
@@ -143,7 +137,7 @@ impl W {
         MASK_LSB_W::new(self)
     }
     #[doc = "Bits 10:14 - The most-significant bit allowed to pass by the mask (inclusive)  
- Setting MSB < LSB may cause chip to turn inside-out"]
+ Setting MSB &lt; LSB may cause chip to turn inside-out"]
     #[inline(always)]
     #[must_use]
     pub fn mask_msb(&mut self) -> MASK_MSB_W<10> {

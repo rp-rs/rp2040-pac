@@ -35,9 +35,9 @@ impl From<crate::W<DMATDLR_SPEC>> for W {
     }
 }
 #[doc = "Field `DMATDL` reader - Transmit data watermark level"]
-pub type DMATDL_R = crate::FieldReader<u8, u8>;
+pub type DMATDL_R = crate::FieldReader;
 #[doc = "Field `DMATDL` writer - Transmit data watermark level"]
-pub type DMATDL_W<'a, const O: u8> = crate::FieldWriter<'a, u32, DMATDLR_SPEC, u8, u8, 8, O>;
+pub type DMATDL_W<'a, const O: u8> = crate::FieldWriter<'a, DMATDLR_SPEC, 8, O>;
 impl R {
     #[doc = "Bits 0:7 - Transmit data watermark level"]
     #[inline(always)]

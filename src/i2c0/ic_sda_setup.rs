@@ -35,10 +35,9 @@ impl From<crate::W<IC_SDA_SETUP_SPEC>> for W {
     }
 }
 #[doc = "Field `SDA_SETUP` reader - SDA Setup. It is recommended that if the required delay is 1000ns, then for an ic_clk frequency of 10 MHz, IC_SDA_SETUP should be programmed to a value of 11. IC_SDA_SETUP must be programmed with a minimum value of 2."]
-pub type SDA_SETUP_R = crate::FieldReader<u8, u8>;
+pub type SDA_SETUP_R = crate::FieldReader;
 #[doc = "Field `SDA_SETUP` writer - SDA Setup. It is recommended that if the required delay is 1000ns, then for an ic_clk frequency of 10 MHz, IC_SDA_SETUP should be programmed to a value of 11. IC_SDA_SETUP must be programmed with a minimum value of 2."]
-pub type SDA_SETUP_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, IC_SDA_SETUP_SPEC, u8, u8, 8, O>;
+pub type SDA_SETUP_W<'a, const O: u8> = crate::FieldWriter<'a, IC_SDA_SETUP_SPEC, 8, O>;
 impl R {
     #[doc = "Bits 0:7 - SDA Setup. It is recommended that if the required delay is 1000ns, then for an ic_clk frequency of 10 MHz, IC_SDA_SETUP should be programmed to a value of 11. IC_SDA_SETUP must be programmed with a minimum value of 2."]
     #[inline(always)]

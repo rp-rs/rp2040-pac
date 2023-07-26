@@ -35,33 +35,33 @@ impl From<crate::W<DBGFORCE_SPEC>> for W {
     }
 }
 #[doc = "Field `PROC0_SWDO` reader - Observe the value of processor 0 SWDIO output."]
-pub type PROC0_SWDO_R = crate::BitReader<bool>;
+pub type PROC0_SWDO_R = crate::BitReader;
 #[doc = "Field `PROC0_SWDI` reader - Directly drive processor 0 SWDIO input, if PROC0_ATTACH is set"]
-pub type PROC0_SWDI_R = crate::BitReader<bool>;
+pub type PROC0_SWDI_R = crate::BitReader;
 #[doc = "Field `PROC0_SWDI` writer - Directly drive processor 0 SWDIO input, if PROC0_ATTACH is set"]
-pub type PROC0_SWDI_W<'a, const O: u8> = crate::BitWriter<'a, u32, DBGFORCE_SPEC, bool, O>;
+pub type PROC0_SWDI_W<'a, const O: u8> = crate::BitWriter<'a, DBGFORCE_SPEC, O>;
 #[doc = "Field `PROC0_SWCLK` reader - Directly drive processor 0 SWCLK, if PROC0_ATTACH is set"]
-pub type PROC0_SWCLK_R = crate::BitReader<bool>;
+pub type PROC0_SWCLK_R = crate::BitReader;
 #[doc = "Field `PROC0_SWCLK` writer - Directly drive processor 0 SWCLK, if PROC0_ATTACH is set"]
-pub type PROC0_SWCLK_W<'a, const O: u8> = crate::BitWriter<'a, u32, DBGFORCE_SPEC, bool, O>;
+pub type PROC0_SWCLK_W<'a, const O: u8> = crate::BitWriter<'a, DBGFORCE_SPEC, O>;
 #[doc = "Field `PROC0_ATTACH` reader - Attach processor 0 debug port to syscfg controls, and disconnect it from external SWD pads."]
-pub type PROC0_ATTACH_R = crate::BitReader<bool>;
+pub type PROC0_ATTACH_R = crate::BitReader;
 #[doc = "Field `PROC0_ATTACH` writer - Attach processor 0 debug port to syscfg controls, and disconnect it from external SWD pads."]
-pub type PROC0_ATTACH_W<'a, const O: u8> = crate::BitWriter<'a, u32, DBGFORCE_SPEC, bool, O>;
+pub type PROC0_ATTACH_W<'a, const O: u8> = crate::BitWriter<'a, DBGFORCE_SPEC, O>;
 #[doc = "Field `PROC1_SWDO` reader - Observe the value of processor 1 SWDIO output."]
-pub type PROC1_SWDO_R = crate::BitReader<bool>;
+pub type PROC1_SWDO_R = crate::BitReader;
 #[doc = "Field `PROC1_SWDI` reader - Directly drive processor 1 SWDIO input, if PROC1_ATTACH is set"]
-pub type PROC1_SWDI_R = crate::BitReader<bool>;
+pub type PROC1_SWDI_R = crate::BitReader;
 #[doc = "Field `PROC1_SWDI` writer - Directly drive processor 1 SWDIO input, if PROC1_ATTACH is set"]
-pub type PROC1_SWDI_W<'a, const O: u8> = crate::BitWriter<'a, u32, DBGFORCE_SPEC, bool, O>;
+pub type PROC1_SWDI_W<'a, const O: u8> = crate::BitWriter<'a, DBGFORCE_SPEC, O>;
 #[doc = "Field `PROC1_SWCLK` reader - Directly drive processor 1 SWCLK, if PROC1_ATTACH is set"]
-pub type PROC1_SWCLK_R = crate::BitReader<bool>;
+pub type PROC1_SWCLK_R = crate::BitReader;
 #[doc = "Field `PROC1_SWCLK` writer - Directly drive processor 1 SWCLK, if PROC1_ATTACH is set"]
-pub type PROC1_SWCLK_W<'a, const O: u8> = crate::BitWriter<'a, u32, DBGFORCE_SPEC, bool, O>;
+pub type PROC1_SWCLK_W<'a, const O: u8> = crate::BitWriter<'a, DBGFORCE_SPEC, O>;
 #[doc = "Field `PROC1_ATTACH` reader - Attach processor 1 debug port to syscfg controls, and disconnect it from external SWD pads."]
-pub type PROC1_ATTACH_R = crate::BitReader<bool>;
+pub type PROC1_ATTACH_R = crate::BitReader;
 #[doc = "Field `PROC1_ATTACH` writer - Attach processor 1 debug port to syscfg controls, and disconnect it from external SWD pads."]
-pub type PROC1_ATTACH_W<'a, const O: u8> = crate::BitWriter<'a, u32, DBGFORCE_SPEC, bool, O>;
+pub type PROC1_ATTACH_W<'a, const O: u8> = crate::BitWriter<'a, DBGFORCE_SPEC, O>;
 impl R {
     #[doc = "Bit 0 - Observe the value of processor 0 SWDIO output."]
     #[inline(always)]

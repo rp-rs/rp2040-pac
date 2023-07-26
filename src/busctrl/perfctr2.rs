@@ -37,11 +37,11 @@ impl From<crate::W<PERFCTR2_SPEC>> for W {
 #[doc = "Field `PERFCTR2` reader - Busfabric saturating performance counter 2  
  Count some event signal from the busfabric arbiters.  
  Write any value to clear. Select an event to count using PERFSEL2"]
-pub type PERFCTR2_R = crate::FieldReader<u32, u32>;
+pub type PERFCTR2_R = crate::FieldReader<u32>;
 #[doc = "Field `PERFCTR2` writer - Busfabric saturating performance counter 2  
  Count some event signal from the busfabric arbiters.  
  Write any value to clear. Select an event to count using PERFSEL2"]
-pub type PERFCTR2_W<'a, const O: u8> = crate::FieldWriter<'a, u32, PERFCTR2_SPEC, u32, u32, 24, O>;
+pub type PERFCTR2_W<'a, const O: u8> = crate::FieldWriter<'a, PERFCTR2_SPEC, 24, O, u32>;
 impl R {
     #[doc = "Bits 0:23 - Busfabric saturating performance counter 2  
  Count some event signal from the busfabric arbiters.  

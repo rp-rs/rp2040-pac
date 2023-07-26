@@ -35,21 +35,21 @@ impl From<crate::W<UARTRSR_SPEC>> for W {
     }
 }
 #[doc = "Field `FE` reader - Framing error. When set to 1, it indicates that the received character did not have a valid stop bit (a valid stop bit is 1). This bit is cleared to 0 by a write to UARTECR. In FIFO mode, this error is associated with the character at the top of the FIFO."]
-pub type FE_R = crate::BitReader<bool>;
+pub type FE_R = crate::BitReader;
 #[doc = "Field `FE` writer - Framing error. When set to 1, it indicates that the received character did not have a valid stop bit (a valid stop bit is 1). This bit is cleared to 0 by a write to UARTECR. In FIFO mode, this error is associated with the character at the top of the FIFO."]
-pub type FE_W<'a, const O: u8> = crate::BitWriter1C<'a, u32, UARTRSR_SPEC, bool, O>;
+pub type FE_W<'a, const O: u8> = crate::BitWriter1C<'a, UARTRSR_SPEC, O>;
 #[doc = "Field `PE` reader - Parity error. When set to 1, it indicates that the parity of the received data character does not match the parity that the EPS and SPS bits in the Line Control Register, UARTLCR_H. This bit is cleared to 0 by a write to UARTECR. In FIFO mode, this error is associated with the character at the top of the FIFO."]
-pub type PE_R = crate::BitReader<bool>;
+pub type PE_R = crate::BitReader;
 #[doc = "Field `PE` writer - Parity error. When set to 1, it indicates that the parity of the received data character does not match the parity that the EPS and SPS bits in the Line Control Register, UARTLCR_H. This bit is cleared to 0 by a write to UARTECR. In FIFO mode, this error is associated with the character at the top of the FIFO."]
-pub type PE_W<'a, const O: u8> = crate::BitWriter1C<'a, u32, UARTRSR_SPEC, bool, O>;
+pub type PE_W<'a, const O: u8> = crate::BitWriter1C<'a, UARTRSR_SPEC, O>;
 #[doc = "Field `BE` reader - Break error. This bit is set to 1 if a break condition was detected, indicating that the received data input was held LOW for longer than a full-word transmission time (defined as start, data, parity, and stop bits). This bit is cleared to 0 after a write to UARTECR. In FIFO mode, this error is associated with the character at the top of the FIFO. When a break occurs, only one 0 character is loaded into the FIFO. The next character is only enabled after the receive data input goes to a 1 (marking state) and the next valid start bit is received."]
-pub type BE_R = crate::BitReader<bool>;
+pub type BE_R = crate::BitReader;
 #[doc = "Field `BE` writer - Break error. This bit is set to 1 if a break condition was detected, indicating that the received data input was held LOW for longer than a full-word transmission time (defined as start, data, parity, and stop bits). This bit is cleared to 0 after a write to UARTECR. In FIFO mode, this error is associated with the character at the top of the FIFO. When a break occurs, only one 0 character is loaded into the FIFO. The next character is only enabled after the receive data input goes to a 1 (marking state) and the next valid start bit is received."]
-pub type BE_W<'a, const O: u8> = crate::BitWriter1C<'a, u32, UARTRSR_SPEC, bool, O>;
+pub type BE_W<'a, const O: u8> = crate::BitWriter1C<'a, UARTRSR_SPEC, O>;
 #[doc = "Field `OE` reader - Overrun error. This bit is set to 1 if data is received and the FIFO is already full. This bit is cleared to 0 by a write to UARTECR. The FIFO contents remain valid because no more data is written when the FIFO is full, only the contents of the shift register are overwritten. The CPU must now read the data, to empty the FIFO."]
-pub type OE_R = crate::BitReader<bool>;
+pub type OE_R = crate::BitReader;
 #[doc = "Field `OE` writer - Overrun error. This bit is set to 1 if data is received and the FIFO is already full. This bit is cleared to 0 by a write to UARTECR. The FIFO contents remain valid because no more data is written when the FIFO is full, only the contents of the shift register are overwritten. The CPU must now read the data, to empty the FIFO."]
-pub type OE_W<'a, const O: u8> = crate::BitWriter1C<'a, u32, UARTRSR_SPEC, bool, O>;
+pub type OE_W<'a, const O: u8> = crate::BitWriter1C<'a, UARTRSR_SPEC, O>;
 impl R {
     #[doc = "Bit 0 - Framing error. When set to 1, it indicates that the received character did not have a valid stop bit (a valid stop bit is 1). This bit is cleared to 0 by a write to UARTECR. In FIFO mode, this error is associated with the character at the top of the FIFO."]
     #[inline(always)]

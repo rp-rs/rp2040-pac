@@ -35,39 +35,39 @@ impl From<crate::W<FCS_SPEC>> for W {
     }
 }
 #[doc = "Field `EN` reader - If 1: write result to the FIFO after each conversion."]
-pub type EN_R = crate::BitReader<bool>;
+pub type EN_R = crate::BitReader;
 #[doc = "Field `EN` writer - If 1: write result to the FIFO after each conversion."]
-pub type EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, FCS_SPEC, bool, O>;
+pub type EN_W<'a, const O: u8> = crate::BitWriter<'a, FCS_SPEC, O>;
 #[doc = "Field `SHIFT` reader - If 1: FIFO results are right-shifted to be one byte in size. Enables DMA to byte buffers."]
-pub type SHIFT_R = crate::BitReader<bool>;
+pub type SHIFT_R = crate::BitReader;
 #[doc = "Field `SHIFT` writer - If 1: FIFO results are right-shifted to be one byte in size. Enables DMA to byte buffers."]
-pub type SHIFT_W<'a, const O: u8> = crate::BitWriter<'a, u32, FCS_SPEC, bool, O>;
+pub type SHIFT_W<'a, const O: u8> = crate::BitWriter<'a, FCS_SPEC, O>;
 #[doc = "Field `ERR` reader - If 1: conversion error bit appears in the FIFO alongside the result"]
-pub type ERR_R = crate::BitReader<bool>;
+pub type ERR_R = crate::BitReader;
 #[doc = "Field `ERR` writer - If 1: conversion error bit appears in the FIFO alongside the result"]
-pub type ERR_W<'a, const O: u8> = crate::BitWriter<'a, u32, FCS_SPEC, bool, O>;
+pub type ERR_W<'a, const O: u8> = crate::BitWriter<'a, FCS_SPEC, O>;
 #[doc = "Field `DREQ_EN` reader - If 1: assert DMA requests when FIFO contains data"]
-pub type DREQ_EN_R = crate::BitReader<bool>;
+pub type DREQ_EN_R = crate::BitReader;
 #[doc = "Field `DREQ_EN` writer - If 1: assert DMA requests when FIFO contains data"]
-pub type DREQ_EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, FCS_SPEC, bool, O>;
+pub type DREQ_EN_W<'a, const O: u8> = crate::BitWriter<'a, FCS_SPEC, O>;
 #[doc = "Field `EMPTY` reader - "]
-pub type EMPTY_R = crate::BitReader<bool>;
+pub type EMPTY_R = crate::BitReader;
 #[doc = "Field `FULL` reader - "]
-pub type FULL_R = crate::BitReader<bool>;
+pub type FULL_R = crate::BitReader;
 #[doc = "Field `UNDER` reader - 1 if the FIFO has been underflowed. Write 1 to clear."]
-pub type UNDER_R = crate::BitReader<bool>;
+pub type UNDER_R = crate::BitReader;
 #[doc = "Field `UNDER` writer - 1 if the FIFO has been underflowed. Write 1 to clear."]
-pub type UNDER_W<'a, const O: u8> = crate::BitWriter1C<'a, u32, FCS_SPEC, bool, O>;
+pub type UNDER_W<'a, const O: u8> = crate::BitWriter1C<'a, FCS_SPEC, O>;
 #[doc = "Field `OVER` reader - 1 if the FIFO has been overflowed. Write 1 to clear."]
-pub type OVER_R = crate::BitReader<bool>;
+pub type OVER_R = crate::BitReader;
 #[doc = "Field `OVER` writer - 1 if the FIFO has been overflowed. Write 1 to clear."]
-pub type OVER_W<'a, const O: u8> = crate::BitWriter1C<'a, u32, FCS_SPEC, bool, O>;
+pub type OVER_W<'a, const O: u8> = crate::BitWriter1C<'a, FCS_SPEC, O>;
 #[doc = "Field `LEVEL` reader - The number of conversion results currently waiting in the FIFO"]
-pub type LEVEL_R = crate::FieldReader<u8, u8>;
+pub type LEVEL_R = crate::FieldReader;
 #[doc = "Field `THRESH` reader - DREQ/IRQ asserted when level >= threshold"]
-pub type THRESH_R = crate::FieldReader<u8, u8>;
+pub type THRESH_R = crate::FieldReader;
 #[doc = "Field `THRESH` writer - DREQ/IRQ asserted when level >= threshold"]
-pub type THRESH_W<'a, const O: u8> = crate::FieldWriter<'a, u32, FCS_SPEC, u8, u8, 4, O>;
+pub type THRESH_W<'a, const O: u8> = crate::FieldWriter<'a, FCS_SPEC, 4, O>;
 impl R {
     #[doc = "Bit 0 - If 1: write result to the FIFO after each conversion."]
     #[inline(always)]

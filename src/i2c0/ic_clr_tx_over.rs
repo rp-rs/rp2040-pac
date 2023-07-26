@@ -16,7 +16,7 @@ impl From<crate::R<IC_CLR_TX_OVER_SPEC>> for R {
 #[doc = "Field `CLR_TX_OVER` reader - Read this register to clear the TX_OVER interrupt (bit 3) of the IC_RAW_INTR_STAT register.  
 
  Reset value: 0x0"]
-pub type CLR_TX_OVER_R = crate::BitReader<bool>;
+pub type CLR_TX_OVER_R = crate::BitReader;
 impl R {
     #[doc = "Bit 0 - Read this register to clear the TX_OVER interrupt (bit 3) of the IC_RAW_INTR_STAT register.  
 

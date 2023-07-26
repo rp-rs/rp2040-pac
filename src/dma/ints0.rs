@@ -36,10 +36,10 @@ impl From<crate::W<INTS0_SPEC>> for W {
 }
 #[doc = "Field `INTS0` reader - Indicates active channel interrupt requests which are currently causing IRQ 0 to be asserted.  
  Channel interrupts can be cleared by writing a bit mask here."]
-pub type INTS0_R = crate::FieldReader<u16, u16>;
+pub type INTS0_R = crate::FieldReader<u16>;
 #[doc = "Field `INTS0` writer - Indicates active channel interrupt requests which are currently causing IRQ 0 to be asserted.  
  Channel interrupts can be cleared by writing a bit mask here."]
-pub type INTS0_W<'a, const O: u8> = crate::FieldWriter<'a, u32, INTS0_SPEC, u16, u16, 16, O>;
+pub type INTS0_W<'a, const O: u8> = crate::FieldWriter<'a, INTS0_SPEC, 16, O, u16>;
 impl R {
     #[doc = "Bits 0:15 - Indicates active channel interrupt requests which are currently causing IRQ 0 to be asserted.  
  Channel interrupts can be cleared by writing a bit mask here."]

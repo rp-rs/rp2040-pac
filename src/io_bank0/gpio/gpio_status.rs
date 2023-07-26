@@ -14,21 +14,21 @@ impl From<crate::R<GPIO_STATUS_SPEC>> for R {
     }
 }
 #[doc = "Field `OUTFROMPERI` reader - output signal from selected peripheral, before register override is applied"]
-pub type OUTFROMPERI_R = crate::BitReader<bool>;
+pub type OUTFROMPERI_R = crate::BitReader;
 #[doc = "Field `OUTTOPAD` reader - output signal to pad after register override is applied"]
-pub type OUTTOPAD_R = crate::BitReader<bool>;
+pub type OUTTOPAD_R = crate::BitReader;
 #[doc = "Field `OEFROMPERI` reader - output enable from selected peripheral, before register override is applied"]
-pub type OEFROMPERI_R = crate::BitReader<bool>;
+pub type OEFROMPERI_R = crate::BitReader;
 #[doc = "Field `OETOPAD` reader - output enable to pad after register override is applied"]
-pub type OETOPAD_R = crate::BitReader<bool>;
+pub type OETOPAD_R = crate::BitReader;
 #[doc = "Field `INFROMPAD` reader - input signal from pad, before override is applied"]
-pub type INFROMPAD_R = crate::BitReader<bool>;
+pub type INFROMPAD_R = crate::BitReader;
 #[doc = "Field `INTOPERI` reader - input signal to peripheral, after override is applied"]
-pub type INTOPERI_R = crate::BitReader<bool>;
+pub type INTOPERI_R = crate::BitReader;
 #[doc = "Field `IRQFROMPAD` reader - interrupt from pad before override is applied"]
-pub type IRQFROMPAD_R = crate::BitReader<bool>;
+pub type IRQFROMPAD_R = crate::BitReader;
 #[doc = "Field `IRQTOPROC` reader - interrupt to processors, after override is applied"]
-pub type IRQTOPROC_R = crate::BitReader<bool>;
+pub type IRQTOPROC_R = crate::BitReader;
 impl R {
     #[doc = "Bit 8 - output signal from selected peripheral, before register override is applied"]
     #[inline(always)]

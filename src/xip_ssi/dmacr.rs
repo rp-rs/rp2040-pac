@@ -35,13 +35,13 @@ impl From<crate::W<DMACR_SPEC>> for W {
     }
 }
 #[doc = "Field `RDMAE` reader - Receive DMA enable"]
-pub type RDMAE_R = crate::BitReader<bool>;
+pub type RDMAE_R = crate::BitReader;
 #[doc = "Field `RDMAE` writer - Receive DMA enable"]
-pub type RDMAE_W<'a, const O: u8> = crate::BitWriter<'a, u32, DMACR_SPEC, bool, O>;
+pub type RDMAE_W<'a, const O: u8> = crate::BitWriter<'a, DMACR_SPEC, O>;
 #[doc = "Field `TDMAE` reader - Transmit DMA enable"]
-pub type TDMAE_R = crate::BitReader<bool>;
+pub type TDMAE_R = crate::BitReader;
 #[doc = "Field `TDMAE` writer - Transmit DMA enable"]
-pub type TDMAE_W<'a, const O: u8> = crate::BitWriter<'a, u32, DMACR_SPEC, bool, O>;
+pub type TDMAE_W<'a, const O: u8> = crate::BitWriter<'a, DMACR_SPEC, O>;
 impl R {
     #[doc = "Bit 0 - Receive DMA enable"]
     #[inline(always)]

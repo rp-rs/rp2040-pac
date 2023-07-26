@@ -35,21 +35,21 @@ impl From<crate::W<SSPCR1_SPEC>> for W {
     }
 }
 #[doc = "Field `LBM` reader - Loop back mode: 0 Normal serial port operation enabled. 1 Output of transmit serial shifter is connected to input of receive serial shifter internally."]
-pub type LBM_R = crate::BitReader<bool>;
+pub type LBM_R = crate::BitReader;
 #[doc = "Field `LBM` writer - Loop back mode: 0 Normal serial port operation enabled. 1 Output of transmit serial shifter is connected to input of receive serial shifter internally."]
-pub type LBM_W<'a, const O: u8> = crate::BitWriter<'a, u32, SSPCR1_SPEC, bool, O>;
+pub type LBM_W<'a, const O: u8> = crate::BitWriter<'a, SSPCR1_SPEC, O>;
 #[doc = "Field `SSE` reader - Synchronous serial port enable: 0 SSP operation disabled. 1 SSP operation enabled."]
-pub type SSE_R = crate::BitReader<bool>;
+pub type SSE_R = crate::BitReader;
 #[doc = "Field `SSE` writer - Synchronous serial port enable: 0 SSP operation disabled. 1 SSP operation enabled."]
-pub type SSE_W<'a, const O: u8> = crate::BitWriter<'a, u32, SSPCR1_SPEC, bool, O>;
+pub type SSE_W<'a, const O: u8> = crate::BitWriter<'a, SSPCR1_SPEC, O>;
 #[doc = "Field `MS` reader - Master or slave mode select. This bit can be modified only when the PrimeCell SSP is disabled, SSE=0: 0 Device configured as master, default. 1 Device configured as slave."]
-pub type MS_R = crate::BitReader<bool>;
+pub type MS_R = crate::BitReader;
 #[doc = "Field `MS` writer - Master or slave mode select. This bit can be modified only when the PrimeCell SSP is disabled, SSE=0: 0 Device configured as master, default. 1 Device configured as slave."]
-pub type MS_W<'a, const O: u8> = crate::BitWriter<'a, u32, SSPCR1_SPEC, bool, O>;
+pub type MS_W<'a, const O: u8> = crate::BitWriter<'a, SSPCR1_SPEC, O>;
 #[doc = "Field `SOD` reader - Slave-mode output disable. This bit is relevant only in the slave mode, MS=1. In multiple-slave systems, it is possible for an PrimeCell SSP master to broadcast a message to all slaves in the system while ensuring that only one slave drives data onto its serial output line. In such systems the RXD lines from multiple slaves could be tied together. To operate in such systems, the SOD bit can be set if the PrimeCell SSP slave is not supposed to drive the SSPTXD line: 0 SSP can drive the SSPTXD output in slave mode. 1 SSP must not drive the SSPTXD output in slave mode."]
-pub type SOD_R = crate::BitReader<bool>;
+pub type SOD_R = crate::BitReader;
 #[doc = "Field `SOD` writer - Slave-mode output disable. This bit is relevant only in the slave mode, MS=1. In multiple-slave systems, it is possible for an PrimeCell SSP master to broadcast a message to all slaves in the system while ensuring that only one slave drives data onto its serial output line. In such systems the RXD lines from multiple slaves could be tied together. To operate in such systems, the SOD bit can be set if the PrimeCell SSP slave is not supposed to drive the SSPTXD line: 0 SSP can drive the SSPTXD output in slave mode. 1 SSP must not drive the SSPTXD output in slave mode."]
-pub type SOD_W<'a, const O: u8> = crate::BitWriter<'a, u32, SSPCR1_SPEC, bool, O>;
+pub type SOD_W<'a, const O: u8> = crate::BitWriter<'a, SSPCR1_SPEC, O>;
 impl R {
     #[doc = "Bit 0 - Loop back mode: 0 Normal serial port operation enabled. 1 Output of transmit serial shifter is connected to input of receive serial shifter internally."]
     #[inline(always)]

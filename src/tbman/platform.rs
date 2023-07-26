@@ -14,9 +14,9 @@ impl From<crate::R<PLATFORM_SPEC>> for R {
     }
 }
 #[doc = "Field `ASIC` reader - Indicates the platform is an ASIC"]
-pub type ASIC_R = crate::BitReader<bool>;
+pub type ASIC_R = crate::BitReader;
 #[doc = "Field `FPGA` reader - Indicates the platform is an FPGA"]
-pub type FPGA_R = crate::BitReader<bool>;
+pub type FPGA_R = crate::BitReader;
 impl R {
     #[doc = "Bit 0 - Indicates the platform is an ASIC"]
     #[inline(always)]

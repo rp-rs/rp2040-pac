@@ -14,21 +14,21 @@ impl From<crate::R<FC0_STATUS_SPEC>> for R {
     }
 }
 #[doc = "Field `PASS` reader - Test passed"]
-pub type PASS_R = crate::BitReader<bool>;
+pub type PASS_R = crate::BitReader;
 #[doc = "Field `DONE` reader - Test complete"]
-pub type DONE_R = crate::BitReader<bool>;
+pub type DONE_R = crate::BitReader;
 #[doc = "Field `RUNNING` reader - Test running"]
-pub type RUNNING_R = crate::BitReader<bool>;
+pub type RUNNING_R = crate::BitReader;
 #[doc = "Field `WAITING` reader - Waiting for test clock to start"]
-pub type WAITING_R = crate::BitReader<bool>;
+pub type WAITING_R = crate::BitReader;
 #[doc = "Field `FAIL` reader - Test failed"]
-pub type FAIL_R = crate::BitReader<bool>;
+pub type FAIL_R = crate::BitReader;
 #[doc = "Field `SLOW` reader - Test clock slower than expected, only valid when status_done=1"]
-pub type SLOW_R = crate::BitReader<bool>;
+pub type SLOW_R = crate::BitReader;
 #[doc = "Field `FAST` reader - Test clock faster than expected, only valid when status_done=1"]
-pub type FAST_R = crate::BitReader<bool>;
+pub type FAST_R = crate::BitReader;
 #[doc = "Field `DIED` reader - Test clock stopped during test"]
-pub type DIED_R = crate::BitReader<bool>;
+pub type DIED_R = crate::BitReader;
 impl R {
     #[doc = "Bit 0 - Test passed"]
     #[inline(always)]

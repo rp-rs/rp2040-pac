@@ -41,7 +41,7 @@ impl From<crate::W<NVIC_ICPR_SPEC>> for W {
  Read:  
  0 = Interrupt is not pending.  
  1 = Interrupt is pending."]
-pub type CLRPEND_R = crate::FieldReader<u32, u32>;
+pub type CLRPEND_R = crate::FieldReader<u32>;
 #[doc = "Field `CLRPEND` writer - Interrupt clear-pending bits.  
  Write:  
  0 = No effect.  
@@ -49,7 +49,7 @@ pub type CLRPEND_R = crate::FieldReader<u32, u32>;
  Read:  
  0 = Interrupt is not pending.  
  1 = Interrupt is pending."]
-pub type CLRPEND_W<'a, const O: u8> = crate::FieldWriter<'a, u32, NVIC_ICPR_SPEC, u32, u32, 32, O>;
+pub type CLRPEND_W<'a, const O: u8> = crate::FieldWriter<'a, NVIC_ICPR_SPEC, 32, O, u32>;
 impl R {
     #[doc = "Bits 0:31 - Interrupt clear-pending bits.  
  Write:  

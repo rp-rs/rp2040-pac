@@ -19,6 +19,11 @@ impl From<crate::W<TIMEHW_SPEC>> for W {
         W(writer)
     }
 }
+impl core::fmt::Debug for crate::generic::Reg<TIMEHW_SPEC> {
+    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
+        write!(f, "(not readable)")
+    }
+}
 impl W {
     #[doc = "Writes raw bits to the register."]
     #[inline(always)]

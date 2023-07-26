@@ -39,13 +39,13 @@ impl From<crate::W<GPIO_OUT_SPEC>> for W {
  If core 0 and core 1 both write to GPIO_OUT simultaneously (or to a SET/CLR/XOR alias),  
  the result is as though the write from core 0 took place first,  
  and the write from core 1 was then applied to that intermediate result."]
-pub type GPIO_OUT_R = crate::FieldReader<u32, u32>;
+pub type GPIO_OUT_R = crate::FieldReader<u32>;
 #[doc = "Field `GPIO_OUT` writer - Set output level (1/0 -> high/low) for GPIO0...29.  
  Reading back gives the last value written, NOT the input value from the pins.  
  If core 0 and core 1 both write to GPIO_OUT simultaneously (or to a SET/CLR/XOR alias),  
  the result is as though the write from core 0 took place first,  
  and the write from core 1 was then applied to that intermediate result."]
-pub type GPIO_OUT_W<'a, const O: u8> = crate::FieldWriter<'a, u32, GPIO_OUT_SPEC, u32, u32, 30, O>;
+pub type GPIO_OUT_W<'a, const O: u8> = crate::FieldWriter<'a, GPIO_OUT_SPEC, 30, O, u32>;
 impl R {
     #[doc = "Bits 0:29 - Set output level (1/0 -> high/low) for GPIO0...29.  
  Reading back gives the last value written, NOT the input value from the pins.  

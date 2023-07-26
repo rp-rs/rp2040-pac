@@ -14,7 +14,7 @@ impl From<crate::R<CLK_SYS_RESUS_STATUS_SPEC>> for R {
     }
 }
 #[doc = "Field `RESUSSED` reader - Clock has been resuscitated, correct the error then send ctrl_clear=1"]
-pub type RESUSSED_R = crate::BitReader<bool>;
+pub type RESUSSED_R = crate::BitReader;
 impl R {
     #[doc = "Bit 0 - Clock has been resuscitated, correct the error then send ctrl_clear=1"]
     #[inline(always)]

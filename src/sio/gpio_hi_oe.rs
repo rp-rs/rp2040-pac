@@ -39,13 +39,13 @@ impl From<crate::W<GPIO_HI_OE_SPEC>> for W {
  If core 0 and core 1 both write to GPIO_HI_OE simultaneously (or to a SET/CLR/XOR alias),  
  the result is as though the write from core 0 took place first,  
  and the write from core 1 was then applied to that intermediate result."]
-pub type GPIO_HI_OE_R = crate::FieldReader<u8, u8>;
+pub type GPIO_HI_OE_R = crate::FieldReader;
 #[doc = "Field `GPIO_HI_OE` writer - Set output enable (1/0 -> output/input) for QSPI IO0...5.  
  Reading back gives the last value written.  
  If core 0 and core 1 both write to GPIO_HI_OE simultaneously (or to a SET/CLR/XOR alias),  
  the result is as though the write from core 0 took place first,  
  and the write from core 1 was then applied to that intermediate result."]
-pub type GPIO_HI_OE_W<'a, const O: u8> = crate::FieldWriter<'a, u32, GPIO_HI_OE_SPEC, u8, u8, 6, O>;
+pub type GPIO_HI_OE_W<'a, const O: u8> = crate::FieldWriter<'a, GPIO_HI_OE_SPEC, 6, O>;
 impl R {
     #[doc = "Bits 0:5 - Set output enable (1/0 -> output/input) for QSPI IO0...5.  
  Reading back gives the last value written.  

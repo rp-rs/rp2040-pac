@@ -41,7 +41,7 @@ impl From<crate::W<NVIC_ISER_SPEC>> for W {
  Read:  
  0 = Interrupt disabled.  
  1 = Interrupt enabled."]
-pub type SETENA_R = crate::FieldReader<u32, u32>;
+pub type SETENA_R = crate::FieldReader<u32>;
 #[doc = "Field `SETENA` writer - Interrupt set-enable bits.  
  Write:  
  0 = No effect.  
@@ -49,7 +49,7 @@ pub type SETENA_R = crate::FieldReader<u32, u32>;
  Read:  
  0 = Interrupt disabled.  
  1 = Interrupt enabled."]
-pub type SETENA_W<'a, const O: u8> = crate::FieldWriter<'a, u32, NVIC_ISER_SPEC, u32, u32, 32, O>;
+pub type SETENA_W<'a, const O: u8> = crate::FieldWriter<'a, NVIC_ISER_SPEC, 32, O, u32>;
 impl R {
     #[doc = "Bits 0:31 - Interrupt set-enable bits.  
  Write:  

@@ -37,11 +37,11 @@ impl From<crate::W<IC_DMA_RDLR_SPEC>> for W {
 #[doc = "Field `DMARDL` reader - Receive Data Level. This bit field controls the level at which a DMA request is made by the receive logic. The watermark level = DMARDL+1; that is, dma_rx_req is generated when the number of valid data entries in the receive FIFO is equal to or more than this field value + 1, and RDMAE =1. For instance, when DMARDL is 0, then dma_rx_req is asserted when 1 or more data entries are present in the receive FIFO.  
 
  Reset value: 0x0"]
-pub type DMARDL_R = crate::FieldReader<u8, u8>;
+pub type DMARDL_R = crate::FieldReader;
 #[doc = "Field `DMARDL` writer - Receive Data Level. This bit field controls the level at which a DMA request is made by the receive logic. The watermark level = DMARDL+1; that is, dma_rx_req is generated when the number of valid data entries in the receive FIFO is equal to or more than this field value + 1, and RDMAE =1. For instance, when DMARDL is 0, then dma_rx_req is asserted when 1 or more data entries are present in the receive FIFO.  
 
  Reset value: 0x0"]
-pub type DMARDL_W<'a, const O: u8> = crate::FieldWriter<'a, u32, IC_DMA_RDLR_SPEC, u8, u8, 4, O>;
+pub type DMARDL_W<'a, const O: u8> = crate::FieldWriter<'a, IC_DMA_RDLR_SPEC, 4, O>;
 impl R {
     #[doc = "Bits 0:3 - Receive Data Level. This bit field controls the level at which a DMA request is made by the receive logic. The watermark level = DMARDL+1; that is, dma_rx_req is generated when the number of valid data entries in the receive FIFO is equal to or more than this field value + 1, and RDMAE =1. For instance, when DMARDL is 0, then dma_rx_req is asserted when 1 or more data entries are present in the receive FIFO.  
 

@@ -35,9 +35,9 @@ impl From<crate::W<SYST_RVR_SPEC>> for W {
     }
 }
 #[doc = "Field `RELOAD` reader - Value to load into the SysTick Current Value Register when the counter reaches 0."]
-pub type RELOAD_R = crate::FieldReader<u32, u32>;
+pub type RELOAD_R = crate::FieldReader<u32>;
 #[doc = "Field `RELOAD` writer - Value to load into the SysTick Current Value Register when the counter reaches 0."]
-pub type RELOAD_W<'a, const O: u8> = crate::FieldWriter<'a, u32, SYST_RVR_SPEC, u32, u32, 24, O>;
+pub type RELOAD_W<'a, const O: u8> = crate::FieldWriter<'a, SYST_RVR_SPEC, 24, O, u32>;
 impl R {
     #[doc = "Bits 0:23 - Value to load into the SysTick Current Value Register when the counter reaches 0."]
     #[inline(always)]

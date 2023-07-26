@@ -35,7 +35,7 @@ impl From<crate::W<CLK_REF_CTRL_SPEC>> for W {
     }
 }
 #[doc = "Field `SRC` reader - Selects the clock source glitchlessly, can be changed on-the-fly"]
-pub type SRC_R = crate::FieldReader<u8, SRC_A>;
+pub type SRC_R = crate::FieldReader<SRC_A>;
 #[doc = "Selects the clock source glitchlessly, can be changed on-the-fly  
 
 Value on reset: 0"]
@@ -54,6 +54,9 @@ impl From<SRC_A> for u8 {
     fn from(variant: SRC_A) -> Self {
         variant as _
     }
+}
+impl crate::FieldSpec for SRC_A {
+    type Ux = u8;
 }
 impl SRC_R {
     #[doc = "Get enumerated values variant"]
@@ -83,7 +86,7 @@ impl SRC_R {
     }
 }
 #[doc = "Field `SRC` writer - Selects the clock source glitchlessly, can be changed on-the-fly"]
-pub type SRC_W<'a, const O: u8> = crate::FieldWriter<'a, u32, CLK_REF_CTRL_SPEC, u8, SRC_A, 2, O>;
+pub type SRC_W<'a, const O: u8> = crate::FieldWriter<'a, CLK_REF_CTRL_SPEC, 2, O, SRC_A>;
 impl<'a, const O: u8> SRC_W<'a, O> {
     #[doc = "`0`"]
     #[inline(always)]
@@ -102,7 +105,7 @@ impl<'a, const O: u8> SRC_W<'a, O> {
     }
 }
 #[doc = "Field `AUXSRC` reader - Selects the auxiliary clock source, will glitch when switching"]
-pub type AUXSRC_R = crate::FieldReader<u8, AUXSRC_A>;
+pub type AUXSRC_R = crate::FieldReader<AUXSRC_A>;
 #[doc = "Selects the auxiliary clock source, will glitch when switching  
 
 Value on reset: 0"]
@@ -121,6 +124,9 @@ impl From<AUXSRC_A> for u8 {
     fn from(variant: AUXSRC_A) -> Self {
         variant as _
     }
+}
+impl crate::FieldSpec for AUXSRC_A {
+    type Ux = u8;
 }
 impl AUXSRC_R {
     #[doc = "Get enumerated values variant"]
@@ -150,8 +156,7 @@ impl AUXSRC_R {
     }
 }
 #[doc = "Field `AUXSRC` writer - Selects the auxiliary clock source, will glitch when switching"]
-pub type AUXSRC_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, CLK_REF_CTRL_SPEC, u8, AUXSRC_A, 2, O>;
+pub type AUXSRC_W<'a, const O: u8> = crate::FieldWriter<'a, CLK_REF_CTRL_SPEC, 2, O, AUXSRC_A>;
 impl<'a, const O: u8> AUXSRC_W<'a, O> {
     #[doc = "`0`"]
     #[inline(always)]

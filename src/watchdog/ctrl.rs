@@ -35,27 +35,27 @@ impl From<crate::W<CTRL_SPEC>> for W {
     }
 }
 #[doc = "Field `TIME` reader - Indicates the number of ticks / 2 (see errata RP2040-E1) before a watchdog reset will be triggered"]
-pub type TIME_R = crate::FieldReader<u32, u32>;
+pub type TIME_R = crate::FieldReader<u32>;
 #[doc = "Field `PAUSE_JTAG` reader - Pause the watchdog timer when JTAG is accessing the bus fabric"]
-pub type PAUSE_JTAG_R = crate::BitReader<bool>;
+pub type PAUSE_JTAG_R = crate::BitReader;
 #[doc = "Field `PAUSE_JTAG` writer - Pause the watchdog timer when JTAG is accessing the bus fabric"]
-pub type PAUSE_JTAG_W<'a, const O: u8> = crate::BitWriter<'a, u32, CTRL_SPEC, bool, O>;
+pub type PAUSE_JTAG_W<'a, const O: u8> = crate::BitWriter<'a, CTRL_SPEC, O>;
 #[doc = "Field `PAUSE_DBG0` reader - Pause the watchdog timer when processor 0 is in debug mode"]
-pub type PAUSE_DBG0_R = crate::BitReader<bool>;
+pub type PAUSE_DBG0_R = crate::BitReader;
 #[doc = "Field `PAUSE_DBG0` writer - Pause the watchdog timer when processor 0 is in debug mode"]
-pub type PAUSE_DBG0_W<'a, const O: u8> = crate::BitWriter<'a, u32, CTRL_SPEC, bool, O>;
+pub type PAUSE_DBG0_W<'a, const O: u8> = crate::BitWriter<'a, CTRL_SPEC, O>;
 #[doc = "Field `PAUSE_DBG1` reader - Pause the watchdog timer when processor 1 is in debug mode"]
-pub type PAUSE_DBG1_R = crate::BitReader<bool>;
+pub type PAUSE_DBG1_R = crate::BitReader;
 #[doc = "Field `PAUSE_DBG1` writer - Pause the watchdog timer when processor 1 is in debug mode"]
-pub type PAUSE_DBG1_W<'a, const O: u8> = crate::BitWriter<'a, u32, CTRL_SPEC, bool, O>;
+pub type PAUSE_DBG1_W<'a, const O: u8> = crate::BitWriter<'a, CTRL_SPEC, O>;
 #[doc = "Field `ENABLE` reader - When not enabled the watchdog timer is paused"]
-pub type ENABLE_R = crate::BitReader<bool>;
+pub type ENABLE_R = crate::BitReader;
 #[doc = "Field `ENABLE` writer - When not enabled the watchdog timer is paused"]
-pub type ENABLE_W<'a, const O: u8> = crate::BitWriter<'a, u32, CTRL_SPEC, bool, O>;
+pub type ENABLE_W<'a, const O: u8> = crate::BitWriter<'a, CTRL_SPEC, O>;
 #[doc = "Field `TRIGGER` reader - Trigger a watchdog reset"]
-pub type TRIGGER_R = crate::BitReader<bool>;
+pub type TRIGGER_R = crate::BitReader;
 #[doc = "Field `TRIGGER` writer - Trigger a watchdog reset"]
-pub type TRIGGER_W<'a, const O: u8> = crate::BitWriter<'a, u32, CTRL_SPEC, bool, O>;
+pub type TRIGGER_W<'a, const O: u8> = crate::BitWriter<'a, CTRL_SPEC, O>;
 impl R {
     #[doc = "Bits 0:23 - Indicates the number of ticks / 2 (see errata RP2040-E1) before a watchdog reset will be triggered"]
     #[inline(always)]

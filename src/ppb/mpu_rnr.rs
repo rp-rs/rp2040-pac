@@ -36,10 +36,10 @@ impl From<crate::W<MPU_RNR_SPEC>> for W {
 }
 #[doc = "Field `REGION` reader - Indicates the MPU region referenced by the MPU_RBAR and MPU_RASR registers.  
  The MPU supports 8 memory regions, so the permitted values of this field are 0-7."]
-pub type REGION_R = crate::FieldReader<u8, u8>;
+pub type REGION_R = crate::FieldReader;
 #[doc = "Field `REGION` writer - Indicates the MPU region referenced by the MPU_RBAR and MPU_RASR registers.  
  The MPU supports 8 memory regions, so the permitted values of this field are 0-7."]
-pub type REGION_W<'a, const O: u8> = crate::FieldWriter<'a, u32, MPU_RNR_SPEC, u8, u8, 4, O>;
+pub type REGION_W<'a, const O: u8> = crate::FieldWriter<'a, MPU_RNR_SPEC, 4, O>;
 impl R {
     #[doc = "Bits 0:3 - Indicates the MPU region referenced by the MPU_RBAR and MPU_RASR registers.  
  The MPU supports 8 memory regions, so the permitted values of this field are 0-7."]

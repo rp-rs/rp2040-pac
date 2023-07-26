@@ -14,7 +14,7 @@ impl From<crate::R<SSI_VERSION_ID_SPEC>> for R {
     }
 }
 #[doc = "Field `SSI_COMP_VERSION` reader - SNPS component version (format X.YY)"]
-pub type SSI_COMP_VERSION_R = crate::FieldReader<u32, u32>;
+pub type SSI_COMP_VERSION_R = crate::FieldReader<u32>;
 impl R {
     #[doc = "Bits 0:31 - SNPS component version (format X.YY)"]
     #[inline(always)]

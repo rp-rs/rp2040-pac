@@ -14,53 +14,53 @@ impl From<crate::R<DORMANT_WAKE_INTS_SPEC>> for R {
     }
 }
 #[doc = "Field `GPIO_QSPI_SCLK_LEVEL_LOW` reader - "]
-pub type GPIO_QSPI_SCLK_LEVEL_LOW_R = crate::BitReader<bool>;
+pub type GPIO_QSPI_SCLK_LEVEL_LOW_R = crate::BitReader;
 #[doc = "Field `GPIO_QSPI_SCLK_LEVEL_HIGH` reader - "]
-pub type GPIO_QSPI_SCLK_LEVEL_HIGH_R = crate::BitReader<bool>;
+pub type GPIO_QSPI_SCLK_LEVEL_HIGH_R = crate::BitReader;
 #[doc = "Field `GPIO_QSPI_SCLK_EDGE_LOW` reader - "]
-pub type GPIO_QSPI_SCLK_EDGE_LOW_R = crate::BitReader<bool>;
+pub type GPIO_QSPI_SCLK_EDGE_LOW_R = crate::BitReader;
 #[doc = "Field `GPIO_QSPI_SCLK_EDGE_HIGH` reader - "]
-pub type GPIO_QSPI_SCLK_EDGE_HIGH_R = crate::BitReader<bool>;
+pub type GPIO_QSPI_SCLK_EDGE_HIGH_R = crate::BitReader;
 #[doc = "Field `GPIO_QSPI_SS_LEVEL_LOW` reader - "]
-pub type GPIO_QSPI_SS_LEVEL_LOW_R = crate::BitReader<bool>;
+pub type GPIO_QSPI_SS_LEVEL_LOW_R = crate::BitReader;
 #[doc = "Field `GPIO_QSPI_SS_LEVEL_HIGH` reader - "]
-pub type GPIO_QSPI_SS_LEVEL_HIGH_R = crate::BitReader<bool>;
+pub type GPIO_QSPI_SS_LEVEL_HIGH_R = crate::BitReader;
 #[doc = "Field `GPIO_QSPI_SS_EDGE_LOW` reader - "]
-pub type GPIO_QSPI_SS_EDGE_LOW_R = crate::BitReader<bool>;
+pub type GPIO_QSPI_SS_EDGE_LOW_R = crate::BitReader;
 #[doc = "Field `GPIO_QSPI_SS_EDGE_HIGH` reader - "]
-pub type GPIO_QSPI_SS_EDGE_HIGH_R = crate::BitReader<bool>;
+pub type GPIO_QSPI_SS_EDGE_HIGH_R = crate::BitReader;
 #[doc = "Field `GPIO_QSPI_SD0_LEVEL_LOW` reader - "]
-pub type GPIO_QSPI_SD0_LEVEL_LOW_R = crate::BitReader<bool>;
+pub type GPIO_QSPI_SD0_LEVEL_LOW_R = crate::BitReader;
 #[doc = "Field `GPIO_QSPI_SD0_LEVEL_HIGH` reader - "]
-pub type GPIO_QSPI_SD0_LEVEL_HIGH_R = crate::BitReader<bool>;
+pub type GPIO_QSPI_SD0_LEVEL_HIGH_R = crate::BitReader;
 #[doc = "Field `GPIO_QSPI_SD0_EDGE_LOW` reader - "]
-pub type GPIO_QSPI_SD0_EDGE_LOW_R = crate::BitReader<bool>;
+pub type GPIO_QSPI_SD0_EDGE_LOW_R = crate::BitReader;
 #[doc = "Field `GPIO_QSPI_SD0_EDGE_HIGH` reader - "]
-pub type GPIO_QSPI_SD0_EDGE_HIGH_R = crate::BitReader<bool>;
+pub type GPIO_QSPI_SD0_EDGE_HIGH_R = crate::BitReader;
 #[doc = "Field `GPIO_QSPI_SD1_LEVEL_LOW` reader - "]
-pub type GPIO_QSPI_SD1_LEVEL_LOW_R = crate::BitReader<bool>;
+pub type GPIO_QSPI_SD1_LEVEL_LOW_R = crate::BitReader;
 #[doc = "Field `GPIO_QSPI_SD1_LEVEL_HIGH` reader - "]
-pub type GPIO_QSPI_SD1_LEVEL_HIGH_R = crate::BitReader<bool>;
+pub type GPIO_QSPI_SD1_LEVEL_HIGH_R = crate::BitReader;
 #[doc = "Field `GPIO_QSPI_SD1_EDGE_LOW` reader - "]
-pub type GPIO_QSPI_SD1_EDGE_LOW_R = crate::BitReader<bool>;
+pub type GPIO_QSPI_SD1_EDGE_LOW_R = crate::BitReader;
 #[doc = "Field `GPIO_QSPI_SD1_EDGE_HIGH` reader - "]
-pub type GPIO_QSPI_SD1_EDGE_HIGH_R = crate::BitReader<bool>;
+pub type GPIO_QSPI_SD1_EDGE_HIGH_R = crate::BitReader;
 #[doc = "Field `GPIO_QSPI_SD2_LEVEL_LOW` reader - "]
-pub type GPIO_QSPI_SD2_LEVEL_LOW_R = crate::BitReader<bool>;
+pub type GPIO_QSPI_SD2_LEVEL_LOW_R = crate::BitReader;
 #[doc = "Field `GPIO_QSPI_SD2_LEVEL_HIGH` reader - "]
-pub type GPIO_QSPI_SD2_LEVEL_HIGH_R = crate::BitReader<bool>;
+pub type GPIO_QSPI_SD2_LEVEL_HIGH_R = crate::BitReader;
 #[doc = "Field `GPIO_QSPI_SD2_EDGE_LOW` reader - "]
-pub type GPIO_QSPI_SD2_EDGE_LOW_R = crate::BitReader<bool>;
+pub type GPIO_QSPI_SD2_EDGE_LOW_R = crate::BitReader;
 #[doc = "Field `GPIO_QSPI_SD2_EDGE_HIGH` reader - "]
-pub type GPIO_QSPI_SD2_EDGE_HIGH_R = crate::BitReader<bool>;
+pub type GPIO_QSPI_SD2_EDGE_HIGH_R = crate::BitReader;
 #[doc = "Field `GPIO_QSPI_SD3_LEVEL_LOW` reader - "]
-pub type GPIO_QSPI_SD3_LEVEL_LOW_R = crate::BitReader<bool>;
+pub type GPIO_QSPI_SD3_LEVEL_LOW_R = crate::BitReader;
 #[doc = "Field `GPIO_QSPI_SD3_LEVEL_HIGH` reader - "]
-pub type GPIO_QSPI_SD3_LEVEL_HIGH_R = crate::BitReader<bool>;
+pub type GPIO_QSPI_SD3_LEVEL_HIGH_R = crate::BitReader;
 #[doc = "Field `GPIO_QSPI_SD3_EDGE_LOW` reader - "]
-pub type GPIO_QSPI_SD3_EDGE_LOW_R = crate::BitReader<bool>;
+pub type GPIO_QSPI_SD3_EDGE_LOW_R = crate::BitReader;
 #[doc = "Field `GPIO_QSPI_SD3_EDGE_HIGH` reader - "]
-pub type GPIO_QSPI_SD3_EDGE_HIGH_R = crate::BitReader<bool>;
+pub type GPIO_QSPI_SD3_EDGE_HIGH_R = crate::BitReader;
 impl R {
     #[doc = "Bit 0"]
     #[inline(always)]
@@ -183,7 +183,7 @@ impl R {
         GPIO_QSPI_SD3_EDGE_HIGH_R::new(((self.bits >> 23) & 1) != 0)
     }
 }
-#[doc = "Interrupt status after masking & forcing for dormant_wake  
+#[doc = "Interrupt status after masking &amp; forcing for dormant_wake  
 
 This register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
 

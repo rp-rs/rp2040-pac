@@ -14,7 +14,7 @@ impl From<crate::R<IC_COMP_VERSION_SPEC>> for R {
     }
 }
 #[doc = "Field `IC_COMP_VERSION` reader - "]
-pub type IC_COMP_VERSION_R = crate::FieldReader<u32, u32>;
+pub type IC_COMP_VERSION_R = crate::FieldReader<u32>;
 impl R {
     #[doc = "Bits 0:31"]
     #[inline(always)]

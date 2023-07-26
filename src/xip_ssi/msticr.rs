@@ -14,7 +14,7 @@ impl From<crate::R<MSTICR_SPEC>> for R {
     }
 }
 #[doc = "Field `MSTICR` reader - Clear-on-read multi-master contention interrupt"]
-pub type MSTICR_R = crate::BitReader<bool>;
+pub type MSTICR_R = crate::BitReader;
 impl R {
     #[doc = "Bit 0 - Clear-on-read multi-master contention interrupt"]
     #[inline(always)]

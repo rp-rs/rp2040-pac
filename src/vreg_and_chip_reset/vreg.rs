@@ -36,16 +36,16 @@ impl From<crate::W<VREG_SPEC>> for W {
 }
 #[doc = "Field `EN` reader - enable  
  0=not enabled, 1=enabled"]
-pub type EN_R = crate::BitReader<bool>;
+pub type EN_R = crate::BitReader;
 #[doc = "Field `EN` writer - enable  
  0=not enabled, 1=enabled"]
-pub type EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, VREG_SPEC, bool, O>;
+pub type EN_W<'a, const O: u8> = crate::BitWriter<'a, VREG_SPEC, O>;
 #[doc = "Field `HIZ` reader - high impedance mode select  
  0=not in high impedance mode, 1=in high impedance mode"]
-pub type HIZ_R = crate::BitReader<bool>;
+pub type HIZ_R = crate::BitReader;
 #[doc = "Field `HIZ` writer - high impedance mode select  
  0=not in high impedance mode, 1=in high impedance mode"]
-pub type HIZ_W<'a, const O: u8> = crate::BitWriter<'a, u32, VREG_SPEC, bool, O>;
+pub type HIZ_W<'a, const O: u8> = crate::BitWriter<'a, VREG_SPEC, O>;
 #[doc = "Field `VSEL` reader - output voltage select  
  0000 to 0101 - 0.80V  
  0110 - 0.85V  
@@ -58,7 +58,7 @@ pub type HIZ_W<'a, const O: u8> = crate::BitWriter<'a, u32, VREG_SPEC, bool, O>;
  1101 - 1.20V  
  1110 - 1.25V  
  1111 - 1.30V"]
-pub type VSEL_R = crate::FieldReader<u8, u8>;
+pub type VSEL_R = crate::FieldReader;
 #[doc = "Field `VSEL` writer - output voltage select  
  0000 to 0101 - 0.80V  
  0110 - 0.85V  
@@ -71,10 +71,10 @@ pub type VSEL_R = crate::FieldReader<u8, u8>;
  1101 - 1.20V  
  1110 - 1.25V  
  1111 - 1.30V"]
-pub type VSEL_W<'a, const O: u8> = crate::FieldWriter<'a, u32, VREG_SPEC, u8, u8, 4, O>;
+pub type VSEL_W<'a, const O: u8> = crate::FieldWriter<'a, VREG_SPEC, 4, O>;
 #[doc = "Field `ROK` reader - regulation status  
  0=not in regulation, 1=in regulation"]
-pub type ROK_R = crate::BitReader<bool>;
+pub type ROK_R = crate::BitReader;
 impl R {
     #[doc = "Bit 0 - enable  
  0=not enabled, 1=enabled"]

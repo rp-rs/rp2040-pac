@@ -14,11 +14,11 @@ impl From<crate::R<STATUS_SPEC>> for R {
     }
 }
 #[doc = "Field `ENABLED` reader - Oscillator is enabled but not necessarily running and stable this resets to 0 but transitions to 1 during chip startup"]
-pub type ENABLED_R = crate::BitReader<bool>;
+pub type ENABLED_R = crate::BitReader;
 #[doc = "Field `DIV_RUNNING` reader - post-divider is running this resets to 0 but transitions to 1 during chip startup"]
-pub type DIV_RUNNING_R = crate::BitReader<bool>;
+pub type DIV_RUNNING_R = crate::BitReader;
 #[doc = "Field `STABLE` reader - Oscillator is running and stable"]
-pub type STABLE_R = crate::BitReader<bool>;
+pub type STABLE_R = crate::BitReader;
 impl R {
     #[doc = "Bit 12 - Oscillator is enabled but not necessarily running and stable this resets to 0 but transitions to 1 during chip startup"]
     #[inline(always)]

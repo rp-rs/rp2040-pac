@@ -16,7 +16,7 @@ impl From<crate::R<IC_CLR_INTR_SPEC>> for R {
 #[doc = "Field `CLR_INTR` reader - Read this register to clear the combined interrupt, all individual interrupts, and the IC_TX_ABRT_SOURCE register. This bit does not clear hardware clearable interrupts but software clearable interrupts. Refer to Bit 9 of the IC_TX_ABRT_SOURCE register for an exception to clearing IC_TX_ABRT_SOURCE.  
 
  Reset value: 0x0"]
-pub type CLR_INTR_R = crate::BitReader<bool>;
+pub type CLR_INTR_R = crate::BitReader;
 impl R {
     #[doc = "Bit 0 - Read this register to clear the combined interrupt, all individual interrupts, and the IC_TX_ABRT_SOURCE register. This bit does not clear hardware clearable interrupts but software clearable interrupts. Refer to Bit 9 of the IC_TX_ABRT_SOURCE register for an exception to clearing IC_TX_ABRT_SOURCE.  
 

@@ -35,37 +35,37 @@ impl From<crate::W<MEMPOWERDOWN_SPEC>> for W {
     }
 }
 #[doc = "Field `SRAM0` reader - "]
-pub type SRAM0_R = crate::BitReader<bool>;
+pub type SRAM0_R = crate::BitReader;
 #[doc = "Field `SRAM0` writer - "]
-pub type SRAM0_W<'a, const O: u8> = crate::BitWriter<'a, u32, MEMPOWERDOWN_SPEC, bool, O>;
+pub type SRAM0_W<'a, const O: u8> = crate::BitWriter<'a, MEMPOWERDOWN_SPEC, O>;
 #[doc = "Field `SRAM1` reader - "]
-pub type SRAM1_R = crate::BitReader<bool>;
+pub type SRAM1_R = crate::BitReader;
 #[doc = "Field `SRAM1` writer - "]
-pub type SRAM1_W<'a, const O: u8> = crate::BitWriter<'a, u32, MEMPOWERDOWN_SPEC, bool, O>;
+pub type SRAM1_W<'a, const O: u8> = crate::BitWriter<'a, MEMPOWERDOWN_SPEC, O>;
 #[doc = "Field `SRAM2` reader - "]
-pub type SRAM2_R = crate::BitReader<bool>;
+pub type SRAM2_R = crate::BitReader;
 #[doc = "Field `SRAM2` writer - "]
-pub type SRAM2_W<'a, const O: u8> = crate::BitWriter<'a, u32, MEMPOWERDOWN_SPEC, bool, O>;
+pub type SRAM2_W<'a, const O: u8> = crate::BitWriter<'a, MEMPOWERDOWN_SPEC, O>;
 #[doc = "Field `SRAM3` reader - "]
-pub type SRAM3_R = crate::BitReader<bool>;
+pub type SRAM3_R = crate::BitReader;
 #[doc = "Field `SRAM3` writer - "]
-pub type SRAM3_W<'a, const O: u8> = crate::BitWriter<'a, u32, MEMPOWERDOWN_SPEC, bool, O>;
+pub type SRAM3_W<'a, const O: u8> = crate::BitWriter<'a, MEMPOWERDOWN_SPEC, O>;
 #[doc = "Field `SRAM4` reader - "]
-pub type SRAM4_R = crate::BitReader<bool>;
+pub type SRAM4_R = crate::BitReader;
 #[doc = "Field `SRAM4` writer - "]
-pub type SRAM4_W<'a, const O: u8> = crate::BitWriter<'a, u32, MEMPOWERDOWN_SPEC, bool, O>;
+pub type SRAM4_W<'a, const O: u8> = crate::BitWriter<'a, MEMPOWERDOWN_SPEC, O>;
 #[doc = "Field `SRAM5` reader - "]
-pub type SRAM5_R = crate::BitReader<bool>;
+pub type SRAM5_R = crate::BitReader;
 #[doc = "Field `SRAM5` writer - "]
-pub type SRAM5_W<'a, const O: u8> = crate::BitWriter<'a, u32, MEMPOWERDOWN_SPEC, bool, O>;
+pub type SRAM5_W<'a, const O: u8> = crate::BitWriter<'a, MEMPOWERDOWN_SPEC, O>;
 #[doc = "Field `USB` reader - "]
-pub type USB_R = crate::BitReader<bool>;
+pub type USB_R = crate::BitReader;
 #[doc = "Field `USB` writer - "]
-pub type USB_W<'a, const O: u8> = crate::BitWriter<'a, u32, MEMPOWERDOWN_SPEC, bool, O>;
+pub type USB_W<'a, const O: u8> = crate::BitWriter<'a, MEMPOWERDOWN_SPEC, O>;
 #[doc = "Field `ROM` reader - "]
-pub type ROM_R = crate::BitReader<bool>;
+pub type ROM_R = crate::BitReader;
 #[doc = "Field `ROM` writer - "]
-pub type ROM_W<'a, const O: u8> = crate::BitWriter<'a, u32, MEMPOWERDOWN_SPEC, bool, O>;
+pub type ROM_W<'a, const O: u8> = crate::BitWriter<'a, MEMPOWERDOWN_SPEC, O>;
 impl R {
     #[doc = "Bit 0"]
     #[inline(always)]

@@ -16,11 +16,11 @@ impl From<crate::R<DBG_CFGINFO_SPEC>> for R {
 #[doc = "Field `FIFO_DEPTH` reader - The depth of the state machine TX/RX FIFOs, measured in words.  
  Joining fifos via SHIFTCTRL_FJOIN gives one FIFO with double  
  this depth."]
-pub type FIFO_DEPTH_R = crate::FieldReader<u8, u8>;
+pub type FIFO_DEPTH_R = crate::FieldReader;
 #[doc = "Field `SM_COUNT` reader - The number of state machines this PIO instance is equipped with."]
-pub type SM_COUNT_R = crate::FieldReader<u8, u8>;
+pub type SM_COUNT_R = crate::FieldReader;
 #[doc = "Field `IMEM_SIZE` reader - The size of the instruction memory, measured in units of one instruction"]
-pub type IMEM_SIZE_R = crate::FieldReader<u8, u8>;
+pub type IMEM_SIZE_R = crate::FieldReader;
 impl R {
     #[doc = "Bits 0:5 - The depth of the state machine TX/RX FIFOs, measured in words.  
  Joining fifos via SHIFTCTRL_FJOIN gives one FIFO with double  

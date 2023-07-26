@@ -37,21 +37,19 @@ impl From<crate::W<USBPHY_TRIM_SPEC>> for W {
 #[doc = "Field `DP_PULLDN_TRIM` reader - Value to drive to USB PHY  
  DP pulldown resistor trim control  
  Experimental data suggests that the reset value will work, but this register allows adjustment if required"]
-pub type DP_PULLDN_TRIM_R = crate::FieldReader<u8, u8>;
+pub type DP_PULLDN_TRIM_R = crate::FieldReader;
 #[doc = "Field `DP_PULLDN_TRIM` writer - Value to drive to USB PHY  
  DP pulldown resistor trim control  
  Experimental data suggests that the reset value will work, but this register allows adjustment if required"]
-pub type DP_PULLDN_TRIM_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, USBPHY_TRIM_SPEC, u8, u8, 5, O>;
+pub type DP_PULLDN_TRIM_W<'a, const O: u8> = crate::FieldWriter<'a, USBPHY_TRIM_SPEC, 5, O>;
 #[doc = "Field `DM_PULLDN_TRIM` reader - Value to drive to USB PHY  
  DM pulldown resistor trim control  
  Experimental data suggests that the reset value will work, but this register allows adjustment if required"]
-pub type DM_PULLDN_TRIM_R = crate::FieldReader<u8, u8>;
+pub type DM_PULLDN_TRIM_R = crate::FieldReader;
 #[doc = "Field `DM_PULLDN_TRIM` writer - Value to drive to USB PHY  
  DM pulldown resistor trim control  
  Experimental data suggests that the reset value will work, but this register allows adjustment if required"]
-pub type DM_PULLDN_TRIM_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, USBPHY_TRIM_SPEC, u8, u8, 5, O>;
+pub type DM_PULLDN_TRIM_W<'a, const O: u8> = crate::FieldWriter<'a, USBPHY_TRIM_SPEC, 5, O>;
 impl R {
     #[doc = "Bits 0:4 - Value to drive to USB PHY  
  DP pulldown resistor trim control  

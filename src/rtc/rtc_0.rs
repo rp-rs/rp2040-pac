@@ -14,13 +14,13 @@ impl From<crate::R<RTC_0_SPEC>> for R {
     }
 }
 #[doc = "Field `SEC` reader - Seconds"]
-pub type SEC_R = crate::FieldReader<u8, u8>;
+pub type SEC_R = crate::FieldReader;
 #[doc = "Field `MIN` reader - Minutes"]
-pub type MIN_R = crate::FieldReader<u8, u8>;
+pub type MIN_R = crate::FieldReader;
 #[doc = "Field `HOUR` reader - Hours"]
-pub type HOUR_R = crate::FieldReader<u8, u8>;
+pub type HOUR_R = crate::FieldReader;
 #[doc = "Field `DOTW` reader - Day of the week"]
-pub type DOTW_R = crate::FieldReader<u8, u8>;
+pub type DOTW_R = crate::FieldReader;
 impl R {
     #[doc = "Bits 0:5 - Seconds"]
     #[inline(always)]

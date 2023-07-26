@@ -41,7 +41,7 @@ impl From<crate::W<CTRL_SPEC>> for W {
 
  If the cache is enabled, cache-as-SRAM accesses have no effect on the  
  cache data RAM, and will produce a bus error response."]
-pub type EN_R = crate::BitReader<bool>;
+pub type EN_R = crate::BitReader;
 #[doc = "Field `EN` writer - When 1, enable the cache. When the cache is disabled, all XIP accesses  
  will go straight to the flash, without querying the cache. When enabled,  
  cacheable XIP accesses will query the cache, and the flash will  
@@ -49,31 +49,31 @@ pub type EN_R = crate::BitReader<bool>;
 
  If the cache is enabled, cache-as-SRAM accesses have no effect on the  
  cache data RAM, and will produce a bus error response."]
-pub type EN_W<'a, const O: u8> = crate::BitWriter<'a, u32, CTRL_SPEC, bool, O>;
+pub type EN_W<'a, const O: u8> = crate::BitWriter<'a, CTRL_SPEC, O>;
 #[doc = "Field `ERR_BADWRITE` reader - When 1, writes to any alias other than 0x0 (caching, allocating)  
  will produce a bus fault. When 0, these writes are silently ignored.  
  In either case, writes to the 0x0 alias will deallocate on tag match,  
  as usual."]
-pub type ERR_BADWRITE_R = crate::BitReader<bool>;
+pub type ERR_BADWRITE_R = crate::BitReader;
 #[doc = "Field `ERR_BADWRITE` writer - When 1, writes to any alias other than 0x0 (caching, allocating)  
  will produce a bus fault. When 0, these writes are silently ignored.  
  In either case, writes to the 0x0 alias will deallocate on tag match,  
  as usual."]
-pub type ERR_BADWRITE_W<'a, const O: u8> = crate::BitWriter<'a, u32, CTRL_SPEC, bool, O>;
+pub type ERR_BADWRITE_W<'a, const O: u8> = crate::BitWriter<'a, CTRL_SPEC, O>;
 #[doc = "Field `POWER_DOWN` reader - When 1, the cache memories are powered down. They retain state,  
  but can not be accessed. This reduces static power dissipation.  
  Writing 1 to this bit forces CTRL_EN to 0, i.e. the cache cannot  
  be enabled when powered down.  
  Cache-as-SRAM accesses will produce a bus error response when  
  the cache is powered down."]
-pub type POWER_DOWN_R = crate::BitReader<bool>;
+pub type POWER_DOWN_R = crate::BitReader;
 #[doc = "Field `POWER_DOWN` writer - When 1, the cache memories are powered down. They retain state,  
  but can not be accessed. This reduces static power dissipation.  
  Writing 1 to this bit forces CTRL_EN to 0, i.e. the cache cannot  
  be enabled when powered down.  
  Cache-as-SRAM accesses will produce a bus error response when  
  the cache is powered down."]
-pub type POWER_DOWN_W<'a, const O: u8> = crate::BitWriter<'a, u32, CTRL_SPEC, bool, O>;
+pub type POWER_DOWN_W<'a, const O: u8> = crate::BitWriter<'a, CTRL_SPEC, O>;
 impl R {
     #[doc = "Bit 0 - When 1, enable the cache. When the cache is disabled, all XIP accesses  
  will go straight to the flash, without querying the cache. When enabled,  

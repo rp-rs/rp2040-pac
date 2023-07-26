@@ -14,7 +14,7 @@ impl From<crate::R<SM_ADDR_SPEC>> for R {
     }
 }
 #[doc = "Field `SM0_ADDR` reader - "]
-pub type SM0_ADDR_R = crate::FieldReader<u8, u8>;
+pub type SM0_ADDR_R = crate::FieldReader;
 impl R {
     #[doc = "Bits 0:4"]
     #[inline(always)]

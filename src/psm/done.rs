@@ -14,39 +14,39 @@ impl From<crate::R<DONE_SPEC>> for R {
     }
 }
 #[doc = "Field `rosc` reader - "]
-pub type ROSC_R = crate::BitReader<bool>;
+pub type ROSC_R = crate::BitReader;
 #[doc = "Field `xosc` reader - "]
-pub type XOSC_R = crate::BitReader<bool>;
+pub type XOSC_R = crate::BitReader;
 #[doc = "Field `clocks` reader - "]
-pub type CLOCKS_R = crate::BitReader<bool>;
+pub type CLOCKS_R = crate::BitReader;
 #[doc = "Field `resets` reader - "]
-pub type RESETS_R = crate::BitReader<bool>;
+pub type RESETS_R = crate::BitReader;
 #[doc = "Field `busfabric` reader - "]
-pub type BUSFABRIC_R = crate::BitReader<bool>;
+pub type BUSFABRIC_R = crate::BitReader;
 #[doc = "Field `rom` reader - "]
-pub type ROM_R = crate::BitReader<bool>;
+pub type ROM_R = crate::BitReader;
 #[doc = "Field `sram0` reader - "]
-pub type SRAM0_R = crate::BitReader<bool>;
+pub type SRAM0_R = crate::BitReader;
 #[doc = "Field `sram1` reader - "]
-pub type SRAM1_R = crate::BitReader<bool>;
+pub type SRAM1_R = crate::BitReader;
 #[doc = "Field `sram2` reader - "]
-pub type SRAM2_R = crate::BitReader<bool>;
+pub type SRAM2_R = crate::BitReader;
 #[doc = "Field `sram3` reader - "]
-pub type SRAM3_R = crate::BitReader<bool>;
+pub type SRAM3_R = crate::BitReader;
 #[doc = "Field `sram4` reader - "]
-pub type SRAM4_R = crate::BitReader<bool>;
+pub type SRAM4_R = crate::BitReader;
 #[doc = "Field `sram5` reader - "]
-pub type SRAM5_R = crate::BitReader<bool>;
+pub type SRAM5_R = crate::BitReader;
 #[doc = "Field `xip` reader - "]
-pub type XIP_R = crate::BitReader<bool>;
+pub type XIP_R = crate::BitReader;
 #[doc = "Field `vreg_and_chip_reset` reader - "]
-pub type VREG_AND_CHIP_RESET_R = crate::BitReader<bool>;
+pub type VREG_AND_CHIP_RESET_R = crate::BitReader;
 #[doc = "Field `sio` reader - "]
-pub type SIO_R = crate::BitReader<bool>;
+pub type SIO_R = crate::BitReader;
 #[doc = "Field `proc0` reader - "]
-pub type PROC0_R = crate::BitReader<bool>;
+pub type PROC0_R = crate::BitReader;
 #[doc = "Field `proc1` reader - "]
-pub type PROC1_R = crate::BitReader<bool>;
+pub type PROC1_R = crate::BitReader;
 impl R {
     #[doc = "Bit 0"]
     #[inline(always)]

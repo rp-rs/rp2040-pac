@@ -36,7 +36,7 @@ impl From<crate::W<GPIO_CTRL_SPEC>> for W {
 }
 #[doc = "Field `FUNCSEL` reader - 0-31 -> selects pin function according to the gpio table  
  31 == NULL"]
-pub type FUNCSEL_R = crate::FieldReader<u8, FUNCSEL_A>;
+pub type FUNCSEL_R = crate::FieldReader<FUNCSEL_A>;
 #[doc = "0-31 -> selects pin function according to the gpio table  
  31 == NULL  
 
@@ -56,6 +56,9 @@ impl From<FUNCSEL_A> for u8 {
     fn from(variant: FUNCSEL_A) -> Self {
         variant as _
     }
+}
+impl crate::FieldSpec for FUNCSEL_A {
+    type Ux = u8;
 }
 impl FUNCSEL_R {
     #[doc = "Get enumerated values variant"]
@@ -86,8 +89,7 @@ impl FUNCSEL_R {
 }
 #[doc = "Field `FUNCSEL` writer - 0-31 -> selects pin function according to the gpio table  
  31 == NULL"]
-pub type FUNCSEL_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, GPIO_CTRL_SPEC, u8, FUNCSEL_A, 5, O>;
+pub type FUNCSEL_W<'a, const O: u8> = crate::FieldWriter<'a, GPIO_CTRL_SPEC, 5, O, FUNCSEL_A>;
 impl<'a, const O: u8> FUNCSEL_W<'a, O> {
     #[doc = "`0`"]
     #[inline(always)]
@@ -106,7 +108,7 @@ impl<'a, const O: u8> FUNCSEL_W<'a, O> {
     }
 }
 #[doc = "Field `OUTOVER` reader - "]
-pub type OUTOVER_R = crate::FieldReader<u8, OUTOVER_A>;
+pub type OUTOVER_R = crate::FieldReader<OUTOVER_A>;
 #[doc = "  
 
 Value on reset: 0"]
@@ -127,6 +129,9 @@ impl From<OUTOVER_A> for u8 {
     fn from(variant: OUTOVER_A) -> Self {
         variant as _
     }
+}
+impl crate::FieldSpec for OUTOVER_A {
+    type Ux = u8;
 }
 impl OUTOVER_R {
     #[doc = "Get enumerated values variant"]
@@ -162,8 +167,7 @@ impl OUTOVER_R {
     }
 }
 #[doc = "Field `OUTOVER` writer - "]
-pub type OUTOVER_W<'a, const O: u8> =
-    crate::FieldWriterSafe<'a, u32, GPIO_CTRL_SPEC, u8, OUTOVER_A, 2, O>;
+pub type OUTOVER_W<'a, const O: u8> = crate::FieldWriterSafe<'a, GPIO_CTRL_SPEC, 2, O, OUTOVER_A>;
 impl<'a, const O: u8> OUTOVER_W<'a, O> {
     #[doc = "drive output from peripheral signal selected by funcsel"]
     #[inline(always)]
@@ -187,7 +191,7 @@ impl<'a, const O: u8> OUTOVER_W<'a, O> {
     }
 }
 #[doc = "Field `OEOVER` reader - "]
-pub type OEOVER_R = crate::FieldReader<u8, OEOVER_A>;
+pub type OEOVER_R = crate::FieldReader<OEOVER_A>;
 #[doc = "  
 
 Value on reset: 0"]
@@ -208,6 +212,9 @@ impl From<OEOVER_A> for u8 {
     fn from(variant: OEOVER_A) -> Self {
         variant as _
     }
+}
+impl crate::FieldSpec for OEOVER_A {
+    type Ux = u8;
 }
 impl OEOVER_R {
     #[doc = "Get enumerated values variant"]
@@ -243,8 +250,7 @@ impl OEOVER_R {
     }
 }
 #[doc = "Field `OEOVER` writer - "]
-pub type OEOVER_W<'a, const O: u8> =
-    crate::FieldWriterSafe<'a, u32, GPIO_CTRL_SPEC, u8, OEOVER_A, 2, O>;
+pub type OEOVER_W<'a, const O: u8> = crate::FieldWriterSafe<'a, GPIO_CTRL_SPEC, 2, O, OEOVER_A>;
 impl<'a, const O: u8> OEOVER_W<'a, O> {
     #[doc = "drive output enable from peripheral signal selected by funcsel"]
     #[inline(always)]
@@ -268,7 +274,7 @@ impl<'a, const O: u8> OEOVER_W<'a, O> {
     }
 }
 #[doc = "Field `INOVER` reader - "]
-pub type INOVER_R = crate::FieldReader<u8, INOVER_A>;
+pub type INOVER_R = crate::FieldReader<INOVER_A>;
 #[doc = "  
 
 Value on reset: 0"]
@@ -289,6 +295,9 @@ impl From<INOVER_A> for u8 {
     fn from(variant: INOVER_A) -> Self {
         variant as _
     }
+}
+impl crate::FieldSpec for INOVER_A {
+    type Ux = u8;
 }
 impl INOVER_R {
     #[doc = "Get enumerated values variant"]
@@ -324,8 +333,7 @@ impl INOVER_R {
     }
 }
 #[doc = "Field `INOVER` writer - "]
-pub type INOVER_W<'a, const O: u8> =
-    crate::FieldWriterSafe<'a, u32, GPIO_CTRL_SPEC, u8, INOVER_A, 2, O>;
+pub type INOVER_W<'a, const O: u8> = crate::FieldWriterSafe<'a, GPIO_CTRL_SPEC, 2, O, INOVER_A>;
 impl<'a, const O: u8> INOVER_W<'a, O> {
     #[doc = "don't invert the peri input"]
     #[inline(always)]
@@ -349,7 +357,7 @@ impl<'a, const O: u8> INOVER_W<'a, O> {
     }
 }
 #[doc = "Field `IRQOVER` reader - "]
-pub type IRQOVER_R = crate::FieldReader<u8, IRQOVER_A>;
+pub type IRQOVER_R = crate::FieldReader<IRQOVER_A>;
 #[doc = "  
 
 Value on reset: 0"]
@@ -370,6 +378,9 @@ impl From<IRQOVER_A> for u8 {
     fn from(variant: IRQOVER_A) -> Self {
         variant as _
     }
+}
+impl crate::FieldSpec for IRQOVER_A {
+    type Ux = u8;
 }
 impl IRQOVER_R {
     #[doc = "Get enumerated values variant"]
@@ -405,8 +416,7 @@ impl IRQOVER_R {
     }
 }
 #[doc = "Field `IRQOVER` writer - "]
-pub type IRQOVER_W<'a, const O: u8> =
-    crate::FieldWriterSafe<'a, u32, GPIO_CTRL_SPEC, u8, IRQOVER_A, 2, O>;
+pub type IRQOVER_W<'a, const O: u8> = crate::FieldWriterSafe<'a, GPIO_CTRL_SPEC, 2, O, IRQOVER_A>;
 impl<'a, const O: u8> IRQOVER_W<'a, O> {
     #[doc = "don't invert the interrupt"]
     #[inline(always)]

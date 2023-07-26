@@ -35,21 +35,21 @@ impl From<crate::W<ADDR_ENDP11_SPEC>> for W {
     }
 }
 #[doc = "Field `ADDRESS` reader - Device address"]
-pub type ADDRESS_R = crate::FieldReader<u8, u8>;
+pub type ADDRESS_R = crate::FieldReader;
 #[doc = "Field `ADDRESS` writer - Device address"]
-pub type ADDRESS_W<'a, const O: u8> = crate::FieldWriter<'a, u32, ADDR_ENDP11_SPEC, u8, u8, 7, O>;
+pub type ADDRESS_W<'a, const O: u8> = crate::FieldWriter<'a, ADDR_ENDP11_SPEC, 7, O>;
 #[doc = "Field `ENDPOINT` reader - Endpoint number of the interrupt endpoint"]
-pub type ENDPOINT_R = crate::FieldReader<u8, u8>;
+pub type ENDPOINT_R = crate::FieldReader;
 #[doc = "Field `ENDPOINT` writer - Endpoint number of the interrupt endpoint"]
-pub type ENDPOINT_W<'a, const O: u8> = crate::FieldWriter<'a, u32, ADDR_ENDP11_SPEC, u8, u8, 4, O>;
+pub type ENDPOINT_W<'a, const O: u8> = crate::FieldWriter<'a, ADDR_ENDP11_SPEC, 4, O>;
 #[doc = "Field `INTEP_DIR` reader - Direction of the interrupt endpoint. In=0, Out=1"]
-pub type INTEP_DIR_R = crate::BitReader<bool>;
+pub type INTEP_DIR_R = crate::BitReader;
 #[doc = "Field `INTEP_DIR` writer - Direction of the interrupt endpoint. In=0, Out=1"]
-pub type INTEP_DIR_W<'a, const O: u8> = crate::BitWriter<'a, u32, ADDR_ENDP11_SPEC, bool, O>;
+pub type INTEP_DIR_W<'a, const O: u8> = crate::BitWriter<'a, ADDR_ENDP11_SPEC, O>;
 #[doc = "Field `INTEP_PREAMBLE` reader - Interrupt EP requires preamble (is a low speed device on a full speed hub)"]
-pub type INTEP_PREAMBLE_R = crate::BitReader<bool>;
+pub type INTEP_PREAMBLE_R = crate::BitReader;
 #[doc = "Field `INTEP_PREAMBLE` writer - Interrupt EP requires preamble (is a low speed device on a full speed hub)"]
-pub type INTEP_PREAMBLE_W<'a, const O: u8> = crate::BitWriter<'a, u32, ADDR_ENDP11_SPEC, bool, O>;
+pub type INTEP_PREAMBLE_W<'a, const O: u8> = crate::BitWriter<'a, ADDR_ENDP11_SPEC, O>;
 impl R {
     #[doc = "Bits 0:6 - Device address"]
     #[inline(always)]

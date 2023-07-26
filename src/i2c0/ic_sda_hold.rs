@@ -37,21 +37,19 @@ impl From<crate::W<IC_SDA_HOLD_SPEC>> for W {
 #[doc = "Field `IC_SDA_TX_HOLD` reader - Sets the required SDA hold time in units of ic_clk period, when DW_apb_i2c acts as a transmitter.  
 
  Reset value: IC_DEFAULT_SDA_HOLD\\[15:0\\]."]
-pub type IC_SDA_TX_HOLD_R = crate::FieldReader<u16, u16>;
+pub type IC_SDA_TX_HOLD_R = crate::FieldReader<u16>;
 #[doc = "Field `IC_SDA_TX_HOLD` writer - Sets the required SDA hold time in units of ic_clk period, when DW_apb_i2c acts as a transmitter.  
 
  Reset value: IC_DEFAULT_SDA_HOLD\\[15:0\\]."]
-pub type IC_SDA_TX_HOLD_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, IC_SDA_HOLD_SPEC, u16, u16, 16, O>;
+pub type IC_SDA_TX_HOLD_W<'a, const O: u8> = crate::FieldWriter<'a, IC_SDA_HOLD_SPEC, 16, O, u16>;
 #[doc = "Field `IC_SDA_RX_HOLD` reader - Sets the required SDA hold time in units of ic_clk period, when DW_apb_i2c acts as a receiver.  
 
  Reset value: IC_DEFAULT_SDA_HOLD\\[23:16\\]."]
-pub type IC_SDA_RX_HOLD_R = crate::FieldReader<u8, u8>;
+pub type IC_SDA_RX_HOLD_R = crate::FieldReader;
 #[doc = "Field `IC_SDA_RX_HOLD` writer - Sets the required SDA hold time in units of ic_clk period, when DW_apb_i2c acts as a receiver.  
 
  Reset value: IC_DEFAULT_SDA_HOLD\\[23:16\\]."]
-pub type IC_SDA_RX_HOLD_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, IC_SDA_HOLD_SPEC, u8, u8, 8, O>;
+pub type IC_SDA_RX_HOLD_W<'a, const O: u8> = crate::FieldWriter<'a, IC_SDA_HOLD_SPEC, 8, O>;
 impl R {
     #[doc = "Bits 0:15 - Sets the required SDA hold time in units of ic_clk period, when DW_apb_i2c acts as a transmitter.  
 

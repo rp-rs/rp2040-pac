@@ -35,75 +35,75 @@ impl From<crate::W<USBPHY_DIRECT_OVERRIDE_SPEC>> for W {
     }
 }
 #[doc = "Field `DP_PULLUP_HISEL_OVERRIDE_EN` reader - "]
-pub type DP_PULLUP_HISEL_OVERRIDE_EN_R = crate::BitReader<bool>;
+pub type DP_PULLUP_HISEL_OVERRIDE_EN_R = crate::BitReader;
 #[doc = "Field `DP_PULLUP_HISEL_OVERRIDE_EN` writer - "]
 pub type DP_PULLUP_HISEL_OVERRIDE_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, USBPHY_DIRECT_OVERRIDE_SPEC, bool, O>;
+    crate::BitWriter<'a, USBPHY_DIRECT_OVERRIDE_SPEC, O>;
 #[doc = "Field `DM_PULLUP_HISEL_OVERRIDE_EN` reader - "]
-pub type DM_PULLUP_HISEL_OVERRIDE_EN_R = crate::BitReader<bool>;
+pub type DM_PULLUP_HISEL_OVERRIDE_EN_R = crate::BitReader;
 #[doc = "Field `DM_PULLUP_HISEL_OVERRIDE_EN` writer - "]
 pub type DM_PULLUP_HISEL_OVERRIDE_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, USBPHY_DIRECT_OVERRIDE_SPEC, bool, O>;
+    crate::BitWriter<'a, USBPHY_DIRECT_OVERRIDE_SPEC, O>;
 #[doc = "Field `DP_PULLUP_EN_OVERRIDE_EN` reader - "]
-pub type DP_PULLUP_EN_OVERRIDE_EN_R = crate::BitReader<bool>;
+pub type DP_PULLUP_EN_OVERRIDE_EN_R = crate::BitReader;
 #[doc = "Field `DP_PULLUP_EN_OVERRIDE_EN` writer - "]
 pub type DP_PULLUP_EN_OVERRIDE_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, USBPHY_DIRECT_OVERRIDE_SPEC, bool, O>;
+    crate::BitWriter<'a, USBPHY_DIRECT_OVERRIDE_SPEC, O>;
 #[doc = "Field `DP_PULLDN_EN_OVERRIDE_EN` reader - "]
-pub type DP_PULLDN_EN_OVERRIDE_EN_R = crate::BitReader<bool>;
+pub type DP_PULLDN_EN_OVERRIDE_EN_R = crate::BitReader;
 #[doc = "Field `DP_PULLDN_EN_OVERRIDE_EN` writer - "]
 pub type DP_PULLDN_EN_OVERRIDE_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, USBPHY_DIRECT_OVERRIDE_SPEC, bool, O>;
+    crate::BitWriter<'a, USBPHY_DIRECT_OVERRIDE_SPEC, O>;
 #[doc = "Field `DM_PULLDN_EN_OVERRIDE_EN` reader - "]
-pub type DM_PULLDN_EN_OVERRIDE_EN_R = crate::BitReader<bool>;
+pub type DM_PULLDN_EN_OVERRIDE_EN_R = crate::BitReader;
 #[doc = "Field `DM_PULLDN_EN_OVERRIDE_EN` writer - "]
 pub type DM_PULLDN_EN_OVERRIDE_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, USBPHY_DIRECT_OVERRIDE_SPEC, bool, O>;
+    crate::BitWriter<'a, USBPHY_DIRECT_OVERRIDE_SPEC, O>;
 #[doc = "Field `TX_DP_OE_OVERRIDE_EN` reader - "]
-pub type TX_DP_OE_OVERRIDE_EN_R = crate::BitReader<bool>;
+pub type TX_DP_OE_OVERRIDE_EN_R = crate::BitReader;
 #[doc = "Field `TX_DP_OE_OVERRIDE_EN` writer - "]
 pub type TX_DP_OE_OVERRIDE_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, USBPHY_DIRECT_OVERRIDE_SPEC, bool, O>;
+    crate::BitWriter<'a, USBPHY_DIRECT_OVERRIDE_SPEC, O>;
 #[doc = "Field `TX_DM_OE_OVERRIDE_EN` reader - "]
-pub type TX_DM_OE_OVERRIDE_EN_R = crate::BitReader<bool>;
+pub type TX_DM_OE_OVERRIDE_EN_R = crate::BitReader;
 #[doc = "Field `TX_DM_OE_OVERRIDE_EN` writer - "]
 pub type TX_DM_OE_OVERRIDE_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, USBPHY_DIRECT_OVERRIDE_SPEC, bool, O>;
+    crate::BitWriter<'a, USBPHY_DIRECT_OVERRIDE_SPEC, O>;
 #[doc = "Field `TX_DP_OVERRIDE_EN` reader - "]
-pub type TX_DP_OVERRIDE_EN_R = crate::BitReader<bool>;
+pub type TX_DP_OVERRIDE_EN_R = crate::BitReader;
 #[doc = "Field `TX_DP_OVERRIDE_EN` writer - "]
 pub type TX_DP_OVERRIDE_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, USBPHY_DIRECT_OVERRIDE_SPEC, bool, O>;
+    crate::BitWriter<'a, USBPHY_DIRECT_OVERRIDE_SPEC, O>;
 #[doc = "Field `TX_DM_OVERRIDE_EN` reader - "]
-pub type TX_DM_OVERRIDE_EN_R = crate::BitReader<bool>;
+pub type TX_DM_OVERRIDE_EN_R = crate::BitReader;
 #[doc = "Field `TX_DM_OVERRIDE_EN` writer - "]
 pub type TX_DM_OVERRIDE_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, USBPHY_DIRECT_OVERRIDE_SPEC, bool, O>;
+    crate::BitWriter<'a, USBPHY_DIRECT_OVERRIDE_SPEC, O>;
 #[doc = "Field `RX_PD_OVERRIDE_EN` reader - "]
-pub type RX_PD_OVERRIDE_EN_R = crate::BitReader<bool>;
+pub type RX_PD_OVERRIDE_EN_R = crate::BitReader;
 #[doc = "Field `RX_PD_OVERRIDE_EN` writer - "]
 pub type RX_PD_OVERRIDE_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, USBPHY_DIRECT_OVERRIDE_SPEC, bool, O>;
+    crate::BitWriter<'a, USBPHY_DIRECT_OVERRIDE_SPEC, O>;
 #[doc = "Field `TX_PD_OVERRIDE_EN` reader - "]
-pub type TX_PD_OVERRIDE_EN_R = crate::BitReader<bool>;
+pub type TX_PD_OVERRIDE_EN_R = crate::BitReader;
 #[doc = "Field `TX_PD_OVERRIDE_EN` writer - "]
 pub type TX_PD_OVERRIDE_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, USBPHY_DIRECT_OVERRIDE_SPEC, bool, O>;
+    crate::BitWriter<'a, USBPHY_DIRECT_OVERRIDE_SPEC, O>;
 #[doc = "Field `TX_FSSLEW_OVERRIDE_EN` reader - "]
-pub type TX_FSSLEW_OVERRIDE_EN_R = crate::BitReader<bool>;
+pub type TX_FSSLEW_OVERRIDE_EN_R = crate::BitReader;
 #[doc = "Field `TX_FSSLEW_OVERRIDE_EN` writer - "]
 pub type TX_FSSLEW_OVERRIDE_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, USBPHY_DIRECT_OVERRIDE_SPEC, bool, O>;
+    crate::BitWriter<'a, USBPHY_DIRECT_OVERRIDE_SPEC, O>;
 #[doc = "Field `DM_PULLUP_OVERRIDE_EN` reader - "]
-pub type DM_PULLUP_OVERRIDE_EN_R = crate::BitReader<bool>;
+pub type DM_PULLUP_OVERRIDE_EN_R = crate::BitReader;
 #[doc = "Field `DM_PULLUP_OVERRIDE_EN` writer - "]
 pub type DM_PULLUP_OVERRIDE_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, USBPHY_DIRECT_OVERRIDE_SPEC, bool, O>;
+    crate::BitWriter<'a, USBPHY_DIRECT_OVERRIDE_SPEC, O>;
 #[doc = "Field `TX_DIFFMODE_OVERRIDE_EN` reader - "]
-pub type TX_DIFFMODE_OVERRIDE_EN_R = crate::BitReader<bool>;
+pub type TX_DIFFMODE_OVERRIDE_EN_R = crate::BitReader;
 #[doc = "Field `TX_DIFFMODE_OVERRIDE_EN` writer - "]
 pub type TX_DIFFMODE_OVERRIDE_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, USBPHY_DIRECT_OVERRIDE_SPEC, bool, O>;
+    crate::BitWriter<'a, USBPHY_DIRECT_OVERRIDE_SPEC, O>;
 impl R {
     #[doc = "Bit 0"]
     #[inline(always)]

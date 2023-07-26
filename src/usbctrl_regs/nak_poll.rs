@@ -35,13 +35,13 @@ impl From<crate::W<NAK_POLL_SPEC>> for W {
     }
 }
 #[doc = "Field `DELAY_LS` reader - NAK polling interval for a low speed device"]
-pub type DELAY_LS_R = crate::FieldReader<u16, u16>;
+pub type DELAY_LS_R = crate::FieldReader<u16>;
 #[doc = "Field `DELAY_LS` writer - NAK polling interval for a low speed device"]
-pub type DELAY_LS_W<'a, const O: u8> = crate::FieldWriter<'a, u32, NAK_POLL_SPEC, u16, u16, 10, O>;
+pub type DELAY_LS_W<'a, const O: u8> = crate::FieldWriter<'a, NAK_POLL_SPEC, 10, O, u16>;
 #[doc = "Field `DELAY_FS` reader - NAK polling interval for a full speed device"]
-pub type DELAY_FS_R = crate::FieldReader<u16, u16>;
+pub type DELAY_FS_R = crate::FieldReader<u16>;
 #[doc = "Field `DELAY_FS` writer - NAK polling interval for a full speed device"]
-pub type DELAY_FS_W<'a, const O: u8> = crate::FieldWriter<'a, u32, NAK_POLL_SPEC, u16, u16, 10, O>;
+pub type DELAY_FS_W<'a, const O: u8> = crate::FieldWriter<'a, NAK_POLL_SPEC, 10, O, u16>;
 impl R {
     #[doc = "Bits 0:9 - NAK polling interval for a low speed device"]
     #[inline(always)]

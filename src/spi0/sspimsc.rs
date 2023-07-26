@@ -35,21 +35,21 @@ impl From<crate::W<SSPIMSC_SPEC>> for W {
     }
 }
 #[doc = "Field `RORIM` reader - Receive overrun interrupt mask: 0 Receive FIFO written to while full condition interrupt is masked. 1 Receive FIFO written to while full condition interrupt is not masked."]
-pub type RORIM_R = crate::BitReader<bool>;
+pub type RORIM_R = crate::BitReader;
 #[doc = "Field `RORIM` writer - Receive overrun interrupt mask: 0 Receive FIFO written to while full condition interrupt is masked. 1 Receive FIFO written to while full condition interrupt is not masked."]
-pub type RORIM_W<'a, const O: u8> = crate::BitWriter<'a, u32, SSPIMSC_SPEC, bool, O>;
+pub type RORIM_W<'a, const O: u8> = crate::BitWriter<'a, SSPIMSC_SPEC, O>;
 #[doc = "Field `RTIM` reader - Receive timeout interrupt mask: 0 Receive FIFO not empty and no read prior to timeout period interrupt is masked. 1 Receive FIFO not empty and no read prior to timeout period interrupt is not masked."]
-pub type RTIM_R = crate::BitReader<bool>;
+pub type RTIM_R = crate::BitReader;
 #[doc = "Field `RTIM` writer - Receive timeout interrupt mask: 0 Receive FIFO not empty and no read prior to timeout period interrupt is masked. 1 Receive FIFO not empty and no read prior to timeout period interrupt is not masked."]
-pub type RTIM_W<'a, const O: u8> = crate::BitWriter<'a, u32, SSPIMSC_SPEC, bool, O>;
+pub type RTIM_W<'a, const O: u8> = crate::BitWriter<'a, SSPIMSC_SPEC, O>;
 #[doc = "Field `RXIM` reader - Receive FIFO interrupt mask: 0 Receive FIFO half full or less condition interrupt is masked. 1 Receive FIFO half full or less condition interrupt is not masked."]
-pub type RXIM_R = crate::BitReader<bool>;
+pub type RXIM_R = crate::BitReader;
 #[doc = "Field `RXIM` writer - Receive FIFO interrupt mask: 0 Receive FIFO half full or less condition interrupt is masked. 1 Receive FIFO half full or less condition interrupt is not masked."]
-pub type RXIM_W<'a, const O: u8> = crate::BitWriter<'a, u32, SSPIMSC_SPEC, bool, O>;
+pub type RXIM_W<'a, const O: u8> = crate::BitWriter<'a, SSPIMSC_SPEC, O>;
 #[doc = "Field `TXIM` reader - Transmit FIFO interrupt mask: 0 Transmit FIFO half empty or less condition interrupt is masked. 1 Transmit FIFO half empty or less condition interrupt is not masked."]
-pub type TXIM_R = crate::BitReader<bool>;
+pub type TXIM_R = crate::BitReader;
 #[doc = "Field `TXIM` writer - Transmit FIFO interrupt mask: 0 Transmit FIFO half empty or less condition interrupt is masked. 1 Transmit FIFO half empty or less condition interrupt is not masked."]
-pub type TXIM_W<'a, const O: u8> = crate::BitWriter<'a, u32, SSPIMSC_SPEC, bool, O>;
+pub type TXIM_W<'a, const O: u8> = crate::BitWriter<'a, SSPIMSC_SPEC, O>;
 impl R {
     #[doc = "Bit 0 - Receive overrun interrupt mask: 0 Receive FIFO written to while full condition interrupt is masked. 1 Receive FIFO written to while full condition interrupt is not masked."]
     #[inline(always)]

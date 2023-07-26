@@ -36,28 +36,28 @@ impl From<crate::W<PWR_SPEC>> for W {
 }
 #[doc = "Field `PD` reader - PLL powerdown  
  To save power set high when PLL output not required."]
-pub type PD_R = crate::BitReader<bool>;
+pub type PD_R = crate::BitReader;
 #[doc = "Field `PD` writer - PLL powerdown  
  To save power set high when PLL output not required."]
-pub type PD_W<'a, const O: u8> = crate::BitWriter<'a, u32, PWR_SPEC, bool, O>;
+pub type PD_W<'a, const O: u8> = crate::BitWriter<'a, PWR_SPEC, O>;
 #[doc = "Field `DSMPD` reader - PLL DSM powerdown  
  Nothing is achieved by setting this low."]
-pub type DSMPD_R = crate::BitReader<bool>;
+pub type DSMPD_R = crate::BitReader;
 #[doc = "Field `DSMPD` writer - PLL DSM powerdown  
  Nothing is achieved by setting this low."]
-pub type DSMPD_W<'a, const O: u8> = crate::BitWriter<'a, u32, PWR_SPEC, bool, O>;
+pub type DSMPD_W<'a, const O: u8> = crate::BitWriter<'a, PWR_SPEC, O>;
 #[doc = "Field `POSTDIVPD` reader - PLL post divider powerdown  
  To save power set high when PLL output not required or bypass=1."]
-pub type POSTDIVPD_R = crate::BitReader<bool>;
+pub type POSTDIVPD_R = crate::BitReader;
 #[doc = "Field `POSTDIVPD` writer - PLL post divider powerdown  
  To save power set high when PLL output not required or bypass=1."]
-pub type POSTDIVPD_W<'a, const O: u8> = crate::BitWriter<'a, u32, PWR_SPEC, bool, O>;
+pub type POSTDIVPD_W<'a, const O: u8> = crate::BitWriter<'a, PWR_SPEC, O>;
 #[doc = "Field `VCOPD` reader - PLL VCO powerdown  
  To save power set high when PLL output not required or bypass=1."]
-pub type VCOPD_R = crate::BitReader<bool>;
+pub type VCOPD_R = crate::BitReader;
 #[doc = "Field `VCOPD` writer - PLL VCO powerdown  
  To save power set high when PLL output not required or bypass=1."]
-pub type VCOPD_W<'a, const O: u8> = crate::BitWriter<'a, u32, PWR_SPEC, bool, O>;
+pub type VCOPD_W<'a, const O: u8> = crate::BitWriter<'a, PWR_SPEC, O>;
 impl R {
     #[doc = "Bit 0 - PLL powerdown  
  To save power set high when PLL output not required."]

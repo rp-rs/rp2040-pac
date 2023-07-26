@@ -35,10 +35,9 @@ impl From<crate::W<FC0_REF_KHZ_SPEC>> for W {
     }
 }
 #[doc = "Field `FC0_REF_KHZ` reader - "]
-pub type FC0_REF_KHZ_R = crate::FieldReader<u32, u32>;
+pub type FC0_REF_KHZ_R = crate::FieldReader<u32>;
 #[doc = "Field `FC0_REF_KHZ` writer - "]
-pub type FC0_REF_KHZ_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, FC0_REF_KHZ_SPEC, u32, u32, 20, O>;
+pub type FC0_REF_KHZ_W<'a, const O: u8> = crate::FieldWriter<'a, FC0_REF_KHZ_SPEC, 20, O, u32>;
 impl R {
     #[doc = "Bits 0:19"]
     #[inline(always)]

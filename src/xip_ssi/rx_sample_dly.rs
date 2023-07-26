@@ -35,9 +35,9 @@ impl From<crate::W<RX_SAMPLE_DLY_SPEC>> for W {
     }
 }
 #[doc = "Field `RSD` reader - RXD sample delay (in SCLK cycles)"]
-pub type RSD_R = crate::FieldReader<u8, u8>;
+pub type RSD_R = crate::FieldReader;
 #[doc = "Field `RSD` writer - RXD sample delay (in SCLK cycles)"]
-pub type RSD_W<'a, const O: u8> = crate::FieldWriter<'a, u32, RX_SAMPLE_DLY_SPEC, u8, u8, 8, O>;
+pub type RSD_W<'a, const O: u8> = crate::FieldWriter<'a, RX_SAMPLE_DLY_SPEC, 8, O>;
 impl R {
     #[doc = "Bits 0:7 - RXD sample delay (in SCLK cycles)"]
     #[inline(always)]

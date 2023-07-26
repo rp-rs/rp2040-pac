@@ -35,29 +35,29 @@ impl From<crate::W<IMR_SPEC>> for W {
     }
 }
 #[doc = "Field `TXEIM` reader - Transmit FIFO empty interrupt mask"]
-pub type TXEIM_R = crate::BitReader<bool>;
+pub type TXEIM_R = crate::BitReader;
 #[doc = "Field `TXEIM` writer - Transmit FIFO empty interrupt mask"]
-pub type TXEIM_W<'a, const O: u8> = crate::BitWriter<'a, u32, IMR_SPEC, bool, O>;
+pub type TXEIM_W<'a, const O: u8> = crate::BitWriter<'a, IMR_SPEC, O>;
 #[doc = "Field `TXOIM` reader - Transmit FIFO overflow interrupt mask"]
-pub type TXOIM_R = crate::BitReader<bool>;
+pub type TXOIM_R = crate::BitReader;
 #[doc = "Field `TXOIM` writer - Transmit FIFO overflow interrupt mask"]
-pub type TXOIM_W<'a, const O: u8> = crate::BitWriter<'a, u32, IMR_SPEC, bool, O>;
+pub type TXOIM_W<'a, const O: u8> = crate::BitWriter<'a, IMR_SPEC, O>;
 #[doc = "Field `RXUIM` reader - Receive FIFO underflow interrupt mask"]
-pub type RXUIM_R = crate::BitReader<bool>;
+pub type RXUIM_R = crate::BitReader;
 #[doc = "Field `RXUIM` writer - Receive FIFO underflow interrupt mask"]
-pub type RXUIM_W<'a, const O: u8> = crate::BitWriter<'a, u32, IMR_SPEC, bool, O>;
+pub type RXUIM_W<'a, const O: u8> = crate::BitWriter<'a, IMR_SPEC, O>;
 #[doc = "Field `RXOIM` reader - Receive FIFO overflow interrupt mask"]
-pub type RXOIM_R = crate::BitReader<bool>;
+pub type RXOIM_R = crate::BitReader;
 #[doc = "Field `RXOIM` writer - Receive FIFO overflow interrupt mask"]
-pub type RXOIM_W<'a, const O: u8> = crate::BitWriter<'a, u32, IMR_SPEC, bool, O>;
+pub type RXOIM_W<'a, const O: u8> = crate::BitWriter<'a, IMR_SPEC, O>;
 #[doc = "Field `RXFIM` reader - Receive FIFO full interrupt mask"]
-pub type RXFIM_R = crate::BitReader<bool>;
+pub type RXFIM_R = crate::BitReader;
 #[doc = "Field `RXFIM` writer - Receive FIFO full interrupt mask"]
-pub type RXFIM_W<'a, const O: u8> = crate::BitWriter<'a, u32, IMR_SPEC, bool, O>;
+pub type RXFIM_W<'a, const O: u8> = crate::BitWriter<'a, IMR_SPEC, O>;
 #[doc = "Field `MSTIM` reader - Multi-master contention interrupt mask"]
-pub type MSTIM_R = crate::BitReader<bool>;
+pub type MSTIM_R = crate::BitReader;
 #[doc = "Field `MSTIM` writer - Multi-master contention interrupt mask"]
-pub type MSTIM_W<'a, const O: u8> = crate::BitWriter<'a, u32, IMR_SPEC, bool, O>;
+pub type MSTIM_W<'a, const O: u8> = crate::BitWriter<'a, IMR_SPEC, O>;
 impl R {
     #[doc = "Bit 0 - Transmit FIFO empty interrupt mask"]
     #[inline(always)]

@@ -14,9 +14,9 @@ impl From<crate::R<SSPPERIPHID2_SPEC>> for R {
     }
 }
 #[doc = "Field `DESIGNER1` reader - These bits read back as 0x4"]
-pub type DESIGNER1_R = crate::FieldReader<u8, u8>;
+pub type DESIGNER1_R = crate::FieldReader;
 #[doc = "Field `REVISION` reader - These bits return the peripheral revision"]
-pub type REVISION_R = crate::FieldReader<u8, u8>;
+pub type REVISION_R = crate::FieldReader;
 impl R {
     #[doc = "Bits 0:3 - These bits read back as 0x4"]
     #[inline(always)]

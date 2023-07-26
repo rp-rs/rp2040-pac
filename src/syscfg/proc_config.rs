@@ -35,27 +35,25 @@ impl From<crate::W<PROC_CONFIG_SPEC>> for W {
     }
 }
 #[doc = "Field `PROC0_HALTED` reader - Indication that proc0 has halted"]
-pub type PROC0_HALTED_R = crate::BitReader<bool>;
+pub type PROC0_HALTED_R = crate::BitReader;
 #[doc = "Field `PROC1_HALTED` reader - Indication that proc1 has halted"]
-pub type PROC1_HALTED_R = crate::BitReader<bool>;
+pub type PROC1_HALTED_R = crate::BitReader;
 #[doc = "Field `PROC0_DAP_INSTID` reader - Configure proc0 DAP instance ID.  
  Recommend that this is NOT changed until you require debug access in multi-chip environment  
  WARNING: do not set to 15 as this is reserved for RescueDP"]
-pub type PROC0_DAP_INSTID_R = crate::FieldReader<u8, u8>;
+pub type PROC0_DAP_INSTID_R = crate::FieldReader;
 #[doc = "Field `PROC0_DAP_INSTID` writer - Configure proc0 DAP instance ID.  
  Recommend that this is NOT changed until you require debug access in multi-chip environment  
  WARNING: do not set to 15 as this is reserved for RescueDP"]
-pub type PROC0_DAP_INSTID_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, PROC_CONFIG_SPEC, u8, u8, 4, O>;
+pub type PROC0_DAP_INSTID_W<'a, const O: u8> = crate::FieldWriter<'a, PROC_CONFIG_SPEC, 4, O>;
 #[doc = "Field `PROC1_DAP_INSTID` reader - Configure proc1 DAP instance ID.  
  Recommend that this is NOT changed until you require debug access in multi-chip environment  
  WARNING: do not set to 15 as this is reserved for RescueDP"]
-pub type PROC1_DAP_INSTID_R = crate::FieldReader<u8, u8>;
+pub type PROC1_DAP_INSTID_R = crate::FieldReader;
 #[doc = "Field `PROC1_DAP_INSTID` writer - Configure proc1 DAP instance ID.  
  Recommend that this is NOT changed until you require debug access in multi-chip environment  
  WARNING: do not set to 15 as this is reserved for RescueDP"]
-pub type PROC1_DAP_INSTID_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, PROC_CONFIG_SPEC, u8, u8, 4, O>;
+pub type PROC1_DAP_INSTID_W<'a, const O: u8> = crate::FieldWriter<'a, PROC_CONFIG_SPEC, 4, O>;
 impl R {
     #[doc = "Bit 0 - Indication that proc0 has halted"]
     #[inline(always)]

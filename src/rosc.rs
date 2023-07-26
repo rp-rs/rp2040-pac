@@ -3,7 +3,7 @@
 pub struct RegisterBlock {
     #[doc = "0x00 - Ring Oscillator control"]
     pub ctrl: CTRL,
-    #[doc = "0x04 - The FREQA & FREQB registers control the frequency by controlling the drive strength of each stage  
+    #[doc = "0x04 - The FREQA &amp; FREQB registers control the frequency by controlling the drive strength of each stage  
  The drive strength has 4 levels determined by the number of bits set  
  Increasing the number of bits set increases the drive strength and increases the oscillation frequency  
  0 bits set is the default drive strength  
@@ -34,7 +34,7 @@ pub type CTRL = crate::Reg<ctrl::CTRL_SPEC>;
 pub mod ctrl;
 #[doc = "FREQA (rw) register accessor: an alias for `Reg<FREQA_SPEC>`"]
 pub type FREQA = crate::Reg<freqa::FREQA_SPEC>;
-#[doc = "The FREQA & FREQB registers control the frequency by controlling the drive strength of each stage  
+#[doc = "The FREQA &amp; FREQB registers control the frequency by controlling the drive strength of each stage  
  The drive strength has 4 levels determined by the number of bits set  
  Increasing the number of bits set increases the drive strength and increases the oscillation frequency  
  0 bits set is the default drive strength  

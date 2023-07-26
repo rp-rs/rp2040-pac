@@ -14,29 +14,29 @@ impl From<crate::R<INTR_SPEC>> for R {
     }
 }
 #[doc = "Field `SM0_RXNEMPTY` reader - "]
-pub type SM0_RXNEMPTY_R = crate::BitReader<bool>;
+pub type SM0_RXNEMPTY_R = crate::BitReader;
 #[doc = "Field `SM1_RXNEMPTY` reader - "]
-pub type SM1_RXNEMPTY_R = crate::BitReader<bool>;
+pub type SM1_RXNEMPTY_R = crate::BitReader;
 #[doc = "Field `SM2_RXNEMPTY` reader - "]
-pub type SM2_RXNEMPTY_R = crate::BitReader<bool>;
+pub type SM2_RXNEMPTY_R = crate::BitReader;
 #[doc = "Field `SM3_RXNEMPTY` reader - "]
-pub type SM3_RXNEMPTY_R = crate::BitReader<bool>;
+pub type SM3_RXNEMPTY_R = crate::BitReader;
 #[doc = "Field `SM0_TXNFULL` reader - "]
-pub type SM0_TXNFULL_R = crate::BitReader<bool>;
+pub type SM0_TXNFULL_R = crate::BitReader;
 #[doc = "Field `SM1_TXNFULL` reader - "]
-pub type SM1_TXNFULL_R = crate::BitReader<bool>;
+pub type SM1_TXNFULL_R = crate::BitReader;
 #[doc = "Field `SM2_TXNFULL` reader - "]
-pub type SM2_TXNFULL_R = crate::BitReader<bool>;
+pub type SM2_TXNFULL_R = crate::BitReader;
 #[doc = "Field `SM3_TXNFULL` reader - "]
-pub type SM3_TXNFULL_R = crate::BitReader<bool>;
+pub type SM3_TXNFULL_R = crate::BitReader;
 #[doc = "Field `SM0` reader - "]
-pub type SM0_R = crate::BitReader<bool>;
+pub type SM0_R = crate::BitReader;
 #[doc = "Field `SM1` reader - "]
-pub type SM1_R = crate::BitReader<bool>;
+pub type SM1_R = crate::BitReader;
 #[doc = "Field `SM2` reader - "]
-pub type SM2_R = crate::BitReader<bool>;
+pub type SM2_R = crate::BitReader;
 #[doc = "Field `SM3` reader - "]
-pub type SM3_R = crate::BitReader<bool>;
+pub type SM3_R = crate::BitReader;
 impl R {
     #[doc = "Bit 0"]
     #[inline(always)]

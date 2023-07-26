@@ -35,9 +35,9 @@ impl From<crate::W<SHCSR_SPEC>> for W {
     }
 }
 #[doc = "Field `SVCALLPENDED` reader - Reads as 1 if SVCall is Pending. Write 1 to set pending SVCall, write 0 to clear pending SVCall."]
-pub type SVCALLPENDED_R = crate::BitReader<bool>;
+pub type SVCALLPENDED_R = crate::BitReader;
 #[doc = "Field `SVCALLPENDED` writer - Reads as 1 if SVCall is Pending. Write 1 to set pending SVCall, write 0 to clear pending SVCall."]
-pub type SVCALLPENDED_W<'a, const O: u8> = crate::BitWriter<'a, u32, SHCSR_SPEC, bool, O>;
+pub type SVCALLPENDED_W<'a, const O: u8> = crate::BitWriter<'a, SHCSR_SPEC, O>;
 impl R {
     #[doc = "Bit 15 - Reads as 1 if SVCall is Pending. Write 1 to set pending SVCall, write 0 to clear pending SVCall."]
     #[inline(always)]

@@ -14,27 +14,27 @@ impl From<crate::R<UARTMIS_SPEC>> for R {
     }
 }
 #[doc = "Field `RIMMIS` reader - nUARTRI modem masked interrupt status. Returns the masked interrupt state of the UARTRIINTR interrupt."]
-pub type RIMMIS_R = crate::BitReader<bool>;
+pub type RIMMIS_R = crate::BitReader;
 #[doc = "Field `CTSMMIS` reader - nUARTCTS modem masked interrupt status. Returns the masked interrupt state of the UARTCTSINTR interrupt."]
-pub type CTSMMIS_R = crate::BitReader<bool>;
+pub type CTSMMIS_R = crate::BitReader;
 #[doc = "Field `DCDMMIS` reader - nUARTDCD modem masked interrupt status. Returns the masked interrupt state of the UARTDCDINTR interrupt."]
-pub type DCDMMIS_R = crate::BitReader<bool>;
+pub type DCDMMIS_R = crate::BitReader;
 #[doc = "Field `DSRMMIS` reader - nUARTDSR modem masked interrupt status. Returns the masked interrupt state of the UARTDSRINTR interrupt."]
-pub type DSRMMIS_R = crate::BitReader<bool>;
+pub type DSRMMIS_R = crate::BitReader;
 #[doc = "Field `RXMIS` reader - Receive masked interrupt status. Returns the masked interrupt state of the UARTRXINTR interrupt."]
-pub type RXMIS_R = crate::BitReader<bool>;
+pub type RXMIS_R = crate::BitReader;
 #[doc = "Field `TXMIS` reader - Transmit masked interrupt status. Returns the masked interrupt state of the UARTTXINTR interrupt."]
-pub type TXMIS_R = crate::BitReader<bool>;
+pub type TXMIS_R = crate::BitReader;
 #[doc = "Field `RTMIS` reader - Receive timeout masked interrupt status. Returns the masked interrupt state of the UARTRTINTR interrupt."]
-pub type RTMIS_R = crate::BitReader<bool>;
+pub type RTMIS_R = crate::BitReader;
 #[doc = "Field `FEMIS` reader - Framing error masked interrupt status. Returns the masked interrupt state of the UARTFEINTR interrupt."]
-pub type FEMIS_R = crate::BitReader<bool>;
+pub type FEMIS_R = crate::BitReader;
 #[doc = "Field `PEMIS` reader - Parity error masked interrupt status. Returns the masked interrupt state of the UARTPEINTR interrupt."]
-pub type PEMIS_R = crate::BitReader<bool>;
+pub type PEMIS_R = crate::BitReader;
 #[doc = "Field `BEMIS` reader - Break error masked interrupt status. Returns the masked interrupt state of the UARTBEINTR interrupt."]
-pub type BEMIS_R = crate::BitReader<bool>;
+pub type BEMIS_R = crate::BitReader;
 #[doc = "Field `OEMIS` reader - Overrun error masked interrupt status. Returns the masked interrupt state of the UARTOEINTR interrupt."]
-pub type OEMIS_R = crate::BitReader<bool>;
+pub type OEMIS_R = crate::BitReader;
 impl R {
     #[doc = "Bit 0 - nUARTRI modem masked interrupt status. Returns the masked interrupt state of the UARTRIINTR interrupt."]
     #[inline(always)]

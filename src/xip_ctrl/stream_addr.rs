@@ -37,19 +37,18 @@ impl From<crate::W<STREAM_ADDR_SPEC>> for W {
 #[doc = "Field `STREAM_ADDR` reader - The address of the next word to be streamed from flash to the streaming FIFO.  
  Increments automatically after each flash access.  
  Write the initial access address here before starting a streaming read."]
-pub type STREAM_ADDR_R = crate::FieldReader<u32, u32>;
+pub type STREAM_ADDR_R = crate::FieldReader<u32>;
 #[doc = "Field `STREAM_ADDR` writer - The address of the next word to be streamed from flash to the streaming FIFO.  
  Increments automatically after each flash access.  
  Write the initial access address here before starting a streaming read."]
-pub type STREAM_ADDR_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, STREAM_ADDR_SPEC, u32, u32, 30, O>;
+pub type STREAM_ADDR_W<'a, const O: u8> = crate::FieldWriter<'a, STREAM_ADDR_SPEC, 30, O, u32>;
 impl R {
     #[doc = "Bits 2:31 - The address of the next word to be streamed from flash to the streaming FIFO.  
  Increments automatically after each flash access.  
  Write the initial access address here before starting a streaming read."]
     #[inline(always)]
     pub fn stream_addr(&self) -> STREAM_ADDR_R {
-        STREAM_ADDR_R::new(((self.bits >> 2) & 0x3fff_ffff) as u32)
+        STREAM_ADDR_R::new((self.bits >> 2) & 0x3fff_ffff)
     }
 }
 impl W {

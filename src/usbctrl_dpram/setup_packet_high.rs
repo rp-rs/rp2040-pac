@@ -35,15 +35,13 @@ impl From<crate::W<SETUP_PACKET_HIGH_SPEC>> for W {
     }
 }
 #[doc = "Field `WINDEX` reader - "]
-pub type WINDEX_R = crate::FieldReader<u16, u16>;
+pub type WINDEX_R = crate::FieldReader<u16>;
 #[doc = "Field `WINDEX` writer - "]
-pub type WINDEX_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SETUP_PACKET_HIGH_SPEC, u16, u16, 16, O>;
+pub type WINDEX_W<'a, const O: u8> = crate::FieldWriter<'a, SETUP_PACKET_HIGH_SPEC, 16, O, u16>;
 #[doc = "Field `WLENGTH` reader - "]
-pub type WLENGTH_R = crate::FieldReader<u16, u16>;
+pub type WLENGTH_R = crate::FieldReader<u16>;
 #[doc = "Field `WLENGTH` writer - "]
-pub type WLENGTH_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SETUP_PACKET_HIGH_SPEC, u16, u16, 16, O>;
+pub type WLENGTH_W<'a, const O: u8> = crate::FieldWriter<'a, SETUP_PACKET_HIGH_SPEC, 16, O, u16>;
 impl R {
     #[doc = "Bits 0:15"]
     #[inline(always)]

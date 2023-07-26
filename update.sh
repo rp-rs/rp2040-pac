@@ -1,16 +1,15 @@
 #!/usr/bin/env bash
 
+# Path to `svd`/`svdtools`
 SVDTOOLS="${SVDTOOLS:-svdtools}"
 
 set -ex
 
-# Path to `svd`/`svdtools`
-
-cargo install --version 0.27.0 svd2rust
+cargo install --version 0.29.0 svd2rust
 cargo install --version 0.10.0  form
 rustup component add rustfmt
 if [ "$SVDTOOLS" == "svdtools" ]; then
-    cargo install --version 0.2.6 svdtools
+    cargo install --version 0.3.0 svdtools
 else
     python3 -mvenv --clear .venv
     source .venv/bin/activate

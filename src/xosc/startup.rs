@@ -35,13 +35,13 @@ impl From<crate::W<STARTUP_SPEC>> for W {
     }
 }
 #[doc = "Field `DELAY` reader - in multiples of 256*xtal_period. The reset value of 0xc4 corresponds to approx 50 000 cycles."]
-pub type DELAY_R = crate::FieldReader<u16, u16>;
+pub type DELAY_R = crate::FieldReader<u16>;
 #[doc = "Field `DELAY` writer - in multiples of 256*xtal_period. The reset value of 0xc4 corresponds to approx 50 000 cycles."]
-pub type DELAY_W<'a, const O: u8> = crate::FieldWriter<'a, u32, STARTUP_SPEC, u16, u16, 14, O>;
+pub type DELAY_W<'a, const O: u8> = crate::FieldWriter<'a, STARTUP_SPEC, 14, O, u16>;
 #[doc = "Field `X4` reader - Multiplies the startup_delay by 4. This is of little value to the user given that the delay can be programmed directly."]
-pub type X4_R = crate::BitReader<bool>;
+pub type X4_R = crate::BitReader;
 #[doc = "Field `X4` writer - Multiplies the startup_delay by 4. This is of little value to the user given that the delay can be programmed directly."]
-pub type X4_W<'a, const O: u8> = crate::BitWriter<'a, u32, STARTUP_SPEC, bool, O>;
+pub type X4_W<'a, const O: u8> = crate::BitWriter<'a, STARTUP_SPEC, O>;
 impl R {
     #[doc = "Bits 0:13 - in multiples of 256*xtal_period. The reset value of 0xc4 corresponds to approx 50 000 cycles."]
     #[inline(always)]

@@ -35,9 +35,9 @@ impl From<crate::W<FC0_DELAY_SPEC>> for W {
     }
 }
 #[doc = "Field `FC0_DELAY` reader - "]
-pub type FC0_DELAY_R = crate::FieldReader<u8, u8>;
+pub type FC0_DELAY_R = crate::FieldReader;
 #[doc = "Field `FC0_DELAY` writer - "]
-pub type FC0_DELAY_W<'a, const O: u8> = crate::FieldWriter<'a, u32, FC0_DELAY_SPEC, u8, u8, 3, O>;
+pub type FC0_DELAY_W<'a, const O: u8> = crate::FieldWriter<'a, FC0_DELAY_SPEC, 3, O>;
 impl R {
     #[doc = "Bits 0:2"]
     #[inline(always)]

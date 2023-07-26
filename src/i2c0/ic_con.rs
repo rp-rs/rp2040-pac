@@ -79,7 +79,7 @@ impl MASTER_MODE_R {
 #[doc = "Field `MASTER_MODE` writer - This bit controls whether the DW_apb_i2c master is enabled.  
 
  NOTE: Software should ensure that if this bit is written with '1' then bit 6 should also be written with a '1'."]
-pub type MASTER_MODE_W<'a, const O: u8> = crate::BitWriter<'a, u32, IC_CON_SPEC, MASTER_MODE_A, O>;
+pub type MASTER_MODE_W<'a, const O: u8> = crate::BitWriter<'a, IC_CON_SPEC, O, MASTER_MODE_A>;
 impl<'a, const O: u8> MASTER_MODE_W<'a, O> {
     #[doc = "Master mode is disabled"]
     #[inline(always)]
@@ -98,19 +98,19 @@ impl<'a, const O: u8> MASTER_MODE_W<'a, O> {
 
  1: standard mode (100 kbit/s)  
 
- 2: fast mode (<=400 kbit/s) or fast mode plus (<=1000Kbit/s)  
+ 2: fast mode (&lt;=400 kbit/s) or fast mode plus (&lt;=1000Kbit/s)  
 
  3: high speed mode (3.4 Mbit/s)  
 
  Note: This field is not applicable when IC_ULTRA_FAST_MODE=1"]
-pub type SPEED_R = crate::FieldReader<u8, SPEED_A>;
+pub type SPEED_R = crate::FieldReader<SPEED_A>;
 #[doc = "These bits control at which speed the DW_apb_i2c operates; its setting is relevant only if one is operating the DW_apb_i2c in master mode. Hardware protects against illegal values being programmed by software. These bits must be programmed appropriately for slave mode also, as it is used to capture correct value of spike filter as per the speed mode.  
 
  This register should be programmed only with a value in the range of 1 to IC_MAX_SPEED_MODE; otherwise, hardware updates this register with the value of IC_MAX_SPEED_MODE.  
 
  1: standard mode (100 kbit/s)  
 
- 2: fast mode (<=400 kbit/s) or fast mode plus (<=1000Kbit/s)  
+ 2: fast mode (&lt;=400 kbit/s) or fast mode plus (&lt;=1000Kbit/s)  
 
  3: high speed mode (3.4 Mbit/s)  
 
@@ -132,6 +132,9 @@ impl From<SPEED_A> for u8 {
     fn from(variant: SPEED_A) -> Self {
         variant as _
     }
+}
+impl crate::FieldSpec for SPEED_A {
+    type Ux = u8;
 }
 impl SPEED_R {
     #[doc = "Get enumerated values variant"]
@@ -166,12 +169,12 @@ impl SPEED_R {
 
  1: standard mode (100 kbit/s)  
 
- 2: fast mode (<=400 kbit/s) or fast mode plus (<=1000Kbit/s)  
+ 2: fast mode (&lt;=400 kbit/s) or fast mode plus (&lt;=1000Kbit/s)  
 
  3: high speed mode (3.4 Mbit/s)  
 
  Note: This field is not applicable when IC_ULTRA_FAST_MODE=1"]
-pub type SPEED_W<'a, const O: u8> = crate::FieldWriter<'a, u32, IC_CON_SPEC, u8, SPEED_A, 2, O>;
+pub type SPEED_W<'a, const O: u8> = crate::FieldWriter<'a, IC_CON_SPEC, 2, O, SPEED_A>;
 impl<'a, const O: u8> SPEED_W<'a, O> {
     #[doc = "Standard Speed mode of operation"]
     #[inline(always)]
@@ -229,7 +232,7 @@ impl IC_10BITADDR_SLAVE_R {
 }
 #[doc = "Field `IC_10BITADDR_SLAVE` writer - When acting as a slave, this bit controls whether the DW_apb_i2c responds to 7- or 10-bit addresses. - 0: 7-bit addressing. The DW_apb_i2c ignores transactions that involve 10-bit addressing; for 7-bit addressing, only the lower 7 bits of the IC_SAR register are compared. - 1: 10-bit addressing. The DW_apb_i2c responds to only 10-bit addressing transfers that match the full 10 bits of the IC_SAR register."]
 pub type IC_10BITADDR_SLAVE_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, IC_CON_SPEC, IC_10BITADDR_SLAVE_A, O>;
+    crate::BitWriter<'a, IC_CON_SPEC, O, IC_10BITADDR_SLAVE_A>;
 impl<'a, const O: u8> IC_10BITADDR_SLAVE_W<'a, O> {
     #[doc = "Slave 7Bit addressing"]
     #[inline(always)]
@@ -282,7 +285,7 @@ impl IC_10BITADDR_MASTER_R {
 }
 #[doc = "Field `IC_10BITADDR_MASTER` writer - Controls whether the DW_apb_i2c starts its transfers in 7- or 10-bit addressing mode when acting as a master. - 0: 7-bit addressing - 1: 10-bit addressing"]
 pub type IC_10BITADDR_MASTER_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, IC_CON_SPEC, IC_10BITADDR_MASTER_A, O>;
+    crate::BitWriter<'a, IC_CON_SPEC, O, IC_10BITADDR_MASTER_A>;
 impl<'a, const O: u8> IC_10BITADDR_MASTER_W<'a, O> {
     #[doc = "Master 7Bit addressing mode"]
     #[inline(always)]
@@ -340,8 +343,7 @@ impl IC_RESTART_EN_R {
 #[doc = "Field `IC_RESTART_EN` writer - Determines whether RESTART conditions may be sent when acting as a master. Some older slaves do not support handling RESTART conditions; however, RESTART conditions are used in several DW_apb_i2c operations. When RESTART is disabled, the master is prohibited from performing the following functions: - Sending a START BYTE - Performing any high-speed mode operation - High-speed mode operation - Performing direction changes in combined format mode - Performing a read operation with a 10-bit address By replacing RESTART condition followed by a STOP and a subsequent START condition, split operations are broken down into multiple DW_apb_i2c transfers. If the above operations are performed, it will result in setting bit 6 (TX_ABRT) of the IC_RAW_INTR_STAT register.  
 
  Reset value: ENABLED"]
-pub type IC_RESTART_EN_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, IC_CON_SPEC, IC_RESTART_EN_A, O>;
+pub type IC_RESTART_EN_W<'a, const O: u8> = crate::BitWriter<'a, IC_CON_SPEC, O, IC_RESTART_EN_A>;
 impl<'a, const O: u8> IC_RESTART_EN_W<'a, O> {
     #[doc = "Master restart disabled"]
     #[inline(always)]
@@ -406,7 +408,7 @@ impl IC_SLAVE_DISABLE_R {
 
  NOTE: Software should ensure that if this bit is written with 0, then bit 0 should also be written with a 0."]
 pub type IC_SLAVE_DISABLE_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, IC_CON_SPEC, IC_SLAVE_DISABLE_A, O>;
+    crate::BitWriter<'a, IC_CON_SPEC, O, IC_SLAVE_DISABLE_A>;
 impl<'a, const O: u8> IC_SLAVE_DISABLE_W<'a, O> {
     #[doc = "Slave mode is enabled"]
     #[inline(always)]
@@ -465,7 +467,7 @@ impl STOP_DET_IFADDRESSED_R {
 
  NOTE: During a general call address, this slave does not issue the STOP_DET interrupt if STOP_DET_IF_ADDRESSED = 1'b1, even if the slave responds to the general call address by generating ACK. The STOP_DET interrupt is generated only when the transmitted address matches the slave address (SAR)."]
 pub type STOP_DET_IFADDRESSED_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, IC_CON_SPEC, STOP_DET_IFADDRESSED_A, O>;
+    crate::BitWriter<'a, IC_CON_SPEC, O, STOP_DET_IFADDRESSED_A>;
 impl<'a, const O: u8> STOP_DET_IFADDRESSED_W<'a, O> {
     #[doc = "slave issues STOP_DET intr always"]
     #[inline(always)]
@@ -523,8 +525,7 @@ impl TX_EMPTY_CTRL_R {
 #[doc = "Field `TX_EMPTY_CTRL` writer - This bit controls the generation of the TX_EMPTY interrupt, as described in the IC_RAW_INTR_STAT register.  
 
  Reset value: 0x0."]
-pub type TX_EMPTY_CTRL_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, IC_CON_SPEC, TX_EMPTY_CTRL_A, O>;
+pub type TX_EMPTY_CTRL_W<'a, const O: u8> = crate::BitWriter<'a, IC_CON_SPEC, O, TX_EMPTY_CTRL_A>;
 impl<'a, const O: u8> TX_EMPTY_CTRL_W<'a, O> {
     #[doc = "Default behaviour of TX_EMPTY interrupt"]
     #[inline(always)]
@@ -583,7 +584,7 @@ impl RX_FIFO_FULL_HLD_CTRL_R {
 
  Reset value: 0x0."]
 pub type RX_FIFO_FULL_HLD_CTRL_W<'a, const O: u8> =
-    crate::BitWriter<'a, u32, IC_CON_SPEC, RX_FIFO_FULL_HLD_CTRL_A, O>;
+    crate::BitWriter<'a, IC_CON_SPEC, O, RX_FIFO_FULL_HLD_CTRL_A>;
 impl<'a, const O: u8> RX_FIFO_FULL_HLD_CTRL_W<'a, O> {
     #[doc = "Overflow when RX_FIFO is full"]
     #[inline(always)]
@@ -597,7 +598,7 @@ impl<'a, const O: u8> RX_FIFO_FULL_HLD_CTRL_W<'a, O> {
     }
 }
 #[doc = "Field `STOP_DET_IF_MASTER_ACTIVE` reader - Master issues the STOP_DET interrupt irrespective of whether master is active or not"]
-pub type STOP_DET_IF_MASTER_ACTIVE_R = crate::BitReader<bool>;
+pub type STOP_DET_IF_MASTER_ACTIVE_R = crate::BitReader;
 impl R {
     #[doc = "Bit 0 - This bit controls whether the DW_apb_i2c master is enabled.  
 
@@ -612,7 +613,7 @@ impl R {
 
  1: standard mode (100 kbit/s)  
 
- 2: fast mode (<=400 kbit/s) or fast mode plus (<=1000Kbit/s)  
+ 2: fast mode (&lt;=400 kbit/s) or fast mode plus (&lt;=1000Kbit/s)  
 
  3: high speed mode (3.4 Mbit/s)  
 
@@ -689,7 +690,7 @@ impl W {
 
  1: standard mode (100 kbit/s)  
 
- 2: fast mode (<=400 kbit/s) or fast mode plus (<=1000Kbit/s)  
+ 2: fast mode (&lt;=400 kbit/s) or fast mode plus (&lt;=1000Kbit/s)  
 
  3: high speed mode (3.4 Mbit/s)  
 

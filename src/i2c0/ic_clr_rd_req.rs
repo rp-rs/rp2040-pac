@@ -16,7 +16,7 @@ impl From<crate::R<IC_CLR_RD_REQ_SPEC>> for R {
 #[doc = "Field `CLR_RD_REQ` reader - Read this register to clear the RD_REQ interrupt (bit 5) of the IC_RAW_INTR_STAT register.  
 
  Reset value: 0x0"]
-pub type CLR_RD_REQ_R = crate::BitReader<bool>;
+pub type CLR_RD_REQ_R = crate::BitReader;
 impl R {
     #[doc = "Bit 0 - Read this register to clear the RD_REQ interrupt (bit 5) of the IC_RAW_INTR_STAT register.  
 

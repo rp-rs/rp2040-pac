@@ -20,7 +20,7 @@ impl From<crate::W<LOAD_SPEC>> for W {
     }
 }
 #[doc = "Field `LOAD` writer - "]
-pub type LOAD_W<'a, const O: u8> = crate::FieldWriter<'a, u32, LOAD_SPEC, u32, u32, 24, O>;
+pub type LOAD_W<'a, const O: u8> = crate::FieldWriter<'a, LOAD_SPEC, 24, O, u32>;
 impl W {
     #[doc = "Bits 0:23"]
     #[inline(always)]

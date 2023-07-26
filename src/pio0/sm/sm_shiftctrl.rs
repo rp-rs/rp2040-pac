@@ -35,51 +35,49 @@ impl From<crate::W<SM_SHIFTCTRL_SPEC>> for W {
     }
 }
 #[doc = "Field `AUTOPUSH` reader - Push automatically when the input shift register is filled, i.e. on an IN instruction which causes the input shift counter to reach or exceed PUSH_THRESH."]
-pub type AUTOPUSH_R = crate::BitReader<bool>;
+pub type AUTOPUSH_R = crate::BitReader;
 #[doc = "Field `AUTOPUSH` writer - Push automatically when the input shift register is filled, i.e. on an IN instruction which causes the input shift counter to reach or exceed PUSH_THRESH."]
-pub type AUTOPUSH_W<'a, const O: u8> = crate::BitWriter<'a, u32, SM_SHIFTCTRL_SPEC, bool, O>;
+pub type AUTOPUSH_W<'a, const O: u8> = crate::BitWriter<'a, SM_SHIFTCTRL_SPEC, O>;
 #[doc = "Field `AUTOPULL` reader - Pull automatically when the output shift register is emptied, i.e. on or following an OUT instruction which causes the output shift counter to reach or exceed PULL_THRESH."]
-pub type AUTOPULL_R = crate::BitReader<bool>;
+pub type AUTOPULL_R = crate::BitReader;
 #[doc = "Field `AUTOPULL` writer - Pull automatically when the output shift register is emptied, i.e. on or following an OUT instruction which causes the output shift counter to reach or exceed PULL_THRESH."]
-pub type AUTOPULL_W<'a, const O: u8> = crate::BitWriter<'a, u32, SM_SHIFTCTRL_SPEC, bool, O>;
+pub type AUTOPULL_W<'a, const O: u8> = crate::BitWriter<'a, SM_SHIFTCTRL_SPEC, O>;
 #[doc = "Field `IN_SHIFTDIR` reader - 1 = shift input shift register to right (data enters from left). 0 = to left."]
-pub type IN_SHIFTDIR_R = crate::BitReader<bool>;
+pub type IN_SHIFTDIR_R = crate::BitReader;
 #[doc = "Field `IN_SHIFTDIR` writer - 1 = shift input shift register to right (data enters from left). 0 = to left."]
-pub type IN_SHIFTDIR_W<'a, const O: u8> = crate::BitWriter<'a, u32, SM_SHIFTCTRL_SPEC, bool, O>;
+pub type IN_SHIFTDIR_W<'a, const O: u8> = crate::BitWriter<'a, SM_SHIFTCTRL_SPEC, O>;
 #[doc = "Field `OUT_SHIFTDIR` reader - 1 = shift out of output shift register to right. 0 = to left."]
-pub type OUT_SHIFTDIR_R = crate::BitReader<bool>;
+pub type OUT_SHIFTDIR_R = crate::BitReader;
 #[doc = "Field `OUT_SHIFTDIR` writer - 1 = shift out of output shift register to right. 0 = to left."]
-pub type OUT_SHIFTDIR_W<'a, const O: u8> = crate::BitWriter<'a, u32, SM_SHIFTCTRL_SPEC, bool, O>;
+pub type OUT_SHIFTDIR_W<'a, const O: u8> = crate::BitWriter<'a, SM_SHIFTCTRL_SPEC, O>;
 #[doc = "Field `PUSH_THRESH` reader - Number of bits shifted into ISR before autopush, or conditional push (PUSH IFFULL), will take place.  
  Write 0 for value of 32."]
-pub type PUSH_THRESH_R = crate::FieldReader<u8, u8>;
+pub type PUSH_THRESH_R = crate::FieldReader;
 #[doc = "Field `PUSH_THRESH` writer - Number of bits shifted into ISR before autopush, or conditional push (PUSH IFFULL), will take place.  
  Write 0 for value of 32."]
-pub type PUSH_THRESH_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SM_SHIFTCTRL_SPEC, u8, u8, 5, O>;
+pub type PUSH_THRESH_W<'a, const O: u8> = crate::FieldWriter<'a, SM_SHIFTCTRL_SPEC, 5, O>;
 #[doc = "Field `PULL_THRESH` reader - Number of bits shifted out of OSR before autopull, or conditional pull (PULL IFEMPTY), will take place.  
  Write 0 for value of 32."]
-pub type PULL_THRESH_R = crate::FieldReader<u8, u8>;
+pub type PULL_THRESH_R = crate::FieldReader;
 #[doc = "Field `PULL_THRESH` writer - Number of bits shifted out of OSR before autopull, or conditional pull (PULL IFEMPTY), will take place.  
  Write 0 for value of 32."]
-pub type PULL_THRESH_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, SM_SHIFTCTRL_SPEC, u8, u8, 5, O>;
+pub type PULL_THRESH_W<'a, const O: u8> = crate::FieldWriter<'a, SM_SHIFTCTRL_SPEC, 5, O>;
 #[doc = "Field `FJOIN_TX` reader - When 1, TX FIFO steals the RX FIFO's storage, and becomes twice as deep.  
  RX FIFO is disabled as a result (always reads as both full and empty).  
  FIFOs are flushed when this bit is changed."]
-pub type FJOIN_TX_R = crate::BitReader<bool>;
+pub type FJOIN_TX_R = crate::BitReader;
 #[doc = "Field `FJOIN_TX` writer - When 1, TX FIFO steals the RX FIFO's storage, and becomes twice as deep.  
  RX FIFO is disabled as a result (always reads as both full and empty).  
  FIFOs are flushed when this bit is changed."]
-pub type FJOIN_TX_W<'a, const O: u8> = crate::BitWriter<'a, u32, SM_SHIFTCTRL_SPEC, bool, O>;
+pub type FJOIN_TX_W<'a, const O: u8> = crate::BitWriter<'a, SM_SHIFTCTRL_SPEC, O>;
 #[doc = "Field `FJOIN_RX` reader - When 1, RX FIFO steals the TX FIFO's storage, and becomes twice as deep.  
  TX FIFO is disabled as a result (always reads as both full and empty).  
  FIFOs are flushed when this bit is changed."]
-pub type FJOIN_RX_R = crate::BitReader<bool>;
+pub type FJOIN_RX_R = crate::BitReader;
 #[doc = "Field `FJOIN_RX` writer - When 1, RX FIFO steals the TX FIFO's storage, and becomes twice as deep.  
  TX FIFO is disabled as a result (always reads as both full and empty).  
  FIFOs are flushed when this bit is changed."]
-pub type FJOIN_RX_W<'a, const O: u8> = crate::BitWriter<'a, u32, SM_SHIFTCTRL_SPEC, bool, O>;
+pub type FJOIN_RX_W<'a, const O: u8> = crate::BitWriter<'a, SM_SHIFTCTRL_SPEC, O>;
 impl R {
     #[doc = "Bit 16 - Push automatically when the input shift register is filled, i.e. on an IN instruction which causes the input shift counter to reach or exceed PUSH_THRESH."]
     #[inline(always)]

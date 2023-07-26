@@ -38,34 +38,34 @@ impl From<crate::W<SCR_SPEC>> for W {
  0 = Do not sleep when returning to Thread mode.  
  1 = Enter sleep, or deep sleep, on return from an ISR to Thread mode.  
  Setting this bit to 1 enables an interrupt driven application to avoid returning to an empty main application."]
-pub type SLEEPONEXIT_R = crate::BitReader<bool>;
+pub type SLEEPONEXIT_R = crate::BitReader;
 #[doc = "Field `SLEEPONEXIT` writer - Indicates sleep-on-exit when returning from Handler mode to Thread mode:  
  0 = Do not sleep when returning to Thread mode.  
  1 = Enter sleep, or deep sleep, on return from an ISR to Thread mode.  
  Setting this bit to 1 enables an interrupt driven application to avoid returning to an empty main application."]
-pub type SLEEPONEXIT_W<'a, const O: u8> = crate::BitWriter<'a, u32, SCR_SPEC, bool, O>;
+pub type SLEEPONEXIT_W<'a, const O: u8> = crate::BitWriter<'a, SCR_SPEC, O>;
 #[doc = "Field `SLEEPDEEP` reader - Controls whether the processor uses sleep or deep sleep as its low power mode:  
  0 = Sleep.  
  1 = Deep sleep."]
-pub type SLEEPDEEP_R = crate::BitReader<bool>;
+pub type SLEEPDEEP_R = crate::BitReader;
 #[doc = "Field `SLEEPDEEP` writer - Controls whether the processor uses sleep or deep sleep as its low power mode:  
  0 = Sleep.  
  1 = Deep sleep."]
-pub type SLEEPDEEP_W<'a, const O: u8> = crate::BitWriter<'a, u32, SCR_SPEC, bool, O>;
+pub type SLEEPDEEP_W<'a, const O: u8> = crate::BitWriter<'a, SCR_SPEC, O>;
 #[doc = "Field `SEVONPEND` reader - Send Event on Pending bit:  
  0 = Only enabled interrupts or events can wakeup the processor, disabled interrupts are excluded.  
  1 = Enabled events and all interrupts, including disabled interrupts, can wakeup the processor.  
  When an event or interrupt becomes pending, the event signal wakes up the processor from WFE. If the  
  processor is not waiting for an event, the event is registered and affects the next WFE.  
  The processor also wakes up on execution of an SEV instruction or an external event."]
-pub type SEVONPEND_R = crate::BitReader<bool>;
+pub type SEVONPEND_R = crate::BitReader;
 #[doc = "Field `SEVONPEND` writer - Send Event on Pending bit:  
  0 = Only enabled interrupts or events can wakeup the processor, disabled interrupts are excluded.  
  1 = Enabled events and all interrupts, including disabled interrupts, can wakeup the processor.  
  When an event or interrupt becomes pending, the event signal wakes up the processor from WFE. If the  
  processor is not waiting for an event, the event is registered and affects the next WFE.  
  The processor also wakes up on execution of an SEV instruction or an external event."]
-pub type SEVONPEND_W<'a, const O: u8> = crate::BitWriter<'a, u32, SCR_SPEC, bool, O>;
+pub type SEVONPEND_W<'a, const O: u8> = crate::BitWriter<'a, SCR_SPEC, O>;
 impl R {
     #[doc = "Bit 1 - Indicates sleep-on-exit when returning from Handler mode to Thread mode:  
  0 = Do not sleep when returning to Thread mode.  

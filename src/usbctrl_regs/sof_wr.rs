@@ -20,7 +20,7 @@ impl From<crate::W<SOF_WR_SPEC>> for W {
     }
 }
 #[doc = "Field `COUNT` writer - "]
-pub type COUNT_W<'a, const O: u8> = crate::FieldWriter<'a, u32, SOF_WR_SPEC, u16, u16, 11, O>;
+pub type COUNT_W<'a, const O: u8> = crate::FieldWriter<'a, SOF_WR_SPEC, 11, O, u16>;
 impl W {
     #[doc = "Bits 0:10"]
     #[inline(always)]

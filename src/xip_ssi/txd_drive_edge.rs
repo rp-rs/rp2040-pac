@@ -35,9 +35,9 @@ impl From<crate::W<TXD_DRIVE_EDGE_SPEC>> for W {
     }
 }
 #[doc = "Field `TDE` reader - TXD drive edge"]
-pub type TDE_R = crate::FieldReader<u8, u8>;
+pub type TDE_R = crate::FieldReader;
 #[doc = "Field `TDE` writer - TXD drive edge"]
-pub type TDE_W<'a, const O: u8> = crate::FieldWriter<'a, u32, TXD_DRIVE_EDGE_SPEC, u8, u8, 8, O>;
+pub type TDE_W<'a, const O: u8> = crate::FieldWriter<'a, TXD_DRIVE_EDGE_SPEC, 8, O>;
 impl R {
     #[doc = "Bits 0:7 - TXD drive edge"]
     #[inline(always)]

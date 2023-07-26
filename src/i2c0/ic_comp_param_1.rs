@@ -14,21 +14,21 @@ impl From<crate::R<IC_COMP_PARAM_1_SPEC>> for R {
     }
 }
 #[doc = "Field `APB_DATA_WIDTH` reader - APB data bus width is 32 bits"]
-pub type APB_DATA_WIDTH_R = crate::FieldReader<u8, u8>;
+pub type APB_DATA_WIDTH_R = crate::FieldReader;
 #[doc = "Field `MAX_SPEED_MODE` reader - MAX SPEED MODE = FAST MODE"]
-pub type MAX_SPEED_MODE_R = crate::FieldReader<u8, u8>;
+pub type MAX_SPEED_MODE_R = crate::FieldReader;
 #[doc = "Field `HC_COUNT_VALUES` reader - Programmable count values for each mode."]
-pub type HC_COUNT_VALUES_R = crate::BitReader<bool>;
+pub type HC_COUNT_VALUES_R = crate::BitReader;
 #[doc = "Field `INTR_IO` reader - COMBINED Interrupt outputs"]
-pub type INTR_IO_R = crate::BitReader<bool>;
+pub type INTR_IO_R = crate::BitReader;
 #[doc = "Field `HAS_DMA` reader - DMA handshaking signals are enabled"]
-pub type HAS_DMA_R = crate::BitReader<bool>;
+pub type HAS_DMA_R = crate::BitReader;
 #[doc = "Field `ADD_ENCODED_PARAMS` reader - Encoded parameters not visible"]
-pub type ADD_ENCODED_PARAMS_R = crate::BitReader<bool>;
+pub type ADD_ENCODED_PARAMS_R = crate::BitReader;
 #[doc = "Field `RX_BUFFER_DEPTH` reader - RX Buffer Depth = 16"]
-pub type RX_BUFFER_DEPTH_R = crate::FieldReader<u8, u8>;
+pub type RX_BUFFER_DEPTH_R = crate::FieldReader;
 #[doc = "Field `TX_BUFFER_DEPTH` reader - TX Buffer Depth = 16"]
-pub type TX_BUFFER_DEPTH_R = crate::FieldReader<u8, u8>;
+pub type TX_BUFFER_DEPTH_R = crate::FieldReader;
 impl R {
     #[doc = "Bits 0:1 - APB data bus width is 32 bits"]
     #[inline(always)]

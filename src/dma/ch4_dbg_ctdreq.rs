@@ -35,10 +35,9 @@ impl From<crate::W<CH4_DBG_CTDREQ_SPEC>> for W {
     }
 }
 #[doc = "Field `CH4_DBG_CTDREQ` reader - "]
-pub type CH4_DBG_CTDREQ_R = crate::FieldReader<u8, u8>;
+pub type CH4_DBG_CTDREQ_R = crate::FieldReader;
 #[doc = "Field `CH4_DBG_CTDREQ` writer - "]
-pub type CH4_DBG_CTDREQ_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, CH4_DBG_CTDREQ_SPEC, u8, u8, 6, O>;
+pub type CH4_DBG_CTDREQ_W<'a, const O: u8> = crate::FieldWriter<'a, CH4_DBG_CTDREQ_SPEC, 6, O>;
 impl R {
     #[doc = "Bits 0:5"]
     #[inline(always)]

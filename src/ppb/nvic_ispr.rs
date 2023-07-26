@@ -44,7 +44,7 @@ impl From<crate::W<NVIC_ISPR_SPEC>> for W {
  Note: Writing 1 to the NVIC_ISPR bit corresponding to:  
  An interrupt that is pending has no effect.  
  A disabled interrupt sets the state of that interrupt to pending."]
-pub type SETPEND_R = crate::FieldReader<u32, u32>;
+pub type SETPEND_R = crate::FieldReader<u32>;
 #[doc = "Field `SETPEND` writer - Interrupt set-pending bits.  
  Write:  
  0 = No effect.  
@@ -55,7 +55,7 @@ pub type SETPEND_R = crate::FieldReader<u32, u32>;
  Note: Writing 1 to the NVIC_ISPR bit corresponding to:  
  An interrupt that is pending has no effect.  
  A disabled interrupt sets the state of that interrupt to pending."]
-pub type SETPEND_W<'a, const O: u8> = crate::FieldWriter<'a, u32, NVIC_ISPR_SPEC, u32, u32, 32, O>;
+pub type SETPEND_W<'a, const O: u8> = crate::FieldWriter<'a, NVIC_ISPR_SPEC, 32, O, u32>;
 impl R {
     #[doc = "Bits 0:31 - Interrupt set-pending bits.  
  Write:  

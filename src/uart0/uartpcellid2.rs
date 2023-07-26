@@ -14,7 +14,7 @@ impl From<crate::R<UARTPCELLID2_SPEC>> for R {
     }
 }
 #[doc = "Field `UARTPCELLID2` reader - These bits read back as 0x05"]
-pub type UARTPCELLID2_R = crate::FieldReader<u8, u8>;
+pub type UARTPCELLID2_R = crate::FieldReader;
 impl R {
     #[doc = "Bits 0:7 - These bits read back as 0x05"]
     #[inline(always)]

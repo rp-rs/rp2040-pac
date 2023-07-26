@@ -35,13 +35,13 @@ impl From<crate::W<SHPR3_SPEC>> for W {
     }
 }
 #[doc = "Field `PRI_14` reader - Priority of system handler 14, PendSV"]
-pub type PRI_14_R = crate::FieldReader<u8, u8>;
+pub type PRI_14_R = crate::FieldReader;
 #[doc = "Field `PRI_14` writer - Priority of system handler 14, PendSV"]
-pub type PRI_14_W<'a, const O: u8> = crate::FieldWriter<'a, u32, SHPR3_SPEC, u8, u8, 2, O>;
+pub type PRI_14_W<'a, const O: u8> = crate::FieldWriter<'a, SHPR3_SPEC, 2, O>;
 #[doc = "Field `PRI_15` reader - Priority of system handler 15, SysTick"]
-pub type PRI_15_R = crate::FieldReader<u8, u8>;
+pub type PRI_15_R = crate::FieldReader;
 #[doc = "Field `PRI_15` writer - Priority of system handler 15, SysTick"]
-pub type PRI_15_W<'a, const O: u8> = crate::FieldWriter<'a, u32, SHPR3_SPEC, u8, u8, 2, O>;
+pub type PRI_15_W<'a, const O: u8> = crate::FieldWriter<'a, SHPR3_SPEC, 2, O>;
 impl R {
     #[doc = "Bits 22:23 - Priority of system handler 14, PendSV"]
     #[inline(always)]

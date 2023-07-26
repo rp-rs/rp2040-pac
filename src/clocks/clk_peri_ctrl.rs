@@ -35,7 +35,7 @@ impl From<crate::W<CLK_PERI_CTRL_SPEC>> for W {
     }
 }
 #[doc = "Field `AUXSRC` reader - Selects the auxiliary clock source, will glitch when switching"]
-pub type AUXSRC_R = crate::FieldReader<u8, AUXSRC_A>;
+pub type AUXSRC_R = crate::FieldReader<AUXSRC_A>;
 #[doc = "Selects the auxiliary clock source, will glitch when switching  
 
 Value on reset: 0"]
@@ -62,6 +62,9 @@ impl From<AUXSRC_A> for u8 {
     fn from(variant: AUXSRC_A) -> Self {
         variant as _
     }
+}
+impl crate::FieldSpec for AUXSRC_A {
+    type Ux = u8;
 }
 impl AUXSRC_R {
     #[doc = "Get enumerated values variant"]
@@ -115,8 +118,7 @@ impl AUXSRC_R {
     }
 }
 #[doc = "Field `AUXSRC` writer - Selects the auxiliary clock source, will glitch when switching"]
-pub type AUXSRC_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, CLK_PERI_CTRL_SPEC, u8, AUXSRC_A, 3, O>;
+pub type AUXSRC_W<'a, const O: u8> = crate::FieldWriter<'a, CLK_PERI_CTRL_SPEC, 3, O, AUXSRC_A>;
 impl<'a, const O: u8> AUXSRC_W<'a, O> {
     #[doc = "`0`"]
     #[inline(always)]
@@ -155,13 +157,13 @@ impl<'a, const O: u8> AUXSRC_W<'a, O> {
     }
 }
 #[doc = "Field `KILL` reader - Asynchronously kills the clock generator"]
-pub type KILL_R = crate::BitReader<bool>;
+pub type KILL_R = crate::BitReader;
 #[doc = "Field `KILL` writer - Asynchronously kills the clock generator"]
-pub type KILL_W<'a, const O: u8> = crate::BitWriter<'a, u32, CLK_PERI_CTRL_SPEC, bool, O>;
+pub type KILL_W<'a, const O: u8> = crate::BitWriter<'a, CLK_PERI_CTRL_SPEC, O>;
 #[doc = "Field `ENABLE` reader - Starts and stops the clock generator cleanly"]
-pub type ENABLE_R = crate::BitReader<bool>;
+pub type ENABLE_R = crate::BitReader;
 #[doc = "Field `ENABLE` writer - Starts and stops the clock generator cleanly"]
-pub type ENABLE_W<'a, const O: u8> = crate::BitWriter<'a, u32, CLK_PERI_CTRL_SPEC, bool, O>;
+pub type ENABLE_W<'a, const O: u8> = crate::BitWriter<'a, CLK_PERI_CTRL_SPEC, O>;
 impl R {
     #[doc = "Bits 5:7 - Selects the auxiliary clock source, will glitch when switching"]
     #[inline(always)]

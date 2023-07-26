@@ -20,8 +20,7 @@ impl From<crate::W<INSTR_MEM_SPEC>> for W {
     }
 }
 #[doc = "Field `INSTR_MEM0` writer - "]
-pub type INSTR_MEM0_W<'a, const O: u8> =
-    crate::FieldWriter<'a, u32, INSTR_MEM_SPEC, u16, u16, 16, O>;
+pub type INSTR_MEM0_W<'a, const O: u8> = crate::FieldWriter<'a, INSTR_MEM_SPEC, 16, O, u16>;
 impl W {
     #[doc = "Bits 0:15"]
     #[inline(always)]

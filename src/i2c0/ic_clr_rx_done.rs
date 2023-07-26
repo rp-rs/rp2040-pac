@@ -16,7 +16,7 @@ impl From<crate::R<IC_CLR_RX_DONE_SPEC>> for R {
 #[doc = "Field `CLR_RX_DONE` reader - Read this register to clear the RX_DONE interrupt (bit 7) of the IC_RAW_INTR_STAT register.  
 
  Reset value: 0x0"]
-pub type CLR_RX_DONE_R = crate::BitReader<bool>;
+pub type CLR_RX_DONE_R = crate::BitReader;
 impl R {
     #[doc = "Bit 0 - Read this register to clear the RX_DONE interrupt (bit 7) of the IC_RAW_INTR_STAT register.  
 

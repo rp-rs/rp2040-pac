@@ -35,17 +35,17 @@ impl From<crate::W<SETUP_0_SPEC>> for W {
     }
 }
 #[doc = "Field `DAY` reader - Day of the month (1..31)"]
-pub type DAY_R = crate::FieldReader<u8, u8>;
+pub type DAY_R = crate::FieldReader;
 #[doc = "Field `DAY` writer - Day of the month (1..31)"]
-pub type DAY_W<'a, const O: u8> = crate::FieldWriter<'a, u32, SETUP_0_SPEC, u8, u8, 5, O>;
+pub type DAY_W<'a, const O: u8> = crate::FieldWriter<'a, SETUP_0_SPEC, 5, O>;
 #[doc = "Field `MONTH` reader - Month (1..12)"]
-pub type MONTH_R = crate::FieldReader<u8, u8>;
+pub type MONTH_R = crate::FieldReader;
 #[doc = "Field `MONTH` writer - Month (1..12)"]
-pub type MONTH_W<'a, const O: u8> = crate::FieldWriter<'a, u32, SETUP_0_SPEC, u8, u8, 4, O>;
+pub type MONTH_W<'a, const O: u8> = crate::FieldWriter<'a, SETUP_0_SPEC, 4, O>;
 #[doc = "Field `YEAR` reader - Year"]
-pub type YEAR_R = crate::FieldReader<u16, u16>;
+pub type YEAR_R = crate::FieldReader<u16>;
 #[doc = "Field `YEAR` writer - Year"]
-pub type YEAR_W<'a, const O: u8> = crate::FieldWriter<'a, u32, SETUP_0_SPEC, u16, u16, 12, O>;
+pub type YEAR_W<'a, const O: u8> = crate::FieldWriter<'a, SETUP_0_SPEC, 12, O, u16>;
 impl R {
     #[doc = "Bits 0:4 - Day of the month (1..31)"]
     #[inline(always)]

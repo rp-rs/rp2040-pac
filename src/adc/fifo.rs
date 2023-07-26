@@ -14,9 +14,9 @@ impl From<crate::R<FIFO_SPEC>> for R {
     }
 }
 #[doc = "Field `VAL` reader - "]
-pub type VAL_R = crate::FieldReader<u16, u16>;
+pub type VAL_R = crate::FieldReader<u16>;
 #[doc = "Field `ERR` reader - 1 if this particular sample experienced a conversion error. Remains in the same location if the sample is shifted."]
-pub type ERR_R = crate::BitReader<bool>;
+pub type ERR_R = crate::BitReader;
 impl R {
     #[doc = "Bits 0:11"]
     #[inline(always)]
