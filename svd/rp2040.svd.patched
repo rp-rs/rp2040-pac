@@ -3,9 +3,22 @@
   <vendor>Raspberry Pi</vendor>
   <name>RP2040</name>
   <version>0.1</version>
-  <description></description>
+  <description>
+    Dual-core Arm Cortex-M0+ processor, flexible clock running up to 133 MHz\n
+    264KB on-chip SRAM\n
+    2 x UART, 2 x SPI controllers, 2 x I2C controllers, 16 x PWM channels\n
+    1 x USB 1.1 controller and PHY, with host and device support\n
+    8 x Programmable I/O (PIO) state machines for custom peripheral support\n
+    Supported input power 1.8-5.5V DC\n
+    Operating temperature -20C to +85C\n
+    Drag-and-drop programming using mass storage over USB\n
+    Low-power sleep and dormant modes\n
+    Accurate on-chip clock\n
+    Temperature sensor\n
+    Accelerated integer and floating-point libraries on-chip
+  </description>
   <licenseText>
-    Copyright (c) 2020 Raspberry Pi (Trading) Ltd. \n
+    Copyright (c) 2020 Raspberry Pi (Trading) Ltd.\n
     \n
     SPDX-License-Identifier: BSD-3-Clause
   </licenseText>
@@ -202,31 +215,31 @@
       <name>XIP_SSI</name>
       <version>1</version>
       <description>DW_apb_ssi has the following features:\n
-        * APB interface – Allows for easy integration into a DesignWare Synthesizable Components for AMBA 2 implementation.\n
+        * APB interface - Allows for easy integration into a DesignWare Synthesizable Components for AMBA 2 implementation.\n
         * APB3 and APB4 protocol support.\n
-        * Scalable APB data bus width – Supports APB data bus widths of 8, 16, and 32 bits.\n
-        * Serial-master or serial-slave operation – Enables serial communication with serial-master or serial-slave peripheral devices.\n
+        * Scalable APB data bus width - Supports APB data bus widths of 8, 16, and 32 bits.\n
+        * Serial-master or serial-slave operation - Enables serial communication with serial-master or serial-slave peripheral devices.\n
         * Programmable Dual/Quad/Octal SPI support in Master Mode.\n
         * Dual Data Rate (DDR) and Read Data Strobe (RDS) Support - Enables the DW_apb_ssi master to perform operations with the device in DDR and RDS modes when working in Dual/Quad/Octal mode of operation.\n
         * Data Mask Support - Enables the DW_apb_ssi to selectively update the bytes in the device. This feature is applicable only in enhanced SPI modes.\n
         * eXecute-In-Place (XIP) support - Enables the DW_apb_ssi master to behave as a memory mapped I/O and fetches the data from the device based on the APB read request. This feature is applicable only in enhanced SPI modes.\n
-        * DMA Controller Interface – Enables the DW_apb_ssi to interface to a DMA controller over the bus using a handshaking interface for transfer requests.\n
-        * Independent masking of interrupts – Master collision, transmit FIFO overflow, transmit FIFO empty, receive FIFO full, receive FIFO underflow, and receive FIFO overflow interrupts can all be masked independently.\n
-        * Multi-master contention detection – Informs the processor of multiple serial-master accesses on the serial bus.\n
-        * Bypass of meta-stability flip-flops for synchronous clocks – When the APB clock (pclk) and the DW_apb_ssi serial clock (ssi_clk) are synchronous, meta-stable flip-flops are not used when transferring control signals across these clock domains.\n
+        * DMA Controller Interface - Enables the DW_apb_ssi to interface to a DMA controller over the bus using a handshaking interface for transfer requests.\n
+        * Independent masking of interrupts - Master collision, transmit FIFO overflow, transmit FIFO empty, receive FIFO full, receive FIFO underflow, and receive FIFO overflow interrupts can all be masked independently.\n
+        * Multi-master contention detection - Informs the processor of multiple serial-master accesses on the serial bus.\n
+        * Bypass of meta-stability flip-flops for synchronous clocks - When the APB clock (pclk) and the DW_apb_ssi serial clock (ssi_clk) are synchronous, meta-stable flip-flops are not used when transferring control signals across these clock domains.\n
         * Programmable delay on the sample time of the received serial data bit (rxd); enables programmable control of routing delays resulting in higher serial data-bit rates.\n
         * Programmable features:\n
-        - Serial interface operation – Choice of Motorola SPI, Texas Instruments Synchronous Serial Protocol or National Semiconductor Microwire.\n
-        - Clock bit-rate – Dynamic control of the serial bit rate of the data transfer; used in only serial-master mode of operation.\n
-        - Data Item size (4 to 32 bits) – Item size of each data transfer under the control of the programmer.\n
+        - Serial interface operation - Choice of Motorola SPI, Texas Instruments Synchronous Serial Protocol or National Semiconductor Microwire.\n
+        - Clock bit-rate - Dynamic control of the serial bit rate of the data transfer; used in only serial-master mode of operation.\n
+        - Data Item size (4 to 32 bits) - Item size of each data transfer under the control of the programmer.\n
         * Configured features:\n
-        - FIFO depth – 16 words deep. The FIFO width is fixed at 32 bits.\n
+        - FIFO depth - 16 words deep. The FIFO width is fixed at 32 bits.\n
         - 1 slave select output.\n
-        - Hardware slave-select – Dedicated hardware slave-select line.\n
+        - Hardware slave-select - Dedicated hardware slave-select line.\n
         - Combined interrupt line - one combined interrupt line from the DW_apb_ssi to the interrupt controller.\n
-        - Interrupt polarity – active high interrupt lines.\n
-        - Serial clock polarity – low serial-clock polarity directly after reset.\n
-        - Serial clock phase – capture on first edge of serial-clock directly after reset.</description>
+        - Interrupt polarity - active high interrupt lines.\n
+        - Serial clock polarity - low serial-clock polarity directly after reset.\n
+        - Serial clock phase - capture on first edge of serial-clock directly after reset.</description>
       <baseAddress>0x18000000</baseAddress>
       <size>0x20</size>
       <addressBlock>
@@ -14766,7 +14779,7 @@
               <field>
                 <name>READ_ERROR</name>
                 <description>If 1, the channel received a read bus error. Write one to clear.\n
-                READ_ADDR shows the approximate address where the bus error was encountered (will not to be earlier, or more than 3 transfers later)</description>
+                READ_ADDR shows the approximate address where the bus error was encountered (will not be earlier, or more than 3 transfers later)</description>
                 <bitRange>[30:30]</bitRange>
                 <access>read-write</access>
                 <modifiedWriteValues>oneToClear</modifiedWriteValues>
@@ -14774,7 +14787,7 @@
               <field>
                 <name>WRITE_ERROR</name>
                 <description>If 1, the channel received a write bus error. Write one to clear.\n
-                WRITE_ADDR shows the approximate address where the bus error was encountered (will not to be earlier, or more than 5 transfers later)</description>
+                WRITE_ADDR shows the approximate address where the bus error was encountered (will not be earlier, or more than 5 transfers later)</description>
                 <bitRange>[29:29]</bitRange>
                 <access>read-write</access>
                 <modifiedWriteValues>oneToClear</modifiedWriteValues>
@@ -15135,7 +15148,7 @@
               <field>
                 <name>READ_ERROR</name>
                 <description>If 1, the channel received a read bus error. Write one to clear.\n
-                READ_ADDR shows the approximate address where the bus error was encountered (will not to be earlier, or more than 3 transfers later)</description>
+                READ_ADDR shows the approximate address where the bus error was encountered (will not be earlier, or more than 3 transfers later)</description>
                 <bitRange>[30:30]</bitRange>
                 <access>read-write</access>
                 <modifiedWriteValues>oneToClear</modifiedWriteValues>
@@ -15143,7 +15156,7 @@
               <field>
                 <name>WRITE_ERROR</name>
                 <description>If 1, the channel received a write bus error. Write one to clear.\n
-                WRITE_ADDR shows the approximate address where the bus error was encountered (will not to be earlier, or more than 5 transfers later)</description>
+                WRITE_ADDR shows the approximate address where the bus error was encountered (will not be earlier, or more than 5 transfers later)</description>
                 <bitRange>[29:29]</bitRange>
                 <access>read-write</access>
                 <modifiedWriteValues>oneToClear</modifiedWriteValues>
@@ -15527,7 +15540,7 @@
               <field>
                 <name>READ_ERROR</name>
                 <description>If 1, the channel received a read bus error. Write one to clear.\n
-                READ_ADDR shows the approximate address where the bus error was encountered (will not to be earlier, or more than 3 transfers later)</description>
+                READ_ADDR shows the approximate address where the bus error was encountered (will not be earlier, or more than 3 transfers later)</description>
                 <bitRange>[30:30]</bitRange>
                 <access>read-write</access>
                 <modifiedWriteValues>oneToClear</modifiedWriteValues>
@@ -15535,7 +15548,7 @@
               <field>
                 <name>WRITE_ERROR</name>
                 <description>If 1, the channel received a write bus error. Write one to clear.\n
-                WRITE_ADDR shows the approximate address where the bus error was encountered (will not to be earlier, or more than 5 transfers later)</description>
+                WRITE_ADDR shows the approximate address where the bus error was encountered (will not be earlier, or more than 5 transfers later)</description>
                 <bitRange>[29:29]</bitRange>
                 <access>read-write</access>
                 <modifiedWriteValues>oneToClear</modifiedWriteValues>
@@ -15919,7 +15932,7 @@
               <field>
                 <name>READ_ERROR</name>
                 <description>If 1, the channel received a read bus error. Write one to clear.\n
-                READ_ADDR shows the approximate address where the bus error was encountered (will not to be earlier, or more than 3 transfers later)</description>
+                READ_ADDR shows the approximate address where the bus error was encountered (will not be earlier, or more than 3 transfers later)</description>
                 <bitRange>[30:30]</bitRange>
                 <access>read-write</access>
                 <modifiedWriteValues>oneToClear</modifiedWriteValues>
@@ -15927,7 +15940,7 @@
               <field>
                 <name>WRITE_ERROR</name>
                 <description>If 1, the channel received a write bus error. Write one to clear.\n
-                WRITE_ADDR shows the approximate address where the bus error was encountered (will not to be earlier, or more than 5 transfers later)</description>
+                WRITE_ADDR shows the approximate address where the bus error was encountered (will not be earlier, or more than 5 transfers later)</description>
                 <bitRange>[29:29]</bitRange>
                 <access>read-write</access>
                 <modifiedWriteValues>oneToClear</modifiedWriteValues>
@@ -16310,7 +16323,8 @@
                 This can be used vector different channel interrupts to different ISRs: this might be done to allow NVIC IRQ preemption for more time-critical channels, or to spread IRQ load across different cores.\n\n
                 It is also valid to ignore this behaviour and just use INTE0/INTS0/IRQ 0.</description>
               <bitRange>[15:0]</bitRange>
-              <access>read-only</access>
+              <access>read-write</access>
+              <modifiedWriteValues>oneToClear</modifiedWriteValues>
             </field>
           </fields>
         </register>
@@ -19868,7 +19882,8 @@
             <field>
               <name>SM_RESTART</name>
               <description>Write 1 to instantly clear internal SM state which may be otherwise difficult to access and will affect future execution.\n\n
-                Specifically, the following are cleared: input and output shift counters; the contents of the input shift register; the delay counter; the waiting-on-IRQ state; any stalled instruction written to SMx_INSTR or run by OUT/MOV EXEC; any pin write left asserted due to OUT_STICKY.</description>
+                Specifically, the following are cleared: input and output shift counters; the contents of the input shift register; the delay counter; the waiting-on-IRQ state; any stalled instruction written to SMx_INSTR or run by OUT/MOV EXEC; any pin write left asserted due to OUT_STICKY.\n\n
+                The program counter, the contents of the output shift register and the X/Y scratch registers are not affected.</description>
               <bitRange>[7:4]</bitRange>
               <access>read-write</access>
               <modifiedWriteValues>clear</modifiedWriteValues>
