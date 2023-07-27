@@ -7,7 +7,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
-- Rebuild with svd2rust 0.27.0, svdtools 0.2.65 (rust version)
+- Rebuild with svd2rust 0.29.0, svdtools 0.3.0 (rust version)
 - Add docs.rs metadata to include documentation gated by the `rt` feature
 - Add enum for SPI frame format
 
