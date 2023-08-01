@@ -845,16 +845,16 @@ pub type SNIFF_EN_W<'a, const O: u8> = crate::BitWriter<'a, CH_AL3_CTRL_SPEC, O>
  To terminate a sequence early (and clear the BUSY flag), see CHAN_ABORT."]
 pub type BUSY_R = crate::BitReader;
 #[doc = "Field `WRITE_ERROR` reader - If 1, the channel received a write bus error. Write one to clear.  
- WRITE_ADDR shows the approximate address where the bus error was encountered (will not to be earlier, or more than 5 transfers later)"]
+ WRITE_ADDR shows the approximate address where the bus error was encountered (will not be earlier, or more than 5 transfers later)"]
 pub type WRITE_ERROR_R = crate::BitReader;
 #[doc = "Field `WRITE_ERROR` writer - If 1, the channel received a write bus error. Write one to clear.  
- WRITE_ADDR shows the approximate address where the bus error was encountered (will not to be earlier, or more than 5 transfers later)"]
+ WRITE_ADDR shows the approximate address where the bus error was encountered (will not be earlier, or more than 5 transfers later)"]
 pub type WRITE_ERROR_W<'a, const O: u8> = crate::BitWriter1C<'a, CH_AL3_CTRL_SPEC, O>;
 #[doc = "Field `READ_ERROR` reader - If 1, the channel received a read bus error. Write one to clear.  
- READ_ADDR shows the approximate address where the bus error was encountered (will not to be earlier, or more than 3 transfers later)"]
+ READ_ADDR shows the approximate address where the bus error was encountered (will not be earlier, or more than 3 transfers later)"]
 pub type READ_ERROR_R = crate::BitReader;
 #[doc = "Field `READ_ERROR` writer - If 1, the channel received a read bus error. Write one to clear.  
- READ_ADDR shows the approximate address where the bus error was encountered (will not to be earlier, or more than 3 transfers later)"]
+ READ_ADDR shows the approximate address where the bus error was encountered (will not be earlier, or more than 3 transfers later)"]
 pub type READ_ERROR_W<'a, const O: u8> = crate::BitWriter1C<'a, CH_AL3_CTRL_SPEC, O>;
 #[doc = "Field `AHB_ERROR` reader - Logical OR of the READ_ERROR and WRITE_ERROR flags. The channel halts when it encounters any bus error, and always raises its channel IRQ flag."]
 pub type AHB_ERROR_R = crate::BitReader;
@@ -945,13 +945,13 @@ impl R {
         BUSY_R::new(((self.bits >> 24) & 1) != 0)
     }
     #[doc = "Bit 29 - If 1, the channel received a write bus error. Write one to clear.  
- WRITE_ADDR shows the approximate address where the bus error was encountered (will not to be earlier, or more than 5 transfers later)"]
+ WRITE_ADDR shows the approximate address where the bus error was encountered (will not be earlier, or more than 5 transfers later)"]
     #[inline(always)]
     pub fn write_error(&self) -> WRITE_ERROR_R {
         WRITE_ERROR_R::new(((self.bits >> 29) & 1) != 0)
     }
     #[doc = "Bit 30 - If 1, the channel received a read bus error. Write one to clear.  
- READ_ADDR shows the approximate address where the bus error was encountered (will not to be earlier, or more than 3 transfers later)"]
+ READ_ADDR shows the approximate address where the bus error was encountered (will not be earlier, or more than 3 transfers later)"]
     #[inline(always)]
     pub fn read_error(&self) -> READ_ERROR_R {
         READ_ERROR_R::new(((self.bits >> 30) & 1) != 0)
@@ -1054,14 +1054,14 @@ impl W {
         SNIFF_EN_W::new(self)
     }
     #[doc = "Bit 29 - If 1, the channel received a write bus error. Write one to clear.  
- WRITE_ADDR shows the approximate address where the bus error was encountered (will not to be earlier, or more than 5 transfers later)"]
+ WRITE_ADDR shows the approximate address where the bus error was encountered (will not be earlier, or more than 5 transfers later)"]
     #[inline(always)]
     #[must_use]
     pub fn write_error(&mut self) -> WRITE_ERROR_W<29> {
         WRITE_ERROR_W::new(self)
     }
     #[doc = "Bit 30 - If 1, the channel received a read bus error. Write one to clear.  
- READ_ADDR shows the approximate address where the bus error was encountered (will not to be earlier, or more than 3 transfers later)"]
+ READ_ADDR shows the approximate address where the bus error was encountered (will not be earlier, or more than 3 transfers later)"]
     #[inline(always)]
     #[must_use]
     pub fn read_error(&mut self) -> READ_ERROR_W<30> {

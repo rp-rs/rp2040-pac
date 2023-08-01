@@ -40,11 +40,15 @@ pub type SM_ENABLE_R = crate::FieldReader;
 pub type SM_ENABLE_W<'a, const O: u8> = crate::FieldWriter<'a, CTRL_SPEC, 4, O>;
 #[doc = "Field `SM_RESTART` reader - Write 1 to instantly clear internal SM state which may be otherwise difficult to access and will affect future execution.  
 
- Specifically, the following are cleared: input and output shift counters; the contents of the input shift register; the delay counter; the waiting-on-IRQ state; any stalled instruction written to SMx_INSTR or run by OUT/MOV EXEC; any pin write left asserted due to OUT_STICKY."]
+ Specifically, the following are cleared: input and output shift counters; the contents of the input shift register; the delay counter; the waiting-on-IRQ state; any stalled instruction written to SMx_INSTR or run by OUT/MOV EXEC; any pin write left asserted due to OUT_STICKY.  
+
+ The program counter, the contents of the output shift register and the X/Y scratch registers are not affected."]
 pub type SM_RESTART_R = crate::FieldReader;
 #[doc = "Field `SM_RESTART` writer - Write 1 to instantly clear internal SM state which may be otherwise difficult to access and will affect future execution.  
 
- Specifically, the following are cleared: input and output shift counters; the contents of the input shift register; the delay counter; the waiting-on-IRQ state; any stalled instruction written to SMx_INSTR or run by OUT/MOV EXEC; any pin write left asserted due to OUT_STICKY."]
+ Specifically, the following are cleared: input and output shift counters; the contents of the input shift register; the delay counter; the waiting-on-IRQ state; any stalled instruction written to SMx_INSTR or run by OUT/MOV EXEC; any pin write left asserted due to OUT_STICKY.  
+
+ The program counter, the contents of the output shift register and the X/Y scratch registers are not affected."]
 pub type SM_RESTART_W<'a, const O: u8> = crate::FieldWriter<'a, CTRL_SPEC, 4, O>;
 #[doc = "Field `CLKDIV_RESTART` reader - Restart a state machine's clock divider from an initial phase of 0. Clock dividers are free-running, so once started, their output (including fractional jitter) is completely determined by the integer/fractional divisor configured in SMx_CLKDIV. This means that, if multiple clock dividers with the same divisor are restarted simultaneously, by writing multiple 1 bits to this field, the execution clocks of those state machines will run in precise lockstep.  
 
@@ -66,7 +70,9 @@ impl R {
     }
     #[doc = "Bits 4:7 - Write 1 to instantly clear internal SM state which may be otherwise difficult to access and will affect future execution.  
 
- Specifically, the following are cleared: input and output shift counters; the contents of the input shift register; the delay counter; the waiting-on-IRQ state; any stalled instruction written to SMx_INSTR or run by OUT/MOV EXEC; any pin write left asserted due to OUT_STICKY."]
+ Specifically, the following are cleared: input and output shift counters; the contents of the input shift register; the delay counter; the waiting-on-IRQ state; any stalled instruction written to SMx_INSTR or run by OUT/MOV EXEC; any pin write left asserted due to OUT_STICKY.  
+
+ The program counter, the contents of the output shift register and the X/Y scratch registers are not affected."]
     #[inline(always)]
     pub fn sm_restart(&self) -> SM_RESTART_R {
         SM_RESTART_R::new(((self.bits >> 4) & 0x0f) as u8)
@@ -90,7 +96,9 @@ impl W {
     }
     #[doc = "Bits 4:7 - Write 1 to instantly clear internal SM state which may be otherwise difficult to access and will affect future execution.  
 
- Specifically, the following are cleared: input and output shift counters; the contents of the input shift register; the delay counter; the waiting-on-IRQ state; any stalled instruction written to SMx_INSTR or run by OUT/MOV EXEC; any pin write left asserted due to OUT_STICKY."]
+ Specifically, the following are cleared: input and output shift counters; the contents of the input shift register; the delay counter; the waiting-on-IRQ state; any stalled instruction written to SMx_INSTR or run by OUT/MOV EXEC; any pin write left asserted due to OUT_STICKY.  
+
+ The program counter, the contents of the output shift register and the X/Y scratch registers are not affected."]
     #[inline(always)]
     #[must_use]
     pub fn sm_restart(&mut self) -> SM_RESTART_W<4> {
