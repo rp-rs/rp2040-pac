@@ -5,7 +5,7 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [Unreleased]
+## [0.5.0] [Crates.io](https://crates.io/crates/rp2040-pac/0.5.0) [Github](https://github.com/rp-rs/rp2040-pac/releases/tag/v0.5.0)
 
 - Rebuild with svd2rust 0.29.0, svdtools 0.3.0 (rust version)
 - Add docs.rs metadata to include documentation gated by the `rt` feature
@@ -79,7 +79,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Initialized crate
 
-[Unreleased]: https://github.com/rp-rs/rp2040-pac/compare/v0.4.0...HEAD
+[Unreleased]: https://github.com/rp-rs/rp2040-pac/compare/v0.5.0...HEAD
+[0.5.0]: https://github.com/rp-rs/rp2040-pac/compare/v0.4.0...v0.5.0
 [0.4.0]: https://github.com/rp-rs/rp2040-pac/compare/v0.3.0...v0.4.0
 [0.3.0]: https://github.com/rp-rs/rp2040-pac/compare/v0.2.1...v0.3.0
 [0.2.1]: https://github.com/rp-rs/rp2040-pac/compare/v0.2.0...v0.2.1
