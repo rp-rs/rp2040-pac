@@ -7,8 +7,7 @@ Cortex-M0+ microcontroller.
 [RP2040]: https://datasheets.raspberrypi.org/rp2040/rp2040_datasheet.pdf
 
 This crate has been built using [svd2rust] version 0.29.0 and [svdtools], using
-the SVD file in the [pico-sdk v1.5.1]. Some manual fixes have been made to the
-documentation formatting, and the removal of some unrecognized lints.
+the SVD file in the [pico-sdk v1.5.1].
 
 [svd2rust]: https://github.com/rust-embedded/svd2rust
 [svdtools]: https://github.com/stm32-rs/svdtools
