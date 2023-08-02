@@ -14,7 +14,7 @@ targets = ["thumbv6m-none-eabi"]
 
 [dependencies]
 cortex-m = "0.7.3"
-vcell = "0.1.0"
+vcell = "0.1.3"
 
 [dependencies.cortex-m-rt]
 optional = true
