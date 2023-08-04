@@ -722,6 +722,12 @@ USBCTRL_DPRAM:
         _start_from_zero: true
         name: "EP_CONTROL%s"
 
+  _copy:
+    EPX_CONTROL:
+      _from: "EP1_IN_CONTROL"
+      addressOffset: 0x100
+      description: "EPx Control (Host-mode only!)"
+        
 _add:
   SW_IRQ:
     description: Virtual Peripheral to access unused NVIC software interrupts

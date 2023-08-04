@@ -9,6 +9,8 @@ pub struct RegisterBlock {
     pub ep_control: [EP_CONTROL; 30],
     #[doc = "0x80..0x100 - -"]
     pub ep_buffer_control: [EP_BUFFER_CONTROL; 32],
+    #[doc = "0x100 - EPx Control (Host-mode only!)"]
+    pub epx_control: EPX_CONTROL,
 }
 #[doc = "SETUP_PACKET_LOW (rw) register accessor: an alias for `Reg<SETUP_PACKET_LOW_SPEC>`"]
 pub type SETUP_PACKET_LOW = crate::Reg<setup_packet_low::SETUP_PACKET_LOW_SPEC>;
@@ -26,3 +28,7 @@ pub mod ep_control;
 pub type EP_BUFFER_CONTROL = crate::Reg<ep_buffer_control::EP_BUFFER_CONTROL_SPEC>;
 #[doc = "-"]
 pub mod ep_buffer_control;
+#[doc = "EPX_CONTROL (rw) register accessor: an alias for `Reg<EPX_CONTROL_SPEC>`"]
+pub type EPX_CONTROL = crate::Reg<epx_control::EPX_CONTROL_SPEC>;
+#[doc = "EPx Control (Host-mode only!)"]
+pub mod epx_control;
