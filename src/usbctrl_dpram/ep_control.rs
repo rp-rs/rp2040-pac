@@ -42,6 +42,11 @@ pub type BUFFER_ADDRESS_W<'a, const O: u8> = crate::FieldWriter<'a, EP_CONTROL_S
 pub type INTERRUPT_ON_NAK_R = crate::BitReader;
 #[doc = "Field `INTERRUPT_ON_NAK` writer - Trigger an interrupt if a NAK is sent. Intended for debug only."]
 pub type INTERRUPT_ON_NAK_W<'a, const O: u8> = crate::BitWriter<'a, EP_CONTROL_SPEC, O>;
+#[doc = "Field `HOST_POLL_INTERVAL` reader - The interval the host controller should poll this endpoint. Only applicable for interrupt endpoints. Specified in ms - 1. For example: a value of 9 would poll the endpoint every 10ms."]
+pub type HOST_POLL_INTERVAL_R = crate::FieldReader<u16>;
+#[doc = "Field `HOST_POLL_INTERVAL` writer - The interval the host controller should poll this endpoint. Only applicable for interrupt endpoints. Specified in ms - 1. For example: a value of 9 would poll the endpoint every 10ms."]
+pub type HOST_POLL_INTERVAL_W<'a, const O: u8> =
+    crate::FieldWriter<'a, EP_CONTROL_SPEC, 10, O, u16>;
 #[doc = "Field `INTERRUPT_ON_STALL` reader - Trigger an interrupt if a STALL is sent. Intended for debug only."]
 pub type INTERRUPT_ON_STALL_R = crate::BitReader;
 #[doc = "Field `INTERRUPT_ON_STALL` writer - Trigger an interrupt if a STALL is sent. Intended for debug only."]
@@ -157,6 +162,11 @@ impl R {
     pub fn interrupt_on_nak(&self) -> INTERRUPT_ON_NAK_R {
         INTERRUPT_ON_NAK_R::new(((self.bits >> 16) & 1) != 0)
     }
+    #[doc = "Bits 16:25 - The interval the host controller should poll this endpoint. Only applicable for interrupt endpoints. Specified in ms - 1. For example: a value of 9 would poll the endpoint every 10ms."]
+    #[inline(always)]
+    pub fn host_poll_interval(&self) -> HOST_POLL_INTERVAL_R {
+        HOST_POLL_INTERVAL_R::new(((self.bits >> 16) & 0x03ff) as u16)
+    }
     #[doc = "Bit 17 - Trigger an interrupt if a STALL is sent. Intended for debug only."]
     #[inline(always)]
     pub fn interrupt_on_stall(&self) -> INTERRUPT_ON_STALL_R {
@@ -200,6 +210,12 @@ impl W {
     #[must_use]
     pub fn interrupt_on_nak(&mut self) -> INTERRUPT_ON_NAK_W<16> {
         INTERRUPT_ON_NAK_W::new(self)
+    }
+    #[doc = "Bits 16:25 - The interval the host controller should poll this endpoint. Only applicable for interrupt endpoints. Specified in ms - 1. For example: a value of 9 would poll the endpoint every 10ms."]
+    #[inline(always)]
+    #[must_use]
+    pub fn host_poll_interval(&mut self) -> HOST_POLL_INTERVAL_W<16> {
+        HOST_POLL_INTERVAL_W::new(self)
     }
     #[doc = "Bit 17 - Trigger an interrupt if a STALL is sent. Intended for debug only."]
     #[inline(always)]

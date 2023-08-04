@@ -727,7 +727,14 @@ USBCTRL_DPRAM:
       _from: "EP1_IN_CONTROL"
       addressOffset: 0x100
       description: "EPx Control (Host-mode only!)"
-        
+
+  "EP*_IN_CONTROL,EP*_OUT_CONTROL":
+    _add:
+      HOST_POLL_INTERVAL:
+        description: "The interval the host controller should poll this endpoint. Only applicable for interrupt endpoints. Specified in ms - 1. For example: a value of 9 would poll the endpoint every 10ms."
+        bitOffset: 16
+        bitWidth: 10
+
 _add:
   SW_IRQ:
     description: Virtual Peripheral to access unused NVIC software interrupts

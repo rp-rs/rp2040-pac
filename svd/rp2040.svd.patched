@@ -17035,6 +17035,12 @@
               <bitRange>[15:0]</bitRange>
               <access>read-write</access>
             </field>
+            <field>
+              <name>HOST_POLL_INTERVAL</name>
+              <description>The interval the host controller should poll this endpoint. Only applicable for interrupt endpoints. Specified in ms - 1. For example: a value of 9 would poll the endpoint every 10ms.</description>
+              <bitOffset>16</bitOffset>
+              <bitWidth>10</bitWidth>
+            </field>
           </fields>
         </register>
         <register>
