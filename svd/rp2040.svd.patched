@@ -17267,7 +17267,7 @@
           <dimIncrement>0x4</dimIncrement>
           <dimIndex>1-15</dimIndex>
           <name>HOST_ADDR_ENDP%s</name>
-          <description>-</description>
+          <description>Interrupt endpoints. Only valid in HOST mode.</description>
           <addressOffset>0x4</addressOffset>
           <resetValue>0x00000000</resetValue>
           <fields>

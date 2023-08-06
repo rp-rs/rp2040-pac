@@ -664,10 +664,10 @@ USBCTRL_REGS:
       K: [2, "K"]
       SE1: [3, "SE1"]
 
-  # The ADDR_ENDP* registers are first collected into the array HOST_ADDR_ENDP.
+  # The ADDR_ENDP* registers collected into the array HOST_ADDR_ENDP.
   # This renaming is necessary to avoid collision with the "ADDR_ENDP" register used in device mode.
   _array:
-    "ADDR_ENDP[0123456789],ADDR_ENDP1[012345]":
+    "ADDR_ENDP[123456789],ADDR_ENDP1[012345]":
       name: "HOST_ADDR_ENDP%s"
       description: "Interrupt endpoints. Only valid in HOST mode."
 

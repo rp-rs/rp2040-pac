@@ -3,7 +3,7 @@
 pub struct RegisterBlock {
     #[doc = "0x00 - Device address and endpoint control"]
     pub addr_endp: ADDR_ENDP,
-    #[doc = "0x04..0x40 - -"]
+    #[doc = "0x04..0x40 - Interrupt endpoints. Only valid in HOST mode."]
     pub host_addr_endp: [HOST_ADDR_ENDP; 15],
     #[doc = "0x40 - Main control register"]
     pub main_ctrl: MAIN_CTRL,
@@ -52,77 +52,77 @@ pub struct RegisterBlock {
     pub ints: INTS,
 }
 impl RegisterBlock {
-    #[doc = "0x04 - -"]
+    #[doc = "0x04 - Interrupt endpoints. Only valid in HOST mode."]
     #[inline(always)]
     pub fn host_addr_endp1(&self) -> &HOST_ADDR_ENDP {
         &self.host_addr_endp[0]
     }
-    #[doc = "0x08 - -"]
+    #[doc = "0x08 - Interrupt endpoints. Only valid in HOST mode."]
     #[inline(always)]
     pub fn host_addr_endp2(&self) -> &HOST_ADDR_ENDP {
         &self.host_addr_endp[1]
     }
-    #[doc = "0x0c - -"]
+    #[doc = "0x0c - Interrupt endpoints. Only valid in HOST mode."]
     #[inline(always)]
     pub fn host_addr_endp3(&self) -> &HOST_ADDR_ENDP {
         &self.host_addr_endp[2]
     }
-    #[doc = "0x10 - -"]
+    #[doc = "0x10 - Interrupt endpoints. Only valid in HOST mode."]
     #[inline(always)]
     pub fn host_addr_endp4(&self) -> &HOST_ADDR_ENDP {
         &self.host_addr_endp[3]
     }
-    #[doc = "0x14 - -"]
+    #[doc = "0x14 - Interrupt endpoints. Only valid in HOST mode."]
     #[inline(always)]
     pub fn host_addr_endp5(&self) -> &HOST_ADDR_ENDP {
         &self.host_addr_endp[4]
     }
-    #[doc = "0x18 - -"]
+    #[doc = "0x18 - Interrupt endpoints. Only valid in HOST mode."]
     #[inline(always)]
     pub fn host_addr_endp6(&self) -> &HOST_ADDR_ENDP {
         &self.host_addr_endp[5]
     }
-    #[doc = "0x1c - -"]
+    #[doc = "0x1c - Interrupt endpoints. Only valid in HOST mode."]
     #[inline(always)]
     pub fn host_addr_endp7(&self) -> &HOST_ADDR_ENDP {
         &self.host_addr_endp[6]
     }
-    #[doc = "0x20 - -"]
+    #[doc = "0x20 - Interrupt endpoints. Only valid in HOST mode."]
     #[inline(always)]
     pub fn host_addr_endp8(&self) -> &HOST_ADDR_ENDP {
         &self.host_addr_endp[7]
     }
-    #[doc = "0x24 - -"]
+    #[doc = "0x24 - Interrupt endpoints. Only valid in HOST mode."]
     #[inline(always)]
     pub fn host_addr_endp9(&self) -> &HOST_ADDR_ENDP {
         &self.host_addr_endp[8]
     }
-    #[doc = "0x28 - -"]
+    #[doc = "0x28 - Interrupt endpoints. Only valid in HOST mode."]
     #[inline(always)]
     pub fn host_addr_endp10(&self) -> &HOST_ADDR_ENDP {
         &self.host_addr_endp[9]
     }
-    #[doc = "0x2c - -"]
+    #[doc = "0x2c - Interrupt endpoints. Only valid in HOST mode."]
     #[inline(always)]
     pub fn host_addr_endp11(&self) -> &HOST_ADDR_ENDP {
         &self.host_addr_endp[10]
     }
-    #[doc = "0x30 - -"]
+    #[doc = "0x30 - Interrupt endpoints. Only valid in HOST mode."]
     #[inline(always)]
     pub fn host_addr_endp12(&self) -> &HOST_ADDR_ENDP {
         &self.host_addr_endp[11]
     }
-    #[doc = "0x34 - -"]
+    #[doc = "0x34 - Interrupt endpoints. Only valid in HOST mode."]
     #[inline(always)]
     pub fn host_addr_endp13(&self) -> &HOST_ADDR_ENDP {
         &self.host_addr_endp[12]
     }
-    #[doc = "0x38 - -"]
+    #[doc = "0x38 - Interrupt endpoints. Only valid in HOST mode."]
     #[inline(always)]
     pub fn host_addr_endp14(&self) -> &HOST_ADDR_ENDP {
         &self.host_addr_endp[13]
     }
-    #[doc = "0x3c - -"]
+    #[doc = "0x3c - Interrupt endpoints. Only valid in HOST mode."]
     #[inline(always)]
     pub fn host_addr_endp15(&self) -> &HOST_ADDR_ENDP {
         &self.host_addr_endp[14]
@@ -134,7 +134,7 @@ pub type ADDR_ENDP = crate::Reg<addr_endp::ADDR_ENDP_SPEC>;
 pub mod addr_endp;
 #[doc = "HOST_ADDR_ENDP (rw) register accessor: an alias for `Reg<HOST_ADDR_ENDP_SPEC>`"]
 pub type HOST_ADDR_ENDP = crate::Reg<host_addr_endp::HOST_ADDR_ENDP_SPEC>;
-#[doc = "-"]
+#[doc = "Interrupt endpoints. Only valid in HOST mode."]
 pub mod host_addr_endp;
 #[doc = "MAIN_CTRL (rw) register accessor: an alias for `Reg<MAIN_CTRL_SPEC>`"]
 pub type MAIN_CTRL = crate::Reg<main_ctrl::MAIN_CTRL_SPEC>;
