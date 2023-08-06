@@ -664,60 +664,12 @@ USBCTRL_REGS:
       K: [2, "K"]
       SE1: [3, "SE1"]
 
-  # The ADDR_ENDP* registers are first renamed to HOST_ADDR_ENDP*, and then collected into an array below.
-  # This renaming step is necessary, since otherwise the "ADDR_ENDP*" pattern will also match the
-  # register which is literally named "ADDR_ENDP" (with no number), which should not be collected into the
-  # array.
-  _modify:
-    "ADDR_ENDP1":
-      description: "-"
-      name: "HOST_ADDR_ENDP1"
-    "ADDR_ENDP2":                           
-      description: "-"                      
-      name: "HOST_ADDR_ENDP2"               
-    "ADDR_ENDP3":                           
-      description: "-"                      
-      name: "HOST_ADDR_ENDP3"               
-    "ADDR_ENDP4":                           
-      description: "-"                      
-      name: "HOST_ADDR_ENDP4"               
-    "ADDR_ENDP5":                           
-      description: "-"                      
-      name: "HOST_ADDR_ENDP5"               
-    "ADDR_ENDP6":
-      description: "-"
-      name: "HOST_ADDR_ENDP6"
-    "ADDR_ENDP7":
-      description: "-"
-      name: "HOST_ADDR_ENDP7"
-    "ADDR_ENDP8":
-      description: "-"
-      name: "HOST_ADDR_ENDP8"
-    "ADDR_ENDP9":
-      description: "-"
-      name: "HOST_ADDR_ENDP9"
-    "ADDR_ENDP10":
-      description: "-"
-      name: "HOST_ADDR_ENDP10"
-    "ADDR_ENDP11":
-      description: "-"
-      name: "HOST_ADDR_ENDP11"
-    "ADDR_ENDP12":
-      description: "-"
-      name: "HOST_ADDR_ENDP12"
-    "ADDR_ENDP13":
-      description: "-"
-      name: "HOST_ADDR_ENDP13"
-    "ADDR_ENDP14":
-      description: "-"
-      name: "HOST_ADDR_ENDP14"
-    "ADDR_ENDP15":
-      description: "-"
-      name: "HOST_ADDR_ENDP15"
-
+  # The ADDR_ENDP* registers are first collected into the array HOST_ADDR_ENDP.
+  # This renaming is necessary to avoid collision with the "ADDR_ENDP" register used in device mode.
   _array:
-    "HOST_ADDR_ENDP*":
+    "ADDR_ENDP[0123456789],ADDR_ENDP1[012345]":
       name: "HOST_ADDR_ENDP%s"
+      description: "Interrupt endpoints. Only valid in HOST mode."
 
 ROSC:
   _delete:
