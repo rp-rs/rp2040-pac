@@ -3,36 +3,8 @@
 pub struct RegisterBlock {
     #[doc = "0x00 - Device address and endpoint control"]
     pub addr_endp: ADDR_ENDP,
-    #[doc = "0x04 - Interrupt endpoint 1. Only valid for HOST mode."]
-    pub addr_endp1: ADDR_ENDP1,
-    #[doc = "0x08 - Interrupt endpoint 2. Only valid for HOST mode."]
-    pub addr_endp2: ADDR_ENDP2,
-    #[doc = "0x0c - Interrupt endpoint 3. Only valid for HOST mode."]
-    pub addr_endp3: ADDR_ENDP3,
-    #[doc = "0x10 - Interrupt endpoint 4. Only valid for HOST mode."]
-    pub addr_endp4: ADDR_ENDP4,
-    #[doc = "0x14 - Interrupt endpoint 5. Only valid for HOST mode."]
-    pub addr_endp5: ADDR_ENDP5,
-    #[doc = "0x18 - Interrupt endpoint 6. Only valid for HOST mode."]
-    pub addr_endp6: ADDR_ENDP6,
-    #[doc = "0x1c - Interrupt endpoint 7. Only valid for HOST mode."]
-    pub addr_endp7: ADDR_ENDP7,
-    #[doc = "0x20 - Interrupt endpoint 8. Only valid for HOST mode."]
-    pub addr_endp8: ADDR_ENDP8,
-    #[doc = "0x24 - Interrupt endpoint 9. Only valid for HOST mode."]
-    pub addr_endp9: ADDR_ENDP9,
-    #[doc = "0x28 - Interrupt endpoint 10. Only valid for HOST mode."]
-    pub addr_endp10: ADDR_ENDP10,
-    #[doc = "0x2c - Interrupt endpoint 11. Only valid for HOST mode."]
-    pub addr_endp11: ADDR_ENDP11,
-    #[doc = "0x30 - Interrupt endpoint 12. Only valid for HOST mode."]
-    pub addr_endp12: ADDR_ENDP12,
-    #[doc = "0x34 - Interrupt endpoint 13. Only valid for HOST mode."]
-    pub addr_endp13: ADDR_ENDP13,
-    #[doc = "0x38 - Interrupt endpoint 14. Only valid for HOST mode."]
-    pub addr_endp14: ADDR_ENDP14,
-    #[doc = "0x3c - Interrupt endpoint 15. Only valid for HOST mode."]
-    pub addr_endp15: ADDR_ENDP15,
+    #[doc = "0x04..0x40 - Interrupt endpoints. Only valid in HOST mode."]
+    pub host_addr_endp: [HOST_ADDR_ENDP; 15],
     #[doc = "0x40 - Main control register"]
     pub main_ctrl: MAIN_CTRL,
     #[doc = "0x44 - Set the SOF (Start of Frame) frame number in the host controller. The SOF packet is sent every 1ms and the host will increment the frame number by 1 each time."]
@@ -69,7 +41,7 @@ pub struct RegisterBlock {
     pub usbphy_direct_override: USBPHY_DIRECT_OVERRIDE,
     #[doc = "0x84 - Used to adjust trim values of USB phy pull down resistors."]
     pub usbphy_trim: USBPHY_TRIM,
-    _reserved34: [u8; 0x04],
+    _reserved20: [u8; 0x04],
     #[doc = "0x8c - Raw Interrupts"]
     pub intr: INTR,
     #[doc = "0x90 - Interrupt Enable"]
@@ -79,70 +51,91 @@ pub struct RegisterBlock {
     #[doc = "0x98 - Interrupt status after masking &amp; forcing"]
     pub ints: INTS,
 }
+impl RegisterBlock {
+    #[doc = "0x04 - Interrupt endpoints. Only valid in HOST mode."]
+    #[inline(always)]
+    pub fn host_addr_endp1(&self) -> &HOST_ADDR_ENDP {
+        &self.host_addr_endp[0]
+    }
+    #[doc = "0x08 - Interrupt endpoints. Only valid in HOST mode."]
+    #[inline(always)]
+    pub fn host_addr_endp2(&self) -> &HOST_ADDR_ENDP {
+        &self.host_addr_endp[1]
+    }
+    #[doc = "0x0c - Interrupt endpoints. Only valid in HOST mode."]
+    #[inline(always)]
+    pub fn host_addr_endp3(&self) -> &HOST_ADDR_ENDP {
+        &self.host_addr_endp[2]
+    }
+    #[doc = "0x10 - Interrupt endpoints. Only valid in HOST mode."]
+    #[inline(always)]
+    pub fn host_addr_endp4(&self) -> &HOST_ADDR_ENDP {
+        &self.host_addr_endp[3]
+    }
+    #[doc = "0x14 - Interrupt endpoints. Only valid in HOST mode."]
+    #[inline(always)]
+    pub fn host_addr_endp5(&self) -> &HOST_ADDR_ENDP {
+        &self.host_addr_endp[4]
+    }
+    #[doc = "0x18 - Interrupt endpoints. Only valid in HOST mode."]
+    #[inline(always)]
+    pub fn host_addr_endp6(&self) -> &HOST_ADDR_ENDP {
+        &self.host_addr_endp[5]
+    }
+    #[doc = "0x1c - Interrupt endpoints. Only valid in HOST mode."]
+    #[inline(always)]
+    pub fn host_addr_endp7(&self) -> &HOST_ADDR_ENDP {
+        &self.host_addr_endp[6]
+    }
+    #[doc = "0x20 - Interrupt endpoints. Only valid in HOST mode."]
+    #[inline(always)]
+    pub fn host_addr_endp8(&self) -> &HOST_ADDR_ENDP {
+        &self.host_addr_endp[7]
+    }
+    #[doc = "0x24 - Interrupt endpoints. Only valid in HOST mode."]
+    #[inline(always)]
+    pub fn host_addr_endp9(&self) -> &HOST_ADDR_ENDP {
+        &self.host_addr_endp[8]
+    }
+    #[doc = "0x28 - Interrupt endpoints. Only valid in HOST mode."]
+    #[inline(always)]
+    pub fn host_addr_endp10(&self) -> &HOST_ADDR_ENDP {
+        &self.host_addr_endp[9]
+    }
+    #[doc = "0x2c - Interrupt endpoints. Only valid in HOST mode."]
+    #[inline(always)]
+    pub fn host_addr_endp11(&self) -> &HOST_ADDR_ENDP {
+        &self.host_addr_endp[10]
+    }
+    #[doc = "0x30 - Interrupt endpoints. Only valid in HOST mode."]
+    #[inline(always)]
+    pub fn host_addr_endp12(&self) -> &HOST_ADDR_ENDP {
+        &self.host_addr_endp[11]
+    }
+    #[doc = "0x34 - Interrupt endpoints. Only valid in HOST mode."]
+    #[inline(always)]
+    pub fn host_addr_endp13(&self) -> &HOST_ADDR_ENDP {
+        &self.host_addr_endp[12]
+    }
+    #[doc = "0x38 - Interrupt endpoints. Only valid in HOST mode."]
+    #[inline(always)]
+    pub fn host_addr_endp14(&self) -> &HOST_ADDR_ENDP {
+        &self.host_addr_endp[13]
+    }
+    #[doc = "0x3c - Interrupt endpoints. Only valid in HOST mode."]
+    #[inline(always)]
+    pub fn host_addr_endp15(&self) -> &HOST_ADDR_ENDP {
+        &self.host_addr_endp[14]
+    }
+}
 #[doc = "ADDR_ENDP (rw) register accessor: an alias for `Reg<ADDR_ENDP_SPEC>`"]
 pub type ADDR_ENDP = crate::Reg<addr_endp::ADDR_ENDP_SPEC>;
 #[doc = "Device address and endpoint control"]
 pub mod addr_endp;
-#[doc = "ADDR_ENDP1 (rw) register accessor: an alias for `Reg<ADDR_ENDP1_SPEC>`"]
-pub type ADDR_ENDP1 = crate::Reg<addr_endp1::ADDR_ENDP1_SPEC>;
-#[doc = "Interrupt endpoint 1. Only valid for HOST mode."]
-pub mod addr_endp1;
-#[doc = "ADDR_ENDP2 (rw) register accessor: an alias for `Reg<ADDR_ENDP2_SPEC>`"]
-pub type ADDR_ENDP2 = crate::Reg<addr_endp2::ADDR_ENDP2_SPEC>;
-#[doc = "Interrupt endpoint 2. Only valid for HOST mode."]
-pub mod addr_endp2;
-#[doc = "ADDR_ENDP3 (rw) register accessor: an alias for `Reg<ADDR_ENDP3_SPEC>`"]
-pub type ADDR_ENDP3 = crate::Reg<addr_endp3::ADDR_ENDP3_SPEC>;
-#[doc = "Interrupt endpoint 3. Only valid for HOST mode."]
-pub mod addr_endp3;
-#[doc = "ADDR_ENDP4 (rw) register accessor: an alias for `Reg<ADDR_ENDP4_SPEC>`"]
-pub type ADDR_ENDP4 = crate::Reg<addr_endp4::ADDR_ENDP4_SPEC>;
-#[doc = "Interrupt endpoint 4. Only valid for HOST mode."]
-pub mod addr_endp4;
-#[doc = "ADDR_ENDP5 (rw) register accessor: an alias for `Reg<ADDR_ENDP5_SPEC>`"]
-pub type ADDR_ENDP5 = crate::Reg<addr_endp5::ADDR_ENDP5_SPEC>;
-#[doc = "Interrupt endpoint 5. Only valid for HOST mode."]
-pub mod addr_endp5;
-#[doc = "ADDR_ENDP6 (rw) register accessor: an alias for `Reg<ADDR_ENDP6_SPEC>`"]
-pub type ADDR_ENDP6 = crate::Reg<addr_endp6::ADDR_ENDP6_SPEC>;
-#[doc = "Interrupt endpoint 6. Only valid for HOST mode."]
-pub mod addr_endp6;
-#[doc = "ADDR_ENDP7 (rw) register accessor: an alias for `Reg<ADDR_ENDP7_SPEC>`"]
-pub type ADDR_ENDP7 = crate::Reg<addr_endp7::ADDR_ENDP7_SPEC>;
-#[doc = "Interrupt endpoint 7. Only valid for HOST mode."]
-pub mod addr_endp7;
-#[doc = "ADDR_ENDP8 (rw) register accessor: an alias for `Reg<ADDR_ENDP8_SPEC>`"]
-pub type ADDR_ENDP8 = crate::Reg<addr_endp8::ADDR_ENDP8_SPEC>;
-#[doc = "Interrupt endpoint 8. Only valid for HOST mode."]
-pub mod addr_endp8;
-#[doc = "ADDR_ENDP9 (rw) register accessor: an alias for `Reg<ADDR_ENDP9_SPEC>`"]
-pub type ADDR_ENDP9 = crate::Reg<addr_endp9::ADDR_ENDP9_SPEC>;
-#[doc = "Interrupt endpoint 9. Only valid for HOST mode."]
-pub mod addr_endp9;
-#[doc = "ADDR_ENDP10 (rw) register accessor: an alias for `Reg<ADDR_ENDP10_SPEC>`"]
-pub type ADDR_ENDP10 = crate::Reg<addr_endp10::ADDR_ENDP10_SPEC>;
-#[doc = "Interrupt endpoint 10. Only valid for HOST mode."]
-pub mod addr_endp10;
-#[doc = "ADDR_ENDP11 (rw) register accessor: an alias for `Reg<ADDR_ENDP11_SPEC>`"]
-pub type ADDR_ENDP11 = crate::Reg<addr_endp11::ADDR_ENDP11_SPEC>;
-#[doc = "Interrupt endpoint 11. Only valid for HOST mode."]
-pub mod addr_endp11;
-#[doc = "ADDR_ENDP12 (rw) register accessor: an alias for `Reg<ADDR_ENDP12_SPEC>`"]
-pub type ADDR_ENDP12 = crate::Reg<addr_endp12::ADDR_ENDP12_SPEC>;
-#[doc = "Interrupt endpoint 12. Only valid for HOST mode."]
-pub mod addr_endp12;
-#[doc = "ADDR_ENDP13 (rw) register accessor: an alias for `Reg<ADDR_ENDP13_SPEC>`"]
-pub type ADDR_ENDP13 = crate::Reg<addr_endp13::ADDR_ENDP13_SPEC>;
-#[doc = "Interrupt endpoint 13. Only valid for HOST mode."]
-pub mod addr_endp13;
-#[doc = "ADDR_ENDP14 (rw) register accessor: an alias for `Reg<ADDR_ENDP14_SPEC>`"]
-pub type ADDR_ENDP14 = crate::Reg<addr_endp14::ADDR_ENDP14_SPEC>;
-#[doc = "Interrupt endpoint 14. Only valid for HOST mode."]
-pub mod addr_endp14;
-#[doc = "ADDR_ENDP15 (rw) register accessor: an alias for `Reg<ADDR_ENDP15_SPEC>`"]
-pub type ADDR_ENDP15 = crate::Reg<addr_endp15::ADDR_ENDP15_SPEC>;
-#[doc = "Interrupt endpoint 15. Only valid for HOST mode."]
-pub mod addr_endp15;
+#[doc = "HOST_ADDR_ENDP (rw) register accessor: an alias for `Reg<HOST_ADDR_ENDP_SPEC>`"]
+pub type HOST_ADDR_ENDP = crate::Reg<host_addr_endp::HOST_ADDR_ENDP_SPEC>;
+#[doc = "Interrupt endpoints. Only valid in HOST mode."]
+pub mod host_addr_endp;
 #[doc = "MAIN_CTRL (rw) register accessor: an alias for `Reg<MAIN_CTRL_SPEC>`"]
 pub type MAIN_CTRL = crate::Reg<main_ctrl::MAIN_CTRL_SPEC>;
 #[doc = "Main control register"]

@@ -664,6 +664,13 @@ USBCTRL_REGS:
       K: [2, "K"]
       SE1: [3, "SE1"]
 
+  # The ADDR_ENDP* registers collected into the array HOST_ADDR_ENDP.
+  # This renaming is necessary to avoid collision with the "ADDR_ENDP" register used in device mode.
+  _array:
+    "ADDR_ENDP[123456789],ADDR_ENDP1[012345]":
+      name: "HOST_ADDR_ENDP%s"
+      description: "Interrupt endpoints. Only valid in HOST mode."
+
 ROSC:
   _delete:
     # RP2040-E7: ROSC and XOSC COUNT registers are unreliable
@@ -721,6 +728,19 @@ USBCTRL_DPRAM:
     "EP*_IN_CONTROL,EP*_OUT_CONTROL":
         _start_from_zero: true
         name: "EP_CONTROL%s"
+
+  _copy:
+    EPX_CONTROL:
+      _from: "EP1_IN_CONTROL"
+      addressOffset: 0x100
+      description: "EPx Control (Host-mode only!)"
+
+  "EP*_IN_CONTROL,EP*_OUT_CONTROL":
+    _add:
+      HOST_POLL_INTERVAL:
+        description: "The interval the host controller should poll this endpoint. Only applicable for interrupt endpoints. Specified in ms - 1. For example: a value of 9 would poll the endpoint every 10ms."
+        bitOffset: 16
+        bitWidth: 10
 
 _add:
   SW_IRQ:
