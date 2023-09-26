@@ -3,8 +3,7 @@
   <vendor>Raspberry Pi</vendor>
   <name>RP2040</name>
   <version>0.1</version>
-  <description>
-    Dual-core Arm Cortex-M0+ processor, flexible clock running up to 133 MHz\n
+  <description>Dual-core Arm Cortex-M0+ processor, flexible clock running up to 133 MHz\n
     264KB on-chip SRAM\n
     2 x UART, 2 x SPI controllers, 2 x I2C controllers, 16 x PWM channels\n
     1 x USB 1.1 controller and PHY, with host and device support\n
@@ -15,13 +14,10 @@
     Low-power sleep and dormant modes\n
     Accurate on-chip clock\n
     Temperature sensor\n
-    Accelerated integer and floating-point libraries on-chip
-  </description>
-  <licenseText>
-    Copyright (c) 2020 Raspberry Pi (Trading) Ltd.\n
+    Accelerated integer and floating-point libraries on-chip</description>
+  <licenseText>Copyright (c) 2020 Raspberry Pi (Trading) Ltd.\n
     \n
-    SPDX-License-Identifier: BSD-3-Clause
-  </licenseText>
+    SPDX-License-Identifier: BSD-3-Clause</licenseText>
   <cpu>
     <name>CM0PLUS</name>
     <revision>r0p1</revision>
