@@ -1,39 +1,7 @@
 #[doc = "Register `DIV_UDIVIDEND` reader"]
-pub struct R(crate::R<DIV_UDIVIDEND_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<DIV_UDIVIDEND_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<DIV_UDIVIDEND_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<DIV_UDIVIDEND_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<DIV_UDIVIDEND_SPEC>;
 #[doc = "Register `DIV_UDIVIDEND` writer"]
-pub struct W(crate::W<DIV_UDIVIDEND_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<DIV_UDIVIDEND_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<DIV_UDIVIDEND_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<DIV_UDIVIDEND_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<DIV_UDIVIDEND_SPEC>;
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         write!(f, "{}", self.bits())
@@ -45,10 +13,14 @@ impl core::fmt::Debug for crate::generic::Reg<DIV_UDIVIDEND_SPEC> {
     }
 }
 impl W {
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
@@ -58,20 +30,15 @@ impl W {
  UDIVIDEND/SDIVIDEND are aliases of the same internal register. The U alias starts an  
  unsigned calculation, and the S alias starts a signed calculation.  
 
-This register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
-
-For information about available fields see [div_udividend](index.html) module"]
+You can [`read`](crate::generic::Reg::read) this register and get [`div_udividend::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`div_udividend::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct DIV_UDIVIDEND_SPEC;
 impl crate::RegisterSpec for DIV_UDIVIDEND_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [div_udividend::R](R) reader structure"]
-impl crate::Readable for DIV_UDIVIDEND_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [div_udividend::W](W) writer structure"]
+#[doc = "`read()` method returns [`div_udividend::R`](R) reader structure"]
+impl crate::Readable for DIV_UDIVIDEND_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`div_udividend::W`](W) writer structure"]
 impl crate::Writable for DIV_UDIVIDEND_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

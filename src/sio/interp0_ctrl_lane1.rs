@@ -1,73 +1,41 @@
 #[doc = "Register `INTERP0_CTRL_LANE1` reader"]
-pub struct R(crate::R<INTERP0_CTRL_LANE1_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<INTERP0_CTRL_LANE1_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<INTERP0_CTRL_LANE1_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<INTERP0_CTRL_LANE1_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<INTERP0_CTRL_LANE1_SPEC>;
 #[doc = "Register `INTERP0_CTRL_LANE1` writer"]
-pub struct W(crate::W<INTERP0_CTRL_LANE1_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<INTERP0_CTRL_LANE1_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<INTERP0_CTRL_LANE1_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<INTERP0_CTRL_LANE1_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<INTERP0_CTRL_LANE1_SPEC>;
 #[doc = "Field `SHIFT` reader - Logical right-shift applied to accumulator before masking"]
 pub type SHIFT_R = crate::FieldReader;
 #[doc = "Field `SHIFT` writer - Logical right-shift applied to accumulator before masking"]
-pub type SHIFT_W<'a, const O: u8> = crate::FieldWriter<'a, INTERP0_CTRL_LANE1_SPEC, 5, O>;
+pub type SHIFT_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 5, O>;
 #[doc = "Field `MASK_LSB` reader - The least-significant bit allowed to pass by the mask (inclusive)"]
 pub type MASK_LSB_R = crate::FieldReader;
 #[doc = "Field `MASK_LSB` writer - The least-significant bit allowed to pass by the mask (inclusive)"]
-pub type MASK_LSB_W<'a, const O: u8> = crate::FieldWriter<'a, INTERP0_CTRL_LANE1_SPEC, 5, O>;
+pub type MASK_LSB_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 5, O>;
 #[doc = "Field `MASK_MSB` reader - The most-significant bit allowed to pass by the mask (inclusive)  
  Setting MSB &lt; LSB may cause chip to turn inside-out"]
 pub type MASK_MSB_R = crate::FieldReader;
 #[doc = "Field `MASK_MSB` writer - The most-significant bit allowed to pass by the mask (inclusive)  
  Setting MSB &lt; LSB may cause chip to turn inside-out"]
-pub type MASK_MSB_W<'a, const O: u8> = crate::FieldWriter<'a, INTERP0_CTRL_LANE1_SPEC, 5, O>;
+pub type MASK_MSB_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 5, O>;
 #[doc = "Field `SIGNED` reader - If SIGNED is set, the shifted and masked accumulator value is sign-extended to 32 bits  
  before adding to BASE1, and LANE1 PEEK/POP appear extended to 32 bits when read by processor."]
 pub type SIGNED_R = crate::BitReader;
 #[doc = "Field `SIGNED` writer - If SIGNED is set, the shifted and masked accumulator value is sign-extended to 32 bits  
  before adding to BASE1, and LANE1 PEEK/POP appear extended to 32 bits when read by processor."]
-pub type SIGNED_W<'a, const O: u8> = crate::BitWriter<'a, INTERP0_CTRL_LANE1_SPEC, O>;
+pub type SIGNED_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `CROSS_INPUT` reader - If 1, feed the opposite lane's accumulator into this lane's shift + mask hardware.  
  Takes effect even if ADD_RAW is set (the CROSS_INPUT mux is before the shift+mask bypass)"]
 pub type CROSS_INPUT_R = crate::BitReader;
 #[doc = "Field `CROSS_INPUT` writer - If 1, feed the opposite lane's accumulator into this lane's shift + mask hardware.  
  Takes effect even if ADD_RAW is set (the CROSS_INPUT mux is before the shift+mask bypass)"]
-pub type CROSS_INPUT_W<'a, const O: u8> = crate::BitWriter<'a, INTERP0_CTRL_LANE1_SPEC, O>;
+pub type CROSS_INPUT_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `CROSS_RESULT` reader - If 1, feed the opposite lane's result into this lane's accumulator on POP."]
 pub type CROSS_RESULT_R = crate::BitReader;
 #[doc = "Field `CROSS_RESULT` writer - If 1, feed the opposite lane's result into this lane's accumulator on POP."]
-pub type CROSS_RESULT_W<'a, const O: u8> = crate::BitWriter<'a, INTERP0_CTRL_LANE1_SPEC, O>;
+pub type CROSS_RESULT_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `ADD_RAW` reader - If 1, mask + shift is bypassed for LANE1 result. This does not affect FULL result."]
 pub type ADD_RAW_R = crate::BitReader;
 #[doc = "Field `ADD_RAW` writer - If 1, mask + shift is bypassed for LANE1 result. This does not affect FULL result."]
-pub type ADD_RAW_W<'a, const O: u8> = crate::BitWriter<'a, INTERP0_CTRL_LANE1_SPEC, O>;
+pub type ADD_RAW_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `FORCE_MSB` reader - ORed into bits 29:28 of the lane result presented to the processor on the bus.  
  No effect on the internal 32-bit datapath. Handy for using a lane to generate sequence  
  of pointers into flash or SRAM."]
@@ -75,7 +43,7 @@ pub type FORCE_MSB_R = crate::FieldReader;
 #[doc = "Field `FORCE_MSB` writer - ORed into bits 29:28 of the lane result presented to the processor on the bus.  
  No effect on the internal 32-bit datapath. Handy for using a lane to generate sequence  
  of pointers into flash or SRAM."]
-pub type FORCE_MSB_W<'a, const O: u8> = crate::FieldWriter<'a, INTERP0_CTRL_LANE1_SPEC, 2, O>;
+pub type FORCE_MSB_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
 impl R {
     #[doc = "Bits 0:4 - Logical right-shift applied to accumulator before masking"]
     #[inline(always)]
@@ -127,46 +95,46 @@ impl W {
     #[doc = "Bits 0:4 - Logical right-shift applied to accumulator before masking"]
     #[inline(always)]
     #[must_use]
-    pub fn shift(&mut self) -> SHIFT_W<0> {
+    pub fn shift(&mut self) -> SHIFT_W<INTERP0_CTRL_LANE1_SPEC, 0> {
         SHIFT_W::new(self)
     }
     #[doc = "Bits 5:9 - The least-significant bit allowed to pass by the mask (inclusive)"]
     #[inline(always)]
     #[must_use]
-    pub fn mask_lsb(&mut self) -> MASK_LSB_W<5> {
+    pub fn mask_lsb(&mut self) -> MASK_LSB_W<INTERP0_CTRL_LANE1_SPEC, 5> {
         MASK_LSB_W::new(self)
     }
     #[doc = "Bits 10:14 - The most-significant bit allowed to pass by the mask (inclusive)  
  Setting MSB &lt; LSB may cause chip to turn inside-out"]
     #[inline(always)]
     #[must_use]
-    pub fn mask_msb(&mut self) -> MASK_MSB_W<10> {
+    pub fn mask_msb(&mut self) -> MASK_MSB_W<INTERP0_CTRL_LANE1_SPEC, 10> {
         MASK_MSB_W::new(self)
     }
     #[doc = "Bit 15 - If SIGNED is set, the shifted and masked accumulator value is sign-extended to 32 bits  
  before adding to BASE1, and LANE1 PEEK/POP appear extended to 32 bits when read by processor."]
     #[inline(always)]
     #[must_use]
-    pub fn signed(&mut self) -> SIGNED_W<15> {
+    pub fn signed(&mut self) -> SIGNED_W<INTERP0_CTRL_LANE1_SPEC, 15> {
         SIGNED_W::new(self)
     }
     #[doc = "Bit 16 - If 1, feed the opposite lane's accumulator into this lane's shift + mask hardware.  
  Takes effect even if ADD_RAW is set (the CROSS_INPUT mux is before the shift+mask bypass)"]
     #[inline(always)]
     #[must_use]
-    pub fn cross_input(&mut self) -> CROSS_INPUT_W<16> {
+    pub fn cross_input(&mut self) -> CROSS_INPUT_W<INTERP0_CTRL_LANE1_SPEC, 16> {
         CROSS_INPUT_W::new(self)
     }
     #[doc = "Bit 17 - If 1, feed the opposite lane's result into this lane's accumulator on POP."]
     #[inline(always)]
     #[must_use]
-    pub fn cross_result(&mut self) -> CROSS_RESULT_W<17> {
+    pub fn cross_result(&mut self) -> CROSS_RESULT_W<INTERP0_CTRL_LANE1_SPEC, 17> {
         CROSS_RESULT_W::new(self)
     }
     #[doc = "Bit 18 - If 1, mask + shift is bypassed for LANE1 result. This does not affect FULL result."]
     #[inline(always)]
     #[must_use]
-    pub fn add_raw(&mut self) -> ADD_RAW_W<18> {
+    pub fn add_raw(&mut self) -> ADD_RAW_W<INTERP0_CTRL_LANE1_SPEC, 18> {
         ADD_RAW_W::new(self)
     }
     #[doc = "Bits 19:20 - ORed into bits 29:28 of the lane result presented to the processor on the bus.  
@@ -174,32 +142,31 @@ impl W {
  of pointers into flash or SRAM."]
     #[inline(always)]
     #[must_use]
-    pub fn force_msb(&mut self) -> FORCE_MSB_W<19> {
+    pub fn force_msb(&mut self) -> FORCE_MSB_W<INTERP0_CTRL_LANE1_SPEC, 19> {
         FORCE_MSB_W::new(self)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
 #[doc = "Control register for lane 1  
 
-This register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
-
-For information about available fields see [interp0_ctrl_lane1](index.html) module"]
+You can [`read`](crate::generic::Reg::read) this register and get [`interp0_ctrl_lane1::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`interp0_ctrl_lane1::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct INTERP0_CTRL_LANE1_SPEC;
 impl crate::RegisterSpec for INTERP0_CTRL_LANE1_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [interp0_ctrl_lane1::R](R) reader structure"]
-impl crate::Readable for INTERP0_CTRL_LANE1_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [interp0_ctrl_lane1::W](W) writer structure"]
+#[doc = "`read()` method returns [`interp0_ctrl_lane1::R`](R) reader structure"]
+impl crate::Readable for INTERP0_CTRL_LANE1_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`interp0_ctrl_lane1::W`](W) writer structure"]
 impl crate::Writable for INTERP0_CTRL_LANE1_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

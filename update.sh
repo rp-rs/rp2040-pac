@@ -5,7 +5,7 @@ SVDTOOLS="${SVDTOOLS:-svdtools}"
 
 set -ex
 
-cargo install --version 0.29.0 svd2rust
+cargo install --version 0.30.2 svd2rust
 cargo install --version 0.10.0  form
 rustup component add rustfmt
 if [ "$SVDTOOLS" == "svdtools" ]; then

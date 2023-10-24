@@ -1,87 +1,55 @@
 #[doc = "Register `IRQ_INTE` reader"]
-pub struct R(crate::R<IRQ_INTE_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<IRQ_INTE_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<IRQ_INTE_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<IRQ_INTE_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<IRQ_INTE_SPEC>;
 #[doc = "Register `IRQ_INTE` writer"]
-pub struct W(crate::W<IRQ_INTE_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<IRQ_INTE_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<IRQ_INTE_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<IRQ_INTE_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<IRQ_INTE_SPEC>;
 #[doc = "Field `SM0_RXNEMPTY` reader - "]
 pub type SM0_RXNEMPTY_R = crate::BitReader;
 #[doc = "Field `SM0_RXNEMPTY` writer - "]
-pub type SM0_RXNEMPTY_W<'a, const O: u8> = crate::BitWriter<'a, IRQ_INTE_SPEC, O>;
+pub type SM0_RXNEMPTY_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `SM1_RXNEMPTY` reader - "]
 pub type SM1_RXNEMPTY_R = crate::BitReader;
 #[doc = "Field `SM1_RXNEMPTY` writer - "]
-pub type SM1_RXNEMPTY_W<'a, const O: u8> = crate::BitWriter<'a, IRQ_INTE_SPEC, O>;
+pub type SM1_RXNEMPTY_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `SM2_RXNEMPTY` reader - "]
 pub type SM2_RXNEMPTY_R = crate::BitReader;
 #[doc = "Field `SM2_RXNEMPTY` writer - "]
-pub type SM2_RXNEMPTY_W<'a, const O: u8> = crate::BitWriter<'a, IRQ_INTE_SPEC, O>;
+pub type SM2_RXNEMPTY_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `SM3_RXNEMPTY` reader - "]
 pub type SM3_RXNEMPTY_R = crate::BitReader;
 #[doc = "Field `SM3_RXNEMPTY` writer - "]
-pub type SM3_RXNEMPTY_W<'a, const O: u8> = crate::BitWriter<'a, IRQ_INTE_SPEC, O>;
+pub type SM3_RXNEMPTY_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `SM0_TXNFULL` reader - "]
 pub type SM0_TXNFULL_R = crate::BitReader;
 #[doc = "Field `SM0_TXNFULL` writer - "]
-pub type SM0_TXNFULL_W<'a, const O: u8> = crate::BitWriter<'a, IRQ_INTE_SPEC, O>;
+pub type SM0_TXNFULL_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `SM1_TXNFULL` reader - "]
 pub type SM1_TXNFULL_R = crate::BitReader;
 #[doc = "Field `SM1_TXNFULL` writer - "]
-pub type SM1_TXNFULL_W<'a, const O: u8> = crate::BitWriter<'a, IRQ_INTE_SPEC, O>;
+pub type SM1_TXNFULL_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `SM2_TXNFULL` reader - "]
 pub type SM2_TXNFULL_R = crate::BitReader;
 #[doc = "Field `SM2_TXNFULL` writer - "]
-pub type SM2_TXNFULL_W<'a, const O: u8> = crate::BitWriter<'a, IRQ_INTE_SPEC, O>;
+pub type SM2_TXNFULL_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `SM3_TXNFULL` reader - "]
 pub type SM3_TXNFULL_R = crate::BitReader;
 #[doc = "Field `SM3_TXNFULL` writer - "]
-pub type SM3_TXNFULL_W<'a, const O: u8> = crate::BitWriter<'a, IRQ_INTE_SPEC, O>;
+pub type SM3_TXNFULL_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `SM0` reader - "]
 pub type SM0_R = crate::BitReader;
 #[doc = "Field `SM0` writer - "]
-pub type SM0_W<'a, const O: u8> = crate::BitWriter<'a, IRQ_INTE_SPEC, O>;
+pub type SM0_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `SM1` reader - "]
 pub type SM1_R = crate::BitReader;
 #[doc = "Field `SM1` writer - "]
-pub type SM1_W<'a, const O: u8> = crate::BitWriter<'a, IRQ_INTE_SPEC, O>;
+pub type SM1_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `SM2` reader - "]
 pub type SM2_R = crate::BitReader;
 #[doc = "Field `SM2` writer - "]
-pub type SM2_W<'a, const O: u8> = crate::BitWriter<'a, IRQ_INTE_SPEC, O>;
+pub type SM2_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `SM3` reader - "]
 pub type SM3_R = crate::BitReader;
 #[doc = "Field `SM3` writer - "]
-pub type SM3_W<'a, const O: u8> = crate::BitWriter<'a, IRQ_INTE_SPEC, O>;
+pub type SM3_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 impl R {
     #[doc = "Bit 0"]
     #[inline(always)]
@@ -148,98 +116,97 @@ impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
     #[must_use]
-    pub fn sm0_rxnempty(&mut self) -> SM0_RXNEMPTY_W<0> {
+    pub fn sm0_rxnempty(&mut self) -> SM0_RXNEMPTY_W<IRQ_INTE_SPEC, 0> {
         SM0_RXNEMPTY_W::new(self)
     }
     #[doc = "Bit 1"]
     #[inline(always)]
     #[must_use]
-    pub fn sm1_rxnempty(&mut self) -> SM1_RXNEMPTY_W<1> {
+    pub fn sm1_rxnempty(&mut self) -> SM1_RXNEMPTY_W<IRQ_INTE_SPEC, 1> {
         SM1_RXNEMPTY_W::new(self)
     }
     #[doc = "Bit 2"]
     #[inline(always)]
     #[must_use]
-    pub fn sm2_rxnempty(&mut self) -> SM2_RXNEMPTY_W<2> {
+    pub fn sm2_rxnempty(&mut self) -> SM2_RXNEMPTY_W<IRQ_INTE_SPEC, 2> {
         SM2_RXNEMPTY_W::new(self)
     }
     #[doc = "Bit 3"]
     #[inline(always)]
     #[must_use]
-    pub fn sm3_rxnempty(&mut self) -> SM3_RXNEMPTY_W<3> {
+    pub fn sm3_rxnempty(&mut self) -> SM3_RXNEMPTY_W<IRQ_INTE_SPEC, 3> {
         SM3_RXNEMPTY_W::new(self)
     }
     #[doc = "Bit 4"]
     #[inline(always)]
     #[must_use]
-    pub fn sm0_txnfull(&mut self) -> SM0_TXNFULL_W<4> {
+    pub fn sm0_txnfull(&mut self) -> SM0_TXNFULL_W<IRQ_INTE_SPEC, 4> {
         SM0_TXNFULL_W::new(self)
     }
     #[doc = "Bit 5"]
     #[inline(always)]
     #[must_use]
-    pub fn sm1_txnfull(&mut self) -> SM1_TXNFULL_W<5> {
+    pub fn sm1_txnfull(&mut self) -> SM1_TXNFULL_W<IRQ_INTE_SPEC, 5> {
         SM1_TXNFULL_W::new(self)
     }
     #[doc = "Bit 6"]
     #[inline(always)]
     #[must_use]
-    pub fn sm2_txnfull(&mut self) -> SM2_TXNFULL_W<6> {
+    pub fn sm2_txnfull(&mut self) -> SM2_TXNFULL_W<IRQ_INTE_SPEC, 6> {
         SM2_TXNFULL_W::new(self)
     }
     #[doc = "Bit 7"]
     #[inline(always)]
     #[must_use]
-    pub fn sm3_txnfull(&mut self) -> SM3_TXNFULL_W<7> {
+    pub fn sm3_txnfull(&mut self) -> SM3_TXNFULL_W<IRQ_INTE_SPEC, 7> {
         SM3_TXNFULL_W::new(self)
     }
     #[doc = "Bit 8"]
     #[inline(always)]
     #[must_use]
-    pub fn sm0(&mut self) -> SM0_W<8> {
+    pub fn sm0(&mut self) -> SM0_W<IRQ_INTE_SPEC, 8> {
         SM0_W::new(self)
     }
     #[doc = "Bit 9"]
     #[inline(always)]
     #[must_use]
-    pub fn sm1(&mut self) -> SM1_W<9> {
+    pub fn sm1(&mut self) -> SM1_W<IRQ_INTE_SPEC, 9> {
         SM1_W::new(self)
     }
     #[doc = "Bit 10"]
     #[inline(always)]
     #[must_use]
-    pub fn sm2(&mut self) -> SM2_W<10> {
+    pub fn sm2(&mut self) -> SM2_W<IRQ_INTE_SPEC, 10> {
         SM2_W::new(self)
     }
     #[doc = "Bit 11"]
     #[inline(always)]
     #[must_use]
-    pub fn sm3(&mut self) -> SM3_W<11> {
+    pub fn sm3(&mut self) -> SM3_W<IRQ_INTE_SPEC, 11> {
         SM3_W::new(self)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
 #[doc = "Interrupt Enable for irq0  
 
-This register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
-
-For information about available fields see [irq_inte](index.html) module"]
+You can [`read`](crate::generic::Reg::read) this register and get [`irq_inte::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`irq_inte::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct IRQ_INTE_SPEC;
 impl crate::RegisterSpec for IRQ_INTE_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [irq_inte::R](R) reader structure"]
-impl crate::Readable for IRQ_INTE_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [irq_inte::W](W) writer structure"]
+#[doc = "`read()` method returns [`irq_inte::R`](R) reader structure"]
+impl crate::Readable for IRQ_INTE_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`irq_inte::W`](W) writer structure"]
 impl crate::Writable for IRQ_INTE_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

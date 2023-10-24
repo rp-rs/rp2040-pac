@@ -1,39 +1,7 @@
 #[doc = "Register `IC_ENABLE` reader"]
-pub struct R(crate::R<IC_ENABLE_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<IC_ENABLE_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<IC_ENABLE_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<IC_ENABLE_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<IC_ENABLE_SPEC>;
 #[doc = "Register `IC_ENABLE` writer"]
-pub struct W(crate::W<IC_ENABLE_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<IC_ENABLE_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<IC_ENABLE_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<IC_ENABLE_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<IC_ENABLE_SPEC>;
 #[doc = "Field `ENABLE` reader - Controls whether the DW_apb_i2c is enabled. - 0: Disables DW_apb_i2c (TX and RX FIFOs are held in an erased state) - 1: Enables DW_apb_i2c Software can disable DW_apb_i2c while it is active. However, it is important that care be taken to ensure that DW_apb_i2c is disabled properly. A recommended procedure is described in 'Disabling DW_apb_i2c'.  
 
  When DW_apb_i2c is disabled, the following occurs: - The TX FIFO and RX FIFO get flushed. - Status bits in the IC_INTR_STAT register are still active until DW_apb_i2c goes into IDLE state. If the module is transmitting, it stops as well as deletes the contents of the transmit buffer after the current transfer is complete. If the module is receiving, the DW_apb_i2c stops the current transfer at the end of the current byte and does not acknowledge the transfer.  
@@ -67,18 +35,18 @@ impl From<ENABLE_A> for bool {
 impl ENABLE_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> ENABLE_A {
+    pub const fn variant(&self) -> ENABLE_A {
         match self.bits {
             false => ENABLE_A::DISABLED,
             true => ENABLE_A::ENABLED,
         }
     }
-    #[doc = "Checks if the value of the field is `DISABLED`"]
+    #[doc = "I2C is disabled"]
     #[inline(always)]
     pub fn is_disabled(&self) -> bool {
         *self == ENABLE_A::DISABLED
     }
-    #[doc = "Checks if the value of the field is `ENABLED`"]
+    #[doc = "I2C is enabled"]
     #[inline(always)]
     pub fn is_enabled(&self) -> bool {
         *self == ENABLE_A::ENABLED
@@ -91,16 +59,19 @@ impl ENABLE_R {
  In systems with asynchronous pclk and ic_clk when IC_CLK_TYPE parameter set to asynchronous (1), there is a two ic_clk delay when enabling or disabling the DW_apb_i2c. For a detailed description on how to disable DW_apb_i2c, refer to 'Disabling DW_apb_i2c'  
 
  Reset value: 0x0"]
-pub type ENABLE_W<'a, const O: u8> = crate::BitWriter<'a, IC_ENABLE_SPEC, O, ENABLE_A>;
-impl<'a, const O: u8> ENABLE_W<'a, O> {
+pub type ENABLE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, ENABLE_A>;
+impl<'a, REG, const O: u8> ENABLE_W<'a, REG, O>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
     #[doc = "I2C is disabled"]
     #[inline(always)]
-    pub fn disabled(self) -> &'a mut W {
+    pub fn disabled(self) -> &'a mut crate::W<REG> {
         self.variant(ENABLE_A::DISABLED)
     }
     #[doc = "I2C is enabled"]
     #[inline(always)]
-    pub fn enabled(self) -> &'a mut W {
+    pub fn enabled(self) -> &'a mut crate::W<REG> {
         self.variant(ENABLE_A::ENABLED)
     }
 }
@@ -133,18 +104,18 @@ impl From<ABORT_A> for bool {
 impl ABORT_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> ABORT_A {
+    pub const fn variant(&self) -> ABORT_A {
         match self.bits {
             false => ABORT_A::DISABLE,
             true => ABORT_A::ENABLED,
         }
     }
-    #[doc = "Checks if the value of the field is `DISABLE`"]
+    #[doc = "ABORT operation not in progress"]
     #[inline(always)]
     pub fn is_disable(&self) -> bool {
         *self == ABORT_A::DISABLE
     }
-    #[doc = "Checks if the value of the field is `ENABLED`"]
+    #[doc = "ABORT operation in progress"]
     #[inline(always)]
     pub fn is_enabled(&self) -> bool {
         *self == ABORT_A::ENABLED
@@ -155,16 +126,19 @@ impl ABORT_R {
  For a detailed description on how to abort I2C transfers, refer to 'Aborting I2C Transfers'.  
 
  Reset value: 0x0"]
-pub type ABORT_W<'a, const O: u8> = crate::BitWriter<'a, IC_ENABLE_SPEC, O, ABORT_A>;
-impl<'a, const O: u8> ABORT_W<'a, O> {
+pub type ABORT_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, ABORT_A>;
+impl<'a, REG, const O: u8> ABORT_W<'a, REG, O>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
     #[doc = "ABORT operation not in progress"]
     #[inline(always)]
-    pub fn disable(self) -> &'a mut W {
+    pub fn disable(self) -> &'a mut crate::W<REG> {
         self.variant(ABORT_A::DISABLE)
     }
     #[doc = "ABORT operation in progress"]
     #[inline(always)]
-    pub fn enabled(self) -> &'a mut W {
+    pub fn enabled(self) -> &'a mut crate::W<REG> {
         self.variant(ABORT_A::ENABLED)
     }
 }
@@ -191,18 +165,18 @@ impl From<TX_CMD_BLOCK_A> for bool {
 impl TX_CMD_BLOCK_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> TX_CMD_BLOCK_A {
+    pub const fn variant(&self) -> TX_CMD_BLOCK_A {
         match self.bits {
             false => TX_CMD_BLOCK_A::NOT_BLOCKED,
             true => TX_CMD_BLOCK_A::BLOCKED,
         }
     }
-    #[doc = "Checks if the value of the field is `NOT_BLOCKED`"]
+    #[doc = "Tx Command execution not blocked"]
     #[inline(always)]
     pub fn is_not_blocked(&self) -> bool {
         *self == TX_CMD_BLOCK_A::NOT_BLOCKED
     }
-    #[doc = "Checks if the value of the field is `BLOCKED`"]
+    #[doc = "Tx Command execution blocked"]
     #[inline(always)]
     pub fn is_blocked(&self) -> bool {
         *self == TX_CMD_BLOCK_A::BLOCKED
@@ -210,16 +184,19 @@ impl TX_CMD_BLOCK_R {
 }
 #[doc = "Field `TX_CMD_BLOCK` writer - In Master mode: - 1'b1: Blocks the transmission of data on I2C bus even if Tx FIFO has data to transmit. - 1'b0: The transmission of data starts on I2C bus automatically, as soon as the first data is available in the Tx FIFO. Note: To block the execution of Master commands, set the TX_CMD_BLOCK bit only when Tx FIFO is empty (IC_STATUS\\[2\\]==1) and Master is in Idle state (IC_STATUS\\[5\\]
 == 0). Any further commands put in the Tx FIFO are not executed until TX_CMD_BLOCK bit is unset. Reset value: IC_TX_CMD_BLOCK_DEFAULT"]
-pub type TX_CMD_BLOCK_W<'a, const O: u8> = crate::BitWriter<'a, IC_ENABLE_SPEC, O, TX_CMD_BLOCK_A>;
-impl<'a, const O: u8> TX_CMD_BLOCK_W<'a, O> {
+pub type TX_CMD_BLOCK_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, TX_CMD_BLOCK_A>;
+impl<'a, REG, const O: u8> TX_CMD_BLOCK_W<'a, REG, O>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
     #[doc = "Tx Command execution not blocked"]
     #[inline(always)]
-    pub fn not_blocked(self) -> &'a mut W {
+    pub fn not_blocked(self) -> &'a mut crate::W<REG> {
         self.variant(TX_CMD_BLOCK_A::NOT_BLOCKED)
     }
     #[doc = "Tx Command execution blocked"]
     #[inline(always)]
-    pub fn blocked(self) -> &'a mut W {
+    pub fn blocked(self) -> &'a mut crate::W<REG> {
         self.variant(TX_CMD_BLOCK_A::BLOCKED)
     }
 }
@@ -261,7 +238,7 @@ impl W {
  Reset value: 0x0"]
     #[inline(always)]
     #[must_use]
-    pub fn enable(&mut self) -> ENABLE_W<0> {
+    pub fn enable(&mut self) -> ENABLE_W<IC_ENABLE_SPEC, 0> {
         ENABLE_W::new(self)
     }
     #[doc = "Bit 1 - When set, the controller initiates the transfer abort. - 0: ABORT not initiated or ABORT done - 1: ABORT operation in progress The software can abort the I2C transfer in master mode by setting this bit. The software can set this bit only when ENABLE is already set; otherwise, the controller ignores any write to ABORT bit. The software cannot clear the ABORT bit once set. In response to an ABORT, the controller issues a STOP and flushes the Tx FIFO after completing the current transfer, then sets the TX_ABORT interrupt after the abort operation. The ABORT bit is cleared automatically after the abort operation.  
@@ -271,39 +248,38 @@ impl W {
  Reset value: 0x0"]
     #[inline(always)]
     #[must_use]
-    pub fn abort(&mut self) -> ABORT_W<1> {
+    pub fn abort(&mut self) -> ABORT_W<IC_ENABLE_SPEC, 1> {
         ABORT_W::new(self)
     }
     #[doc = "Bit 2 - In Master mode: - 1'b1: Blocks the transmission of data on I2C bus even if Tx FIFO has data to transmit. - 1'b0: The transmission of data starts on I2C bus automatically, as soon as the first data is available in the Tx FIFO. Note: To block the execution of Master commands, set the TX_CMD_BLOCK bit only when Tx FIFO is empty (IC_STATUS\\[2\\]==1) and Master is in Idle state (IC_STATUS\\[5\\]
 == 0). Any further commands put in the Tx FIFO are not executed until TX_CMD_BLOCK bit is unset. Reset value: IC_TX_CMD_BLOCK_DEFAULT"]
     #[inline(always)]
     #[must_use]
-    pub fn tx_cmd_block(&mut self) -> TX_CMD_BLOCK_W<2> {
+    pub fn tx_cmd_block(&mut self) -> TX_CMD_BLOCK_W<IC_ENABLE_SPEC, 2> {
         TX_CMD_BLOCK_W::new(self)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
 #[doc = "I2C Enable Register  
 
-This register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
-
-For information about available fields see [ic_enable](index.html) module"]
+You can [`read`](crate::generic::Reg::read) this register and get [`ic_enable::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`ic_enable::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct IC_ENABLE_SPEC;
 impl crate::RegisterSpec for IC_ENABLE_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [ic_enable::R](R) reader structure"]
-impl crate::Readable for IC_ENABLE_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [ic_enable::W](W) writer structure"]
+#[doc = "`read()` method returns [`ic_enable::R`](R) reader structure"]
+impl crate::Readable for IC_ENABLE_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`ic_enable::W`](W) writer structure"]
 impl crate::Writable for IC_ENABLE_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

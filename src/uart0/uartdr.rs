@@ -1,43 +1,11 @@
 #[doc = "Register `UARTDR` reader"]
-pub struct R(crate::R<UARTDR_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<UARTDR_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<UARTDR_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<UARTDR_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<UARTDR_SPEC>;
 #[doc = "Register `UARTDR` writer"]
-pub struct W(crate::W<UARTDR_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<UARTDR_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<UARTDR_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<UARTDR_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<UARTDR_SPEC>;
 #[doc = "Field `DATA` reader - Receive (read) data character. Transmit (write) data character."]
 pub type DATA_R = crate::FieldReader;
 #[doc = "Field `DATA` writer - Receive (read) data character. Transmit (write) data character."]
-pub type DATA_W<'a, const O: u8> = crate::FieldWriter<'a, UARTDR_SPEC, 8, O>;
+pub type DATA_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
 #[doc = "Field `FE` reader - Framing error. When set to 1, it indicates that the received character did not have a valid stop bit (a valid stop bit is 1). In FIFO mode, this error is associated with the character at the top of the FIFO."]
 pub type FE_R = crate::BitReader;
 #[doc = "Field `PE` reader - Parity error. When set to 1, it indicates that the parity of the received data character does not match the parity that the EPS and SPS bits in the Line Control Register, UARTLCR_H. In FIFO mode, this error is associated with the character at the top of the FIFO."]
@@ -77,32 +45,31 @@ impl W {
     #[doc = "Bits 0:7 - Receive (read) data character. Transmit (write) data character."]
     #[inline(always)]
     #[must_use]
-    pub fn data(&mut self) -> DATA_W<0> {
+    pub fn data(&mut self) -> DATA_W<UARTDR_SPEC, 0> {
         DATA_W::new(self)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
 #[doc = "Data Register, UARTDR  
 
-This register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
-
-For information about available fields see [uartdr](index.html) module"]
+You can [`read`](crate::generic::Reg::read) this register and get [`uartdr::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`uartdr::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct UARTDR_SPEC;
 impl crate::RegisterSpec for UARTDR_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [uartdr::R](R) reader structure"]
-impl crate::Readable for UARTDR_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [uartdr::W](W) writer structure"]
+#[doc = "`read()` method returns [`uartdr::R`](R) reader structure"]
+impl crate::Readable for UARTDR_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`uartdr::W`](W) writer structure"]
 impl crate::Writable for UARTDR_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

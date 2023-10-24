@@ -1,18 +1,5 @@
 #[doc = "Register `IC_CLR_RX_DONE` reader"]
-pub struct R(crate::R<IC_CLR_RX_DONE_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<IC_CLR_RX_DONE_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<IC_CLR_RX_DONE_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<IC_CLR_RX_DONE_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<IC_CLR_RX_DONE_SPEC>;
 #[doc = "Field `CLR_RX_DONE` reader - Read this register to clear the RX_DONE interrupt (bit 7) of the IC_RAW_INTR_STAT register.  
 
  Reset value: 0x0"]
@@ -28,17 +15,13 @@ impl R {
 }
 #[doc = "Clear RX_DONE Interrupt Register  
 
-This register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
-
-For information about available fields see [ic_clr_rx_done](index.html) module"]
+You can [`read`](crate::generic::Reg::read) this register and get [`ic_clr_rx_done::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct IC_CLR_RX_DONE_SPEC;
 impl crate::RegisterSpec for IC_CLR_RX_DONE_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [ic_clr_rx_done::R](R) reader structure"]
-impl crate::Readable for IC_CLR_RX_DONE_SPEC {
-    type Reader = R;
-}
+#[doc = "`read()` method returns [`ic_clr_rx_done::R`](R) reader structure"]
+impl crate::Readable for IC_CLR_RX_DONE_SPEC {}
 #[doc = "`reset()` method sets IC_CLR_RX_DONE to value 0"]
 impl crate::Resettable for IC_CLR_RX_DONE_SPEC {
     const RESET_VALUE: Self::Ux = 0;

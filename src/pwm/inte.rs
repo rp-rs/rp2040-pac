@@ -1,71 +1,39 @@
 #[doc = "Register `INTE` reader"]
-pub struct R(crate::R<INTE_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<INTE_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<INTE_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<INTE_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<INTE_SPEC>;
 #[doc = "Register `INTE` writer"]
-pub struct W(crate::W<INTE_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<INTE_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<INTE_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<INTE_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<INTE_SPEC>;
 #[doc = "Field `CH0` reader - "]
 pub type CH0_R = crate::BitReader;
 #[doc = "Field `CH0` writer - "]
-pub type CH0_W<'a, const O: u8> = crate::BitWriter<'a, INTE_SPEC, O>;
+pub type CH0_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `CH1` reader - "]
 pub type CH1_R = crate::BitReader;
 #[doc = "Field `CH1` writer - "]
-pub type CH1_W<'a, const O: u8> = crate::BitWriter<'a, INTE_SPEC, O>;
+pub type CH1_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `CH2` reader - "]
 pub type CH2_R = crate::BitReader;
 #[doc = "Field `CH2` writer - "]
-pub type CH2_W<'a, const O: u8> = crate::BitWriter<'a, INTE_SPEC, O>;
+pub type CH2_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `CH3` reader - "]
 pub type CH3_R = crate::BitReader;
 #[doc = "Field `CH3` writer - "]
-pub type CH3_W<'a, const O: u8> = crate::BitWriter<'a, INTE_SPEC, O>;
+pub type CH3_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `CH4` reader - "]
 pub type CH4_R = crate::BitReader;
 #[doc = "Field `CH4` writer - "]
-pub type CH4_W<'a, const O: u8> = crate::BitWriter<'a, INTE_SPEC, O>;
+pub type CH4_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `CH5` reader - "]
 pub type CH5_R = crate::BitReader;
 #[doc = "Field `CH5` writer - "]
-pub type CH5_W<'a, const O: u8> = crate::BitWriter<'a, INTE_SPEC, O>;
+pub type CH5_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `CH6` reader - "]
 pub type CH6_R = crate::BitReader;
 #[doc = "Field `CH6` writer - "]
-pub type CH6_W<'a, const O: u8> = crate::BitWriter<'a, INTE_SPEC, O>;
+pub type CH6_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `CH7` reader - "]
 pub type CH7_R = crate::BitReader;
 #[doc = "Field `CH7` writer - "]
-pub type CH7_W<'a, const O: u8> = crate::BitWriter<'a, INTE_SPEC, O>;
+pub type CH7_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 impl R {
     #[doc = "Bit 0"]
     #[inline(always)]
@@ -112,74 +80,73 @@ impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
     #[must_use]
-    pub fn ch0(&mut self) -> CH0_W<0> {
+    pub fn ch0(&mut self) -> CH0_W<INTE_SPEC, 0> {
         CH0_W::new(self)
     }
     #[doc = "Bit 1"]
     #[inline(always)]
     #[must_use]
-    pub fn ch1(&mut self) -> CH1_W<1> {
+    pub fn ch1(&mut self) -> CH1_W<INTE_SPEC, 1> {
         CH1_W::new(self)
     }
     #[doc = "Bit 2"]
     #[inline(always)]
     #[must_use]
-    pub fn ch2(&mut self) -> CH2_W<2> {
+    pub fn ch2(&mut self) -> CH2_W<INTE_SPEC, 2> {
         CH2_W::new(self)
     }
     #[doc = "Bit 3"]
     #[inline(always)]
     #[must_use]
-    pub fn ch3(&mut self) -> CH3_W<3> {
+    pub fn ch3(&mut self) -> CH3_W<INTE_SPEC, 3> {
         CH3_W::new(self)
     }
     #[doc = "Bit 4"]
     #[inline(always)]
     #[must_use]
-    pub fn ch4(&mut self) -> CH4_W<4> {
+    pub fn ch4(&mut self) -> CH4_W<INTE_SPEC, 4> {
         CH4_W::new(self)
     }
     #[doc = "Bit 5"]
     #[inline(always)]
     #[must_use]
-    pub fn ch5(&mut self) -> CH5_W<5> {
+    pub fn ch5(&mut self) -> CH5_W<INTE_SPEC, 5> {
         CH5_W::new(self)
     }
     #[doc = "Bit 6"]
     #[inline(always)]
     #[must_use]
-    pub fn ch6(&mut self) -> CH6_W<6> {
+    pub fn ch6(&mut self) -> CH6_W<INTE_SPEC, 6> {
         CH6_W::new(self)
     }
     #[doc = "Bit 7"]
     #[inline(always)]
     #[must_use]
-    pub fn ch7(&mut self) -> CH7_W<7> {
+    pub fn ch7(&mut self) -> CH7_W<INTE_SPEC, 7> {
         CH7_W::new(self)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
 #[doc = "Interrupt Enable  
 
-This register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
-
-For information about available fields see [inte](index.html) module"]
+You can [`read`](crate::generic::Reg::read) this register and get [`inte::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`inte::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct INTE_SPEC;
 impl crate::RegisterSpec for INTE_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [inte::R](R) reader structure"]
-impl crate::Readable for INTE_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [inte::W](W) writer structure"]
+#[doc = "`read()` method returns [`inte::R`](R) reader structure"]
+impl crate::Readable for INTE_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`inte::W`](W) writer structure"]
 impl crate::Writable for INTE_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

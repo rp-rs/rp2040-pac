@@ -1,18 +1,5 @@
 #[doc = "Register `STAT` reader"]
-pub struct R(crate::R<STAT_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<STAT_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<STAT_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<STAT_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<STAT_SPEC>;
 #[doc = "Field `FLUSH_READY` reader - Reads as 0 while a cache flush is in progress, and 1 otherwise.  
  The cache is flushed whenever the XIP block is reset, and also  
  when requested via the FLUSH register."]
@@ -46,17 +33,13 @@ impl R {
 }
 #[doc = "Cache Status  
 
-This register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
-
-For information about available fields see [stat](index.html) module"]
+You can [`read`](crate::generic::Reg::read) this register and get [`stat::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct STAT_SPEC;
 impl crate::RegisterSpec for STAT_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [stat::R](R) reader structure"]
-impl crate::Readable for STAT_SPEC {
-    type Reader = R;
-}
+#[doc = "`read()` method returns [`stat::R`](R) reader structure"]
+impl crate::Readable for STAT_SPEC {}
 #[doc = "`reset()` method sets STAT to value 0x02"]
 impl crate::Resettable for STAT_SPEC {
     const RESET_VALUE: Self::Ux = 0x02;

@@ -1,39 +1,7 @@
 #[doc = "Register `GPIO_CTRL` reader"]
-pub struct R(crate::R<GPIO_CTRL_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<GPIO_CTRL_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<GPIO_CTRL_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<GPIO_CTRL_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<GPIO_CTRL_SPEC>;
 #[doc = "Register `GPIO_CTRL` writer"]
-pub struct W(crate::W<GPIO_CTRL_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<GPIO_CTRL_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<GPIO_CTRL_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<GPIO_CTRL_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<GPIO_CTRL_SPEC>;
 #[doc = "Field `FUNCSEL` reader - 0-31 -> selects pin function according to the GPIO table. Not all options are valid for all GPIO pins."]
 pub type FUNCSEL_R = crate::FieldReader<FUNCSEL_A>;
 #[doc = "0-31 -> selects pin function according to the GPIO table. Not all options are valid for all GPIO pins.  
@@ -77,7 +45,7 @@ impl crate::FieldSpec for FUNCSEL_A {
 impl FUNCSEL_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> Option<FUNCSEL_A> {
+    pub const fn variant(&self) -> Option<FUNCSEL_A> {
         match self.bits {
             0 => Some(FUNCSEL_A::JTAG),
             1 => Some(FUNCSEL_A::SPI),
@@ -93,118 +61,122 @@ impl FUNCSEL_R {
             _ => None,
         }
     }
-    #[doc = "Checks if the value of the field is `JTAG`"]
+    #[doc = "Connect to JTAG peripheral"]
     #[inline(always)]
     pub fn is_jtag(&self) -> bool {
         *self == FUNCSEL_A::JTAG
     }
-    #[doc = "Checks if the value of the field is `SPI`"]
+    #[doc = "Connect to matching SPI peripheral"]
     #[inline(always)]
     pub fn is_spi(&self) -> bool {
         *self == FUNCSEL_A::SPI
     }
-    #[doc = "Checks if the value of the field is `UART`"]
+    #[doc = "Connect to matching UART peripheral"]
     #[inline(always)]
     pub fn is_uart(&self) -> bool {
         *self == FUNCSEL_A::UART
     }
-    #[doc = "Checks if the value of the field is `I2C`"]
+    #[doc = "Connect to matching I2C peripheral"]
     #[inline(always)]
     pub fn is_i2c(&self) -> bool {
         *self == FUNCSEL_A::I2C
     }
-    #[doc = "Checks if the value of the field is `PWM`"]
+    #[doc = "Connect to matching PWM peripheral"]
     #[inline(always)]
     pub fn is_pwm(&self) -> bool {
         *self == FUNCSEL_A::PWM
     }
-    #[doc = "Checks if the value of the field is `SIO`"]
+    #[doc = "Use as a GPIO pin (connect to SIO peripheral)"]
     #[inline(always)]
     pub fn is_sio(&self) -> bool {
         *self == FUNCSEL_A::SIO
     }
-    #[doc = "Checks if the value of the field is `PIO0`"]
+    #[doc = "Connect to PIO0 peripheral"]
     #[inline(always)]
     pub fn is_pio0(&self) -> bool {
         *self == FUNCSEL_A::PIO0
     }
-    #[doc = "Checks if the value of the field is `PIO1`"]
+    #[doc = "Connect to PIO1 peripheral"]
     #[inline(always)]
     pub fn is_pio1(&self) -> bool {
         *self == FUNCSEL_A::PIO1
     }
-    #[doc = "Checks if the value of the field is `CLOCK`"]
+    #[doc = "Connect to Clock peripheral"]
     #[inline(always)]
     pub fn is_clock(&self) -> bool {
         *self == FUNCSEL_A::CLOCK
     }
-    #[doc = "Checks if the value of the field is `USB`"]
+    #[doc = "Connect to USB peripheral"]
     #[inline(always)]
     pub fn is_usb(&self) -> bool {
         *self == FUNCSEL_A::USB
     }
-    #[doc = "Checks if the value of the field is `NULL`"]
+    #[doc = "Connect to nothing"]
     #[inline(always)]
     pub fn is_null(&self) -> bool {
         *self == FUNCSEL_A::NULL
     }
 }
 #[doc = "Field `FUNCSEL` writer - 0-31 -> selects pin function according to the GPIO table. Not all options are valid for all GPIO pins."]
-pub type FUNCSEL_W<'a, const O: u8> = crate::FieldWriter<'a, GPIO_CTRL_SPEC, 5, O, FUNCSEL_A>;
-impl<'a, const O: u8> FUNCSEL_W<'a, O> {
+pub type FUNCSEL_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 5, O, FUNCSEL_A>;
+impl<'a, REG, const O: u8> FUNCSEL_W<'a, REG, O>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+    REG::Ux: From<u8>,
+{
     #[doc = "Connect to JTAG peripheral"]
     #[inline(always)]
-    pub fn jtag(self) -> &'a mut W {
+    pub fn jtag(self) -> &'a mut crate::W<REG> {
         self.variant(FUNCSEL_A::JTAG)
     }
     #[doc = "Connect to matching SPI peripheral"]
     #[inline(always)]
-    pub fn spi(self) -> &'a mut W {
+    pub fn spi(self) -> &'a mut crate::W<REG> {
         self.variant(FUNCSEL_A::SPI)
     }
     #[doc = "Connect to matching UART peripheral"]
     #[inline(always)]
-    pub fn uart(self) -> &'a mut W {
+    pub fn uart(self) -> &'a mut crate::W<REG> {
         self.variant(FUNCSEL_A::UART)
     }
     #[doc = "Connect to matching I2C peripheral"]
     #[inline(always)]
-    pub fn i2c(self) -> &'a mut W {
+    pub fn i2c(self) -> &'a mut crate::W<REG> {
         self.variant(FUNCSEL_A::I2C)
     }
     #[doc = "Connect to matching PWM peripheral"]
     #[inline(always)]
-    pub fn pwm(self) -> &'a mut W {
+    pub fn pwm(self) -> &'a mut crate::W<REG> {
         self.variant(FUNCSEL_A::PWM)
     }
     #[doc = "Use as a GPIO pin (connect to SIO peripheral)"]
     #[inline(always)]
-    pub fn sio(self) -> &'a mut W {
+    pub fn sio(self) -> &'a mut crate::W<REG> {
         self.variant(FUNCSEL_A::SIO)
     }
     #[doc = "Connect to PIO0 peripheral"]
     #[inline(always)]
-    pub fn pio0(self) -> &'a mut W {
+    pub fn pio0(self) -> &'a mut crate::W<REG> {
         self.variant(FUNCSEL_A::PIO0)
     }
     #[doc = "Connect to PIO1 peripheral"]
     #[inline(always)]
-    pub fn pio1(self) -> &'a mut W {
+    pub fn pio1(self) -> &'a mut crate::W<REG> {
         self.variant(FUNCSEL_A::PIO1)
     }
     #[doc = "Connect to Clock peripheral"]
     #[inline(always)]
-    pub fn clock(self) -> &'a mut W {
+    pub fn clock(self) -> &'a mut crate::W<REG> {
         self.variant(FUNCSEL_A::CLOCK)
     }
     #[doc = "Connect to USB peripheral"]
     #[inline(always)]
-    pub fn usb(self) -> &'a mut W {
+    pub fn usb(self) -> &'a mut crate::W<REG> {
         self.variant(FUNCSEL_A::USB)
     }
     #[doc = "Connect to nothing"]
     #[inline(always)]
-    pub fn null(self) -> &'a mut W {
+    pub fn null(self) -> &'a mut crate::W<REG> {
         self.variant(FUNCSEL_A::NULL)
     }
 }
@@ -237,7 +209,7 @@ impl crate::FieldSpec for OUTOVER_A {
 impl OUTOVER_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> OUTOVER_A {
+    pub const fn variant(&self) -> OUTOVER_A {
         match self.bits {
             0 => OUTOVER_A::NORMAL,
             1 => OUTOVER_A::INVERT,
@@ -246,48 +218,52 @@ impl OUTOVER_R {
             _ => unreachable!(),
         }
     }
-    #[doc = "Checks if the value of the field is `NORMAL`"]
+    #[doc = "drive output from peripheral signal selected by funcsel"]
     #[inline(always)]
     pub fn is_normal(&self) -> bool {
         *self == OUTOVER_A::NORMAL
     }
-    #[doc = "Checks if the value of the field is `INVERT`"]
+    #[doc = "drive output from inverse of peripheral signal selected by funcsel"]
     #[inline(always)]
     pub fn is_invert(&self) -> bool {
         *self == OUTOVER_A::INVERT
     }
-    #[doc = "Checks if the value of the field is `LOW`"]
+    #[doc = "drive output low"]
     #[inline(always)]
     pub fn is_low(&self) -> bool {
         *self == OUTOVER_A::LOW
     }
-    #[doc = "Checks if the value of the field is `HIGH`"]
+    #[doc = "drive output high"]
     #[inline(always)]
     pub fn is_high(&self) -> bool {
         *self == OUTOVER_A::HIGH
     }
 }
 #[doc = "Field `OUTOVER` writer - "]
-pub type OUTOVER_W<'a, const O: u8> = crate::FieldWriterSafe<'a, GPIO_CTRL_SPEC, 2, O, OUTOVER_A>;
-impl<'a, const O: u8> OUTOVER_W<'a, O> {
+pub type OUTOVER_W<'a, REG, const O: u8> = crate::FieldWriterSafe<'a, REG, 2, O, OUTOVER_A>;
+impl<'a, REG, const O: u8> OUTOVER_W<'a, REG, O>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+    REG::Ux: From<u8>,
+{
     #[doc = "drive output from peripheral signal selected by funcsel"]
     #[inline(always)]
-    pub fn normal(self) -> &'a mut W {
+    pub fn normal(self) -> &'a mut crate::W<REG> {
         self.variant(OUTOVER_A::NORMAL)
     }
     #[doc = "drive output from inverse of peripheral signal selected by funcsel"]
     #[inline(always)]
-    pub fn invert(self) -> &'a mut W {
+    pub fn invert(self) -> &'a mut crate::W<REG> {
         self.variant(OUTOVER_A::INVERT)
     }
     #[doc = "drive output low"]
     #[inline(always)]
-    pub fn low(self) -> &'a mut W {
+    pub fn low(self) -> &'a mut crate::W<REG> {
         self.variant(OUTOVER_A::LOW)
     }
     #[doc = "drive output high"]
     #[inline(always)]
-    pub fn high(self) -> &'a mut W {
+    pub fn high(self) -> &'a mut crate::W<REG> {
         self.variant(OUTOVER_A::HIGH)
     }
 }
@@ -320,7 +296,7 @@ impl crate::FieldSpec for OEOVER_A {
 impl OEOVER_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> OEOVER_A {
+    pub const fn variant(&self) -> OEOVER_A {
         match self.bits {
             0 => OEOVER_A::NORMAL,
             1 => OEOVER_A::INVERT,
@@ -329,48 +305,52 @@ impl OEOVER_R {
             _ => unreachable!(),
         }
     }
-    #[doc = "Checks if the value of the field is `NORMAL`"]
+    #[doc = "drive output enable from peripheral signal selected by funcsel"]
     #[inline(always)]
     pub fn is_normal(&self) -> bool {
         *self == OEOVER_A::NORMAL
     }
-    #[doc = "Checks if the value of the field is `INVERT`"]
+    #[doc = "drive output enable from inverse of peripheral signal selected by funcsel"]
     #[inline(always)]
     pub fn is_invert(&self) -> bool {
         *self == OEOVER_A::INVERT
     }
-    #[doc = "Checks if the value of the field is `DISABLE`"]
+    #[doc = "disable output"]
     #[inline(always)]
     pub fn is_disable(&self) -> bool {
         *self == OEOVER_A::DISABLE
     }
-    #[doc = "Checks if the value of the field is `ENABLE`"]
+    #[doc = "enable output"]
     #[inline(always)]
     pub fn is_enable(&self) -> bool {
         *self == OEOVER_A::ENABLE
     }
 }
 #[doc = "Field `OEOVER` writer - "]
-pub type OEOVER_W<'a, const O: u8> = crate::FieldWriterSafe<'a, GPIO_CTRL_SPEC, 2, O, OEOVER_A>;
-impl<'a, const O: u8> OEOVER_W<'a, O> {
+pub type OEOVER_W<'a, REG, const O: u8> = crate::FieldWriterSafe<'a, REG, 2, O, OEOVER_A>;
+impl<'a, REG, const O: u8> OEOVER_W<'a, REG, O>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+    REG::Ux: From<u8>,
+{
     #[doc = "drive output enable from peripheral signal selected by funcsel"]
     #[inline(always)]
-    pub fn normal(self) -> &'a mut W {
+    pub fn normal(self) -> &'a mut crate::W<REG> {
         self.variant(OEOVER_A::NORMAL)
     }
     #[doc = "drive output enable from inverse of peripheral signal selected by funcsel"]
     #[inline(always)]
-    pub fn invert(self) -> &'a mut W {
+    pub fn invert(self) -> &'a mut crate::W<REG> {
         self.variant(OEOVER_A::INVERT)
     }
     #[doc = "disable output"]
     #[inline(always)]
-    pub fn disable(self) -> &'a mut W {
+    pub fn disable(self) -> &'a mut crate::W<REG> {
         self.variant(OEOVER_A::DISABLE)
     }
     #[doc = "enable output"]
     #[inline(always)]
-    pub fn enable(self) -> &'a mut W {
+    pub fn enable(self) -> &'a mut crate::W<REG> {
         self.variant(OEOVER_A::ENABLE)
     }
 }
@@ -403,7 +383,7 @@ impl crate::FieldSpec for INOVER_A {
 impl INOVER_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> INOVER_A {
+    pub const fn variant(&self) -> INOVER_A {
         match self.bits {
             0 => INOVER_A::NORMAL,
             1 => INOVER_A::INVERT,
@@ -412,48 +392,52 @@ impl INOVER_R {
             _ => unreachable!(),
         }
     }
-    #[doc = "Checks if the value of the field is `NORMAL`"]
+    #[doc = "don't invert the peri input"]
     #[inline(always)]
     pub fn is_normal(&self) -> bool {
         *self == INOVER_A::NORMAL
     }
-    #[doc = "Checks if the value of the field is `INVERT`"]
+    #[doc = "invert the peri input"]
     #[inline(always)]
     pub fn is_invert(&self) -> bool {
         *self == INOVER_A::INVERT
     }
-    #[doc = "Checks if the value of the field is `LOW`"]
+    #[doc = "drive peri input low"]
     #[inline(always)]
     pub fn is_low(&self) -> bool {
         *self == INOVER_A::LOW
     }
-    #[doc = "Checks if the value of the field is `HIGH`"]
+    #[doc = "drive peri input high"]
     #[inline(always)]
     pub fn is_high(&self) -> bool {
         *self == INOVER_A::HIGH
     }
 }
 #[doc = "Field `INOVER` writer - "]
-pub type INOVER_W<'a, const O: u8> = crate::FieldWriterSafe<'a, GPIO_CTRL_SPEC, 2, O, INOVER_A>;
-impl<'a, const O: u8> INOVER_W<'a, O> {
+pub type INOVER_W<'a, REG, const O: u8> = crate::FieldWriterSafe<'a, REG, 2, O, INOVER_A>;
+impl<'a, REG, const O: u8> INOVER_W<'a, REG, O>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+    REG::Ux: From<u8>,
+{
     #[doc = "don't invert the peri input"]
     #[inline(always)]
-    pub fn normal(self) -> &'a mut W {
+    pub fn normal(self) -> &'a mut crate::W<REG> {
         self.variant(INOVER_A::NORMAL)
     }
     #[doc = "invert the peri input"]
     #[inline(always)]
-    pub fn invert(self) -> &'a mut W {
+    pub fn invert(self) -> &'a mut crate::W<REG> {
         self.variant(INOVER_A::INVERT)
     }
     #[doc = "drive peri input low"]
     #[inline(always)]
-    pub fn low(self) -> &'a mut W {
+    pub fn low(self) -> &'a mut crate::W<REG> {
         self.variant(INOVER_A::LOW)
     }
     #[doc = "drive peri input high"]
     #[inline(always)]
-    pub fn high(self) -> &'a mut W {
+    pub fn high(self) -> &'a mut crate::W<REG> {
         self.variant(INOVER_A::HIGH)
     }
 }
@@ -486,7 +470,7 @@ impl crate::FieldSpec for IRQOVER_A {
 impl IRQOVER_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> IRQOVER_A {
+    pub const fn variant(&self) -> IRQOVER_A {
         match self.bits {
             0 => IRQOVER_A::NORMAL,
             1 => IRQOVER_A::INVERT,
@@ -495,48 +479,52 @@ impl IRQOVER_R {
             _ => unreachable!(),
         }
     }
-    #[doc = "Checks if the value of the field is `NORMAL`"]
+    #[doc = "don't invert the interrupt"]
     #[inline(always)]
     pub fn is_normal(&self) -> bool {
         *self == IRQOVER_A::NORMAL
     }
-    #[doc = "Checks if the value of the field is `INVERT`"]
+    #[doc = "invert the interrupt"]
     #[inline(always)]
     pub fn is_invert(&self) -> bool {
         *self == IRQOVER_A::INVERT
     }
-    #[doc = "Checks if the value of the field is `LOW`"]
+    #[doc = "drive interrupt low"]
     #[inline(always)]
     pub fn is_low(&self) -> bool {
         *self == IRQOVER_A::LOW
     }
-    #[doc = "Checks if the value of the field is `HIGH`"]
+    #[doc = "drive interrupt high"]
     #[inline(always)]
     pub fn is_high(&self) -> bool {
         *self == IRQOVER_A::HIGH
     }
 }
 #[doc = "Field `IRQOVER` writer - "]
-pub type IRQOVER_W<'a, const O: u8> = crate::FieldWriterSafe<'a, GPIO_CTRL_SPEC, 2, O, IRQOVER_A>;
-impl<'a, const O: u8> IRQOVER_W<'a, O> {
+pub type IRQOVER_W<'a, REG, const O: u8> = crate::FieldWriterSafe<'a, REG, 2, O, IRQOVER_A>;
+impl<'a, REG, const O: u8> IRQOVER_W<'a, REG, O>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+    REG::Ux: From<u8>,
+{
     #[doc = "don't invert the interrupt"]
     #[inline(always)]
-    pub fn normal(self) -> &'a mut W {
+    pub fn normal(self) -> &'a mut crate::W<REG> {
         self.variant(IRQOVER_A::NORMAL)
     }
     #[doc = "invert the interrupt"]
     #[inline(always)]
-    pub fn invert(self) -> &'a mut W {
+    pub fn invert(self) -> &'a mut crate::W<REG> {
         self.variant(IRQOVER_A::INVERT)
     }
     #[doc = "drive interrupt low"]
     #[inline(always)]
-    pub fn low(self) -> &'a mut W {
+    pub fn low(self) -> &'a mut crate::W<REG> {
         self.variant(IRQOVER_A::LOW)
     }
     #[doc = "drive interrupt high"]
     #[inline(always)]
-    pub fn high(self) -> &'a mut W {
+    pub fn high(self) -> &'a mut crate::W<REG> {
         self.variant(IRQOVER_A::HIGH)
     }
 }
@@ -571,56 +559,55 @@ impl W {
     #[doc = "Bits 0:4 - 0-31 -> selects pin function according to the GPIO table. Not all options are valid for all GPIO pins."]
     #[inline(always)]
     #[must_use]
-    pub fn funcsel(&mut self) -> FUNCSEL_W<0> {
+    pub fn funcsel(&mut self) -> FUNCSEL_W<GPIO_CTRL_SPEC, 0> {
         FUNCSEL_W::new(self)
     }
     #[doc = "Bits 8:9"]
     #[inline(always)]
     #[must_use]
-    pub fn outover(&mut self) -> OUTOVER_W<8> {
+    pub fn outover(&mut self) -> OUTOVER_W<GPIO_CTRL_SPEC, 8> {
         OUTOVER_W::new(self)
     }
     #[doc = "Bits 12:13"]
     #[inline(always)]
     #[must_use]
-    pub fn oeover(&mut self) -> OEOVER_W<12> {
+    pub fn oeover(&mut self) -> OEOVER_W<GPIO_CTRL_SPEC, 12> {
         OEOVER_W::new(self)
     }
     #[doc = "Bits 16:17"]
     #[inline(always)]
     #[must_use]
-    pub fn inover(&mut self) -> INOVER_W<16> {
+    pub fn inover(&mut self) -> INOVER_W<GPIO_CTRL_SPEC, 16> {
         INOVER_W::new(self)
     }
     #[doc = "Bits 28:29"]
     #[inline(always)]
     #[must_use]
-    pub fn irqover(&mut self) -> IRQOVER_W<28> {
+    pub fn irqover(&mut self) -> IRQOVER_W<GPIO_CTRL_SPEC, 28> {
         IRQOVER_W::new(self)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
 #[doc = "GPIO control including function select and overrides.  
 
-This register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
-
-For information about available fields see [gpio_ctrl](index.html) module"]
+You can [`read`](crate::generic::Reg::read) this register and get [`gpio_ctrl::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`gpio_ctrl::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct GPIO_CTRL_SPEC;
 impl crate::RegisterSpec for GPIO_CTRL_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [gpio_ctrl::R](R) reader structure"]
-impl crate::Readable for GPIO_CTRL_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [gpio_ctrl::W](W) writer structure"]
+#[doc = "`read()` method returns [`gpio_ctrl::R`](R) reader structure"]
+impl crate::Readable for GPIO_CTRL_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`gpio_ctrl::W`](W) writer structure"]
 impl crate::Writable for GPIO_CTRL_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

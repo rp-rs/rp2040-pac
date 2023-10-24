@@ -1,18 +1,5 @@
 #[doc = "Register `SSPSR` reader"]
-pub struct R(crate::R<SSPSR_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<SSPSR_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<SSPSR_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<SSPSR_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<SSPSR_SPEC>;
 #[doc = "Field `TFE` reader - Transmit FIFO empty, RO: 0 Transmit FIFO is not empty. 1 Transmit FIFO is empty."]
 pub type TFE_R = crate::BitReader;
 #[doc = "Field `TNF` reader - Transmit FIFO not full, RO: 0 Transmit FIFO is full. 1 Transmit FIFO is not full."]
@@ -52,17 +39,13 @@ impl R {
 }
 #[doc = "Status register, SSPSR on page 3-7  
 
-This register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
-
-For information about available fields see [sspsr](index.html) module"]
+You can [`read`](crate::generic::Reg::read) this register and get [`sspsr::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct SSPSR_SPEC;
 impl crate::RegisterSpec for SSPSR_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [sspsr::R](R) reader structure"]
-impl crate::Readable for SSPSR_SPEC {
-    type Reader = R;
-}
+#[doc = "`read()` method returns [`sspsr::R`](R) reader structure"]
+impl crate::Readable for SSPSR_SPEC {}
 #[doc = "`reset()` method sets SSPSR to value 0x03"]
 impl crate::Resettable for SSPSR_SPEC {
     const RESET_VALUE: Self::Ux = 0x03;

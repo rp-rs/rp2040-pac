@@ -1,55 +1,23 @@
 #[doc = "Register `FREQA` reader"]
-pub struct R(crate::R<FREQA_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<FREQA_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<FREQA_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<FREQA_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<FREQA_SPEC>;
 #[doc = "Register `FREQA` writer"]
-pub struct W(crate::W<FREQA_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<FREQA_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<FREQA_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<FREQA_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<FREQA_SPEC>;
 #[doc = "Field `DS0` reader - Stage 0 drive strength"]
 pub type DS0_R = crate::FieldReader;
 #[doc = "Field `DS0` writer - Stage 0 drive strength"]
-pub type DS0_W<'a, const O: u8> = crate::FieldWriter<'a, FREQA_SPEC, 3, O>;
+pub type DS0_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 3, O>;
 #[doc = "Field `DS1` reader - Stage 1 drive strength"]
 pub type DS1_R = crate::FieldReader;
 #[doc = "Field `DS1` writer - Stage 1 drive strength"]
-pub type DS1_W<'a, const O: u8> = crate::FieldWriter<'a, FREQA_SPEC, 3, O>;
+pub type DS1_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 3, O>;
 #[doc = "Field `DS2` reader - Stage 2 drive strength"]
 pub type DS2_R = crate::FieldReader;
 #[doc = "Field `DS2` writer - Stage 2 drive strength"]
-pub type DS2_W<'a, const O: u8> = crate::FieldWriter<'a, FREQA_SPEC, 3, O>;
+pub type DS2_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 3, O>;
 #[doc = "Field `DS3` reader - Stage 3 drive strength"]
 pub type DS3_R = crate::FieldReader;
 #[doc = "Field `DS3` writer - Stage 3 drive strength"]
-pub type DS3_W<'a, const O: u8> = crate::FieldWriter<'a, FREQA_SPEC, 3, O>;
+pub type DS3_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 3, O>;
 #[doc = "Field `PASSWD` reader - Set to 0x9696 to apply the settings  
  Any other value in this field will set all drive strengths to 0"]
 pub type PASSWD_R = crate::FieldReader<PASSWD_A>;
@@ -75,13 +43,13 @@ impl crate::FieldSpec for PASSWD_A {
 impl PASSWD_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> Option<PASSWD_A> {
+    pub const fn variant(&self) -> Option<PASSWD_A> {
         match self.bits {
             38550 => Some(PASSWD_A::PASS),
             _ => None,
         }
     }
-    #[doc = "Checks if the value of the field is `PASS`"]
+    #[doc = "`1001011010010110`"]
     #[inline(always)]
     pub fn is_pass(&self) -> bool {
         *self == PASSWD_A::PASS
@@ -89,11 +57,15 @@ impl PASSWD_R {
 }
 #[doc = "Field `PASSWD` writer - Set to 0x9696 to apply the settings  
  Any other value in this field will set all drive strengths to 0"]
-pub type PASSWD_W<'a, const O: u8> = crate::FieldWriter<'a, FREQA_SPEC, 16, O, PASSWD_A>;
-impl<'a, const O: u8> PASSWD_W<'a, O> {
+pub type PASSWD_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 16, O, PASSWD_A>;
+impl<'a, REG, const O: u8> PASSWD_W<'a, REG, O>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+    REG::Ux: From<u16>,
+{
     #[doc = "`1001011010010110`"]
     #[inline(always)]
-    pub fn pass(self) -> &'a mut W {
+    pub fn pass(self) -> &'a mut crate::W<REG> {
         self.variant(PASSWD_A::PASS)
     }
 }
@@ -129,38 +101,42 @@ impl W {
     #[doc = "Bits 0:2 - Stage 0 drive strength"]
     #[inline(always)]
     #[must_use]
-    pub fn ds0(&mut self) -> DS0_W<0> {
+    pub fn ds0(&mut self) -> DS0_W<FREQA_SPEC, 0> {
         DS0_W::new(self)
     }
     #[doc = "Bits 4:6 - Stage 1 drive strength"]
     #[inline(always)]
     #[must_use]
-    pub fn ds1(&mut self) -> DS1_W<4> {
+    pub fn ds1(&mut self) -> DS1_W<FREQA_SPEC, 4> {
         DS1_W::new(self)
     }
     #[doc = "Bits 8:10 - Stage 2 drive strength"]
     #[inline(always)]
     #[must_use]
-    pub fn ds2(&mut self) -> DS2_W<8> {
+    pub fn ds2(&mut self) -> DS2_W<FREQA_SPEC, 8> {
         DS2_W::new(self)
     }
     #[doc = "Bits 12:14 - Stage 3 drive strength"]
     #[inline(always)]
     #[must_use]
-    pub fn ds3(&mut self) -> DS3_W<12> {
+    pub fn ds3(&mut self) -> DS3_W<FREQA_SPEC, 12> {
         DS3_W::new(self)
     }
     #[doc = "Bits 16:31 - Set to 0x9696 to apply the settings  
  Any other value in this field will set all drive strengths to 0"]
     #[inline(always)]
     #[must_use]
-    pub fn passwd(&mut self) -> PASSWD_W<16> {
+    pub fn passwd(&mut self) -> PASSWD_W<FREQA_SPEC, 16> {
         PASSWD_W::new(self)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
@@ -172,20 +148,15 @@ impl W {
  2 bits set triples drive strength  
  3 bits set quadruples drive strength  
 
-This register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
-
-For information about available fields see [freqa](index.html) module"]
+You can [`read`](crate::generic::Reg::read) this register and get [`freqa::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`freqa::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct FREQA_SPEC;
 impl crate::RegisterSpec for FREQA_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [freqa::R](R) reader structure"]
-impl crate::Readable for FREQA_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [freqa::W](W) writer structure"]
+#[doc = "`read()` method returns [`freqa::R`](R) reader structure"]
+impl crate::Readable for FREQA_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`freqa::W`](W) writer structure"]
 impl crate::Writable for FREQA_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

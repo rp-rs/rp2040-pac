@@ -1,39 +1,7 @@
 #[doc = "Register `IC_SAR` reader"]
-pub struct R(crate::R<IC_SAR_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<IC_SAR_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<IC_SAR_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<IC_SAR_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<IC_SAR_SPEC>;
 #[doc = "Register `IC_SAR` writer"]
-pub struct W(crate::W<IC_SAR_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<IC_SAR_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<IC_SAR_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<IC_SAR_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<IC_SAR_SPEC>;
 #[doc = "Field `IC_SAR` reader - The IC_SAR holds the slave address when the I2C is operating as a slave. For 7-bit addressing, only IC_SAR\\[6:0\\]
 is used.  
 
@@ -49,7 +17,7 @@ is used.
 register being set to 0. Writes at other times have no effect.  
 
  Note: The default values cannot be any of the reserved address locations: that is, 0x00 to 0x07, or 0x78 to 0x7f. The correct operation of the device is not guaranteed if you program the IC_SAR or IC_TAR to a reserved value. Refer to &lt;&lt;table_I2C_firstbyte_bit_defs>> for a complete list of these reserved values."]
-pub type IC_SAR_W<'a, const O: u8> = crate::FieldWriter<'a, IC_SAR_SPEC, 10, O, u16>;
+pub type IC_SAR_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 10, O, u16>;
 impl R {
     #[doc = "Bits 0:9 - The IC_SAR holds the slave address when the I2C is operating as a slave. For 7-bit addressing, only IC_SAR\\[6:0\\]
 is used.  
@@ -73,32 +41,31 @@ register being set to 0. Writes at other times have no effect.
  Note: The default values cannot be any of the reserved address locations: that is, 0x00 to 0x07, or 0x78 to 0x7f. The correct operation of the device is not guaranteed if you program the IC_SAR or IC_TAR to a reserved value. Refer to &lt;&lt;table_I2C_firstbyte_bit_defs>> for a complete list of these reserved values."]
     #[inline(always)]
     #[must_use]
-    pub fn ic_sar(&mut self) -> IC_SAR_W<0> {
+    pub fn ic_sar(&mut self) -> IC_SAR_W<IC_SAR_SPEC, 0> {
         IC_SAR_W::new(self)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
 #[doc = "I2C Slave Address Register  
 
-This register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
-
-For information about available fields see [ic_sar](index.html) module"]
+You can [`read`](crate::generic::Reg::read) this register and get [`ic_sar::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`ic_sar::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct IC_SAR_SPEC;
 impl crate::RegisterSpec for IC_SAR_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [ic_sar::R](R) reader structure"]
-impl crate::Readable for IC_SAR_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [ic_sar::W](W) writer structure"]
+#[doc = "`read()` method returns [`ic_sar::R`](R) reader structure"]
+impl crate::Readable for IC_SAR_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`ic_sar::W`](W) writer structure"]
 impl crate::Writable for IC_SAR_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

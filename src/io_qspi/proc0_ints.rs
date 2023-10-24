@@ -1,18 +1,5 @@
 #[doc = "Register `PROC0_INTS` reader"]
-pub struct R(crate::R<PROC0_INTS_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<PROC0_INTS_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<PROC0_INTS_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<PROC0_INTS_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<PROC0_INTS_SPEC>;
 #[doc = "Field `GPIO_QSPI_SCLK_LEVEL_LOW` reader - "]
 pub type GPIO_QSPI_SCLK_LEVEL_LOW_R = crate::BitReader;
 #[doc = "Field `GPIO_QSPI_SCLK_LEVEL_HIGH` reader - "]
@@ -185,17 +172,13 @@ impl R {
 }
 #[doc = "Interrupt status after masking &amp; forcing for proc0  
 
-This register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
-
-For information about available fields see [proc0_ints](index.html) module"]
+You can [`read`](crate::generic::Reg::read) this register and get [`proc0_ints::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct PROC0_INTS_SPEC;
 impl crate::RegisterSpec for PROC0_INTS_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [proc0_ints::R](R) reader structure"]
-impl crate::Readable for PROC0_INTS_SPEC {
-    type Reader = R;
-}
+#[doc = "`read()` method returns [`proc0_ints::R`](R) reader structure"]
+impl crate::Readable for PROC0_INTS_SPEC {}
 #[doc = "`reset()` method sets PROC0_INTS to value 0"]
 impl crate::Resettable for PROC0_INTS_SPEC {
     const RESET_VALUE: Self::Ux = 0;

@@ -1,167 +1,135 @@
 #[doc = "Register `PROC0_INTF%s` reader"]
-pub struct R(crate::R<PROC0_INTF_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<PROC0_INTF_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<PROC0_INTF_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<PROC0_INTF_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<PROC0_INTF_SPEC>;
 #[doc = "Register `PROC0_INTF%s` writer"]
-pub struct W(crate::W<PROC0_INTF_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<PROC0_INTF_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<PROC0_INTF_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<PROC0_INTF_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<PROC0_INTF_SPEC>;
 #[doc = "Field `GPIO0_LEVEL_LOW` reader - "]
 pub type GPIO0_LEVEL_LOW_R = crate::BitReader;
 #[doc = "Field `GPIO0_LEVEL_LOW` writer - "]
-pub type GPIO0_LEVEL_LOW_W<'a, const O: u8> = crate::BitWriter<'a, PROC0_INTF_SPEC, O>;
+pub type GPIO0_LEVEL_LOW_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `GPIO0_LEVEL_HIGH` reader - "]
 pub type GPIO0_LEVEL_HIGH_R = crate::BitReader;
 #[doc = "Field `GPIO0_LEVEL_HIGH` writer - "]
-pub type GPIO0_LEVEL_HIGH_W<'a, const O: u8> = crate::BitWriter<'a, PROC0_INTF_SPEC, O>;
+pub type GPIO0_LEVEL_HIGH_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `GPIO0_EDGE_LOW` reader - "]
 pub type GPIO0_EDGE_LOW_R = crate::BitReader;
 #[doc = "Field `GPIO0_EDGE_LOW` writer - "]
-pub type GPIO0_EDGE_LOW_W<'a, const O: u8> = crate::BitWriter<'a, PROC0_INTF_SPEC, O>;
+pub type GPIO0_EDGE_LOW_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `GPIO0_EDGE_HIGH` reader - "]
 pub type GPIO0_EDGE_HIGH_R = crate::BitReader;
 #[doc = "Field `GPIO0_EDGE_HIGH` writer - "]
-pub type GPIO0_EDGE_HIGH_W<'a, const O: u8> = crate::BitWriter<'a, PROC0_INTF_SPEC, O>;
+pub type GPIO0_EDGE_HIGH_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `GPIO1_LEVEL_LOW` reader - "]
 pub type GPIO1_LEVEL_LOW_R = crate::BitReader;
 #[doc = "Field `GPIO1_LEVEL_LOW` writer - "]
-pub type GPIO1_LEVEL_LOW_W<'a, const O: u8> = crate::BitWriter<'a, PROC0_INTF_SPEC, O>;
+pub type GPIO1_LEVEL_LOW_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `GPIO1_LEVEL_HIGH` reader - "]
 pub type GPIO1_LEVEL_HIGH_R = crate::BitReader;
 #[doc = "Field `GPIO1_LEVEL_HIGH` writer - "]
-pub type GPIO1_LEVEL_HIGH_W<'a, const O: u8> = crate::BitWriter<'a, PROC0_INTF_SPEC, O>;
+pub type GPIO1_LEVEL_HIGH_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `GPIO1_EDGE_LOW` reader - "]
 pub type GPIO1_EDGE_LOW_R = crate::BitReader;
 #[doc = "Field `GPIO1_EDGE_LOW` writer - "]
-pub type GPIO1_EDGE_LOW_W<'a, const O: u8> = crate::BitWriter<'a, PROC0_INTF_SPEC, O>;
+pub type GPIO1_EDGE_LOW_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `GPIO1_EDGE_HIGH` reader - "]
 pub type GPIO1_EDGE_HIGH_R = crate::BitReader;
 #[doc = "Field `GPIO1_EDGE_HIGH` writer - "]
-pub type GPIO1_EDGE_HIGH_W<'a, const O: u8> = crate::BitWriter<'a, PROC0_INTF_SPEC, O>;
+pub type GPIO1_EDGE_HIGH_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `GPIO2_LEVEL_LOW` reader - "]
 pub type GPIO2_LEVEL_LOW_R = crate::BitReader;
 #[doc = "Field `GPIO2_LEVEL_LOW` writer - "]
-pub type GPIO2_LEVEL_LOW_W<'a, const O: u8> = crate::BitWriter<'a, PROC0_INTF_SPEC, O>;
+pub type GPIO2_LEVEL_LOW_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `GPIO2_LEVEL_HIGH` reader - "]
 pub type GPIO2_LEVEL_HIGH_R = crate::BitReader;
 #[doc = "Field `GPIO2_LEVEL_HIGH` writer - "]
-pub type GPIO2_LEVEL_HIGH_W<'a, const O: u8> = crate::BitWriter<'a, PROC0_INTF_SPEC, O>;
+pub type GPIO2_LEVEL_HIGH_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `GPIO2_EDGE_LOW` reader - "]
 pub type GPIO2_EDGE_LOW_R = crate::BitReader;
 #[doc = "Field `GPIO2_EDGE_LOW` writer - "]
-pub type GPIO2_EDGE_LOW_W<'a, const O: u8> = crate::BitWriter<'a, PROC0_INTF_SPEC, O>;
+pub type GPIO2_EDGE_LOW_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `GPIO2_EDGE_HIGH` reader - "]
 pub type GPIO2_EDGE_HIGH_R = crate::BitReader;
 #[doc = "Field `GPIO2_EDGE_HIGH` writer - "]
-pub type GPIO2_EDGE_HIGH_W<'a, const O: u8> = crate::BitWriter<'a, PROC0_INTF_SPEC, O>;
+pub type GPIO2_EDGE_HIGH_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `GPIO3_LEVEL_LOW` reader - "]
 pub type GPIO3_LEVEL_LOW_R = crate::BitReader;
 #[doc = "Field `GPIO3_LEVEL_LOW` writer - "]
-pub type GPIO3_LEVEL_LOW_W<'a, const O: u8> = crate::BitWriter<'a, PROC0_INTF_SPEC, O>;
+pub type GPIO3_LEVEL_LOW_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `GPIO3_LEVEL_HIGH` reader - "]
 pub type GPIO3_LEVEL_HIGH_R = crate::BitReader;
 #[doc = "Field `GPIO3_LEVEL_HIGH` writer - "]
-pub type GPIO3_LEVEL_HIGH_W<'a, const O: u8> = crate::BitWriter<'a, PROC0_INTF_SPEC, O>;
+pub type GPIO3_LEVEL_HIGH_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `GPIO3_EDGE_LOW` reader - "]
 pub type GPIO3_EDGE_LOW_R = crate::BitReader;
 #[doc = "Field `GPIO3_EDGE_LOW` writer - "]
-pub type GPIO3_EDGE_LOW_W<'a, const O: u8> = crate::BitWriter<'a, PROC0_INTF_SPEC, O>;
+pub type GPIO3_EDGE_LOW_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `GPIO3_EDGE_HIGH` reader - "]
 pub type GPIO3_EDGE_HIGH_R = crate::BitReader;
 #[doc = "Field `GPIO3_EDGE_HIGH` writer - "]
-pub type GPIO3_EDGE_HIGH_W<'a, const O: u8> = crate::BitWriter<'a, PROC0_INTF_SPEC, O>;
+pub type GPIO3_EDGE_HIGH_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `GPIO4_LEVEL_LOW` reader - "]
 pub type GPIO4_LEVEL_LOW_R = crate::BitReader;
 #[doc = "Field `GPIO4_LEVEL_LOW` writer - "]
-pub type GPIO4_LEVEL_LOW_W<'a, const O: u8> = crate::BitWriter<'a, PROC0_INTF_SPEC, O>;
+pub type GPIO4_LEVEL_LOW_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `GPIO4_LEVEL_HIGH` reader - "]
 pub type GPIO4_LEVEL_HIGH_R = crate::BitReader;
 #[doc = "Field `GPIO4_LEVEL_HIGH` writer - "]
-pub type GPIO4_LEVEL_HIGH_W<'a, const O: u8> = crate::BitWriter<'a, PROC0_INTF_SPEC, O>;
+pub type GPIO4_LEVEL_HIGH_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `GPIO4_EDGE_LOW` reader - "]
 pub type GPIO4_EDGE_LOW_R = crate::BitReader;
 #[doc = "Field `GPIO4_EDGE_LOW` writer - "]
-pub type GPIO4_EDGE_LOW_W<'a, const O: u8> = crate::BitWriter<'a, PROC0_INTF_SPEC, O>;
+pub type GPIO4_EDGE_LOW_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `GPIO4_EDGE_HIGH` reader - "]
 pub type GPIO4_EDGE_HIGH_R = crate::BitReader;
 #[doc = "Field `GPIO4_EDGE_HIGH` writer - "]
-pub type GPIO4_EDGE_HIGH_W<'a, const O: u8> = crate::BitWriter<'a, PROC0_INTF_SPEC, O>;
+pub type GPIO4_EDGE_HIGH_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `GPIO5_LEVEL_LOW` reader - "]
 pub type GPIO5_LEVEL_LOW_R = crate::BitReader;
 #[doc = "Field `GPIO5_LEVEL_LOW` writer - "]
-pub type GPIO5_LEVEL_LOW_W<'a, const O: u8> = crate::BitWriter<'a, PROC0_INTF_SPEC, O>;
+pub type GPIO5_LEVEL_LOW_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `GPIO5_LEVEL_HIGH` reader - "]
 pub type GPIO5_LEVEL_HIGH_R = crate::BitReader;
 #[doc = "Field `GPIO5_LEVEL_HIGH` writer - "]
-pub type GPIO5_LEVEL_HIGH_W<'a, const O: u8> = crate::BitWriter<'a, PROC0_INTF_SPEC, O>;
+pub type GPIO5_LEVEL_HIGH_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `GPIO5_EDGE_LOW` reader - "]
 pub type GPIO5_EDGE_LOW_R = crate::BitReader;
 #[doc = "Field `GPIO5_EDGE_LOW` writer - "]
-pub type GPIO5_EDGE_LOW_W<'a, const O: u8> = crate::BitWriter<'a, PROC0_INTF_SPEC, O>;
+pub type GPIO5_EDGE_LOW_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `GPIO5_EDGE_HIGH` reader - "]
 pub type GPIO5_EDGE_HIGH_R = crate::BitReader;
 #[doc = "Field `GPIO5_EDGE_HIGH` writer - "]
-pub type GPIO5_EDGE_HIGH_W<'a, const O: u8> = crate::BitWriter<'a, PROC0_INTF_SPEC, O>;
+pub type GPIO5_EDGE_HIGH_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `GPIO6_LEVEL_LOW` reader - "]
 pub type GPIO6_LEVEL_LOW_R = crate::BitReader;
 #[doc = "Field `GPIO6_LEVEL_LOW` writer - "]
-pub type GPIO6_LEVEL_LOW_W<'a, const O: u8> = crate::BitWriter<'a, PROC0_INTF_SPEC, O>;
+pub type GPIO6_LEVEL_LOW_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `GPIO6_LEVEL_HIGH` reader - "]
 pub type GPIO6_LEVEL_HIGH_R = crate::BitReader;
 #[doc = "Field `GPIO6_LEVEL_HIGH` writer - "]
-pub type GPIO6_LEVEL_HIGH_W<'a, const O: u8> = crate::BitWriter<'a, PROC0_INTF_SPEC, O>;
+pub type GPIO6_LEVEL_HIGH_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `GPIO6_EDGE_LOW` reader - "]
 pub type GPIO6_EDGE_LOW_R = crate::BitReader;
 #[doc = "Field `GPIO6_EDGE_LOW` writer - "]
-pub type GPIO6_EDGE_LOW_W<'a, const O: u8> = crate::BitWriter<'a, PROC0_INTF_SPEC, O>;
+pub type GPIO6_EDGE_LOW_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `GPIO6_EDGE_HIGH` reader - "]
 pub type GPIO6_EDGE_HIGH_R = crate::BitReader;
 #[doc = "Field `GPIO6_EDGE_HIGH` writer - "]
-pub type GPIO6_EDGE_HIGH_W<'a, const O: u8> = crate::BitWriter<'a, PROC0_INTF_SPEC, O>;
+pub type GPIO6_EDGE_HIGH_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `GPIO7_LEVEL_LOW` reader - "]
 pub type GPIO7_LEVEL_LOW_R = crate::BitReader;
 #[doc = "Field `GPIO7_LEVEL_LOW` writer - "]
-pub type GPIO7_LEVEL_LOW_W<'a, const O: u8> = crate::BitWriter<'a, PROC0_INTF_SPEC, O>;
+pub type GPIO7_LEVEL_LOW_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `GPIO7_LEVEL_HIGH` reader - "]
 pub type GPIO7_LEVEL_HIGH_R = crate::BitReader;
 #[doc = "Field `GPIO7_LEVEL_HIGH` writer - "]
-pub type GPIO7_LEVEL_HIGH_W<'a, const O: u8> = crate::BitWriter<'a, PROC0_INTF_SPEC, O>;
+pub type GPIO7_LEVEL_HIGH_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `GPIO7_EDGE_LOW` reader - "]
 pub type GPIO7_EDGE_LOW_R = crate::BitReader;
 #[doc = "Field `GPIO7_EDGE_LOW` writer - "]
-pub type GPIO7_EDGE_LOW_W<'a, const O: u8> = crate::BitWriter<'a, PROC0_INTF_SPEC, O>;
+pub type GPIO7_EDGE_LOW_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `GPIO7_EDGE_HIGH` reader - "]
 pub type GPIO7_EDGE_HIGH_R = crate::BitReader;
 #[doc = "Field `GPIO7_EDGE_HIGH` writer - "]
-pub type GPIO7_EDGE_HIGH_W<'a, const O: u8> = crate::BitWriter<'a, PROC0_INTF_SPEC, O>;
+pub type GPIO7_EDGE_HIGH_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 impl R {
     #[doc = "Bit 0"]
     #[inline(always)]
@@ -328,218 +296,217 @@ impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
     #[must_use]
-    pub fn gpio0_level_low(&mut self) -> GPIO0_LEVEL_LOW_W<0> {
+    pub fn gpio0_level_low(&mut self) -> GPIO0_LEVEL_LOW_W<PROC0_INTF_SPEC, 0> {
         GPIO0_LEVEL_LOW_W::new(self)
     }
     #[doc = "Bit 1"]
     #[inline(always)]
     #[must_use]
-    pub fn gpio0_level_high(&mut self) -> GPIO0_LEVEL_HIGH_W<1> {
+    pub fn gpio0_level_high(&mut self) -> GPIO0_LEVEL_HIGH_W<PROC0_INTF_SPEC, 1> {
         GPIO0_LEVEL_HIGH_W::new(self)
     }
     #[doc = "Bit 2"]
     #[inline(always)]
     #[must_use]
-    pub fn gpio0_edge_low(&mut self) -> GPIO0_EDGE_LOW_W<2> {
+    pub fn gpio0_edge_low(&mut self) -> GPIO0_EDGE_LOW_W<PROC0_INTF_SPEC, 2> {
         GPIO0_EDGE_LOW_W::new(self)
     }
     #[doc = "Bit 3"]
     #[inline(always)]
     #[must_use]
-    pub fn gpio0_edge_high(&mut self) -> GPIO0_EDGE_HIGH_W<3> {
+    pub fn gpio0_edge_high(&mut self) -> GPIO0_EDGE_HIGH_W<PROC0_INTF_SPEC, 3> {
         GPIO0_EDGE_HIGH_W::new(self)
     }
     #[doc = "Bit 4"]
     #[inline(always)]
     #[must_use]
-    pub fn gpio1_level_low(&mut self) -> GPIO1_LEVEL_LOW_W<4> {
+    pub fn gpio1_level_low(&mut self) -> GPIO1_LEVEL_LOW_W<PROC0_INTF_SPEC, 4> {
         GPIO1_LEVEL_LOW_W::new(self)
     }
     #[doc = "Bit 5"]
     #[inline(always)]
     #[must_use]
-    pub fn gpio1_level_high(&mut self) -> GPIO1_LEVEL_HIGH_W<5> {
+    pub fn gpio1_level_high(&mut self) -> GPIO1_LEVEL_HIGH_W<PROC0_INTF_SPEC, 5> {
         GPIO1_LEVEL_HIGH_W::new(self)
     }
     #[doc = "Bit 6"]
     #[inline(always)]
     #[must_use]
-    pub fn gpio1_edge_low(&mut self) -> GPIO1_EDGE_LOW_W<6> {
+    pub fn gpio1_edge_low(&mut self) -> GPIO1_EDGE_LOW_W<PROC0_INTF_SPEC, 6> {
         GPIO1_EDGE_LOW_W::new(self)
     }
     #[doc = "Bit 7"]
     #[inline(always)]
     #[must_use]
-    pub fn gpio1_edge_high(&mut self) -> GPIO1_EDGE_HIGH_W<7> {
+    pub fn gpio1_edge_high(&mut self) -> GPIO1_EDGE_HIGH_W<PROC0_INTF_SPEC, 7> {
         GPIO1_EDGE_HIGH_W::new(self)
     }
     #[doc = "Bit 8"]
     #[inline(always)]
     #[must_use]
-    pub fn gpio2_level_low(&mut self) -> GPIO2_LEVEL_LOW_W<8> {
+    pub fn gpio2_level_low(&mut self) -> GPIO2_LEVEL_LOW_W<PROC0_INTF_SPEC, 8> {
         GPIO2_LEVEL_LOW_W::new(self)
     }
     #[doc = "Bit 9"]
     #[inline(always)]
     #[must_use]
-    pub fn gpio2_level_high(&mut self) -> GPIO2_LEVEL_HIGH_W<9> {
+    pub fn gpio2_level_high(&mut self) -> GPIO2_LEVEL_HIGH_W<PROC0_INTF_SPEC, 9> {
         GPIO2_LEVEL_HIGH_W::new(self)
     }
     #[doc = "Bit 10"]
     #[inline(always)]
     #[must_use]
-    pub fn gpio2_edge_low(&mut self) -> GPIO2_EDGE_LOW_W<10> {
+    pub fn gpio2_edge_low(&mut self) -> GPIO2_EDGE_LOW_W<PROC0_INTF_SPEC, 10> {
         GPIO2_EDGE_LOW_W::new(self)
     }
     #[doc = "Bit 11"]
     #[inline(always)]
     #[must_use]
-    pub fn gpio2_edge_high(&mut self) -> GPIO2_EDGE_HIGH_W<11> {
+    pub fn gpio2_edge_high(&mut self) -> GPIO2_EDGE_HIGH_W<PROC0_INTF_SPEC, 11> {
         GPIO2_EDGE_HIGH_W::new(self)
     }
     #[doc = "Bit 12"]
     #[inline(always)]
     #[must_use]
-    pub fn gpio3_level_low(&mut self) -> GPIO3_LEVEL_LOW_W<12> {
+    pub fn gpio3_level_low(&mut self) -> GPIO3_LEVEL_LOW_W<PROC0_INTF_SPEC, 12> {
         GPIO3_LEVEL_LOW_W::new(self)
     }
     #[doc = "Bit 13"]
     #[inline(always)]
     #[must_use]
-    pub fn gpio3_level_high(&mut self) -> GPIO3_LEVEL_HIGH_W<13> {
+    pub fn gpio3_level_high(&mut self) -> GPIO3_LEVEL_HIGH_W<PROC0_INTF_SPEC, 13> {
         GPIO3_LEVEL_HIGH_W::new(self)
     }
     #[doc = "Bit 14"]
     #[inline(always)]
     #[must_use]
-    pub fn gpio3_edge_low(&mut self) -> GPIO3_EDGE_LOW_W<14> {
+    pub fn gpio3_edge_low(&mut self) -> GPIO3_EDGE_LOW_W<PROC0_INTF_SPEC, 14> {
         GPIO3_EDGE_LOW_W::new(self)
     }
     #[doc = "Bit 15"]
     #[inline(always)]
     #[must_use]
-    pub fn gpio3_edge_high(&mut self) -> GPIO3_EDGE_HIGH_W<15> {
+    pub fn gpio3_edge_high(&mut self) -> GPIO3_EDGE_HIGH_W<PROC0_INTF_SPEC, 15> {
         GPIO3_EDGE_HIGH_W::new(self)
     }
     #[doc = "Bit 16"]
     #[inline(always)]
     #[must_use]
-    pub fn gpio4_level_low(&mut self) -> GPIO4_LEVEL_LOW_W<16> {
+    pub fn gpio4_level_low(&mut self) -> GPIO4_LEVEL_LOW_W<PROC0_INTF_SPEC, 16> {
         GPIO4_LEVEL_LOW_W::new(self)
     }
     #[doc = "Bit 17"]
     #[inline(always)]
     #[must_use]
-    pub fn gpio4_level_high(&mut self) -> GPIO4_LEVEL_HIGH_W<17> {
+    pub fn gpio4_level_high(&mut self) -> GPIO4_LEVEL_HIGH_W<PROC0_INTF_SPEC, 17> {
         GPIO4_LEVEL_HIGH_W::new(self)
     }
     #[doc = "Bit 18"]
     #[inline(always)]
     #[must_use]
-    pub fn gpio4_edge_low(&mut self) -> GPIO4_EDGE_LOW_W<18> {
+    pub fn gpio4_edge_low(&mut self) -> GPIO4_EDGE_LOW_W<PROC0_INTF_SPEC, 18> {
         GPIO4_EDGE_LOW_W::new(self)
     }
     #[doc = "Bit 19"]
     #[inline(always)]
     #[must_use]
-    pub fn gpio4_edge_high(&mut self) -> GPIO4_EDGE_HIGH_W<19> {
+    pub fn gpio4_edge_high(&mut self) -> GPIO4_EDGE_HIGH_W<PROC0_INTF_SPEC, 19> {
         GPIO4_EDGE_HIGH_W::new(self)
     }
     #[doc = "Bit 20"]
     #[inline(always)]
     #[must_use]
-    pub fn gpio5_level_low(&mut self) -> GPIO5_LEVEL_LOW_W<20> {
+    pub fn gpio5_level_low(&mut self) -> GPIO5_LEVEL_LOW_W<PROC0_INTF_SPEC, 20> {
         GPIO5_LEVEL_LOW_W::new(self)
     }
     #[doc = "Bit 21"]
     #[inline(always)]
     #[must_use]
-    pub fn gpio5_level_high(&mut self) -> GPIO5_LEVEL_HIGH_W<21> {
+    pub fn gpio5_level_high(&mut self) -> GPIO5_LEVEL_HIGH_W<PROC0_INTF_SPEC, 21> {
         GPIO5_LEVEL_HIGH_W::new(self)
     }
     #[doc = "Bit 22"]
     #[inline(always)]
     #[must_use]
-    pub fn gpio5_edge_low(&mut self) -> GPIO5_EDGE_LOW_W<22> {
+    pub fn gpio5_edge_low(&mut self) -> GPIO5_EDGE_LOW_W<PROC0_INTF_SPEC, 22> {
         GPIO5_EDGE_LOW_W::new(self)
     }
     #[doc = "Bit 23"]
     #[inline(always)]
     #[must_use]
-    pub fn gpio5_edge_high(&mut self) -> GPIO5_EDGE_HIGH_W<23> {
+    pub fn gpio5_edge_high(&mut self) -> GPIO5_EDGE_HIGH_W<PROC0_INTF_SPEC, 23> {
         GPIO5_EDGE_HIGH_W::new(self)
     }
     #[doc = "Bit 24"]
     #[inline(always)]
     #[must_use]
-    pub fn gpio6_level_low(&mut self) -> GPIO6_LEVEL_LOW_W<24> {
+    pub fn gpio6_level_low(&mut self) -> GPIO6_LEVEL_LOW_W<PROC0_INTF_SPEC, 24> {
         GPIO6_LEVEL_LOW_W::new(self)
     }
     #[doc = "Bit 25"]
     #[inline(always)]
     #[must_use]
-    pub fn gpio6_level_high(&mut self) -> GPIO6_LEVEL_HIGH_W<25> {
+    pub fn gpio6_level_high(&mut self) -> GPIO6_LEVEL_HIGH_W<PROC0_INTF_SPEC, 25> {
         GPIO6_LEVEL_HIGH_W::new(self)
     }
     #[doc = "Bit 26"]
     #[inline(always)]
     #[must_use]
-    pub fn gpio6_edge_low(&mut self) -> GPIO6_EDGE_LOW_W<26> {
+    pub fn gpio6_edge_low(&mut self) -> GPIO6_EDGE_LOW_W<PROC0_INTF_SPEC, 26> {
         GPIO6_EDGE_LOW_W::new(self)
     }
     #[doc = "Bit 27"]
     #[inline(always)]
     #[must_use]
-    pub fn gpio6_edge_high(&mut self) -> GPIO6_EDGE_HIGH_W<27> {
+    pub fn gpio6_edge_high(&mut self) -> GPIO6_EDGE_HIGH_W<PROC0_INTF_SPEC, 27> {
         GPIO6_EDGE_HIGH_W::new(self)
     }
     #[doc = "Bit 28"]
     #[inline(always)]
     #[must_use]
-    pub fn gpio7_level_low(&mut self) -> GPIO7_LEVEL_LOW_W<28> {
+    pub fn gpio7_level_low(&mut self) -> GPIO7_LEVEL_LOW_W<PROC0_INTF_SPEC, 28> {
         GPIO7_LEVEL_LOW_W::new(self)
     }
     #[doc = "Bit 29"]
     #[inline(always)]
     #[must_use]
-    pub fn gpio7_level_high(&mut self) -> GPIO7_LEVEL_HIGH_W<29> {
+    pub fn gpio7_level_high(&mut self) -> GPIO7_LEVEL_HIGH_W<PROC0_INTF_SPEC, 29> {
         GPIO7_LEVEL_HIGH_W::new(self)
     }
     #[doc = "Bit 30"]
     #[inline(always)]
     #[must_use]
-    pub fn gpio7_edge_low(&mut self) -> GPIO7_EDGE_LOW_W<30> {
+    pub fn gpio7_edge_low(&mut self) -> GPIO7_EDGE_LOW_W<PROC0_INTF_SPEC, 30> {
         GPIO7_EDGE_LOW_W::new(self)
     }
     #[doc = "Bit 31"]
     #[inline(always)]
     #[must_use]
-    pub fn gpio7_edge_high(&mut self) -> GPIO7_EDGE_HIGH_W<31> {
+    pub fn gpio7_edge_high(&mut self) -> GPIO7_EDGE_HIGH_W<PROC0_INTF_SPEC, 31> {
         GPIO7_EDGE_HIGH_W::new(self)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
 #[doc = "Interrupt Force for proc%s  
 
-This register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
-
-For information about available fields see [proc0_intf](index.html) module"]
+You can [`read`](crate::generic::Reg::read) this register and get [`proc0_intf::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`proc0_intf::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct PROC0_INTF_SPEC;
 impl crate::RegisterSpec for PROC0_INTF_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [proc0_intf::R](R) reader structure"]
-impl crate::Readable for PROC0_INTF_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [proc0_intf::W](W) writer structure"]
+#[doc = "`read()` method returns [`proc0_intf::R`](R) reader structure"]
+impl crate::Readable for PROC0_INTF_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`proc0_intf::W`](W) writer structure"]
 impl crate::Writable for PROC0_INTF_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

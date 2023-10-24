@@ -1,39 +1,7 @@
 #[doc = "Register `VOLTAGE_SELECT` reader"]
-pub struct R(crate::R<VOLTAGE_SELECT_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<VOLTAGE_SELECT_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<VOLTAGE_SELECT_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<VOLTAGE_SELECT_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<VOLTAGE_SELECT_SPEC>;
 #[doc = "Register `VOLTAGE_SELECT` writer"]
-pub struct W(crate::W<VOLTAGE_SELECT_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<VOLTAGE_SELECT_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<VOLTAGE_SELECT_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<VOLTAGE_SELECT_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<VOLTAGE_SELECT_SPEC>;
 #[doc = "Field `VOLTAGE_SELECT` reader - "]
 pub type VOLTAGE_SELECT_R = crate::BitReader<VOLTAGE_SELECT_A>;
 #[doc = "  
@@ -55,35 +23,37 @@ impl From<VOLTAGE_SELECT_A> for bool {
 impl VOLTAGE_SELECT_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> VOLTAGE_SELECT_A {
+    pub const fn variant(&self) -> VOLTAGE_SELECT_A {
         match self.bits {
             false => VOLTAGE_SELECT_A::_3V3,
             true => VOLTAGE_SELECT_A::_1V8,
         }
     }
-    #[doc = "Checks if the value of the field is `_3V3`"]
+    #[doc = "Set voltage to 3.3V (DVDD >= 2V5)"]
     #[inline(always)]
     pub fn is_3v3(&self) -> bool {
         *self == VOLTAGE_SELECT_A::_3V3
     }
-    #[doc = "Checks if the value of the field is `_1V8`"]
+    #[doc = "Set voltage to 1.8V (DVDD &lt;= 1V8)"]
     #[inline(always)]
     pub fn is_1v8(&self) -> bool {
         *self == VOLTAGE_SELECT_A::_1V8
     }
 }
 #[doc = "Field `VOLTAGE_SELECT` writer - "]
-pub type VOLTAGE_SELECT_W<'a, const O: u8> =
-    crate::BitWriter<'a, VOLTAGE_SELECT_SPEC, O, VOLTAGE_SELECT_A>;
-impl<'a, const O: u8> VOLTAGE_SELECT_W<'a, O> {
+pub type VOLTAGE_SELECT_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, VOLTAGE_SELECT_A>;
+impl<'a, REG, const O: u8> VOLTAGE_SELECT_W<'a, REG, O>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
     #[doc = "Set voltage to 3.3V (DVDD >= 2V5)"]
     #[inline(always)]
-    pub fn _3v3(self) -> &'a mut W {
+    pub fn _3v3(self) -> &'a mut crate::W<REG> {
         self.variant(VOLTAGE_SELECT_A::_3V3)
     }
     #[doc = "Set voltage to 1.8V (DVDD &lt;= 1V8)"]
     #[inline(always)]
-    pub fn _1v8(self) -> &'a mut W {
+    pub fn _1v8(self) -> &'a mut crate::W<REG> {
         self.variant(VOLTAGE_SELECT_A::_1V8)
     }
 }
@@ -98,32 +68,31 @@ impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
     #[must_use]
-    pub fn voltage_select(&mut self) -> VOLTAGE_SELECT_W<0> {
+    pub fn voltage_select(&mut self) -> VOLTAGE_SELECT_W<VOLTAGE_SELECT_SPEC, 0> {
         VOLTAGE_SELECT_W::new(self)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
 #[doc = "Voltage select. Per bank control  
 
-This register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
-
-For information about available fields see [voltage_select](index.html) module"]
+You can [`read`](crate::generic::Reg::read) this register and get [`voltage_select::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`voltage_select::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct VOLTAGE_SELECT_SPEC;
 impl crate::RegisterSpec for VOLTAGE_SELECT_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [voltage_select::R](R) reader structure"]
-impl crate::Readable for VOLTAGE_SELECT_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [voltage_select::W](W) writer structure"]
+#[doc = "`read()` method returns [`voltage_select::R`](R) reader structure"]
+impl crate::Readable for VOLTAGE_SELECT_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`voltage_select::W`](W) writer structure"]
 impl crate::Writable for VOLTAGE_SELECT_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

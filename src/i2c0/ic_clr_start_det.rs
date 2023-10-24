@@ -1,18 +1,5 @@
 #[doc = "Register `IC_CLR_START_DET` reader"]
-pub struct R(crate::R<IC_CLR_START_DET_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<IC_CLR_START_DET_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<IC_CLR_START_DET_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<IC_CLR_START_DET_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<IC_CLR_START_DET_SPEC>;
 #[doc = "Field `CLR_START_DET` reader - Read this register to clear the START_DET interrupt (bit 10) of the IC_RAW_INTR_STAT register.  
 
  Reset value: 0x0"]
@@ -28,17 +15,13 @@ impl R {
 }
 #[doc = "Clear START_DET Interrupt Register  
 
-This register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
-
-For information about available fields see [ic_clr_start_det](index.html) module"]
+You can [`read`](crate::generic::Reg::read) this register and get [`ic_clr_start_det::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct IC_CLR_START_DET_SPEC;
 impl crate::RegisterSpec for IC_CLR_START_DET_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [ic_clr_start_det::R](R) reader structure"]
-impl crate::Readable for IC_CLR_START_DET_SPEC {
-    type Reader = R;
-}
+#[doc = "`read()` method returns [`ic_clr_start_det::R`](R) reader structure"]
+impl crate::Readable for IC_CLR_START_DET_SPEC {}
 #[doc = "`reset()` method sets IC_CLR_START_DET to value 0"]
 impl crate::Resettable for IC_CLR_START_DET_SPEC {
     const RESET_VALUE: Self::Ux = 0;

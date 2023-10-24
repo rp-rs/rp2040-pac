@@ -1,18 +1,5 @@
 #[doc = "Register `ENABLED1` reader"]
-pub struct R(crate::R<ENABLED1_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<ENABLED1_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<ENABLED1_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<ENABLED1_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<ENABLED1_SPEC>;
 #[doc = "Field `clk_sys_sram4` reader - "]
 pub type CLK_SYS_SRAM4_R = crate::BitReader;
 #[doc = "Field `clk_sys_sram5` reader - "]
@@ -122,17 +109,13 @@ impl R {
 }
 #[doc = "indicates the state of the clock enable  
 
-This register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
-
-For information about available fields see [enabled1](index.html) module"]
+You can [`read`](crate::generic::Reg::read) this register and get [`enabled1::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct ENABLED1_SPEC;
 impl crate::RegisterSpec for ENABLED1_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [enabled1::R](R) reader structure"]
-impl crate::Readable for ENABLED1_SPEC {
-    type Reader = R;
-}
+#[doc = "`read()` method returns [`enabled1::R`](R) reader structure"]
+impl crate::Readable for ENABLED1_SPEC {}
 #[doc = "`reset()` method sets ENABLED1 to value 0"]
 impl crate::Resettable for ENABLED1_SPEC {
     const RESET_VALUE: Self::Ux = 0;

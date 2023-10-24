@@ -1,18 +1,5 @@
 #[doc = "Register `DORMANT_WAKE_INTS` reader"]
-pub struct R(crate::R<DORMANT_WAKE_INTS_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<DORMANT_WAKE_INTS_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<DORMANT_WAKE_INTS_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<DORMANT_WAKE_INTS_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<DORMANT_WAKE_INTS_SPEC>;
 #[doc = "Field `GPIO_QSPI_SCLK_LEVEL_LOW` reader - "]
 pub type GPIO_QSPI_SCLK_LEVEL_LOW_R = crate::BitReader;
 #[doc = "Field `GPIO_QSPI_SCLK_LEVEL_HIGH` reader - "]
@@ -185,17 +172,13 @@ impl R {
 }
 #[doc = "Interrupt status after masking &amp; forcing for dormant_wake  
 
-This register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
-
-For information about available fields see [dormant_wake_ints](index.html) module"]
+You can [`read`](crate::generic::Reg::read) this register and get [`dormant_wake_ints::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct DORMANT_WAKE_INTS_SPEC;
 impl crate::RegisterSpec for DORMANT_WAKE_INTS_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [dormant_wake_ints::R](R) reader structure"]
-impl crate::Readable for DORMANT_WAKE_INTS_SPEC {
-    type Reader = R;
-}
+#[doc = "`read()` method returns [`dormant_wake_ints::R`](R) reader structure"]
+impl crate::Readable for DORMANT_WAKE_INTS_SPEC {}
 #[doc = "`reset()` method sets DORMANT_WAKE_INTS to value 0"]
 impl crate::Resettable for DORMANT_WAKE_INTS_SPEC {
     const RESET_VALUE: Self::Ux = 0;

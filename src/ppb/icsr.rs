@@ -1,39 +1,7 @@
 #[doc = "Register `ICSR` reader"]
-pub struct R(crate::R<ICSR_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<ICSR_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<ICSR_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<ICSR_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<ICSR_SPEC>;
 #[doc = "Register `ICSR` writer"]
-pub struct W(crate::W<ICSR_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<ICSR_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<ICSR_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<ICSR_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<ICSR_SPEC>;
 #[doc = "Field `VECTACTIVE` reader - Active exception number field. Reset clears the VECTACTIVE field."]
 pub type VECTACTIVE_R = crate::FieldReader<u16>;
 #[doc = "Field `VECTPENDING` reader - Indicates the exception number for the highest priority pending exception: 0 = no pending exceptions. Non zero = The pending state includes the effect of memory-mapped enable and mask registers. It does not include the PRIMASK special-purpose register qualifier."]
@@ -53,7 +21,7 @@ pub type PENDSTCLR_R = crate::BitReader;
  0 = No effect.  
  1 = Removes the pending state from the SysTick exception.  
  This bit is WO. On a register read its value is Unknown."]
-pub type PENDSTCLR_W<'a, const O: u8> = crate::BitWriter<'a, ICSR_SPEC, O>;
+pub type PENDSTCLR_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `PENDSTSET` reader - SysTick exception set-pending bit.  
  Write:  
  0 = No effect.  
@@ -69,7 +37,7 @@ pub type PENDSTSET_R = crate::BitReader;
  Read:  
  0 = SysTick exception is not pending.  
  1 = SysTick exception is pending."]
-pub type PENDSTSET_W<'a, const O: u8> = crate::BitWriter<'a, ICSR_SPEC, O>;
+pub type PENDSTSET_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `PENDSVCLR` reader - PendSV clear-pending bit.  
  Write:  
  0 = No effect.  
@@ -79,7 +47,7 @@ pub type PENDSVCLR_R = crate::BitReader;
  Write:  
  0 = No effect.  
  1 = Removes the pending state from the PendSV exception."]
-pub type PENDSVCLR_W<'a, const O: u8> = crate::BitWriter<'a, ICSR_SPEC, O>;
+pub type PENDSVCLR_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `PENDSVSET` reader - PendSV set-pending bit.  
  Write:  
  0 = No effect.  
@@ -97,7 +65,7 @@ pub type PENDSVSET_R = crate::BitReader;
  0 = PendSV exception is not pending.  
  1 = PendSV exception is pending.  
  Writing 1 to this bit is the only way to set the PendSV exception state to pending."]
-pub type PENDSVSET_W<'a, const O: u8> = crate::BitWriter<'a, ICSR_SPEC, O>;
+pub type PENDSVSET_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `NMIPENDSET` reader - Setting this bit will activate an NMI. Since NMI is the highest priority exception, it will activate as soon as it is registered.  
  NMI set-pending bit.  
  Write:  
@@ -123,7 +91,7 @@ pub type NMIPENDSET_R = crate::BitReader;
  exception handler as soon as it detects a write of 1 to this bit. Entering the handler then clears  
  this bit to 0. This means a read of this bit by the NMI exception handler returns 1 only if the  
  NMI signal is reasserted while the processor is executing that handler."]
-pub type NMIPENDSET_W<'a, const O: u8> = crate::BitWriter<'a, ICSR_SPEC, O>;
+pub type NMIPENDSET_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 impl R {
     #[doc = "Bits 0:8 - Active exception number field. Reset clears the VECTACTIVE field."]
     #[inline(always)]
@@ -210,7 +178,7 @@ impl W {
  This bit is WO. On a register read its value is Unknown."]
     #[inline(always)]
     #[must_use]
-    pub fn pendstclr(&mut self) -> PENDSTCLR_W<25> {
+    pub fn pendstclr(&mut self) -> PENDSTCLR_W<ICSR_SPEC, 25> {
         PENDSTCLR_W::new(self)
     }
     #[doc = "Bit 26 - SysTick exception set-pending bit.  
@@ -222,7 +190,7 @@ impl W {
  1 = SysTick exception is pending."]
     #[inline(always)]
     #[must_use]
-    pub fn pendstset(&mut self) -> PENDSTSET_W<26> {
+    pub fn pendstset(&mut self) -> PENDSTSET_W<ICSR_SPEC, 26> {
         PENDSTSET_W::new(self)
     }
     #[doc = "Bit 27 - PendSV clear-pending bit.  
@@ -231,7 +199,7 @@ impl W {
  1 = Removes the pending state from the PendSV exception."]
     #[inline(always)]
     #[must_use]
-    pub fn pendsvclr(&mut self) -> PENDSVCLR_W<27> {
+    pub fn pendsvclr(&mut self) -> PENDSVCLR_W<ICSR_SPEC, 27> {
         PENDSVCLR_W::new(self)
     }
     #[doc = "Bit 28 - PendSV set-pending bit.  
@@ -244,7 +212,7 @@ impl W {
  Writing 1 to this bit is the only way to set the PendSV exception state to pending."]
     #[inline(always)]
     #[must_use]
-    pub fn pendsvset(&mut self) -> PENDSVSET_W<28> {
+    pub fn pendsvset(&mut self) -> PENDSVSET_W<ICSR_SPEC, 28> {
         PENDSVSET_W::new(self)
     }
     #[doc = "Bit 31 - Setting this bit will activate an NMI. Since NMI is the highest priority exception, it will activate as soon as it is registered.  
@@ -261,32 +229,31 @@ impl W {
  NMI signal is reasserted while the processor is executing that handler."]
     #[inline(always)]
     #[must_use]
-    pub fn nmipendset(&mut self) -> NMIPENDSET_W<31> {
+    pub fn nmipendset(&mut self) -> NMIPENDSET_W<ICSR_SPEC, 31> {
         NMIPENDSET_W::new(self)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
 #[doc = "Use the Interrupt Control State Register to set a pending Non-Maskable Interrupt (NMI), set or clear a pending PendSV, set or clear a pending SysTick, check for pending exceptions, check the vector number of the highest priority pended exception, check the vector number of the active exception.  
 
-This register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
-
-For information about available fields see [icsr](index.html) module"]
+You can [`read`](crate::generic::Reg::read) this register and get [`icsr::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`icsr::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct ICSR_SPEC;
 impl crate::RegisterSpec for ICSR_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [icsr::R](R) reader structure"]
-impl crate::Readable for ICSR_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [icsr::W](W) writer structure"]
+#[doc = "`read()` method returns [`icsr::R`](R) reader structure"]
+impl crate::Readable for ICSR_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`icsr::W`](W) writer structure"]
 impl crate::Writable for ICSR_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

@@ -1,18 +1,5 @@
 #[doc = "Register `IC_INTR_STAT` reader"]
-pub struct R(crate::R<IC_INTR_STAT_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<IC_INTR_STAT_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<IC_INTR_STAT_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<IC_INTR_STAT_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<IC_INTR_STAT_SPEC>;
 #[doc = "Field `R_RX_UNDER` reader - See IC_RAW_INTR_STAT for a detailed description of R_RX_UNDER bit.  
 
  Reset value: 0x0"]
@@ -38,18 +25,18 @@ impl From<R_RX_UNDER_A> for bool {
 impl R_RX_UNDER_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> R_RX_UNDER_A {
+    pub const fn variant(&self) -> R_RX_UNDER_A {
         match self.bits {
             false => R_RX_UNDER_A::INACTIVE,
             true => R_RX_UNDER_A::ACTIVE,
         }
     }
-    #[doc = "Checks if the value of the field is `INACTIVE`"]
+    #[doc = "RX_UNDER interrupt is inactive"]
     #[inline(always)]
     pub fn is_inactive(&self) -> bool {
         *self == R_RX_UNDER_A::INACTIVE
     }
-    #[doc = "Checks if the value of the field is `ACTIVE`"]
+    #[doc = "RX_UNDER interrupt is active"]
     #[inline(always)]
     pub fn is_active(&self) -> bool {
         *self == R_RX_UNDER_A::ACTIVE
@@ -80,18 +67,18 @@ impl From<R_RX_OVER_A> for bool {
 impl R_RX_OVER_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> R_RX_OVER_A {
+    pub const fn variant(&self) -> R_RX_OVER_A {
         match self.bits {
             false => R_RX_OVER_A::INACTIVE,
             true => R_RX_OVER_A::ACTIVE,
         }
     }
-    #[doc = "Checks if the value of the field is `INACTIVE`"]
+    #[doc = "R_RX_OVER interrupt is inactive"]
     #[inline(always)]
     pub fn is_inactive(&self) -> bool {
         *self == R_RX_OVER_A::INACTIVE
     }
-    #[doc = "Checks if the value of the field is `ACTIVE`"]
+    #[doc = "R_RX_OVER interrupt is active"]
     #[inline(always)]
     pub fn is_active(&self) -> bool {
         *self == R_RX_OVER_A::ACTIVE
@@ -122,18 +109,18 @@ impl From<R_RX_FULL_A> for bool {
 impl R_RX_FULL_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> R_RX_FULL_A {
+    pub const fn variant(&self) -> R_RX_FULL_A {
         match self.bits {
             false => R_RX_FULL_A::INACTIVE,
             true => R_RX_FULL_A::ACTIVE,
         }
     }
-    #[doc = "Checks if the value of the field is `INACTIVE`"]
+    #[doc = "R_RX_FULL interrupt is inactive"]
     #[inline(always)]
     pub fn is_inactive(&self) -> bool {
         *self == R_RX_FULL_A::INACTIVE
     }
-    #[doc = "Checks if the value of the field is `ACTIVE`"]
+    #[doc = "R_RX_FULL interrupt is active"]
     #[inline(always)]
     pub fn is_active(&self) -> bool {
         *self == R_RX_FULL_A::ACTIVE
@@ -164,18 +151,18 @@ impl From<R_TX_OVER_A> for bool {
 impl R_TX_OVER_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> R_TX_OVER_A {
+    pub const fn variant(&self) -> R_TX_OVER_A {
         match self.bits {
             false => R_TX_OVER_A::INACTIVE,
             true => R_TX_OVER_A::ACTIVE,
         }
     }
-    #[doc = "Checks if the value of the field is `INACTIVE`"]
+    #[doc = "R_TX_OVER interrupt is inactive"]
     #[inline(always)]
     pub fn is_inactive(&self) -> bool {
         *self == R_TX_OVER_A::INACTIVE
     }
-    #[doc = "Checks if the value of the field is `ACTIVE`"]
+    #[doc = "R_TX_OVER interrupt is active"]
     #[inline(always)]
     pub fn is_active(&self) -> bool {
         *self == R_TX_OVER_A::ACTIVE
@@ -206,18 +193,18 @@ impl From<R_TX_EMPTY_A> for bool {
 impl R_TX_EMPTY_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> R_TX_EMPTY_A {
+    pub const fn variant(&self) -> R_TX_EMPTY_A {
         match self.bits {
             false => R_TX_EMPTY_A::INACTIVE,
             true => R_TX_EMPTY_A::ACTIVE,
         }
     }
-    #[doc = "Checks if the value of the field is `INACTIVE`"]
+    #[doc = "R_TX_EMPTY interrupt is inactive"]
     #[inline(always)]
     pub fn is_inactive(&self) -> bool {
         *self == R_TX_EMPTY_A::INACTIVE
     }
-    #[doc = "Checks if the value of the field is `ACTIVE`"]
+    #[doc = "R_TX_EMPTY interrupt is active"]
     #[inline(always)]
     pub fn is_active(&self) -> bool {
         *self == R_TX_EMPTY_A::ACTIVE
@@ -248,18 +235,18 @@ impl From<R_RD_REQ_A> for bool {
 impl R_RD_REQ_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> R_RD_REQ_A {
+    pub const fn variant(&self) -> R_RD_REQ_A {
         match self.bits {
             false => R_RD_REQ_A::INACTIVE,
             true => R_RD_REQ_A::ACTIVE,
         }
     }
-    #[doc = "Checks if the value of the field is `INACTIVE`"]
+    #[doc = "R_RD_REQ interrupt is inactive"]
     #[inline(always)]
     pub fn is_inactive(&self) -> bool {
         *self == R_RD_REQ_A::INACTIVE
     }
-    #[doc = "Checks if the value of the field is `ACTIVE`"]
+    #[doc = "R_RD_REQ interrupt is active"]
     #[inline(always)]
     pub fn is_active(&self) -> bool {
         *self == R_RD_REQ_A::ACTIVE
@@ -290,18 +277,18 @@ impl From<R_TX_ABRT_A> for bool {
 impl R_TX_ABRT_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> R_TX_ABRT_A {
+    pub const fn variant(&self) -> R_TX_ABRT_A {
         match self.bits {
             false => R_TX_ABRT_A::INACTIVE,
             true => R_TX_ABRT_A::ACTIVE,
         }
     }
-    #[doc = "Checks if the value of the field is `INACTIVE`"]
+    #[doc = "R_TX_ABRT interrupt is inactive"]
     #[inline(always)]
     pub fn is_inactive(&self) -> bool {
         *self == R_TX_ABRT_A::INACTIVE
     }
-    #[doc = "Checks if the value of the field is `ACTIVE`"]
+    #[doc = "R_TX_ABRT interrupt is active"]
     #[inline(always)]
     pub fn is_active(&self) -> bool {
         *self == R_TX_ABRT_A::ACTIVE
@@ -332,18 +319,18 @@ impl From<R_RX_DONE_A> for bool {
 impl R_RX_DONE_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> R_RX_DONE_A {
+    pub const fn variant(&self) -> R_RX_DONE_A {
         match self.bits {
             false => R_RX_DONE_A::INACTIVE,
             true => R_RX_DONE_A::ACTIVE,
         }
     }
-    #[doc = "Checks if the value of the field is `INACTIVE`"]
+    #[doc = "R_RX_DONE interrupt is inactive"]
     #[inline(always)]
     pub fn is_inactive(&self) -> bool {
         *self == R_RX_DONE_A::INACTIVE
     }
-    #[doc = "Checks if the value of the field is `ACTIVE`"]
+    #[doc = "R_RX_DONE interrupt is active"]
     #[inline(always)]
     pub fn is_active(&self) -> bool {
         *self == R_RX_DONE_A::ACTIVE
@@ -374,18 +361,18 @@ impl From<R_ACTIVITY_A> for bool {
 impl R_ACTIVITY_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> R_ACTIVITY_A {
+    pub const fn variant(&self) -> R_ACTIVITY_A {
         match self.bits {
             false => R_ACTIVITY_A::INACTIVE,
             true => R_ACTIVITY_A::ACTIVE,
         }
     }
-    #[doc = "Checks if the value of the field is `INACTIVE`"]
+    #[doc = "R_ACTIVITY interrupt is inactive"]
     #[inline(always)]
     pub fn is_inactive(&self) -> bool {
         *self == R_ACTIVITY_A::INACTIVE
     }
-    #[doc = "Checks if the value of the field is `ACTIVE`"]
+    #[doc = "R_ACTIVITY interrupt is active"]
     #[inline(always)]
     pub fn is_active(&self) -> bool {
         *self == R_ACTIVITY_A::ACTIVE
@@ -416,18 +403,18 @@ impl From<R_STOP_DET_A> for bool {
 impl R_STOP_DET_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> R_STOP_DET_A {
+    pub const fn variant(&self) -> R_STOP_DET_A {
         match self.bits {
             false => R_STOP_DET_A::INACTIVE,
             true => R_STOP_DET_A::ACTIVE,
         }
     }
-    #[doc = "Checks if the value of the field is `INACTIVE`"]
+    #[doc = "R_STOP_DET interrupt is inactive"]
     #[inline(always)]
     pub fn is_inactive(&self) -> bool {
         *self == R_STOP_DET_A::INACTIVE
     }
-    #[doc = "Checks if the value of the field is `ACTIVE`"]
+    #[doc = "R_STOP_DET interrupt is active"]
     #[inline(always)]
     pub fn is_active(&self) -> bool {
         *self == R_STOP_DET_A::ACTIVE
@@ -458,18 +445,18 @@ impl From<R_START_DET_A> for bool {
 impl R_START_DET_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> R_START_DET_A {
+    pub const fn variant(&self) -> R_START_DET_A {
         match self.bits {
             false => R_START_DET_A::INACTIVE,
             true => R_START_DET_A::ACTIVE,
         }
     }
-    #[doc = "Checks if the value of the field is `INACTIVE`"]
+    #[doc = "R_START_DET interrupt is inactive"]
     #[inline(always)]
     pub fn is_inactive(&self) -> bool {
         *self == R_START_DET_A::INACTIVE
     }
-    #[doc = "Checks if the value of the field is `ACTIVE`"]
+    #[doc = "R_START_DET interrupt is active"]
     #[inline(always)]
     pub fn is_active(&self) -> bool {
         *self == R_START_DET_A::ACTIVE
@@ -500,18 +487,18 @@ impl From<R_GEN_CALL_A> for bool {
 impl R_GEN_CALL_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> R_GEN_CALL_A {
+    pub const fn variant(&self) -> R_GEN_CALL_A {
         match self.bits {
             false => R_GEN_CALL_A::INACTIVE,
             true => R_GEN_CALL_A::ACTIVE,
         }
     }
-    #[doc = "Checks if the value of the field is `INACTIVE`"]
+    #[doc = "R_GEN_CALL interrupt is inactive"]
     #[inline(always)]
     pub fn is_inactive(&self) -> bool {
         *self == R_GEN_CALL_A::INACTIVE
     }
-    #[doc = "Checks if the value of the field is `ACTIVE`"]
+    #[doc = "R_GEN_CALL interrupt is active"]
     #[inline(always)]
     pub fn is_active(&self) -> bool {
         *self == R_GEN_CALL_A::ACTIVE
@@ -542,18 +529,18 @@ impl From<R_RESTART_DET_A> for bool {
 impl R_RESTART_DET_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> R_RESTART_DET_A {
+    pub const fn variant(&self) -> R_RESTART_DET_A {
         match self.bits {
             false => R_RESTART_DET_A::INACTIVE,
             true => R_RESTART_DET_A::ACTIVE,
         }
     }
-    #[doc = "Checks if the value of the field is `INACTIVE`"]
+    #[doc = "R_RESTART_DET interrupt is inactive"]
     #[inline(always)]
     pub fn is_inactive(&self) -> bool {
         *self == R_RESTART_DET_A::INACTIVE
     }
-    #[doc = "Checks if the value of the field is `ACTIVE`"]
+    #[doc = "R_RESTART_DET interrupt is active"]
     #[inline(always)]
     pub fn is_active(&self) -> bool {
         *self == R_RESTART_DET_A::ACTIVE
@@ -656,17 +643,13 @@ impl R {
 
  Each bit in this register has a corresponding mask bit in the IC_INTR_MASK register. These bits are cleared by reading the matching interrupt clear register. The unmasked raw versions of these bits are available in the IC_RAW_INTR_STAT register.  
 
-This register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
-
-For information about available fields see [ic_intr_stat](index.html) module"]
+You can [`read`](crate::generic::Reg::read) this register and get [`ic_intr_stat::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct IC_INTR_STAT_SPEC;
 impl crate::RegisterSpec for IC_INTR_STAT_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [ic_intr_stat::R](R) reader structure"]
-impl crate::Readable for IC_INTR_STAT_SPEC {
-    type Reader = R;
-}
+#[doc = "`read()` method returns [`ic_intr_stat::R`](R) reader structure"]
+impl crate::Readable for IC_INTR_STAT_SPEC {}
 #[doc = "`reset()` method sets IC_INTR_STAT to value 0"]
 impl crate::Resettable for IC_INTR_STAT_SPEC {
     const RESET_VALUE: Self::Ux = 0;

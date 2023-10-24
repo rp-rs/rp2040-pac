@@ -1,18 +1,5 @@
 #[doc = "Register `RISR` reader"]
-pub struct R(crate::R<RISR_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<RISR_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<RISR_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<RISR_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<RISR_SPEC>;
 #[doc = "Field `TXEIR` reader - Transmit FIFO empty raw interrupt status"]
 pub type TXEIR_R = crate::BitReader;
 #[doc = "Field `TXOIR` reader - Transmit FIFO overflow raw interrupt status"]
@@ -59,17 +46,13 @@ impl R {
 }
 #[doc = "Raw interrupt status  
 
-This register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
-
-For information about available fields see [risr](index.html) module"]
+You can [`read`](crate::generic::Reg::read) this register and get [`risr::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct RISR_SPEC;
 impl crate::RegisterSpec for RISR_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [risr::R](R) reader structure"]
-impl crate::Readable for RISR_SPEC {
-    type Reader = R;
-}
+#[doc = "`read()` method returns [`risr::R`](R) reader structure"]
+impl crate::Readable for RISR_SPEC {}
 #[doc = "`reset()` method sets RISR to value 0"]
 impl crate::Resettable for RISR_SPEC {
     const RESET_VALUE: Self::Ux = 0;

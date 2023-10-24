@@ -1,18 +1,5 @@
 #[doc = "Register `RESET_DONE` reader"]
-pub struct R(crate::R<RESET_DONE_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<RESET_DONE_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<RESET_DONE_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<RESET_DONE_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<RESET_DONE_SPEC>;
 #[doc = "Field `adc` reader - "]
 pub type ADC_R = crate::BitReader;
 #[doc = "Field `busctrl` reader - "]
@@ -192,17 +179,13 @@ impl R {
 }
 #[doc = "Reset done. If a bit is set then a reset done signal has been returned by the peripheral. This indicates that the peripheral's registers are ready to be accessed.  
 
-This register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
-
-For information about available fields see [reset_done](index.html) module"]
+You can [`read`](crate::generic::Reg::read) this register and get [`reset_done::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct RESET_DONE_SPEC;
 impl crate::RegisterSpec for RESET_DONE_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [reset_done::R](R) reader structure"]
-impl crate::Readable for RESET_DONE_SPEC {
-    type Reader = R;
-}
+#[doc = "`read()` method returns [`reset_done::R`](R) reader structure"]
+impl crate::Readable for RESET_DONE_SPEC {}
 #[doc = "`reset()` method sets RESET_DONE to value 0"]
 impl crate::Resettable for RESET_DONE_SPEC {
     const RESET_VALUE: Self::Ux = 0;
