@@ -1,18 +1,5 @@
 #[doc = "Register `IC_ENABLE_STATUS` reader"]
-pub struct R(crate::R<IC_ENABLE_STATUS_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<IC_ENABLE_STATUS_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<IC_ENABLE_STATUS_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<IC_ENABLE_STATUS_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<IC_ENABLE_STATUS_SPEC>;
 #[doc = "Field `IC_EN` reader - ic_en Status. This bit always reflects the value driven on the output port ic_en. - When read as 1, DW_apb_i2c is deemed to be in an enabled state. - When read as 0, DW_apb_i2c is deemed completely inactive. Note: The CPU can safely read this bit anytime. When this bit is read as 0, the CPU can safely read SLV_RX_DATA_LOST (bit 2) and SLV_DISABLED_WHILE_BUSY (bit 1).  
 
  Reset value: 0x0"]
@@ -38,18 +25,18 @@ impl From<IC_EN_A> for bool {
 impl IC_EN_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> IC_EN_A {
+    pub const fn variant(&self) -> IC_EN_A {
         match self.bits {
             false => IC_EN_A::DISABLED,
             true => IC_EN_A::ENABLED,
         }
     }
-    #[doc = "Checks if the value of the field is `DISABLED`"]
+    #[doc = "I2C disabled"]
     #[inline(always)]
     pub fn is_disabled(&self) -> bool {
         *self == IC_EN_A::DISABLED
     }
-    #[doc = "Checks if the value of the field is `ENABLED`"]
+    #[doc = "I2C enabled"]
     #[inline(always)]
     pub fn is_enabled(&self) -> bool {
         *self == IC_EN_A::ENABLED
@@ -110,18 +97,18 @@ impl From<SLV_DISABLED_WHILE_BUSY_A> for bool {
 impl SLV_DISABLED_WHILE_BUSY_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> SLV_DISABLED_WHILE_BUSY_A {
+    pub const fn variant(&self) -> SLV_DISABLED_WHILE_BUSY_A {
         match self.bits {
             false => SLV_DISABLED_WHILE_BUSY_A::INACTIVE,
             true => SLV_DISABLED_WHILE_BUSY_A::ACTIVE,
         }
     }
-    #[doc = "Checks if the value of the field is `INACTIVE`"]
+    #[doc = "Slave is disabled when it is idle"]
     #[inline(always)]
     pub fn is_inactive(&self) -> bool {
         *self == SLV_DISABLED_WHILE_BUSY_A::INACTIVE
     }
-    #[doc = "Checks if the value of the field is `ACTIVE`"]
+    #[doc = "Slave is disabled when it is active"]
     #[inline(always)]
     pub fn is_active(&self) -> bool {
         *self == SLV_DISABLED_WHILE_BUSY_A::ACTIVE
@@ -166,18 +153,18 @@ impl From<SLV_RX_DATA_LOST_A> for bool {
 impl SLV_RX_DATA_LOST_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> SLV_RX_DATA_LOST_A {
+    pub const fn variant(&self) -> SLV_RX_DATA_LOST_A {
         match self.bits {
             false => SLV_RX_DATA_LOST_A::INACTIVE,
             true => SLV_RX_DATA_LOST_A::ACTIVE,
         }
     }
-    #[doc = "Checks if the value of the field is `INACTIVE`"]
+    #[doc = "Slave RX Data is not lost"]
     #[inline(always)]
     pub fn is_inactive(&self) -> bool {
         *self == SLV_RX_DATA_LOST_A::INACTIVE
     }
-    #[doc = "Checks if the value of the field is `ACTIVE`"]
+    #[doc = "Slave RX Data is lost"]
     #[inline(always)]
     pub fn is_active(&self) -> bool {
         *self == SLV_RX_DATA_LOST_A::ACTIVE
@@ -242,17 +229,13 @@ has been set to 0, bits 2:1 is only be valid as soon as bit 0 is read as '0'.
  Note: When IC_ENABLE\\[0\\]
 has been set to 0, a delay occurs for bit 0 to be read as 0 because disabling the DW_apb_i2c depends on I2C bus activities.  
 
-This register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
-
-For information about available fields see [ic_enable_status](index.html) module"]
+You can [`read`](crate::generic::Reg::read) this register and get [`ic_enable_status::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct IC_ENABLE_STATUS_SPEC;
 impl crate::RegisterSpec for IC_ENABLE_STATUS_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [ic_enable_status::R](R) reader structure"]
-impl crate::Readable for IC_ENABLE_STATUS_SPEC {
-    type Reader = R;
-}
+#[doc = "`read()` method returns [`ic_enable_status::R`](R) reader structure"]
+impl crate::Readable for IC_ENABLE_STATUS_SPEC {}
 #[doc = "`reset()` method sets IC_ENABLE_STATUS to value 0"]
 impl crate::Resettable for IC_ENABLE_STATUS_SPEC {
     const RESET_VALUE: Self::Ux = 0;

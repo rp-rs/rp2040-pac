@@ -1,39 +1,7 @@
 #[doc = "Register `IC_SS_SCL_LCNT` reader"]
-pub struct R(crate::R<IC_SS_SCL_LCNT_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<IC_SS_SCL_LCNT_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<IC_SS_SCL_LCNT_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<IC_SS_SCL_LCNT_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<IC_SS_SCL_LCNT_SPEC>;
 #[doc = "Register `IC_SS_SCL_LCNT` writer"]
-pub struct W(crate::W<IC_SS_SCL_LCNT_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<IC_SS_SCL_LCNT_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<IC_SS_SCL_LCNT_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<IC_SS_SCL_LCNT_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<IC_SS_SCL_LCNT_SPEC>;
 #[doc = "Field `IC_SS_SCL_LCNT` reader - This register must be set before any I2C bus transaction can take place to ensure proper I/O timing. This register sets the SCL clock low period count for standard speed. For more information, refer to 'IC_CLK Frequency Configuration'  
 
  This register can be written only when the I2C interface is disabled which corresponds to the IC_ENABLE\\[0\\]
@@ -47,8 +15,7 @@ pub type IC_SS_SCL_LCNT_R = crate::FieldReader<u16>;
 register being set to 0. Writes at other times have no effect.  
 
  The minimum valid value is 8; hardware prevents values less than this being written, and if attempted, results in 8 being set. For designs with APB_DATA_WIDTH = 8, the order of programming is important to ensure the correct operation of DW_apb_i2c. The lower byte must be programmed first, and then the upper byte is programmed."]
-pub type IC_SS_SCL_LCNT_W<'a, const O: u8> =
-    crate::FieldWriter<'a, IC_SS_SCL_LCNT_SPEC, 16, O, u16>;
+pub type IC_SS_SCL_LCNT_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 16, O, u16>;
 impl R {
     #[doc = "Bits 0:15 - This register must be set before any I2C bus transaction can take place to ensure proper I/O timing. This register sets the SCL clock low period count for standard speed. For more information, refer to 'IC_CLK Frequency Configuration'  
 
@@ -70,32 +37,31 @@ register being set to 0. Writes at other times have no effect.
  The minimum valid value is 8; hardware prevents values less than this being written, and if attempted, results in 8 being set. For designs with APB_DATA_WIDTH = 8, the order of programming is important to ensure the correct operation of DW_apb_i2c. The lower byte must be programmed first, and then the upper byte is programmed."]
     #[inline(always)]
     #[must_use]
-    pub fn ic_ss_scl_lcnt(&mut self) -> IC_SS_SCL_LCNT_W<0> {
+    pub fn ic_ss_scl_lcnt(&mut self) -> IC_SS_SCL_LCNT_W<IC_SS_SCL_LCNT_SPEC, 0> {
         IC_SS_SCL_LCNT_W::new(self)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
 #[doc = "Standard Speed I2C Clock SCL Low Count Register  
 
-This register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
-
-For information about available fields see [ic_ss_scl_lcnt](index.html) module"]
+You can [`read`](crate::generic::Reg::read) this register and get [`ic_ss_scl_lcnt::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`ic_ss_scl_lcnt::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct IC_SS_SCL_LCNT_SPEC;
 impl crate::RegisterSpec for IC_SS_SCL_LCNT_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [ic_ss_scl_lcnt::R](R) reader structure"]
-impl crate::Readable for IC_SS_SCL_LCNT_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [ic_ss_scl_lcnt::W](W) writer structure"]
+#[doc = "`read()` method returns [`ic_ss_scl_lcnt::R`](R) reader structure"]
+impl crate::Readable for IC_SS_SCL_LCNT_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`ic_ss_scl_lcnt::W`](W) writer structure"]
 impl crate::Writable for IC_SS_SCL_LCNT_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

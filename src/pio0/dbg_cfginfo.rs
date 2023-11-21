@@ -1,18 +1,5 @@
 #[doc = "Register `DBG_CFGINFO` reader"]
-pub struct R(crate::R<DBG_CFGINFO_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<DBG_CFGINFO_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<DBG_CFGINFO_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<DBG_CFGINFO_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<DBG_CFGINFO_SPEC>;
 #[doc = "Field `FIFO_DEPTH` reader - The depth of the state machine TX/RX FIFOs, measured in words.  
  Joining fifos via SHIFTCTRL_FJOIN gives one FIFO with double  
  this depth."]
@@ -43,17 +30,13 @@ impl R {
 #[doc = "The PIO hardware has some free parameters that may vary between chip products.  
  These should be provided in the chip datasheet, but are also exposed here.  
 
-This register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
-
-For information about available fields see [dbg_cfginfo](index.html) module"]
+You can [`read`](crate::generic::Reg::read) this register and get [`dbg_cfginfo::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct DBG_CFGINFO_SPEC;
 impl crate::RegisterSpec for DBG_CFGINFO_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [dbg_cfginfo::R](R) reader structure"]
-impl crate::Readable for DBG_CFGINFO_SPEC {
-    type Reader = R;
-}
+#[doc = "`read()` method returns [`dbg_cfginfo::R`](R) reader structure"]
+impl crate::Readable for DBG_CFGINFO_SPEC {}
 #[doc = "`reset()` method sets DBG_CFGINFO to value 0"]
 impl crate::Resettable for DBG_CFGINFO_SPEC {
     const RESET_VALUE: Self::Ux = 0;

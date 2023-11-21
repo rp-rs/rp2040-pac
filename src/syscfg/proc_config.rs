@@ -1,39 +1,7 @@
 #[doc = "Register `PROC_CONFIG` reader"]
-pub struct R(crate::R<PROC_CONFIG_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<PROC_CONFIG_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<PROC_CONFIG_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<PROC_CONFIG_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<PROC_CONFIG_SPEC>;
 #[doc = "Register `PROC_CONFIG` writer"]
-pub struct W(crate::W<PROC_CONFIG_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<PROC_CONFIG_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<PROC_CONFIG_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<PROC_CONFIG_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<PROC_CONFIG_SPEC>;
 #[doc = "Field `PROC0_HALTED` reader - Indication that proc0 has halted"]
 pub type PROC0_HALTED_R = crate::BitReader;
 #[doc = "Field `PROC1_HALTED` reader - Indication that proc1 has halted"]
@@ -45,7 +13,7 @@ pub type PROC0_DAP_INSTID_R = crate::FieldReader;
 #[doc = "Field `PROC0_DAP_INSTID` writer - Configure proc0 DAP instance ID.  
  Recommend that this is NOT changed until you require debug access in multi-chip environment  
  WARNING: do not set to 15 as this is reserved for RescueDP"]
-pub type PROC0_DAP_INSTID_W<'a, const O: u8> = crate::FieldWriter<'a, PROC_CONFIG_SPEC, 4, O>;
+pub type PROC0_DAP_INSTID_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 4, O>;
 #[doc = "Field `PROC1_DAP_INSTID` reader - Configure proc1 DAP instance ID.  
  Recommend that this is NOT changed until you require debug access in multi-chip environment  
  WARNING: do not set to 15 as this is reserved for RescueDP"]
@@ -53,7 +21,7 @@ pub type PROC1_DAP_INSTID_R = crate::FieldReader;
 #[doc = "Field `PROC1_DAP_INSTID` writer - Configure proc1 DAP instance ID.  
  Recommend that this is NOT changed until you require debug access in multi-chip environment  
  WARNING: do not set to 15 as this is reserved for RescueDP"]
-pub type PROC1_DAP_INSTID_W<'a, const O: u8> = crate::FieldWriter<'a, PROC_CONFIG_SPEC, 4, O>;
+pub type PROC1_DAP_INSTID_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 4, O>;
 impl R {
     #[doc = "Bit 0 - Indication that proc0 has halted"]
     #[inline(always)]
@@ -86,7 +54,7 @@ impl W {
  WARNING: do not set to 15 as this is reserved for RescueDP"]
     #[inline(always)]
     #[must_use]
-    pub fn proc0_dap_instid(&mut self) -> PROC0_DAP_INSTID_W<24> {
+    pub fn proc0_dap_instid(&mut self) -> PROC0_DAP_INSTID_W<PROC_CONFIG_SPEC, 24> {
         PROC0_DAP_INSTID_W::new(self)
     }
     #[doc = "Bits 28:31 - Configure proc1 DAP instance ID.  
@@ -94,32 +62,31 @@ impl W {
  WARNING: do not set to 15 as this is reserved for RescueDP"]
     #[inline(always)]
     #[must_use]
-    pub fn proc1_dap_instid(&mut self) -> PROC1_DAP_INSTID_W<28> {
+    pub fn proc1_dap_instid(&mut self) -> PROC1_DAP_INSTID_W<PROC_CONFIG_SPEC, 28> {
         PROC1_DAP_INSTID_W::new(self)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
 #[doc = "Configuration for processors  
 
-This register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
-
-For information about available fields see [proc_config](index.html) module"]
+You can [`read`](crate::generic::Reg::read) this register and get [`proc_config::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`proc_config::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct PROC_CONFIG_SPEC;
 impl crate::RegisterSpec for PROC_CONFIG_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [proc_config::R](R) reader structure"]
-impl crate::Readable for PROC_CONFIG_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [proc_config::W](W) writer structure"]
+#[doc = "`read()` method returns [`proc_config::R`](R) reader structure"]
+impl crate::Readable for PROC_CONFIG_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`proc_config::W`](W) writer structure"]
 impl crate::Writable for PROC_CONFIG_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

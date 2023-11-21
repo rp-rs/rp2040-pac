@@ -1,39 +1,7 @@
 #[doc = "Register `CLK_GPOUT2_CTRL` reader"]
-pub struct R(crate::R<CLK_GPOUT2_CTRL_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<CLK_GPOUT2_CTRL_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<CLK_GPOUT2_CTRL_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<CLK_GPOUT2_CTRL_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<CLK_GPOUT2_CTRL_SPEC>;
 #[doc = "Register `CLK_GPOUT2_CTRL` writer"]
-pub struct W(crate::W<CLK_GPOUT2_CTRL_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<CLK_GPOUT2_CTRL_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<CLK_GPOUT2_CTRL_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<CLK_GPOUT2_CTRL_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<CLK_GPOUT2_CTRL_SPEC>;
 #[doc = "Field `AUXSRC` reader - Selects the auxiliary clock source, will glitch when switching"]
 pub type AUXSRC_R = crate::FieldReader<AUXSRC_A>;
 #[doc = "Selects the auxiliary clock source, will glitch when switching  
@@ -77,7 +45,7 @@ impl crate::FieldSpec for AUXSRC_A {
 impl AUXSRC_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> Option<AUXSRC_A> {
+    pub const fn variant(&self) -> Option<AUXSRC_A> {
         match self.bits {
             0 => Some(AUXSRC_A::CLKSRC_PLL_SYS),
             1 => Some(AUXSRC_A::CLKSRC_GPIN0),
@@ -93,145 +61,149 @@ impl AUXSRC_R {
             _ => None,
         }
     }
-    #[doc = "Checks if the value of the field is `CLKSRC_PLL_SYS`"]
+    #[doc = "`0`"]
     #[inline(always)]
     pub fn is_clksrc_pll_sys(&self) -> bool {
         *self == AUXSRC_A::CLKSRC_PLL_SYS
     }
-    #[doc = "Checks if the value of the field is `CLKSRC_GPIN0`"]
+    #[doc = "`1`"]
     #[inline(always)]
     pub fn is_clksrc_gpin0(&self) -> bool {
         *self == AUXSRC_A::CLKSRC_GPIN0
     }
-    #[doc = "Checks if the value of the field is `CLKSRC_GPIN1`"]
+    #[doc = "`10`"]
     #[inline(always)]
     pub fn is_clksrc_gpin1(&self) -> bool {
         *self == AUXSRC_A::CLKSRC_GPIN1
     }
-    #[doc = "Checks if the value of the field is `CLKSRC_PLL_USB`"]
+    #[doc = "`11`"]
     #[inline(always)]
     pub fn is_clksrc_pll_usb(&self) -> bool {
         *self == AUXSRC_A::CLKSRC_PLL_USB
     }
-    #[doc = "Checks if the value of the field is `ROSC_CLKSRC_PH`"]
+    #[doc = "`100`"]
     #[inline(always)]
     pub fn is_rosc_clksrc_ph(&self) -> bool {
         *self == AUXSRC_A::ROSC_CLKSRC_PH
     }
-    #[doc = "Checks if the value of the field is `XOSC_CLKSRC`"]
+    #[doc = "`101`"]
     #[inline(always)]
     pub fn is_xosc_clksrc(&self) -> bool {
         *self == AUXSRC_A::XOSC_CLKSRC
     }
-    #[doc = "Checks if the value of the field is `CLK_SYS`"]
+    #[doc = "`110`"]
     #[inline(always)]
     pub fn is_clk_sys(&self) -> bool {
         *self == AUXSRC_A::CLK_SYS
     }
-    #[doc = "Checks if the value of the field is `CLK_USB`"]
+    #[doc = "`111`"]
     #[inline(always)]
     pub fn is_clk_usb(&self) -> bool {
         *self == AUXSRC_A::CLK_USB
     }
-    #[doc = "Checks if the value of the field is `CLK_ADC`"]
+    #[doc = "`1000`"]
     #[inline(always)]
     pub fn is_clk_adc(&self) -> bool {
         *self == AUXSRC_A::CLK_ADC
     }
-    #[doc = "Checks if the value of the field is `CLK_RTC`"]
+    #[doc = "`1001`"]
     #[inline(always)]
     pub fn is_clk_rtc(&self) -> bool {
         *self == AUXSRC_A::CLK_RTC
     }
-    #[doc = "Checks if the value of the field is `CLK_REF`"]
+    #[doc = "`1010`"]
     #[inline(always)]
     pub fn is_clk_ref(&self) -> bool {
         *self == AUXSRC_A::CLK_REF
     }
 }
 #[doc = "Field `AUXSRC` writer - Selects the auxiliary clock source, will glitch when switching"]
-pub type AUXSRC_W<'a, const O: u8> = crate::FieldWriter<'a, CLK_GPOUT2_CTRL_SPEC, 4, O, AUXSRC_A>;
-impl<'a, const O: u8> AUXSRC_W<'a, O> {
+pub type AUXSRC_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 4, O, AUXSRC_A>;
+impl<'a, REG, const O: u8> AUXSRC_W<'a, REG, O>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+    REG::Ux: From<u8>,
+{
     #[doc = "`0`"]
     #[inline(always)]
-    pub fn clksrc_pll_sys(self) -> &'a mut W {
+    pub fn clksrc_pll_sys(self) -> &'a mut crate::W<REG> {
         self.variant(AUXSRC_A::CLKSRC_PLL_SYS)
     }
     #[doc = "`1`"]
     #[inline(always)]
-    pub fn clksrc_gpin0(self) -> &'a mut W {
+    pub fn clksrc_gpin0(self) -> &'a mut crate::W<REG> {
         self.variant(AUXSRC_A::CLKSRC_GPIN0)
     }
     #[doc = "`10`"]
     #[inline(always)]
-    pub fn clksrc_gpin1(self) -> &'a mut W {
+    pub fn clksrc_gpin1(self) -> &'a mut crate::W<REG> {
         self.variant(AUXSRC_A::CLKSRC_GPIN1)
     }
     #[doc = "`11`"]
     #[inline(always)]
-    pub fn clksrc_pll_usb(self) -> &'a mut W {
+    pub fn clksrc_pll_usb(self) -> &'a mut crate::W<REG> {
         self.variant(AUXSRC_A::CLKSRC_PLL_USB)
     }
     #[doc = "`100`"]
     #[inline(always)]
-    pub fn rosc_clksrc_ph(self) -> &'a mut W {
+    pub fn rosc_clksrc_ph(self) -> &'a mut crate::W<REG> {
         self.variant(AUXSRC_A::ROSC_CLKSRC_PH)
     }
     #[doc = "`101`"]
     #[inline(always)]
-    pub fn xosc_clksrc(self) -> &'a mut W {
+    pub fn xosc_clksrc(self) -> &'a mut crate::W<REG> {
         self.variant(AUXSRC_A::XOSC_CLKSRC)
     }
     #[doc = "`110`"]
     #[inline(always)]
-    pub fn clk_sys(self) -> &'a mut W {
+    pub fn clk_sys(self) -> &'a mut crate::W<REG> {
         self.variant(AUXSRC_A::CLK_SYS)
     }
     #[doc = "`111`"]
     #[inline(always)]
-    pub fn clk_usb(self) -> &'a mut W {
+    pub fn clk_usb(self) -> &'a mut crate::W<REG> {
         self.variant(AUXSRC_A::CLK_USB)
     }
     #[doc = "`1000`"]
     #[inline(always)]
-    pub fn clk_adc(self) -> &'a mut W {
+    pub fn clk_adc(self) -> &'a mut crate::W<REG> {
         self.variant(AUXSRC_A::CLK_ADC)
     }
     #[doc = "`1001`"]
     #[inline(always)]
-    pub fn clk_rtc(self) -> &'a mut W {
+    pub fn clk_rtc(self) -> &'a mut crate::W<REG> {
         self.variant(AUXSRC_A::CLK_RTC)
     }
     #[doc = "`1010`"]
     #[inline(always)]
-    pub fn clk_ref(self) -> &'a mut W {
+    pub fn clk_ref(self) -> &'a mut crate::W<REG> {
         self.variant(AUXSRC_A::CLK_REF)
     }
 }
 #[doc = "Field `KILL` reader - Asynchronously kills the clock generator"]
 pub type KILL_R = crate::BitReader;
 #[doc = "Field `KILL` writer - Asynchronously kills the clock generator"]
-pub type KILL_W<'a, const O: u8> = crate::BitWriter<'a, CLK_GPOUT2_CTRL_SPEC, O>;
+pub type KILL_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `ENABLE` reader - Starts and stops the clock generator cleanly"]
 pub type ENABLE_R = crate::BitReader;
 #[doc = "Field `ENABLE` writer - Starts and stops the clock generator cleanly"]
-pub type ENABLE_W<'a, const O: u8> = crate::BitWriter<'a, CLK_GPOUT2_CTRL_SPEC, O>;
+pub type ENABLE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `DC50` reader - Enables duty cycle correction for odd divisors"]
 pub type DC50_R = crate::BitReader;
 #[doc = "Field `DC50` writer - Enables duty cycle correction for odd divisors"]
-pub type DC50_W<'a, const O: u8> = crate::BitWriter<'a, CLK_GPOUT2_CTRL_SPEC, O>;
+pub type DC50_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `PHASE` reader - This delays the enable signal by up to 3 cycles of the input clock  
  This must be set before the clock is enabled to have any effect"]
 pub type PHASE_R = crate::FieldReader;
 #[doc = "Field `PHASE` writer - This delays the enable signal by up to 3 cycles of the input clock  
  This must be set before the clock is enabled to have any effect"]
-pub type PHASE_W<'a, const O: u8> = crate::FieldWriter<'a, CLK_GPOUT2_CTRL_SPEC, 2, O>;
+pub type PHASE_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
 #[doc = "Field `NUDGE` reader - An edge on this signal shifts the phase of the output by 1 cycle of the input clock  
  This can be done at any time"]
 pub type NUDGE_R = crate::BitReader;
 #[doc = "Field `NUDGE` writer - An edge on this signal shifts the phase of the output by 1 cycle of the input clock  
  This can be done at any time"]
-pub type NUDGE_W<'a, const O: u8> = crate::BitWriter<'a, CLK_GPOUT2_CTRL_SPEC, O>;
+pub type NUDGE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 impl R {
     #[doc = "Bits 5:8 - Selects the auxiliary clock source, will glitch when switching"]
     #[inline(always)]
@@ -270,64 +242,63 @@ impl W {
     #[doc = "Bits 5:8 - Selects the auxiliary clock source, will glitch when switching"]
     #[inline(always)]
     #[must_use]
-    pub fn auxsrc(&mut self) -> AUXSRC_W<5> {
+    pub fn auxsrc(&mut self) -> AUXSRC_W<CLK_GPOUT2_CTRL_SPEC, 5> {
         AUXSRC_W::new(self)
     }
     #[doc = "Bit 10 - Asynchronously kills the clock generator"]
     #[inline(always)]
     #[must_use]
-    pub fn kill(&mut self) -> KILL_W<10> {
+    pub fn kill(&mut self) -> KILL_W<CLK_GPOUT2_CTRL_SPEC, 10> {
         KILL_W::new(self)
     }
     #[doc = "Bit 11 - Starts and stops the clock generator cleanly"]
     #[inline(always)]
     #[must_use]
-    pub fn enable(&mut self) -> ENABLE_W<11> {
+    pub fn enable(&mut self) -> ENABLE_W<CLK_GPOUT2_CTRL_SPEC, 11> {
         ENABLE_W::new(self)
     }
     #[doc = "Bit 12 - Enables duty cycle correction for odd divisors"]
     #[inline(always)]
     #[must_use]
-    pub fn dc50(&mut self) -> DC50_W<12> {
+    pub fn dc50(&mut self) -> DC50_W<CLK_GPOUT2_CTRL_SPEC, 12> {
         DC50_W::new(self)
     }
     #[doc = "Bits 16:17 - This delays the enable signal by up to 3 cycles of the input clock  
  This must be set before the clock is enabled to have any effect"]
     #[inline(always)]
     #[must_use]
-    pub fn phase(&mut self) -> PHASE_W<16> {
+    pub fn phase(&mut self) -> PHASE_W<CLK_GPOUT2_CTRL_SPEC, 16> {
         PHASE_W::new(self)
     }
     #[doc = "Bit 20 - An edge on this signal shifts the phase of the output by 1 cycle of the input clock  
  This can be done at any time"]
     #[inline(always)]
     #[must_use]
-    pub fn nudge(&mut self) -> NUDGE_W<20> {
+    pub fn nudge(&mut self) -> NUDGE_W<CLK_GPOUT2_CTRL_SPEC, 20> {
         NUDGE_W::new(self)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
 #[doc = "Clock control, can be changed on-the-fly (except for auxsrc)  
 
-This register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
-
-For information about available fields see [clk_gpout2_ctrl](index.html) module"]
+You can [`read`](crate::generic::Reg::read) this register and get [`clk_gpout2_ctrl::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`clk_gpout2_ctrl::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct CLK_GPOUT2_CTRL_SPEC;
 impl crate::RegisterSpec for CLK_GPOUT2_CTRL_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [clk_gpout2_ctrl::R](R) reader structure"]
-impl crate::Readable for CLK_GPOUT2_CTRL_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [clk_gpout2_ctrl::W](W) writer structure"]
+#[doc = "`read()` method returns [`clk_gpout2_ctrl::R`](R) reader structure"]
+impl crate::Readable for CLK_GPOUT2_CTRL_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`clk_gpout2_ctrl::W`](W) writer structure"]
 impl crate::Writable for CLK_GPOUT2_CTRL_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

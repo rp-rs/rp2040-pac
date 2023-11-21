@@ -1,18 +1,5 @@
 #[doc = "Register `IC_STATUS` reader"]
-pub struct R(crate::R<IC_STATUS_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<IC_STATUS_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<IC_STATUS_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<IC_STATUS_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<IC_STATUS_SPEC>;
 #[doc = "Field `ACTIVITY` reader - I2C Activity Status. Reset value: 0x0"]
 pub type ACTIVITY_R = crate::BitReader<ACTIVITY_A>;
 #[doc = "I2C Activity Status. Reset value: 0x0  
@@ -34,18 +21,18 @@ impl From<ACTIVITY_A> for bool {
 impl ACTIVITY_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> ACTIVITY_A {
+    pub const fn variant(&self) -> ACTIVITY_A {
         match self.bits {
             false => ACTIVITY_A::INACTIVE,
             true => ACTIVITY_A::ACTIVE,
         }
     }
-    #[doc = "Checks if the value of the field is `INACTIVE`"]
+    #[doc = "I2C is idle"]
     #[inline(always)]
     pub fn is_inactive(&self) -> bool {
         *self == ACTIVITY_A::INACTIVE
     }
-    #[doc = "Checks if the value of the field is `ACTIVE`"]
+    #[doc = "I2C is active"]
     #[inline(always)]
     pub fn is_active(&self) -> bool {
         *self == ACTIVITY_A::ACTIVE
@@ -72,18 +59,18 @@ impl From<TFNF_A> for bool {
 impl TFNF_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> TFNF_A {
+    pub const fn variant(&self) -> TFNF_A {
         match self.bits {
             false => TFNF_A::FULL,
             true => TFNF_A::NOT_FULL,
         }
     }
-    #[doc = "Checks if the value of the field is `FULL`"]
+    #[doc = "Tx FIFO is full"]
     #[inline(always)]
     pub fn is_full(&self) -> bool {
         *self == TFNF_A::FULL
     }
-    #[doc = "Checks if the value of the field is `NOT_FULL`"]
+    #[doc = "Tx FIFO not full"]
     #[inline(always)]
     pub fn is_not_full(&self) -> bool {
         *self == TFNF_A::NOT_FULL
@@ -110,18 +97,18 @@ impl From<TFE_A> for bool {
 impl TFE_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> TFE_A {
+    pub const fn variant(&self) -> TFE_A {
         match self.bits {
             false => TFE_A::NON_EMPTY,
             true => TFE_A::EMPTY,
         }
     }
-    #[doc = "Checks if the value of the field is `NON_EMPTY`"]
+    #[doc = "Tx FIFO not empty"]
     #[inline(always)]
     pub fn is_non_empty(&self) -> bool {
         *self == TFE_A::NON_EMPTY
     }
-    #[doc = "Checks if the value of the field is `EMPTY`"]
+    #[doc = "Tx FIFO is empty"]
     #[inline(always)]
     pub fn is_empty(&self) -> bool {
         *self == TFE_A::EMPTY
@@ -148,18 +135,18 @@ impl From<RFNE_A> for bool {
 impl RFNE_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> RFNE_A {
+    pub const fn variant(&self) -> RFNE_A {
         match self.bits {
             false => RFNE_A::EMPTY,
             true => RFNE_A::NOT_EMPTY,
         }
     }
-    #[doc = "Checks if the value of the field is `EMPTY`"]
+    #[doc = "Rx FIFO is empty"]
     #[inline(always)]
     pub fn is_empty(&self) -> bool {
         *self == RFNE_A::EMPTY
     }
-    #[doc = "Checks if the value of the field is `NOT_EMPTY`"]
+    #[doc = "Rx FIFO not empty"]
     #[inline(always)]
     pub fn is_not_empty(&self) -> bool {
         *self == RFNE_A::NOT_EMPTY
@@ -186,18 +173,18 @@ impl From<RFF_A> for bool {
 impl RFF_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> RFF_A {
+    pub const fn variant(&self) -> RFF_A {
         match self.bits {
             false => RFF_A::NOT_FULL,
             true => RFF_A::FULL,
         }
     }
-    #[doc = "Checks if the value of the field is `NOT_FULL`"]
+    #[doc = "Rx FIFO not full"]
     #[inline(always)]
     pub fn is_not_full(&self) -> bool {
         *self == RFF_A::NOT_FULL
     }
-    #[doc = "Checks if the value of the field is `FULL`"]
+    #[doc = "Rx FIFO is full"]
     #[inline(always)]
     pub fn is_full(&self) -> bool {
         *self == RFF_A::FULL
@@ -228,18 +215,18 @@ impl From<MST_ACTIVITY_A> for bool {
 impl MST_ACTIVITY_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> MST_ACTIVITY_A {
+    pub const fn variant(&self) -> MST_ACTIVITY_A {
         match self.bits {
             false => MST_ACTIVITY_A::IDLE,
             true => MST_ACTIVITY_A::ACTIVE,
         }
     }
-    #[doc = "Checks if the value of the field is `IDLE`"]
+    #[doc = "Master is idle"]
     #[inline(always)]
     pub fn is_idle(&self) -> bool {
         *self == MST_ACTIVITY_A::IDLE
     }
-    #[doc = "Checks if the value of the field is `ACTIVE`"]
+    #[doc = "Master not idle"]
     #[inline(always)]
     pub fn is_active(&self) -> bool {
         *self == MST_ACTIVITY_A::ACTIVE
@@ -266,18 +253,18 @@ impl From<SLV_ACTIVITY_A> for bool {
 impl SLV_ACTIVITY_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> SLV_ACTIVITY_A {
+    pub const fn variant(&self) -> SLV_ACTIVITY_A {
         match self.bits {
             false => SLV_ACTIVITY_A::IDLE,
             true => SLV_ACTIVITY_A::ACTIVE,
         }
     }
-    #[doc = "Checks if the value of the field is `IDLE`"]
+    #[doc = "Slave is idle"]
     #[inline(always)]
     pub fn is_idle(&self) -> bool {
         *self == SLV_ACTIVITY_A::IDLE
     }
-    #[doc = "Checks if the value of the field is `ACTIVE`"]
+    #[doc = "Slave not idle"]
     #[inline(always)]
     pub fn is_active(&self) -> bool {
         *self == SLV_ACTIVITY_A::ACTIVE
@@ -328,17 +315,13 @@ impl R {
 
  When the I2C is disabled by writing 0 in bit 0 of the IC_ENABLE register: - Bits 1 and 2 are set to 1 - Bits 3 and 10 are set to 0 When the master or slave state machines goes to idle and ic_en=0: - Bits 5 and 6 are set to 0  
 
-This register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
-
-For information about available fields see [ic_status](index.html) module"]
+You can [`read`](crate::generic::Reg::read) this register and get [`ic_status::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct IC_STATUS_SPEC;
 impl crate::RegisterSpec for IC_STATUS_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [ic_status::R](R) reader structure"]
-impl crate::Readable for IC_STATUS_SPEC {
-    type Reader = R;
-}
+#[doc = "`read()` method returns [`ic_status::R`](R) reader structure"]
+impl crate::Readable for IC_STATUS_SPEC {}
 #[doc = "`reset()` method sets IC_STATUS to value 0x06"]
 impl crate::Resettable for IC_STATUS_SPEC {
     const RESET_VALUE: Self::Ux = 0x06;

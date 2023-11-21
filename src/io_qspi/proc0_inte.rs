@@ -1,135 +1,103 @@
 #[doc = "Register `PROC0_INTE` reader"]
-pub struct R(crate::R<PROC0_INTE_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<PROC0_INTE_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<PROC0_INTE_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<PROC0_INTE_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<PROC0_INTE_SPEC>;
 #[doc = "Register `PROC0_INTE` writer"]
-pub struct W(crate::W<PROC0_INTE_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<PROC0_INTE_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<PROC0_INTE_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<PROC0_INTE_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<PROC0_INTE_SPEC>;
 #[doc = "Field `GPIO_QSPI_SCLK_LEVEL_LOW` reader - "]
 pub type GPIO_QSPI_SCLK_LEVEL_LOW_R = crate::BitReader;
 #[doc = "Field `GPIO_QSPI_SCLK_LEVEL_LOW` writer - "]
-pub type GPIO_QSPI_SCLK_LEVEL_LOW_W<'a, const O: u8> = crate::BitWriter<'a, PROC0_INTE_SPEC, O>;
+pub type GPIO_QSPI_SCLK_LEVEL_LOW_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `GPIO_QSPI_SCLK_LEVEL_HIGH` reader - "]
 pub type GPIO_QSPI_SCLK_LEVEL_HIGH_R = crate::BitReader;
 #[doc = "Field `GPIO_QSPI_SCLK_LEVEL_HIGH` writer - "]
-pub type GPIO_QSPI_SCLK_LEVEL_HIGH_W<'a, const O: u8> = crate::BitWriter<'a, PROC0_INTE_SPEC, O>;
+pub type GPIO_QSPI_SCLK_LEVEL_HIGH_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `GPIO_QSPI_SCLK_EDGE_LOW` reader - "]
 pub type GPIO_QSPI_SCLK_EDGE_LOW_R = crate::BitReader;
 #[doc = "Field `GPIO_QSPI_SCLK_EDGE_LOW` writer - "]
-pub type GPIO_QSPI_SCLK_EDGE_LOW_W<'a, const O: u8> = crate::BitWriter<'a, PROC0_INTE_SPEC, O>;
+pub type GPIO_QSPI_SCLK_EDGE_LOW_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `GPIO_QSPI_SCLK_EDGE_HIGH` reader - "]
 pub type GPIO_QSPI_SCLK_EDGE_HIGH_R = crate::BitReader;
 #[doc = "Field `GPIO_QSPI_SCLK_EDGE_HIGH` writer - "]
-pub type GPIO_QSPI_SCLK_EDGE_HIGH_W<'a, const O: u8> = crate::BitWriter<'a, PROC0_INTE_SPEC, O>;
+pub type GPIO_QSPI_SCLK_EDGE_HIGH_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `GPIO_QSPI_SS_LEVEL_LOW` reader - "]
 pub type GPIO_QSPI_SS_LEVEL_LOW_R = crate::BitReader;
 #[doc = "Field `GPIO_QSPI_SS_LEVEL_LOW` writer - "]
-pub type GPIO_QSPI_SS_LEVEL_LOW_W<'a, const O: u8> = crate::BitWriter<'a, PROC0_INTE_SPEC, O>;
+pub type GPIO_QSPI_SS_LEVEL_LOW_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `GPIO_QSPI_SS_LEVEL_HIGH` reader - "]
 pub type GPIO_QSPI_SS_LEVEL_HIGH_R = crate::BitReader;
 #[doc = "Field `GPIO_QSPI_SS_LEVEL_HIGH` writer - "]
-pub type GPIO_QSPI_SS_LEVEL_HIGH_W<'a, const O: u8> = crate::BitWriter<'a, PROC0_INTE_SPEC, O>;
+pub type GPIO_QSPI_SS_LEVEL_HIGH_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `GPIO_QSPI_SS_EDGE_LOW` reader - "]
 pub type GPIO_QSPI_SS_EDGE_LOW_R = crate::BitReader;
 #[doc = "Field `GPIO_QSPI_SS_EDGE_LOW` writer - "]
-pub type GPIO_QSPI_SS_EDGE_LOW_W<'a, const O: u8> = crate::BitWriter<'a, PROC0_INTE_SPEC, O>;
+pub type GPIO_QSPI_SS_EDGE_LOW_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `GPIO_QSPI_SS_EDGE_HIGH` reader - "]
 pub type GPIO_QSPI_SS_EDGE_HIGH_R = crate::BitReader;
 #[doc = "Field `GPIO_QSPI_SS_EDGE_HIGH` writer - "]
-pub type GPIO_QSPI_SS_EDGE_HIGH_W<'a, const O: u8> = crate::BitWriter<'a, PROC0_INTE_SPEC, O>;
+pub type GPIO_QSPI_SS_EDGE_HIGH_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `GPIO_QSPI_SD0_LEVEL_LOW` reader - "]
 pub type GPIO_QSPI_SD0_LEVEL_LOW_R = crate::BitReader;
 #[doc = "Field `GPIO_QSPI_SD0_LEVEL_LOW` writer - "]
-pub type GPIO_QSPI_SD0_LEVEL_LOW_W<'a, const O: u8> = crate::BitWriter<'a, PROC0_INTE_SPEC, O>;
+pub type GPIO_QSPI_SD0_LEVEL_LOW_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `GPIO_QSPI_SD0_LEVEL_HIGH` reader - "]
 pub type GPIO_QSPI_SD0_LEVEL_HIGH_R = crate::BitReader;
 #[doc = "Field `GPIO_QSPI_SD0_LEVEL_HIGH` writer - "]
-pub type GPIO_QSPI_SD0_LEVEL_HIGH_W<'a, const O: u8> = crate::BitWriter<'a, PROC0_INTE_SPEC, O>;
+pub type GPIO_QSPI_SD0_LEVEL_HIGH_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `GPIO_QSPI_SD0_EDGE_LOW` reader - "]
 pub type GPIO_QSPI_SD0_EDGE_LOW_R = crate::BitReader;
 #[doc = "Field `GPIO_QSPI_SD0_EDGE_LOW` writer - "]
-pub type GPIO_QSPI_SD0_EDGE_LOW_W<'a, const O: u8> = crate::BitWriter<'a, PROC0_INTE_SPEC, O>;
+pub type GPIO_QSPI_SD0_EDGE_LOW_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `GPIO_QSPI_SD0_EDGE_HIGH` reader - "]
 pub type GPIO_QSPI_SD0_EDGE_HIGH_R = crate::BitReader;
 #[doc = "Field `GPIO_QSPI_SD0_EDGE_HIGH` writer - "]
-pub type GPIO_QSPI_SD0_EDGE_HIGH_W<'a, const O: u8> = crate::BitWriter<'a, PROC0_INTE_SPEC, O>;
+pub type GPIO_QSPI_SD0_EDGE_HIGH_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `GPIO_QSPI_SD1_LEVEL_LOW` reader - "]
 pub type GPIO_QSPI_SD1_LEVEL_LOW_R = crate::BitReader;
 #[doc = "Field `GPIO_QSPI_SD1_LEVEL_LOW` writer - "]
-pub type GPIO_QSPI_SD1_LEVEL_LOW_W<'a, const O: u8> = crate::BitWriter<'a, PROC0_INTE_SPEC, O>;
+pub type GPIO_QSPI_SD1_LEVEL_LOW_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `GPIO_QSPI_SD1_LEVEL_HIGH` reader - "]
 pub type GPIO_QSPI_SD1_LEVEL_HIGH_R = crate::BitReader;
 #[doc = "Field `GPIO_QSPI_SD1_LEVEL_HIGH` writer - "]
-pub type GPIO_QSPI_SD1_LEVEL_HIGH_W<'a, const O: u8> = crate::BitWriter<'a, PROC0_INTE_SPEC, O>;
+pub type GPIO_QSPI_SD1_LEVEL_HIGH_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `GPIO_QSPI_SD1_EDGE_LOW` reader - "]
 pub type GPIO_QSPI_SD1_EDGE_LOW_R = crate::BitReader;
 #[doc = "Field `GPIO_QSPI_SD1_EDGE_LOW` writer - "]
-pub type GPIO_QSPI_SD1_EDGE_LOW_W<'a, const O: u8> = crate::BitWriter<'a, PROC0_INTE_SPEC, O>;
+pub type GPIO_QSPI_SD1_EDGE_LOW_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `GPIO_QSPI_SD1_EDGE_HIGH` reader - "]
 pub type GPIO_QSPI_SD1_EDGE_HIGH_R = crate::BitReader;
 #[doc = "Field `GPIO_QSPI_SD1_EDGE_HIGH` writer - "]
-pub type GPIO_QSPI_SD1_EDGE_HIGH_W<'a, const O: u8> = crate::BitWriter<'a, PROC0_INTE_SPEC, O>;
+pub type GPIO_QSPI_SD1_EDGE_HIGH_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `GPIO_QSPI_SD2_LEVEL_LOW` reader - "]
 pub type GPIO_QSPI_SD2_LEVEL_LOW_R = crate::BitReader;
 #[doc = "Field `GPIO_QSPI_SD2_LEVEL_LOW` writer - "]
-pub type GPIO_QSPI_SD2_LEVEL_LOW_W<'a, const O: u8> = crate::BitWriter<'a, PROC0_INTE_SPEC, O>;
+pub type GPIO_QSPI_SD2_LEVEL_LOW_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `GPIO_QSPI_SD2_LEVEL_HIGH` reader - "]
 pub type GPIO_QSPI_SD2_LEVEL_HIGH_R = crate::BitReader;
 #[doc = "Field `GPIO_QSPI_SD2_LEVEL_HIGH` writer - "]
-pub type GPIO_QSPI_SD2_LEVEL_HIGH_W<'a, const O: u8> = crate::BitWriter<'a, PROC0_INTE_SPEC, O>;
+pub type GPIO_QSPI_SD2_LEVEL_HIGH_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `GPIO_QSPI_SD2_EDGE_LOW` reader - "]
 pub type GPIO_QSPI_SD2_EDGE_LOW_R = crate::BitReader;
 #[doc = "Field `GPIO_QSPI_SD2_EDGE_LOW` writer - "]
-pub type GPIO_QSPI_SD2_EDGE_LOW_W<'a, const O: u8> = crate::BitWriter<'a, PROC0_INTE_SPEC, O>;
+pub type GPIO_QSPI_SD2_EDGE_LOW_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `GPIO_QSPI_SD2_EDGE_HIGH` reader - "]
 pub type GPIO_QSPI_SD2_EDGE_HIGH_R = crate::BitReader;
 #[doc = "Field `GPIO_QSPI_SD2_EDGE_HIGH` writer - "]
-pub type GPIO_QSPI_SD2_EDGE_HIGH_W<'a, const O: u8> = crate::BitWriter<'a, PROC0_INTE_SPEC, O>;
+pub type GPIO_QSPI_SD2_EDGE_HIGH_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `GPIO_QSPI_SD3_LEVEL_LOW` reader - "]
 pub type GPIO_QSPI_SD3_LEVEL_LOW_R = crate::BitReader;
 #[doc = "Field `GPIO_QSPI_SD3_LEVEL_LOW` writer - "]
-pub type GPIO_QSPI_SD3_LEVEL_LOW_W<'a, const O: u8> = crate::BitWriter<'a, PROC0_INTE_SPEC, O>;
+pub type GPIO_QSPI_SD3_LEVEL_LOW_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `GPIO_QSPI_SD3_LEVEL_HIGH` reader - "]
 pub type GPIO_QSPI_SD3_LEVEL_HIGH_R = crate::BitReader;
 #[doc = "Field `GPIO_QSPI_SD3_LEVEL_HIGH` writer - "]
-pub type GPIO_QSPI_SD3_LEVEL_HIGH_W<'a, const O: u8> = crate::BitWriter<'a, PROC0_INTE_SPEC, O>;
+pub type GPIO_QSPI_SD3_LEVEL_HIGH_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `GPIO_QSPI_SD3_EDGE_LOW` reader - "]
 pub type GPIO_QSPI_SD3_EDGE_LOW_R = crate::BitReader;
 #[doc = "Field `GPIO_QSPI_SD3_EDGE_LOW` writer - "]
-pub type GPIO_QSPI_SD3_EDGE_LOW_W<'a, const O: u8> = crate::BitWriter<'a, PROC0_INTE_SPEC, O>;
+pub type GPIO_QSPI_SD3_EDGE_LOW_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `GPIO_QSPI_SD3_EDGE_HIGH` reader - "]
 pub type GPIO_QSPI_SD3_EDGE_HIGH_R = crate::BitReader;
 #[doc = "Field `GPIO_QSPI_SD3_EDGE_HIGH` writer - "]
-pub type GPIO_QSPI_SD3_EDGE_HIGH_W<'a, const O: u8> = crate::BitWriter<'a, PROC0_INTE_SPEC, O>;
+pub type GPIO_QSPI_SD3_EDGE_HIGH_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 impl R {
     #[doc = "Bit 0"]
     #[inline(always)]
@@ -256,170 +224,169 @@ impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
     #[must_use]
-    pub fn gpio_qspi_sclk_level_low(&mut self) -> GPIO_QSPI_SCLK_LEVEL_LOW_W<0> {
+    pub fn gpio_qspi_sclk_level_low(&mut self) -> GPIO_QSPI_SCLK_LEVEL_LOW_W<PROC0_INTE_SPEC, 0> {
         GPIO_QSPI_SCLK_LEVEL_LOW_W::new(self)
     }
     #[doc = "Bit 1"]
     #[inline(always)]
     #[must_use]
-    pub fn gpio_qspi_sclk_level_high(&mut self) -> GPIO_QSPI_SCLK_LEVEL_HIGH_W<1> {
+    pub fn gpio_qspi_sclk_level_high(&mut self) -> GPIO_QSPI_SCLK_LEVEL_HIGH_W<PROC0_INTE_SPEC, 1> {
         GPIO_QSPI_SCLK_LEVEL_HIGH_W::new(self)
     }
     #[doc = "Bit 2"]
     #[inline(always)]
     #[must_use]
-    pub fn gpio_qspi_sclk_edge_low(&mut self) -> GPIO_QSPI_SCLK_EDGE_LOW_W<2> {
+    pub fn gpio_qspi_sclk_edge_low(&mut self) -> GPIO_QSPI_SCLK_EDGE_LOW_W<PROC0_INTE_SPEC, 2> {
         GPIO_QSPI_SCLK_EDGE_LOW_W::new(self)
     }
     #[doc = "Bit 3"]
     #[inline(always)]
     #[must_use]
-    pub fn gpio_qspi_sclk_edge_high(&mut self) -> GPIO_QSPI_SCLK_EDGE_HIGH_W<3> {
+    pub fn gpio_qspi_sclk_edge_high(&mut self) -> GPIO_QSPI_SCLK_EDGE_HIGH_W<PROC0_INTE_SPEC, 3> {
         GPIO_QSPI_SCLK_EDGE_HIGH_W::new(self)
     }
     #[doc = "Bit 4"]
     #[inline(always)]
     #[must_use]
-    pub fn gpio_qspi_ss_level_low(&mut self) -> GPIO_QSPI_SS_LEVEL_LOW_W<4> {
+    pub fn gpio_qspi_ss_level_low(&mut self) -> GPIO_QSPI_SS_LEVEL_LOW_W<PROC0_INTE_SPEC, 4> {
         GPIO_QSPI_SS_LEVEL_LOW_W::new(self)
     }
     #[doc = "Bit 5"]
     #[inline(always)]
     #[must_use]
-    pub fn gpio_qspi_ss_level_high(&mut self) -> GPIO_QSPI_SS_LEVEL_HIGH_W<5> {
+    pub fn gpio_qspi_ss_level_high(&mut self) -> GPIO_QSPI_SS_LEVEL_HIGH_W<PROC0_INTE_SPEC, 5> {
         GPIO_QSPI_SS_LEVEL_HIGH_W::new(self)
     }
     #[doc = "Bit 6"]
     #[inline(always)]
     #[must_use]
-    pub fn gpio_qspi_ss_edge_low(&mut self) -> GPIO_QSPI_SS_EDGE_LOW_W<6> {
+    pub fn gpio_qspi_ss_edge_low(&mut self) -> GPIO_QSPI_SS_EDGE_LOW_W<PROC0_INTE_SPEC, 6> {
         GPIO_QSPI_SS_EDGE_LOW_W::new(self)
     }
     #[doc = "Bit 7"]
     #[inline(always)]
     #[must_use]
-    pub fn gpio_qspi_ss_edge_high(&mut self) -> GPIO_QSPI_SS_EDGE_HIGH_W<7> {
+    pub fn gpio_qspi_ss_edge_high(&mut self) -> GPIO_QSPI_SS_EDGE_HIGH_W<PROC0_INTE_SPEC, 7> {
         GPIO_QSPI_SS_EDGE_HIGH_W::new(self)
     }
     #[doc = "Bit 8"]
     #[inline(always)]
     #[must_use]
-    pub fn gpio_qspi_sd0_level_low(&mut self) -> GPIO_QSPI_SD0_LEVEL_LOW_W<8> {
+    pub fn gpio_qspi_sd0_level_low(&mut self) -> GPIO_QSPI_SD0_LEVEL_LOW_W<PROC0_INTE_SPEC, 8> {
         GPIO_QSPI_SD0_LEVEL_LOW_W::new(self)
     }
     #[doc = "Bit 9"]
     #[inline(always)]
     #[must_use]
-    pub fn gpio_qspi_sd0_level_high(&mut self) -> GPIO_QSPI_SD0_LEVEL_HIGH_W<9> {
+    pub fn gpio_qspi_sd0_level_high(&mut self) -> GPIO_QSPI_SD0_LEVEL_HIGH_W<PROC0_INTE_SPEC, 9> {
         GPIO_QSPI_SD0_LEVEL_HIGH_W::new(self)
     }
     #[doc = "Bit 10"]
     #[inline(always)]
     #[must_use]
-    pub fn gpio_qspi_sd0_edge_low(&mut self) -> GPIO_QSPI_SD0_EDGE_LOW_W<10> {
+    pub fn gpio_qspi_sd0_edge_low(&mut self) -> GPIO_QSPI_SD0_EDGE_LOW_W<PROC0_INTE_SPEC, 10> {
         GPIO_QSPI_SD0_EDGE_LOW_W::new(self)
     }
     #[doc = "Bit 11"]
     #[inline(always)]
     #[must_use]
-    pub fn gpio_qspi_sd0_edge_high(&mut self) -> GPIO_QSPI_SD0_EDGE_HIGH_W<11> {
+    pub fn gpio_qspi_sd0_edge_high(&mut self) -> GPIO_QSPI_SD0_EDGE_HIGH_W<PROC0_INTE_SPEC, 11> {
         GPIO_QSPI_SD0_EDGE_HIGH_W::new(self)
     }
     #[doc = "Bit 12"]
     #[inline(always)]
     #[must_use]
-    pub fn gpio_qspi_sd1_level_low(&mut self) -> GPIO_QSPI_SD1_LEVEL_LOW_W<12> {
+    pub fn gpio_qspi_sd1_level_low(&mut self) -> GPIO_QSPI_SD1_LEVEL_LOW_W<PROC0_INTE_SPEC, 12> {
         GPIO_QSPI_SD1_LEVEL_LOW_W::new(self)
     }
     #[doc = "Bit 13"]
     #[inline(always)]
     #[must_use]
-    pub fn gpio_qspi_sd1_level_high(&mut self) -> GPIO_QSPI_SD1_LEVEL_HIGH_W<13> {
+    pub fn gpio_qspi_sd1_level_high(&mut self) -> GPIO_QSPI_SD1_LEVEL_HIGH_W<PROC0_INTE_SPEC, 13> {
         GPIO_QSPI_SD1_LEVEL_HIGH_W::new(self)
     }
     #[doc = "Bit 14"]
     #[inline(always)]
     #[must_use]
-    pub fn gpio_qspi_sd1_edge_low(&mut self) -> GPIO_QSPI_SD1_EDGE_LOW_W<14> {
+    pub fn gpio_qspi_sd1_edge_low(&mut self) -> GPIO_QSPI_SD1_EDGE_LOW_W<PROC0_INTE_SPEC, 14> {
         GPIO_QSPI_SD1_EDGE_LOW_W::new(self)
     }
     #[doc = "Bit 15"]
     #[inline(always)]
     #[must_use]
-    pub fn gpio_qspi_sd1_edge_high(&mut self) -> GPIO_QSPI_SD1_EDGE_HIGH_W<15> {
+    pub fn gpio_qspi_sd1_edge_high(&mut self) -> GPIO_QSPI_SD1_EDGE_HIGH_W<PROC0_INTE_SPEC, 15> {
         GPIO_QSPI_SD1_EDGE_HIGH_W::new(self)
     }
     #[doc = "Bit 16"]
     #[inline(always)]
     #[must_use]
-    pub fn gpio_qspi_sd2_level_low(&mut self) -> GPIO_QSPI_SD2_LEVEL_LOW_W<16> {
+    pub fn gpio_qspi_sd2_level_low(&mut self) -> GPIO_QSPI_SD2_LEVEL_LOW_W<PROC0_INTE_SPEC, 16> {
         GPIO_QSPI_SD2_LEVEL_LOW_W::new(self)
     }
     #[doc = "Bit 17"]
     #[inline(always)]
     #[must_use]
-    pub fn gpio_qspi_sd2_level_high(&mut self) -> GPIO_QSPI_SD2_LEVEL_HIGH_W<17> {
+    pub fn gpio_qspi_sd2_level_high(&mut self) -> GPIO_QSPI_SD2_LEVEL_HIGH_W<PROC0_INTE_SPEC, 17> {
         GPIO_QSPI_SD2_LEVEL_HIGH_W::new(self)
     }
     #[doc = "Bit 18"]
     #[inline(always)]
     #[must_use]
-    pub fn gpio_qspi_sd2_edge_low(&mut self) -> GPIO_QSPI_SD2_EDGE_LOW_W<18> {
+    pub fn gpio_qspi_sd2_edge_low(&mut self) -> GPIO_QSPI_SD2_EDGE_LOW_W<PROC0_INTE_SPEC, 18> {
         GPIO_QSPI_SD2_EDGE_LOW_W::new(self)
     }
     #[doc = "Bit 19"]
     #[inline(always)]
     #[must_use]
-    pub fn gpio_qspi_sd2_edge_high(&mut self) -> GPIO_QSPI_SD2_EDGE_HIGH_W<19> {
+    pub fn gpio_qspi_sd2_edge_high(&mut self) -> GPIO_QSPI_SD2_EDGE_HIGH_W<PROC0_INTE_SPEC, 19> {
         GPIO_QSPI_SD2_EDGE_HIGH_W::new(self)
     }
     #[doc = "Bit 20"]
     #[inline(always)]
     #[must_use]
-    pub fn gpio_qspi_sd3_level_low(&mut self) -> GPIO_QSPI_SD3_LEVEL_LOW_W<20> {
+    pub fn gpio_qspi_sd3_level_low(&mut self) -> GPIO_QSPI_SD3_LEVEL_LOW_W<PROC0_INTE_SPEC, 20> {
         GPIO_QSPI_SD3_LEVEL_LOW_W::new(self)
     }
     #[doc = "Bit 21"]
     #[inline(always)]
     #[must_use]
-    pub fn gpio_qspi_sd3_level_high(&mut self) -> GPIO_QSPI_SD3_LEVEL_HIGH_W<21> {
+    pub fn gpio_qspi_sd3_level_high(&mut self) -> GPIO_QSPI_SD3_LEVEL_HIGH_W<PROC0_INTE_SPEC, 21> {
         GPIO_QSPI_SD3_LEVEL_HIGH_W::new(self)
     }
     #[doc = "Bit 22"]
     #[inline(always)]
     #[must_use]
-    pub fn gpio_qspi_sd3_edge_low(&mut self) -> GPIO_QSPI_SD3_EDGE_LOW_W<22> {
+    pub fn gpio_qspi_sd3_edge_low(&mut self) -> GPIO_QSPI_SD3_EDGE_LOW_W<PROC0_INTE_SPEC, 22> {
         GPIO_QSPI_SD3_EDGE_LOW_W::new(self)
     }
     #[doc = "Bit 23"]
     #[inline(always)]
     #[must_use]
-    pub fn gpio_qspi_sd3_edge_high(&mut self) -> GPIO_QSPI_SD3_EDGE_HIGH_W<23> {
+    pub fn gpio_qspi_sd3_edge_high(&mut self) -> GPIO_QSPI_SD3_EDGE_HIGH_W<PROC0_INTE_SPEC, 23> {
         GPIO_QSPI_SD3_EDGE_HIGH_W::new(self)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
 #[doc = "Interrupt Enable for proc0  
 
-This register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
-
-For information about available fields see [proc0_inte](index.html) module"]
+You can [`read`](crate::generic::Reg::read) this register and get [`proc0_inte::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`proc0_inte::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct PROC0_INTE_SPEC;
 impl crate::RegisterSpec for PROC0_INTE_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [proc0_inte::R](R) reader structure"]
-impl crate::Readable for PROC0_INTE_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [proc0_inte::W](W) writer structure"]
+#[doc = "`read()` method returns [`proc0_inte::R`](R) reader structure"]
+impl crate::Readable for PROC0_INTE_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`proc0_inte::W`](W) writer structure"]
 impl crate::Writable for PROC0_INTE_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

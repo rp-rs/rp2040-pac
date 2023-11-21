@@ -1,47 +1,15 @@
 #[doc = "Register `AIRCR` reader"]
-pub struct R(crate::R<AIRCR_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<AIRCR_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<AIRCR_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<AIRCR_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<AIRCR_SPEC>;
 #[doc = "Register `AIRCR` writer"]
-pub struct W(crate::W<AIRCR_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<AIRCR_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<AIRCR_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<AIRCR_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<AIRCR_SPEC>;
 #[doc = "Field `VECTCLRACTIVE` reader - Clears all active state information for fixed and configurable exceptions. This bit: is self-clearing, can only be set by the DAP when the core is halted. When set: clears all active exception status of the processor, forces a return to Thread mode, forces an IPSR of 0. A debugger must re-initialize the stack."]
 pub type VECTCLRACTIVE_R = crate::BitReader;
 #[doc = "Field `VECTCLRACTIVE` writer - Clears all active state information for fixed and configurable exceptions. This bit: is self-clearing, can only be set by the DAP when the core is halted. When set: clears all active exception status of the processor, forces a return to Thread mode, forces an IPSR of 0. A debugger must re-initialize the stack."]
-pub type VECTCLRACTIVE_W<'a, const O: u8> = crate::BitWriter<'a, AIRCR_SPEC, O>;
+pub type VECTCLRACTIVE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `SYSRESETREQ` reader - Writing 1 to this bit causes the SYSRESETREQ signal to the outer system to be asserted to request a reset. The intention is to force a large system reset of all major components except for debug. The C_HALT bit in the DHCSR is cleared as a result of the system reset requested. The debugger does not lose contact with the device."]
 pub type SYSRESETREQ_R = crate::BitReader;
 #[doc = "Field `SYSRESETREQ` writer - Writing 1 to this bit causes the SYSRESETREQ signal to the outer system to be asserted to request a reset. The intention is to force a large system reset of all major components except for debug. The C_HALT bit in the DHCSR is cleared as a result of the system reset requested. The debugger does not lose contact with the device."]
-pub type SYSRESETREQ_W<'a, const O: u8> = crate::BitWriter<'a, AIRCR_SPEC, O>;
+pub type SYSRESETREQ_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `ENDIANESS` reader - Data endianness implemented:  
  0 = Little-endian."]
 pub type ENDIANESS_R = crate::BitReader;
@@ -52,7 +20,7 @@ pub type VECTKEY_R = crate::FieldReader<u16>;
 #[doc = "Field `VECTKEY` writer - Register key:  
  Reads as Unknown  
  On writes, write 0x05FA to VECTKEY, otherwise the write is ignored."]
-pub type VECTKEY_W<'a, const O: u8> = crate::FieldWriter<'a, AIRCR_SPEC, 16, O, u16>;
+pub type VECTKEY_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 16, O, u16>;
 impl R {
     #[doc = "Bit 1 - Clears all active state information for fixed and configurable exceptions. This bit: is self-clearing, can only be set by the DAP when the core is halted. When set: clears all active exception status of the processor, forces a return to Thread mode, forces an IPSR of 0. A debugger must re-initialize the stack."]
     #[inline(always)]
@@ -82,13 +50,13 @@ impl W {
     #[doc = "Bit 1 - Clears all active state information for fixed and configurable exceptions. This bit: is self-clearing, can only be set by the DAP when the core is halted. When set: clears all active exception status of the processor, forces a return to Thread mode, forces an IPSR of 0. A debugger must re-initialize the stack."]
     #[inline(always)]
     #[must_use]
-    pub fn vectclractive(&mut self) -> VECTCLRACTIVE_W<1> {
+    pub fn vectclractive(&mut self) -> VECTCLRACTIVE_W<AIRCR_SPEC, 1> {
         VECTCLRACTIVE_W::new(self)
     }
     #[doc = "Bit 2 - Writing 1 to this bit causes the SYSRESETREQ signal to the outer system to be asserted to request a reset. The intention is to force a large system reset of all major components except for debug. The C_HALT bit in the DHCSR is cleared as a result of the system reset requested. The debugger does not lose contact with the device."]
     #[inline(always)]
     #[must_use]
-    pub fn sysresetreq(&mut self) -> SYSRESETREQ_W<2> {
+    pub fn sysresetreq(&mut self) -> SYSRESETREQ_W<AIRCR_SPEC, 2> {
         SYSRESETREQ_W::new(self)
     }
     #[doc = "Bits 16:31 - Register key:  
@@ -96,32 +64,31 @@ impl W {
  On writes, write 0x05FA to VECTKEY, otherwise the write is ignored."]
     #[inline(always)]
     #[must_use]
-    pub fn vectkey(&mut self) -> VECTKEY_W<16> {
+    pub fn vectkey(&mut self) -> VECTKEY_W<AIRCR_SPEC, 16> {
         VECTKEY_W::new(self)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
 #[doc = "Use the Application Interrupt and Reset Control Register to: determine data endianness, clear all active state information from debug halt mode, request a system reset.  
 
-This register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
-
-For information about available fields see [aircr](index.html) module"]
+You can [`read`](crate::generic::Reg::read) this register and get [`aircr::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`aircr::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct AIRCR_SPEC;
 impl crate::RegisterSpec for AIRCR_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [aircr::R](R) reader structure"]
-impl crate::Readable for AIRCR_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [aircr::W](W) writer structure"]
+#[doc = "`read()` method returns [`aircr::R`](R) reader structure"]
+impl crate::Readable for AIRCR_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`aircr::W`](W) writer structure"]
 impl crate::Writable for AIRCR_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

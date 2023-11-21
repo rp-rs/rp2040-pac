@@ -1,18 +1,5 @@
 #[doc = "Register `BUFF_CPU_SHOULD_HANDLE` reader"]
-pub struct R(crate::R<BUFF_CPU_SHOULD_HANDLE_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<BUFF_CPU_SHOULD_HANDLE_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<BUFF_CPU_SHOULD_HANDLE_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<BUFF_CPU_SHOULD_HANDLE_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<BUFF_CPU_SHOULD_HANDLE_SPEC>;
 #[doc = "Field `EP0_IN` reader - "]
 pub type EP0_IN_R = crate::BitReader;
 #[doc = "Field `EP0_OUT` reader - "]
@@ -241,17 +228,13 @@ impl R {
 }
 #[doc = "Which of the double buffers should be handled. Only valid if using an interrupt per buffer (i.e. not per 2 buffers). Not valid for host interrupt endpoint polling because they are only single buffered.  
 
-This register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
-
-For information about available fields see [buff_cpu_should_handle](index.html) module"]
+You can [`read`](crate::generic::Reg::read) this register and get [`buff_cpu_should_handle::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct BUFF_CPU_SHOULD_HANDLE_SPEC;
 impl crate::RegisterSpec for BUFF_CPU_SHOULD_HANDLE_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [buff_cpu_should_handle::R](R) reader structure"]
-impl crate::Readable for BUFF_CPU_SHOULD_HANDLE_SPEC {
-    type Reader = R;
-}
+#[doc = "`read()` method returns [`buff_cpu_should_handle::R`](R) reader structure"]
+impl crate::Readable for BUFF_CPU_SHOULD_HANDLE_SPEC {}
 #[doc = "`reset()` method sets BUFF_CPU_SHOULD_HANDLE to value 0"]
 impl crate::Resettable for BUFF_CPU_SHOULD_HANDLE_SPEC {
     const RESET_VALUE: Self::Ux = 0;

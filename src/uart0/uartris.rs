@@ -1,18 +1,5 @@
 #[doc = "Register `UARTRIS` reader"]
-pub struct R(crate::R<UARTRIS_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<UARTRIS_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<UARTRIS_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<UARTRIS_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<UARTRIS_SPEC>;
 #[doc = "Field `RIRMIS` reader - nUARTRI modem interrupt status. Returns the raw interrupt state of the UARTRIINTR interrupt."]
 pub type RIRMIS_R = crate::BitReader;
 #[doc = "Field `CTSRMIS` reader - nUARTCTS modem interrupt status. Returns the raw interrupt state of the UARTCTSINTR interrupt."]
@@ -94,17 +81,13 @@ impl R {
 }
 #[doc = "Raw Interrupt Status Register, UARTRIS  
 
-This register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
-
-For information about available fields see [uartris](index.html) module"]
+You can [`read`](crate::generic::Reg::read) this register and get [`uartris::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct UARTRIS_SPEC;
 impl crate::RegisterSpec for UARTRIS_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [uartris::R](R) reader structure"]
-impl crate::Readable for UARTRIS_SPEC {
-    type Reader = R;
-}
+#[doc = "`read()` method returns [`uartris::R`](R) reader structure"]
+impl crate::Readable for UARTRIS_SPEC {}
 #[doc = "`reset()` method sets UARTRIS to value 0"]
 impl crate::Resettable for UARTRIS_SPEC {
     const RESET_VALUE: Self::Ux = 0;

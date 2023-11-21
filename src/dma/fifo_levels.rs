@@ -1,18 +1,5 @@
 #[doc = "Register `FIFO_LEVELS` reader"]
-pub struct R(crate::R<FIFO_LEVELS_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<FIFO_LEVELS_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<FIFO_LEVELS_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<FIFO_LEVELS_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<FIFO_LEVELS_SPEC>;
 #[doc = "Field `TDF_LVL` reader - Current Transfer-Data-FIFO fill level"]
 pub type TDF_LVL_R = crate::FieldReader;
 #[doc = "Field `WAF_LVL` reader - Current Write-Address-FIFO fill level"]
@@ -38,17 +25,13 @@ impl R {
 }
 #[doc = "Debug RAF, WAF, TDF levels  
 
-This register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
-
-For information about available fields see [fifo_levels](index.html) module"]
+You can [`read`](crate::generic::Reg::read) this register and get [`fifo_levels::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct FIFO_LEVELS_SPEC;
 impl crate::RegisterSpec for FIFO_LEVELS_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [fifo_levels::R](R) reader structure"]
-impl crate::Readable for FIFO_LEVELS_SPEC {
-    type Reader = R;
-}
+#[doc = "`read()` method returns [`fifo_levels::R`](R) reader structure"]
+impl crate::Readable for FIFO_LEVELS_SPEC {}
 #[doc = "`reset()` method sets FIFO_LEVELS to value 0"]
 impl crate::Resettable for FIFO_LEVELS_SPEC {
     const RESET_VALUE: Self::Ux = 0;

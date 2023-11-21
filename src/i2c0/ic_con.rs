@@ -1,39 +1,7 @@
 #[doc = "Register `IC_CON` reader"]
-pub struct R(crate::R<IC_CON_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<IC_CON_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<IC_CON_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<IC_CON_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<IC_CON_SPEC>;
 #[doc = "Register `IC_CON` writer"]
-pub struct W(crate::W<IC_CON_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<IC_CON_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<IC_CON_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<IC_CON_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<IC_CON_SPEC>;
 #[doc = "Field `MASTER_MODE` reader - This bit controls whether the DW_apb_i2c master is enabled.  
 
  NOTE: Software should ensure that if this bit is written with '1' then bit 6 should also be written with a '1'."]
@@ -59,18 +27,18 @@ impl From<MASTER_MODE_A> for bool {
 impl MASTER_MODE_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> MASTER_MODE_A {
+    pub const fn variant(&self) -> MASTER_MODE_A {
         match self.bits {
             false => MASTER_MODE_A::DISABLED,
             true => MASTER_MODE_A::ENABLED,
         }
     }
-    #[doc = "Checks if the value of the field is `DISABLED`"]
+    #[doc = "Master mode is disabled"]
     #[inline(always)]
     pub fn is_disabled(&self) -> bool {
         *self == MASTER_MODE_A::DISABLED
     }
-    #[doc = "Checks if the value of the field is `ENABLED`"]
+    #[doc = "Master mode is enabled"]
     #[inline(always)]
     pub fn is_enabled(&self) -> bool {
         *self == MASTER_MODE_A::ENABLED
@@ -79,16 +47,19 @@ impl MASTER_MODE_R {
 #[doc = "Field `MASTER_MODE` writer - This bit controls whether the DW_apb_i2c master is enabled.  
 
  NOTE: Software should ensure that if this bit is written with '1' then bit 6 should also be written with a '1'."]
-pub type MASTER_MODE_W<'a, const O: u8> = crate::BitWriter<'a, IC_CON_SPEC, O, MASTER_MODE_A>;
-impl<'a, const O: u8> MASTER_MODE_W<'a, O> {
+pub type MASTER_MODE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, MASTER_MODE_A>;
+impl<'a, REG, const O: u8> MASTER_MODE_W<'a, REG, O>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
     #[doc = "Master mode is disabled"]
     #[inline(always)]
-    pub fn disabled(self) -> &'a mut W {
+    pub fn disabled(self) -> &'a mut crate::W<REG> {
         self.variant(MASTER_MODE_A::DISABLED)
     }
     #[doc = "Master mode is enabled"]
     #[inline(always)]
-    pub fn enabled(self) -> &'a mut W {
+    pub fn enabled(self) -> &'a mut crate::W<REG> {
         self.variant(MASTER_MODE_A::ENABLED)
     }
 }
@@ -139,7 +110,7 @@ impl crate::FieldSpec for SPEED_A {
 impl SPEED_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> Option<SPEED_A> {
+    pub const fn variant(&self) -> Option<SPEED_A> {
         match self.bits {
             1 => Some(SPEED_A::STANDARD),
             2 => Some(SPEED_A::FAST),
@@ -147,17 +118,17 @@ impl SPEED_R {
             _ => None,
         }
     }
-    #[doc = "Checks if the value of the field is `STANDARD`"]
+    #[doc = "Standard Speed mode of operation"]
     #[inline(always)]
     pub fn is_standard(&self) -> bool {
         *self == SPEED_A::STANDARD
     }
-    #[doc = "Checks if the value of the field is `FAST`"]
+    #[doc = "Fast or Fast Plus mode of operation"]
     #[inline(always)]
     pub fn is_fast(&self) -> bool {
         *self == SPEED_A::FAST
     }
-    #[doc = "Checks if the value of the field is `HIGH`"]
+    #[doc = "High Speed mode of operation"]
     #[inline(always)]
     pub fn is_high(&self) -> bool {
         *self == SPEED_A::HIGH
@@ -174,21 +145,25 @@ impl SPEED_R {
  3: high speed mode (3.4 Mbit/s)  
 
  Note: This field is not applicable when IC_ULTRA_FAST_MODE=1"]
-pub type SPEED_W<'a, const O: u8> = crate::FieldWriter<'a, IC_CON_SPEC, 2, O, SPEED_A>;
-impl<'a, const O: u8> SPEED_W<'a, O> {
+pub type SPEED_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O, SPEED_A>;
+impl<'a, REG, const O: u8> SPEED_W<'a, REG, O>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+    REG::Ux: From<u8>,
+{
     #[doc = "Standard Speed mode of operation"]
     #[inline(always)]
-    pub fn standard(self) -> &'a mut W {
+    pub fn standard(self) -> &'a mut crate::W<REG> {
         self.variant(SPEED_A::STANDARD)
     }
     #[doc = "Fast or Fast Plus mode of operation"]
     #[inline(always)]
-    pub fn fast(self) -> &'a mut W {
+    pub fn fast(self) -> &'a mut crate::W<REG> {
         self.variant(SPEED_A::FAST)
     }
     #[doc = "High Speed mode of operation"]
     #[inline(always)]
-    pub fn high(self) -> &'a mut W {
+    pub fn high(self) -> &'a mut crate::W<REG> {
         self.variant(SPEED_A::HIGH)
     }
 }
@@ -213,35 +188,38 @@ impl From<IC_10BITADDR_SLAVE_A> for bool {
 impl IC_10BITADDR_SLAVE_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> IC_10BITADDR_SLAVE_A {
+    pub const fn variant(&self) -> IC_10BITADDR_SLAVE_A {
         match self.bits {
             false => IC_10BITADDR_SLAVE_A::ADDR_7BITS,
             true => IC_10BITADDR_SLAVE_A::ADDR_10BITS,
         }
     }
-    #[doc = "Checks if the value of the field is `ADDR_7BITS`"]
+    #[doc = "Slave 7Bit addressing"]
     #[inline(always)]
     pub fn is_addr_7bits(&self) -> bool {
         *self == IC_10BITADDR_SLAVE_A::ADDR_7BITS
     }
-    #[doc = "Checks if the value of the field is `ADDR_10BITS`"]
+    #[doc = "Slave 10Bit addressing"]
     #[inline(always)]
     pub fn is_addr_10bits(&self) -> bool {
         *self == IC_10BITADDR_SLAVE_A::ADDR_10BITS
     }
 }
 #[doc = "Field `IC_10BITADDR_SLAVE` writer - When acting as a slave, this bit controls whether the DW_apb_i2c responds to 7- or 10-bit addresses. - 0: 7-bit addressing. The DW_apb_i2c ignores transactions that involve 10-bit addressing; for 7-bit addressing, only the lower 7 bits of the IC_SAR register are compared. - 1: 10-bit addressing. The DW_apb_i2c responds to only 10-bit addressing transfers that match the full 10 bits of the IC_SAR register."]
-pub type IC_10BITADDR_SLAVE_W<'a, const O: u8> =
-    crate::BitWriter<'a, IC_CON_SPEC, O, IC_10BITADDR_SLAVE_A>;
-impl<'a, const O: u8> IC_10BITADDR_SLAVE_W<'a, O> {
+pub type IC_10BITADDR_SLAVE_W<'a, REG, const O: u8> =
+    crate::BitWriter<'a, REG, O, IC_10BITADDR_SLAVE_A>;
+impl<'a, REG, const O: u8> IC_10BITADDR_SLAVE_W<'a, REG, O>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
     #[doc = "Slave 7Bit addressing"]
     #[inline(always)]
-    pub fn addr_7bits(self) -> &'a mut W {
+    pub fn addr_7bits(self) -> &'a mut crate::W<REG> {
         self.variant(IC_10BITADDR_SLAVE_A::ADDR_7BITS)
     }
     #[doc = "Slave 10Bit addressing"]
     #[inline(always)]
-    pub fn addr_10bits(self) -> &'a mut W {
+    pub fn addr_10bits(self) -> &'a mut crate::W<REG> {
         self.variant(IC_10BITADDR_SLAVE_A::ADDR_10BITS)
     }
 }
@@ -266,35 +244,38 @@ impl From<IC_10BITADDR_MASTER_A> for bool {
 impl IC_10BITADDR_MASTER_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> IC_10BITADDR_MASTER_A {
+    pub const fn variant(&self) -> IC_10BITADDR_MASTER_A {
         match self.bits {
             false => IC_10BITADDR_MASTER_A::ADDR_7BITS,
             true => IC_10BITADDR_MASTER_A::ADDR_10BITS,
         }
     }
-    #[doc = "Checks if the value of the field is `ADDR_7BITS`"]
+    #[doc = "Master 7Bit addressing mode"]
     #[inline(always)]
     pub fn is_addr_7bits(&self) -> bool {
         *self == IC_10BITADDR_MASTER_A::ADDR_7BITS
     }
-    #[doc = "Checks if the value of the field is `ADDR_10BITS`"]
+    #[doc = "Master 10Bit addressing mode"]
     #[inline(always)]
     pub fn is_addr_10bits(&self) -> bool {
         *self == IC_10BITADDR_MASTER_A::ADDR_10BITS
     }
 }
 #[doc = "Field `IC_10BITADDR_MASTER` writer - Controls whether the DW_apb_i2c starts its transfers in 7- or 10-bit addressing mode when acting as a master. - 0: 7-bit addressing - 1: 10-bit addressing"]
-pub type IC_10BITADDR_MASTER_W<'a, const O: u8> =
-    crate::BitWriter<'a, IC_CON_SPEC, O, IC_10BITADDR_MASTER_A>;
-impl<'a, const O: u8> IC_10BITADDR_MASTER_W<'a, O> {
+pub type IC_10BITADDR_MASTER_W<'a, REG, const O: u8> =
+    crate::BitWriter<'a, REG, O, IC_10BITADDR_MASTER_A>;
+impl<'a, REG, const O: u8> IC_10BITADDR_MASTER_W<'a, REG, O>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
     #[doc = "Master 7Bit addressing mode"]
     #[inline(always)]
-    pub fn addr_7bits(self) -> &'a mut W {
+    pub fn addr_7bits(self) -> &'a mut crate::W<REG> {
         self.variant(IC_10BITADDR_MASTER_A::ADDR_7BITS)
     }
     #[doc = "Master 10Bit addressing mode"]
     #[inline(always)]
-    pub fn addr_10bits(self) -> &'a mut W {
+    pub fn addr_10bits(self) -> &'a mut crate::W<REG> {
         self.variant(IC_10BITADDR_MASTER_A::ADDR_10BITS)
     }
 }
@@ -323,18 +304,18 @@ impl From<IC_RESTART_EN_A> for bool {
 impl IC_RESTART_EN_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> IC_RESTART_EN_A {
+    pub const fn variant(&self) -> IC_RESTART_EN_A {
         match self.bits {
             false => IC_RESTART_EN_A::DISABLED,
             true => IC_RESTART_EN_A::ENABLED,
         }
     }
-    #[doc = "Checks if the value of the field is `DISABLED`"]
+    #[doc = "Master restart disabled"]
     #[inline(always)]
     pub fn is_disabled(&self) -> bool {
         *self == IC_RESTART_EN_A::DISABLED
     }
-    #[doc = "Checks if the value of the field is `ENABLED`"]
+    #[doc = "Master restart enabled"]
     #[inline(always)]
     pub fn is_enabled(&self) -> bool {
         *self == IC_RESTART_EN_A::ENABLED
@@ -343,16 +324,19 @@ impl IC_RESTART_EN_R {
 #[doc = "Field `IC_RESTART_EN` writer - Determines whether RESTART conditions may be sent when acting as a master. Some older slaves do not support handling RESTART conditions; however, RESTART conditions are used in several DW_apb_i2c operations. When RESTART is disabled, the master is prohibited from performing the following functions: - Sending a START BYTE - Performing any high-speed mode operation - High-speed mode operation - Performing direction changes in combined format mode - Performing a read operation with a 10-bit address By replacing RESTART condition followed by a STOP and a subsequent START condition, split operations are broken down into multiple DW_apb_i2c transfers. If the above operations are performed, it will result in setting bit 6 (TX_ABRT) of the IC_RAW_INTR_STAT register.  
 
  Reset value: ENABLED"]
-pub type IC_RESTART_EN_W<'a, const O: u8> = crate::BitWriter<'a, IC_CON_SPEC, O, IC_RESTART_EN_A>;
-impl<'a, const O: u8> IC_RESTART_EN_W<'a, O> {
+pub type IC_RESTART_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, IC_RESTART_EN_A>;
+impl<'a, REG, const O: u8> IC_RESTART_EN_W<'a, REG, O>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
     #[doc = "Master restart disabled"]
     #[inline(always)]
-    pub fn disabled(self) -> &'a mut W {
+    pub fn disabled(self) -> &'a mut crate::W<REG> {
         self.variant(IC_RESTART_EN_A::DISABLED)
     }
     #[doc = "Master restart enabled"]
     #[inline(always)]
-    pub fn enabled(self) -> &'a mut W {
+    pub fn enabled(self) -> &'a mut crate::W<REG> {
         self.variant(IC_RESTART_EN_A::ENABLED)
     }
 }
@@ -385,18 +369,18 @@ impl From<IC_SLAVE_DISABLE_A> for bool {
 impl IC_SLAVE_DISABLE_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> IC_SLAVE_DISABLE_A {
+    pub const fn variant(&self) -> IC_SLAVE_DISABLE_A {
         match self.bits {
             false => IC_SLAVE_DISABLE_A::SLAVE_ENABLED,
             true => IC_SLAVE_DISABLE_A::SLAVE_DISABLED,
         }
     }
-    #[doc = "Checks if the value of the field is `SLAVE_ENABLED`"]
+    #[doc = "Slave mode is enabled"]
     #[inline(always)]
     pub fn is_slave_enabled(&self) -> bool {
         *self == IC_SLAVE_DISABLE_A::SLAVE_ENABLED
     }
-    #[doc = "Checks if the value of the field is `SLAVE_DISABLED`"]
+    #[doc = "Slave mode is disabled"]
     #[inline(always)]
     pub fn is_slave_disabled(&self) -> bool {
         *self == IC_SLAVE_DISABLE_A::SLAVE_DISABLED
@@ -407,17 +391,20 @@ impl IC_SLAVE_DISABLE_R {
  If this bit is set (slave is disabled), DW_apb_i2c functions only as a master and does not perform any action that requires a slave.  
 
  NOTE: Software should ensure that if this bit is written with 0, then bit 0 should also be written with a 0."]
-pub type IC_SLAVE_DISABLE_W<'a, const O: u8> =
-    crate::BitWriter<'a, IC_CON_SPEC, O, IC_SLAVE_DISABLE_A>;
-impl<'a, const O: u8> IC_SLAVE_DISABLE_W<'a, O> {
+pub type IC_SLAVE_DISABLE_W<'a, REG, const O: u8> =
+    crate::BitWriter<'a, REG, O, IC_SLAVE_DISABLE_A>;
+impl<'a, REG, const O: u8> IC_SLAVE_DISABLE_W<'a, REG, O>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
     #[doc = "Slave mode is enabled"]
     #[inline(always)]
-    pub fn slave_enabled(self) -> &'a mut W {
+    pub fn slave_enabled(self) -> &'a mut crate::W<REG> {
         self.variant(IC_SLAVE_DISABLE_A::SLAVE_ENABLED)
     }
     #[doc = "Slave mode is disabled"]
     #[inline(always)]
-    pub fn slave_disabled(self) -> &'a mut W {
+    pub fn slave_disabled(self) -> &'a mut crate::W<REG> {
         self.variant(IC_SLAVE_DISABLE_A::SLAVE_DISABLED)
     }
 }
@@ -446,18 +433,18 @@ impl From<STOP_DET_IFADDRESSED_A> for bool {
 impl STOP_DET_IFADDRESSED_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> STOP_DET_IFADDRESSED_A {
+    pub const fn variant(&self) -> STOP_DET_IFADDRESSED_A {
         match self.bits {
             false => STOP_DET_IFADDRESSED_A::DISABLED,
             true => STOP_DET_IFADDRESSED_A::ENABLED,
         }
     }
-    #[doc = "Checks if the value of the field is `DISABLED`"]
+    #[doc = "slave issues STOP_DET intr always"]
     #[inline(always)]
     pub fn is_disabled(&self) -> bool {
         *self == STOP_DET_IFADDRESSED_A::DISABLED
     }
-    #[doc = "Checks if the value of the field is `ENABLED`"]
+    #[doc = "slave issues STOP_DET intr only if addressed"]
     #[inline(always)]
     pub fn is_enabled(&self) -> bool {
         *self == STOP_DET_IFADDRESSED_A::ENABLED
@@ -466,17 +453,20 @@ impl STOP_DET_IFADDRESSED_R {
 #[doc = "Field `STOP_DET_IFADDRESSED` writer - In slave mode: - 1'b1: issues the STOP_DET interrupt only when it is addressed. - 1'b0: issues the STOP_DET irrespective of whether it's addressed or not. Reset value: 0x0  
 
  NOTE: During a general call address, this slave does not issue the STOP_DET interrupt if STOP_DET_IF_ADDRESSED = 1'b1, even if the slave responds to the general call address by generating ACK. The STOP_DET interrupt is generated only when the transmitted address matches the slave address (SAR)."]
-pub type STOP_DET_IFADDRESSED_W<'a, const O: u8> =
-    crate::BitWriter<'a, IC_CON_SPEC, O, STOP_DET_IFADDRESSED_A>;
-impl<'a, const O: u8> STOP_DET_IFADDRESSED_W<'a, O> {
+pub type STOP_DET_IFADDRESSED_W<'a, REG, const O: u8> =
+    crate::BitWriter<'a, REG, O, STOP_DET_IFADDRESSED_A>;
+impl<'a, REG, const O: u8> STOP_DET_IFADDRESSED_W<'a, REG, O>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
     #[doc = "slave issues STOP_DET intr always"]
     #[inline(always)]
-    pub fn disabled(self) -> &'a mut W {
+    pub fn disabled(self) -> &'a mut crate::W<REG> {
         self.variant(STOP_DET_IFADDRESSED_A::DISABLED)
     }
     #[doc = "slave issues STOP_DET intr only if addressed"]
     #[inline(always)]
-    pub fn enabled(self) -> &'a mut W {
+    pub fn enabled(self) -> &'a mut crate::W<REG> {
         self.variant(STOP_DET_IFADDRESSED_A::ENABLED)
     }
 }
@@ -505,18 +495,18 @@ impl From<TX_EMPTY_CTRL_A> for bool {
 impl TX_EMPTY_CTRL_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> TX_EMPTY_CTRL_A {
+    pub const fn variant(&self) -> TX_EMPTY_CTRL_A {
         match self.bits {
             false => TX_EMPTY_CTRL_A::DISABLED,
             true => TX_EMPTY_CTRL_A::ENABLED,
         }
     }
-    #[doc = "Checks if the value of the field is `DISABLED`"]
+    #[doc = "Default behaviour of TX_EMPTY interrupt"]
     #[inline(always)]
     pub fn is_disabled(&self) -> bool {
         *self == TX_EMPTY_CTRL_A::DISABLED
     }
-    #[doc = "Checks if the value of the field is `ENABLED`"]
+    #[doc = "Controlled generation of TX_EMPTY interrupt"]
     #[inline(always)]
     pub fn is_enabled(&self) -> bool {
         *self == TX_EMPTY_CTRL_A::ENABLED
@@ -525,16 +515,19 @@ impl TX_EMPTY_CTRL_R {
 #[doc = "Field `TX_EMPTY_CTRL` writer - This bit controls the generation of the TX_EMPTY interrupt, as described in the IC_RAW_INTR_STAT register.  
 
  Reset value: 0x0."]
-pub type TX_EMPTY_CTRL_W<'a, const O: u8> = crate::BitWriter<'a, IC_CON_SPEC, O, TX_EMPTY_CTRL_A>;
-impl<'a, const O: u8> TX_EMPTY_CTRL_W<'a, O> {
+pub type TX_EMPTY_CTRL_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, TX_EMPTY_CTRL_A>;
+impl<'a, REG, const O: u8> TX_EMPTY_CTRL_W<'a, REG, O>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
     #[doc = "Default behaviour of TX_EMPTY interrupt"]
     #[inline(always)]
-    pub fn disabled(self) -> &'a mut W {
+    pub fn disabled(self) -> &'a mut crate::W<REG> {
         self.variant(TX_EMPTY_CTRL_A::DISABLED)
     }
     #[doc = "Controlled generation of TX_EMPTY interrupt"]
     #[inline(always)]
-    pub fn enabled(self) -> &'a mut W {
+    pub fn enabled(self) -> &'a mut crate::W<REG> {
         self.variant(TX_EMPTY_CTRL_A::ENABLED)
     }
 }
@@ -563,18 +556,18 @@ impl From<RX_FIFO_FULL_HLD_CTRL_A> for bool {
 impl RX_FIFO_FULL_HLD_CTRL_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> RX_FIFO_FULL_HLD_CTRL_A {
+    pub const fn variant(&self) -> RX_FIFO_FULL_HLD_CTRL_A {
         match self.bits {
             false => RX_FIFO_FULL_HLD_CTRL_A::DISABLED,
             true => RX_FIFO_FULL_HLD_CTRL_A::ENABLED,
         }
     }
-    #[doc = "Checks if the value of the field is `DISABLED`"]
+    #[doc = "Overflow when RX_FIFO is full"]
     #[inline(always)]
     pub fn is_disabled(&self) -> bool {
         *self == RX_FIFO_FULL_HLD_CTRL_A::DISABLED
     }
-    #[doc = "Checks if the value of the field is `ENABLED`"]
+    #[doc = "Hold bus when RX_FIFO is full"]
     #[inline(always)]
     pub fn is_enabled(&self) -> bool {
         *self == RX_FIFO_FULL_HLD_CTRL_A::ENABLED
@@ -583,17 +576,20 @@ impl RX_FIFO_FULL_HLD_CTRL_R {
 #[doc = "Field `RX_FIFO_FULL_HLD_CTRL` writer - This bit controls whether DW_apb_i2c should hold the bus when the Rx FIFO is physically full to its RX_BUFFER_DEPTH, as described in the IC_RX_FULL_HLD_BUS_EN parameter.  
 
  Reset value: 0x0."]
-pub type RX_FIFO_FULL_HLD_CTRL_W<'a, const O: u8> =
-    crate::BitWriter<'a, IC_CON_SPEC, O, RX_FIFO_FULL_HLD_CTRL_A>;
-impl<'a, const O: u8> RX_FIFO_FULL_HLD_CTRL_W<'a, O> {
+pub type RX_FIFO_FULL_HLD_CTRL_W<'a, REG, const O: u8> =
+    crate::BitWriter<'a, REG, O, RX_FIFO_FULL_HLD_CTRL_A>;
+impl<'a, REG, const O: u8> RX_FIFO_FULL_HLD_CTRL_W<'a, REG, O>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
     #[doc = "Overflow when RX_FIFO is full"]
     #[inline(always)]
-    pub fn disabled(self) -> &'a mut W {
+    pub fn disabled(self) -> &'a mut crate::W<REG> {
         self.variant(RX_FIFO_FULL_HLD_CTRL_A::DISABLED)
     }
     #[doc = "Hold bus when RX_FIFO is full"]
     #[inline(always)]
-    pub fn enabled(self) -> &'a mut W {
+    pub fn enabled(self) -> &'a mut crate::W<REG> {
         self.variant(RX_FIFO_FULL_HLD_CTRL_A::ENABLED)
     }
 }
@@ -681,7 +677,7 @@ impl W {
  NOTE: Software should ensure that if this bit is written with '1' then bit 6 should also be written with a '1'."]
     #[inline(always)]
     #[must_use]
-    pub fn master_mode(&mut self) -> MASTER_MODE_W<0> {
+    pub fn master_mode(&mut self) -> MASTER_MODE_W<IC_CON_SPEC, 0> {
         MASTER_MODE_W::new(self)
     }
     #[doc = "Bits 1:2 - These bits control at which speed the DW_apb_i2c operates; its setting is relevant only if one is operating the DW_apb_i2c in master mode. Hardware protects against illegal values being programmed by software. These bits must be programmed appropriately for slave mode also, as it is used to capture correct value of spike filter as per the speed mode.  
@@ -697,19 +693,19 @@ impl W {
  Note: This field is not applicable when IC_ULTRA_FAST_MODE=1"]
     #[inline(always)]
     #[must_use]
-    pub fn speed(&mut self) -> SPEED_W<1> {
+    pub fn speed(&mut self) -> SPEED_W<IC_CON_SPEC, 1> {
         SPEED_W::new(self)
     }
     #[doc = "Bit 3 - When acting as a slave, this bit controls whether the DW_apb_i2c responds to 7- or 10-bit addresses. - 0: 7-bit addressing. The DW_apb_i2c ignores transactions that involve 10-bit addressing; for 7-bit addressing, only the lower 7 bits of the IC_SAR register are compared. - 1: 10-bit addressing. The DW_apb_i2c responds to only 10-bit addressing transfers that match the full 10 bits of the IC_SAR register."]
     #[inline(always)]
     #[must_use]
-    pub fn ic_10bitaddr_slave(&mut self) -> IC_10BITADDR_SLAVE_W<3> {
+    pub fn ic_10bitaddr_slave(&mut self) -> IC_10BITADDR_SLAVE_W<IC_CON_SPEC, 3> {
         IC_10BITADDR_SLAVE_W::new(self)
     }
     #[doc = "Bit 4 - Controls whether the DW_apb_i2c starts its transfers in 7- or 10-bit addressing mode when acting as a master. - 0: 7-bit addressing - 1: 10-bit addressing"]
     #[inline(always)]
     #[must_use]
-    pub fn ic_10bitaddr_master(&mut self) -> IC_10BITADDR_MASTER_W<4> {
+    pub fn ic_10bitaddr_master(&mut self) -> IC_10BITADDR_MASTER_W<IC_CON_SPEC, 4> {
         IC_10BITADDR_MASTER_W::new(self)
     }
     #[doc = "Bit 5 - Determines whether RESTART conditions may be sent when acting as a master. Some older slaves do not support handling RESTART conditions; however, RESTART conditions are used in several DW_apb_i2c operations. When RESTART is disabled, the master is prohibited from performing the following functions: - Sending a START BYTE - Performing any high-speed mode operation - High-speed mode operation - Performing direction changes in combined format mode - Performing a read operation with a 10-bit address By replacing RESTART condition followed by a STOP and a subsequent START condition, split operations are broken down into multiple DW_apb_i2c transfers. If the above operations are performed, it will result in setting bit 6 (TX_ABRT) of the IC_RAW_INTR_STAT register.  
@@ -717,7 +713,7 @@ impl W {
  Reset value: ENABLED"]
     #[inline(always)]
     #[must_use]
-    pub fn ic_restart_en(&mut self) -> IC_RESTART_EN_W<5> {
+    pub fn ic_restart_en(&mut self) -> IC_RESTART_EN_W<IC_CON_SPEC, 5> {
         IC_RESTART_EN_W::new(self)
     }
     #[doc = "Bit 6 - This bit controls whether I2C has its slave disabled, which means once the presetn signal is applied, then this bit is set and the slave is disabled.  
@@ -727,7 +723,7 @@ impl W {
  NOTE: Software should ensure that if this bit is written with 0, then bit 0 should also be written with a 0."]
     #[inline(always)]
     #[must_use]
-    pub fn ic_slave_disable(&mut self) -> IC_SLAVE_DISABLE_W<6> {
+    pub fn ic_slave_disable(&mut self) -> IC_SLAVE_DISABLE_W<IC_CON_SPEC, 6> {
         IC_SLAVE_DISABLE_W::new(self)
     }
     #[doc = "Bit 7 - In slave mode: - 1'b1: issues the STOP_DET interrupt only when it is addressed. - 1'b0: issues the STOP_DET irrespective of whether it's addressed or not. Reset value: 0x0  
@@ -735,7 +731,7 @@ impl W {
  NOTE: During a general call address, this slave does not issue the STOP_DET interrupt if STOP_DET_IF_ADDRESSED = 1'b1, even if the slave responds to the general call address by generating ACK. The STOP_DET interrupt is generated only when the transmitted address matches the slave address (SAR)."]
     #[inline(always)]
     #[must_use]
-    pub fn stop_det_ifaddressed(&mut self) -> STOP_DET_IFADDRESSED_W<7> {
+    pub fn stop_det_ifaddressed(&mut self) -> STOP_DET_IFADDRESSED_W<IC_CON_SPEC, 7> {
         STOP_DET_IFADDRESSED_W::new(self)
     }
     #[doc = "Bit 8 - This bit controls the generation of the TX_EMPTY interrupt, as described in the IC_RAW_INTR_STAT register.  
@@ -743,7 +739,7 @@ impl W {
  Reset value: 0x0."]
     #[inline(always)]
     #[must_use]
-    pub fn tx_empty_ctrl(&mut self) -> TX_EMPTY_CTRL_W<8> {
+    pub fn tx_empty_ctrl(&mut self) -> TX_EMPTY_CTRL_W<IC_CON_SPEC, 8> {
         TX_EMPTY_CTRL_W::new(self)
     }
     #[doc = "Bit 9 - This bit controls whether DW_apb_i2c should hold the bus when the Rx FIFO is physically full to its RX_BUFFER_DEPTH, as described in the IC_RX_FULL_HLD_BUS_EN parameter.  
@@ -751,13 +747,17 @@ impl W {
  Reset value: 0x0."]
     #[inline(always)]
     #[must_use]
-    pub fn rx_fifo_full_hld_ctrl(&mut self) -> RX_FIFO_FULL_HLD_CTRL_W<9> {
+    pub fn rx_fifo_full_hld_ctrl(&mut self) -> RX_FIFO_FULL_HLD_CTRL_W<IC_CON_SPEC, 9> {
         RX_FIFO_FULL_HLD_CTRL_W::new(self)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
@@ -766,20 +766,15 @@ register being set to 0. Writes at other times have no effect.
 
  Read/Write Access: - bit 10 is read only. - bit 11 is read only - bit 16 is read only - bit 17 is read only - bits 18 and 19 are read only.  
 
-This register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
-
-For information about available fields see [ic_con](index.html) module"]
+You can [`read`](crate::generic::Reg::read) this register and get [`ic_con::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`ic_con::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct IC_CON_SPEC;
 impl crate::RegisterSpec for IC_CON_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [ic_con::R](R) reader structure"]
-impl crate::Readable for IC_CON_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [ic_con::W](W) writer structure"]
+#[doc = "`read()` method returns [`ic_con::R`](R) reader structure"]
+impl crate::Readable for IC_CON_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`ic_con::W`](W) writer structure"]
 impl crate::Writable for IC_CON_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

@@ -1,18 +1,5 @@
 #[doc = "Register `TXFLR` reader"]
-pub struct R(crate::R<TXFLR_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<TXFLR_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<TXFLR_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<TXFLR_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<TXFLR_SPEC>;
 #[doc = "Field `TFTFL` reader - Transmit FIFO level"]
 pub type TFTFL_R = crate::FieldReader;
 impl R {
@@ -24,17 +11,13 @@ impl R {
 }
 #[doc = "TX FIFO level  
 
-This register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
-
-For information about available fields see [txflr](index.html) module"]
+You can [`read`](crate::generic::Reg::read) this register and get [`txflr::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct TXFLR_SPEC;
 impl crate::RegisterSpec for TXFLR_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [txflr::R](R) reader structure"]
-impl crate::Readable for TXFLR_SPEC {
-    type Reader = R;
-}
+#[doc = "`read()` method returns [`txflr::R`](R) reader structure"]
+impl crate::Readable for TXFLR_SPEC {}
 #[doc = "`reset()` method sets TXFLR to value 0"]
 impl crate::Resettable for TXFLR_SPEC {
     const RESET_VALUE: Self::Ux = 0;

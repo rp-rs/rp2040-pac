@@ -1,18 +1,5 @@
 #[doc = "Register `UARTMIS` reader"]
-pub struct R(crate::R<UARTMIS_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<UARTMIS_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<UARTMIS_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<UARTMIS_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<UARTMIS_SPEC>;
 #[doc = "Field `RIMMIS` reader - nUARTRI modem masked interrupt status. Returns the masked interrupt state of the UARTRIINTR interrupt."]
 pub type RIMMIS_R = crate::BitReader;
 #[doc = "Field `CTSMMIS` reader - nUARTCTS modem masked interrupt status. Returns the masked interrupt state of the UARTCTSINTR interrupt."]
@@ -94,17 +81,13 @@ impl R {
 }
 #[doc = "Masked Interrupt Status Register, UARTMIS  
 
-This register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
-
-For information about available fields see [uartmis](index.html) module"]
+You can [`read`](crate::generic::Reg::read) this register and get [`uartmis::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct UARTMIS_SPEC;
 impl crate::RegisterSpec for UARTMIS_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [uartmis::R](R) reader structure"]
-impl crate::Readable for UARTMIS_SPEC {
-    type Reader = R;
-}
+#[doc = "`read()` method returns [`uartmis::R`](R) reader structure"]
+impl crate::Readable for UARTMIS_SPEC {}
 #[doc = "`reset()` method sets UARTMIS to value 0"]
 impl crate::Resettable for UARTMIS_SPEC {
     const RESET_VALUE: Self::Ux = 0;

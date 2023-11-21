@@ -1,18 +1,5 @@
 #[doc = "Register `CHIP_ID` reader"]
-pub struct R(crate::R<CHIP_ID_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<CHIP_ID_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<CHIP_ID_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<CHIP_ID_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<CHIP_ID_SPEC>;
 #[doc = "Field `MANUFACTURER` reader - "]
 pub type MANUFACTURER_R = crate::FieldReader<u16>;
 #[doc = "Field `PART` reader - "]
@@ -38,17 +25,13 @@ impl R {
 }
 #[doc = "JEDEC JEP-106 compliant chip identifier.  
 
-This register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
-
-For information about available fields see [chip_id](index.html) module"]
+You can [`read`](crate::generic::Reg::read) this register and get [`chip_id::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct CHIP_ID_SPEC;
 impl crate::RegisterSpec for CHIP_ID_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [chip_id::R](R) reader structure"]
-impl crate::Readable for CHIP_ID_SPEC {
-    type Reader = R;
-}
+#[doc = "`read()` method returns [`chip_id::R`](R) reader structure"]
+impl crate::Readable for CHIP_ID_SPEC {}
 #[doc = "`reset()` method sets CHIP_ID to value 0"]
 impl crate::Resettable for CHIP_ID_SPEC {
     const RESET_VALUE: Self::Ux = 0;

@@ -1,55 +1,23 @@
 #[doc = "Register `CTRLR0` reader"]
-pub struct R(crate::R<CTRLR0_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<CTRLR0_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<CTRLR0_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<CTRLR0_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<CTRLR0_SPEC>;
 #[doc = "Register `CTRLR0` writer"]
-pub struct W(crate::W<CTRLR0_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<CTRLR0_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<CTRLR0_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<CTRLR0_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<CTRLR0_SPEC>;
 #[doc = "Field `DFS` reader - Data frame size"]
 pub type DFS_R = crate::FieldReader;
 #[doc = "Field `DFS` writer - Data frame size"]
-pub type DFS_W<'a, const O: u8> = crate::FieldWriter<'a, CTRLR0_SPEC, 4, O>;
+pub type DFS_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 4, O>;
 #[doc = "Field `FRF` reader - Frame format"]
 pub type FRF_R = crate::FieldReader;
 #[doc = "Field `FRF` writer - Frame format"]
-pub type FRF_W<'a, const O: u8> = crate::FieldWriter<'a, CTRLR0_SPEC, 2, O>;
+pub type FRF_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O>;
 #[doc = "Field `SCPH` reader - Serial clock phase"]
 pub type SCPH_R = crate::BitReader;
 #[doc = "Field `SCPH` writer - Serial clock phase"]
-pub type SCPH_W<'a, const O: u8> = crate::BitWriter<'a, CTRLR0_SPEC, O>;
+pub type SCPH_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `SCPOL` reader - Serial clock polarity"]
 pub type SCPOL_R = crate::BitReader;
 #[doc = "Field `SCPOL` writer - Serial clock polarity"]
-pub type SCPOL_W<'a, const O: u8> = crate::BitWriter<'a, CTRLR0_SPEC, O>;
+pub type SCPOL_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `TMOD` reader - Transfer mode"]
 pub type TMOD_R = crate::FieldReader<TMOD_A>;
 #[doc = "Transfer mode  
@@ -79,7 +47,7 @@ impl crate::FieldSpec for TMOD_A {
 impl TMOD_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> TMOD_A {
+    pub const fn variant(&self) -> TMOD_A {
         match self.bits {
             0 => TMOD_A::TX_AND_RX,
             1 => TMOD_A::TX_ONLY,
@@ -88,71 +56,75 @@ impl TMOD_R {
             _ => unreachable!(),
         }
     }
-    #[doc = "Checks if the value of the field is `TX_AND_RX`"]
+    #[doc = "Both transmit and receive"]
     #[inline(always)]
     pub fn is_tx_and_rx(&self) -> bool {
         *self == TMOD_A::TX_AND_RX
     }
-    #[doc = "Checks if the value of the field is `TX_ONLY`"]
+    #[doc = "Transmit only (not for FRF == 0, standard SPI mode)"]
     #[inline(always)]
     pub fn is_tx_only(&self) -> bool {
         *self == TMOD_A::TX_ONLY
     }
-    #[doc = "Checks if the value of the field is `RX_ONLY`"]
+    #[doc = "Receive only (not for FRF == 0, standard SPI mode)"]
     #[inline(always)]
     pub fn is_rx_only(&self) -> bool {
         *self == TMOD_A::RX_ONLY
     }
-    #[doc = "Checks if the value of the field is `EEPROM_READ`"]
+    #[doc = "EEPROM read mode (TX then RX; RX starts after control data TX'd)"]
     #[inline(always)]
     pub fn is_eeprom_read(&self) -> bool {
         *self == TMOD_A::EEPROM_READ
     }
 }
 #[doc = "Field `TMOD` writer - Transfer mode"]
-pub type TMOD_W<'a, const O: u8> = crate::FieldWriterSafe<'a, CTRLR0_SPEC, 2, O, TMOD_A>;
-impl<'a, const O: u8> TMOD_W<'a, O> {
+pub type TMOD_W<'a, REG, const O: u8> = crate::FieldWriterSafe<'a, REG, 2, O, TMOD_A>;
+impl<'a, REG, const O: u8> TMOD_W<'a, REG, O>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+    REG::Ux: From<u8>,
+{
     #[doc = "Both transmit and receive"]
     #[inline(always)]
-    pub fn tx_and_rx(self) -> &'a mut W {
+    pub fn tx_and_rx(self) -> &'a mut crate::W<REG> {
         self.variant(TMOD_A::TX_AND_RX)
     }
     #[doc = "Transmit only (not for FRF == 0, standard SPI mode)"]
     #[inline(always)]
-    pub fn tx_only(self) -> &'a mut W {
+    pub fn tx_only(self) -> &'a mut crate::W<REG> {
         self.variant(TMOD_A::TX_ONLY)
     }
     #[doc = "Receive only (not for FRF == 0, standard SPI mode)"]
     #[inline(always)]
-    pub fn rx_only(self) -> &'a mut W {
+    pub fn rx_only(self) -> &'a mut crate::W<REG> {
         self.variant(TMOD_A::RX_ONLY)
     }
     #[doc = "EEPROM read mode (TX then RX; RX starts after control data TX'd)"]
     #[inline(always)]
-    pub fn eeprom_read(self) -> &'a mut W {
+    pub fn eeprom_read(self) -> &'a mut crate::W<REG> {
         self.variant(TMOD_A::EEPROM_READ)
     }
 }
 #[doc = "Field `SLV_OE` reader - Slave output enable"]
 pub type SLV_OE_R = crate::BitReader;
 #[doc = "Field `SLV_OE` writer - Slave output enable"]
-pub type SLV_OE_W<'a, const O: u8> = crate::BitWriter<'a, CTRLR0_SPEC, O>;
+pub type SLV_OE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `SRL` reader - Shift register loop (test mode)"]
 pub type SRL_R = crate::BitReader;
 #[doc = "Field `SRL` writer - Shift register loop (test mode)"]
-pub type SRL_W<'a, const O: u8> = crate::BitWriter<'a, CTRLR0_SPEC, O>;
+pub type SRL_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `CFS` reader - Control frame size  
  Value of n -> n+1 clocks per frame."]
 pub type CFS_R = crate::FieldReader;
 #[doc = "Field `CFS` writer - Control frame size  
  Value of n -> n+1 clocks per frame."]
-pub type CFS_W<'a, const O: u8> = crate::FieldWriter<'a, CTRLR0_SPEC, 4, O>;
+pub type CFS_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 4, O>;
 #[doc = "Field `DFS_32` reader - Data frame size in 32b transfer mode  
  Value of n -> n+1 clocks per frame."]
 pub type DFS_32_R = crate::FieldReader;
 #[doc = "Field `DFS_32` writer - Data frame size in 32b transfer mode  
  Value of n -> n+1 clocks per frame."]
-pub type DFS_32_W<'a, const O: u8> = crate::FieldWriter<'a, CTRLR0_SPEC, 5, O>;
+pub type DFS_32_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 5, O>;
 #[doc = "Field `SPI_FRF` reader - SPI frame format"]
 pub type SPI_FRF_R = crate::FieldReader<SPI_FRF_A>;
 #[doc = "SPI frame format  
@@ -180,7 +152,7 @@ impl crate::FieldSpec for SPI_FRF_A {
 impl SPI_FRF_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> Option<SPI_FRF_A> {
+    pub const fn variant(&self) -> Option<SPI_FRF_A> {
         match self.bits {
             0 => Some(SPI_FRF_A::STD),
             1 => Some(SPI_FRF_A::DUAL),
@@ -188,45 +160,49 @@ impl SPI_FRF_R {
             _ => None,
         }
     }
-    #[doc = "Checks if the value of the field is `STD`"]
+    #[doc = "Standard 1-bit SPI frame format; 1 bit per SCK, full-duplex"]
     #[inline(always)]
     pub fn is_std(&self) -> bool {
         *self == SPI_FRF_A::STD
     }
-    #[doc = "Checks if the value of the field is `DUAL`"]
+    #[doc = "Dual-SPI frame format; two bits per SCK, half-duplex"]
     #[inline(always)]
     pub fn is_dual(&self) -> bool {
         *self == SPI_FRF_A::DUAL
     }
-    #[doc = "Checks if the value of the field is `QUAD`"]
+    #[doc = "Quad-SPI frame format; four bits per SCK, half-duplex"]
     #[inline(always)]
     pub fn is_quad(&self) -> bool {
         *self == SPI_FRF_A::QUAD
     }
 }
 #[doc = "Field `SPI_FRF` writer - SPI frame format"]
-pub type SPI_FRF_W<'a, const O: u8> = crate::FieldWriter<'a, CTRLR0_SPEC, 2, O, SPI_FRF_A>;
-impl<'a, const O: u8> SPI_FRF_W<'a, O> {
+pub type SPI_FRF_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 2, O, SPI_FRF_A>;
+impl<'a, REG, const O: u8> SPI_FRF_W<'a, REG, O>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+    REG::Ux: From<u8>,
+{
     #[doc = "Standard 1-bit SPI frame format; 1 bit per SCK, full-duplex"]
     #[inline(always)]
-    pub fn std(self) -> &'a mut W {
+    pub fn std(self) -> &'a mut crate::W<REG> {
         self.variant(SPI_FRF_A::STD)
     }
     #[doc = "Dual-SPI frame format; two bits per SCK, half-duplex"]
     #[inline(always)]
-    pub fn dual(self) -> &'a mut W {
+    pub fn dual(self) -> &'a mut crate::W<REG> {
         self.variant(SPI_FRF_A::DUAL)
     }
     #[doc = "Quad-SPI frame format; four bits per SCK, half-duplex"]
     #[inline(always)]
-    pub fn quad(self) -> &'a mut W {
+    pub fn quad(self) -> &'a mut crate::W<REG> {
         self.variant(SPI_FRF_A::QUAD)
     }
 }
 #[doc = "Field `SSTE` reader - Slave select toggle enable"]
 pub type SSTE_R = crate::BitReader;
 #[doc = "Field `SSTE` writer - Slave select toggle enable"]
-pub type SSTE_W<'a, const O: u8> = crate::BitWriter<'a, CTRLR0_SPEC, O>;
+pub type SSTE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 impl R {
     #[doc = "Bits 0:3 - Data frame size"]
     #[inline(always)]
@@ -290,94 +266,93 @@ impl W {
     #[doc = "Bits 0:3 - Data frame size"]
     #[inline(always)]
     #[must_use]
-    pub fn dfs(&mut self) -> DFS_W<0> {
+    pub fn dfs(&mut self) -> DFS_W<CTRLR0_SPEC, 0> {
         DFS_W::new(self)
     }
     #[doc = "Bits 4:5 - Frame format"]
     #[inline(always)]
     #[must_use]
-    pub fn frf(&mut self) -> FRF_W<4> {
+    pub fn frf(&mut self) -> FRF_W<CTRLR0_SPEC, 4> {
         FRF_W::new(self)
     }
     #[doc = "Bit 6 - Serial clock phase"]
     #[inline(always)]
     #[must_use]
-    pub fn scph(&mut self) -> SCPH_W<6> {
+    pub fn scph(&mut self) -> SCPH_W<CTRLR0_SPEC, 6> {
         SCPH_W::new(self)
     }
     #[doc = "Bit 7 - Serial clock polarity"]
     #[inline(always)]
     #[must_use]
-    pub fn scpol(&mut self) -> SCPOL_W<7> {
+    pub fn scpol(&mut self) -> SCPOL_W<CTRLR0_SPEC, 7> {
         SCPOL_W::new(self)
     }
     #[doc = "Bits 8:9 - Transfer mode"]
     #[inline(always)]
     #[must_use]
-    pub fn tmod(&mut self) -> TMOD_W<8> {
+    pub fn tmod(&mut self) -> TMOD_W<CTRLR0_SPEC, 8> {
         TMOD_W::new(self)
     }
     #[doc = "Bit 10 - Slave output enable"]
     #[inline(always)]
     #[must_use]
-    pub fn slv_oe(&mut self) -> SLV_OE_W<10> {
+    pub fn slv_oe(&mut self) -> SLV_OE_W<CTRLR0_SPEC, 10> {
         SLV_OE_W::new(self)
     }
     #[doc = "Bit 11 - Shift register loop (test mode)"]
     #[inline(always)]
     #[must_use]
-    pub fn srl(&mut self) -> SRL_W<11> {
+    pub fn srl(&mut self) -> SRL_W<CTRLR0_SPEC, 11> {
         SRL_W::new(self)
     }
     #[doc = "Bits 12:15 - Control frame size  
  Value of n -> n+1 clocks per frame."]
     #[inline(always)]
     #[must_use]
-    pub fn cfs(&mut self) -> CFS_W<12> {
+    pub fn cfs(&mut self) -> CFS_W<CTRLR0_SPEC, 12> {
         CFS_W::new(self)
     }
     #[doc = "Bits 16:20 - Data frame size in 32b transfer mode  
  Value of n -> n+1 clocks per frame."]
     #[inline(always)]
     #[must_use]
-    pub fn dfs_32(&mut self) -> DFS_32_W<16> {
+    pub fn dfs_32(&mut self) -> DFS_32_W<CTRLR0_SPEC, 16> {
         DFS_32_W::new(self)
     }
     #[doc = "Bits 21:22 - SPI frame format"]
     #[inline(always)]
     #[must_use]
-    pub fn spi_frf(&mut self) -> SPI_FRF_W<21> {
+    pub fn spi_frf(&mut self) -> SPI_FRF_W<CTRLR0_SPEC, 21> {
         SPI_FRF_W::new(self)
     }
     #[doc = "Bit 24 - Slave select toggle enable"]
     #[inline(always)]
     #[must_use]
-    pub fn sste(&mut self) -> SSTE_W<24> {
+    pub fn sste(&mut self) -> SSTE_W<CTRLR0_SPEC, 24> {
         SSTE_W::new(self)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
 #[doc = "Control register 0  
 
-This register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
-
-For information about available fields see [ctrlr0](index.html) module"]
+You can [`read`](crate::generic::Reg::read) this register and get [`ctrlr0::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`ctrlr0::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct CTRLR0_SPEC;
 impl crate::RegisterSpec for CTRLR0_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [ctrlr0::R](R) reader structure"]
-impl crate::Readable for CTRLR0_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [ctrlr0::W](W) writer structure"]
+#[doc = "`read()` method returns [`ctrlr0::R`](R) reader structure"]
+impl crate::Readable for CTRLR0_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`ctrlr0::W`](W) writer structure"]
 impl crate::Writable for CTRLR0_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

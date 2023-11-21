@@ -1,18 +1,5 @@
 #[doc = "Register `PLATFORM` reader"]
-pub struct R(crate::R<PLATFORM_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<PLATFORM_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<PLATFORM_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<PLATFORM_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<PLATFORM_SPEC>;
 #[doc = "Field `ASIC` reader - Indicates the platform is an ASIC"]
 pub type ASIC_R = crate::BitReader;
 #[doc = "Field `FPGA` reader - Indicates the platform is an FPGA"]
@@ -31,17 +18,13 @@ impl R {
 }
 #[doc = "Indicates the type of platform in use  
 
-This register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
-
-For information about available fields see [platform](index.html) module"]
+You can [`read`](crate::generic::Reg::read) this register and get [`platform::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct PLATFORM_SPEC;
 impl crate::RegisterSpec for PLATFORM_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [platform::R](R) reader structure"]
-impl crate::Readable for PLATFORM_SPEC {
-    type Reader = R;
-}
+#[doc = "`read()` method returns [`platform::R`](R) reader structure"]
+impl crate::Readable for PLATFORM_SPEC {}
 #[doc = "`reset()` method sets PLATFORM to value 0x05"]
 impl crate::Resettable for PLATFORM_SPEC {
     const RESET_VALUE: Self::Ux = 0x05;

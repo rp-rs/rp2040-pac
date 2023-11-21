@@ -1,18 +1,5 @@
 #[doc = "Register `DIV_CSR` reader"]
-pub struct R(crate::R<DIV_CSR_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<DIV_CSR_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<DIV_CSR_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<DIV_CSR_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<DIV_CSR_SPEC>;
 #[doc = "Field `READY` reader - Reads as 0 when a calculation is in progress, 1 otherwise.  
  Writing an operand (xDIVIDEND, xDIVISOR) will immediately start a new calculation, no  
  matter if one is already in progress.  
@@ -45,17 +32,13 @@ impl R {
 }
 #[doc = "Control and status register for divider.  
 
-This register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
-
-For information about available fields see [div_csr](index.html) module"]
+You can [`read`](crate::generic::Reg::read) this register and get [`div_csr::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct DIV_CSR_SPEC;
 impl crate::RegisterSpec for DIV_CSR_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [div_csr::R](R) reader structure"]
-impl crate::Readable for DIV_CSR_SPEC {
-    type Reader = R;
-}
+#[doc = "`read()` method returns [`div_csr::R`](R) reader structure"]
+impl crate::Readable for DIV_CSR_SPEC {}
 #[doc = "`reset()` method sets DIV_CSR to value 0x01"]
 impl crate::Resettable for DIV_CSR_SPEC {
     const RESET_VALUE: Self::Ux = 0x01;

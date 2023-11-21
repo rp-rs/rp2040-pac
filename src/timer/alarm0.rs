@@ -1,39 +1,7 @@
 #[doc = "Register `ALARM0` reader"]
-pub struct R(crate::R<ALARM0_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<ALARM0_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<ALARM0_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<ALARM0_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<ALARM0_SPEC>;
 #[doc = "Register `ALARM0` writer"]
-pub struct W(crate::W<ALARM0_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<ALARM0_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<ALARM0_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<ALARM0_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<ALARM0_SPEC>;
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         write!(f, "{}", self.bits())
@@ -45,10 +13,14 @@ impl core::fmt::Debug for crate::generic::Reg<ALARM0_SPEC> {
     }
 }
 impl W {
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
@@ -57,20 +29,15 @@ impl W {
  The alarm will disarm itself once it fires, and can  
  be disarmed early using the ARMED status register.  
 
-This register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
-
-For information about available fields see [alarm0](index.html) module"]
+You can [`read`](crate::generic::Reg::read) this register and get [`alarm0::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`alarm0::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct ALARM0_SPEC;
 impl crate::RegisterSpec for ALARM0_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [alarm0::R](R) reader structure"]
-impl crate::Readable for ALARM0_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [alarm0::W](W) writer structure"]
+#[doc = "`read()` method returns [`alarm0::R`](R) reader structure"]
+impl crate::Readable for ALARM0_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`alarm0::W`](W) writer structure"]
 impl crate::Writable for ALARM0_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

@@ -1,71 +1,39 @@
 #[doc = "Register `MEMPOWERDOWN` reader"]
-pub struct R(crate::R<MEMPOWERDOWN_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<MEMPOWERDOWN_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<MEMPOWERDOWN_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<MEMPOWERDOWN_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<MEMPOWERDOWN_SPEC>;
 #[doc = "Register `MEMPOWERDOWN` writer"]
-pub struct W(crate::W<MEMPOWERDOWN_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<MEMPOWERDOWN_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<MEMPOWERDOWN_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<MEMPOWERDOWN_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<MEMPOWERDOWN_SPEC>;
 #[doc = "Field `SRAM0` reader - "]
 pub type SRAM0_R = crate::BitReader;
 #[doc = "Field `SRAM0` writer - "]
-pub type SRAM0_W<'a, const O: u8> = crate::BitWriter<'a, MEMPOWERDOWN_SPEC, O>;
+pub type SRAM0_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `SRAM1` reader - "]
 pub type SRAM1_R = crate::BitReader;
 #[doc = "Field `SRAM1` writer - "]
-pub type SRAM1_W<'a, const O: u8> = crate::BitWriter<'a, MEMPOWERDOWN_SPEC, O>;
+pub type SRAM1_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `SRAM2` reader - "]
 pub type SRAM2_R = crate::BitReader;
 #[doc = "Field `SRAM2` writer - "]
-pub type SRAM2_W<'a, const O: u8> = crate::BitWriter<'a, MEMPOWERDOWN_SPEC, O>;
+pub type SRAM2_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `SRAM3` reader - "]
 pub type SRAM3_R = crate::BitReader;
 #[doc = "Field `SRAM3` writer - "]
-pub type SRAM3_W<'a, const O: u8> = crate::BitWriter<'a, MEMPOWERDOWN_SPEC, O>;
+pub type SRAM3_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `SRAM4` reader - "]
 pub type SRAM4_R = crate::BitReader;
 #[doc = "Field `SRAM4` writer - "]
-pub type SRAM4_W<'a, const O: u8> = crate::BitWriter<'a, MEMPOWERDOWN_SPEC, O>;
+pub type SRAM4_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `SRAM5` reader - "]
 pub type SRAM5_R = crate::BitReader;
 #[doc = "Field `SRAM5` writer - "]
-pub type SRAM5_W<'a, const O: u8> = crate::BitWriter<'a, MEMPOWERDOWN_SPEC, O>;
+pub type SRAM5_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `USB` reader - "]
 pub type USB_R = crate::BitReader;
 #[doc = "Field `USB` writer - "]
-pub type USB_W<'a, const O: u8> = crate::BitWriter<'a, MEMPOWERDOWN_SPEC, O>;
+pub type USB_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `ROM` reader - "]
 pub type ROM_R = crate::BitReader;
 #[doc = "Field `ROM` writer - "]
-pub type ROM_W<'a, const O: u8> = crate::BitWriter<'a, MEMPOWERDOWN_SPEC, O>;
+pub type ROM_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 impl R {
     #[doc = "Bit 0"]
     #[inline(always)]
@@ -112,75 +80,74 @@ impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
     #[must_use]
-    pub fn sram0(&mut self) -> SRAM0_W<0> {
+    pub fn sram0(&mut self) -> SRAM0_W<MEMPOWERDOWN_SPEC, 0> {
         SRAM0_W::new(self)
     }
     #[doc = "Bit 1"]
     #[inline(always)]
     #[must_use]
-    pub fn sram1(&mut self) -> SRAM1_W<1> {
+    pub fn sram1(&mut self) -> SRAM1_W<MEMPOWERDOWN_SPEC, 1> {
         SRAM1_W::new(self)
     }
     #[doc = "Bit 2"]
     #[inline(always)]
     #[must_use]
-    pub fn sram2(&mut self) -> SRAM2_W<2> {
+    pub fn sram2(&mut self) -> SRAM2_W<MEMPOWERDOWN_SPEC, 2> {
         SRAM2_W::new(self)
     }
     #[doc = "Bit 3"]
     #[inline(always)]
     #[must_use]
-    pub fn sram3(&mut self) -> SRAM3_W<3> {
+    pub fn sram3(&mut self) -> SRAM3_W<MEMPOWERDOWN_SPEC, 3> {
         SRAM3_W::new(self)
     }
     #[doc = "Bit 4"]
     #[inline(always)]
     #[must_use]
-    pub fn sram4(&mut self) -> SRAM4_W<4> {
+    pub fn sram4(&mut self) -> SRAM4_W<MEMPOWERDOWN_SPEC, 4> {
         SRAM4_W::new(self)
     }
     #[doc = "Bit 5"]
     #[inline(always)]
     #[must_use]
-    pub fn sram5(&mut self) -> SRAM5_W<5> {
+    pub fn sram5(&mut self) -> SRAM5_W<MEMPOWERDOWN_SPEC, 5> {
         SRAM5_W::new(self)
     }
     #[doc = "Bit 6"]
     #[inline(always)]
     #[must_use]
-    pub fn usb(&mut self) -> USB_W<6> {
+    pub fn usb(&mut self) -> USB_W<MEMPOWERDOWN_SPEC, 6> {
         USB_W::new(self)
     }
     #[doc = "Bit 7"]
     #[inline(always)]
     #[must_use]
-    pub fn rom(&mut self) -> ROM_W<7> {
+    pub fn rom(&mut self) -> ROM_W<MEMPOWERDOWN_SPEC, 7> {
         ROM_W::new(self)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
 #[doc = "Control power downs to memories. Set high to power down memories.  
  Use with extreme caution  
 
-This register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
-
-For information about available fields see [mempowerdown](index.html) module"]
+You can [`read`](crate::generic::Reg::read) this register and get [`mempowerdown::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`mempowerdown::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct MEMPOWERDOWN_SPEC;
 impl crate::RegisterSpec for MEMPOWERDOWN_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [mempowerdown::R](R) reader structure"]
-impl crate::Readable for MEMPOWERDOWN_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [mempowerdown::W](W) writer structure"]
+#[doc = "`read()` method returns [`mempowerdown::R`](R) reader structure"]
+impl crate::Readable for MEMPOWERDOWN_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`mempowerdown::W`](W) writer structure"]
 impl crate::Writable for MEMPOWERDOWN_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

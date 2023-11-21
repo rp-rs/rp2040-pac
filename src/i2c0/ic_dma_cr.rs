@@ -1,39 +1,7 @@
 #[doc = "Register `IC_DMA_CR` reader"]
-pub struct R(crate::R<IC_DMA_CR_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<IC_DMA_CR_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<IC_DMA_CR_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<IC_DMA_CR_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<IC_DMA_CR_SPEC>;
 #[doc = "Register `IC_DMA_CR` writer"]
-pub struct W(crate::W<IC_DMA_CR_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<IC_DMA_CR_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<IC_DMA_CR_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<IC_DMA_CR_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<IC_DMA_CR_SPEC>;
 #[doc = "Field `RDMAE` reader - Receive DMA Enable. This bit enables/disables the receive FIFO DMA channel. Reset value: 0x0"]
 pub type RDMAE_R = crate::BitReader<RDMAE_A>;
 #[doc = "Receive DMA Enable. This bit enables/disables the receive FIFO DMA channel. Reset value: 0x0  
@@ -55,34 +23,37 @@ impl From<RDMAE_A> for bool {
 impl RDMAE_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> RDMAE_A {
+    pub const fn variant(&self) -> RDMAE_A {
         match self.bits {
             false => RDMAE_A::DISABLED,
             true => RDMAE_A::ENABLED,
         }
     }
-    #[doc = "Checks if the value of the field is `DISABLED`"]
+    #[doc = "Receive FIFO DMA channel disabled"]
     #[inline(always)]
     pub fn is_disabled(&self) -> bool {
         *self == RDMAE_A::DISABLED
     }
-    #[doc = "Checks if the value of the field is `ENABLED`"]
+    #[doc = "Receive FIFO DMA channel enabled"]
     #[inline(always)]
     pub fn is_enabled(&self) -> bool {
         *self == RDMAE_A::ENABLED
     }
 }
 #[doc = "Field `RDMAE` writer - Receive DMA Enable. This bit enables/disables the receive FIFO DMA channel. Reset value: 0x0"]
-pub type RDMAE_W<'a, const O: u8> = crate::BitWriter<'a, IC_DMA_CR_SPEC, O, RDMAE_A>;
-impl<'a, const O: u8> RDMAE_W<'a, O> {
+pub type RDMAE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, RDMAE_A>;
+impl<'a, REG, const O: u8> RDMAE_W<'a, REG, O>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
     #[doc = "Receive FIFO DMA channel disabled"]
     #[inline(always)]
-    pub fn disabled(self) -> &'a mut W {
+    pub fn disabled(self) -> &'a mut crate::W<REG> {
         self.variant(RDMAE_A::DISABLED)
     }
     #[doc = "Receive FIFO DMA channel enabled"]
     #[inline(always)]
-    pub fn enabled(self) -> &'a mut W {
+    pub fn enabled(self) -> &'a mut crate::W<REG> {
         self.variant(RDMAE_A::ENABLED)
     }
 }
@@ -107,34 +78,37 @@ impl From<TDMAE_A> for bool {
 impl TDMAE_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> TDMAE_A {
+    pub const fn variant(&self) -> TDMAE_A {
         match self.bits {
             false => TDMAE_A::DISABLED,
             true => TDMAE_A::ENABLED,
         }
     }
-    #[doc = "Checks if the value of the field is `DISABLED`"]
+    #[doc = "transmit FIFO DMA channel disabled"]
     #[inline(always)]
     pub fn is_disabled(&self) -> bool {
         *self == TDMAE_A::DISABLED
     }
-    #[doc = "Checks if the value of the field is `ENABLED`"]
+    #[doc = "Transmit FIFO DMA channel enabled"]
     #[inline(always)]
     pub fn is_enabled(&self) -> bool {
         *self == TDMAE_A::ENABLED
     }
 }
 #[doc = "Field `TDMAE` writer - Transmit DMA Enable. This bit enables/disables the transmit FIFO DMA channel. Reset value: 0x0"]
-pub type TDMAE_W<'a, const O: u8> = crate::BitWriter<'a, IC_DMA_CR_SPEC, O, TDMAE_A>;
-impl<'a, const O: u8> TDMAE_W<'a, O> {
+pub type TDMAE_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, TDMAE_A>;
+impl<'a, REG, const O: u8> TDMAE_W<'a, REG, O>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
     #[doc = "transmit FIFO DMA channel disabled"]
     #[inline(always)]
-    pub fn disabled(self) -> &'a mut W {
+    pub fn disabled(self) -> &'a mut crate::W<REG> {
         self.variant(TDMAE_A::DISABLED)
     }
     #[doc = "Transmit FIFO DMA channel enabled"]
     #[inline(always)]
-    pub fn enabled(self) -> &'a mut W {
+    pub fn enabled(self) -> &'a mut crate::W<REG> {
         self.variant(TDMAE_A::ENABLED)
     }
 }
@@ -154,19 +128,23 @@ impl W {
     #[doc = "Bit 0 - Receive DMA Enable. This bit enables/disables the receive FIFO DMA channel. Reset value: 0x0"]
     #[inline(always)]
     #[must_use]
-    pub fn rdmae(&mut self) -> RDMAE_W<0> {
+    pub fn rdmae(&mut self) -> RDMAE_W<IC_DMA_CR_SPEC, 0> {
         RDMAE_W::new(self)
     }
     #[doc = "Bit 1 - Transmit DMA Enable. This bit enables/disables the transmit FIFO DMA channel. Reset value: 0x0"]
     #[inline(always)]
     #[must_use]
-    pub fn tdmae(&mut self) -> TDMAE_W<1> {
+    pub fn tdmae(&mut self) -> TDMAE_W<IC_DMA_CR_SPEC, 1> {
         TDMAE_W::new(self)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
@@ -174,20 +152,15 @@ impl W {
 
  The register is used to enable the DMA Controller interface operation. There is a separate bit for transmit and receive. This can be programmed regardless of the state of IC_ENABLE.  
 
-This register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
-
-For information about available fields see [ic_dma_cr](index.html) module"]
+You can [`read`](crate::generic::Reg::read) this register and get [`ic_dma_cr::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`ic_dma_cr::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct IC_DMA_CR_SPEC;
 impl crate::RegisterSpec for IC_DMA_CR_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [ic_dma_cr::R](R) reader structure"]
-impl crate::Readable for IC_DMA_CR_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [ic_dma_cr::W](W) writer structure"]
+#[doc = "`read()` method returns [`ic_dma_cr::R`](R) reader structure"]
+impl crate::Readable for IC_DMA_CR_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`ic_dma_cr::W`](W) writer structure"]
 impl crate::Writable for IC_DMA_CR_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

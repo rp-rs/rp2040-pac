@@ -1,39 +1,7 @@
 #[doc = "Register `IC_SLV_DATA_NACK_ONLY` reader"]
-pub struct R(crate::R<IC_SLV_DATA_NACK_ONLY_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<IC_SLV_DATA_NACK_ONLY_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<IC_SLV_DATA_NACK_ONLY_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<IC_SLV_DATA_NACK_ONLY_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<IC_SLV_DATA_NACK_ONLY_SPEC>;
 #[doc = "Register `IC_SLV_DATA_NACK_ONLY` writer"]
-pub struct W(crate::W<IC_SLV_DATA_NACK_ONLY_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<IC_SLV_DATA_NACK_ONLY_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<IC_SLV_DATA_NACK_ONLY_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<IC_SLV_DATA_NACK_ONLY_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<IC_SLV_DATA_NACK_ONLY_SPEC>;
 #[doc = "Field `NACK` reader - Generate NACK. This NACK generation only occurs when DW_apb_i2c is a slave-receiver. If this register is set to a value of 1, it can only generate a NACK after a data byte is received; hence, the data transfer is aborted and the data received is not pushed to the receive buffer.  
 
  When the register is set to a value of 0, it generates NACK/ACK, depending on normal criteria. - 1: generate NACK after data byte received - 0: generate NACK/ACK normally Reset value: 0x0"]
@@ -59,18 +27,18 @@ impl From<NACK_A> for bool {
 impl NACK_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> NACK_A {
+    pub const fn variant(&self) -> NACK_A {
         match self.bits {
             false => NACK_A::DISABLED,
             true => NACK_A::ENABLED,
         }
     }
-    #[doc = "Checks if the value of the field is `DISABLED`"]
+    #[doc = "Slave receiver generates NACK normally"]
     #[inline(always)]
     pub fn is_disabled(&self) -> bool {
         *self == NACK_A::DISABLED
     }
-    #[doc = "Checks if the value of the field is `ENABLED`"]
+    #[doc = "Slave receiver generates NACK upon data reception only"]
     #[inline(always)]
     pub fn is_enabled(&self) -> bool {
         *self == NACK_A::ENABLED
@@ -79,16 +47,19 @@ impl NACK_R {
 #[doc = "Field `NACK` writer - Generate NACK. This NACK generation only occurs when DW_apb_i2c is a slave-receiver. If this register is set to a value of 1, it can only generate a NACK after a data byte is received; hence, the data transfer is aborted and the data received is not pushed to the receive buffer.  
 
  When the register is set to a value of 0, it generates NACK/ACK, depending on normal criteria. - 1: generate NACK after data byte received - 0: generate NACK/ACK normally Reset value: 0x0"]
-pub type NACK_W<'a, const O: u8> = crate::BitWriter<'a, IC_SLV_DATA_NACK_ONLY_SPEC, O, NACK_A>;
-impl<'a, const O: u8> NACK_W<'a, O> {
+pub type NACK_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, NACK_A>;
+impl<'a, REG, const O: u8> NACK_W<'a, REG, O>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
     #[doc = "Slave receiver generates NACK normally"]
     #[inline(always)]
-    pub fn disabled(self) -> &'a mut W {
+    pub fn disabled(self) -> &'a mut crate::W<REG> {
         self.variant(NACK_A::DISABLED)
     }
     #[doc = "Slave receiver generates NACK upon data reception only"]
     #[inline(always)]
-    pub fn enabled(self) -> &'a mut W {
+    pub fn enabled(self) -> &'a mut crate::W<REG> {
         self.variant(NACK_A::ENABLED)
     }
 }
@@ -107,13 +78,17 @@ impl W {
  When the register is set to a value of 0, it generates NACK/ACK, depending on normal criteria. - 1: generate NACK after data byte received - 0: generate NACK/ACK normally Reset value: 0x0"]
     #[inline(always)]
     #[must_use]
-    pub fn nack(&mut self) -> NACK_W<0> {
+    pub fn nack(&mut self) -> NACK_W<IC_SLV_DATA_NACK_ONLY_SPEC, 0> {
         NACK_W::new(self)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
@@ -126,20 +101,15 @@ impl W {
 = 0) Note: The IC_STATUS\\[6\\]
 is a register read-back location for the internal slv_activity signal; the user should poll this before writing the ic_slv_data_nack_only bit.  
 
-This register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
-
-For information about available fields see [ic_slv_data_nack_only](index.html) module"]
+You can [`read`](crate::generic::Reg::read) this register and get [`ic_slv_data_nack_only::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`ic_slv_data_nack_only::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct IC_SLV_DATA_NACK_ONLY_SPEC;
 impl crate::RegisterSpec for IC_SLV_DATA_NACK_ONLY_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [ic_slv_data_nack_only::R](R) reader structure"]
-impl crate::Readable for IC_SLV_DATA_NACK_ONLY_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [ic_slv_data_nack_only::W](W) writer structure"]
+#[doc = "`read()` method returns [`ic_slv_data_nack_only::R`](R) reader structure"]
+impl crate::Readable for IC_SLV_DATA_NACK_ONLY_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`ic_slv_data_nack_only::W`](W) writer structure"]
 impl crate::Writable for IC_SLV_DATA_NACK_ONLY_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

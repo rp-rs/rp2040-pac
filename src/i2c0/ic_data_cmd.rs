@@ -1,39 +1,7 @@
 #[doc = "Register `IC_DATA_CMD` reader"]
-pub struct R(crate::R<IC_DATA_CMD_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<IC_DATA_CMD_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<IC_DATA_CMD_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<IC_DATA_CMD_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<IC_DATA_CMD_SPEC>;
 #[doc = "Register `IC_DATA_CMD` writer"]
-pub struct W(crate::W<IC_DATA_CMD_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<IC_DATA_CMD_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<IC_DATA_CMD_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<IC_DATA_CMD_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<IC_DATA_CMD_SPEC>;
 #[doc = "Field `DAT` reader - This register contains the data to be transmitted or received on the I2C bus. If you are writing to this register and want to perform a read, bits 7:0 (DAT) are ignored by the DW_apb_i2c. However, when you read this register, these bits return the value of data received on the DW_apb_i2c interface.  
 
  Reset value: 0x0"]
@@ -41,7 +9,7 @@ pub type DAT_R = crate::FieldReader;
 #[doc = "Field `DAT` writer - This register contains the data to be transmitted or received on the I2C bus. If you are writing to this register and want to perform a read, bits 7:0 (DAT) are ignored by the DW_apb_i2c. However, when you read this register, these bits return the value of data received on the DW_apb_i2c interface.  
 
  Reset value: 0x0"]
-pub type DAT_W<'a, const O: u8> = crate::FieldWriter<'a, IC_DATA_CMD_SPEC, 8, O>;
+pub type DAT_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O>;
 #[doc = "Field `CMD` reader - This bit controls whether a read or a write is performed. This bit does not control the direction when the DW_apb_i2con acts as a slave. It controls only the direction when it acts as a master.  
 
  When a command is entered in the TX FIFO, this bit distinguishes the write and read commands. In slave-receiver mode, this bit is a 'don't care' because writes to this register are not required. In slave-transmitter mode, a '0' indicates that the data in IC_DATA_CMD is to be transmitted.  
@@ -75,18 +43,18 @@ impl From<CMD_A> for bool {
 impl CMD_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> CMD_A {
+    pub const fn variant(&self) -> CMD_A {
         match self.bits {
             false => CMD_A::WRITE,
             true => CMD_A::READ,
         }
     }
-    #[doc = "Checks if the value of the field is `WRITE`"]
+    #[doc = "Master Write Command"]
     #[inline(always)]
     pub fn is_write(&self) -> bool {
         *self == CMD_A::WRITE
     }
-    #[doc = "Checks if the value of the field is `READ`"]
+    #[doc = "Master Read Command"]
     #[inline(always)]
     pub fn is_read(&self) -> bool {
         *self == CMD_A::READ
@@ -99,16 +67,19 @@ impl CMD_R {
  When programming this bit, you should remember the following: attempting to perform a read operation after a General Call command has been sent results in a TX_ABRT interrupt (bit 6 of the IC_RAW_INTR_STAT register), unless bit 11 (SPECIAL) in the IC_TAR register has been cleared. If a '1' is written to this bit after receiving a RD_REQ interrupt, then a TX_ABRT interrupt occurs.  
 
  Reset value: 0x0"]
-pub type CMD_W<'a, const O: u8> = crate::BitWriter<'a, IC_DATA_CMD_SPEC, O, CMD_A>;
-impl<'a, const O: u8> CMD_W<'a, O> {
+pub type CMD_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, CMD_A>;
+impl<'a, REG, const O: u8> CMD_W<'a, REG, O>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
     #[doc = "Master Write Command"]
     #[inline(always)]
-    pub fn write(self) -> &'a mut W {
+    pub fn write(self) -> &'a mut crate::W<REG> {
         self.variant(CMD_A::WRITE)
     }
     #[doc = "Master Read Command"]
     #[inline(always)]
-    pub fn read(self) -> &'a mut W {
+    pub fn read(self) -> &'a mut crate::W<REG> {
         self.variant(CMD_A::READ)
     }
 }
@@ -137,18 +108,18 @@ impl From<STOP_A> for bool {
 impl STOP_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> STOP_A {
+    pub const fn variant(&self) -> STOP_A {
         match self.bits {
             false => STOP_A::DISABLE,
             true => STOP_A::ENABLE,
         }
     }
-    #[doc = "Checks if the value of the field is `DISABLE`"]
+    #[doc = "Don't Issue STOP after this command"]
     #[inline(always)]
     pub fn is_disable(&self) -> bool {
         *self == STOP_A::DISABLE
     }
-    #[doc = "Checks if the value of the field is `ENABLE`"]
+    #[doc = "Issue STOP after this command"]
     #[inline(always)]
     pub fn is_enable(&self) -> bool {
         *self == STOP_A::ENABLE
@@ -157,16 +128,19 @@ impl STOP_R {
 #[doc = "Field `STOP` writer - This bit controls whether a STOP is issued after the byte is sent or received.  
 
  - 1 - STOP is issued after this byte, regardless of whether or not the Tx FIFO is empty. If the Tx FIFO is not empty, the master immediately tries to start a new transfer by issuing a START and arbitrating for the bus. - 0 - STOP is not issued after this byte, regardless of whether or not the Tx FIFO is empty. If the Tx FIFO is not empty, the master continues the current transfer by sending/receiving data bytes according to the value of the CMD bit. If the Tx FIFO is empty, the master holds the SCL line low and stalls the bus until a new command is available in the Tx FIFO. Reset value: 0x0"]
-pub type STOP_W<'a, const O: u8> = crate::BitWriter<'a, IC_DATA_CMD_SPEC, O, STOP_A>;
-impl<'a, const O: u8> STOP_W<'a, O> {
+pub type STOP_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, STOP_A>;
+impl<'a, REG, const O: u8> STOP_W<'a, REG, O>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
     #[doc = "Don't Issue STOP after this command"]
     #[inline(always)]
-    pub fn disable(self) -> &'a mut W {
+    pub fn disable(self) -> &'a mut crate::W<REG> {
         self.variant(STOP_A::DISABLE)
     }
     #[doc = "Issue STOP after this command"]
     #[inline(always)]
-    pub fn enable(self) -> &'a mut W {
+    pub fn enable(self) -> &'a mut crate::W<REG> {
         self.variant(STOP_A::ENABLE)
     }
 }
@@ -203,18 +177,18 @@ impl From<RESTART_A> for bool {
 impl RESTART_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> RESTART_A {
+    pub const fn variant(&self) -> RESTART_A {
         match self.bits {
             false => RESTART_A::DISABLE,
             true => RESTART_A::ENABLE,
         }
     }
-    #[doc = "Checks if the value of the field is `DISABLE`"]
+    #[doc = "Don't Issue RESTART before this command"]
     #[inline(always)]
     pub fn is_disable(&self) -> bool {
         *self == RESTART_A::DISABLE
     }
-    #[doc = "Checks if the value of the field is `ENABLE`"]
+    #[doc = "Issue RESTART before this command"]
     #[inline(always)]
     pub fn is_enable(&self) -> bool {
         *self == RESTART_A::ENABLE
@@ -227,16 +201,19 @@ impl RESTART_R {
  0 - If IC_RESTART_EN is 1, a RESTART is issued only if the transfer direction is changing from the previous command; if IC_RESTART_EN is 0, a STOP followed by a START is issued instead.  
 
  Reset value: 0x0"]
-pub type RESTART_W<'a, const O: u8> = crate::BitWriter<'a, IC_DATA_CMD_SPEC, O, RESTART_A>;
-impl<'a, const O: u8> RESTART_W<'a, O> {
+pub type RESTART_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O, RESTART_A>;
+impl<'a, REG, const O: u8> RESTART_W<'a, REG, O>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
     #[doc = "Don't Issue RESTART before this command"]
     #[inline(always)]
-    pub fn disable(self) -> &'a mut W {
+    pub fn disable(self) -> &'a mut crate::W<REG> {
         self.variant(RESTART_A::DISABLE)
     }
     #[doc = "Issue RESTART before this command"]
     #[inline(always)]
-    pub fn enable(self) -> &'a mut W {
+    pub fn enable(self) -> &'a mut crate::W<REG> {
         self.variant(RESTART_A::ENABLE)
     }
 }
@@ -287,18 +264,18 @@ impl From<FIRST_DATA_BYTE_A> for bool {
 impl FIRST_DATA_BYTE_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> FIRST_DATA_BYTE_A {
+    pub const fn variant(&self) -> FIRST_DATA_BYTE_A {
         match self.bits {
             false => FIRST_DATA_BYTE_A::INACTIVE,
             true => FIRST_DATA_BYTE_A::ACTIVE,
         }
     }
-    #[doc = "Checks if the value of the field is `INACTIVE`"]
+    #[doc = "Sequential data byte received"]
     #[inline(always)]
     pub fn is_inactive(&self) -> bool {
         *self == FIRST_DATA_BYTE_A::INACTIVE
     }
-    #[doc = "Checks if the value of the field is `ACTIVE`"]
+    #[doc = "Non sequential data byte received"]
     #[inline(always)]
     pub fn is_active(&self) -> bool {
         *self == FIRST_DATA_BYTE_A::ACTIVE
@@ -366,7 +343,7 @@ impl W {
  Reset value: 0x0"]
     #[inline(always)]
     #[must_use]
-    pub fn dat(&mut self) -> DAT_W<0> {
+    pub fn dat(&mut self) -> DAT_W<IC_DATA_CMD_SPEC, 0> {
         DAT_W::new(self)
     }
     #[doc = "Bit 8 - This bit controls whether a read or a write is performed. This bit does not control the direction when the DW_apb_i2con acts as a slave. It controls only the direction when it acts as a master.  
@@ -378,7 +355,7 @@ impl W {
  Reset value: 0x0"]
     #[inline(always)]
     #[must_use]
-    pub fn cmd(&mut self) -> CMD_W<8> {
+    pub fn cmd(&mut self) -> CMD_W<IC_DATA_CMD_SPEC, 8> {
         CMD_W::new(self)
     }
     #[doc = "Bit 9 - This bit controls whether a STOP is issued after the byte is sent or received.  
@@ -386,7 +363,7 @@ impl W {
  - 1 - STOP is issued after this byte, regardless of whether or not the Tx FIFO is empty. If the Tx FIFO is not empty, the master immediately tries to start a new transfer by issuing a START and arbitrating for the bus. - 0 - STOP is not issued after this byte, regardless of whether or not the Tx FIFO is empty. If the Tx FIFO is not empty, the master continues the current transfer by sending/receiving data bytes according to the value of the CMD bit. If the Tx FIFO is empty, the master holds the SCL line low and stalls the bus until a new command is available in the Tx FIFO. Reset value: 0x0"]
     #[inline(always)]
     #[must_use]
-    pub fn stop(&mut self) -> STOP_W<9> {
+    pub fn stop(&mut self) -> STOP_W<IC_DATA_CMD_SPEC, 9> {
         STOP_W::new(self)
     }
     #[doc = "Bit 10 - This bit controls whether a RESTART is issued before the byte is sent or received.  
@@ -398,13 +375,17 @@ impl W {
  Reset value: 0x0"]
     #[inline(always)]
     #[must_use]
-    pub fn restart(&mut self) -> RESTART_W<10> {
+    pub fn restart(&mut self) -> RESTART_W<IC_DATA_CMD_SPEC, 10> {
         RESTART_W::new(self)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
@@ -414,20 +395,15 @@ impl W {
 
  Write: - 11 bits when IC_EMPTYFIFO_HOLD_MASTER_EN=1 - 9 bits when IC_EMPTYFIFO_HOLD_MASTER_EN=0 Read: - 12 bits when IC_FIRST_DATA_BYTE_STATUS = 1 - 8 bits when IC_FIRST_DATA_BYTE_STATUS = 0 Note: In order for the DW_apb_i2c to continue acknowledging reads, a read command should be written for every byte that is to be received; otherwise the DW_apb_i2c will stop acknowledging.  
 
-This register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
-
-For information about available fields see [ic_data_cmd](index.html) module"]
+You can [`read`](crate::generic::Reg::read) this register and get [`ic_data_cmd::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`ic_data_cmd::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct IC_DATA_CMD_SPEC;
 impl crate::RegisterSpec for IC_DATA_CMD_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [ic_data_cmd::R](R) reader structure"]
-impl crate::Readable for IC_DATA_CMD_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [ic_data_cmd::W](W) writer structure"]
+#[doc = "`read()` method returns [`ic_data_cmd::R`](R) reader structure"]
+impl crate::Readable for IC_DATA_CMD_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`ic_data_cmd::W`](W) writer structure"]
 impl crate::Writable for IC_DATA_CMD_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

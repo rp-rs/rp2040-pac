@@ -1,18 +1,5 @@
 #[doc = "Register `CLK_RTC_SELECTED` reader"]
-pub struct R(crate::R<CLK_RTC_SELECTED_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<CLK_RTC_SELECTED_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<CLK_RTC_SELECTED_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<CLK_RTC_SELECTED_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<CLK_RTC_SELECTED_SPEC>;
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         write!(f, "{}", self.bits())
@@ -26,17 +13,13 @@ impl core::fmt::Debug for crate::generic::Reg<CLK_RTC_SELECTED_SPEC> {
 #[doc = "Indicates which SRC is currently selected by the glitchless mux (one-hot).  
  This slice does not have a glitchless mux (only the AUX_SRC field is present, not SRC) so this register is hardwired to 0x1.  
 
-This register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
-
-For information about available fields see [clk_rtc_selected](index.html) module"]
+You can [`read`](crate::generic::Reg::read) this register and get [`clk_rtc_selected::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct CLK_RTC_SELECTED_SPEC;
 impl crate::RegisterSpec for CLK_RTC_SELECTED_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [clk_rtc_selected::R](R) reader structure"]
-impl crate::Readable for CLK_RTC_SELECTED_SPEC {
-    type Reader = R;
-}
+#[doc = "`read()` method returns [`clk_rtc_selected::R`](R) reader structure"]
+impl crate::Readable for CLK_RTC_SELECTED_SPEC {}
 #[doc = "`reset()` method sets CLK_RTC_SELECTED to value 0x01"]
 impl crate::Resettable for CLK_RTC_SELECTED_SPEC {
     const RESET_VALUE: Self::Ux = 0x01;

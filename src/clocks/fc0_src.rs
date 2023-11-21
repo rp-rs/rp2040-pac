@@ -1,39 +1,7 @@
 #[doc = "Register `FC0_SRC` reader"]
-pub struct R(crate::R<FC0_SRC_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<FC0_SRC_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<FC0_SRC_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<FC0_SRC_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<FC0_SRC_SPEC>;
 #[doc = "Register `FC0_SRC` writer"]
-pub struct W(crate::W<FC0_SRC_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<FC0_SRC_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<FC0_SRC_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<FC0_SRC_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<FC0_SRC_SPEC>;
 #[doc = "Field `FC0_SRC` reader - "]
 pub type FC0_SRC_R = crate::FieldReader<FC0_SRC_A>;
 #[doc = "  
@@ -83,7 +51,7 @@ impl crate::FieldSpec for FC0_SRC_A {
 impl FC0_SRC_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> Option<FC0_SRC_A> {
+    pub const fn variant(&self) -> Option<FC0_SRC_A> {
         match self.bits {
             0 => Some(FC0_SRC_A::NULL),
             1 => Some(FC0_SRC_A::PLL_SYS_CLKSRC_PRIMARY),
@@ -102,148 +70,152 @@ impl FC0_SRC_R {
             _ => None,
         }
     }
-    #[doc = "Checks if the value of the field is `NULL`"]
+    #[doc = "`0`"]
     #[inline(always)]
     pub fn is_null(&self) -> bool {
         *self == FC0_SRC_A::NULL
     }
-    #[doc = "Checks if the value of the field is `PLL_SYS_CLKSRC_PRIMARY`"]
+    #[doc = "`1`"]
     #[inline(always)]
     pub fn is_pll_sys_clksrc_primary(&self) -> bool {
         *self == FC0_SRC_A::PLL_SYS_CLKSRC_PRIMARY
     }
-    #[doc = "Checks if the value of the field is `PLL_USB_CLKSRC_PRIMARY`"]
+    #[doc = "`10`"]
     #[inline(always)]
     pub fn is_pll_usb_clksrc_primary(&self) -> bool {
         *self == FC0_SRC_A::PLL_USB_CLKSRC_PRIMARY
     }
-    #[doc = "Checks if the value of the field is `ROSC_CLKSRC`"]
+    #[doc = "`11`"]
     #[inline(always)]
     pub fn is_rosc_clksrc(&self) -> bool {
         *self == FC0_SRC_A::ROSC_CLKSRC
     }
-    #[doc = "Checks if the value of the field is `ROSC_CLKSRC_PH`"]
+    #[doc = "`100`"]
     #[inline(always)]
     pub fn is_rosc_clksrc_ph(&self) -> bool {
         *self == FC0_SRC_A::ROSC_CLKSRC_PH
     }
-    #[doc = "Checks if the value of the field is `XOSC_CLKSRC`"]
+    #[doc = "`101`"]
     #[inline(always)]
     pub fn is_xosc_clksrc(&self) -> bool {
         *self == FC0_SRC_A::XOSC_CLKSRC
     }
-    #[doc = "Checks if the value of the field is `CLKSRC_GPIN0`"]
+    #[doc = "`110`"]
     #[inline(always)]
     pub fn is_clksrc_gpin0(&self) -> bool {
         *self == FC0_SRC_A::CLKSRC_GPIN0
     }
-    #[doc = "Checks if the value of the field is `CLKSRC_GPIN1`"]
+    #[doc = "`111`"]
     #[inline(always)]
     pub fn is_clksrc_gpin1(&self) -> bool {
         *self == FC0_SRC_A::CLKSRC_GPIN1
     }
-    #[doc = "Checks if the value of the field is `CLK_REF`"]
+    #[doc = "`1000`"]
     #[inline(always)]
     pub fn is_clk_ref(&self) -> bool {
         *self == FC0_SRC_A::CLK_REF
     }
-    #[doc = "Checks if the value of the field is `CLK_SYS`"]
+    #[doc = "`1001`"]
     #[inline(always)]
     pub fn is_clk_sys(&self) -> bool {
         *self == FC0_SRC_A::CLK_SYS
     }
-    #[doc = "Checks if the value of the field is `CLK_PERI`"]
+    #[doc = "`1010`"]
     #[inline(always)]
     pub fn is_clk_peri(&self) -> bool {
         *self == FC0_SRC_A::CLK_PERI
     }
-    #[doc = "Checks if the value of the field is `CLK_USB`"]
+    #[doc = "`1011`"]
     #[inline(always)]
     pub fn is_clk_usb(&self) -> bool {
         *self == FC0_SRC_A::CLK_USB
     }
-    #[doc = "Checks if the value of the field is `CLK_ADC`"]
+    #[doc = "`1100`"]
     #[inline(always)]
     pub fn is_clk_adc(&self) -> bool {
         *self == FC0_SRC_A::CLK_ADC
     }
-    #[doc = "Checks if the value of the field is `CLK_RTC`"]
+    #[doc = "`1101`"]
     #[inline(always)]
     pub fn is_clk_rtc(&self) -> bool {
         *self == FC0_SRC_A::CLK_RTC
     }
 }
 #[doc = "Field `FC0_SRC` writer - "]
-pub type FC0_SRC_W<'a, const O: u8> = crate::FieldWriter<'a, FC0_SRC_SPEC, 8, O, FC0_SRC_A>;
-impl<'a, const O: u8> FC0_SRC_W<'a, O> {
+pub type FC0_SRC_W<'a, REG, const O: u8> = crate::FieldWriter<'a, REG, 8, O, FC0_SRC_A>;
+impl<'a, REG, const O: u8> FC0_SRC_W<'a, REG, O>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+    REG::Ux: From<u8>,
+{
     #[doc = "`0`"]
     #[inline(always)]
-    pub fn null(self) -> &'a mut W {
+    pub fn null(self) -> &'a mut crate::W<REG> {
         self.variant(FC0_SRC_A::NULL)
     }
     #[doc = "`1`"]
     #[inline(always)]
-    pub fn pll_sys_clksrc_primary(self) -> &'a mut W {
+    pub fn pll_sys_clksrc_primary(self) -> &'a mut crate::W<REG> {
         self.variant(FC0_SRC_A::PLL_SYS_CLKSRC_PRIMARY)
     }
     #[doc = "`10`"]
     #[inline(always)]
-    pub fn pll_usb_clksrc_primary(self) -> &'a mut W {
+    pub fn pll_usb_clksrc_primary(self) -> &'a mut crate::W<REG> {
         self.variant(FC0_SRC_A::PLL_USB_CLKSRC_PRIMARY)
     }
     #[doc = "`11`"]
     #[inline(always)]
-    pub fn rosc_clksrc(self) -> &'a mut W {
+    pub fn rosc_clksrc(self) -> &'a mut crate::W<REG> {
         self.variant(FC0_SRC_A::ROSC_CLKSRC)
     }
     #[doc = "`100`"]
     #[inline(always)]
-    pub fn rosc_clksrc_ph(self) -> &'a mut W {
+    pub fn rosc_clksrc_ph(self) -> &'a mut crate::W<REG> {
         self.variant(FC0_SRC_A::ROSC_CLKSRC_PH)
     }
     #[doc = "`101`"]
     #[inline(always)]
-    pub fn xosc_clksrc(self) -> &'a mut W {
+    pub fn xosc_clksrc(self) -> &'a mut crate::W<REG> {
         self.variant(FC0_SRC_A::XOSC_CLKSRC)
     }
     #[doc = "`110`"]
     #[inline(always)]
-    pub fn clksrc_gpin0(self) -> &'a mut W {
+    pub fn clksrc_gpin0(self) -> &'a mut crate::W<REG> {
         self.variant(FC0_SRC_A::CLKSRC_GPIN0)
     }
     #[doc = "`111`"]
     #[inline(always)]
-    pub fn clksrc_gpin1(self) -> &'a mut W {
+    pub fn clksrc_gpin1(self) -> &'a mut crate::W<REG> {
         self.variant(FC0_SRC_A::CLKSRC_GPIN1)
     }
     #[doc = "`1000`"]
     #[inline(always)]
-    pub fn clk_ref(self) -> &'a mut W {
+    pub fn clk_ref(self) -> &'a mut crate::W<REG> {
         self.variant(FC0_SRC_A::CLK_REF)
     }
     #[doc = "`1001`"]
     #[inline(always)]
-    pub fn clk_sys(self) -> &'a mut W {
+    pub fn clk_sys(self) -> &'a mut crate::W<REG> {
         self.variant(FC0_SRC_A::CLK_SYS)
     }
     #[doc = "`1010`"]
     #[inline(always)]
-    pub fn clk_peri(self) -> &'a mut W {
+    pub fn clk_peri(self) -> &'a mut crate::W<REG> {
         self.variant(FC0_SRC_A::CLK_PERI)
     }
     #[doc = "`1011`"]
     #[inline(always)]
-    pub fn clk_usb(self) -> &'a mut W {
+    pub fn clk_usb(self) -> &'a mut crate::W<REG> {
         self.variant(FC0_SRC_A::CLK_USB)
     }
     #[doc = "`1100`"]
     #[inline(always)]
-    pub fn clk_adc(self) -> &'a mut W {
+    pub fn clk_adc(self) -> &'a mut crate::W<REG> {
         self.variant(FC0_SRC_A::CLK_ADC)
     }
     #[doc = "`1101`"]
     #[inline(always)]
-    pub fn clk_rtc(self) -> &'a mut W {
+    pub fn clk_rtc(self) -> &'a mut crate::W<REG> {
         self.variant(FC0_SRC_A::CLK_RTC)
     }
 }
@@ -258,33 +230,32 @@ impl W {
     #[doc = "Bits 0:7"]
     #[inline(always)]
     #[must_use]
-    pub fn fc0_src(&mut self) -> FC0_SRC_W<0> {
+    pub fn fc0_src(&mut self) -> FC0_SRC_W<FC0_SRC_SPEC, 0> {
         FC0_SRC_W::new(self)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
 #[doc = "Clock sent to frequency counter, set to 0 when not required  
  Writing to this register initiates the frequency count  
 
-This register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
-
-For information about available fields see [fc0_src](index.html) module"]
+You can [`read`](crate::generic::Reg::read) this register and get [`fc0_src::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`fc0_src::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct FC0_SRC_SPEC;
 impl crate::RegisterSpec for FC0_SRC_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [fc0_src::R](R) reader structure"]
-impl crate::Readable for FC0_SRC_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [fc0_src::W](W) writer structure"]
+#[doc = "`read()` method returns [`fc0_src::R`](R) reader structure"]
+impl crate::Readable for FC0_SRC_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`fc0_src::W`](W) writer structure"]
 impl crate::Writable for FC0_SRC_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }

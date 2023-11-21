@@ -1,63 +1,31 @@
 #[doc = "Register `USB_PWR` reader"]
-pub struct R(crate::R<USB_PWR_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<USB_PWR_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<USB_PWR_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<USB_PWR_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<USB_PWR_SPEC>;
 #[doc = "Register `USB_PWR` writer"]
-pub struct W(crate::W<USB_PWR_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<USB_PWR_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<USB_PWR_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<USB_PWR_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<USB_PWR_SPEC>;
 #[doc = "Field `VBUS_EN` reader - "]
 pub type VBUS_EN_R = crate::BitReader;
 #[doc = "Field `VBUS_EN` writer - "]
-pub type VBUS_EN_W<'a, const O: u8> = crate::BitWriter<'a, USB_PWR_SPEC, O>;
+pub type VBUS_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `VBUS_EN_OVERRIDE_EN` reader - "]
 pub type VBUS_EN_OVERRIDE_EN_R = crate::BitReader;
 #[doc = "Field `VBUS_EN_OVERRIDE_EN` writer - "]
-pub type VBUS_EN_OVERRIDE_EN_W<'a, const O: u8> = crate::BitWriter<'a, USB_PWR_SPEC, O>;
+pub type VBUS_EN_OVERRIDE_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `VBUS_DETECT` reader - "]
 pub type VBUS_DETECT_R = crate::BitReader;
 #[doc = "Field `VBUS_DETECT` writer - "]
-pub type VBUS_DETECT_W<'a, const O: u8> = crate::BitWriter<'a, USB_PWR_SPEC, O>;
+pub type VBUS_DETECT_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `VBUS_DETECT_OVERRIDE_EN` reader - "]
 pub type VBUS_DETECT_OVERRIDE_EN_R = crate::BitReader;
 #[doc = "Field `VBUS_DETECT_OVERRIDE_EN` writer - "]
-pub type VBUS_DETECT_OVERRIDE_EN_W<'a, const O: u8> = crate::BitWriter<'a, USB_PWR_SPEC, O>;
+pub type VBUS_DETECT_OVERRIDE_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `OVERCURR_DETECT` reader - "]
 pub type OVERCURR_DETECT_R = crate::BitReader;
 #[doc = "Field `OVERCURR_DETECT` writer - "]
-pub type OVERCURR_DETECT_W<'a, const O: u8> = crate::BitWriter<'a, USB_PWR_SPEC, O>;
+pub type OVERCURR_DETECT_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 #[doc = "Field `OVERCURR_DETECT_EN` reader - "]
 pub type OVERCURR_DETECT_EN_R = crate::BitReader;
 #[doc = "Field `OVERCURR_DETECT_EN` writer - "]
-pub type OVERCURR_DETECT_EN_W<'a, const O: u8> = crate::BitWriter<'a, USB_PWR_SPEC, O>;
+pub type OVERCURR_DETECT_EN_W<'a, REG, const O: u8> = crate::BitWriter<'a, REG, O>;
 impl R {
     #[doc = "Bit 0"]
     #[inline(always)]
@@ -94,62 +62,61 @@ impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
     #[must_use]
-    pub fn vbus_en(&mut self) -> VBUS_EN_W<0> {
+    pub fn vbus_en(&mut self) -> VBUS_EN_W<USB_PWR_SPEC, 0> {
         VBUS_EN_W::new(self)
     }
     #[doc = "Bit 1"]
     #[inline(always)]
     #[must_use]
-    pub fn vbus_en_override_en(&mut self) -> VBUS_EN_OVERRIDE_EN_W<1> {
+    pub fn vbus_en_override_en(&mut self) -> VBUS_EN_OVERRIDE_EN_W<USB_PWR_SPEC, 1> {
         VBUS_EN_OVERRIDE_EN_W::new(self)
     }
     #[doc = "Bit 2"]
     #[inline(always)]
     #[must_use]
-    pub fn vbus_detect(&mut self) -> VBUS_DETECT_W<2> {
+    pub fn vbus_detect(&mut self) -> VBUS_DETECT_W<USB_PWR_SPEC, 2> {
         VBUS_DETECT_W::new(self)
     }
     #[doc = "Bit 3"]
     #[inline(always)]
     #[must_use]
-    pub fn vbus_detect_override_en(&mut self) -> VBUS_DETECT_OVERRIDE_EN_W<3> {
+    pub fn vbus_detect_override_en(&mut self) -> VBUS_DETECT_OVERRIDE_EN_W<USB_PWR_SPEC, 3> {
         VBUS_DETECT_OVERRIDE_EN_W::new(self)
     }
     #[doc = "Bit 4"]
     #[inline(always)]
     #[must_use]
-    pub fn overcurr_detect(&mut self) -> OVERCURR_DETECT_W<4> {
+    pub fn overcurr_detect(&mut self) -> OVERCURR_DETECT_W<USB_PWR_SPEC, 4> {
         OVERCURR_DETECT_W::new(self)
     }
     #[doc = "Bit 5"]
     #[inline(always)]
     #[must_use]
-    pub fn overcurr_detect_en(&mut self) -> OVERCURR_DETECT_EN_W<5> {
+    pub fn overcurr_detect_en(&mut self) -> OVERCURR_DETECT_EN_W<USB_PWR_SPEC, 5> {
         OVERCURR_DETECT_EN_W::new(self)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
 #[doc = "Overrides for the power signals in the event that the VBUS signals are not hooked up to GPIO. Set the value of the override and then the override enable to switch over to the override value.  
 
-This register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
-
-For information about available fields see [usb_pwr](index.html) module"]
+You can [`read`](crate::generic::Reg::read) this register and get [`usb_pwr::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`usb_pwr::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct USB_PWR_SPEC;
 impl crate::RegisterSpec for USB_PWR_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [usb_pwr::R](R) reader structure"]
-impl crate::Readable for USB_PWR_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [usb_pwr::W](W) writer structure"]
+#[doc = "`read()` method returns [`usb_pwr::R`](R) reader structure"]
+impl crate::Readable for USB_PWR_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`usb_pwr::W`](W) writer structure"]
 impl crate::Writable for USB_PWR_SPEC {
-    type Writer = W;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
 }
