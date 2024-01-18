@@ -14581,6 +14581,60 @@
                 1111         - 1.30V</description>
               <bitRange>[7:4]</bitRange>
               <access>read-write</access>
+              <enumeratedValues>
+                <name>VSEL</name>
+                <usage>read-write</usage>
+                <enumeratedValue>
+                  <name>Voltage0_85</name>
+                  <description>0.85V</description>
+                  <value>6</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>Voltage0_90</name>
+                  <description>0.90V</description>
+                  <value>7</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>Voltage0_95</name>
+                  <description>0.95V</description>
+                  <value>8</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>Voltage1_00</name>
+                  <description>1.00V</description>
+                  <value>9</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>Voltage1_05</name>
+                  <description>1.05V</description>
+                  <value>10</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>Voltage1_10</name>
+                  <description>1.10V (default)</description>
+                  <value>11</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>Voltage1_15</name>
+                  <description>1.15V</description>
+                  <value>12</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>Voltage1_20</name>
+                  <description>1.20V</description>
+                  <value>13</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>Voltage1_25</name>
+                  <description>1.25V</description>
+                  <value>14</value>
+                </enumeratedValue>
+                <enumeratedValue>
+                  <name>Voltage1_30</name>
+                  <description>1.30V</description>
+                  <value>15</value>
+                </enumeratedValue>
+              </enumeratedValues>
             </field>
             <field>
               <name>HIZ</name>

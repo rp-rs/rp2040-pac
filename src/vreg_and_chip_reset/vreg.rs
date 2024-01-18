@@ -58,7 +58,123 @@ pub type HIZ_W<'a, const O: u8> = crate::BitWriter<'a, VREG_SPEC, O>;
  1101 - 1.20V  
  1110 - 1.25V  
  1111 - 1.30V"]
-pub type VSEL_R = crate::FieldReader;
+pub type VSEL_R = crate::FieldReader<VSEL_A>;
+#[doc = "output voltage select  
+ 0000 to 0101 - 0.80V  
+ 0110 - 0.85V  
+ 0111 - 0.90V  
+ 1000 - 0.95V  
+ 1001 - 1.00V  
+ 1010 - 1.05V  
+ 1011 - 1.10V (default)  
+ 1100 - 1.15V  
+ 1101 - 1.20V  
+ 1110 - 1.25V  
+ 1111 - 1.30V  
+
+Value on reset: 11"]
+#[derive(Clone, Copy, Debug, PartialEq, Eq)]
+#[repr(u8)]
+pub enum VSEL_A {
+    #[doc = "6: 0.85V"]
+    VOLTAGE0_85 = 6,
+    #[doc = "7: 0.90V"]
+    VOLTAGE0_90 = 7,
+    #[doc = "8: 0.95V"]
+    VOLTAGE0_95 = 8,
+    #[doc = "9: 1.00V"]
+    VOLTAGE1_00 = 9,
+    #[doc = "10: 1.05V"]
+    VOLTAGE1_05 = 10,
+    #[doc = "11: 1.10V (default)"]
+    VOLTAGE1_10 = 11,
+    #[doc = "12: 1.15V"]
+    VOLTAGE1_15 = 12,
+    #[doc = "13: 1.20V"]
+    VOLTAGE1_20 = 13,
+    #[doc = "14: 1.25V"]
+    VOLTAGE1_25 = 14,
+    #[doc = "15: 1.30V"]
+    VOLTAGE1_30 = 15,
+}
+impl From<VSEL_A> for u8 {
+    #[inline(always)]
+    fn from(variant: VSEL_A) -> Self {
+        variant as _
+    }
+}
+impl crate::FieldSpec for VSEL_A {
+    type Ux = u8;
+}
+impl VSEL_R {
+    #[doc = "Get enumerated values variant"]
+    #[inline(always)]
+    pub fn variant(&self) -> Option<VSEL_A> {
+        match self.bits {
+            6 => Some(VSEL_A::VOLTAGE0_85),
+            7 => Some(VSEL_A::VOLTAGE0_90),
+            8 => Some(VSEL_A::VOLTAGE0_95),
+            9 => Some(VSEL_A::VOLTAGE1_00),
+            10 => Some(VSEL_A::VOLTAGE1_05),
+            11 => Some(VSEL_A::VOLTAGE1_10),
+            12 => Some(VSEL_A::VOLTAGE1_15),
+            13 => Some(VSEL_A::VOLTAGE1_20),
+            14 => Some(VSEL_A::VOLTAGE1_25),
+            15 => Some(VSEL_A::VOLTAGE1_30),
+            _ => None,
+        }
+    }
+    #[doc = "Checks if the value of the field is `VOLTAGE0_85`"]
+    #[inline(always)]
+    pub fn is_voltage0_85(&self) -> bool {
+        *self == VSEL_A::VOLTAGE0_85
+    }
+    #[doc = "Checks if the value of the field is `VOLTAGE0_90`"]
+    #[inline(always)]
+    pub fn is_voltage0_90(&self) -> bool {
+        *self == VSEL_A::VOLTAGE0_90
+    }
+    #[doc = "Checks if the value of the field is `VOLTAGE0_95`"]
+    #[inline(always)]
+    pub fn is_voltage0_95(&self) -> bool {
+        *self == VSEL_A::VOLTAGE0_95
+    }
+    #[doc = "Checks if the value of the field is `VOLTAGE1_00`"]
+    #[inline(always)]
+    pub fn is_voltage1_00(&self) -> bool {
+        *self == VSEL_A::VOLTAGE1_00
+    }
+    #[doc = "Checks if the value of the field is `VOLTAGE1_05`"]
+    #[inline(always)]
+    pub fn is_voltage1_05(&self) -> bool {
+        *self == VSEL_A::VOLTAGE1_05
+    }
+    #[doc = "Checks if the value of the field is `VOLTAGE1_10`"]
+    #[inline(always)]
+    pub fn is_voltage1_10(&self) -> bool {
+        *self == VSEL_A::VOLTAGE1_10
+    }
+    #[doc = "Checks if the value of the field is `VOLTAGE1_15`"]
+    #[inline(always)]
+    pub fn is_voltage1_15(&self) -> bool {
+        *self == VSEL_A::VOLTAGE1_15
+    }
+    #[doc = "Checks if the value of the field is `VOLTAGE1_20`"]
+    #[inline(always)]
+    pub fn is_voltage1_20(&self) -> bool {
+        *self == VSEL_A::VOLTAGE1_20
+    }
+    #[doc = "Checks if the value of the field is `VOLTAGE1_25`"]
+    #[inline(always)]
+    pub fn is_voltage1_25(&self) -> bool {
+        *self == VSEL_A::VOLTAGE1_25
+    }
+    #[doc = "Checks if the value of the field is `VOLTAGE1_30`"]
+    #[inline(always)]
+    pub fn is_voltage1_30(&self) -> bool {
+        *self == VSEL_A::VOLTAGE1_30
+    }
+}
 #[doc = "Field `VSEL` writer - output voltage select  
  0000 to 0101 - 0.80V  
  0110 - 0.85V  
@@ -71,7 +187,59 @@ pub type VSEL_R = crate::FieldReader;
  1101 - 1.20V  
  1110 - 1.25V  
  1111 - 1.30V"]
-pub type VSEL_W<'a, const O: u8> = crate::FieldWriter<'a, VREG_SPEC, 4, O>;
+pub type VSEL_W<'a, const O: u8> = crate::FieldWriter<'a, VREG_SPEC, 4, O, VSEL_A>;
+impl<'a, const O: u8> VSEL_W<'a, O> {
+    #[doc = "0.85V"]
+    #[inline(always)]
+    pub fn voltage0_85(self) -> &'a mut W {
+        self.variant(VSEL_A::VOLTAGE0_85)
+    }
+    #[doc = "0.90V"]
+    #[inline(always)]
+    pub fn voltage0_90(self) -> &'a mut W {
+        self.variant(VSEL_A::VOLTAGE0_90)
+    }
+    #[doc = "0.95V"]
+    #[inline(always)]
+    pub fn voltage0_95(self) -> &'a mut W {
+        self.variant(VSEL_A::VOLTAGE0_95)
+    }
+    #[doc = "1.00V"]
+    #[inline(always)]
+    pub fn voltage1_00(self) -> &'a mut W {
+        self.variant(VSEL_A::VOLTAGE1_00)
+    }
+    #[doc = "1.05V"]
+    #[inline(always)]
+    pub fn voltage1_05(self) -> &'a mut W {
+        self.variant(VSEL_A::VOLTAGE1_05)
+    }
+    #[doc = "1.10V (default)"]
+    #[inline(always)]
+    pub fn voltage1_10(self) -> &'a mut W {
+        self.variant(VSEL_A::VOLTAGE1_10)
+    }
+    #[doc = "1.15V"]
+    #[inline(always)]
+    pub fn voltage1_15(self) -> &'a mut W {
+        self.variant(VSEL_A::VOLTAGE1_15)
+    }
+    #[doc = "1.20V"]
+    #[inline(always)]
+    pub fn voltage1_20(self) -> &'a mut W {
+        self.variant(VSEL_A::VOLTAGE1_20)
+    }
+    #[doc = "1.25V"]
+    #[inline(always)]
+    pub fn voltage1_25(self) -> &'a mut W {
+        self.variant(VSEL_A::VOLTAGE1_25)
+    }
+    #[doc = "1.30V"]
+    #[inline(always)]
+    pub fn voltage1_30(self) -> &'a mut W {
+        self.variant(VSEL_A::VOLTAGE1_30)
+    }
+}
 #[doc = "Field `ROK` reader - regulation status  
  0=not in regulation, 1=in regulation"]
 pub type ROK_R = crate::BitReader;
