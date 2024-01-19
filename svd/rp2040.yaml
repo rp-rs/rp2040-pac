@@ -651,6 +651,7 @@ VREG_AND_CHIP_RESET:
         description: "Output voltage select for on-chip voltage regulator."
     VSEL:
       _replace_enum:
+        Voltage0_80: [5, "0.80V"]
         Voltage0_85: [6, "0.85V"]
         Voltage0_90: [7, "0.90V"]
         Voltage0_95: [8, "0.95V"]

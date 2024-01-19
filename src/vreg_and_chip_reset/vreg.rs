@@ -54,6 +54,8 @@ Value on reset: 11"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u8)]
 pub enum VSEL_A {
+    #[doc = "5: 0.80V"]
+    VOLTAGE0_80 = 5,
     #[doc = "6: 0.85V"]
     VOLTAGE0_85 = 6,
     #[doc = "7: 0.90V"]
@@ -89,6 +91,7 @@ impl VSEL_R {
     #[inline(always)]
     pub fn variant(&self) -> Option<VSEL_A> {
         match self.bits {
+            5 => Some(VSEL_A::VOLTAGE0_80),
             6 => Some(VSEL_A::VOLTAGE0_85),
             7 => Some(VSEL_A::VOLTAGE0_90),
             8 => Some(VSEL_A::VOLTAGE0_95),
@@ -101,6 +104,11 @@ impl VSEL_R {
             15 => Some(VSEL_A::VOLTAGE1_30),
             _ => None,
         }
+    }
+    #[doc = "Checks if the value of the field is `VOLTAGE0_80`"]
+    #[inline(always)]
+    pub fn is_voltage0_80(&self) -> bool {
+        *self == VSEL_A::VOLTAGE0_80
     }
     #[doc = "Checks if the value of the field is `VOLTAGE0_85`"]
     #[inline(always)]
@@ -156,6 +164,11 @@ impl VSEL_R {
 #[doc = "Field `VSEL` writer - Output voltage select for on-chip voltage regulator."]
 pub type VSEL_W<'a, const O: u8> = crate::FieldWriter<'a, VREG_SPEC, 4, O, VSEL_A>;
 impl<'a, const O: u8> VSEL_W<'a, O> {
+    #[doc = "0.80V"]
+    #[inline(always)]
+    pub fn voltage0_80(self) -> &'a mut W {
+        self.variant(VSEL_A::VOLTAGE0_80)
+    }
     #[doc = "0.85V"]
     #[inline(always)]
     pub fn voltage0_85(self) -> &'a mut W {

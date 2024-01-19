@@ -14574,6 +14574,11 @@
                 <name>VSEL</name>
                 <usage>read-write</usage>
                 <enumeratedValue>
+                  <name>Voltage0_80</name>
+                  <description>0.80V</description>
+                  <value>5</value>
+                </enumeratedValue>
+                <enumeratedValue>
                   <name>Voltage0_85</name>
                   <description>0.85V</description>
                   <value>6</value>
