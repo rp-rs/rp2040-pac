@@ -46,31 +46,9 @@ pub type HIZ_R = crate::BitReader;
 #[doc = "Field `HIZ` writer - high impedance mode select  
  0=not in high impedance mode, 1=in high impedance mode"]
 pub type HIZ_W<'a, const O: u8> = crate::BitWriter<'a, VREG_SPEC, O>;
-#[doc = "Field `VSEL` reader - output voltage select  
- 0000 to 0101 - 0.80V  
- 0110 - 0.85V  
- 0111 - 0.90V  
- 1000 - 0.95V  
- 1001 - 1.00V  
- 1010 - 1.05V  
- 1011 - 1.10V (default)  
- 1100 - 1.15V  
- 1101 - 1.20V  
- 1110 - 1.25V  
- 1111 - 1.30V"]
+#[doc = "Field `VSEL` reader - Output voltage select for on-chip voltage regulator."]
 pub type VSEL_R = crate::FieldReader<VSEL_A>;
-#[doc = "output voltage select  
- 0000 to 0101 - 0.80V  
- 0110 - 0.85V  
- 0111 - 0.90V  
- 1000 - 0.95V  
- 1001 - 1.00V  
- 1010 - 1.05V  
- 1011 - 1.10V (default)  
- 1100 - 1.15V  
- 1101 - 1.20V  
- 1110 - 1.25V  
- 1111 - 1.30V  
+#[doc = "Output voltage select for on-chip voltage regulator.  
 
 Value on reset: 11"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
@@ -175,18 +153,7 @@ impl VSEL_R {
         *self == VSEL_A::VOLTAGE1_30
     }
 }
-#[doc = "Field `VSEL` writer - output voltage select  
- 0000 to 0101 - 0.80V  
- 0110 - 0.85V  
- 0111 - 0.90V  
- 1000 - 0.95V  
- 1001 - 1.00V  
- 1010 - 1.05V  
- 1011 - 1.10V (default)  
- 1100 - 1.15V  
- 1101 - 1.20V  
- 1110 - 1.25V  
- 1111 - 1.30V"]
+#[doc = "Field `VSEL` writer - Output voltage select for on-chip voltage regulator."]
 pub type VSEL_W<'a, const O: u8> = crate::FieldWriter<'a, VREG_SPEC, 4, O, VSEL_A>;
 impl<'a, const O: u8> VSEL_W<'a, O> {
     #[doc = "0.85V"]
@@ -256,18 +223,7 @@ impl R {
     pub fn hiz(&self) -> HIZ_R {
         HIZ_R::new(((self.bits >> 1) & 1) != 0)
     }
-    #[doc = "Bits 4:7 - output voltage select  
- 0000 to 0101 - 0.80V  
- 0110 - 0.85V  
- 0111 - 0.90V  
- 1000 - 0.95V  
- 1001 - 1.00V  
- 1010 - 1.05V  
- 1011 - 1.10V (default)  
- 1100 - 1.15V  
- 1101 - 1.20V  
- 1110 - 1.25V  
- 1111 - 1.30V"]
+    #[doc = "Bits 4:7 - Output voltage select for on-chip voltage regulator."]
     #[inline(always)]
     pub fn vsel(&self) -> VSEL_R {
         VSEL_R::new(((self.bits >> 4) & 0x0f) as u8)
@@ -294,18 +250,7 @@ impl W {
     pub fn hiz(&mut self) -> HIZ_W<1> {
         HIZ_W::new(self)
     }
-    #[doc = "Bits 4:7 - output voltage select  
- 0000 to 0101 - 0.80V  
- 0110 - 0.85V  
- 0111 - 0.90V  
- 1000 - 0.95V  
- 1001 - 1.00V  
- 1010 - 1.05V  
- 1011 - 1.10V (default)  
- 1100 - 1.15V  
- 1101 - 1.20V  
- 1110 - 1.25V  
- 1111 - 1.30V"]
+    #[doc = "Bits 4:7 - Output voltage select for on-chip voltage regulator."]
     #[inline(always)]
     #[must_use]
     pub fn vsel(&mut self) -> VSEL_W<4> {
