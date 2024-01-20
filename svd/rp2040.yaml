@@ -644,6 +644,25 @@ SPI0:
         Texas_Instruments: [1, "Texas Instruments synchronous serial frame format"]
         National_Semiconductor_Microwire: [2, "National Semiconductor Microwire frame format"]
 
+VREG_AND_CHIP_RESET:
+  VREG:
+    _modify:
+      VSEL:
+        description: "Output voltage select for on-chip voltage regulator."
+    VSEL:
+      _replace_enum:
+        Voltage0_80: [5, "0.80V"]
+        Voltage0_85: [6, "0.85V"]
+        Voltage0_90: [7, "0.90V"]
+        Voltage0_95: [8, "0.95V"]
+        Voltage1_00: [9, "1.00V"]
+        Voltage1_05: [10, "1.05V"]
+        Voltage1_10: [11, "1.10V (default)"]
+        Voltage1_15: [12, "1.15V"]
+        Voltage1_20: [13, "1.20V"]
+        Voltage1_25: [14, "1.25V"]
+        Voltage1_30: [15, "1.30V"]
+
 IO_QSPI:
   _cluster:
     "GPIO_QSPI%s":
