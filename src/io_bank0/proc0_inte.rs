@@ -496,7 +496,7 @@ impl W {
         self
     }
 }
-#[doc = "Interrupt Enable for proc%s  
+#[doc = "Interrupt Enable for proc0  
 
 You can [`read`](crate::generic::Reg::read) this register and get [`proc0_inte::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`proc0_inte::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct PROC0_INTE_SPEC;

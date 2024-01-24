@@ -36,35 +36,35 @@ impl RegisterBlock {
     pub fn intr_iter(&self) -> impl Iterator<Item = &INTR> {
         self.intr.iter()
     }
-    #[doc = "0x100..0x110 - Interrupt Enable for proc%s"]
+    #[doc = "0x100..0x110 - Interrupt Enable for proc0"]
     #[inline(always)]
     pub const fn proc0_inte(&self, n: usize) -> &PROC0_INTE {
         &self.proc0_inte[n]
     }
     #[doc = "Iterator for array of:"]
-    #[doc = "0x100..0x110 - Interrupt Enable for proc%s"]
+    #[doc = "0x100..0x110 - Interrupt Enable for proc0"]
     #[inline(always)]
     pub fn proc0_inte_iter(&self) -> impl Iterator<Item = &PROC0_INTE> {
         self.proc0_inte.iter()
     }
-    #[doc = "0x110..0x120 - Interrupt Force for proc%s"]
+    #[doc = "0x110..0x120 - Interrupt Force for proc0"]
     #[inline(always)]
     pub const fn proc0_intf(&self, n: usize) -> &PROC0_INTF {
         &self.proc0_intf[n]
     }
     #[doc = "Iterator for array of:"]
-    #[doc = "0x110..0x120 - Interrupt Force for proc%s"]
+    #[doc = "0x110..0x120 - Interrupt Force for proc0"]
     #[inline(always)]
     pub fn proc0_intf_iter(&self) -> impl Iterator<Item = &PROC0_INTF> {
         self.proc0_intf.iter()
     }
-    #[doc = "0x120..0x130 - Interrupt status after masking &amp; forcing for proc%s"]
+    #[doc = "0x120..0x130 - Interrupt status after masking &amp; forcing for proc0"]
     #[inline(always)]
     pub const fn proc0_ints(&self, n: usize) -> &PROC0_INTS {
         &self.proc0_ints[n]
     }
     #[doc = "Iterator for array of:"]
-    #[doc = "0x120..0x130 - Interrupt status after masking &amp; forcing for proc%s"]
+    #[doc = "0x120..0x130 - Interrupt status after masking &amp; forcing for proc0"]
     #[inline(always)]
     pub fn proc0_ints_iter(&self) -> impl Iterator<Item = &PROC0_INTS> {
         self.proc0_ints.iter()
@@ -150,32 +150,32 @@ module"]
 pub type INTR = crate::Reg<intr::INTR_SPEC>;
 #[doc = "Raw Interrupts"]
 pub mod intr;
-#[doc = "PROC0_INTE (rw) register accessor: Interrupt Enable for proc%s  
+#[doc = "PROC0_INTE (rw) register accessor: Interrupt Enable for proc0  
 
 You can [`read`](crate::generic::Reg::read) this register and get [`proc0_inte::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`proc0_inte::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
 
 For information about available fields see [`mod@proc0_inte`]
 module"]
 pub type PROC0_INTE = crate::Reg<proc0_inte::PROC0_INTE_SPEC>;
-#[doc = "Interrupt Enable for proc%s"]
+#[doc = "Interrupt Enable for proc0"]
 pub mod proc0_inte;
-#[doc = "PROC0_INTF (rw) register accessor: Interrupt Force for proc%s  
+#[doc = "PROC0_INTF (rw) register accessor: Interrupt Force for proc0  
 
 You can [`read`](crate::generic::Reg::read) this register and get [`proc0_intf::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`proc0_intf::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
 
 For information about available fields see [`mod@proc0_intf`]
 module"]
 pub type PROC0_INTF = crate::Reg<proc0_intf::PROC0_INTF_SPEC>;
-#[doc = "Interrupt Force for proc%s"]
+#[doc = "Interrupt Force for proc0"]
 pub mod proc0_intf;
-#[doc = "PROC0_INTS (r) register accessor: Interrupt status after masking &amp; forcing for proc%s  
+#[doc = "PROC0_INTS (r) register accessor: Interrupt status after masking &amp; forcing for proc0  
 
 You can [`read`](crate::generic::Reg::read) this register and get [`proc0_ints::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
 
 For information about available fields see [`mod@proc0_ints`]
 module"]
 pub type PROC0_INTS = crate::Reg<proc0_ints::PROC0_INTS_SPEC>;
-#[doc = "Interrupt status after masking &amp; forcing for proc%s"]
+#[doc = "Interrupt status after masking &amp; forcing for proc0"]
 pub mod proc0_ints;
 #[doc = "PROC1_INTE (rw) register accessor: Interrupt Enable for proc1  
 

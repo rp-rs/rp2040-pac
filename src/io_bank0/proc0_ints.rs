@@ -226,7 +226,7 @@ impl R {
         GPIO7_EDGE_HIGH_R::new(((self.bits >> 31) & 1) != 0)
     }
 }
-#[doc = "Interrupt status after masking &amp; forcing for proc%s  
+#[doc = "Interrupt status after masking &amp; forcing for proc0  
 
 You can [`read`](crate::generic::Reg::read) this register and get [`proc0_ints::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct PROC0_INTS_SPEC;

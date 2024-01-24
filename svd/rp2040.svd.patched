@@ -4276,7 +4276,6 @@
                 <access>read-write</access>
                 <enumeratedValues>
                   <name>FUNCSEL</name>
-                  <usage>read-write</usage>
                   <enumeratedValue>
                     <name>jtag</name>
                     <description>Connect to JTAG peripheral</description>
@@ -4529,7 +4528,7 @@
           <dimIncrement>0x4</dimIncrement>
           <dimIndex>0-3</dimIndex>
           <name>PROC0_INTE%s</name>
-          <description>Interrupt Enable for proc%s</description>
+          <description>Interrupt Enable for proc0</description>
           <addressOffset>0x100</addressOffset>
           <resetValue>0x00000000</resetValue>
           <fields>
@@ -4700,7 +4699,7 @@
           <dimIncrement>0x4</dimIncrement>
           <dimIndex>0-3</dimIndex>
           <name>PROC0_INTF%s</name>
-          <description>Interrupt Force for proc%s</description>
+          <description>Interrupt Force for proc0</description>
           <addressOffset>0x110</addressOffset>
           <resetValue>0x00000000</resetValue>
           <fields>
@@ -4871,7 +4870,7 @@
           <dimIncrement>0x4</dimIncrement>
           <dimIndex>0-3</dimIndex>
           <name>PROC0_INTS%s</name>
-          <description>Interrupt status after masking &amp; forcing for proc%s</description>
+          <description>Interrupt status after masking &amp; forcing for proc0</description>
           <addressOffset>0x120</addressOffset>
           <resetValue>0x00000000</resetValue>
           <fields>
@@ -9905,7 +9904,6 @@
               <access>read-write</access>
               <enumeratedValues>
                 <name>FRF</name>
-                <usage>read-write</usage>
                 <enumeratedValue>
                   <name>Motorola</name>
                   <description>Motorola SPI frame format</description>
@@ -14572,7 +14570,6 @@
               <access>read-write</access>
               <enumeratedValues>
                 <name>VSEL</name>
-                <usage>read-write</usage>
                 <enumeratedValue>
                   <name>Voltage0_80</name>
                   <description>0.80V</description>
@@ -14873,7 +14870,6 @@
                 <access>read-write</access>
                 <enumeratedValues>
                   <name>TREQ_SEL</name>
-                  <usage>read-write</usage>
                   <enumeratedValue>
                     <name>PIO0_TX0</name>
                     <description>Select PIO0's TX FIFO 0 as TREQ</description>
@@ -15242,7 +15238,6 @@
                 <access>read-write</access>
                 <enumeratedValues>
                   <name>TREQ_SEL</name>
-                  <usage>read-write</usage>
                   <enumeratedValue>
                     <name>PIO0_TX0</name>
                     <description>Select PIO0's TX FIFO 0 as TREQ</description>
@@ -15634,7 +15629,6 @@
                 <access>read-write</access>
                 <enumeratedValues>
                   <name>TREQ_SEL</name>
-                  <usage>read-write</usage>
                   <enumeratedValue>
                     <name>PIO0_TX0</name>
                     <description>Select PIO0's TX FIFO 0 as TREQ</description>
@@ -16026,7 +16020,6 @@
                 <access>read-write</access>
                 <enumeratedValues>
                   <name>TREQ_SEL</name>
-                  <usage>read-write</usage>
                   <enumeratedValue>
                     <name>PIO0_TX0</name>
                     <description>Select PIO0's TX FIFO 0 as TREQ</description>
@@ -17681,7 +17674,6 @@
               <access>read-only</access>
               <enumeratedValues>
                 <name>LINE_STATE</name>
-                <usage>read</usage>
                 <enumeratedValue>
                   <name>SE0</name>
                   <description>SE0</description>
