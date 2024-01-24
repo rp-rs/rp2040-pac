@@ -1,167 +1,135 @@
 #[doc = "Register `EP_ABORT` reader"]
-pub struct R(crate::R<EP_ABORT_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<EP_ABORT_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<EP_ABORT_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<EP_ABORT_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<EP_ABORT_SPEC>;
 #[doc = "Register `EP_ABORT` writer"]
-pub struct W(crate::W<EP_ABORT_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<EP_ABORT_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<EP_ABORT_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<EP_ABORT_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<EP_ABORT_SPEC>;
 #[doc = "Field `EP0_IN` reader - "]
 pub type EP0_IN_R = crate::BitReader;
 #[doc = "Field `EP0_IN` writer - "]
-pub type EP0_IN_W<'a, const O: u8> = crate::BitWriter<'a, EP_ABORT_SPEC, O>;
+pub type EP0_IN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `EP0_OUT` reader - "]
 pub type EP0_OUT_R = crate::BitReader;
 #[doc = "Field `EP0_OUT` writer - "]
-pub type EP0_OUT_W<'a, const O: u8> = crate::BitWriter<'a, EP_ABORT_SPEC, O>;
+pub type EP0_OUT_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `EP1_IN` reader - "]
 pub type EP1_IN_R = crate::BitReader;
 #[doc = "Field `EP1_IN` writer - "]
-pub type EP1_IN_W<'a, const O: u8> = crate::BitWriter<'a, EP_ABORT_SPEC, O>;
+pub type EP1_IN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `EP1_OUT` reader - "]
 pub type EP1_OUT_R = crate::BitReader;
 #[doc = "Field `EP1_OUT` writer - "]
-pub type EP1_OUT_W<'a, const O: u8> = crate::BitWriter<'a, EP_ABORT_SPEC, O>;
+pub type EP1_OUT_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `EP2_IN` reader - "]
 pub type EP2_IN_R = crate::BitReader;
 #[doc = "Field `EP2_IN` writer - "]
-pub type EP2_IN_W<'a, const O: u8> = crate::BitWriter<'a, EP_ABORT_SPEC, O>;
+pub type EP2_IN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `EP2_OUT` reader - "]
 pub type EP2_OUT_R = crate::BitReader;
 #[doc = "Field `EP2_OUT` writer - "]
-pub type EP2_OUT_W<'a, const O: u8> = crate::BitWriter<'a, EP_ABORT_SPEC, O>;
+pub type EP2_OUT_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `EP3_IN` reader - "]
 pub type EP3_IN_R = crate::BitReader;
 #[doc = "Field `EP3_IN` writer - "]
-pub type EP3_IN_W<'a, const O: u8> = crate::BitWriter<'a, EP_ABORT_SPEC, O>;
+pub type EP3_IN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `EP3_OUT` reader - "]
 pub type EP3_OUT_R = crate::BitReader;
 #[doc = "Field `EP3_OUT` writer - "]
-pub type EP3_OUT_W<'a, const O: u8> = crate::BitWriter<'a, EP_ABORT_SPEC, O>;
+pub type EP3_OUT_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `EP4_IN` reader - "]
 pub type EP4_IN_R = crate::BitReader;
 #[doc = "Field `EP4_IN` writer - "]
-pub type EP4_IN_W<'a, const O: u8> = crate::BitWriter<'a, EP_ABORT_SPEC, O>;
+pub type EP4_IN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `EP4_OUT` reader - "]
 pub type EP4_OUT_R = crate::BitReader;
 #[doc = "Field `EP4_OUT` writer - "]
-pub type EP4_OUT_W<'a, const O: u8> = crate::BitWriter<'a, EP_ABORT_SPEC, O>;
+pub type EP4_OUT_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `EP5_IN` reader - "]
 pub type EP5_IN_R = crate::BitReader;
 #[doc = "Field `EP5_IN` writer - "]
-pub type EP5_IN_W<'a, const O: u8> = crate::BitWriter<'a, EP_ABORT_SPEC, O>;
+pub type EP5_IN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `EP5_OUT` reader - "]
 pub type EP5_OUT_R = crate::BitReader;
 #[doc = "Field `EP5_OUT` writer - "]
-pub type EP5_OUT_W<'a, const O: u8> = crate::BitWriter<'a, EP_ABORT_SPEC, O>;
+pub type EP5_OUT_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `EP6_IN` reader - "]
 pub type EP6_IN_R = crate::BitReader;
 #[doc = "Field `EP6_IN` writer - "]
-pub type EP6_IN_W<'a, const O: u8> = crate::BitWriter<'a, EP_ABORT_SPEC, O>;
+pub type EP6_IN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `EP6_OUT` reader - "]
 pub type EP6_OUT_R = crate::BitReader;
 #[doc = "Field `EP6_OUT` writer - "]
-pub type EP6_OUT_W<'a, const O: u8> = crate::BitWriter<'a, EP_ABORT_SPEC, O>;
+pub type EP6_OUT_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `EP7_IN` reader - "]
 pub type EP7_IN_R = crate::BitReader;
 #[doc = "Field `EP7_IN` writer - "]
-pub type EP7_IN_W<'a, const O: u8> = crate::BitWriter<'a, EP_ABORT_SPEC, O>;
+pub type EP7_IN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `EP7_OUT` reader - "]
 pub type EP7_OUT_R = crate::BitReader;
 #[doc = "Field `EP7_OUT` writer - "]
-pub type EP7_OUT_W<'a, const O: u8> = crate::BitWriter<'a, EP_ABORT_SPEC, O>;
+pub type EP7_OUT_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `EP8_IN` reader - "]
 pub type EP8_IN_R = crate::BitReader;
 #[doc = "Field `EP8_IN` writer - "]
-pub type EP8_IN_W<'a, const O: u8> = crate::BitWriter<'a, EP_ABORT_SPEC, O>;
+pub type EP8_IN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `EP8_OUT` reader - "]
 pub type EP8_OUT_R = crate::BitReader;
 #[doc = "Field `EP8_OUT` writer - "]
-pub type EP8_OUT_W<'a, const O: u8> = crate::BitWriter<'a, EP_ABORT_SPEC, O>;
+pub type EP8_OUT_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `EP9_IN` reader - "]
 pub type EP9_IN_R = crate::BitReader;
 #[doc = "Field `EP9_IN` writer - "]
-pub type EP9_IN_W<'a, const O: u8> = crate::BitWriter<'a, EP_ABORT_SPEC, O>;
+pub type EP9_IN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `EP9_OUT` reader - "]
 pub type EP9_OUT_R = crate::BitReader;
 #[doc = "Field `EP9_OUT` writer - "]
-pub type EP9_OUT_W<'a, const O: u8> = crate::BitWriter<'a, EP_ABORT_SPEC, O>;
+pub type EP9_OUT_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `EP10_IN` reader - "]
 pub type EP10_IN_R = crate::BitReader;
 #[doc = "Field `EP10_IN` writer - "]
-pub type EP10_IN_W<'a, const O: u8> = crate::BitWriter<'a, EP_ABORT_SPEC, O>;
+pub type EP10_IN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `EP10_OUT` reader - "]
 pub type EP10_OUT_R = crate::BitReader;
 #[doc = "Field `EP10_OUT` writer - "]
-pub type EP10_OUT_W<'a, const O: u8> = crate::BitWriter<'a, EP_ABORT_SPEC, O>;
+pub type EP10_OUT_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `EP11_IN` reader - "]
 pub type EP11_IN_R = crate::BitReader;
 #[doc = "Field `EP11_IN` writer - "]
-pub type EP11_IN_W<'a, const O: u8> = crate::BitWriter<'a, EP_ABORT_SPEC, O>;
+pub type EP11_IN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `EP11_OUT` reader - "]
 pub type EP11_OUT_R = crate::BitReader;
 #[doc = "Field `EP11_OUT` writer - "]
-pub type EP11_OUT_W<'a, const O: u8> = crate::BitWriter<'a, EP_ABORT_SPEC, O>;
+pub type EP11_OUT_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `EP12_IN` reader - "]
 pub type EP12_IN_R = crate::BitReader;
 #[doc = "Field `EP12_IN` writer - "]
-pub type EP12_IN_W<'a, const O: u8> = crate::BitWriter<'a, EP_ABORT_SPEC, O>;
+pub type EP12_IN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `EP12_OUT` reader - "]
 pub type EP12_OUT_R = crate::BitReader;
 #[doc = "Field `EP12_OUT` writer - "]
-pub type EP12_OUT_W<'a, const O: u8> = crate::BitWriter<'a, EP_ABORT_SPEC, O>;
+pub type EP12_OUT_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `EP13_IN` reader - "]
 pub type EP13_IN_R = crate::BitReader;
 #[doc = "Field `EP13_IN` writer - "]
-pub type EP13_IN_W<'a, const O: u8> = crate::BitWriter<'a, EP_ABORT_SPEC, O>;
+pub type EP13_IN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `EP13_OUT` reader - "]
 pub type EP13_OUT_R = crate::BitReader;
 #[doc = "Field `EP13_OUT` writer - "]
-pub type EP13_OUT_W<'a, const O: u8> = crate::BitWriter<'a, EP_ABORT_SPEC, O>;
+pub type EP13_OUT_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `EP14_IN` reader - "]
 pub type EP14_IN_R = crate::BitReader;
 #[doc = "Field `EP14_IN` writer - "]
-pub type EP14_IN_W<'a, const O: u8> = crate::BitWriter<'a, EP_ABORT_SPEC, O>;
+pub type EP14_IN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `EP14_OUT` reader - "]
 pub type EP14_OUT_R = crate::BitReader;
 #[doc = "Field `EP14_OUT` writer - "]
-pub type EP14_OUT_W<'a, const O: u8> = crate::BitWriter<'a, EP_ABORT_SPEC, O>;
+pub type EP14_OUT_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `EP15_IN` reader - "]
 pub type EP15_IN_R = crate::BitReader;
 #[doc = "Field `EP15_IN` writer - "]
-pub type EP15_IN_W<'a, const O: u8> = crate::BitWriter<'a, EP_ABORT_SPEC, O>;
+pub type EP15_IN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `EP15_OUT` reader - "]
 pub type EP15_OUT_R = crate::BitReader;
 #[doc = "Field `EP15_OUT` writer - "]
-pub type EP15_OUT_W<'a, const O: u8> = crate::BitWriter<'a, EP_ABORT_SPEC, O>;
+pub type EP15_OUT_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0"]
     #[inline(always)]
@@ -328,222 +296,221 @@ impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
     #[must_use]
-    pub fn ep0_in(&mut self) -> EP0_IN_W<0> {
-        EP0_IN_W::new(self)
+    pub fn ep0_in(&mut self) -> EP0_IN_W<EP_ABORT_SPEC> {
+        EP0_IN_W::new(self, 0)
     }
     #[doc = "Bit 1"]
     #[inline(always)]
     #[must_use]
-    pub fn ep0_out(&mut self) -> EP0_OUT_W<1> {
-        EP0_OUT_W::new(self)
+    pub fn ep0_out(&mut self) -> EP0_OUT_W<EP_ABORT_SPEC> {
+        EP0_OUT_W::new(self, 1)
     }
     #[doc = "Bit 2"]
     #[inline(always)]
     #[must_use]
-    pub fn ep1_in(&mut self) -> EP1_IN_W<2> {
-        EP1_IN_W::new(self)
+    pub fn ep1_in(&mut self) -> EP1_IN_W<EP_ABORT_SPEC> {
+        EP1_IN_W::new(self, 2)
     }
     #[doc = "Bit 3"]
     #[inline(always)]
     #[must_use]
-    pub fn ep1_out(&mut self) -> EP1_OUT_W<3> {
-        EP1_OUT_W::new(self)
+    pub fn ep1_out(&mut self) -> EP1_OUT_W<EP_ABORT_SPEC> {
+        EP1_OUT_W::new(self, 3)
     }
     #[doc = "Bit 4"]
     #[inline(always)]
     #[must_use]
-    pub fn ep2_in(&mut self) -> EP2_IN_W<4> {
-        EP2_IN_W::new(self)
+    pub fn ep2_in(&mut self) -> EP2_IN_W<EP_ABORT_SPEC> {
+        EP2_IN_W::new(self, 4)
     }
     #[doc = "Bit 5"]
     #[inline(always)]
     #[must_use]
-    pub fn ep2_out(&mut self) -> EP2_OUT_W<5> {
-        EP2_OUT_W::new(self)
+    pub fn ep2_out(&mut self) -> EP2_OUT_W<EP_ABORT_SPEC> {
+        EP2_OUT_W::new(self, 5)
     }
     #[doc = "Bit 6"]
     #[inline(always)]
     #[must_use]
-    pub fn ep3_in(&mut self) -> EP3_IN_W<6> {
-        EP3_IN_W::new(self)
+    pub fn ep3_in(&mut self) -> EP3_IN_W<EP_ABORT_SPEC> {
+        EP3_IN_W::new(self, 6)
     }
     #[doc = "Bit 7"]
     #[inline(always)]
     #[must_use]
-    pub fn ep3_out(&mut self) -> EP3_OUT_W<7> {
-        EP3_OUT_W::new(self)
+    pub fn ep3_out(&mut self) -> EP3_OUT_W<EP_ABORT_SPEC> {
+        EP3_OUT_W::new(self, 7)
     }
     #[doc = "Bit 8"]
     #[inline(always)]
     #[must_use]
-    pub fn ep4_in(&mut self) -> EP4_IN_W<8> {
-        EP4_IN_W::new(self)
+    pub fn ep4_in(&mut self) -> EP4_IN_W<EP_ABORT_SPEC> {
+        EP4_IN_W::new(self, 8)
     }
     #[doc = "Bit 9"]
     #[inline(always)]
     #[must_use]
-    pub fn ep4_out(&mut self) -> EP4_OUT_W<9> {
-        EP4_OUT_W::new(self)
+    pub fn ep4_out(&mut self) -> EP4_OUT_W<EP_ABORT_SPEC> {
+        EP4_OUT_W::new(self, 9)
     }
     #[doc = "Bit 10"]
     #[inline(always)]
     #[must_use]
-    pub fn ep5_in(&mut self) -> EP5_IN_W<10> {
-        EP5_IN_W::new(self)
+    pub fn ep5_in(&mut self) -> EP5_IN_W<EP_ABORT_SPEC> {
+        EP5_IN_W::new(self, 10)
     }
     #[doc = "Bit 11"]
     #[inline(always)]
     #[must_use]
-    pub fn ep5_out(&mut self) -> EP5_OUT_W<11> {
-        EP5_OUT_W::new(self)
+    pub fn ep5_out(&mut self) -> EP5_OUT_W<EP_ABORT_SPEC> {
+        EP5_OUT_W::new(self, 11)
     }
     #[doc = "Bit 12"]
     #[inline(always)]
     #[must_use]
-    pub fn ep6_in(&mut self) -> EP6_IN_W<12> {
-        EP6_IN_W::new(self)
+    pub fn ep6_in(&mut self) -> EP6_IN_W<EP_ABORT_SPEC> {
+        EP6_IN_W::new(self, 12)
     }
     #[doc = "Bit 13"]
     #[inline(always)]
     #[must_use]
-    pub fn ep6_out(&mut self) -> EP6_OUT_W<13> {
-        EP6_OUT_W::new(self)
+    pub fn ep6_out(&mut self) -> EP6_OUT_W<EP_ABORT_SPEC> {
+        EP6_OUT_W::new(self, 13)
     }
     #[doc = "Bit 14"]
     #[inline(always)]
     #[must_use]
-    pub fn ep7_in(&mut self) -> EP7_IN_W<14> {
-        EP7_IN_W::new(self)
+    pub fn ep7_in(&mut self) -> EP7_IN_W<EP_ABORT_SPEC> {
+        EP7_IN_W::new(self, 14)
     }
     #[doc = "Bit 15"]
     #[inline(always)]
     #[must_use]
-    pub fn ep7_out(&mut self) -> EP7_OUT_W<15> {
-        EP7_OUT_W::new(self)
+    pub fn ep7_out(&mut self) -> EP7_OUT_W<EP_ABORT_SPEC> {
+        EP7_OUT_W::new(self, 15)
     }
     #[doc = "Bit 16"]
     #[inline(always)]
     #[must_use]
-    pub fn ep8_in(&mut self) -> EP8_IN_W<16> {
-        EP8_IN_W::new(self)
+    pub fn ep8_in(&mut self) -> EP8_IN_W<EP_ABORT_SPEC> {
+        EP8_IN_W::new(self, 16)
     }
     #[doc = "Bit 17"]
     #[inline(always)]
     #[must_use]
-    pub fn ep8_out(&mut self) -> EP8_OUT_W<17> {
-        EP8_OUT_W::new(self)
+    pub fn ep8_out(&mut self) -> EP8_OUT_W<EP_ABORT_SPEC> {
+        EP8_OUT_W::new(self, 17)
     }
     #[doc = "Bit 18"]
     #[inline(always)]
     #[must_use]
-    pub fn ep9_in(&mut self) -> EP9_IN_W<18> {
-        EP9_IN_W::new(self)
+    pub fn ep9_in(&mut self) -> EP9_IN_W<EP_ABORT_SPEC> {
+        EP9_IN_W::new(self, 18)
     }
     #[doc = "Bit 19"]
     #[inline(always)]
     #[must_use]
-    pub fn ep9_out(&mut self) -> EP9_OUT_W<19> {
-        EP9_OUT_W::new(self)
+    pub fn ep9_out(&mut self) -> EP9_OUT_W<EP_ABORT_SPEC> {
+        EP9_OUT_W::new(self, 19)
     }
     #[doc = "Bit 20"]
     #[inline(always)]
     #[must_use]
-    pub fn ep10_in(&mut self) -> EP10_IN_W<20> {
-        EP10_IN_W::new(self)
+    pub fn ep10_in(&mut self) -> EP10_IN_W<EP_ABORT_SPEC> {
+        EP10_IN_W::new(self, 20)
     }
     #[doc = "Bit 21"]
     #[inline(always)]
     #[must_use]
-    pub fn ep10_out(&mut self) -> EP10_OUT_W<21> {
-        EP10_OUT_W::new(self)
+    pub fn ep10_out(&mut self) -> EP10_OUT_W<EP_ABORT_SPEC> {
+        EP10_OUT_W::new(self, 21)
     }
     #[doc = "Bit 22"]
     #[inline(always)]
     #[must_use]
-    pub fn ep11_in(&mut self) -> EP11_IN_W<22> {
-        EP11_IN_W::new(self)
+    pub fn ep11_in(&mut self) -> EP11_IN_W<EP_ABORT_SPEC> {
+        EP11_IN_W::new(self, 22)
     }
     #[doc = "Bit 23"]
     #[inline(always)]
     #[must_use]
-    pub fn ep11_out(&mut self) -> EP11_OUT_W<23> {
-        EP11_OUT_W::new(self)
+    pub fn ep11_out(&mut self) -> EP11_OUT_W<EP_ABORT_SPEC> {
+        EP11_OUT_W::new(self, 23)
     }
     #[doc = "Bit 24"]
     #[inline(always)]
     #[must_use]
-    pub fn ep12_in(&mut self) -> EP12_IN_W<24> {
-        EP12_IN_W::new(self)
+    pub fn ep12_in(&mut self) -> EP12_IN_W<EP_ABORT_SPEC> {
+        EP12_IN_W::new(self, 24)
     }
     #[doc = "Bit 25"]
     #[inline(always)]
     #[must_use]
-    pub fn ep12_out(&mut self) -> EP12_OUT_W<25> {
-        EP12_OUT_W::new(self)
+    pub fn ep12_out(&mut self) -> EP12_OUT_W<EP_ABORT_SPEC> {
+        EP12_OUT_W::new(self, 25)
     }
     #[doc = "Bit 26"]
     #[inline(always)]
     #[must_use]
-    pub fn ep13_in(&mut self) -> EP13_IN_W<26> {
-        EP13_IN_W::new(self)
+    pub fn ep13_in(&mut self) -> EP13_IN_W<EP_ABORT_SPEC> {
+        EP13_IN_W::new(self, 26)
     }
     #[doc = "Bit 27"]
     #[inline(always)]
     #[must_use]
-    pub fn ep13_out(&mut self) -> EP13_OUT_W<27> {
-        EP13_OUT_W::new(self)
+    pub fn ep13_out(&mut self) -> EP13_OUT_W<EP_ABORT_SPEC> {
+        EP13_OUT_W::new(self, 27)
     }
     #[doc = "Bit 28"]
     #[inline(always)]
     #[must_use]
-    pub fn ep14_in(&mut self) -> EP14_IN_W<28> {
-        EP14_IN_W::new(self)
+    pub fn ep14_in(&mut self) -> EP14_IN_W<EP_ABORT_SPEC> {
+        EP14_IN_W::new(self, 28)
     }
     #[doc = "Bit 29"]
     #[inline(always)]
     #[must_use]
-    pub fn ep14_out(&mut self) -> EP14_OUT_W<29> {
-        EP14_OUT_W::new(self)
+    pub fn ep14_out(&mut self) -> EP14_OUT_W<EP_ABORT_SPEC> {
+        EP14_OUT_W::new(self, 29)
     }
     #[doc = "Bit 30"]
     #[inline(always)]
     #[must_use]
-    pub fn ep15_in(&mut self) -> EP15_IN_W<30> {
-        EP15_IN_W::new(self)
+    pub fn ep15_in(&mut self) -> EP15_IN_W<EP_ABORT_SPEC> {
+        EP15_IN_W::new(self, 30)
     }
     #[doc = "Bit 31"]
     #[inline(always)]
     #[must_use]
-    pub fn ep15_out(&mut self) -> EP15_OUT_W<31> {
-        EP15_OUT_W::new(self)
+    pub fn ep15_out(&mut self) -> EP15_OUT_W<EP_ABORT_SPEC> {
+        EP15_OUT_W::new(self, 31)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
 #[doc = "Device only: Can be set to ignore the buffer control register for this endpoint in case you would like to revoke a buffer. A NAK will be sent for every access to the endpoint until this bit is cleared. A corresponding bit in `EP_ABORT_DONE` is set when it is safe to modify the buffer control register.  
 
-This register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
-
-For information about available fields see [ep_abort](index.html) module"]
+You can [`read`](crate::generic::Reg::read) this register and get [`ep_abort::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`ep_abort::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct EP_ABORT_SPEC;
 impl crate::RegisterSpec for EP_ABORT_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [ep_abort::R](R) reader structure"]
-impl crate::Readable for EP_ABORT_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [ep_abort::W](W) writer structure"]
+#[doc = "`read()` method returns [`ep_abort::R`](R) reader structure"]
+impl crate::Readable for EP_ABORT_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`ep_abort::W`](W) writer structure"]
 impl crate::Writable for EP_ABORT_SPEC {
-    type Writer = W;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets EP_ABORT to value 0"]
 impl crate::Resettable for EP_ABORT_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

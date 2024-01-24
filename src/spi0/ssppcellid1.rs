@@ -1,18 +1,5 @@
 #[doc = "Register `SSPPCELLID1` reader"]
-pub struct R(crate::R<SSPPCELLID1_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<SSPPCELLID1_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<SSPPCELLID1_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<SSPPCELLID1_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<SSPPCELLID1_SPEC>;
 #[doc = "Field `SSPPCELLID1` reader - These bits read back as 0xF0"]
 pub type SSPPCELLID1_R = crate::FieldReader;
 impl R {
@@ -24,18 +11,14 @@ impl R {
 }
 #[doc = "PrimeCell identification registers, SSPPCellID0-3 on page 3-16  
 
-This register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
-
-For information about available fields see [ssppcellid1](index.html) module"]
+You can [`read`](crate::generic::Reg::read) this register and get [`ssppcellid1::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct SSPPCELLID1_SPEC;
 impl crate::RegisterSpec for SSPPCELLID1_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [ssppcellid1::R](R) reader structure"]
-impl crate::Readable for SSPPCELLID1_SPEC {
-    type Reader = R;
-}
+#[doc = "`read()` method returns [`ssppcellid1::R`](R) reader structure"]
+impl crate::Readable for SSPPCELLID1_SPEC {}
 #[doc = "`reset()` method sets SSPPCELLID1 to value 0xf0"]
 impl crate::Resettable for SSPPCELLID1_SPEC {
-    const RESET_VALUE: Self::Ux = 0xf0;
+    const RESET_VALUE: u32 = 0xf0;
 }

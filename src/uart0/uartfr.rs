@@ -1,18 +1,5 @@
 #[doc = "Register `UARTFR` reader"]
-pub struct R(crate::R<UARTFR_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<UARTFR_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<UARTFR_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<UARTFR_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<UARTFR_SPEC>;
 #[doc = "Field `CTS` reader - Clear to send. This bit is the complement of the UART clear to send, nUARTCTS, modem status input. That is, the bit is 1 when nUARTCTS is LOW."]
 pub type CTS_R = crate::BitReader;
 #[doc = "Field `DSR` reader - Data set ready. This bit is the complement of the UART data set ready, nUARTDSR, modem status input. That is, the bit is 1 when nUARTDSR is LOW."]
@@ -80,18 +67,14 @@ impl R {
 }
 #[doc = "Flag Register, UARTFR  
 
-This register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
-
-For information about available fields see [uartfr](index.html) module"]
+You can [`read`](crate::generic::Reg::read) this register and get [`uartfr::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct UARTFR_SPEC;
 impl crate::RegisterSpec for UARTFR_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [uartfr::R](R) reader structure"]
-impl crate::Readable for UARTFR_SPEC {
-    type Reader = R;
-}
+#[doc = "`read()` method returns [`uartfr::R`](R) reader structure"]
+impl crate::Readable for UARTFR_SPEC {}
 #[doc = "`reset()` method sets UARTFR to value 0x90"]
 impl crate::Resettable for UARTFR_SPEC {
-    const RESET_VALUE: Self::Ux = 0x90;
+    const RESET_VALUE: u32 = 0x90;
 }

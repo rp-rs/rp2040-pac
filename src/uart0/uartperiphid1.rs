@@ -1,18 +1,5 @@
 #[doc = "Register `UARTPERIPHID1` reader"]
-pub struct R(crate::R<UARTPERIPHID1_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<UARTPERIPHID1_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<UARTPERIPHID1_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<UARTPERIPHID1_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<UARTPERIPHID1_SPEC>;
 #[doc = "Field `PARTNUMBER1` reader - These bits read back as 0x0"]
 pub type PARTNUMBER1_R = crate::FieldReader;
 #[doc = "Field `DESIGNER0` reader - These bits read back as 0x1"]
@@ -31,18 +18,14 @@ impl R {
 }
 #[doc = "UARTPeriphID1 Register  
 
-This register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
-
-For information about available fields see [uartperiphid1](index.html) module"]
+You can [`read`](crate::generic::Reg::read) this register and get [`uartperiphid1::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct UARTPERIPHID1_SPEC;
 impl crate::RegisterSpec for UARTPERIPHID1_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [uartperiphid1::R](R) reader structure"]
-impl crate::Readable for UARTPERIPHID1_SPEC {
-    type Reader = R;
-}
+#[doc = "`read()` method returns [`uartperiphid1::R`](R) reader structure"]
+impl crate::Readable for UARTPERIPHID1_SPEC {}
 #[doc = "`reset()` method sets UARTPERIPHID1 to value 0x10"]
 impl crate::Resettable for UARTPERIPHID1_SPEC {
-    const RESET_VALUE: Self::Ux = 0x10;
+    const RESET_VALUE: u32 = 0x10;
 }

@@ -1,39 +1,7 @@
 #[doc = "Register `IC_FS_SCL_HCNT` reader"]
-pub struct R(crate::R<IC_FS_SCL_HCNT_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<IC_FS_SCL_HCNT_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<IC_FS_SCL_HCNT_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<IC_FS_SCL_HCNT_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<IC_FS_SCL_HCNT_SPEC>;
 #[doc = "Register `IC_FS_SCL_HCNT` writer"]
-pub struct W(crate::W<IC_FS_SCL_HCNT_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<IC_FS_SCL_HCNT_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<IC_FS_SCL_HCNT_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<IC_FS_SCL_HCNT_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<IC_FS_SCL_HCNT_SPEC>;
 #[doc = "Field `IC_FS_SCL_HCNT` reader - This register must be set before any I2C bus transaction can take place to ensure proper I/O timing. This register sets the SCL clock high-period count for fast mode or fast mode plus. It is used in high-speed mode to send the Master Code and START BYTE or General CALL. For more information, refer to 'IC_CLK Frequency Configuration'.  
 
  This register goes away and becomes read-only returning 0s if IC_MAX_SPEED_MODE = standard. This register can be written only when the I2C interface is disabled, which corresponds to the IC_ENABLE\\[0\\]
@@ -47,8 +15,7 @@ pub type IC_FS_SCL_HCNT_R = crate::FieldReader<u16>;
 register being set to 0. Writes at other times have no effect.  
 
  The minimum valid value is 6; hardware prevents values less than this being written, and if attempted results in 6 being set. For designs with APB_DATA_WIDTH == 8 the order of programming is important to ensure the correct operation of the DW_apb_i2c. The lower byte must be programmed first. Then the upper byte is programmed."]
-pub type IC_FS_SCL_HCNT_W<'a, const O: u8> =
-    crate::FieldWriter<'a, IC_FS_SCL_HCNT_SPEC, 16, O, u16>;
+pub type IC_FS_SCL_HCNT_W<'a, REG> = crate::FieldWriter<'a, REG, 16, u16>;
 impl R {
     #[doc = "Bits 0:15 - This register must be set before any I2C bus transaction can take place to ensure proper I/O timing. This register sets the SCL clock high-period count for fast mode or fast mode plus. It is used in high-speed mode to send the Master Code and START BYTE or General CALL. For more information, refer to 'IC_CLK Frequency Configuration'.  
 
@@ -70,36 +37,35 @@ register being set to 0. Writes at other times have no effect.
  The minimum valid value is 6; hardware prevents values less than this being written, and if attempted results in 6 being set. For designs with APB_DATA_WIDTH == 8 the order of programming is important to ensure the correct operation of the DW_apb_i2c. The lower byte must be programmed first. Then the upper byte is programmed."]
     #[inline(always)]
     #[must_use]
-    pub fn ic_fs_scl_hcnt(&mut self) -> IC_FS_SCL_HCNT_W<0> {
-        IC_FS_SCL_HCNT_W::new(self)
+    pub fn ic_fs_scl_hcnt(&mut self) -> IC_FS_SCL_HCNT_W<IC_FS_SCL_HCNT_SPEC> {
+        IC_FS_SCL_HCNT_W::new(self, 0)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
 #[doc = "Fast Mode or Fast Mode Plus I2C Clock SCL High Count Register  
 
-This register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
-
-For information about available fields see [ic_fs_scl_hcnt](index.html) module"]
+You can [`read`](crate::generic::Reg::read) this register and get [`ic_fs_scl_hcnt::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`ic_fs_scl_hcnt::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct IC_FS_SCL_HCNT_SPEC;
 impl crate::RegisterSpec for IC_FS_SCL_HCNT_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [ic_fs_scl_hcnt::R](R) reader structure"]
-impl crate::Readable for IC_FS_SCL_HCNT_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [ic_fs_scl_hcnt::W](W) writer structure"]
+#[doc = "`read()` method returns [`ic_fs_scl_hcnt::R`](R) reader structure"]
+impl crate::Readable for IC_FS_SCL_HCNT_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`ic_fs_scl_hcnt::W`](W) writer structure"]
 impl crate::Writable for IC_FS_SCL_HCNT_SPEC {
-    type Writer = W;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets IC_FS_SCL_HCNT to value 0x06"]
 impl crate::Resettable for IC_FS_SCL_HCNT_SPEC {
-    const RESET_VALUE: Self::Ux = 0x06;
+    const RESET_VALUE: u32 = 0x06;
 }

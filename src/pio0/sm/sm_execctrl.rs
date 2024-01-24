@@ -1,43 +1,11 @@
 #[doc = "Register `SM_EXECCTRL` reader"]
-pub struct R(crate::R<SM_EXECCTRL_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<SM_EXECCTRL_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<SM_EXECCTRL_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<SM_EXECCTRL_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<SM_EXECCTRL_SPEC>;
 #[doc = "Register `SM_EXECCTRL` writer"]
-pub struct W(crate::W<SM_EXECCTRL_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<SM_EXECCTRL_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<SM_EXECCTRL_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<SM_EXECCTRL_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<SM_EXECCTRL_SPEC>;
 #[doc = "Field `STATUS_N` reader - Comparison level for the MOV x, STATUS instruction"]
 pub type STATUS_N_R = crate::FieldReader;
 #[doc = "Field `STATUS_N` writer - Comparison level for the MOV x, STATUS instruction"]
-pub type STATUS_N_W<'a, const O: u8> = crate::FieldWriter<'a, SM_EXECCTRL_SPEC, 4, O>;
+pub type STATUS_N_W<'a, REG> = crate::FieldWriter<'a, REG, 4>;
 #[doc = "Field `STATUS_SEL` reader - Comparison used for the MOV x, STATUS instruction."]
 pub type STATUS_SEL_R = crate::BitReader<STATUS_SEL_A>;
 #[doc = "Comparison used for the MOV x, STATUS instruction.  
@@ -59,51 +27,54 @@ impl From<STATUS_SEL_A> for bool {
 impl STATUS_SEL_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> STATUS_SEL_A {
+    pub const fn variant(&self) -> STATUS_SEL_A {
         match self.bits {
             false => STATUS_SEL_A::TXLEVEL,
             true => STATUS_SEL_A::RXLEVEL,
         }
     }
-    #[doc = "Checks if the value of the field is `TXLEVEL`"]
+    #[doc = "All-ones if TX FIFO level &lt; N, otherwise all-zeroes"]
     #[inline(always)]
     pub fn is_txlevel(&self) -> bool {
         *self == STATUS_SEL_A::TXLEVEL
     }
-    #[doc = "Checks if the value of the field is `RXLEVEL`"]
+    #[doc = "All-ones if RX FIFO level &lt; N, otherwise all-zeroes"]
     #[inline(always)]
     pub fn is_rxlevel(&self) -> bool {
         *self == STATUS_SEL_A::RXLEVEL
     }
 }
 #[doc = "Field `STATUS_SEL` writer - Comparison used for the MOV x, STATUS instruction."]
-pub type STATUS_SEL_W<'a, const O: u8> = crate::BitWriter<'a, SM_EXECCTRL_SPEC, O, STATUS_SEL_A>;
-impl<'a, const O: u8> STATUS_SEL_W<'a, O> {
+pub type STATUS_SEL_W<'a, REG> = crate::BitWriter<'a, REG, STATUS_SEL_A>;
+impl<'a, REG> STATUS_SEL_W<'a, REG>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
     #[doc = "All-ones if TX FIFO level &lt; N, otherwise all-zeroes"]
     #[inline(always)]
-    pub fn txlevel(self) -> &'a mut W {
+    pub fn txlevel(self) -> &'a mut crate::W<REG> {
         self.variant(STATUS_SEL_A::TXLEVEL)
     }
     #[doc = "All-ones if RX FIFO level &lt; N, otherwise all-zeroes"]
     #[inline(always)]
-    pub fn rxlevel(self) -> &'a mut W {
+    pub fn rxlevel(self) -> &'a mut crate::W<REG> {
         self.variant(STATUS_SEL_A::RXLEVEL)
     }
 }
 #[doc = "Field `WRAP_BOTTOM` reader - After reaching wrap_top, execution is wrapped to this address."]
 pub type WRAP_BOTTOM_R = crate::FieldReader;
 #[doc = "Field `WRAP_BOTTOM` writer - After reaching wrap_top, execution is wrapped to this address."]
-pub type WRAP_BOTTOM_W<'a, const O: u8> = crate::FieldWriter<'a, SM_EXECCTRL_SPEC, 5, O>;
+pub type WRAP_BOTTOM_W<'a, REG> = crate::FieldWriter<'a, REG, 5>;
 #[doc = "Field `WRAP_TOP` reader - After reaching this address, execution is wrapped to wrap_bottom.  
  If the instruction is a jump, and the jump condition is true, the jump takes priority."]
 pub type WRAP_TOP_R = crate::FieldReader;
 #[doc = "Field `WRAP_TOP` writer - After reaching this address, execution is wrapped to wrap_bottom.  
  If the instruction is a jump, and the jump condition is true, the jump takes priority."]
-pub type WRAP_TOP_W<'a, const O: u8> = crate::FieldWriter<'a, SM_EXECCTRL_SPEC, 5, O>;
+pub type WRAP_TOP_W<'a, REG> = crate::FieldWriter<'a, REG, 5>;
 #[doc = "Field `OUT_STICKY` reader - Continuously assert the most recent OUT/SET to the pins"]
 pub type OUT_STICKY_R = crate::BitReader;
 #[doc = "Field `OUT_STICKY` writer - Continuously assert the most recent OUT/SET to the pins"]
-pub type OUT_STICKY_W<'a, const O: u8> = crate::BitWriter<'a, SM_EXECCTRL_SPEC, O>;
+pub type OUT_STICKY_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `INLINE_OUT_EN` reader - If 1, use a bit of OUT data as an auxiliary write enable  
  When used in conjunction with OUT_STICKY, writes with an enable of 0 will  
  deassert the latest pin write. This can create useful masking/override behaviour  
@@ -113,23 +84,23 @@ pub type INLINE_OUT_EN_R = crate::BitReader;
  When used in conjunction with OUT_STICKY, writes with an enable of 0 will  
  deassert the latest pin write. This can create useful masking/override behaviour  
  due to the priority ordering of state machine pin writes (SM0 &lt; SM1 &lt; ...)"]
-pub type INLINE_OUT_EN_W<'a, const O: u8> = crate::BitWriter<'a, SM_EXECCTRL_SPEC, O>;
+pub type INLINE_OUT_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `OUT_EN_SEL` reader - Which data bit to use for inline OUT enable"]
 pub type OUT_EN_SEL_R = crate::FieldReader;
 #[doc = "Field `OUT_EN_SEL` writer - Which data bit to use for inline OUT enable"]
-pub type OUT_EN_SEL_W<'a, const O: u8> = crate::FieldWriter<'a, SM_EXECCTRL_SPEC, 5, O>;
+pub type OUT_EN_SEL_W<'a, REG> = crate::FieldWriter<'a, REG, 5>;
 #[doc = "Field `JMP_PIN` reader - The GPIO number to use as condition for JMP PIN. Unaffected by input mapping."]
 pub type JMP_PIN_R = crate::FieldReader;
 #[doc = "Field `JMP_PIN` writer - The GPIO number to use as condition for JMP PIN. Unaffected by input mapping."]
-pub type JMP_PIN_W<'a, const O: u8> = crate::FieldWriter<'a, SM_EXECCTRL_SPEC, 5, O>;
+pub type JMP_PIN_W<'a, REG> = crate::FieldWriter<'a, REG, 5>;
 #[doc = "Field `SIDE_PINDIR` reader - If 1, side-set data is asserted to pin directions, instead of pin values"]
 pub type SIDE_PINDIR_R = crate::BitReader;
 #[doc = "Field `SIDE_PINDIR` writer - If 1, side-set data is asserted to pin directions, instead of pin values"]
-pub type SIDE_PINDIR_W<'a, const O: u8> = crate::BitWriter<'a, SM_EXECCTRL_SPEC, O>;
+pub type SIDE_PINDIR_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SIDE_EN` reader - If 1, the MSB of the Delay/Side-set instruction field is used as side-set enable, rather than a side-set data bit. This allows instructions to perform side-set optionally, rather than on every instruction, but the maximum possible side-set width is reduced from 5 to 4. Note that the value of PINCTRL_SIDESET_COUNT is inclusive of this enable bit."]
 pub type SIDE_EN_R = crate::BitReader;
 #[doc = "Field `SIDE_EN` writer - If 1, the MSB of the Delay/Side-set instruction field is used as side-set enable, rather than a side-set data bit. This allows instructions to perform side-set optionally, rather than on every instruction, but the maximum possible side-set width is reduced from 5 to 4. Note that the value of PINCTRL_SIDESET_COUNT is inclusive of this enable bit."]
-pub type SIDE_EN_W<'a, const O: u8> = crate::BitWriter<'a, SM_EXECCTRL_SPEC, O>;
+pub type SIDE_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `EXEC_STALLED` reader - If 1, an instruction written to SMx_INSTR is stalled, and latched by the state machine. Will clear to 0 once this instruction completes."]
 pub type EXEC_STALLED_R = crate::BitReader;
 impl R {
@@ -197,33 +168,33 @@ impl W {
     #[doc = "Bits 0:3 - Comparison level for the MOV x, STATUS instruction"]
     #[inline(always)]
     #[must_use]
-    pub fn status_n(&mut self) -> STATUS_N_W<0> {
-        STATUS_N_W::new(self)
+    pub fn status_n(&mut self) -> STATUS_N_W<SM_EXECCTRL_SPEC> {
+        STATUS_N_W::new(self, 0)
     }
     #[doc = "Bit 4 - Comparison used for the MOV x, STATUS instruction."]
     #[inline(always)]
     #[must_use]
-    pub fn status_sel(&mut self) -> STATUS_SEL_W<4> {
-        STATUS_SEL_W::new(self)
+    pub fn status_sel(&mut self) -> STATUS_SEL_W<SM_EXECCTRL_SPEC> {
+        STATUS_SEL_W::new(self, 4)
     }
     #[doc = "Bits 7:11 - After reaching wrap_top, execution is wrapped to this address."]
     #[inline(always)]
     #[must_use]
-    pub fn wrap_bottom(&mut self) -> WRAP_BOTTOM_W<7> {
-        WRAP_BOTTOM_W::new(self)
+    pub fn wrap_bottom(&mut self) -> WRAP_BOTTOM_W<SM_EXECCTRL_SPEC> {
+        WRAP_BOTTOM_W::new(self, 7)
     }
     #[doc = "Bits 12:16 - After reaching this address, execution is wrapped to wrap_bottom.  
  If the instruction is a jump, and the jump condition is true, the jump takes priority."]
     #[inline(always)]
     #[must_use]
-    pub fn wrap_top(&mut self) -> WRAP_TOP_W<12> {
-        WRAP_TOP_W::new(self)
+    pub fn wrap_top(&mut self) -> WRAP_TOP_W<SM_EXECCTRL_SPEC> {
+        WRAP_TOP_W::new(self, 12)
     }
     #[doc = "Bit 17 - Continuously assert the most recent OUT/SET to the pins"]
     #[inline(always)]
     #[must_use]
-    pub fn out_sticky(&mut self) -> OUT_STICKY_W<17> {
-        OUT_STICKY_W::new(self)
+    pub fn out_sticky(&mut self) -> OUT_STICKY_W<SM_EXECCTRL_SPEC> {
+        OUT_STICKY_W::new(self, 17)
     }
     #[doc = "Bit 18 - If 1, use a bit of OUT data as an auxiliary write enable  
  When used in conjunction with OUT_STICKY, writes with an enable of 0 will  
@@ -231,60 +202,59 @@ impl W {
  due to the priority ordering of state machine pin writes (SM0 &lt; SM1 &lt; ...)"]
     #[inline(always)]
     #[must_use]
-    pub fn inline_out_en(&mut self) -> INLINE_OUT_EN_W<18> {
-        INLINE_OUT_EN_W::new(self)
+    pub fn inline_out_en(&mut self) -> INLINE_OUT_EN_W<SM_EXECCTRL_SPEC> {
+        INLINE_OUT_EN_W::new(self, 18)
     }
     #[doc = "Bits 19:23 - Which data bit to use for inline OUT enable"]
     #[inline(always)]
     #[must_use]
-    pub fn out_en_sel(&mut self) -> OUT_EN_SEL_W<19> {
-        OUT_EN_SEL_W::new(self)
+    pub fn out_en_sel(&mut self) -> OUT_EN_SEL_W<SM_EXECCTRL_SPEC> {
+        OUT_EN_SEL_W::new(self, 19)
     }
     #[doc = "Bits 24:28 - The GPIO number to use as condition for JMP PIN. Unaffected by input mapping."]
     #[inline(always)]
     #[must_use]
-    pub fn jmp_pin(&mut self) -> JMP_PIN_W<24> {
-        JMP_PIN_W::new(self)
+    pub fn jmp_pin(&mut self) -> JMP_PIN_W<SM_EXECCTRL_SPEC> {
+        JMP_PIN_W::new(self, 24)
     }
     #[doc = "Bit 29 - If 1, side-set data is asserted to pin directions, instead of pin values"]
     #[inline(always)]
     #[must_use]
-    pub fn side_pindir(&mut self) -> SIDE_PINDIR_W<29> {
-        SIDE_PINDIR_W::new(self)
+    pub fn side_pindir(&mut self) -> SIDE_PINDIR_W<SM_EXECCTRL_SPEC> {
+        SIDE_PINDIR_W::new(self, 29)
     }
     #[doc = "Bit 30 - If 1, the MSB of the Delay/Side-set instruction field is used as side-set enable, rather than a side-set data bit. This allows instructions to perform side-set optionally, rather than on every instruction, but the maximum possible side-set width is reduced from 5 to 4. Note that the value of PINCTRL_SIDESET_COUNT is inclusive of this enable bit."]
     #[inline(always)]
     #[must_use]
-    pub fn side_en(&mut self) -> SIDE_EN_W<30> {
-        SIDE_EN_W::new(self)
+    pub fn side_en(&mut self) -> SIDE_EN_W<SM_EXECCTRL_SPEC> {
+        SIDE_EN_W::new(self, 30)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
 #[doc = "Execution/behavioural settings for state machine 0  
 
-This register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
-
-For information about available fields see [sm_execctrl](index.html) module"]
+You can [`read`](crate::generic::Reg::read) this register and get [`sm_execctrl::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`sm_execctrl::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct SM_EXECCTRL_SPEC;
 impl crate::RegisterSpec for SM_EXECCTRL_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [sm_execctrl::R](R) reader structure"]
-impl crate::Readable for SM_EXECCTRL_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [sm_execctrl::W](W) writer structure"]
+#[doc = "`read()` method returns [`sm_execctrl::R`](R) reader structure"]
+impl crate::Readable for SM_EXECCTRL_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`sm_execctrl::W`](W) writer structure"]
 impl crate::Writable for SM_EXECCTRL_SPEC {
-    type Writer = W;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets SM_EXECCTRL to value 0x0001_f000"]
 impl crate::Resettable for SM_EXECCTRL_SPEC {
-    const RESET_VALUE: Self::Ux = 0x0001_f000;
+    const RESET_VALUE: u32 = 0x0001_f000;
 }

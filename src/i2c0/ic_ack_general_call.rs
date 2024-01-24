@@ -1,39 +1,7 @@
 #[doc = "Register `IC_ACK_GENERAL_CALL` reader"]
-pub struct R(crate::R<IC_ACK_GENERAL_CALL_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<IC_ACK_GENERAL_CALL_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<IC_ACK_GENERAL_CALL_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<IC_ACK_GENERAL_CALL_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<IC_ACK_GENERAL_CALL_SPEC>;
 #[doc = "Register `IC_ACK_GENERAL_CALL` writer"]
-pub struct W(crate::W<IC_ACK_GENERAL_CALL_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<IC_ACK_GENERAL_CALL_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<IC_ACK_GENERAL_CALL_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<IC_ACK_GENERAL_CALL_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<IC_ACK_GENERAL_CALL_SPEC>;
 #[doc = "Field `ACK_GEN_CALL` reader - ACK General Call. When set to 1, DW_apb_i2c responds with a ACK (by asserting ic_data_oe) when it receives a General Call. Otherwise, DW_apb_i2c responds with a NACK (by negating ic_data_oe)."]
 pub type ACK_GEN_CALL_R = crate::BitReader<ACK_GEN_CALL_A>;
 #[doc = "ACK General Call. When set to 1, DW_apb_i2c responds with a ACK (by asserting ic_data_oe) when it receives a General Call. Otherwise, DW_apb_i2c responds with a NACK (by negating ic_data_oe).  
@@ -55,35 +23,37 @@ impl From<ACK_GEN_CALL_A> for bool {
 impl ACK_GEN_CALL_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> ACK_GEN_CALL_A {
+    pub const fn variant(&self) -> ACK_GEN_CALL_A {
         match self.bits {
             false => ACK_GEN_CALL_A::DISABLED,
             true => ACK_GEN_CALL_A::ENABLED,
         }
     }
-    #[doc = "Checks if the value of the field is `DISABLED`"]
+    #[doc = "Generate NACK for a General Call"]
     #[inline(always)]
     pub fn is_disabled(&self) -> bool {
         *self == ACK_GEN_CALL_A::DISABLED
     }
-    #[doc = "Checks if the value of the field is `ENABLED`"]
+    #[doc = "Generate ACK for a General Call"]
     #[inline(always)]
     pub fn is_enabled(&self) -> bool {
         *self == ACK_GEN_CALL_A::ENABLED
     }
 }
 #[doc = "Field `ACK_GEN_CALL` writer - ACK General Call. When set to 1, DW_apb_i2c responds with a ACK (by asserting ic_data_oe) when it receives a General Call. Otherwise, DW_apb_i2c responds with a NACK (by negating ic_data_oe)."]
-pub type ACK_GEN_CALL_W<'a, const O: u8> =
-    crate::BitWriter<'a, IC_ACK_GENERAL_CALL_SPEC, O, ACK_GEN_CALL_A>;
-impl<'a, const O: u8> ACK_GEN_CALL_W<'a, O> {
+pub type ACK_GEN_CALL_W<'a, REG> = crate::BitWriter<'a, REG, ACK_GEN_CALL_A>;
+impl<'a, REG> ACK_GEN_CALL_W<'a, REG>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
     #[doc = "Generate NACK for a General Call"]
     #[inline(always)]
-    pub fn disabled(self) -> &'a mut W {
+    pub fn disabled(self) -> &'a mut crate::W<REG> {
         self.variant(ACK_GEN_CALL_A::DISABLED)
     }
     #[doc = "Generate ACK for a General Call"]
     #[inline(always)]
-    pub fn enabled(self) -> &'a mut W {
+    pub fn enabled(self) -> &'a mut crate::W<REG> {
         self.variant(ACK_GEN_CALL_A::ENABLED)
     }
 }
@@ -98,13 +68,17 @@ impl W {
     #[doc = "Bit 0 - ACK General Call. When set to 1, DW_apb_i2c responds with a ACK (by asserting ic_data_oe) when it receives a General Call. Otherwise, DW_apb_i2c responds with a NACK (by negating ic_data_oe)."]
     #[inline(always)]
     #[must_use]
-    pub fn ack_gen_call(&mut self) -> ACK_GEN_CALL_W<0> {
-        ACK_GEN_CALL_W::new(self)
+    pub fn ack_gen_call(&mut self) -> ACK_GEN_CALL_W<IC_ACK_GENERAL_CALL_SPEC> {
+        ACK_GEN_CALL_W::new(self, 0)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
@@ -114,24 +88,19 @@ impl W {
 
  This register is applicable only when the DW_apb_i2c is in slave mode.  
 
-This register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
-
-For information about available fields see [ic_ack_general_call](index.html) module"]
+You can [`read`](crate::generic::Reg::read) this register and get [`ic_ack_general_call::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`ic_ack_general_call::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct IC_ACK_GENERAL_CALL_SPEC;
 impl crate::RegisterSpec for IC_ACK_GENERAL_CALL_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [ic_ack_general_call::R](R) reader structure"]
-impl crate::Readable for IC_ACK_GENERAL_CALL_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [ic_ack_general_call::W](W) writer structure"]
+#[doc = "`read()` method returns [`ic_ack_general_call::R`](R) reader structure"]
+impl crate::Readable for IC_ACK_GENERAL_CALL_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`ic_ack_general_call::W`](W) writer structure"]
 impl crate::Writable for IC_ACK_GENERAL_CALL_SPEC {
-    type Writer = W;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets IC_ACK_GENERAL_CALL to value 0x01"]
 impl crate::Resettable for IC_ACK_GENERAL_CALL_SPEC {
-    const RESET_VALUE: Self::Ux = 0x01;
+    const RESET_VALUE: u32 = 0x01;
 }

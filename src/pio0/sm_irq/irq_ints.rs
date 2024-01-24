@@ -1,18 +1,5 @@
 #[doc = "Register `IRQ_INTS` reader"]
-pub struct R(crate::R<IRQ_INTS_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<IRQ_INTS_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<IRQ_INTS_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<IRQ_INTS_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<IRQ_INTS_SPEC>;
 #[doc = "Field `SM0_RXNEMPTY` reader - "]
 pub type SM0_RXNEMPTY_R = crate::BitReader;
 #[doc = "Field `SM1_RXNEMPTY` reader - "]
@@ -101,18 +88,14 @@ impl R {
 }
 #[doc = "Interrupt status after masking &amp; forcing for irq0  
 
-This register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
-
-For information about available fields see [irq_ints](index.html) module"]
+You can [`read`](crate::generic::Reg::read) this register and get [`irq_ints::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct IRQ_INTS_SPEC;
 impl crate::RegisterSpec for IRQ_INTS_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [irq_ints::R](R) reader structure"]
-impl crate::Readable for IRQ_INTS_SPEC {
-    type Reader = R;
-}
+#[doc = "`read()` method returns [`irq_ints::R`](R) reader structure"]
+impl crate::Readable for IRQ_INTS_SPEC {}
 #[doc = "`reset()` method sets IRQ_INTS to value 0"]
 impl crate::Resettable for IRQ_INTS_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

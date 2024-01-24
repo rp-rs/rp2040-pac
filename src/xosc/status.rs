@@ -1,39 +1,7 @@
 #[doc = "Register `STATUS` reader"]
-pub struct R(crate::R<STATUS_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<STATUS_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<STATUS_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<STATUS_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<STATUS_SPEC>;
 #[doc = "Register `STATUS` writer"]
-pub struct W(crate::W<STATUS_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<STATUS_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<STATUS_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<STATUS_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<STATUS_SPEC>;
 #[doc = "Field `FREQ_RANGE` reader - The current frequency range setting, always reads 0"]
 pub type FREQ_RANGE_R = crate::FieldReader<FREQ_RANGE_A>;
 #[doc = "The current frequency range setting, always reads 0  
@@ -63,7 +31,7 @@ impl crate::FieldSpec for FREQ_RANGE_A {
 impl FREQ_RANGE_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> FREQ_RANGE_A {
+    pub const fn variant(&self) -> FREQ_RANGE_A {
         match self.bits {
             0 => FREQ_RANGE_A::_1_15MHZ,
             1 => FREQ_RANGE_A::RESERVED_1,
@@ -72,22 +40,22 @@ impl FREQ_RANGE_R {
             _ => unreachable!(),
         }
     }
-    #[doc = "Checks if the value of the field is `_1_15MHZ`"]
+    #[doc = "`0`"]
     #[inline(always)]
     pub fn is_1_15mhz(&self) -> bool {
         *self == FREQ_RANGE_A::_1_15MHZ
     }
-    #[doc = "Checks if the value of the field is `RESERVED_1`"]
+    #[doc = "`1`"]
     #[inline(always)]
     pub fn is_reserved_1(&self) -> bool {
         *self == FREQ_RANGE_A::RESERVED_1
     }
-    #[doc = "Checks if the value of the field is `RESERVED_2`"]
+    #[doc = "`10`"]
     #[inline(always)]
     pub fn is_reserved_2(&self) -> bool {
         *self == FREQ_RANGE_A::RESERVED_2
     }
-    #[doc = "Checks if the value of the field is `RESERVED_3`"]
+    #[doc = "`11`"]
     #[inline(always)]
     pub fn is_reserved_3(&self) -> bool {
         *self == FREQ_RANGE_A::RESERVED_3
@@ -98,7 +66,7 @@ pub type ENABLED_R = crate::BitReader;
 #[doc = "Field `BADWRITE` reader - An invalid value has been written to CTRL_ENABLE or CTRL_FREQ_RANGE or DORMANT"]
 pub type BADWRITE_R = crate::BitReader;
 #[doc = "Field `BADWRITE` writer - An invalid value has been written to CTRL_ENABLE or CTRL_FREQ_RANGE or DORMANT"]
-pub type BADWRITE_W<'a, const O: u8> = crate::BitWriter1C<'a, STATUS_SPEC, O>;
+pub type BADWRITE_W<'a, REG> = crate::BitWriter1C<'a, REG>;
 #[doc = "Field `STABLE` reader - Oscillator is running and stable"]
 pub type STABLE_R = crate::BitReader;
 impl R {
@@ -127,36 +95,35 @@ impl W {
     #[doc = "Bit 24 - An invalid value has been written to CTRL_ENABLE or CTRL_FREQ_RANGE or DORMANT"]
     #[inline(always)]
     #[must_use]
-    pub fn badwrite(&mut self) -> BADWRITE_W<24> {
-        BADWRITE_W::new(self)
+    pub fn badwrite(&mut self) -> BADWRITE_W<STATUS_SPEC> {
+        BADWRITE_W::new(self, 24)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
 #[doc = "Crystal Oscillator Status  
 
-This register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
-
-For information about available fields see [status](index.html) module"]
+You can [`read`](crate::generic::Reg::read) this register and get [`status::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`status::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct STATUS_SPEC;
 impl crate::RegisterSpec for STATUS_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [status::R](R) reader structure"]
-impl crate::Readable for STATUS_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [status::W](W) writer structure"]
+#[doc = "`read()` method returns [`status::R`](R) reader structure"]
+impl crate::Readable for STATUS_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`status::W`](W) writer structure"]
 impl crate::Writable for STATUS_SPEC {
-    type Writer = W;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0x0100_0000;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0x0100_0000;
 }
 #[doc = "`reset()` method sets STATUS to value 0"]
 impl crate::Resettable for STATUS_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

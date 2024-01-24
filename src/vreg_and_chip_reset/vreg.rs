@@ -1,51 +1,19 @@
 #[doc = "Register `VREG` reader"]
-pub struct R(crate::R<VREG_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<VREG_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<VREG_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<VREG_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<VREG_SPEC>;
 #[doc = "Register `VREG` writer"]
-pub struct W(crate::W<VREG_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<VREG_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<VREG_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<VREG_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<VREG_SPEC>;
 #[doc = "Field `EN` reader - enable  
  0=not enabled, 1=enabled"]
 pub type EN_R = crate::BitReader;
 #[doc = "Field `EN` writer - enable  
  0=not enabled, 1=enabled"]
-pub type EN_W<'a, const O: u8> = crate::BitWriter<'a, VREG_SPEC, O>;
+pub type EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `HIZ` reader - high impedance mode select  
  0=not in high impedance mode, 1=in high impedance mode"]
 pub type HIZ_R = crate::BitReader;
 #[doc = "Field `HIZ` writer - high impedance mode select  
  0=not in high impedance mode, 1=in high impedance mode"]
-pub type HIZ_W<'a, const O: u8> = crate::BitWriter<'a, VREG_SPEC, O>;
+pub type HIZ_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `VSEL` reader - Output voltage select for on-chip voltage regulator."]
 pub type VSEL_R = crate::FieldReader<VSEL_A>;
 #[doc = "Output voltage select for on-chip voltage regulator.  
@@ -89,7 +57,7 @@ impl crate::FieldSpec for VSEL_A {
 impl VSEL_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> Option<VSEL_A> {
+    pub const fn variant(&self) -> Option<VSEL_A> {
         match self.bits {
             5 => Some(VSEL_A::VOLTAGE0_80),
             6 => Some(VSEL_A::VOLTAGE0_85),
@@ -105,118 +73,122 @@ impl VSEL_R {
             _ => None,
         }
     }
-    #[doc = "Checks if the value of the field is `VOLTAGE0_80`"]
+    #[doc = "0.80V"]
     #[inline(always)]
     pub fn is_voltage0_80(&self) -> bool {
         *self == VSEL_A::VOLTAGE0_80
     }
-    #[doc = "Checks if the value of the field is `VOLTAGE0_85`"]
+    #[doc = "0.85V"]
     #[inline(always)]
     pub fn is_voltage0_85(&self) -> bool {
         *self == VSEL_A::VOLTAGE0_85
     }
-    #[doc = "Checks if the value of the field is `VOLTAGE0_90`"]
+    #[doc = "0.90V"]
     #[inline(always)]
     pub fn is_voltage0_90(&self) -> bool {
         *self == VSEL_A::VOLTAGE0_90
     }
-    #[doc = "Checks if the value of the field is `VOLTAGE0_95`"]
+    #[doc = "0.95V"]
     #[inline(always)]
     pub fn is_voltage0_95(&self) -> bool {
         *self == VSEL_A::VOLTAGE0_95
     }
-    #[doc = "Checks if the value of the field is `VOLTAGE1_00`"]
+    #[doc = "1.00V"]
     #[inline(always)]
     pub fn is_voltage1_00(&self) -> bool {
         *self == VSEL_A::VOLTAGE1_00
     }
-    #[doc = "Checks if the value of the field is `VOLTAGE1_05`"]
+    #[doc = "1.05V"]
     #[inline(always)]
     pub fn is_voltage1_05(&self) -> bool {
         *self == VSEL_A::VOLTAGE1_05
     }
-    #[doc = "Checks if the value of the field is `VOLTAGE1_10`"]
+    #[doc = "1.10V (default)"]
     #[inline(always)]
     pub fn is_voltage1_10(&self) -> bool {
         *self == VSEL_A::VOLTAGE1_10
     }
-    #[doc = "Checks if the value of the field is `VOLTAGE1_15`"]
+    #[doc = "1.15V"]
     #[inline(always)]
     pub fn is_voltage1_15(&self) -> bool {
         *self == VSEL_A::VOLTAGE1_15
     }
-    #[doc = "Checks if the value of the field is `VOLTAGE1_20`"]
+    #[doc = "1.20V"]
     #[inline(always)]
     pub fn is_voltage1_20(&self) -> bool {
         *self == VSEL_A::VOLTAGE1_20
     }
-    #[doc = "Checks if the value of the field is `VOLTAGE1_25`"]
+    #[doc = "1.25V"]
     #[inline(always)]
     pub fn is_voltage1_25(&self) -> bool {
         *self == VSEL_A::VOLTAGE1_25
     }
-    #[doc = "Checks if the value of the field is `VOLTAGE1_30`"]
+    #[doc = "1.30V"]
     #[inline(always)]
     pub fn is_voltage1_30(&self) -> bool {
         *self == VSEL_A::VOLTAGE1_30
     }
 }
 #[doc = "Field `VSEL` writer - Output voltage select for on-chip voltage regulator."]
-pub type VSEL_W<'a, const O: u8> = crate::FieldWriter<'a, VREG_SPEC, 4, O, VSEL_A>;
-impl<'a, const O: u8> VSEL_W<'a, O> {
+pub type VSEL_W<'a, REG> = crate::FieldWriter<'a, REG, 4, VSEL_A>;
+impl<'a, REG> VSEL_W<'a, REG>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+    REG::Ux: From<u8>,
+{
     #[doc = "0.80V"]
     #[inline(always)]
-    pub fn voltage0_80(self) -> &'a mut W {
+    pub fn voltage0_80(self) -> &'a mut crate::W<REG> {
         self.variant(VSEL_A::VOLTAGE0_80)
     }
     #[doc = "0.85V"]
     #[inline(always)]
-    pub fn voltage0_85(self) -> &'a mut W {
+    pub fn voltage0_85(self) -> &'a mut crate::W<REG> {
         self.variant(VSEL_A::VOLTAGE0_85)
     }
     #[doc = "0.90V"]
     #[inline(always)]
-    pub fn voltage0_90(self) -> &'a mut W {
+    pub fn voltage0_90(self) -> &'a mut crate::W<REG> {
         self.variant(VSEL_A::VOLTAGE0_90)
     }
     #[doc = "0.95V"]
     #[inline(always)]
-    pub fn voltage0_95(self) -> &'a mut W {
+    pub fn voltage0_95(self) -> &'a mut crate::W<REG> {
         self.variant(VSEL_A::VOLTAGE0_95)
     }
     #[doc = "1.00V"]
     #[inline(always)]
-    pub fn voltage1_00(self) -> &'a mut W {
+    pub fn voltage1_00(self) -> &'a mut crate::W<REG> {
         self.variant(VSEL_A::VOLTAGE1_00)
     }
     #[doc = "1.05V"]
     #[inline(always)]
-    pub fn voltage1_05(self) -> &'a mut W {
+    pub fn voltage1_05(self) -> &'a mut crate::W<REG> {
         self.variant(VSEL_A::VOLTAGE1_05)
     }
     #[doc = "1.10V (default)"]
     #[inline(always)]
-    pub fn voltage1_10(self) -> &'a mut W {
+    pub fn voltage1_10(self) -> &'a mut crate::W<REG> {
         self.variant(VSEL_A::VOLTAGE1_10)
     }
     #[doc = "1.15V"]
     #[inline(always)]
-    pub fn voltage1_15(self) -> &'a mut W {
+    pub fn voltage1_15(self) -> &'a mut crate::W<REG> {
         self.variant(VSEL_A::VOLTAGE1_15)
     }
     #[doc = "1.20V"]
     #[inline(always)]
-    pub fn voltage1_20(self) -> &'a mut W {
+    pub fn voltage1_20(self) -> &'a mut crate::W<REG> {
         self.variant(VSEL_A::VOLTAGE1_20)
     }
     #[doc = "1.25V"]
     #[inline(always)]
-    pub fn voltage1_25(self) -> &'a mut W {
+    pub fn voltage1_25(self) -> &'a mut crate::W<REG> {
         self.variant(VSEL_A::VOLTAGE1_25)
     }
     #[doc = "1.30V"]
     #[inline(always)]
-    pub fn voltage1_30(self) -> &'a mut W {
+    pub fn voltage1_30(self) -> &'a mut crate::W<REG> {
         self.variant(VSEL_A::VOLTAGE1_30)
     }
 }
@@ -253,49 +225,48 @@ impl W {
  0=not enabled, 1=enabled"]
     #[inline(always)]
     #[must_use]
-    pub fn en(&mut self) -> EN_W<0> {
-        EN_W::new(self)
+    pub fn en(&mut self) -> EN_W<VREG_SPEC> {
+        EN_W::new(self, 0)
     }
     #[doc = "Bit 1 - high impedance mode select  
  0=not in high impedance mode, 1=in high impedance mode"]
     #[inline(always)]
     #[must_use]
-    pub fn hiz(&mut self) -> HIZ_W<1> {
-        HIZ_W::new(self)
+    pub fn hiz(&mut self) -> HIZ_W<VREG_SPEC> {
+        HIZ_W::new(self, 1)
     }
     #[doc = "Bits 4:7 - Output voltage select for on-chip voltage regulator."]
     #[inline(always)]
     #[must_use]
-    pub fn vsel(&mut self) -> VSEL_W<4> {
-        VSEL_W::new(self)
+    pub fn vsel(&mut self) -> VSEL_W<VREG_SPEC> {
+        VSEL_W::new(self, 4)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
 #[doc = "Voltage regulator control and status  
 
-This register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
-
-For information about available fields see [vreg](index.html) module"]
+You can [`read`](crate::generic::Reg::read) this register and get [`vreg::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`vreg::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct VREG_SPEC;
 impl crate::RegisterSpec for VREG_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [vreg::R](R) reader structure"]
-impl crate::Readable for VREG_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [vreg::W](W) writer structure"]
+#[doc = "`read()` method returns [`vreg::R`](R) reader structure"]
+impl crate::Readable for VREG_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`vreg::W`](W) writer structure"]
 impl crate::Writable for VREG_SPEC {
-    type Writer = W;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets VREG to value 0xb1"]
 impl crate::Resettable for VREG_SPEC {
-    const RESET_VALUE: Self::Ux = 0xb1;
+    const RESET_VALUE: u32 = 0xb1;
 }

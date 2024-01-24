@@ -1,18 +1,5 @@
 #[doc = "Register `IC_TX_ABRT_SOURCE` reader"]
-pub struct R(crate::R<IC_TX_ABRT_SOURCE_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<IC_TX_ABRT_SOURCE_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<IC_TX_ABRT_SOURCE_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<IC_TX_ABRT_SOURCE_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<IC_TX_ABRT_SOURCE_SPEC>;
 #[doc = "Field `ABRT_7B_ADDR_NOACK` reader - This field indicates that the Master is in 7-bit addressing mode and the address sent was not acknowledged by any slave.  
 
  Reset value: 0x0  
@@ -42,18 +29,18 @@ impl From<ABRT_7B_ADDR_NOACK_A> for bool {
 impl ABRT_7B_ADDR_NOACK_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> ABRT_7B_ADDR_NOACK_A {
+    pub const fn variant(&self) -> ABRT_7B_ADDR_NOACK_A {
         match self.bits {
             false => ABRT_7B_ADDR_NOACK_A::INACTIVE,
             true => ABRT_7B_ADDR_NOACK_A::ACTIVE,
         }
     }
-    #[doc = "Checks if the value of the field is `INACTIVE`"]
+    #[doc = "This abort is not generated"]
     #[inline(always)]
     pub fn is_inactive(&self) -> bool {
         *self == ABRT_7B_ADDR_NOACK_A::INACTIVE
     }
-    #[doc = "Checks if the value of the field is `ACTIVE`"]
+    #[doc = "This abort is generated because of NOACK for 7-bit address"]
     #[inline(always)]
     pub fn is_active(&self) -> bool {
         *self == ABRT_7B_ADDR_NOACK_A::ACTIVE
@@ -88,18 +75,18 @@ impl From<ABRT_10ADDR1_NOACK_A> for bool {
 impl ABRT_10ADDR1_NOACK_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> ABRT_10ADDR1_NOACK_A {
+    pub const fn variant(&self) -> ABRT_10ADDR1_NOACK_A {
         match self.bits {
             false => ABRT_10ADDR1_NOACK_A::INACTIVE,
             true => ABRT_10ADDR1_NOACK_A::ACTIVE,
         }
     }
-    #[doc = "Checks if the value of the field is `INACTIVE`"]
+    #[doc = "This abort is not generated"]
     #[inline(always)]
     pub fn is_inactive(&self) -> bool {
         *self == ABRT_10ADDR1_NOACK_A::INACTIVE
     }
-    #[doc = "Checks if the value of the field is `ACTIVE`"]
+    #[doc = "Byte 1 of 10Bit Address not ACKed by any slave"]
     #[inline(always)]
     pub fn is_active(&self) -> bool {
         *self == ABRT_10ADDR1_NOACK_A::ACTIVE
@@ -134,18 +121,18 @@ impl From<ABRT_10ADDR2_NOACK_A> for bool {
 impl ABRT_10ADDR2_NOACK_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> ABRT_10ADDR2_NOACK_A {
+    pub const fn variant(&self) -> ABRT_10ADDR2_NOACK_A {
         match self.bits {
             false => ABRT_10ADDR2_NOACK_A::INACTIVE,
             true => ABRT_10ADDR2_NOACK_A::ACTIVE,
         }
     }
-    #[doc = "Checks if the value of the field is `INACTIVE`"]
+    #[doc = "This abort is not generated"]
     #[inline(always)]
     pub fn is_inactive(&self) -> bool {
         *self == ABRT_10ADDR2_NOACK_A::INACTIVE
     }
-    #[doc = "Checks if the value of the field is `ACTIVE`"]
+    #[doc = "Byte 2 of 10Bit Address not ACKed by any slave"]
     #[inline(always)]
     pub fn is_active(&self) -> bool {
         *self == ABRT_10ADDR2_NOACK_A::ACTIVE
@@ -180,18 +167,18 @@ impl From<ABRT_TXDATA_NOACK_A> for bool {
 impl ABRT_TXDATA_NOACK_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> ABRT_TXDATA_NOACK_A {
+    pub const fn variant(&self) -> ABRT_TXDATA_NOACK_A {
         match self.bits {
             false => ABRT_TXDATA_NOACK_A::ABRT_TXDATA_NOACK_VOID,
             true => ABRT_TXDATA_NOACK_A::ABRT_TXDATA_NOACK_GENERATED,
         }
     }
-    #[doc = "Checks if the value of the field is `ABRT_TXDATA_NOACK_VOID`"]
+    #[doc = "Transmitted data non-ACKed by addressed slave-scenario not present"]
     #[inline(always)]
     pub fn is_abrt_txdata_noack_void(&self) -> bool {
         *self == ABRT_TXDATA_NOACK_A::ABRT_TXDATA_NOACK_VOID
     }
-    #[doc = "Checks if the value of the field is `ABRT_TXDATA_NOACK_GENERATED`"]
+    #[doc = "Transmitted data not ACKed by addressed slave"]
     #[inline(always)]
     pub fn is_abrt_txdata_noack_generated(&self) -> bool {
         *self == ABRT_TXDATA_NOACK_A::ABRT_TXDATA_NOACK_GENERATED
@@ -226,18 +213,18 @@ impl From<ABRT_GCALL_NOACK_A> for bool {
 impl ABRT_GCALL_NOACK_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> ABRT_GCALL_NOACK_A {
+    pub const fn variant(&self) -> ABRT_GCALL_NOACK_A {
         match self.bits {
             false => ABRT_GCALL_NOACK_A::ABRT_GCALL_NOACK_VOID,
             true => ABRT_GCALL_NOACK_A::ABRT_GCALL_NOACK_GENERATED,
         }
     }
-    #[doc = "Checks if the value of the field is `ABRT_GCALL_NOACK_VOID`"]
+    #[doc = "GCALL not ACKed by any slave-scenario not present"]
     #[inline(always)]
     pub fn is_abrt_gcall_noack_void(&self) -> bool {
         *self == ABRT_GCALL_NOACK_A::ABRT_GCALL_NOACK_VOID
     }
-    #[doc = "Checks if the value of the field is `ABRT_GCALL_NOACK_GENERATED`"]
+    #[doc = "GCALL not ACKed by any slave"]
     #[inline(always)]
     pub fn is_abrt_gcall_noack_generated(&self) -> bool {
         *self == ABRT_GCALL_NOACK_A::ABRT_GCALL_NOACK_GENERATED
@@ -274,18 +261,18 @@ impl From<ABRT_GCALL_READ_A> for bool {
 impl ABRT_GCALL_READ_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> ABRT_GCALL_READ_A {
+    pub const fn variant(&self) -> ABRT_GCALL_READ_A {
         match self.bits {
             false => ABRT_GCALL_READ_A::ABRT_GCALL_READ_VOID,
             true => ABRT_GCALL_READ_A::ABRT_GCALL_READ_GENERATED,
         }
     }
-    #[doc = "Checks if the value of the field is `ABRT_GCALL_READ_VOID`"]
+    #[doc = "GCALL is followed by read from bus-scenario not present"]
     #[inline(always)]
     pub fn is_abrt_gcall_read_void(&self) -> bool {
         *self == ABRT_GCALL_READ_A::ABRT_GCALL_READ_VOID
     }
-    #[doc = "Checks if the value of the field is `ABRT_GCALL_READ_GENERATED`"]
+    #[doc = "GCALL is followed by read from bus"]
     #[inline(always)]
     pub fn is_abrt_gcall_read_generated(&self) -> bool {
         *self == ABRT_GCALL_READ_A::ABRT_GCALL_READ_GENERATED
@@ -320,18 +307,18 @@ impl From<ABRT_HS_ACKDET_A> for bool {
 impl ABRT_HS_ACKDET_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> ABRT_HS_ACKDET_A {
+    pub const fn variant(&self) -> ABRT_HS_ACKDET_A {
         match self.bits {
             false => ABRT_HS_ACKDET_A::ABRT_HS_ACK_VOID,
             true => ABRT_HS_ACKDET_A::ABRT_HS_ACK_GENERATED,
         }
     }
-    #[doc = "Checks if the value of the field is `ABRT_HS_ACK_VOID`"]
+    #[doc = "HS Master code ACKed in HS Mode- scenario not present"]
     #[inline(always)]
     pub fn is_abrt_hs_ack_void(&self) -> bool {
         *self == ABRT_HS_ACKDET_A::ABRT_HS_ACK_VOID
     }
-    #[doc = "Checks if the value of the field is `ABRT_HS_ACK_GENERATED`"]
+    #[doc = "HS Master code ACKed in HS Mode"]
     #[inline(always)]
     pub fn is_abrt_hs_ack_generated(&self) -> bool {
         *self == ABRT_HS_ACKDET_A::ABRT_HS_ACK_GENERATED
@@ -366,18 +353,18 @@ impl From<ABRT_SBYTE_ACKDET_A> for bool {
 impl ABRT_SBYTE_ACKDET_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> ABRT_SBYTE_ACKDET_A {
+    pub const fn variant(&self) -> ABRT_SBYTE_ACKDET_A {
         match self.bits {
             false => ABRT_SBYTE_ACKDET_A::ABRT_SBYTE_ACKDET_VOID,
             true => ABRT_SBYTE_ACKDET_A::ABRT_SBYTE_ACKDET_GENERATED,
         }
     }
-    #[doc = "Checks if the value of the field is `ABRT_SBYTE_ACKDET_VOID`"]
+    #[doc = "ACK detected for START byte- scenario not present"]
     #[inline(always)]
     pub fn is_abrt_sbyte_ackdet_void(&self) -> bool {
         *self == ABRT_SBYTE_ACKDET_A::ABRT_SBYTE_ACKDET_VOID
     }
-    #[doc = "Checks if the value of the field is `ABRT_SBYTE_ACKDET_GENERATED`"]
+    #[doc = "ACK detected for START byte"]
     #[inline(always)]
     pub fn is_abrt_sbyte_ackdet_generated(&self) -> bool {
         *self == ABRT_SBYTE_ACKDET_A::ABRT_SBYTE_ACKDET_GENERATED
@@ -412,18 +399,18 @@ impl From<ABRT_HS_NORSTRT_A> for bool {
 impl ABRT_HS_NORSTRT_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> ABRT_HS_NORSTRT_A {
+    pub const fn variant(&self) -> ABRT_HS_NORSTRT_A {
         match self.bits {
             false => ABRT_HS_NORSTRT_A::ABRT_HS_NORSTRT_VOID,
             true => ABRT_HS_NORSTRT_A::ABRT_HS_NORSTRT_GENERATED,
         }
     }
-    #[doc = "Checks if the value of the field is `ABRT_HS_NORSTRT_VOID`"]
+    #[doc = "User trying to switch Master to HS mode when RESTART disabled- scenario not present"]
     #[inline(always)]
     pub fn is_abrt_hs_norstrt_void(&self) -> bool {
         *self == ABRT_HS_NORSTRT_A::ABRT_HS_NORSTRT_VOID
     }
-    #[doc = "Checks if the value of the field is `ABRT_HS_NORSTRT_GENERATED`"]
+    #[doc = "User trying to switch Master to HS mode when RESTART disabled"]
     #[inline(always)]
     pub fn is_abrt_hs_norstrt_generated(&self) -> bool {
         *self == ABRT_HS_NORSTRT_A::ABRT_HS_NORSTRT_GENERATED
@@ -458,18 +445,18 @@ impl From<ABRT_SBYTE_NORSTRT_A> for bool {
 impl ABRT_SBYTE_NORSTRT_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> ABRT_SBYTE_NORSTRT_A {
+    pub const fn variant(&self) -> ABRT_SBYTE_NORSTRT_A {
         match self.bits {
             false => ABRT_SBYTE_NORSTRT_A::ABRT_SBYTE_NORSTRT_VOID,
             true => ABRT_SBYTE_NORSTRT_A::ABRT_SBYTE_NORSTRT_GENERATED,
         }
     }
-    #[doc = "Checks if the value of the field is `ABRT_SBYTE_NORSTRT_VOID`"]
+    #[doc = "User trying to send START byte when RESTART disabled- scenario not present"]
     #[inline(always)]
     pub fn is_abrt_sbyte_norstrt_void(&self) -> bool {
         *self == ABRT_SBYTE_NORSTRT_A::ABRT_SBYTE_NORSTRT_VOID
     }
-    #[doc = "Checks if the value of the field is `ABRT_SBYTE_NORSTRT_GENERATED`"]
+    #[doc = "User trying to send START byte when RESTART disabled"]
     #[inline(always)]
     pub fn is_abrt_sbyte_norstrt_generated(&self) -> bool {
         *self == ABRT_SBYTE_NORSTRT_A::ABRT_SBYTE_NORSTRT_GENERATED
@@ -504,18 +491,18 @@ impl From<ABRT_10B_RD_NORSTRT_A> for bool {
 impl ABRT_10B_RD_NORSTRT_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> ABRT_10B_RD_NORSTRT_A {
+    pub const fn variant(&self) -> ABRT_10B_RD_NORSTRT_A {
         match self.bits {
             false => ABRT_10B_RD_NORSTRT_A::ABRT_10B_RD_VOID,
             true => ABRT_10B_RD_NORSTRT_A::ABRT_10B_RD_GENERATED,
         }
     }
-    #[doc = "Checks if the value of the field is `ABRT_10B_RD_VOID`"]
+    #[doc = "Master not trying to read in 10Bit addressing mode when RESTART disabled"]
     #[inline(always)]
     pub fn is_abrt_10b_rd_void(&self) -> bool {
         *self == ABRT_10B_RD_NORSTRT_A::ABRT_10B_RD_VOID
     }
-    #[doc = "Checks if the value of the field is `ABRT_10B_RD_GENERATED`"]
+    #[doc = "Master trying to read in 10Bit addressing mode when RESTART disabled"]
     #[inline(always)]
     pub fn is_abrt_10b_rd_generated(&self) -> bool {
         *self == ABRT_10B_RD_NORSTRT_A::ABRT_10B_RD_GENERATED
@@ -550,18 +537,18 @@ impl From<ABRT_MASTER_DIS_A> for bool {
 impl ABRT_MASTER_DIS_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> ABRT_MASTER_DIS_A {
+    pub const fn variant(&self) -> ABRT_MASTER_DIS_A {
         match self.bits {
             false => ABRT_MASTER_DIS_A::ABRT_MASTER_DIS_VOID,
             true => ABRT_MASTER_DIS_A::ABRT_MASTER_DIS_GENERATED,
         }
     }
-    #[doc = "Checks if the value of the field is `ABRT_MASTER_DIS_VOID`"]
+    #[doc = "User initiating master operation when MASTER disabled- scenario not present"]
     #[inline(always)]
     pub fn is_abrt_master_dis_void(&self) -> bool {
         *self == ABRT_MASTER_DIS_A::ABRT_MASTER_DIS_VOID
     }
-    #[doc = "Checks if the value of the field is `ABRT_MASTER_DIS_GENERATED`"]
+    #[doc = "User initiating master operation when MASTER disabled"]
     #[inline(always)]
     pub fn is_abrt_master_dis_generated(&self) -> bool {
         *self == ABRT_MASTER_DIS_A::ABRT_MASTER_DIS_GENERATED
@@ -598,18 +585,18 @@ impl From<ARB_LOST_A> for bool {
 impl ARB_LOST_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> ARB_LOST_A {
+    pub const fn variant(&self) -> ARB_LOST_A {
         match self.bits {
             false => ARB_LOST_A::ABRT_LOST_VOID,
             true => ARB_LOST_A::ABRT_LOST_GENERATED,
         }
     }
-    #[doc = "Checks if the value of the field is `ABRT_LOST_VOID`"]
+    #[doc = "Master or Slave-Transmitter lost arbitration- scenario not present"]
     #[inline(always)]
     pub fn is_abrt_lost_void(&self) -> bool {
         *self == ARB_LOST_A::ABRT_LOST_VOID
     }
-    #[doc = "Checks if the value of the field is `ABRT_LOST_GENERATED`"]
+    #[doc = "Master or Slave-Transmitter lost arbitration"]
     #[inline(always)]
     pub fn is_abrt_lost_generated(&self) -> bool {
         *self == ARB_LOST_A::ABRT_LOST_GENERATED
@@ -644,18 +631,18 @@ impl From<ABRT_SLVFLUSH_TXFIFO_A> for bool {
 impl ABRT_SLVFLUSH_TXFIFO_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> ABRT_SLVFLUSH_TXFIFO_A {
+    pub const fn variant(&self) -> ABRT_SLVFLUSH_TXFIFO_A {
         match self.bits {
             false => ABRT_SLVFLUSH_TXFIFO_A::ABRT_SLVFLUSH_TXFIFO_VOID,
             true => ABRT_SLVFLUSH_TXFIFO_A::ABRT_SLVFLUSH_TXFIFO_GENERATED,
         }
     }
-    #[doc = "Checks if the value of the field is `ABRT_SLVFLUSH_TXFIFO_VOID`"]
+    #[doc = "Slave flushes existing data in TX-FIFO upon getting read command- scenario not present"]
     #[inline(always)]
     pub fn is_abrt_slvflush_txfifo_void(&self) -> bool {
         *self == ABRT_SLVFLUSH_TXFIFO_A::ABRT_SLVFLUSH_TXFIFO_VOID
     }
-    #[doc = "Checks if the value of the field is `ABRT_SLVFLUSH_TXFIFO_GENERATED`"]
+    #[doc = "Slave flushes existing data in TX-FIFO upon getting read command"]
     #[inline(always)]
     pub fn is_abrt_slvflush_txfifo_generated(&self) -> bool {
         *self == ABRT_SLVFLUSH_TXFIFO_A::ABRT_SLVFLUSH_TXFIFO_GENERATED
@@ -692,18 +679,18 @@ impl From<ABRT_SLV_ARBLOST_A> for bool {
 impl ABRT_SLV_ARBLOST_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> ABRT_SLV_ARBLOST_A {
+    pub const fn variant(&self) -> ABRT_SLV_ARBLOST_A {
         match self.bits {
             false => ABRT_SLV_ARBLOST_A::ABRT_SLV_ARBLOST_VOID,
             true => ABRT_SLV_ARBLOST_A::ABRT_SLV_ARBLOST_GENERATED,
         }
     }
-    #[doc = "Checks if the value of the field is `ABRT_SLV_ARBLOST_VOID`"]
+    #[doc = "Slave lost arbitration to remote master- scenario not present"]
     #[inline(always)]
     pub fn is_abrt_slv_arblost_void(&self) -> bool {
         *self == ABRT_SLV_ARBLOST_A::ABRT_SLV_ARBLOST_VOID
     }
-    #[doc = "Checks if the value of the field is `ABRT_SLV_ARBLOST_GENERATED`"]
+    #[doc = "Slave lost arbitration to remote master"]
     #[inline(always)]
     pub fn is_abrt_slv_arblost_generated(&self) -> bool {
         *self == ABRT_SLV_ARBLOST_A::ABRT_SLV_ARBLOST_GENERATED
@@ -738,18 +725,18 @@ impl From<ABRT_SLVRD_INTX_A> for bool {
 impl ABRT_SLVRD_INTX_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> ABRT_SLVRD_INTX_A {
+    pub const fn variant(&self) -> ABRT_SLVRD_INTX_A {
         match self.bits {
             false => ABRT_SLVRD_INTX_A::ABRT_SLVRD_INTX_VOID,
             true => ABRT_SLVRD_INTX_A::ABRT_SLVRD_INTX_GENERATED,
         }
     }
-    #[doc = "Checks if the value of the field is `ABRT_SLVRD_INTX_VOID`"]
+    #[doc = "Slave trying to transmit to remote master in read mode- scenario not present"]
     #[inline(always)]
     pub fn is_abrt_slvrd_intx_void(&self) -> bool {
         *self == ABRT_SLVRD_INTX_A::ABRT_SLVRD_INTX_VOID
     }
-    #[doc = "Checks if the value of the field is `ABRT_SLVRD_INTX_GENERATED`"]
+    #[doc = "Slave trying to transmit to remote master in read mode"]
     #[inline(always)]
     pub fn is_abrt_slvrd_intx_generated(&self) -> bool {
         *self == ABRT_SLVRD_INTX_A::ABRT_SLVRD_INTX_GENERATED
@@ -784,18 +771,18 @@ impl From<ABRT_USER_ABRT_A> for bool {
 impl ABRT_USER_ABRT_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> ABRT_USER_ABRT_A {
+    pub const fn variant(&self) -> ABRT_USER_ABRT_A {
         match self.bits {
             false => ABRT_USER_ABRT_A::ABRT_USER_ABRT_VOID,
             true => ABRT_USER_ABRT_A::ABRT_USER_ABRT_GENERATED,
         }
     }
-    #[doc = "Checks if the value of the field is `ABRT_USER_ABRT_VOID`"]
+    #[doc = "Transfer abort detected by master- scenario not present"]
     #[inline(always)]
     pub fn is_abrt_user_abrt_void(&self) -> bool {
         *self == ABRT_USER_ABRT_A::ABRT_USER_ABRT_VOID
     }
-    #[doc = "Checks if the value of the field is `ABRT_USER_ABRT_GENERATED`"]
+    #[doc = "Transfer abort detected by master"]
     #[inline(always)]
     pub fn is_abrt_user_abrt_generated(&self) -> bool {
         *self == ABRT_USER_ABRT_A::ABRT_USER_ABRT_GENERATED
@@ -980,18 +967,14 @@ is set at the same time. Note: Even though the slave never 'owns' the bus, somet
 
  Once the source of the ABRT_SBYTE_NORSTRT is fixed, then this bit can be cleared in the same manner as other bits in this register. If the source of the ABRT_SBYTE_NORSTRT is not fixed before attempting to clear this bit, Bit 9 clears for one cycle and is then re-asserted.  
 
-This register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
-
-For information about available fields see [ic_tx_abrt_source](index.html) module"]
+You can [`read`](crate::generic::Reg::read) this register and get [`ic_tx_abrt_source::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct IC_TX_ABRT_SOURCE_SPEC;
 impl crate::RegisterSpec for IC_TX_ABRT_SOURCE_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [ic_tx_abrt_source::R](R) reader structure"]
-impl crate::Readable for IC_TX_ABRT_SOURCE_SPEC {
-    type Reader = R;
-}
+#[doc = "`read()` method returns [`ic_tx_abrt_source::R`](R) reader structure"]
+impl crate::Readable for IC_TX_ABRT_SOURCE_SPEC {}
 #[doc = "`reset()` method sets IC_TX_ABRT_SOURCE to value 0"]
 impl crate::Resettable for IC_TX_ABRT_SOURCE_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

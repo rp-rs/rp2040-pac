@@ -1,18 +1,5 @@
 #[doc = "Register `SOF_RD` reader"]
-pub struct R(crate::R<SOF_RD_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<SOF_RD_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<SOF_RD_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<SOF_RD_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<SOF_RD_SPEC>;
 #[doc = "Field `COUNT` reader - "]
 pub type COUNT_R = crate::FieldReader<u16>;
 impl R {
@@ -24,18 +11,14 @@ impl R {
 }
 #[doc = "Read the last SOF (Start of Frame) frame number seen. In device mode the last SOF received from the host. In host mode the last SOF sent by the host.  
 
-This register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
-
-For information about available fields see [sof_rd](index.html) module"]
+You can [`read`](crate::generic::Reg::read) this register and get [`sof_rd::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct SOF_RD_SPEC;
 impl crate::RegisterSpec for SOF_RD_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [sof_rd::R](R) reader structure"]
-impl crate::Readable for SOF_RD_SPEC {
-    type Reader = R;
-}
+#[doc = "`read()` method returns [`sof_rd::R`](R) reader structure"]
+impl crate::Readable for SOF_RD_SPEC {}
 #[doc = "`reset()` method sets SOF_RD to value 0"]
 impl crate::Resettable for SOF_RD_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

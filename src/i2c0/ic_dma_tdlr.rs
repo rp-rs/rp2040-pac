@@ -1,39 +1,7 @@
 #[doc = "Register `IC_DMA_TDLR` reader"]
-pub struct R(crate::R<IC_DMA_TDLR_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<IC_DMA_TDLR_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<IC_DMA_TDLR_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<IC_DMA_TDLR_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<IC_DMA_TDLR_SPEC>;
 #[doc = "Register `IC_DMA_TDLR` writer"]
-pub struct W(crate::W<IC_DMA_TDLR_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<IC_DMA_TDLR_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<IC_DMA_TDLR_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<IC_DMA_TDLR_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<IC_DMA_TDLR_SPEC>;
 #[doc = "Field `DMATDL` reader - Transmit Data Level. This bit field controls the level at which a DMA request is made by the transmit logic. It is equal to the watermark level; that is, the dma_tx_req signal is generated when the number of valid data entries in the transmit FIFO is equal to or below this field value, and TDMAE = 1.  
 
  Reset value: 0x0"]
@@ -41,7 +9,7 @@ pub type DMATDL_R = crate::FieldReader;
 #[doc = "Field `DMATDL` writer - Transmit Data Level. This bit field controls the level at which a DMA request is made by the transmit logic. It is equal to the watermark level; that is, the dma_tx_req signal is generated when the number of valid data entries in the transmit FIFO is equal to or below this field value, and TDMAE = 1.  
 
  Reset value: 0x0"]
-pub type DMATDL_W<'a, const O: u8> = crate::FieldWriter<'a, IC_DMA_TDLR_SPEC, 4, O>;
+pub type DMATDL_W<'a, REG> = crate::FieldWriter<'a, REG, 4>;
 impl R {
     #[doc = "Bits 0:3 - Transmit Data Level. This bit field controls the level at which a DMA request is made by the transmit logic. It is equal to the watermark level; that is, the dma_tx_req signal is generated when the number of valid data entries in the transmit FIFO is equal to or below this field value, and TDMAE = 1.  
 
@@ -57,36 +25,35 @@ impl W {
  Reset value: 0x0"]
     #[inline(always)]
     #[must_use]
-    pub fn dmatdl(&mut self) -> DMATDL_W<0> {
-        DMATDL_W::new(self)
+    pub fn dmatdl(&mut self) -> DMATDL_W<IC_DMA_TDLR_SPEC> {
+        DMATDL_W::new(self, 0)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
 #[doc = "DMA Transmit Data Level Register  
 
-This register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
-
-For information about available fields see [ic_dma_tdlr](index.html) module"]
+You can [`read`](crate::generic::Reg::read) this register and get [`ic_dma_tdlr::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`ic_dma_tdlr::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct IC_DMA_TDLR_SPEC;
 impl crate::RegisterSpec for IC_DMA_TDLR_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [ic_dma_tdlr::R](R) reader structure"]
-impl crate::Readable for IC_DMA_TDLR_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [ic_dma_tdlr::W](W) writer structure"]
+#[doc = "`read()` method returns [`ic_dma_tdlr::R`](R) reader structure"]
+impl crate::Readable for IC_DMA_TDLR_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`ic_dma_tdlr::W`](W) writer structure"]
 impl crate::Writable for IC_DMA_TDLR_SPEC {
-    type Writer = W;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets IC_DMA_TDLR to value 0"]
 impl crate::Resettable for IC_DMA_TDLR_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }
