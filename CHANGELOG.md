@@ -11,6 +11,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Add `host_poll_interval` field to EP\_CONTROL registers
 - add EPX\_CONTROL register to USBCTRL\_DPRAM
 - Rebuild with svdtools 0.3.1
+- Rebuild with svd2rust 0.31.5
+- Rebuild with form 0.11.1
+- Add `VSEL_A` field to VREG register
 
 ## [0.5.0] [Crates.io](https://crates.io/crates/rp2040-pac/0.5.0) [Github](https://github.com/rp-rs/rp2040-pac/releases/tag/v0.5.0)
 
