@@ -743,9 +743,11 @@ USBCTRL_DPRAM:
   _array:
     "EP*_IN_BUFFER_CONTROL,EP*_OUT_BUFFER_CONTROL":
         _start_from_zero: true
+        description: _original
         name: "EP_BUFFER_CONTROL%s"
     "EP*_IN_CONTROL,EP*_OUT_CONTROL":
         _start_from_zero: true
+        description: _original
         name: "EP_CONTROL%s"
 
   _copy:
