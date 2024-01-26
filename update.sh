@@ -25,7 +25,7 @@ fi
 rm -rf src
 mkdir src
 
-svd2rust -i svd/rp2040.svd.patched
+svd2rust -i svd/rp2040.svd.patched --reexport-core-peripherals
 
 form -i lib.rs -o src
 rm lib.rs
