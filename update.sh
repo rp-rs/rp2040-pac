@@ -5,11 +5,11 @@ SVDTOOLS="${SVDTOOLS:-svdtools}"
 
 set -ex
 
-cargo install --version 0.29.0 svd2rust
+cargo install --version 0.31.5 svd2rust
 cargo install --version 0.11.1  form
 rustup component add rustfmt
 if [ "$SVDTOOLS" == "svdtools" ]; then
-    cargo install --version 0.3.1 svdtools
+    cargo install --version 0.3.9 svdtools
 else
     python3 -mvenv --clear .venv
     source .venv/bin/activate
@@ -25,7 +25,7 @@ fi
 rm -rf src
 mkdir src
 
-svd2rust -i svd/rp2040.svd.patched
+svd2rust -i svd/rp2040.svd.patched --reexport-core-peripherals --reexport-interrupt
 
 form -i lib.rs -o src
 rm lib.rs

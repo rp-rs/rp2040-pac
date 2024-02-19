@@ -1,18 +1,5 @@
 #[doc = "Register `FC0_STATUS` reader"]
-pub struct R(crate::R<FC0_STATUS_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<FC0_STATUS_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<FC0_STATUS_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<FC0_STATUS_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<FC0_STATUS_SPEC>;
 #[doc = "Field `PASS` reader - Test passed"]
 pub type PASS_R = crate::BitReader;
 #[doc = "Field `DONE` reader - Test complete"]
@@ -73,18 +60,14 @@ impl R {
 }
 #[doc = "Frequency counter status  
 
-This register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
-
-For information about available fields see [fc0_status](index.html) module"]
+You can [`read`](crate::generic::Reg::read) this register and get [`fc0_status::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct FC0_STATUS_SPEC;
 impl crate::RegisterSpec for FC0_STATUS_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [fc0_status::R](R) reader structure"]
-impl crate::Readable for FC0_STATUS_SPEC {
-    type Reader = R;
-}
+#[doc = "`read()` method returns [`fc0_status::R`](R) reader structure"]
+impl crate::Readable for FC0_STATUS_SPEC {}
 #[doc = "`reset()` method sets FC0_STATUS to value 0"]
 impl crate::Resettable for FC0_STATUS_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

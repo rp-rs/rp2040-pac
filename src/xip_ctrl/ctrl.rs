@@ -1,39 +1,7 @@
 #[doc = "Register `CTRL` reader"]
-pub struct R(crate::R<CTRL_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<CTRL_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<CTRL_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<CTRL_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<CTRL_SPEC>;
 #[doc = "Register `CTRL` writer"]
-pub struct W(crate::W<CTRL_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<CTRL_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<CTRL_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<CTRL_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<CTRL_SPEC>;
 #[doc = "Field `EN` reader - When 1, enable the cache. When the cache is disabled, all XIP accesses  
  will go straight to the flash, without querying the cache. When enabled,  
  cacheable XIP accesses will query the cache, and the flash will  
@@ -49,7 +17,7 @@ pub type EN_R = crate::BitReader;
 
  If the cache is enabled, cache-as-SRAM accesses have no effect on the  
  cache data RAM, and will produce a bus error response."]
-pub type EN_W<'a, const O: u8> = crate::BitWriter<'a, CTRL_SPEC, O>;
+pub type EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `ERR_BADWRITE` reader - When 1, writes to any alias other than 0x0 (caching, allocating)  
  will produce a bus fault. When 0, these writes are silently ignored.  
  In either case, writes to the 0x0 alias will deallocate on tag match,  
@@ -59,7 +27,7 @@ pub type ERR_BADWRITE_R = crate::BitReader;
  will produce a bus fault. When 0, these writes are silently ignored.  
  In either case, writes to the 0x0 alias will deallocate on tag match,  
  as usual."]
-pub type ERR_BADWRITE_W<'a, const O: u8> = crate::BitWriter<'a, CTRL_SPEC, O>;
+pub type ERR_BADWRITE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `POWER_DOWN` reader - When 1, the cache memories are powered down. They retain state,  
  but can not be accessed. This reduces static power dissipation.  
  Writing 1 to this bit forces CTRL_EN to 0, i.e. the cache cannot  
@@ -73,7 +41,7 @@ pub type POWER_DOWN_R = crate::BitReader;
  be enabled when powered down.  
  Cache-as-SRAM accesses will produce a bus error response when  
  the cache is powered down."]
-pub type POWER_DOWN_W<'a, const O: u8> = crate::BitWriter<'a, CTRL_SPEC, O>;
+pub type POWER_DOWN_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - When 1, enable the cache. When the cache is disabled, all XIP accesses  
  will go straight to the flash, without querying the cache. When enabled,  
@@ -115,8 +83,8 @@ impl W {
  cache data RAM, and will produce a bus error response."]
     #[inline(always)]
     #[must_use]
-    pub fn en(&mut self) -> EN_W<0> {
-        EN_W::new(self)
+    pub fn en(&mut self) -> EN_W<CTRL_SPEC> {
+        EN_W::new(self, 0)
     }
     #[doc = "Bit 1 - When 1, writes to any alias other than 0x0 (caching, allocating)  
  will produce a bus fault. When 0, these writes are silently ignored.  
@@ -124,8 +92,8 @@ impl W {
  as usual."]
     #[inline(always)]
     #[must_use]
-    pub fn err_badwrite(&mut self) -> ERR_BADWRITE_W<1> {
-        ERR_BADWRITE_W::new(self)
+    pub fn err_badwrite(&mut self) -> ERR_BADWRITE_W<CTRL_SPEC> {
+        ERR_BADWRITE_W::new(self, 1)
     }
     #[doc = "Bit 3 - When 1, the cache memories are powered down. They retain state,  
  but can not be accessed. This reduces static power dissipation.  
@@ -135,36 +103,35 @@ impl W {
  the cache is powered down."]
     #[inline(always)]
     #[must_use]
-    pub fn power_down(&mut self) -> POWER_DOWN_W<3> {
-        POWER_DOWN_W::new(self)
+    pub fn power_down(&mut self) -> POWER_DOWN_W<CTRL_SPEC> {
+        POWER_DOWN_W::new(self, 3)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
 #[doc = "Cache control  
 
-This register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
-
-For information about available fields see [ctrl](index.html) module"]
+You can [`read`](crate::generic::Reg::read) this register and get [`ctrl::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`ctrl::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct CTRL_SPEC;
 impl crate::RegisterSpec for CTRL_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [ctrl::R](R) reader structure"]
-impl crate::Readable for CTRL_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [ctrl::W](W) writer structure"]
+#[doc = "`read()` method returns [`ctrl::R`](R) reader structure"]
+impl crate::Readable for CTRL_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`ctrl::W`](W) writer structure"]
 impl crate::Writable for CTRL_SPEC {
-    type Writer = W;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets CTRL to value 0x03"]
 impl crate::Resettable for CTRL_SPEC {
-    const RESET_VALUE: Self::Ux = 0x03;
+    const RESET_VALUE: u32 = 0x03;
 }

@@ -1,18 +1,5 @@
 #[doc = "Register `UARTPCELLID3` reader"]
-pub struct R(crate::R<UARTPCELLID3_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<UARTPCELLID3_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<UARTPCELLID3_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<UARTPCELLID3_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<UARTPCELLID3_SPEC>;
 #[doc = "Field `UARTPCELLID3` reader - These bits read back as 0xB1"]
 pub type UARTPCELLID3_R = crate::FieldReader;
 impl R {
@@ -24,18 +11,14 @@ impl R {
 }
 #[doc = "UARTPCellID3 Register  
 
-This register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
-
-For information about available fields see [uartpcellid3](index.html) module"]
+You can [`read`](crate::generic::Reg::read) this register and get [`uartpcellid3::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct UARTPCELLID3_SPEC;
 impl crate::RegisterSpec for UARTPCELLID3_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [uartpcellid3::R](R) reader structure"]
-impl crate::Readable for UARTPCELLID3_SPEC {
-    type Reader = R;
-}
+#[doc = "`read()` method returns [`uartpcellid3::R`](R) reader structure"]
+impl crate::Readable for UARTPCELLID3_SPEC {}
 #[doc = "`reset()` method sets UARTPCELLID3 to value 0xb1"]
 impl crate::Resettable for UARTPCELLID3_SPEC {
-    const RESET_VALUE: Self::Ux = 0xb1;
+    const RESET_VALUE: u32 = 0xb1;
 }

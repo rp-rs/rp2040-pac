@@ -1,18 +1,5 @@
 #[doc = "Register `DONE` reader"]
-pub struct R(crate::R<DONE_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<DONE_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<DONE_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<DONE_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<DONE_SPEC>;
 #[doc = "Field `rosc` reader - "]
 pub type ROSC_R = crate::BitReader;
 #[doc = "Field `xosc` reader - "]
@@ -136,18 +123,14 @@ impl R {
 }
 #[doc = "Indicates the peripheral's registers are ready to access.  
 
-This register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
-
-For information about available fields see [done](index.html) module"]
+You can [`read`](crate::generic::Reg::read) this register and get [`done::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct DONE_SPEC;
 impl crate::RegisterSpec for DONE_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [done::R](R) reader structure"]
-impl crate::Readable for DONE_SPEC {
-    type Reader = R;
-}
+#[doc = "`read()` method returns [`done::R`](R) reader structure"]
+impl crate::Readable for DONE_SPEC {}
 #[doc = "`reset()` method sets DONE to value 0"]
 impl crate::Resettable for DONE_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

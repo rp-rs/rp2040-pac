@@ -1,18 +1,5 @@
 #[doc = "Register `N_CHANNELS` reader"]
-pub struct R(crate::R<N_CHANNELS_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<N_CHANNELS_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<N_CHANNELS_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<N_CHANNELS_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<N_CHANNELS_SPEC>;
 #[doc = "Field `N_CHANNELS` reader - "]
 pub type N_CHANNELS_R = crate::FieldReader;
 impl R {
@@ -24,18 +11,14 @@ impl R {
 }
 #[doc = "The number of channels this DMA instance is equipped with. This DMA supports up to 16 hardware channels, but can be configured with as few as one, to minimise silicon area.  
 
-This register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
-
-For information about available fields see [n_channels](index.html) module"]
+You can [`read`](crate::generic::Reg::read) this register and get [`n_channels::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct N_CHANNELS_SPEC;
 impl crate::RegisterSpec for N_CHANNELS_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [n_channels::R](R) reader structure"]
-impl crate::Readable for N_CHANNELS_SPEC {
-    type Reader = R;
-}
+#[doc = "`read()` method returns [`n_channels::R`](R) reader structure"]
+impl crate::Readable for N_CHANNELS_SPEC {}
 #[doc = "`reset()` method sets N_CHANNELS to value 0"]
 impl crate::Resettable for N_CHANNELS_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

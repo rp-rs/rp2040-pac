@@ -1,45 +1,13 @@
 #[doc = "Register `CH_AL3_CTRL` reader"]
-pub struct R(crate::R<CH_AL3_CTRL_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<CH_AL3_CTRL_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<CH_AL3_CTRL_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<CH_AL3_CTRL_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<CH_AL3_CTRL_SPEC>;
 #[doc = "Register `CH_AL3_CTRL` writer"]
-pub struct W(crate::W<CH_AL3_CTRL_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<CH_AL3_CTRL_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<CH_AL3_CTRL_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<CH_AL3_CTRL_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<CH_AL3_CTRL_SPEC>;
 #[doc = "Field `EN` reader - DMA Channel Enable.  
  When 1, the channel will respond to triggering events, which will cause it to become BUSY and start transferring data. When 0, the channel will ignore triggers, stop issuing transfers, and pause the current transfer sequence (i.e. BUSY will remain high if already high)"]
 pub type EN_R = crate::BitReader;
 #[doc = "Field `EN` writer - DMA Channel Enable.  
  When 1, the channel will respond to triggering events, which will cause it to become BUSY and start transferring data. When 0, the channel will ignore triggers, stop issuing transfers, and pause the current transfer sequence (i.e. BUSY will remain high if already high)"]
-pub type EN_W<'a, const O: u8> = crate::BitWriter<'a, CH_AL3_CTRL_SPEC, O>;
+pub type EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `HIGH_PRIORITY` reader - HIGH_PRIORITY gives a channel preferential treatment in issue scheduling: in each scheduling round, all high priority channels are considered first, and then only a single low priority channel, before returning to the high priority channels.  
 
  This only affects the order in which the DMA schedules channels. The DMA's bus priority is not changed. If the DMA is not saturated then a low priority channel will see no loss of throughput."]
@@ -47,7 +15,7 @@ pub type HIGH_PRIORITY_R = crate::BitReader;
 #[doc = "Field `HIGH_PRIORITY` writer - HIGH_PRIORITY gives a channel preferential treatment in issue scheduling: in each scheduling round, all high priority channels are considered first, and then only a single low priority channel, before returning to the high priority channels.  
 
  This only affects the order in which the DMA schedules channels. The DMA's bus priority is not changed. If the DMA is not saturated then a low priority channel will see no loss of throughput."]
-pub type HIGH_PRIORITY_W<'a, const O: u8> = crate::BitWriter<'a, CH_AL3_CTRL_SPEC, O>;
+pub type HIGH_PRIORITY_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `DATA_SIZE` reader - Set the size of each bus transfer (byte/halfword/word). READ_ADDR and WRITE_ADDR advance by this amount (1/2/4 bytes) with each transfer."]
 pub type DATA_SIZE_R = crate::FieldReader<DATA_SIZE_A>;
 #[doc = "Set the size of each bus transfer (byte/halfword/word). READ_ADDR and WRITE_ADDR advance by this amount (1/2/4 bytes) with each transfer.  
@@ -75,7 +43,7 @@ impl crate::FieldSpec for DATA_SIZE_A {
 impl DATA_SIZE_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> Option<DATA_SIZE_A> {
+    pub const fn variant(&self) -> Option<DATA_SIZE_A> {
         match self.bits {
             0 => Some(DATA_SIZE_A::SIZE_BYTE),
             1 => Some(DATA_SIZE_A::SIZE_HALFWORD),
@@ -83,38 +51,42 @@ impl DATA_SIZE_R {
             _ => None,
         }
     }
-    #[doc = "Checks if the value of the field is `SIZE_BYTE`"]
+    #[doc = "`0`"]
     #[inline(always)]
     pub fn is_size_byte(&self) -> bool {
         *self == DATA_SIZE_A::SIZE_BYTE
     }
-    #[doc = "Checks if the value of the field is `SIZE_HALFWORD`"]
+    #[doc = "`1`"]
     #[inline(always)]
     pub fn is_size_halfword(&self) -> bool {
         *self == DATA_SIZE_A::SIZE_HALFWORD
     }
-    #[doc = "Checks if the value of the field is `SIZE_WORD`"]
+    #[doc = "`10`"]
     #[inline(always)]
     pub fn is_size_word(&self) -> bool {
         *self == DATA_SIZE_A::SIZE_WORD
     }
 }
 #[doc = "Field `DATA_SIZE` writer - Set the size of each bus transfer (byte/halfword/word). READ_ADDR and WRITE_ADDR advance by this amount (1/2/4 bytes) with each transfer."]
-pub type DATA_SIZE_W<'a, const O: u8> = crate::FieldWriter<'a, CH_AL3_CTRL_SPEC, 2, O, DATA_SIZE_A>;
-impl<'a, const O: u8> DATA_SIZE_W<'a, O> {
+pub type DATA_SIZE_W<'a, REG> = crate::FieldWriter<'a, REG, 2, DATA_SIZE_A>;
+impl<'a, REG> DATA_SIZE_W<'a, REG>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+    REG::Ux: From<u8>,
+{
     #[doc = "`0`"]
     #[inline(always)]
-    pub fn size_byte(self) -> &'a mut W {
+    pub fn size_byte(self) -> &'a mut crate::W<REG> {
         self.variant(DATA_SIZE_A::SIZE_BYTE)
     }
     #[doc = "`1`"]
     #[inline(always)]
-    pub fn size_halfword(self) -> &'a mut W {
+    pub fn size_halfword(self) -> &'a mut crate::W<REG> {
         self.variant(DATA_SIZE_A::SIZE_HALFWORD)
     }
     #[doc = "`10`"]
     #[inline(always)]
-    pub fn size_word(self) -> &'a mut W {
+    pub fn size_word(self) -> &'a mut crate::W<REG> {
         self.variant(DATA_SIZE_A::SIZE_WORD)
     }
 }
@@ -125,7 +97,7 @@ pub type INCR_READ_R = crate::BitReader;
 #[doc = "Field `INCR_READ` writer - If 1, the read address increments with each transfer. If 0, each read is directed to the same, initial address.  
 
  Generally this should be disabled for peripheral-to-memory transfers."]
-pub type INCR_READ_W<'a, const O: u8> = crate::BitWriter<'a, CH_AL3_CTRL_SPEC, O>;
+pub type INCR_READ_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `INCR_WRITE` reader - If 1, the write address increments with each transfer. If 0, each write is directed to the same, initial address.  
 
  Generally this should be disabled for memory-to-peripheral transfers."]
@@ -133,7 +105,7 @@ pub type INCR_WRITE_R = crate::BitReader;
 #[doc = "Field `INCR_WRITE` writer - If 1, the write address increments with each transfer. If 0, each write is directed to the same, initial address.  
 
  Generally this should be disabled for memory-to-peripheral transfers."]
-pub type INCR_WRITE_W<'a, const O: u8> = crate::BitWriter<'a, CH_AL3_CTRL_SPEC, O>;
+pub type INCR_WRITE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RING_SIZE` reader - Size of address wrap region. If 0, don't wrap. For values n > 0, only the lower n bits of the address will change. This wraps the address on a (1 &lt;&lt; n) byte boundary, facilitating access to naturally-aligned ring buffers.  
 
  Ring sizes between 2 and 32768 bytes are possible. This can apply to either read or write addresses, based on value of RING_SEL."]
@@ -161,13 +133,13 @@ impl crate::FieldSpec for RING_SIZE_A {
 impl RING_SIZE_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> Option<RING_SIZE_A> {
+    pub const fn variant(&self) -> Option<RING_SIZE_A> {
         match self.bits {
             0 => Some(RING_SIZE_A::RING_NONE),
             _ => None,
         }
     }
-    #[doc = "Checks if the value of the field is `RING_NONE`"]
+    #[doc = "`0`"]
     #[inline(always)]
     pub fn is_ring_none(&self) -> bool {
         *self == RING_SIZE_A::RING_NONE
@@ -176,11 +148,15 @@ impl RING_SIZE_R {
 #[doc = "Field `RING_SIZE` writer - Size of address wrap region. If 0, don't wrap. For values n > 0, only the lower n bits of the address will change. This wraps the address on a (1 &lt;&lt; n) byte boundary, facilitating access to naturally-aligned ring buffers.  
 
  Ring sizes between 2 and 32768 bytes are possible. This can apply to either read or write addresses, based on value of RING_SEL."]
-pub type RING_SIZE_W<'a, const O: u8> = crate::FieldWriter<'a, CH_AL3_CTRL_SPEC, 4, O, RING_SIZE_A>;
-impl<'a, const O: u8> RING_SIZE_W<'a, O> {
+pub type RING_SIZE_W<'a, REG> = crate::FieldWriter<'a, REG, 4, RING_SIZE_A>;
+impl<'a, REG> RING_SIZE_W<'a, REG>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+    REG::Ux: From<u8>,
+{
     #[doc = "`0`"]
     #[inline(always)]
-    pub fn ring_none(self) -> &'a mut W {
+    pub fn ring_none(self) -> &'a mut crate::W<REG> {
         self.variant(RING_SIZE_A::RING_NONE)
     }
 }
@@ -189,13 +165,13 @@ impl<'a, const O: u8> RING_SIZE_W<'a, O> {
 pub type RING_SEL_R = crate::BitReader;
 #[doc = "Field `RING_SEL` writer - Select whether RING_SIZE applies to read or write addresses.  
  If 0, read addresses are wrapped on a (1 &lt;&lt; RING_SIZE) boundary. If 1, write addresses are wrapped."]
-pub type RING_SEL_W<'a, const O: u8> = crate::BitWriter<'a, CH_AL3_CTRL_SPEC, O>;
+pub type RING_SEL_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `CHAIN_TO` reader - When this channel completes, it will trigger the channel indicated by CHAIN_TO. Disable by setting CHAIN_TO = _(this channel)_.   
  Reset value is 0, which means for channels 1 and above the default will be to chain to channel 0 - set this field to avoid this behaviour."]
 pub type CHAIN_TO_R = crate::FieldReader;
 #[doc = "Field `CHAIN_TO` writer - When this channel completes, it will trigger the channel indicated by CHAIN_TO. Disable by setting CHAIN_TO = _(this channel)_.   
  Reset value is 0, which means for channels 1 and above the default will be to chain to channel 0 - set this field to avoid this behaviour."]
-pub type CHAIN_TO_W<'a, const O: u8> = crate::FieldWriter<'a, CH_AL3_CTRL_SPEC, 4, O>;
+pub type CHAIN_TO_W<'a, REG> = crate::FieldWriter<'a, REG, 4>;
 #[doc = "Field `TREQ_SEL` reader - Select a Transfer Request signal.  
  The channel uses the transfer request signal to pace its data transfer rate. Sources for TREQ signals are internal (TIMERS) or external (DREQ, a Data Request from the system).  
  0x0 to 0x3a -> select DREQ n as TREQ"]
@@ -311,7 +287,7 @@ impl crate::FieldSpec for TREQ_SEL_A {
 impl TREQ_SEL_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> Option<TREQ_SEL_A> {
+    pub const fn variant(&self) -> Option<TREQ_SEL_A> {
         match self.bits {
             0 => Some(TREQ_SEL_A::PIO0_TX0),
             1 => Some(TREQ_SEL_A::PIO0_TX1),
@@ -361,227 +337,227 @@ impl TREQ_SEL_R {
             _ => None,
         }
     }
-    #[doc = "Checks if the value of the field is `PIO0_TX0`"]
+    #[doc = "Select PIO0's TX FIFO 0 as TREQ"]
     #[inline(always)]
     pub fn is_pio0_tx0(&self) -> bool {
         *self == TREQ_SEL_A::PIO0_TX0
     }
-    #[doc = "Checks if the value of the field is `PIO0_TX1`"]
+    #[doc = "Select PIO0's TX FIFO 1 as TREQ"]
     #[inline(always)]
     pub fn is_pio0_tx1(&self) -> bool {
         *self == TREQ_SEL_A::PIO0_TX1
     }
-    #[doc = "Checks if the value of the field is `PIO0_TX2`"]
+    #[doc = "Select PIO0's TX FIFO 2 as TREQ"]
     #[inline(always)]
     pub fn is_pio0_tx2(&self) -> bool {
         *self == TREQ_SEL_A::PIO0_TX2
     }
-    #[doc = "Checks if the value of the field is `PIO0_TX3`"]
+    #[doc = "Select PIO0's TX FIFO 3 as TREQ"]
     #[inline(always)]
     pub fn is_pio0_tx3(&self) -> bool {
         *self == TREQ_SEL_A::PIO0_TX3
     }
-    #[doc = "Checks if the value of the field is `PIO0_RX0`"]
+    #[doc = "Select PIO0's RX FIFO 0 as TREQ"]
     #[inline(always)]
     pub fn is_pio0_rx0(&self) -> bool {
         *self == TREQ_SEL_A::PIO0_RX0
     }
-    #[doc = "Checks if the value of the field is `PIO0_RX1`"]
+    #[doc = "Select PIO0's RX FIFO 1 as TREQ"]
     #[inline(always)]
     pub fn is_pio0_rx1(&self) -> bool {
         *self == TREQ_SEL_A::PIO0_RX1
     }
-    #[doc = "Checks if the value of the field is `PIO0_RX2`"]
+    #[doc = "Select PIO0's RX FIFO 2 as TREQ"]
     #[inline(always)]
     pub fn is_pio0_rx2(&self) -> bool {
         *self == TREQ_SEL_A::PIO0_RX2
     }
-    #[doc = "Checks if the value of the field is `PIO0_RX3`"]
+    #[doc = "Select PIO0's RX FIFO 3 as TREQ"]
     #[inline(always)]
     pub fn is_pio0_rx3(&self) -> bool {
         *self == TREQ_SEL_A::PIO0_RX3
     }
-    #[doc = "Checks if the value of the field is `PIO1_TX0`"]
+    #[doc = "Select PIO1's TX FIFO 0 as TREQ"]
     #[inline(always)]
     pub fn is_pio1_tx0(&self) -> bool {
         *self == TREQ_SEL_A::PIO1_TX0
     }
-    #[doc = "Checks if the value of the field is `PIO1_TX1`"]
+    #[doc = "Select PIO1's TX FIFO 1 as TREQ"]
     #[inline(always)]
     pub fn is_pio1_tx1(&self) -> bool {
         *self == TREQ_SEL_A::PIO1_TX1
     }
-    #[doc = "Checks if the value of the field is `PIO1_TX2`"]
+    #[doc = "Select PIO1's TX FIFO 2 as TREQ"]
     #[inline(always)]
     pub fn is_pio1_tx2(&self) -> bool {
         *self == TREQ_SEL_A::PIO1_TX2
     }
-    #[doc = "Checks if the value of the field is `PIO1_TX3`"]
+    #[doc = "Select PIO1's TX FIFO 3 as TREQ"]
     #[inline(always)]
     pub fn is_pio1_tx3(&self) -> bool {
         *self == TREQ_SEL_A::PIO1_TX3
     }
-    #[doc = "Checks if the value of the field is `PIO1_RX0`"]
+    #[doc = "Select PIO1's RX FIFO 0 as TREQ"]
     #[inline(always)]
     pub fn is_pio1_rx0(&self) -> bool {
         *self == TREQ_SEL_A::PIO1_RX0
     }
-    #[doc = "Checks if the value of the field is `PIO1_RX1`"]
+    #[doc = "Select PIO1's RX FIFO 1 as TREQ"]
     #[inline(always)]
     pub fn is_pio1_rx1(&self) -> bool {
         *self == TREQ_SEL_A::PIO1_RX1
     }
-    #[doc = "Checks if the value of the field is `PIO1_RX2`"]
+    #[doc = "Select PIO1's RX FIFO 2 as TREQ"]
     #[inline(always)]
     pub fn is_pio1_rx2(&self) -> bool {
         *self == TREQ_SEL_A::PIO1_RX2
     }
-    #[doc = "Checks if the value of the field is `PIO1_RX3`"]
+    #[doc = "Select PIO1's RX FIFO 3 as TREQ"]
     #[inline(always)]
     pub fn is_pio1_rx3(&self) -> bool {
         *self == TREQ_SEL_A::PIO1_RX3
     }
-    #[doc = "Checks if the value of the field is `SPI0_TX`"]
+    #[doc = "Select SPI0's TX FIFO as TREQ"]
     #[inline(always)]
     pub fn is_spi0_tx(&self) -> bool {
         *self == TREQ_SEL_A::SPI0_TX
     }
-    #[doc = "Checks if the value of the field is `SPI0_RX`"]
+    #[doc = "Select SPI0's RX FIFO as TREQ"]
     #[inline(always)]
     pub fn is_spi0_rx(&self) -> bool {
         *self == TREQ_SEL_A::SPI0_RX
     }
-    #[doc = "Checks if the value of the field is `SPI1_TX`"]
+    #[doc = "Select SPI1's TX FIFO as TREQ"]
     #[inline(always)]
     pub fn is_spi1_tx(&self) -> bool {
         *self == TREQ_SEL_A::SPI1_TX
     }
-    #[doc = "Checks if the value of the field is `SPI1_RX`"]
+    #[doc = "Select SPI1's RX FIFO as TREQ"]
     #[inline(always)]
     pub fn is_spi1_rx(&self) -> bool {
         *self == TREQ_SEL_A::SPI1_RX
     }
-    #[doc = "Checks if the value of the field is `UART0_TX`"]
+    #[doc = "Select UART0's TX FIFO as TREQ"]
     #[inline(always)]
     pub fn is_uart0_tx(&self) -> bool {
         *self == TREQ_SEL_A::UART0_TX
     }
-    #[doc = "Checks if the value of the field is `UART0_RX`"]
+    #[doc = "Select UART0's RX FIFO as TREQ"]
     #[inline(always)]
     pub fn is_uart0_rx(&self) -> bool {
         *self == TREQ_SEL_A::UART0_RX
     }
-    #[doc = "Checks if the value of the field is `UART1_TX`"]
+    #[doc = "Select UART1's TX FIFO as TREQ"]
     #[inline(always)]
     pub fn is_uart1_tx(&self) -> bool {
         *self == TREQ_SEL_A::UART1_TX
     }
-    #[doc = "Checks if the value of the field is `UART1_RX`"]
+    #[doc = "Select UART1's RX FIFO as TREQ"]
     #[inline(always)]
     pub fn is_uart1_rx(&self) -> bool {
         *self == TREQ_SEL_A::UART1_RX
     }
-    #[doc = "Checks if the value of the field is `PWM_WRAP0`"]
+    #[doc = "Select PWM Counter 0's Wrap Value as TREQ"]
     #[inline(always)]
     pub fn is_pwm_wrap0(&self) -> bool {
         *self == TREQ_SEL_A::PWM_WRAP0
     }
-    #[doc = "Checks if the value of the field is `PWM_WRAP1`"]
+    #[doc = "Select PWM Counter 1's Wrap Value as TREQ"]
     #[inline(always)]
     pub fn is_pwm_wrap1(&self) -> bool {
         *self == TREQ_SEL_A::PWM_WRAP1
     }
-    #[doc = "Checks if the value of the field is `PWM_WRAP2`"]
+    #[doc = "Select PWM Counter 2's Wrap Value as TREQ"]
     #[inline(always)]
     pub fn is_pwm_wrap2(&self) -> bool {
         *self == TREQ_SEL_A::PWM_WRAP2
     }
-    #[doc = "Checks if the value of the field is `PWM_WRAP3`"]
+    #[doc = "Select PWM Counter 3's Wrap Value as TREQ"]
     #[inline(always)]
     pub fn is_pwm_wrap3(&self) -> bool {
         *self == TREQ_SEL_A::PWM_WRAP3
     }
-    #[doc = "Checks if the value of the field is `PWM_WRAP4`"]
+    #[doc = "Select PWM Counter 4's Wrap Value as TREQ"]
     #[inline(always)]
     pub fn is_pwm_wrap4(&self) -> bool {
         *self == TREQ_SEL_A::PWM_WRAP4
     }
-    #[doc = "Checks if the value of the field is `PWM_WRAP5`"]
+    #[doc = "Select PWM Counter 5's Wrap Value as TREQ"]
     #[inline(always)]
     pub fn is_pwm_wrap5(&self) -> bool {
         *self == TREQ_SEL_A::PWM_WRAP5
     }
-    #[doc = "Checks if the value of the field is `PWM_WRAP6`"]
+    #[doc = "Select PWM Counter 6's Wrap Value as TREQ"]
     #[inline(always)]
     pub fn is_pwm_wrap6(&self) -> bool {
         *self == TREQ_SEL_A::PWM_WRAP6
     }
-    #[doc = "Checks if the value of the field is `PWM_WRAP7`"]
+    #[doc = "Select PWM Counter 7's Wrap Value as TREQ"]
     #[inline(always)]
     pub fn is_pwm_wrap7(&self) -> bool {
         *self == TREQ_SEL_A::PWM_WRAP7
     }
-    #[doc = "Checks if the value of the field is `I2C0_TX`"]
+    #[doc = "Select I2C0's TX FIFO as TREQ"]
     #[inline(always)]
     pub fn is_i2c0_tx(&self) -> bool {
         *self == TREQ_SEL_A::I2C0_TX
     }
-    #[doc = "Checks if the value of the field is `I2C0_RX`"]
+    #[doc = "Select I2C0's RX FIFO as TREQ"]
     #[inline(always)]
     pub fn is_i2c0_rx(&self) -> bool {
         *self == TREQ_SEL_A::I2C0_RX
     }
-    #[doc = "Checks if the value of the field is `I2C1_TX`"]
+    #[doc = "Select I2C1's TX FIFO as TREQ"]
     #[inline(always)]
     pub fn is_i2c1_tx(&self) -> bool {
         *self == TREQ_SEL_A::I2C1_TX
     }
-    #[doc = "Checks if the value of the field is `I2C1_RX`"]
+    #[doc = "Select I2C1's RX FIFO as TREQ"]
     #[inline(always)]
     pub fn is_i2c1_rx(&self) -> bool {
         *self == TREQ_SEL_A::I2C1_RX
     }
-    #[doc = "Checks if the value of the field is `ADC`"]
+    #[doc = "Select the ADC as TREQ"]
     #[inline(always)]
     pub fn is_adc(&self) -> bool {
         *self == TREQ_SEL_A::ADC
     }
-    #[doc = "Checks if the value of the field is `XIP_STREAM`"]
+    #[doc = "Select the XIP Streaming FIFO as TREQ"]
     #[inline(always)]
     pub fn is_xip_stream(&self) -> bool {
         *self == TREQ_SEL_A::XIP_STREAM
     }
-    #[doc = "Checks if the value of the field is `XIP_SSITX`"]
+    #[doc = "Select the XIP SSI TX FIFO as TREQ"]
     #[inline(always)]
     pub fn is_xip_ssitx(&self) -> bool {
         *self == TREQ_SEL_A::XIP_SSITX
     }
-    #[doc = "Checks if the value of the field is `XIP_SSIRX`"]
+    #[doc = "Select the XIP SSI RX FIFO as TREQ"]
     #[inline(always)]
     pub fn is_xip_ssirx(&self) -> bool {
         *self == TREQ_SEL_A::XIP_SSIRX
     }
-    #[doc = "Checks if the value of the field is `TIMER0`"]
+    #[doc = "Select Timer 0 as TREQ"]
     #[inline(always)]
     pub fn is_timer0(&self) -> bool {
         *self == TREQ_SEL_A::TIMER0
     }
-    #[doc = "Checks if the value of the field is `TIMER1`"]
+    #[doc = "Select Timer 1 as TREQ"]
     #[inline(always)]
     pub fn is_timer1(&self) -> bool {
         *self == TREQ_SEL_A::TIMER1
     }
-    #[doc = "Checks if the value of the field is `TIMER2`"]
+    #[doc = "Select Timer 2 as TREQ (Optional)"]
     #[inline(always)]
     pub fn is_timer2(&self) -> bool {
         *self == TREQ_SEL_A::TIMER2
     }
-    #[doc = "Checks if the value of the field is `TIMER3`"]
+    #[doc = "Select Timer 3 as TREQ (Optional)"]
     #[inline(always)]
     pub fn is_timer3(&self) -> bool {
         *self == TREQ_SEL_A::TIMER3
     }
-    #[doc = "Checks if the value of the field is `PERMANENT`"]
+    #[doc = "Permanent request, for unpaced transfers."]
     #[inline(always)]
     pub fn is_permanent(&self) -> bool {
         *self == TREQ_SEL_A::PERMANENT
@@ -590,231 +566,235 @@ impl TREQ_SEL_R {
 #[doc = "Field `TREQ_SEL` writer - Select a Transfer Request signal.  
  The channel uses the transfer request signal to pace its data transfer rate. Sources for TREQ signals are internal (TIMERS) or external (DREQ, a Data Request from the system).  
  0x0 to 0x3a -> select DREQ n as TREQ"]
-pub type TREQ_SEL_W<'a, const O: u8> = crate::FieldWriter<'a, CH_AL3_CTRL_SPEC, 6, O, TREQ_SEL_A>;
-impl<'a, const O: u8> TREQ_SEL_W<'a, O> {
+pub type TREQ_SEL_W<'a, REG> = crate::FieldWriter<'a, REG, 6, TREQ_SEL_A>;
+impl<'a, REG> TREQ_SEL_W<'a, REG>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+    REG::Ux: From<u8>,
+{
     #[doc = "Select PIO0's TX FIFO 0 as TREQ"]
     #[inline(always)]
-    pub fn pio0_tx0(self) -> &'a mut W {
+    pub fn pio0_tx0(self) -> &'a mut crate::W<REG> {
         self.variant(TREQ_SEL_A::PIO0_TX0)
     }
     #[doc = "Select PIO0's TX FIFO 1 as TREQ"]
     #[inline(always)]
-    pub fn pio0_tx1(self) -> &'a mut W {
+    pub fn pio0_tx1(self) -> &'a mut crate::W<REG> {
         self.variant(TREQ_SEL_A::PIO0_TX1)
     }
     #[doc = "Select PIO0's TX FIFO 2 as TREQ"]
     #[inline(always)]
-    pub fn pio0_tx2(self) -> &'a mut W {
+    pub fn pio0_tx2(self) -> &'a mut crate::W<REG> {
         self.variant(TREQ_SEL_A::PIO0_TX2)
     }
     #[doc = "Select PIO0's TX FIFO 3 as TREQ"]
     #[inline(always)]
-    pub fn pio0_tx3(self) -> &'a mut W {
+    pub fn pio0_tx3(self) -> &'a mut crate::W<REG> {
         self.variant(TREQ_SEL_A::PIO0_TX3)
     }
     #[doc = "Select PIO0's RX FIFO 0 as TREQ"]
     #[inline(always)]
-    pub fn pio0_rx0(self) -> &'a mut W {
+    pub fn pio0_rx0(self) -> &'a mut crate::W<REG> {
         self.variant(TREQ_SEL_A::PIO0_RX0)
     }
     #[doc = "Select PIO0's RX FIFO 1 as TREQ"]
     #[inline(always)]
-    pub fn pio0_rx1(self) -> &'a mut W {
+    pub fn pio0_rx1(self) -> &'a mut crate::W<REG> {
         self.variant(TREQ_SEL_A::PIO0_RX1)
     }
     #[doc = "Select PIO0's RX FIFO 2 as TREQ"]
     #[inline(always)]
-    pub fn pio0_rx2(self) -> &'a mut W {
+    pub fn pio0_rx2(self) -> &'a mut crate::W<REG> {
         self.variant(TREQ_SEL_A::PIO0_RX2)
     }
     #[doc = "Select PIO0's RX FIFO 3 as TREQ"]
     #[inline(always)]
-    pub fn pio0_rx3(self) -> &'a mut W {
+    pub fn pio0_rx3(self) -> &'a mut crate::W<REG> {
         self.variant(TREQ_SEL_A::PIO0_RX3)
     }
     #[doc = "Select PIO1's TX FIFO 0 as TREQ"]
     #[inline(always)]
-    pub fn pio1_tx0(self) -> &'a mut W {
+    pub fn pio1_tx0(self) -> &'a mut crate::W<REG> {
         self.variant(TREQ_SEL_A::PIO1_TX0)
     }
     #[doc = "Select PIO1's TX FIFO 1 as TREQ"]
     #[inline(always)]
-    pub fn pio1_tx1(self) -> &'a mut W {
+    pub fn pio1_tx1(self) -> &'a mut crate::W<REG> {
         self.variant(TREQ_SEL_A::PIO1_TX1)
     }
     #[doc = "Select PIO1's TX FIFO 2 as TREQ"]
     #[inline(always)]
-    pub fn pio1_tx2(self) -> &'a mut W {
+    pub fn pio1_tx2(self) -> &'a mut crate::W<REG> {
         self.variant(TREQ_SEL_A::PIO1_TX2)
     }
     #[doc = "Select PIO1's TX FIFO 3 as TREQ"]
     #[inline(always)]
-    pub fn pio1_tx3(self) -> &'a mut W {
+    pub fn pio1_tx3(self) -> &'a mut crate::W<REG> {
         self.variant(TREQ_SEL_A::PIO1_TX3)
     }
     #[doc = "Select PIO1's RX FIFO 0 as TREQ"]
     #[inline(always)]
-    pub fn pio1_rx0(self) -> &'a mut W {
+    pub fn pio1_rx0(self) -> &'a mut crate::W<REG> {
         self.variant(TREQ_SEL_A::PIO1_RX0)
     }
     #[doc = "Select PIO1's RX FIFO 1 as TREQ"]
     #[inline(always)]
-    pub fn pio1_rx1(self) -> &'a mut W {
+    pub fn pio1_rx1(self) -> &'a mut crate::W<REG> {
         self.variant(TREQ_SEL_A::PIO1_RX1)
     }
     #[doc = "Select PIO1's RX FIFO 2 as TREQ"]
     #[inline(always)]
-    pub fn pio1_rx2(self) -> &'a mut W {
+    pub fn pio1_rx2(self) -> &'a mut crate::W<REG> {
         self.variant(TREQ_SEL_A::PIO1_RX2)
     }
     #[doc = "Select PIO1's RX FIFO 3 as TREQ"]
     #[inline(always)]
-    pub fn pio1_rx3(self) -> &'a mut W {
+    pub fn pio1_rx3(self) -> &'a mut crate::W<REG> {
         self.variant(TREQ_SEL_A::PIO1_RX3)
     }
     #[doc = "Select SPI0's TX FIFO as TREQ"]
     #[inline(always)]
-    pub fn spi0_tx(self) -> &'a mut W {
+    pub fn spi0_tx(self) -> &'a mut crate::W<REG> {
         self.variant(TREQ_SEL_A::SPI0_TX)
     }
     #[doc = "Select SPI0's RX FIFO as TREQ"]
     #[inline(always)]
-    pub fn spi0_rx(self) -> &'a mut W {
+    pub fn spi0_rx(self) -> &'a mut crate::W<REG> {
         self.variant(TREQ_SEL_A::SPI0_RX)
     }
     #[doc = "Select SPI1's TX FIFO as TREQ"]
     #[inline(always)]
-    pub fn spi1_tx(self) -> &'a mut W {
+    pub fn spi1_tx(self) -> &'a mut crate::W<REG> {
         self.variant(TREQ_SEL_A::SPI1_TX)
     }
     #[doc = "Select SPI1's RX FIFO as TREQ"]
     #[inline(always)]
-    pub fn spi1_rx(self) -> &'a mut W {
+    pub fn spi1_rx(self) -> &'a mut crate::W<REG> {
         self.variant(TREQ_SEL_A::SPI1_RX)
     }
     #[doc = "Select UART0's TX FIFO as TREQ"]
     #[inline(always)]
-    pub fn uart0_tx(self) -> &'a mut W {
+    pub fn uart0_tx(self) -> &'a mut crate::W<REG> {
         self.variant(TREQ_SEL_A::UART0_TX)
     }
     #[doc = "Select UART0's RX FIFO as TREQ"]
     #[inline(always)]
-    pub fn uart0_rx(self) -> &'a mut W {
+    pub fn uart0_rx(self) -> &'a mut crate::W<REG> {
         self.variant(TREQ_SEL_A::UART0_RX)
     }
     #[doc = "Select UART1's TX FIFO as TREQ"]
     #[inline(always)]
-    pub fn uart1_tx(self) -> &'a mut W {
+    pub fn uart1_tx(self) -> &'a mut crate::W<REG> {
         self.variant(TREQ_SEL_A::UART1_TX)
     }
     #[doc = "Select UART1's RX FIFO as TREQ"]
     #[inline(always)]
-    pub fn uart1_rx(self) -> &'a mut W {
+    pub fn uart1_rx(self) -> &'a mut crate::W<REG> {
         self.variant(TREQ_SEL_A::UART1_RX)
     }
     #[doc = "Select PWM Counter 0's Wrap Value as TREQ"]
     #[inline(always)]
-    pub fn pwm_wrap0(self) -> &'a mut W {
+    pub fn pwm_wrap0(self) -> &'a mut crate::W<REG> {
         self.variant(TREQ_SEL_A::PWM_WRAP0)
     }
     #[doc = "Select PWM Counter 1's Wrap Value as TREQ"]
     #[inline(always)]
-    pub fn pwm_wrap1(self) -> &'a mut W {
+    pub fn pwm_wrap1(self) -> &'a mut crate::W<REG> {
         self.variant(TREQ_SEL_A::PWM_WRAP1)
     }
     #[doc = "Select PWM Counter 2's Wrap Value as TREQ"]
     #[inline(always)]
-    pub fn pwm_wrap2(self) -> &'a mut W {
+    pub fn pwm_wrap2(self) -> &'a mut crate::W<REG> {
         self.variant(TREQ_SEL_A::PWM_WRAP2)
     }
     #[doc = "Select PWM Counter 3's Wrap Value as TREQ"]
     #[inline(always)]
-    pub fn pwm_wrap3(self) -> &'a mut W {
+    pub fn pwm_wrap3(self) -> &'a mut crate::W<REG> {
         self.variant(TREQ_SEL_A::PWM_WRAP3)
     }
     #[doc = "Select PWM Counter 4's Wrap Value as TREQ"]
     #[inline(always)]
-    pub fn pwm_wrap4(self) -> &'a mut W {
+    pub fn pwm_wrap4(self) -> &'a mut crate::W<REG> {
         self.variant(TREQ_SEL_A::PWM_WRAP4)
     }
     #[doc = "Select PWM Counter 5's Wrap Value as TREQ"]
     #[inline(always)]
-    pub fn pwm_wrap5(self) -> &'a mut W {
+    pub fn pwm_wrap5(self) -> &'a mut crate::W<REG> {
         self.variant(TREQ_SEL_A::PWM_WRAP5)
     }
     #[doc = "Select PWM Counter 6's Wrap Value as TREQ"]
     #[inline(always)]
-    pub fn pwm_wrap6(self) -> &'a mut W {
+    pub fn pwm_wrap6(self) -> &'a mut crate::W<REG> {
         self.variant(TREQ_SEL_A::PWM_WRAP6)
     }
     #[doc = "Select PWM Counter 7's Wrap Value as TREQ"]
     #[inline(always)]
-    pub fn pwm_wrap7(self) -> &'a mut W {
+    pub fn pwm_wrap7(self) -> &'a mut crate::W<REG> {
         self.variant(TREQ_SEL_A::PWM_WRAP7)
     }
     #[doc = "Select I2C0's TX FIFO as TREQ"]
     #[inline(always)]
-    pub fn i2c0_tx(self) -> &'a mut W {
+    pub fn i2c0_tx(self) -> &'a mut crate::W<REG> {
         self.variant(TREQ_SEL_A::I2C0_TX)
     }
     #[doc = "Select I2C0's RX FIFO as TREQ"]
     #[inline(always)]
-    pub fn i2c0_rx(self) -> &'a mut W {
+    pub fn i2c0_rx(self) -> &'a mut crate::W<REG> {
         self.variant(TREQ_SEL_A::I2C0_RX)
     }
     #[doc = "Select I2C1's TX FIFO as TREQ"]
     #[inline(always)]
-    pub fn i2c1_tx(self) -> &'a mut W {
+    pub fn i2c1_tx(self) -> &'a mut crate::W<REG> {
         self.variant(TREQ_SEL_A::I2C1_TX)
     }
     #[doc = "Select I2C1's RX FIFO as TREQ"]
     #[inline(always)]
-    pub fn i2c1_rx(self) -> &'a mut W {
+    pub fn i2c1_rx(self) -> &'a mut crate::W<REG> {
         self.variant(TREQ_SEL_A::I2C1_RX)
     }
     #[doc = "Select the ADC as TREQ"]
     #[inline(always)]
-    pub fn adc(self) -> &'a mut W {
+    pub fn adc(self) -> &'a mut crate::W<REG> {
         self.variant(TREQ_SEL_A::ADC)
     }
     #[doc = "Select the XIP Streaming FIFO as TREQ"]
     #[inline(always)]
-    pub fn xip_stream(self) -> &'a mut W {
+    pub fn xip_stream(self) -> &'a mut crate::W<REG> {
         self.variant(TREQ_SEL_A::XIP_STREAM)
     }
     #[doc = "Select the XIP SSI TX FIFO as TREQ"]
     #[inline(always)]
-    pub fn xip_ssitx(self) -> &'a mut W {
+    pub fn xip_ssitx(self) -> &'a mut crate::W<REG> {
         self.variant(TREQ_SEL_A::XIP_SSITX)
     }
     #[doc = "Select the XIP SSI RX FIFO as TREQ"]
     #[inline(always)]
-    pub fn xip_ssirx(self) -> &'a mut W {
+    pub fn xip_ssirx(self) -> &'a mut crate::W<REG> {
         self.variant(TREQ_SEL_A::XIP_SSIRX)
     }
     #[doc = "Select Timer 0 as TREQ"]
     #[inline(always)]
-    pub fn timer0(self) -> &'a mut W {
+    pub fn timer0(self) -> &'a mut crate::W<REG> {
         self.variant(TREQ_SEL_A::TIMER0)
     }
     #[doc = "Select Timer 1 as TREQ"]
     #[inline(always)]
-    pub fn timer1(self) -> &'a mut W {
+    pub fn timer1(self) -> &'a mut crate::W<REG> {
         self.variant(TREQ_SEL_A::TIMER1)
     }
     #[doc = "Select Timer 2 as TREQ (Optional)"]
     #[inline(always)]
-    pub fn timer2(self) -> &'a mut W {
+    pub fn timer2(self) -> &'a mut crate::W<REG> {
         self.variant(TREQ_SEL_A::TIMER2)
     }
     #[doc = "Select Timer 3 as TREQ (Optional)"]
     #[inline(always)]
-    pub fn timer3(self) -> &'a mut W {
+    pub fn timer3(self) -> &'a mut crate::W<REG> {
         self.variant(TREQ_SEL_A::TIMER3)
     }
     #[doc = "Permanent request, for unpaced transfers."]
     #[inline(always)]
-    pub fn permanent(self) -> &'a mut W {
+    pub fn permanent(self) -> &'a mut crate::W<REG> {
         self.variant(TREQ_SEL_A::PERMANENT)
     }
 }
@@ -825,13 +805,13 @@ pub type IRQ_QUIET_R = crate::BitReader;
 #[doc = "Field `IRQ_QUIET` writer - In QUIET mode, the channel does not generate IRQs at the end of every transfer block. Instead, an IRQ is raised when NULL is written to a trigger register, indicating the end of a control block chain.  
 
  This reduces the number of interrupts to be serviced by the CPU when transferring a DMA chain of many small control blocks."]
-pub type IRQ_QUIET_W<'a, const O: u8> = crate::BitWriter<'a, CH_AL3_CTRL_SPEC, O>;
+pub type IRQ_QUIET_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `BSWAP` reader - Apply byte-swap transformation to DMA data.  
  For byte data, this has no effect. For halfword data, the two bytes of each halfword are swapped. For word data, the four bytes of each word are swapped to reverse order."]
 pub type BSWAP_R = crate::BitReader;
 #[doc = "Field `BSWAP` writer - Apply byte-swap transformation to DMA data.  
  For byte data, this has no effect. For halfword data, the two bytes of each halfword are swapped. For word data, the four bytes of each word are swapped to reverse order."]
-pub type BSWAP_W<'a, const O: u8> = crate::BitWriter<'a, CH_AL3_CTRL_SPEC, O>;
+pub type BSWAP_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SNIFF_EN` reader - If 1, this channel's data transfers are visible to the sniff hardware, and each transfer will advance the state of the checksum. This only applies if the sniff hardware is enabled, and has this channel selected.  
 
  This allows checksum to be enabled or disabled on a per-control- block basis."]
@@ -839,7 +819,7 @@ pub type SNIFF_EN_R = crate::BitReader;
 #[doc = "Field `SNIFF_EN` writer - If 1, this channel's data transfers are visible to the sniff hardware, and each transfer will advance the state of the checksum. This only applies if the sniff hardware is enabled, and has this channel selected.  
 
  This allows checksum to be enabled or disabled on a per-control- block basis."]
-pub type SNIFF_EN_W<'a, const O: u8> = crate::BitWriter<'a, CH_AL3_CTRL_SPEC, O>;
+pub type SNIFF_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `BUSY` reader - This flag goes high when the channel starts a new transfer sequence, and low when the last transfer of that sequence completes. Clearing EN while BUSY is high pauses the channel, and BUSY will stay high while paused.  
 
  To terminate a sequence early (and clear the BUSY flag), see CHAN_ABORT."]
@@ -849,13 +829,13 @@ pub type BUSY_R = crate::BitReader;
 pub type WRITE_ERROR_R = crate::BitReader;
 #[doc = "Field `WRITE_ERROR` writer - If 1, the channel received a write bus error. Write one to clear.  
  WRITE_ADDR shows the approximate address where the bus error was encountered (will not be earlier, or more than 5 transfers later)"]
-pub type WRITE_ERROR_W<'a, const O: u8> = crate::BitWriter1C<'a, CH_AL3_CTRL_SPEC, O>;
+pub type WRITE_ERROR_W<'a, REG> = crate::BitWriter1C<'a, REG>;
 #[doc = "Field `READ_ERROR` reader - If 1, the channel received a read bus error. Write one to clear.  
  READ_ADDR shows the approximate address where the bus error was encountered (will not be earlier, or more than 3 transfers later)"]
 pub type READ_ERROR_R = crate::BitReader;
 #[doc = "Field `READ_ERROR` writer - If 1, the channel received a read bus error. Write one to clear.  
  READ_ADDR shows the approximate address where the bus error was encountered (will not be earlier, or more than 3 transfers later)"]
-pub type READ_ERROR_W<'a, const O: u8> = crate::BitWriter1C<'a, CH_AL3_CTRL_SPEC, O>;
+pub type READ_ERROR_W<'a, REG> = crate::BitWriter1C<'a, REG>;
 #[doc = "Field `AHB_ERROR` reader - Logical OR of the READ_ERROR and WRITE_ERROR flags. The channel halts when it encounters any bus error, and always raises its channel IRQ flag."]
 pub type AHB_ERROR_R = crate::BitReader;
 impl R {
@@ -967,133 +947,132 @@ impl W {
  When 1, the channel will respond to triggering events, which will cause it to become BUSY and start transferring data. When 0, the channel will ignore triggers, stop issuing transfers, and pause the current transfer sequence (i.e. BUSY will remain high if already high)"]
     #[inline(always)]
     #[must_use]
-    pub fn en(&mut self) -> EN_W<0> {
-        EN_W::new(self)
+    pub fn en(&mut self) -> EN_W<CH_AL3_CTRL_SPEC> {
+        EN_W::new(self, 0)
     }
     #[doc = "Bit 1 - HIGH_PRIORITY gives a channel preferential treatment in issue scheduling: in each scheduling round, all high priority channels are considered first, and then only a single low priority channel, before returning to the high priority channels.  
 
  This only affects the order in which the DMA schedules channels. The DMA's bus priority is not changed. If the DMA is not saturated then a low priority channel will see no loss of throughput."]
     #[inline(always)]
     #[must_use]
-    pub fn high_priority(&mut self) -> HIGH_PRIORITY_W<1> {
-        HIGH_PRIORITY_W::new(self)
+    pub fn high_priority(&mut self) -> HIGH_PRIORITY_W<CH_AL3_CTRL_SPEC> {
+        HIGH_PRIORITY_W::new(self, 1)
     }
     #[doc = "Bits 2:3 - Set the size of each bus transfer (byte/halfword/word). READ_ADDR and WRITE_ADDR advance by this amount (1/2/4 bytes) with each transfer."]
     #[inline(always)]
     #[must_use]
-    pub fn data_size(&mut self) -> DATA_SIZE_W<2> {
-        DATA_SIZE_W::new(self)
+    pub fn data_size(&mut self) -> DATA_SIZE_W<CH_AL3_CTRL_SPEC> {
+        DATA_SIZE_W::new(self, 2)
     }
     #[doc = "Bit 4 - If 1, the read address increments with each transfer. If 0, each read is directed to the same, initial address.  
 
  Generally this should be disabled for peripheral-to-memory transfers."]
     #[inline(always)]
     #[must_use]
-    pub fn incr_read(&mut self) -> INCR_READ_W<4> {
-        INCR_READ_W::new(self)
+    pub fn incr_read(&mut self) -> INCR_READ_W<CH_AL3_CTRL_SPEC> {
+        INCR_READ_W::new(self, 4)
     }
     #[doc = "Bit 5 - If 1, the write address increments with each transfer. If 0, each write is directed to the same, initial address.  
 
  Generally this should be disabled for memory-to-peripheral transfers."]
     #[inline(always)]
     #[must_use]
-    pub fn incr_write(&mut self) -> INCR_WRITE_W<5> {
-        INCR_WRITE_W::new(self)
+    pub fn incr_write(&mut self) -> INCR_WRITE_W<CH_AL3_CTRL_SPEC> {
+        INCR_WRITE_W::new(self, 5)
     }
     #[doc = "Bits 6:9 - Size of address wrap region. If 0, don't wrap. For values n > 0, only the lower n bits of the address will change. This wraps the address on a (1 &lt;&lt; n) byte boundary, facilitating access to naturally-aligned ring buffers.  
 
  Ring sizes between 2 and 32768 bytes are possible. This can apply to either read or write addresses, based on value of RING_SEL."]
     #[inline(always)]
     #[must_use]
-    pub fn ring_size(&mut self) -> RING_SIZE_W<6> {
-        RING_SIZE_W::new(self)
+    pub fn ring_size(&mut self) -> RING_SIZE_W<CH_AL3_CTRL_SPEC> {
+        RING_SIZE_W::new(self, 6)
     }
     #[doc = "Bit 10 - Select whether RING_SIZE applies to read or write addresses.  
  If 0, read addresses are wrapped on a (1 &lt;&lt; RING_SIZE) boundary. If 1, write addresses are wrapped."]
     #[inline(always)]
     #[must_use]
-    pub fn ring_sel(&mut self) -> RING_SEL_W<10> {
-        RING_SEL_W::new(self)
+    pub fn ring_sel(&mut self) -> RING_SEL_W<CH_AL3_CTRL_SPEC> {
+        RING_SEL_W::new(self, 10)
     }
     #[doc = "Bits 11:14 - When this channel completes, it will trigger the channel indicated by CHAIN_TO. Disable by setting CHAIN_TO = _(this channel)_.   
  Reset value is 0, which means for channels 1 and above the default will be to chain to channel 0 - set this field to avoid this behaviour."]
     #[inline(always)]
     #[must_use]
-    pub fn chain_to(&mut self) -> CHAIN_TO_W<11> {
-        CHAIN_TO_W::new(self)
+    pub fn chain_to(&mut self) -> CHAIN_TO_W<CH_AL3_CTRL_SPEC> {
+        CHAIN_TO_W::new(self, 11)
     }
     #[doc = "Bits 15:20 - Select a Transfer Request signal.  
  The channel uses the transfer request signal to pace its data transfer rate. Sources for TREQ signals are internal (TIMERS) or external (DREQ, a Data Request from the system).  
  0x0 to 0x3a -> select DREQ n as TREQ"]
     #[inline(always)]
     #[must_use]
-    pub fn treq_sel(&mut self) -> TREQ_SEL_W<15> {
-        TREQ_SEL_W::new(self)
+    pub fn treq_sel(&mut self) -> TREQ_SEL_W<CH_AL3_CTRL_SPEC> {
+        TREQ_SEL_W::new(self, 15)
     }
     #[doc = "Bit 21 - In QUIET mode, the channel does not generate IRQs at the end of every transfer block. Instead, an IRQ is raised when NULL is written to a trigger register, indicating the end of a control block chain.  
 
  This reduces the number of interrupts to be serviced by the CPU when transferring a DMA chain of many small control blocks."]
     #[inline(always)]
     #[must_use]
-    pub fn irq_quiet(&mut self) -> IRQ_QUIET_W<21> {
-        IRQ_QUIET_W::new(self)
+    pub fn irq_quiet(&mut self) -> IRQ_QUIET_W<CH_AL3_CTRL_SPEC> {
+        IRQ_QUIET_W::new(self, 21)
     }
     #[doc = "Bit 22 - Apply byte-swap transformation to DMA data.  
  For byte data, this has no effect. For halfword data, the two bytes of each halfword are swapped. For word data, the four bytes of each word are swapped to reverse order."]
     #[inline(always)]
     #[must_use]
-    pub fn bswap(&mut self) -> BSWAP_W<22> {
-        BSWAP_W::new(self)
+    pub fn bswap(&mut self) -> BSWAP_W<CH_AL3_CTRL_SPEC> {
+        BSWAP_W::new(self, 22)
     }
     #[doc = "Bit 23 - If 1, this channel's data transfers are visible to the sniff hardware, and each transfer will advance the state of the checksum. This only applies if the sniff hardware is enabled, and has this channel selected.  
 
  This allows checksum to be enabled or disabled on a per-control- block basis."]
     #[inline(always)]
     #[must_use]
-    pub fn sniff_en(&mut self) -> SNIFF_EN_W<23> {
-        SNIFF_EN_W::new(self)
+    pub fn sniff_en(&mut self) -> SNIFF_EN_W<CH_AL3_CTRL_SPEC> {
+        SNIFF_EN_W::new(self, 23)
     }
     #[doc = "Bit 29 - If 1, the channel received a write bus error. Write one to clear.  
  WRITE_ADDR shows the approximate address where the bus error was encountered (will not be earlier, or more than 5 transfers later)"]
     #[inline(always)]
     #[must_use]
-    pub fn write_error(&mut self) -> WRITE_ERROR_W<29> {
-        WRITE_ERROR_W::new(self)
+    pub fn write_error(&mut self) -> WRITE_ERROR_W<CH_AL3_CTRL_SPEC> {
+        WRITE_ERROR_W::new(self, 29)
     }
     #[doc = "Bit 30 - If 1, the channel received a read bus error. Write one to clear.  
  READ_ADDR shows the approximate address where the bus error was encountered (will not be earlier, or more than 3 transfers later)"]
     #[inline(always)]
     #[must_use]
-    pub fn read_error(&mut self) -> READ_ERROR_W<30> {
-        READ_ERROR_W::new(self)
+    pub fn read_error(&mut self) -> READ_ERROR_W<CH_AL3_CTRL_SPEC> {
+        READ_ERROR_W::new(self, 30)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
 #[doc = "DMA Channel 0 Control and Status  
 
-This register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
-
-For information about available fields see [ch_al3_ctrl](index.html) module"]
+You can [`read`](crate::generic::Reg::read) this register and get [`ch_al3_ctrl::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`ch_al3_ctrl::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct CH_AL3_CTRL_SPEC;
 impl crate::RegisterSpec for CH_AL3_CTRL_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [ch_al3_ctrl::R](R) reader structure"]
-impl crate::Readable for CH_AL3_CTRL_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [ch_al3_ctrl::W](W) writer structure"]
+#[doc = "`read()` method returns [`ch_al3_ctrl::R`](R) reader structure"]
+impl crate::Readable for CH_AL3_CTRL_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`ch_al3_ctrl::W`](W) writer structure"]
 impl crate::Writable for CH_AL3_CTRL_SPEC {
-    type Writer = W;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0x6000_0000;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0x6000_0000;
 }
 #[doc = "`reset()` method sets CH_AL3_CTRL to value 0"]
 impl crate::Resettable for CH_AL3_CTRL_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

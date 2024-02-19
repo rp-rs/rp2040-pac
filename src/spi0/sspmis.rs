@@ -1,18 +1,5 @@
 #[doc = "Register `SSPMIS` reader"]
-pub struct R(crate::R<SSPMIS_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<SSPMIS_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<SSPMIS_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<SSPMIS_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<SSPMIS_SPEC>;
 #[doc = "Field `RORMIS` reader - Gives the receive over run masked interrupt status, after masking, of the SSPRORINTR interrupt"]
 pub type RORMIS_R = crate::BitReader;
 #[doc = "Field `RTMIS` reader - Gives the receive timeout masked interrupt state, after masking, of the SSPRTINTR interrupt"]
@@ -45,18 +32,14 @@ impl R {
 }
 #[doc = "Masked interrupt status register, SSPMIS on page 3-11  
 
-This register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
-
-For information about available fields see [sspmis](index.html) module"]
+You can [`read`](crate::generic::Reg::read) this register and get [`sspmis::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct SSPMIS_SPEC;
 impl crate::RegisterSpec for SSPMIS_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [sspmis::R](R) reader structure"]
-impl crate::Readable for SSPMIS_SPEC {
-    type Reader = R;
-}
+#[doc = "`read()` method returns [`sspmis::R`](R) reader structure"]
+impl crate::Readable for SSPMIS_SPEC {}
 #[doc = "`reset()` method sets SSPMIS to value 0"]
 impl crate::Resettable for SSPMIS_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

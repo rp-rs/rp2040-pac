@@ -1,18 +1,5 @@
 #[doc = "Register `FLEVEL` reader"]
-pub struct R(crate::R<FLEVEL_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<FLEVEL_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<FLEVEL_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<FLEVEL_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<FLEVEL_SPEC>;
 #[doc = "Field `TX0` reader - "]
 pub type TX0_R = crate::FieldReader;
 #[doc = "Field `RX0` reader - "]
@@ -73,18 +60,14 @@ impl R {
 }
 #[doc = "FIFO levels  
 
-This register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
-
-For information about available fields see [flevel](index.html) module"]
+You can [`read`](crate::generic::Reg::read) this register and get [`flevel::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct FLEVEL_SPEC;
 impl crate::RegisterSpec for FLEVEL_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [flevel::R](R) reader structure"]
-impl crate::Readable for FLEVEL_SPEC {
-    type Reader = R;
-}
+#[doc = "`read()` method returns [`flevel::R`](R) reader structure"]
+impl crate::Readable for FLEVEL_SPEC {}
 #[doc = "`reset()` method sets FLEVEL to value 0"]
 impl crate::Resettable for FLEVEL_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

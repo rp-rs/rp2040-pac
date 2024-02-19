@@ -1,39 +1,7 @@
 #[doc = "Register `CLK_SYS_CTRL` reader"]
-pub struct R(crate::R<CLK_SYS_CTRL_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<CLK_SYS_CTRL_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<CLK_SYS_CTRL_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<CLK_SYS_CTRL_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<CLK_SYS_CTRL_SPEC>;
 #[doc = "Register `CLK_SYS_CTRL` writer"]
-pub struct W(crate::W<CLK_SYS_CTRL_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<CLK_SYS_CTRL_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<CLK_SYS_CTRL_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<CLK_SYS_CTRL_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<CLK_SYS_CTRL_SPEC>;
 #[doc = "Field `SRC` reader - Selects the clock source glitchlessly, can be changed on-the-fly"]
 pub type SRC_R = crate::BitReader<SRC_A>;
 #[doc = "Selects the clock source glitchlessly, can be changed on-the-fly  
@@ -55,34 +23,37 @@ impl From<SRC_A> for bool {
 impl SRC_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> SRC_A {
+    pub const fn variant(&self) -> SRC_A {
         match self.bits {
             false => SRC_A::CLK_REF,
             true => SRC_A::CLKSRC_CLK_SYS_AUX,
         }
     }
-    #[doc = "Checks if the value of the field is `CLK_REF`"]
+    #[doc = "`0`"]
     #[inline(always)]
     pub fn is_clk_ref(&self) -> bool {
         *self == SRC_A::CLK_REF
     }
-    #[doc = "Checks if the value of the field is `CLKSRC_CLK_SYS_AUX`"]
+    #[doc = "`1`"]
     #[inline(always)]
     pub fn is_clksrc_clk_sys_aux(&self) -> bool {
         *self == SRC_A::CLKSRC_CLK_SYS_AUX
     }
 }
 #[doc = "Field `SRC` writer - Selects the clock source glitchlessly, can be changed on-the-fly"]
-pub type SRC_W<'a, const O: u8> = crate::BitWriter<'a, CLK_SYS_CTRL_SPEC, O, SRC_A>;
-impl<'a, const O: u8> SRC_W<'a, O> {
+pub type SRC_W<'a, REG> = crate::BitWriter<'a, REG, SRC_A>;
+impl<'a, REG> SRC_W<'a, REG>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+{
     #[doc = "`0`"]
     #[inline(always)]
-    pub fn clk_ref(self) -> &'a mut W {
+    pub fn clk_ref(self) -> &'a mut crate::W<REG> {
         self.variant(SRC_A::CLK_REF)
     }
     #[doc = "`1`"]
     #[inline(always)]
-    pub fn clksrc_clk_sys_aux(self) -> &'a mut W {
+    pub fn clksrc_clk_sys_aux(self) -> &'a mut crate::W<REG> {
         self.variant(SRC_A::CLKSRC_CLK_SYS_AUX)
     }
 }
@@ -119,7 +90,7 @@ impl crate::FieldSpec for AUXSRC_A {
 impl AUXSRC_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> Option<AUXSRC_A> {
+    pub const fn variant(&self) -> Option<AUXSRC_A> {
         match self.bits {
             0 => Some(AUXSRC_A::CLKSRC_PLL_SYS),
             1 => Some(AUXSRC_A::CLKSRC_PLL_USB),
@@ -130,68 +101,72 @@ impl AUXSRC_R {
             _ => None,
         }
     }
-    #[doc = "Checks if the value of the field is `CLKSRC_PLL_SYS`"]
+    #[doc = "`0`"]
     #[inline(always)]
     pub fn is_clksrc_pll_sys(&self) -> bool {
         *self == AUXSRC_A::CLKSRC_PLL_SYS
     }
-    #[doc = "Checks if the value of the field is `CLKSRC_PLL_USB`"]
+    #[doc = "`1`"]
     #[inline(always)]
     pub fn is_clksrc_pll_usb(&self) -> bool {
         *self == AUXSRC_A::CLKSRC_PLL_USB
     }
-    #[doc = "Checks if the value of the field is `ROSC_CLKSRC`"]
+    #[doc = "`10`"]
     #[inline(always)]
     pub fn is_rosc_clksrc(&self) -> bool {
         *self == AUXSRC_A::ROSC_CLKSRC
     }
-    #[doc = "Checks if the value of the field is `XOSC_CLKSRC`"]
+    #[doc = "`11`"]
     #[inline(always)]
     pub fn is_xosc_clksrc(&self) -> bool {
         *self == AUXSRC_A::XOSC_CLKSRC
     }
-    #[doc = "Checks if the value of the field is `CLKSRC_GPIN0`"]
+    #[doc = "`100`"]
     #[inline(always)]
     pub fn is_clksrc_gpin0(&self) -> bool {
         *self == AUXSRC_A::CLKSRC_GPIN0
     }
-    #[doc = "Checks if the value of the field is `CLKSRC_GPIN1`"]
+    #[doc = "`101`"]
     #[inline(always)]
     pub fn is_clksrc_gpin1(&self) -> bool {
         *self == AUXSRC_A::CLKSRC_GPIN1
     }
 }
 #[doc = "Field `AUXSRC` writer - Selects the auxiliary clock source, will glitch when switching"]
-pub type AUXSRC_W<'a, const O: u8> = crate::FieldWriter<'a, CLK_SYS_CTRL_SPEC, 3, O, AUXSRC_A>;
-impl<'a, const O: u8> AUXSRC_W<'a, O> {
+pub type AUXSRC_W<'a, REG> = crate::FieldWriter<'a, REG, 3, AUXSRC_A>;
+impl<'a, REG> AUXSRC_W<'a, REG>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+    REG::Ux: From<u8>,
+{
     #[doc = "`0`"]
     #[inline(always)]
-    pub fn clksrc_pll_sys(self) -> &'a mut W {
+    pub fn clksrc_pll_sys(self) -> &'a mut crate::W<REG> {
         self.variant(AUXSRC_A::CLKSRC_PLL_SYS)
     }
     #[doc = "`1`"]
     #[inline(always)]
-    pub fn clksrc_pll_usb(self) -> &'a mut W {
+    pub fn clksrc_pll_usb(self) -> &'a mut crate::W<REG> {
         self.variant(AUXSRC_A::CLKSRC_PLL_USB)
     }
     #[doc = "`10`"]
     #[inline(always)]
-    pub fn rosc_clksrc(self) -> &'a mut W {
+    pub fn rosc_clksrc(self) -> &'a mut crate::W<REG> {
         self.variant(AUXSRC_A::ROSC_CLKSRC)
     }
     #[doc = "`11`"]
     #[inline(always)]
-    pub fn xosc_clksrc(self) -> &'a mut W {
+    pub fn xosc_clksrc(self) -> &'a mut crate::W<REG> {
         self.variant(AUXSRC_A::XOSC_CLKSRC)
     }
     #[doc = "`100`"]
     #[inline(always)]
-    pub fn clksrc_gpin0(self) -> &'a mut W {
+    pub fn clksrc_gpin0(self) -> &'a mut crate::W<REG> {
         self.variant(AUXSRC_A::CLKSRC_GPIN0)
     }
     #[doc = "`101`"]
     #[inline(always)]
-    pub fn clksrc_gpin1(self) -> &'a mut W {
+    pub fn clksrc_gpin1(self) -> &'a mut crate::W<REG> {
         self.variant(AUXSRC_A::CLKSRC_GPIN1)
     }
 }
@@ -211,42 +186,41 @@ impl W {
     #[doc = "Bit 0 - Selects the clock source glitchlessly, can be changed on-the-fly"]
     #[inline(always)]
     #[must_use]
-    pub fn src(&mut self) -> SRC_W<0> {
-        SRC_W::new(self)
+    pub fn src(&mut self) -> SRC_W<CLK_SYS_CTRL_SPEC> {
+        SRC_W::new(self, 0)
     }
     #[doc = "Bits 5:7 - Selects the auxiliary clock source, will glitch when switching"]
     #[inline(always)]
     #[must_use]
-    pub fn auxsrc(&mut self) -> AUXSRC_W<5> {
-        AUXSRC_W::new(self)
+    pub fn auxsrc(&mut self) -> AUXSRC_W<CLK_SYS_CTRL_SPEC> {
+        AUXSRC_W::new(self, 5)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
 #[doc = "Clock control, can be changed on-the-fly (except for auxsrc)  
 
-This register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
-
-For information about available fields see [clk_sys_ctrl](index.html) module"]
+You can [`read`](crate::generic::Reg::read) this register and get [`clk_sys_ctrl::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`clk_sys_ctrl::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct CLK_SYS_CTRL_SPEC;
 impl crate::RegisterSpec for CLK_SYS_CTRL_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [clk_sys_ctrl::R](R) reader structure"]
-impl crate::Readable for CLK_SYS_CTRL_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [clk_sys_ctrl::W](W) writer structure"]
+#[doc = "`read()` method returns [`clk_sys_ctrl::R`](R) reader structure"]
+impl crate::Readable for CLK_SYS_CTRL_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`clk_sys_ctrl::W`](W) writer structure"]
 impl crate::Writable for CLK_SYS_CTRL_SPEC {
-    type Writer = W;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets CLK_SYS_CTRL to value 0"]
 impl crate::Resettable for CLK_SYS_CTRL_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

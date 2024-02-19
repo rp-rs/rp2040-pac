@@ -1,18 +1,5 @@
 #[doc = "Register `SPINLOCK_ST` reader"]
-pub struct R(crate::R<SPINLOCK_ST_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<SPINLOCK_ST_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<SPINLOCK_ST_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<SPINLOCK_ST_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<SPINLOCK_ST_SPEC>;
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         write!(f, "{}", self.bits())
@@ -20,25 +7,21 @@ impl core::fmt::Debug for R {
 }
 impl core::fmt::Debug for crate::generic::Reg<SPINLOCK_ST_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "Spinlock state  
  A bitmap containing the state of all 32 spinlocks (1=locked).  
  Mainly intended for debugging.  
 
-This register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
-
-For information about available fields see [spinlock_st](index.html) module"]
+You can [`read`](crate::generic::Reg::read) this register and get [`spinlock_st::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct SPINLOCK_ST_SPEC;
 impl crate::RegisterSpec for SPINLOCK_ST_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [spinlock_st::R](R) reader structure"]
-impl crate::Readable for SPINLOCK_ST_SPEC {
-    type Reader = R;
-}
+#[doc = "`read()` method returns [`spinlock_st::R`](R) reader structure"]
+impl crate::Readable for SPINLOCK_ST_SPEC {}
 #[doc = "`reset()` method sets SPINLOCK_ST to value 0"]
 impl crate::Resettable for SPINLOCK_ST_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

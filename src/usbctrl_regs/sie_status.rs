@@ -1,39 +1,7 @@
 #[doc = "Register `SIE_STATUS` reader"]
-pub struct R(crate::R<SIE_STATUS_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<SIE_STATUS_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<SIE_STATUS_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<SIE_STATUS_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<SIE_STATUS_SPEC>;
 #[doc = "Register `SIE_STATUS` writer"]
-pub struct W(crate::W<SIE_STATUS_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<SIE_STATUS_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<SIE_STATUS_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<SIE_STATUS_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<SIE_STATUS_SPEC>;
 #[doc = "Field `VBUS_DETECTED` reader - Device: VBUS Detected"]
 pub type VBUS_DETECTED_R = crate::BitReader;
 #[doc = "Field `LINE_STATE` reader - USB bus line state"]
@@ -65,7 +33,7 @@ impl crate::FieldSpec for LINE_STATE_A {
 impl LINE_STATE_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> LINE_STATE_A {
+    pub const fn variant(&self) -> LINE_STATE_A {
         match self.bits {
             0 => LINE_STATE_A::SE0,
             1 => LINE_STATE_A::J,
@@ -74,22 +42,22 @@ impl LINE_STATE_R {
             _ => unreachable!(),
         }
     }
-    #[doc = "Checks if the value of the field is `SE0`"]
+    #[doc = "SE0"]
     #[inline(always)]
     pub fn is_se0(&self) -> bool {
         *self == LINE_STATE_A::SE0
     }
-    #[doc = "Checks if the value of the field is `J`"]
+    #[doc = "J"]
     #[inline(always)]
     pub fn is_j(&self) -> bool {
         *self == LINE_STATE_A::J
     }
-    #[doc = "Checks if the value of the field is `K`"]
+    #[doc = "K"]
     #[inline(always)]
     pub fn is_k(&self) -> bool {
         *self == LINE_STATE_A::K
     }
-    #[doc = "Checks if the value of the field is `SE1`"]
+    #[doc = "SE1"]
     #[inline(always)]
     pub fn is_se1(&self) -> bool {
         *self == LINE_STATE_A::SE1
@@ -98,25 +66,25 @@ impl LINE_STATE_R {
 #[doc = "Field `SUSPENDED` reader - Bus in suspended state. Valid for device and host. Host and device will go into suspend if neither Keep Alive / SOF frames are enabled."]
 pub type SUSPENDED_R = crate::BitReader;
 #[doc = "Field `SUSPENDED` writer - Bus in suspended state. Valid for device and host. Host and device will go into suspend if neither Keep Alive / SOF frames are enabled."]
-pub type SUSPENDED_W<'a, const O: u8> = crate::BitWriter1C<'a, SIE_STATUS_SPEC, O>;
+pub type SUSPENDED_W<'a, REG> = crate::BitWriter1C<'a, REG>;
 #[doc = "Field `SPEED` reader - Host: device speed. Disconnected = 00, LS = 01, FS = 10"]
 pub type SPEED_R = crate::FieldReader;
 #[doc = "Field `SPEED` writer - Host: device speed. Disconnected = 00, LS = 01, FS = 10"]
-pub type SPEED_W<'a, const O: u8> = crate::FieldWriter<'a, SIE_STATUS_SPEC, 2, O>;
+pub type SPEED_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
 #[doc = "Field `VBUS_OVER_CURR` reader - VBUS over current detected"]
 pub type VBUS_OVER_CURR_R = crate::BitReader;
 #[doc = "Field `RESUME` reader - Host: Device has initiated a remote resume. Device: host has initiated a resume."]
 pub type RESUME_R = crate::BitReader;
 #[doc = "Field `RESUME` writer - Host: Device has initiated a remote resume. Device: host has initiated a resume."]
-pub type RESUME_W<'a, const O: u8> = crate::BitWriter1C<'a, SIE_STATUS_SPEC, O>;
+pub type RESUME_W<'a, REG> = crate::BitWriter1C<'a, REG>;
 #[doc = "Field `CONNECTED` reader - Device: connected"]
 pub type CONNECTED_R = crate::BitReader;
 #[doc = "Field `CONNECTED` writer - Device: connected"]
-pub type CONNECTED_W<'a, const O: u8> = crate::BitWriter1C<'a, SIE_STATUS_SPEC, O>;
+pub type CONNECTED_W<'a, REG> = crate::BitWriter1C<'a, REG>;
 #[doc = "Field `SETUP_REC` reader - Device: Setup packet received"]
 pub type SETUP_REC_R = crate::BitReader;
 #[doc = "Field `SETUP_REC` writer - Device: Setup packet received"]
-pub type SETUP_REC_W<'a, const O: u8> = crate::BitWriter1C<'a, SIE_STATUS_SPEC, O>;
+pub type SETUP_REC_W<'a, REG> = crate::BitWriter1C<'a, REG>;
 #[doc = "Field `TRANS_COMPLETE` reader - Transaction complete.  
 
  Raised by device if:  
@@ -136,39 +104,39 @@ pub type TRANS_COMPLETE_R = crate::BitReader;
  Raised by host if:  
 
  * A setup packet is sent when no data in or data out transaction follows * An IN packet is received and the `LAST_BUFF` bit is set in the buffer control register * An IN packet is received with zero length * An OUT packet is sent and the `LAST_BUFF` bit is set"]
-pub type TRANS_COMPLETE_W<'a, const O: u8> = crate::BitWriter1C<'a, SIE_STATUS_SPEC, O>;
+pub type TRANS_COMPLETE_W<'a, REG> = crate::BitWriter1C<'a, REG>;
 #[doc = "Field `BUS_RESET` reader - Device: bus reset received"]
 pub type BUS_RESET_R = crate::BitReader;
 #[doc = "Field `BUS_RESET` writer - Device: bus reset received"]
-pub type BUS_RESET_W<'a, const O: u8> = crate::BitWriter1C<'a, SIE_STATUS_SPEC, O>;
+pub type BUS_RESET_W<'a, REG> = crate::BitWriter1C<'a, REG>;
 #[doc = "Field `CRC_ERROR` reader - CRC Error. Raised by the Serial RX engine."]
 pub type CRC_ERROR_R = crate::BitReader;
 #[doc = "Field `CRC_ERROR` writer - CRC Error. Raised by the Serial RX engine."]
-pub type CRC_ERROR_W<'a, const O: u8> = crate::BitWriter1C<'a, SIE_STATUS_SPEC, O>;
+pub type CRC_ERROR_W<'a, REG> = crate::BitWriter1C<'a, REG>;
 #[doc = "Field `BIT_STUFF_ERROR` reader - Bit Stuff Error. Raised by the Serial RX engine."]
 pub type BIT_STUFF_ERROR_R = crate::BitReader;
 #[doc = "Field `BIT_STUFF_ERROR` writer - Bit Stuff Error. Raised by the Serial RX engine."]
-pub type BIT_STUFF_ERROR_W<'a, const O: u8> = crate::BitWriter1C<'a, SIE_STATUS_SPEC, O>;
+pub type BIT_STUFF_ERROR_W<'a, REG> = crate::BitWriter1C<'a, REG>;
 #[doc = "Field `RX_OVERFLOW` reader - RX overflow is raised by the Serial RX engine if the incoming data is too fast."]
 pub type RX_OVERFLOW_R = crate::BitReader;
 #[doc = "Field `RX_OVERFLOW` writer - RX overflow is raised by the Serial RX engine if the incoming data is too fast."]
-pub type RX_OVERFLOW_W<'a, const O: u8> = crate::BitWriter1C<'a, SIE_STATUS_SPEC, O>;
+pub type RX_OVERFLOW_W<'a, REG> = crate::BitWriter1C<'a, REG>;
 #[doc = "Field `RX_TIMEOUT` reader - RX timeout is raised by both the host and device if an ACK is not received in the maximum time specified by the USB spec."]
 pub type RX_TIMEOUT_R = crate::BitReader;
 #[doc = "Field `RX_TIMEOUT` writer - RX timeout is raised by both the host and device if an ACK is not received in the maximum time specified by the USB spec."]
-pub type RX_TIMEOUT_W<'a, const O: u8> = crate::BitWriter1C<'a, SIE_STATUS_SPEC, O>;
+pub type RX_TIMEOUT_W<'a, REG> = crate::BitWriter1C<'a, REG>;
 #[doc = "Field `NAK_REC` reader - Host: NAK received"]
 pub type NAK_REC_R = crate::BitReader;
 #[doc = "Field `NAK_REC` writer - Host: NAK received"]
-pub type NAK_REC_W<'a, const O: u8> = crate::BitWriter1C<'a, SIE_STATUS_SPEC, O>;
+pub type NAK_REC_W<'a, REG> = crate::BitWriter1C<'a, REG>;
 #[doc = "Field `STALL_REC` reader - Host: STALL received"]
 pub type STALL_REC_R = crate::BitReader;
 #[doc = "Field `STALL_REC` writer - Host: STALL received"]
-pub type STALL_REC_W<'a, const O: u8> = crate::BitWriter1C<'a, SIE_STATUS_SPEC, O>;
+pub type STALL_REC_W<'a, REG> = crate::BitWriter1C<'a, REG>;
 #[doc = "Field `ACK_REC` reader - ACK received. Raised by both host and device."]
 pub type ACK_REC_R = crate::BitReader;
 #[doc = "Field `ACK_REC` writer - ACK received. Raised by both host and device."]
-pub type ACK_REC_W<'a, const O: u8> = crate::BitWriter1C<'a, SIE_STATUS_SPEC, O>;
+pub type ACK_REC_W<'a, REG> = crate::BitWriter1C<'a, REG>;
 #[doc = "Field `DATA_SEQ_ERROR` reader - Data Sequence Error.  
 
  The device can raise a sequence error in the following conditions:  
@@ -188,7 +156,7 @@ pub type DATA_SEQ_ERROR_R = crate::BitReader;
  The host can raise a data sequence error in the following conditions:  
 
  * An IN packet from the device has the wrong data PID"]
-pub type DATA_SEQ_ERROR_W<'a, const O: u8> = crate::BitWriter1C<'a, SIE_STATUS_SPEC, O>;
+pub type DATA_SEQ_ERROR_W<'a, REG> = crate::BitWriter1C<'a, REG>;
 impl R {
     #[doc = "Bit 0 - Device: VBUS Detected"]
     #[inline(always)]
@@ -301,32 +269,32 @@ impl W {
     #[doc = "Bit 4 - Bus in suspended state. Valid for device and host. Host and device will go into suspend if neither Keep Alive / SOF frames are enabled."]
     #[inline(always)]
     #[must_use]
-    pub fn suspended(&mut self) -> SUSPENDED_W<4> {
-        SUSPENDED_W::new(self)
+    pub fn suspended(&mut self) -> SUSPENDED_W<SIE_STATUS_SPEC> {
+        SUSPENDED_W::new(self, 4)
     }
     #[doc = "Bits 8:9 - Host: device speed. Disconnected = 00, LS = 01, FS = 10"]
     #[inline(always)]
     #[must_use]
-    pub fn speed(&mut self) -> SPEED_W<8> {
-        SPEED_W::new(self)
+    pub fn speed(&mut self) -> SPEED_W<SIE_STATUS_SPEC> {
+        SPEED_W::new(self, 8)
     }
     #[doc = "Bit 11 - Host: Device has initiated a remote resume. Device: host has initiated a resume."]
     #[inline(always)]
     #[must_use]
-    pub fn resume(&mut self) -> RESUME_W<11> {
-        RESUME_W::new(self)
+    pub fn resume(&mut self) -> RESUME_W<SIE_STATUS_SPEC> {
+        RESUME_W::new(self, 11)
     }
     #[doc = "Bit 16 - Device: connected"]
     #[inline(always)]
     #[must_use]
-    pub fn connected(&mut self) -> CONNECTED_W<16> {
-        CONNECTED_W::new(self)
+    pub fn connected(&mut self) -> CONNECTED_W<SIE_STATUS_SPEC> {
+        CONNECTED_W::new(self, 16)
     }
     #[doc = "Bit 17 - Device: Setup packet received"]
     #[inline(always)]
     #[must_use]
-    pub fn setup_rec(&mut self) -> SETUP_REC_W<17> {
-        SETUP_REC_W::new(self)
+    pub fn setup_rec(&mut self) -> SETUP_REC_W<SIE_STATUS_SPEC> {
+        SETUP_REC_W::new(self, 17)
     }
     #[doc = "Bit 18 - Transaction complete.  
 
@@ -339,56 +307,56 @@ impl W {
  * A setup packet is sent when no data in or data out transaction follows * An IN packet is received and the `LAST_BUFF` bit is set in the buffer control register * An IN packet is received with zero length * An OUT packet is sent and the `LAST_BUFF` bit is set"]
     #[inline(always)]
     #[must_use]
-    pub fn trans_complete(&mut self) -> TRANS_COMPLETE_W<18> {
-        TRANS_COMPLETE_W::new(self)
+    pub fn trans_complete(&mut self) -> TRANS_COMPLETE_W<SIE_STATUS_SPEC> {
+        TRANS_COMPLETE_W::new(self, 18)
     }
     #[doc = "Bit 19 - Device: bus reset received"]
     #[inline(always)]
     #[must_use]
-    pub fn bus_reset(&mut self) -> BUS_RESET_W<19> {
-        BUS_RESET_W::new(self)
+    pub fn bus_reset(&mut self) -> BUS_RESET_W<SIE_STATUS_SPEC> {
+        BUS_RESET_W::new(self, 19)
     }
     #[doc = "Bit 24 - CRC Error. Raised by the Serial RX engine."]
     #[inline(always)]
     #[must_use]
-    pub fn crc_error(&mut self) -> CRC_ERROR_W<24> {
-        CRC_ERROR_W::new(self)
+    pub fn crc_error(&mut self) -> CRC_ERROR_W<SIE_STATUS_SPEC> {
+        CRC_ERROR_W::new(self, 24)
     }
     #[doc = "Bit 25 - Bit Stuff Error. Raised by the Serial RX engine."]
     #[inline(always)]
     #[must_use]
-    pub fn bit_stuff_error(&mut self) -> BIT_STUFF_ERROR_W<25> {
-        BIT_STUFF_ERROR_W::new(self)
+    pub fn bit_stuff_error(&mut self) -> BIT_STUFF_ERROR_W<SIE_STATUS_SPEC> {
+        BIT_STUFF_ERROR_W::new(self, 25)
     }
     #[doc = "Bit 26 - RX overflow is raised by the Serial RX engine if the incoming data is too fast."]
     #[inline(always)]
     #[must_use]
-    pub fn rx_overflow(&mut self) -> RX_OVERFLOW_W<26> {
-        RX_OVERFLOW_W::new(self)
+    pub fn rx_overflow(&mut self) -> RX_OVERFLOW_W<SIE_STATUS_SPEC> {
+        RX_OVERFLOW_W::new(self, 26)
     }
     #[doc = "Bit 27 - RX timeout is raised by both the host and device if an ACK is not received in the maximum time specified by the USB spec."]
     #[inline(always)]
     #[must_use]
-    pub fn rx_timeout(&mut self) -> RX_TIMEOUT_W<27> {
-        RX_TIMEOUT_W::new(self)
+    pub fn rx_timeout(&mut self) -> RX_TIMEOUT_W<SIE_STATUS_SPEC> {
+        RX_TIMEOUT_W::new(self, 27)
     }
     #[doc = "Bit 28 - Host: NAK received"]
     #[inline(always)]
     #[must_use]
-    pub fn nak_rec(&mut self) -> NAK_REC_W<28> {
-        NAK_REC_W::new(self)
+    pub fn nak_rec(&mut self) -> NAK_REC_W<SIE_STATUS_SPEC> {
+        NAK_REC_W::new(self, 28)
     }
     #[doc = "Bit 29 - Host: STALL received"]
     #[inline(always)]
     #[must_use]
-    pub fn stall_rec(&mut self) -> STALL_REC_W<29> {
-        STALL_REC_W::new(self)
+    pub fn stall_rec(&mut self) -> STALL_REC_W<SIE_STATUS_SPEC> {
+        STALL_REC_W::new(self, 29)
     }
     #[doc = "Bit 30 - ACK received. Raised by both host and device."]
     #[inline(always)]
     #[must_use]
-    pub fn ack_rec(&mut self) -> ACK_REC_W<30> {
-        ACK_REC_W::new(self)
+    pub fn ack_rec(&mut self) -> ACK_REC_W<SIE_STATUS_SPEC> {
+        ACK_REC_W::new(self, 30)
     }
     #[doc = "Bit 31 - Data Sequence Error.  
 
@@ -401,36 +369,35 @@ impl W {
  * An IN packet from the device has the wrong data PID"]
     #[inline(always)]
     #[must_use]
-    pub fn data_seq_error(&mut self) -> DATA_SEQ_ERROR_W<31> {
-        DATA_SEQ_ERROR_W::new(self)
+    pub fn data_seq_error(&mut self) -> DATA_SEQ_ERROR_W<SIE_STATUS_SPEC> {
+        DATA_SEQ_ERROR_W::new(self, 31)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
 #[doc = "SIE status register  
 
-This register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
-
-For information about available fields see [sie_status](index.html) module"]
+You can [`read`](crate::generic::Reg::read) this register and get [`sie_status::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`sie_status::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct SIE_STATUS_SPEC;
 impl crate::RegisterSpec for SIE_STATUS_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [sie_status::R](R) reader structure"]
-impl crate::Readable for SIE_STATUS_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [sie_status::W](W) writer structure"]
+#[doc = "`read()` method returns [`sie_status::R`](R) reader structure"]
+impl crate::Readable for SIE_STATUS_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`sie_status::W`](W) writer structure"]
 impl crate::Writable for SIE_STATUS_SPEC {
-    type Writer = W;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0xff0f_0b10;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0xff0f_0b10;
 }
 #[doc = "`reset()` method sets SIE_STATUS to value 0"]
 impl crate::Resettable for SIE_STATUS_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

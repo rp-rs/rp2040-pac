@@ -1,18 +1,5 @@
 #[doc = "Register `RTC_1` reader"]
-pub struct R(crate::R<RTC_1_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<RTC_1_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<RTC_1_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<RTC_1_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<RTC_1_SPEC>;
 #[doc = "Field `DAY` reader - Day of the month (1..31)"]
 pub type DAY_R = crate::FieldReader;
 #[doc = "Field `MONTH` reader - Month (1..12)"]
@@ -38,18 +25,14 @@ impl R {
 }
 #[doc = "RTC register 1.  
 
-This register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
-
-For information about available fields see [rtc_1](index.html) module"]
+You can [`read`](crate::generic::Reg::read) this register and get [`rtc_1::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct RTC_1_SPEC;
 impl crate::RegisterSpec for RTC_1_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [rtc_1::R](R) reader structure"]
-impl crate::Readable for RTC_1_SPEC {
-    type Reader = R;
-}
+#[doc = "`read()` method returns [`rtc_1::R`](R) reader structure"]
+impl crate::Readable for RTC_1_SPEC {}
 #[doc = "`reset()` method sets RTC_1 to value 0"]
 impl crate::Resettable for RTC_1_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

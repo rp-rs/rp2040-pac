@@ -1,107 +1,75 @@
 #[doc = "Register `FRCE_ON` reader"]
-pub struct R(crate::R<FRCE_ON_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<FRCE_ON_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<FRCE_ON_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<FRCE_ON_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<FRCE_ON_SPEC>;
 #[doc = "Register `FRCE_ON` writer"]
-pub struct W(crate::W<FRCE_ON_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<FRCE_ON_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<FRCE_ON_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<FRCE_ON_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<FRCE_ON_SPEC>;
 #[doc = "Field `rosc` reader - "]
 pub type ROSC_R = crate::BitReader;
 #[doc = "Field `rosc` writer - "]
-pub type ROSC_W<'a, const O: u8> = crate::BitWriter<'a, FRCE_ON_SPEC, O>;
+pub type ROSC_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `xosc` reader - "]
 pub type XOSC_R = crate::BitReader;
 #[doc = "Field `xosc` writer - "]
-pub type XOSC_W<'a, const O: u8> = crate::BitWriter<'a, FRCE_ON_SPEC, O>;
+pub type XOSC_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `clocks` reader - "]
 pub type CLOCKS_R = crate::BitReader;
 #[doc = "Field `clocks` writer - "]
-pub type CLOCKS_W<'a, const O: u8> = crate::BitWriter<'a, FRCE_ON_SPEC, O>;
+pub type CLOCKS_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `resets` reader - "]
 pub type RESETS_R = crate::BitReader;
 #[doc = "Field `resets` writer - "]
-pub type RESETS_W<'a, const O: u8> = crate::BitWriter<'a, FRCE_ON_SPEC, O>;
+pub type RESETS_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `busfabric` reader - "]
 pub type BUSFABRIC_R = crate::BitReader;
 #[doc = "Field `busfabric` writer - "]
-pub type BUSFABRIC_W<'a, const O: u8> = crate::BitWriter<'a, FRCE_ON_SPEC, O>;
+pub type BUSFABRIC_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `rom` reader - "]
 pub type ROM_R = crate::BitReader;
 #[doc = "Field `rom` writer - "]
-pub type ROM_W<'a, const O: u8> = crate::BitWriter<'a, FRCE_ON_SPEC, O>;
+pub type ROM_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `sram0` reader - "]
 pub type SRAM0_R = crate::BitReader;
 #[doc = "Field `sram0` writer - "]
-pub type SRAM0_W<'a, const O: u8> = crate::BitWriter<'a, FRCE_ON_SPEC, O>;
+pub type SRAM0_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `sram1` reader - "]
 pub type SRAM1_R = crate::BitReader;
 #[doc = "Field `sram1` writer - "]
-pub type SRAM1_W<'a, const O: u8> = crate::BitWriter<'a, FRCE_ON_SPEC, O>;
+pub type SRAM1_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `sram2` reader - "]
 pub type SRAM2_R = crate::BitReader;
 #[doc = "Field `sram2` writer - "]
-pub type SRAM2_W<'a, const O: u8> = crate::BitWriter<'a, FRCE_ON_SPEC, O>;
+pub type SRAM2_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `sram3` reader - "]
 pub type SRAM3_R = crate::BitReader;
 #[doc = "Field `sram3` writer - "]
-pub type SRAM3_W<'a, const O: u8> = crate::BitWriter<'a, FRCE_ON_SPEC, O>;
+pub type SRAM3_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `sram4` reader - "]
 pub type SRAM4_R = crate::BitReader;
 #[doc = "Field `sram4` writer - "]
-pub type SRAM4_W<'a, const O: u8> = crate::BitWriter<'a, FRCE_ON_SPEC, O>;
+pub type SRAM4_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `sram5` reader - "]
 pub type SRAM5_R = crate::BitReader;
 #[doc = "Field `sram5` writer - "]
-pub type SRAM5_W<'a, const O: u8> = crate::BitWriter<'a, FRCE_ON_SPEC, O>;
+pub type SRAM5_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `xip` reader - "]
 pub type XIP_R = crate::BitReader;
 #[doc = "Field `xip` writer - "]
-pub type XIP_W<'a, const O: u8> = crate::BitWriter<'a, FRCE_ON_SPEC, O>;
+pub type XIP_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `vreg_and_chip_reset` reader - "]
 pub type VREG_AND_CHIP_RESET_R = crate::BitReader;
 #[doc = "Field `vreg_and_chip_reset` writer - "]
-pub type VREG_AND_CHIP_RESET_W<'a, const O: u8> = crate::BitWriter<'a, FRCE_ON_SPEC, O>;
+pub type VREG_AND_CHIP_RESET_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `sio` reader - "]
 pub type SIO_R = crate::BitReader;
 #[doc = "Field `sio` writer - "]
-pub type SIO_W<'a, const O: u8> = crate::BitWriter<'a, FRCE_ON_SPEC, O>;
+pub type SIO_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `proc0` reader - "]
 pub type PROC0_R = crate::BitReader;
 #[doc = "Field `proc0` writer - "]
-pub type PROC0_W<'a, const O: u8> = crate::BitWriter<'a, FRCE_ON_SPEC, O>;
+pub type PROC0_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `proc1` reader - "]
 pub type PROC1_R = crate::BitReader;
 #[doc = "Field `proc1` writer - "]
-pub type PROC1_W<'a, const O: u8> = crate::BitWriter<'a, FRCE_ON_SPEC, O>;
+pub type PROC1_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0"]
     #[inline(always)]
@@ -193,132 +161,131 @@ impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
     #[must_use]
-    pub fn rosc(&mut self) -> ROSC_W<0> {
-        ROSC_W::new(self)
+    pub fn rosc(&mut self) -> ROSC_W<FRCE_ON_SPEC> {
+        ROSC_W::new(self, 0)
     }
     #[doc = "Bit 1"]
     #[inline(always)]
     #[must_use]
-    pub fn xosc(&mut self) -> XOSC_W<1> {
-        XOSC_W::new(self)
+    pub fn xosc(&mut self) -> XOSC_W<FRCE_ON_SPEC> {
+        XOSC_W::new(self, 1)
     }
     #[doc = "Bit 2"]
     #[inline(always)]
     #[must_use]
-    pub fn clocks(&mut self) -> CLOCKS_W<2> {
-        CLOCKS_W::new(self)
+    pub fn clocks(&mut self) -> CLOCKS_W<FRCE_ON_SPEC> {
+        CLOCKS_W::new(self, 2)
     }
     #[doc = "Bit 3"]
     #[inline(always)]
     #[must_use]
-    pub fn resets(&mut self) -> RESETS_W<3> {
-        RESETS_W::new(self)
+    pub fn resets(&mut self) -> RESETS_W<FRCE_ON_SPEC> {
+        RESETS_W::new(self, 3)
     }
     #[doc = "Bit 4"]
     #[inline(always)]
     #[must_use]
-    pub fn busfabric(&mut self) -> BUSFABRIC_W<4> {
-        BUSFABRIC_W::new(self)
+    pub fn busfabric(&mut self) -> BUSFABRIC_W<FRCE_ON_SPEC> {
+        BUSFABRIC_W::new(self, 4)
     }
     #[doc = "Bit 5"]
     #[inline(always)]
     #[must_use]
-    pub fn rom(&mut self) -> ROM_W<5> {
-        ROM_W::new(self)
+    pub fn rom(&mut self) -> ROM_W<FRCE_ON_SPEC> {
+        ROM_W::new(self, 5)
     }
     #[doc = "Bit 6"]
     #[inline(always)]
     #[must_use]
-    pub fn sram0(&mut self) -> SRAM0_W<6> {
-        SRAM0_W::new(self)
+    pub fn sram0(&mut self) -> SRAM0_W<FRCE_ON_SPEC> {
+        SRAM0_W::new(self, 6)
     }
     #[doc = "Bit 7"]
     #[inline(always)]
     #[must_use]
-    pub fn sram1(&mut self) -> SRAM1_W<7> {
-        SRAM1_W::new(self)
+    pub fn sram1(&mut self) -> SRAM1_W<FRCE_ON_SPEC> {
+        SRAM1_W::new(self, 7)
     }
     #[doc = "Bit 8"]
     #[inline(always)]
     #[must_use]
-    pub fn sram2(&mut self) -> SRAM2_W<8> {
-        SRAM2_W::new(self)
+    pub fn sram2(&mut self) -> SRAM2_W<FRCE_ON_SPEC> {
+        SRAM2_W::new(self, 8)
     }
     #[doc = "Bit 9"]
     #[inline(always)]
     #[must_use]
-    pub fn sram3(&mut self) -> SRAM3_W<9> {
-        SRAM3_W::new(self)
+    pub fn sram3(&mut self) -> SRAM3_W<FRCE_ON_SPEC> {
+        SRAM3_W::new(self, 9)
     }
     #[doc = "Bit 10"]
     #[inline(always)]
     #[must_use]
-    pub fn sram4(&mut self) -> SRAM4_W<10> {
-        SRAM4_W::new(self)
+    pub fn sram4(&mut self) -> SRAM4_W<FRCE_ON_SPEC> {
+        SRAM4_W::new(self, 10)
     }
     #[doc = "Bit 11"]
     #[inline(always)]
     #[must_use]
-    pub fn sram5(&mut self) -> SRAM5_W<11> {
-        SRAM5_W::new(self)
+    pub fn sram5(&mut self) -> SRAM5_W<FRCE_ON_SPEC> {
+        SRAM5_W::new(self, 11)
     }
     #[doc = "Bit 12"]
     #[inline(always)]
     #[must_use]
-    pub fn xip(&mut self) -> XIP_W<12> {
-        XIP_W::new(self)
+    pub fn xip(&mut self) -> XIP_W<FRCE_ON_SPEC> {
+        XIP_W::new(self, 12)
     }
     #[doc = "Bit 13"]
     #[inline(always)]
     #[must_use]
-    pub fn vreg_and_chip_reset(&mut self) -> VREG_AND_CHIP_RESET_W<13> {
-        VREG_AND_CHIP_RESET_W::new(self)
+    pub fn vreg_and_chip_reset(&mut self) -> VREG_AND_CHIP_RESET_W<FRCE_ON_SPEC> {
+        VREG_AND_CHIP_RESET_W::new(self, 13)
     }
     #[doc = "Bit 14"]
     #[inline(always)]
     #[must_use]
-    pub fn sio(&mut self) -> SIO_W<14> {
-        SIO_W::new(self)
+    pub fn sio(&mut self) -> SIO_W<FRCE_ON_SPEC> {
+        SIO_W::new(self, 14)
     }
     #[doc = "Bit 15"]
     #[inline(always)]
     #[must_use]
-    pub fn proc0(&mut self) -> PROC0_W<15> {
-        PROC0_W::new(self)
+    pub fn proc0(&mut self) -> PROC0_W<FRCE_ON_SPEC> {
+        PROC0_W::new(self, 15)
     }
     #[doc = "Bit 16"]
     #[inline(always)]
     #[must_use]
-    pub fn proc1(&mut self) -> PROC1_W<16> {
-        PROC1_W::new(self)
+    pub fn proc1(&mut self) -> PROC1_W<FRCE_ON_SPEC> {
+        PROC1_W::new(self, 16)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
 #[doc = "Force block out of reset (i.e. power it on)  
 
-This register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
-
-For information about available fields see [frce_on](index.html) module"]
+You can [`read`](crate::generic::Reg::read) this register and get [`frce_on::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`frce_on::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct FRCE_ON_SPEC;
 impl crate::RegisterSpec for FRCE_ON_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [frce_on::R](R) reader structure"]
-impl crate::Readable for FRCE_ON_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [frce_on::W](W) writer structure"]
+#[doc = "`read()` method returns [`frce_on::R`](R) reader structure"]
+impl crate::Readable for FRCE_ON_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`frce_on::W`](W) writer structure"]
 impl crate::Writable for FRCE_ON_SPEC {
-    type Writer = W;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets FRCE_ON to value 0"]
 impl crate::Resettable for FRCE_ON_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

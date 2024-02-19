@@ -1,18 +1,5 @@
 #[doc = "Register `STREAM_FIFO` reader"]
-pub struct R(crate::R<STREAM_FIFO_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<STREAM_FIFO_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<STREAM_FIFO_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<STREAM_FIFO_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<STREAM_FIFO_SPEC>;
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         write!(f, "{}", self.bits())
@@ -20,7 +7,7 @@ impl core::fmt::Debug for R {
 }
 impl core::fmt::Debug for crate::generic::Reg<STREAM_FIFO_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "FIFO stream data  
@@ -28,18 +15,14 @@ impl core::fmt::Debug for crate::generic::Reg<STREAM_FIFO_SPEC> {
  This FIFO can also be accessed via the XIP_AUX slave, to avoid exposing  
  the DMA to bus stalls caused by other XIP traffic.  
 
-This register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
-
-For information about available fields see [stream_fifo](index.html) module"]
+You can [`read`](crate::generic::Reg::read) this register and get [`stream_fifo::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct STREAM_FIFO_SPEC;
 impl crate::RegisterSpec for STREAM_FIFO_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [stream_fifo::R](R) reader structure"]
-impl crate::Readable for STREAM_FIFO_SPEC {
-    type Reader = R;
-}
+#[doc = "`read()` method returns [`stream_fifo::R`](R) reader structure"]
+impl crate::Readable for STREAM_FIFO_SPEC {}
 #[doc = "`reset()` method sets STREAM_FIFO to value 0"]
 impl crate::Resettable for STREAM_FIFO_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

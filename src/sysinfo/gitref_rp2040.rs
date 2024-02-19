@@ -1,18 +1,5 @@
 #[doc = "Register `GITREF_RP2040` reader"]
-pub struct R(crate::R<GITREF_RP2040_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<GITREF_RP2040_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<GITREF_RP2040_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<GITREF_RP2040_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<GITREF_RP2040_SPEC>;
 impl core::fmt::Debug for R {
     fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
         write!(f, "{}", self.bits())
@@ -20,23 +7,19 @@ impl core::fmt::Debug for R {
 }
 impl core::fmt::Debug for crate::generic::Reg<GITREF_RP2040_SPEC> {
     fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        self.read().fmt(f)
+        core::fmt::Debug::fmt(&self.read(), f)
     }
 }
 #[doc = "Git hash of the chip source. Used to identify chip version.  
 
-This register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
-
-For information about available fields see [gitref_rp2040](index.html) module"]
+You can [`read`](crate::generic::Reg::read) this register and get [`gitref_rp2040::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct GITREF_RP2040_SPEC;
 impl crate::RegisterSpec for GITREF_RP2040_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [gitref_rp2040::R](R) reader structure"]
-impl crate::Readable for GITREF_RP2040_SPEC {
-    type Reader = R;
-}
+#[doc = "`read()` method returns [`gitref_rp2040::R`](R) reader structure"]
+impl crate::Readable for GITREF_RP2040_SPEC {}
 #[doc = "`reset()` method sets GITREF_RP2040 to value 0"]
 impl crate::Resettable for GITREF_RP2040_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

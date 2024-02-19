@@ -1,51 +1,19 @@
 #[doc = "Register `EPX_CONTROL` reader"]
-pub struct R(crate::R<EPX_CONTROL_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<EPX_CONTROL_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<EPX_CONTROL_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<EPX_CONTROL_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<EPX_CONTROL_SPEC>;
 #[doc = "Register `EPX_CONTROL` writer"]
-pub struct W(crate::W<EPX_CONTROL_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<EPX_CONTROL_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<EPX_CONTROL_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<EPX_CONTROL_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<EPX_CONTROL_SPEC>;
 #[doc = "Field `BUFFER_ADDRESS` reader - 64 byte aligned buffer address for this EP (bits 0-5 are ignored). Relative to the start of the DPRAM."]
 pub type BUFFER_ADDRESS_R = crate::FieldReader<u16>;
 #[doc = "Field `BUFFER_ADDRESS` writer - 64 byte aligned buffer address for this EP (bits 0-5 are ignored). Relative to the start of the DPRAM."]
-pub type BUFFER_ADDRESS_W<'a, const O: u8> = crate::FieldWriter<'a, EPX_CONTROL_SPEC, 16, O, u16>;
+pub type BUFFER_ADDRESS_W<'a, REG> = crate::FieldWriter<'a, REG, 16, u16>;
 #[doc = "Field `INTERRUPT_ON_NAK` reader - Trigger an interrupt if a NAK is sent. Intended for debug only."]
 pub type INTERRUPT_ON_NAK_R = crate::BitReader;
 #[doc = "Field `INTERRUPT_ON_NAK` writer - Trigger an interrupt if a NAK is sent. Intended for debug only."]
-pub type INTERRUPT_ON_NAK_W<'a, const O: u8> = crate::BitWriter<'a, EPX_CONTROL_SPEC, O>;
+pub type INTERRUPT_ON_NAK_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `INTERRUPT_ON_STALL` reader - Trigger an interrupt if a STALL is sent. Intended for debug only."]
 pub type INTERRUPT_ON_STALL_R = crate::BitReader;
 #[doc = "Field `INTERRUPT_ON_STALL` writer - Trigger an interrupt if a STALL is sent. Intended for debug only."]
-pub type INTERRUPT_ON_STALL_W<'a, const O: u8> = crate::BitWriter<'a, EPX_CONTROL_SPEC, O>;
+pub type INTERRUPT_ON_STALL_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `ENDPOINT_TYPE` reader - "]
 pub type ENDPOINT_TYPE_R = crate::FieldReader<ENDPOINT_TYPE_A>;
 #[doc = "  
@@ -75,7 +43,7 @@ impl crate::FieldSpec for ENDPOINT_TYPE_A {
 impl ENDPOINT_TYPE_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
-    pub fn variant(&self) -> ENDPOINT_TYPE_A {
+    pub const fn variant(&self) -> ENDPOINT_TYPE_A {
         match self.bits {
             0 => ENDPOINT_TYPE_A::CONTROL,
             1 => ENDPOINT_TYPE_A::ISOCHRONOUS,
@@ -84,68 +52,71 @@ impl ENDPOINT_TYPE_R {
             _ => unreachable!(),
         }
     }
-    #[doc = "Checks if the value of the field is `CONTROL`"]
+    #[doc = "`0`"]
     #[inline(always)]
     pub fn is_control(&self) -> bool {
         *self == ENDPOINT_TYPE_A::CONTROL
     }
-    #[doc = "Checks if the value of the field is `ISOCHRONOUS`"]
+    #[doc = "`1`"]
     #[inline(always)]
     pub fn is_isochronous(&self) -> bool {
         *self == ENDPOINT_TYPE_A::ISOCHRONOUS
     }
-    #[doc = "Checks if the value of the field is `BULK`"]
+    #[doc = "`10`"]
     #[inline(always)]
     pub fn is_bulk(&self) -> bool {
         *self == ENDPOINT_TYPE_A::BULK
     }
-    #[doc = "Checks if the value of the field is `INTERRUPT`"]
+    #[doc = "`11`"]
     #[inline(always)]
     pub fn is_interrupt(&self) -> bool {
         *self == ENDPOINT_TYPE_A::INTERRUPT
     }
 }
 #[doc = "Field `ENDPOINT_TYPE` writer - "]
-pub type ENDPOINT_TYPE_W<'a, const O: u8> =
-    crate::FieldWriterSafe<'a, EPX_CONTROL_SPEC, 2, O, ENDPOINT_TYPE_A>;
-impl<'a, const O: u8> ENDPOINT_TYPE_W<'a, O> {
+pub type ENDPOINT_TYPE_W<'a, REG> = crate::FieldWriterSafe<'a, REG, 2, ENDPOINT_TYPE_A>;
+impl<'a, REG> ENDPOINT_TYPE_W<'a, REG>
+where
+    REG: crate::Writable + crate::RegisterSpec,
+    REG::Ux: From<u8>,
+{
     #[doc = "`0`"]
     #[inline(always)]
-    pub fn control(self) -> &'a mut W {
+    pub fn control(self) -> &'a mut crate::W<REG> {
         self.variant(ENDPOINT_TYPE_A::CONTROL)
     }
     #[doc = "`1`"]
     #[inline(always)]
-    pub fn isochronous(self) -> &'a mut W {
+    pub fn isochronous(self) -> &'a mut crate::W<REG> {
         self.variant(ENDPOINT_TYPE_A::ISOCHRONOUS)
     }
     #[doc = "`10`"]
     #[inline(always)]
-    pub fn bulk(self) -> &'a mut W {
+    pub fn bulk(self) -> &'a mut crate::W<REG> {
         self.variant(ENDPOINT_TYPE_A::BULK)
     }
     #[doc = "`11`"]
     #[inline(always)]
-    pub fn interrupt(self) -> &'a mut W {
+    pub fn interrupt(self) -> &'a mut crate::W<REG> {
         self.variant(ENDPOINT_TYPE_A::INTERRUPT)
     }
 }
 #[doc = "Field `INTERRUPT_PER_DOUBLE_BUFF` reader - Trigger an interrupt each time both buffers are done. Only valid in double buffered mode."]
 pub type INTERRUPT_PER_DOUBLE_BUFF_R = crate::BitReader;
 #[doc = "Field `INTERRUPT_PER_DOUBLE_BUFF` writer - Trigger an interrupt each time both buffers are done. Only valid in double buffered mode."]
-pub type INTERRUPT_PER_DOUBLE_BUFF_W<'a, const O: u8> = crate::BitWriter<'a, EPX_CONTROL_SPEC, O>;
+pub type INTERRUPT_PER_DOUBLE_BUFF_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `INTERRUPT_PER_BUFF` reader - Trigger an interrupt each time a buffer is done."]
 pub type INTERRUPT_PER_BUFF_R = crate::BitReader;
 #[doc = "Field `INTERRUPT_PER_BUFF` writer - Trigger an interrupt each time a buffer is done."]
-pub type INTERRUPT_PER_BUFF_W<'a, const O: u8> = crate::BitWriter<'a, EPX_CONTROL_SPEC, O>;
+pub type INTERRUPT_PER_BUFF_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `DOUBLE_BUFFERED` reader - This endpoint is double buffered."]
 pub type DOUBLE_BUFFERED_R = crate::BitReader;
 #[doc = "Field `DOUBLE_BUFFERED` writer - This endpoint is double buffered."]
-pub type DOUBLE_BUFFERED_W<'a, const O: u8> = crate::BitWriter<'a, EPX_CONTROL_SPEC, O>;
+pub type DOUBLE_BUFFERED_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `ENABLE` reader - Enable this endpoint. The device will not reply to any packets for this endpoint if this bit is not set."]
 pub type ENABLE_R = crate::BitReader;
 #[doc = "Field `ENABLE` writer - Enable this endpoint. The device will not reply to any packets for this endpoint if this bit is not set."]
-pub type ENABLE_W<'a, const O: u8> = crate::BitWriter<'a, EPX_CONTROL_SPEC, O>;
+pub type ENABLE_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bits 0:15 - 64 byte aligned buffer address for this EP (bits 0-5 are ignored). Relative to the start of the DPRAM."]
     #[inline(always)]
@@ -192,78 +163,77 @@ impl W {
     #[doc = "Bits 0:15 - 64 byte aligned buffer address for this EP (bits 0-5 are ignored). Relative to the start of the DPRAM."]
     #[inline(always)]
     #[must_use]
-    pub fn buffer_address(&mut self) -> BUFFER_ADDRESS_W<0> {
-        BUFFER_ADDRESS_W::new(self)
+    pub fn buffer_address(&mut self) -> BUFFER_ADDRESS_W<EPX_CONTROL_SPEC> {
+        BUFFER_ADDRESS_W::new(self, 0)
     }
     #[doc = "Bit 16 - Trigger an interrupt if a NAK is sent. Intended for debug only."]
     #[inline(always)]
     #[must_use]
-    pub fn interrupt_on_nak(&mut self) -> INTERRUPT_ON_NAK_W<16> {
-        INTERRUPT_ON_NAK_W::new(self)
+    pub fn interrupt_on_nak(&mut self) -> INTERRUPT_ON_NAK_W<EPX_CONTROL_SPEC> {
+        INTERRUPT_ON_NAK_W::new(self, 16)
     }
     #[doc = "Bit 17 - Trigger an interrupt if a STALL is sent. Intended for debug only."]
     #[inline(always)]
     #[must_use]
-    pub fn interrupt_on_stall(&mut self) -> INTERRUPT_ON_STALL_W<17> {
-        INTERRUPT_ON_STALL_W::new(self)
+    pub fn interrupt_on_stall(&mut self) -> INTERRUPT_ON_STALL_W<EPX_CONTROL_SPEC> {
+        INTERRUPT_ON_STALL_W::new(self, 17)
     }
     #[doc = "Bits 26:27"]
     #[inline(always)]
     #[must_use]
-    pub fn endpoint_type(&mut self) -> ENDPOINT_TYPE_W<26> {
-        ENDPOINT_TYPE_W::new(self)
+    pub fn endpoint_type(&mut self) -> ENDPOINT_TYPE_W<EPX_CONTROL_SPEC> {
+        ENDPOINT_TYPE_W::new(self, 26)
     }
     #[doc = "Bit 28 - Trigger an interrupt each time both buffers are done. Only valid in double buffered mode."]
     #[inline(always)]
     #[must_use]
-    pub fn interrupt_per_double_buff(&mut self) -> INTERRUPT_PER_DOUBLE_BUFF_W<28> {
-        INTERRUPT_PER_DOUBLE_BUFF_W::new(self)
+    pub fn interrupt_per_double_buff(&mut self) -> INTERRUPT_PER_DOUBLE_BUFF_W<EPX_CONTROL_SPEC> {
+        INTERRUPT_PER_DOUBLE_BUFF_W::new(self, 28)
     }
     #[doc = "Bit 29 - Trigger an interrupt each time a buffer is done."]
     #[inline(always)]
     #[must_use]
-    pub fn interrupt_per_buff(&mut self) -> INTERRUPT_PER_BUFF_W<29> {
-        INTERRUPT_PER_BUFF_W::new(self)
+    pub fn interrupt_per_buff(&mut self) -> INTERRUPT_PER_BUFF_W<EPX_CONTROL_SPEC> {
+        INTERRUPT_PER_BUFF_W::new(self, 29)
     }
     #[doc = "Bit 30 - This endpoint is double buffered."]
     #[inline(always)]
     #[must_use]
-    pub fn double_buffered(&mut self) -> DOUBLE_BUFFERED_W<30> {
-        DOUBLE_BUFFERED_W::new(self)
+    pub fn double_buffered(&mut self) -> DOUBLE_BUFFERED_W<EPX_CONTROL_SPEC> {
+        DOUBLE_BUFFERED_W::new(self, 30)
     }
     #[doc = "Bit 31 - Enable this endpoint. The device will not reply to any packets for this endpoint if this bit is not set."]
     #[inline(always)]
     #[must_use]
-    pub fn enable(&mut self) -> ENABLE_W<31> {
-        ENABLE_W::new(self)
+    pub fn enable(&mut self) -> ENABLE_W<EPX_CONTROL_SPEC> {
+        ENABLE_W::new(self, 31)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
 #[doc = "EPx Control (Host-mode only!)  
 
-This register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
-
-For information about available fields see [epx_control](index.html) module"]
+You can [`read`](crate::generic::Reg::read) this register and get [`epx_control::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`epx_control::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct EPX_CONTROL_SPEC;
 impl crate::RegisterSpec for EPX_CONTROL_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [epx_control::R](R) reader structure"]
-impl crate::Readable for EPX_CONTROL_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [epx_control::W](W) writer structure"]
+#[doc = "`read()` method returns [`epx_control::R`](R) reader structure"]
+impl crate::Readable for EPX_CONTROL_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`epx_control::W`](W) writer structure"]
 impl crate::Writable for EPX_CONTROL_SPEC {
-    type Writer = W;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets EPX_CONTROL to value 0"]
 impl crate::Resettable for EPX_CONTROL_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

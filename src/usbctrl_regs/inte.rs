@@ -1,119 +1,87 @@
 #[doc = "Register `INTE` reader"]
-pub struct R(crate::R<INTE_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<INTE_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<INTE_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<INTE_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<INTE_SPEC>;
 #[doc = "Register `INTE` writer"]
-pub struct W(crate::W<INTE_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<INTE_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<INTE_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<INTE_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<INTE_SPEC>;
 #[doc = "Field `HOST_CONN_DIS` reader - Host: raised when a device is connected or disconnected (i.e. when SIE_STATUS.SPEED changes). Cleared by writing to SIE_STATUS.SPEED"]
 pub type HOST_CONN_DIS_R = crate::BitReader;
 #[doc = "Field `HOST_CONN_DIS` writer - Host: raised when a device is connected or disconnected (i.e. when SIE_STATUS.SPEED changes). Cleared by writing to SIE_STATUS.SPEED"]
-pub type HOST_CONN_DIS_W<'a, const O: u8> = crate::BitWriter<'a, INTE_SPEC, O>;
+pub type HOST_CONN_DIS_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `HOST_RESUME` reader - Host: raised when a device wakes up the host. Cleared by writing to SIE_STATUS.RESUME"]
 pub type HOST_RESUME_R = crate::BitReader;
 #[doc = "Field `HOST_RESUME` writer - Host: raised when a device wakes up the host. Cleared by writing to SIE_STATUS.RESUME"]
-pub type HOST_RESUME_W<'a, const O: u8> = crate::BitWriter<'a, INTE_SPEC, O>;
+pub type HOST_RESUME_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `HOST_SOF` reader - Host: raised every time the host sends a SOF (Start of Frame). Cleared by reading SOF_RD"]
 pub type HOST_SOF_R = crate::BitReader;
 #[doc = "Field `HOST_SOF` writer - Host: raised every time the host sends a SOF (Start of Frame). Cleared by reading SOF_RD"]
-pub type HOST_SOF_W<'a, const O: u8> = crate::BitWriter<'a, INTE_SPEC, O>;
+pub type HOST_SOF_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `TRANS_COMPLETE` reader - Raised every time SIE_STATUS.TRANS_COMPLETE is set. Clear by writing to this bit."]
 pub type TRANS_COMPLETE_R = crate::BitReader;
 #[doc = "Field `TRANS_COMPLETE` writer - Raised every time SIE_STATUS.TRANS_COMPLETE is set. Clear by writing to this bit."]
-pub type TRANS_COMPLETE_W<'a, const O: u8> = crate::BitWriter<'a, INTE_SPEC, O>;
+pub type TRANS_COMPLETE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `BUFF_STATUS` reader - Raised when any bit in BUFF_STATUS is set. Clear by clearing all bits in BUFF_STATUS."]
 pub type BUFF_STATUS_R = crate::BitReader;
 #[doc = "Field `BUFF_STATUS` writer - Raised when any bit in BUFF_STATUS is set. Clear by clearing all bits in BUFF_STATUS."]
-pub type BUFF_STATUS_W<'a, const O: u8> = crate::BitWriter<'a, INTE_SPEC, O>;
+pub type BUFF_STATUS_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `ERROR_DATA_SEQ` reader - Source: SIE_STATUS.DATA_SEQ_ERROR"]
 pub type ERROR_DATA_SEQ_R = crate::BitReader;
 #[doc = "Field `ERROR_DATA_SEQ` writer - Source: SIE_STATUS.DATA_SEQ_ERROR"]
-pub type ERROR_DATA_SEQ_W<'a, const O: u8> = crate::BitWriter<'a, INTE_SPEC, O>;
+pub type ERROR_DATA_SEQ_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `ERROR_RX_TIMEOUT` reader - Source: SIE_STATUS.RX_TIMEOUT"]
 pub type ERROR_RX_TIMEOUT_R = crate::BitReader;
 #[doc = "Field `ERROR_RX_TIMEOUT` writer - Source: SIE_STATUS.RX_TIMEOUT"]
-pub type ERROR_RX_TIMEOUT_W<'a, const O: u8> = crate::BitWriter<'a, INTE_SPEC, O>;
+pub type ERROR_RX_TIMEOUT_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `ERROR_RX_OVERFLOW` reader - Source: SIE_STATUS.RX_OVERFLOW"]
 pub type ERROR_RX_OVERFLOW_R = crate::BitReader;
 #[doc = "Field `ERROR_RX_OVERFLOW` writer - Source: SIE_STATUS.RX_OVERFLOW"]
-pub type ERROR_RX_OVERFLOW_W<'a, const O: u8> = crate::BitWriter<'a, INTE_SPEC, O>;
+pub type ERROR_RX_OVERFLOW_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `ERROR_BIT_STUFF` reader - Source: SIE_STATUS.BIT_STUFF_ERROR"]
 pub type ERROR_BIT_STUFF_R = crate::BitReader;
 #[doc = "Field `ERROR_BIT_STUFF` writer - Source: SIE_STATUS.BIT_STUFF_ERROR"]
-pub type ERROR_BIT_STUFF_W<'a, const O: u8> = crate::BitWriter<'a, INTE_SPEC, O>;
+pub type ERROR_BIT_STUFF_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `ERROR_CRC` reader - Source: SIE_STATUS.CRC_ERROR"]
 pub type ERROR_CRC_R = crate::BitReader;
 #[doc = "Field `ERROR_CRC` writer - Source: SIE_STATUS.CRC_ERROR"]
-pub type ERROR_CRC_W<'a, const O: u8> = crate::BitWriter<'a, INTE_SPEC, O>;
+pub type ERROR_CRC_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `STALL` reader - Source: SIE_STATUS.STALL_REC"]
 pub type STALL_R = crate::BitReader;
 #[doc = "Field `STALL` writer - Source: SIE_STATUS.STALL_REC"]
-pub type STALL_W<'a, const O: u8> = crate::BitWriter<'a, INTE_SPEC, O>;
+pub type STALL_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `VBUS_DETECT` reader - Source: SIE_STATUS.VBUS_DETECTED"]
 pub type VBUS_DETECT_R = crate::BitReader;
 #[doc = "Field `VBUS_DETECT` writer - Source: SIE_STATUS.VBUS_DETECTED"]
-pub type VBUS_DETECT_W<'a, const O: u8> = crate::BitWriter<'a, INTE_SPEC, O>;
+pub type VBUS_DETECT_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `BUS_RESET` reader - Source: SIE_STATUS.BUS_RESET"]
 pub type BUS_RESET_R = crate::BitReader;
 #[doc = "Field `BUS_RESET` writer - Source: SIE_STATUS.BUS_RESET"]
-pub type BUS_RESET_W<'a, const O: u8> = crate::BitWriter<'a, INTE_SPEC, O>;
+pub type BUS_RESET_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `DEV_CONN_DIS` reader - Set when the device connection state changes. Cleared by writing to SIE_STATUS.CONNECTED"]
 pub type DEV_CONN_DIS_R = crate::BitReader;
 #[doc = "Field `DEV_CONN_DIS` writer - Set when the device connection state changes. Cleared by writing to SIE_STATUS.CONNECTED"]
-pub type DEV_CONN_DIS_W<'a, const O: u8> = crate::BitWriter<'a, INTE_SPEC, O>;
+pub type DEV_CONN_DIS_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `DEV_SUSPEND` reader - Set when the device suspend state changes. Cleared by writing to SIE_STATUS.SUSPENDED"]
 pub type DEV_SUSPEND_R = crate::BitReader;
 #[doc = "Field `DEV_SUSPEND` writer - Set when the device suspend state changes. Cleared by writing to SIE_STATUS.SUSPENDED"]
-pub type DEV_SUSPEND_W<'a, const O: u8> = crate::BitWriter<'a, INTE_SPEC, O>;
+pub type DEV_SUSPEND_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `DEV_RESUME_FROM_HOST` reader - Set when the device receives a resume from the host. Cleared by writing to SIE_STATUS.RESUME"]
 pub type DEV_RESUME_FROM_HOST_R = crate::BitReader;
 #[doc = "Field `DEV_RESUME_FROM_HOST` writer - Set when the device receives a resume from the host. Cleared by writing to SIE_STATUS.RESUME"]
-pub type DEV_RESUME_FROM_HOST_W<'a, const O: u8> = crate::BitWriter<'a, INTE_SPEC, O>;
+pub type DEV_RESUME_FROM_HOST_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SETUP_REQ` reader - Device. Source: SIE_STATUS.SETUP_REC"]
 pub type SETUP_REQ_R = crate::BitReader;
 #[doc = "Field `SETUP_REQ` writer - Device. Source: SIE_STATUS.SETUP_REC"]
-pub type SETUP_REQ_W<'a, const O: u8> = crate::BitWriter<'a, INTE_SPEC, O>;
+pub type SETUP_REQ_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `DEV_SOF` reader - Set every time the device receives a SOF (Start of Frame) packet. Cleared by reading SOF_RD"]
 pub type DEV_SOF_R = crate::BitReader;
 #[doc = "Field `DEV_SOF` writer - Set every time the device receives a SOF (Start of Frame) packet. Cleared by reading SOF_RD"]
-pub type DEV_SOF_W<'a, const O: u8> = crate::BitWriter<'a, INTE_SPEC, O>;
+pub type DEV_SOF_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `ABORT_DONE` reader - Raised when any bit in ABORT_DONE is set. Clear by clearing all bits in ABORT_DONE."]
 pub type ABORT_DONE_R = crate::BitReader;
 #[doc = "Field `ABORT_DONE` writer - Raised when any bit in ABORT_DONE is set. Clear by clearing all bits in ABORT_DONE."]
-pub type ABORT_DONE_W<'a, const O: u8> = crate::BitWriter<'a, INTE_SPEC, O>;
+pub type ABORT_DONE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `EP_STALL_NAK` reader - Raised when any bit in EP_STATUS_STALL_NAK is set. Clear by clearing all bits in EP_STATUS_STALL_NAK."]
 pub type EP_STALL_NAK_R = crate::BitReader;
 #[doc = "Field `EP_STALL_NAK` writer - Raised when any bit in EP_STATUS_STALL_NAK is set. Clear by clearing all bits in EP_STATUS_STALL_NAK."]
-pub type EP_STALL_NAK_W<'a, const O: u8> = crate::BitWriter<'a, INTE_SPEC, O>;
+pub type EP_STALL_NAK_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - Host: raised when a device is connected or disconnected (i.e. when SIE_STATUS.SPEED changes). Cleared by writing to SIE_STATUS.SPEED"]
     #[inline(always)]
@@ -220,150 +188,149 @@ impl W {
     #[doc = "Bit 0 - Host: raised when a device is connected or disconnected (i.e. when SIE_STATUS.SPEED changes). Cleared by writing to SIE_STATUS.SPEED"]
     #[inline(always)]
     #[must_use]
-    pub fn host_conn_dis(&mut self) -> HOST_CONN_DIS_W<0> {
-        HOST_CONN_DIS_W::new(self)
+    pub fn host_conn_dis(&mut self) -> HOST_CONN_DIS_W<INTE_SPEC> {
+        HOST_CONN_DIS_W::new(self, 0)
     }
     #[doc = "Bit 1 - Host: raised when a device wakes up the host. Cleared by writing to SIE_STATUS.RESUME"]
     #[inline(always)]
     #[must_use]
-    pub fn host_resume(&mut self) -> HOST_RESUME_W<1> {
-        HOST_RESUME_W::new(self)
+    pub fn host_resume(&mut self) -> HOST_RESUME_W<INTE_SPEC> {
+        HOST_RESUME_W::new(self, 1)
     }
     #[doc = "Bit 2 - Host: raised every time the host sends a SOF (Start of Frame). Cleared by reading SOF_RD"]
     #[inline(always)]
     #[must_use]
-    pub fn host_sof(&mut self) -> HOST_SOF_W<2> {
-        HOST_SOF_W::new(self)
+    pub fn host_sof(&mut self) -> HOST_SOF_W<INTE_SPEC> {
+        HOST_SOF_W::new(self, 2)
     }
     #[doc = "Bit 3 - Raised every time SIE_STATUS.TRANS_COMPLETE is set. Clear by writing to this bit."]
     #[inline(always)]
     #[must_use]
-    pub fn trans_complete(&mut self) -> TRANS_COMPLETE_W<3> {
-        TRANS_COMPLETE_W::new(self)
+    pub fn trans_complete(&mut self) -> TRANS_COMPLETE_W<INTE_SPEC> {
+        TRANS_COMPLETE_W::new(self, 3)
     }
     #[doc = "Bit 4 - Raised when any bit in BUFF_STATUS is set. Clear by clearing all bits in BUFF_STATUS."]
     #[inline(always)]
     #[must_use]
-    pub fn buff_status(&mut self) -> BUFF_STATUS_W<4> {
-        BUFF_STATUS_W::new(self)
+    pub fn buff_status(&mut self) -> BUFF_STATUS_W<INTE_SPEC> {
+        BUFF_STATUS_W::new(self, 4)
     }
     #[doc = "Bit 5 - Source: SIE_STATUS.DATA_SEQ_ERROR"]
     #[inline(always)]
     #[must_use]
-    pub fn error_data_seq(&mut self) -> ERROR_DATA_SEQ_W<5> {
-        ERROR_DATA_SEQ_W::new(self)
+    pub fn error_data_seq(&mut self) -> ERROR_DATA_SEQ_W<INTE_SPEC> {
+        ERROR_DATA_SEQ_W::new(self, 5)
     }
     #[doc = "Bit 6 - Source: SIE_STATUS.RX_TIMEOUT"]
     #[inline(always)]
     #[must_use]
-    pub fn error_rx_timeout(&mut self) -> ERROR_RX_TIMEOUT_W<6> {
-        ERROR_RX_TIMEOUT_W::new(self)
+    pub fn error_rx_timeout(&mut self) -> ERROR_RX_TIMEOUT_W<INTE_SPEC> {
+        ERROR_RX_TIMEOUT_W::new(self, 6)
     }
     #[doc = "Bit 7 - Source: SIE_STATUS.RX_OVERFLOW"]
     #[inline(always)]
     #[must_use]
-    pub fn error_rx_overflow(&mut self) -> ERROR_RX_OVERFLOW_W<7> {
-        ERROR_RX_OVERFLOW_W::new(self)
+    pub fn error_rx_overflow(&mut self) -> ERROR_RX_OVERFLOW_W<INTE_SPEC> {
+        ERROR_RX_OVERFLOW_W::new(self, 7)
     }
     #[doc = "Bit 8 - Source: SIE_STATUS.BIT_STUFF_ERROR"]
     #[inline(always)]
     #[must_use]
-    pub fn error_bit_stuff(&mut self) -> ERROR_BIT_STUFF_W<8> {
-        ERROR_BIT_STUFF_W::new(self)
+    pub fn error_bit_stuff(&mut self) -> ERROR_BIT_STUFF_W<INTE_SPEC> {
+        ERROR_BIT_STUFF_W::new(self, 8)
     }
     #[doc = "Bit 9 - Source: SIE_STATUS.CRC_ERROR"]
     #[inline(always)]
     #[must_use]
-    pub fn error_crc(&mut self) -> ERROR_CRC_W<9> {
-        ERROR_CRC_W::new(self)
+    pub fn error_crc(&mut self) -> ERROR_CRC_W<INTE_SPEC> {
+        ERROR_CRC_W::new(self, 9)
     }
     #[doc = "Bit 10 - Source: SIE_STATUS.STALL_REC"]
     #[inline(always)]
     #[must_use]
-    pub fn stall(&mut self) -> STALL_W<10> {
-        STALL_W::new(self)
+    pub fn stall(&mut self) -> STALL_W<INTE_SPEC> {
+        STALL_W::new(self, 10)
     }
     #[doc = "Bit 11 - Source: SIE_STATUS.VBUS_DETECTED"]
     #[inline(always)]
     #[must_use]
-    pub fn vbus_detect(&mut self) -> VBUS_DETECT_W<11> {
-        VBUS_DETECT_W::new(self)
+    pub fn vbus_detect(&mut self) -> VBUS_DETECT_W<INTE_SPEC> {
+        VBUS_DETECT_W::new(self, 11)
     }
     #[doc = "Bit 12 - Source: SIE_STATUS.BUS_RESET"]
     #[inline(always)]
     #[must_use]
-    pub fn bus_reset(&mut self) -> BUS_RESET_W<12> {
-        BUS_RESET_W::new(self)
+    pub fn bus_reset(&mut self) -> BUS_RESET_W<INTE_SPEC> {
+        BUS_RESET_W::new(self, 12)
     }
     #[doc = "Bit 13 - Set when the device connection state changes. Cleared by writing to SIE_STATUS.CONNECTED"]
     #[inline(always)]
     #[must_use]
-    pub fn dev_conn_dis(&mut self) -> DEV_CONN_DIS_W<13> {
-        DEV_CONN_DIS_W::new(self)
+    pub fn dev_conn_dis(&mut self) -> DEV_CONN_DIS_W<INTE_SPEC> {
+        DEV_CONN_DIS_W::new(self, 13)
     }
     #[doc = "Bit 14 - Set when the device suspend state changes. Cleared by writing to SIE_STATUS.SUSPENDED"]
     #[inline(always)]
     #[must_use]
-    pub fn dev_suspend(&mut self) -> DEV_SUSPEND_W<14> {
-        DEV_SUSPEND_W::new(self)
+    pub fn dev_suspend(&mut self) -> DEV_SUSPEND_W<INTE_SPEC> {
+        DEV_SUSPEND_W::new(self, 14)
     }
     #[doc = "Bit 15 - Set when the device receives a resume from the host. Cleared by writing to SIE_STATUS.RESUME"]
     #[inline(always)]
     #[must_use]
-    pub fn dev_resume_from_host(&mut self) -> DEV_RESUME_FROM_HOST_W<15> {
-        DEV_RESUME_FROM_HOST_W::new(self)
+    pub fn dev_resume_from_host(&mut self) -> DEV_RESUME_FROM_HOST_W<INTE_SPEC> {
+        DEV_RESUME_FROM_HOST_W::new(self, 15)
     }
     #[doc = "Bit 16 - Device. Source: SIE_STATUS.SETUP_REC"]
     #[inline(always)]
     #[must_use]
-    pub fn setup_req(&mut self) -> SETUP_REQ_W<16> {
-        SETUP_REQ_W::new(self)
+    pub fn setup_req(&mut self) -> SETUP_REQ_W<INTE_SPEC> {
+        SETUP_REQ_W::new(self, 16)
     }
     #[doc = "Bit 17 - Set every time the device receives a SOF (Start of Frame) packet. Cleared by reading SOF_RD"]
     #[inline(always)]
     #[must_use]
-    pub fn dev_sof(&mut self) -> DEV_SOF_W<17> {
-        DEV_SOF_W::new(self)
+    pub fn dev_sof(&mut self) -> DEV_SOF_W<INTE_SPEC> {
+        DEV_SOF_W::new(self, 17)
     }
     #[doc = "Bit 18 - Raised when any bit in ABORT_DONE is set. Clear by clearing all bits in ABORT_DONE."]
     #[inline(always)]
     #[must_use]
-    pub fn abort_done(&mut self) -> ABORT_DONE_W<18> {
-        ABORT_DONE_W::new(self)
+    pub fn abort_done(&mut self) -> ABORT_DONE_W<INTE_SPEC> {
+        ABORT_DONE_W::new(self, 18)
     }
     #[doc = "Bit 19 - Raised when any bit in EP_STATUS_STALL_NAK is set. Clear by clearing all bits in EP_STATUS_STALL_NAK."]
     #[inline(always)]
     #[must_use]
-    pub fn ep_stall_nak(&mut self) -> EP_STALL_NAK_W<19> {
-        EP_STALL_NAK_W::new(self)
+    pub fn ep_stall_nak(&mut self) -> EP_STALL_NAK_W<INTE_SPEC> {
+        EP_STALL_NAK_W::new(self, 19)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
 #[doc = "Interrupt Enable  
 
-This register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
-
-For information about available fields see [inte](index.html) module"]
+You can [`read`](crate::generic::Reg::read) this register and get [`inte::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`inte::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct INTE_SPEC;
 impl crate::RegisterSpec for INTE_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [inte::R](R) reader structure"]
-impl crate::Readable for INTE_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [inte::W](W) writer structure"]
+#[doc = "`read()` method returns [`inte::R`](R) reader structure"]
+impl crate::Readable for INTE_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`inte::W`](W) writer structure"]
 impl crate::Writable for INTE_SPEC {
-    type Writer = W;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets INTE to value 0"]
 impl crate::Resettable for INTE_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

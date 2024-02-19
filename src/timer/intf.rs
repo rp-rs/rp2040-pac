@@ -1,55 +1,23 @@
 #[doc = "Register `INTF` reader"]
-pub struct R(crate::R<INTF_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<INTF_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<INTF_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<INTF_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<INTF_SPEC>;
 #[doc = "Register `INTF` writer"]
-pub struct W(crate::W<INTF_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<INTF_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<INTF_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<INTF_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<INTF_SPEC>;
 #[doc = "Field `ALARM_0` reader - "]
 pub type ALARM_0_R = crate::BitReader;
 #[doc = "Field `ALARM_0` writer - "]
-pub type ALARM_0_W<'a, const O: u8> = crate::BitWriter<'a, INTF_SPEC, O>;
+pub type ALARM_0_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `ALARM_1` reader - "]
 pub type ALARM_1_R = crate::BitReader;
 #[doc = "Field `ALARM_1` writer - "]
-pub type ALARM_1_W<'a, const O: u8> = crate::BitWriter<'a, INTF_SPEC, O>;
+pub type ALARM_1_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `ALARM_2` reader - "]
 pub type ALARM_2_R = crate::BitReader;
 #[doc = "Field `ALARM_2` writer - "]
-pub type ALARM_2_W<'a, const O: u8> = crate::BitWriter<'a, INTF_SPEC, O>;
+pub type ALARM_2_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `ALARM_3` reader - "]
 pub type ALARM_3_R = crate::BitReader;
 #[doc = "Field `ALARM_3` writer - "]
-pub type ALARM_3_W<'a, const O: u8> = crate::BitWriter<'a, INTF_SPEC, O>;
+pub type ALARM_3_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0"]
     #[inline(always)]
@@ -76,54 +44,53 @@ impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
     #[must_use]
-    pub fn alarm_0(&mut self) -> ALARM_0_W<0> {
-        ALARM_0_W::new(self)
+    pub fn alarm_0(&mut self) -> ALARM_0_W<INTF_SPEC> {
+        ALARM_0_W::new(self, 0)
     }
     #[doc = "Bit 1"]
     #[inline(always)]
     #[must_use]
-    pub fn alarm_1(&mut self) -> ALARM_1_W<1> {
-        ALARM_1_W::new(self)
+    pub fn alarm_1(&mut self) -> ALARM_1_W<INTF_SPEC> {
+        ALARM_1_W::new(self, 1)
     }
     #[doc = "Bit 2"]
     #[inline(always)]
     #[must_use]
-    pub fn alarm_2(&mut self) -> ALARM_2_W<2> {
-        ALARM_2_W::new(self)
+    pub fn alarm_2(&mut self) -> ALARM_2_W<INTF_SPEC> {
+        ALARM_2_W::new(self, 2)
     }
     #[doc = "Bit 3"]
     #[inline(always)]
     #[must_use]
-    pub fn alarm_3(&mut self) -> ALARM_3_W<3> {
-        ALARM_3_W::new(self)
+    pub fn alarm_3(&mut self) -> ALARM_3_W<INTF_SPEC> {
+        ALARM_3_W::new(self, 3)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
 #[doc = "Interrupt Force  
 
-This register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
-
-For information about available fields see [intf](index.html) module"]
+You can [`read`](crate::generic::Reg::read) this register and get [`intf::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`intf::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct INTF_SPEC;
 impl crate::RegisterSpec for INTF_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [intf::R](R) reader structure"]
-impl crate::Readable for INTF_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [intf::W](W) writer structure"]
+#[doc = "`read()` method returns [`intf::R`](R) reader structure"]
+impl crate::Readable for INTF_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`intf::W`](W) writer structure"]
 impl crate::Writable for INTF_SPEC {
-    type Writer = W;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets INTF to value 0"]
 impl crate::Resettable for INTF_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }

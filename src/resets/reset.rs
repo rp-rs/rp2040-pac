@@ -1,139 +1,107 @@
 #[doc = "Register `RESET` reader"]
-pub struct R(crate::R<RESET_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<RESET_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<RESET_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<RESET_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<RESET_SPEC>;
 #[doc = "Register `RESET` writer"]
-pub struct W(crate::W<RESET_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<RESET_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<RESET_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<RESET_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<RESET_SPEC>;
 #[doc = "Field `adc` reader - "]
 pub type ADC_R = crate::BitReader;
 #[doc = "Field `adc` writer - "]
-pub type ADC_W<'a, const O: u8> = crate::BitWriter<'a, RESET_SPEC, O>;
+pub type ADC_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `busctrl` reader - "]
 pub type BUSCTRL_R = crate::BitReader;
 #[doc = "Field `busctrl` writer - "]
-pub type BUSCTRL_W<'a, const O: u8> = crate::BitWriter<'a, RESET_SPEC, O>;
+pub type BUSCTRL_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `dma` reader - "]
 pub type DMA_R = crate::BitReader;
 #[doc = "Field `dma` writer - "]
-pub type DMA_W<'a, const O: u8> = crate::BitWriter<'a, RESET_SPEC, O>;
+pub type DMA_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `i2c0` reader - "]
 pub type I2C0_R = crate::BitReader;
 #[doc = "Field `i2c0` writer - "]
-pub type I2C0_W<'a, const O: u8> = crate::BitWriter<'a, RESET_SPEC, O>;
+pub type I2C0_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `i2c1` reader - "]
 pub type I2C1_R = crate::BitReader;
 #[doc = "Field `i2c1` writer - "]
-pub type I2C1_W<'a, const O: u8> = crate::BitWriter<'a, RESET_SPEC, O>;
+pub type I2C1_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `io_bank0` reader - "]
 pub type IO_BANK0_R = crate::BitReader;
 #[doc = "Field `io_bank0` writer - "]
-pub type IO_BANK0_W<'a, const O: u8> = crate::BitWriter<'a, RESET_SPEC, O>;
+pub type IO_BANK0_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `io_qspi` reader - "]
 pub type IO_QSPI_R = crate::BitReader;
 #[doc = "Field `io_qspi` writer - "]
-pub type IO_QSPI_W<'a, const O: u8> = crate::BitWriter<'a, RESET_SPEC, O>;
+pub type IO_QSPI_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `jtag` reader - "]
 pub type JTAG_R = crate::BitReader;
 #[doc = "Field `jtag` writer - "]
-pub type JTAG_W<'a, const O: u8> = crate::BitWriter<'a, RESET_SPEC, O>;
+pub type JTAG_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `pads_bank0` reader - "]
 pub type PADS_BANK0_R = crate::BitReader;
 #[doc = "Field `pads_bank0` writer - "]
-pub type PADS_BANK0_W<'a, const O: u8> = crate::BitWriter<'a, RESET_SPEC, O>;
+pub type PADS_BANK0_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `pads_qspi` reader - "]
 pub type PADS_QSPI_R = crate::BitReader;
 #[doc = "Field `pads_qspi` writer - "]
-pub type PADS_QSPI_W<'a, const O: u8> = crate::BitWriter<'a, RESET_SPEC, O>;
+pub type PADS_QSPI_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `pio0` reader - "]
 pub type PIO0_R = crate::BitReader;
 #[doc = "Field `pio0` writer - "]
-pub type PIO0_W<'a, const O: u8> = crate::BitWriter<'a, RESET_SPEC, O>;
+pub type PIO0_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `pio1` reader - "]
 pub type PIO1_R = crate::BitReader;
 #[doc = "Field `pio1` writer - "]
-pub type PIO1_W<'a, const O: u8> = crate::BitWriter<'a, RESET_SPEC, O>;
+pub type PIO1_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `pll_sys` reader - "]
 pub type PLL_SYS_R = crate::BitReader;
 #[doc = "Field `pll_sys` writer - "]
-pub type PLL_SYS_W<'a, const O: u8> = crate::BitWriter<'a, RESET_SPEC, O>;
+pub type PLL_SYS_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `pll_usb` reader - "]
 pub type PLL_USB_R = crate::BitReader;
 #[doc = "Field `pll_usb` writer - "]
-pub type PLL_USB_W<'a, const O: u8> = crate::BitWriter<'a, RESET_SPEC, O>;
+pub type PLL_USB_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `pwm` reader - "]
 pub type PWM_R = crate::BitReader;
 #[doc = "Field `pwm` writer - "]
-pub type PWM_W<'a, const O: u8> = crate::BitWriter<'a, RESET_SPEC, O>;
+pub type PWM_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `rtc` reader - "]
 pub type RTC_R = crate::BitReader;
 #[doc = "Field `rtc` writer - "]
-pub type RTC_W<'a, const O: u8> = crate::BitWriter<'a, RESET_SPEC, O>;
+pub type RTC_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `spi0` reader - "]
 pub type SPI0_R = crate::BitReader;
 #[doc = "Field `spi0` writer - "]
-pub type SPI0_W<'a, const O: u8> = crate::BitWriter<'a, RESET_SPEC, O>;
+pub type SPI0_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `spi1` reader - "]
 pub type SPI1_R = crate::BitReader;
 #[doc = "Field `spi1` writer - "]
-pub type SPI1_W<'a, const O: u8> = crate::BitWriter<'a, RESET_SPEC, O>;
+pub type SPI1_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `syscfg` reader - "]
 pub type SYSCFG_R = crate::BitReader;
 #[doc = "Field `syscfg` writer - "]
-pub type SYSCFG_W<'a, const O: u8> = crate::BitWriter<'a, RESET_SPEC, O>;
+pub type SYSCFG_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `sysinfo` reader - "]
 pub type SYSINFO_R = crate::BitReader;
 #[doc = "Field `sysinfo` writer - "]
-pub type SYSINFO_W<'a, const O: u8> = crate::BitWriter<'a, RESET_SPEC, O>;
+pub type SYSINFO_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `tbman` reader - "]
 pub type TBMAN_R = crate::BitReader;
 #[doc = "Field `tbman` writer - "]
-pub type TBMAN_W<'a, const O: u8> = crate::BitWriter<'a, RESET_SPEC, O>;
+pub type TBMAN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `timer` reader - "]
 pub type TIMER_R = crate::BitReader;
 #[doc = "Field `timer` writer - "]
-pub type TIMER_W<'a, const O: u8> = crate::BitWriter<'a, RESET_SPEC, O>;
+pub type TIMER_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `uart0` reader - "]
 pub type UART0_R = crate::BitReader;
 #[doc = "Field `uart0` writer - "]
-pub type UART0_W<'a, const O: u8> = crate::BitWriter<'a, RESET_SPEC, O>;
+pub type UART0_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `uart1` reader - "]
 pub type UART1_R = crate::BitReader;
 #[doc = "Field `uart1` writer - "]
-pub type UART1_W<'a, const O: u8> = crate::BitWriter<'a, RESET_SPEC, O>;
+pub type UART1_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `usbctrl` reader - "]
 pub type USBCTRL_R = crate::BitReader;
 #[doc = "Field `usbctrl` writer - "]
-pub type USBCTRL_W<'a, const O: u8> = crate::BitWriter<'a, RESET_SPEC, O>;
+pub type USBCTRL_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0"]
     #[inline(always)]
@@ -265,180 +233,179 @@ impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
     #[must_use]
-    pub fn adc(&mut self) -> ADC_W<0> {
-        ADC_W::new(self)
+    pub fn adc(&mut self) -> ADC_W<RESET_SPEC> {
+        ADC_W::new(self, 0)
     }
     #[doc = "Bit 1"]
     #[inline(always)]
     #[must_use]
-    pub fn busctrl(&mut self) -> BUSCTRL_W<1> {
-        BUSCTRL_W::new(self)
+    pub fn busctrl(&mut self) -> BUSCTRL_W<RESET_SPEC> {
+        BUSCTRL_W::new(self, 1)
     }
     #[doc = "Bit 2"]
     #[inline(always)]
     #[must_use]
-    pub fn dma(&mut self) -> DMA_W<2> {
-        DMA_W::new(self)
+    pub fn dma(&mut self) -> DMA_W<RESET_SPEC> {
+        DMA_W::new(self, 2)
     }
     #[doc = "Bit 3"]
     #[inline(always)]
     #[must_use]
-    pub fn i2c0(&mut self) -> I2C0_W<3> {
-        I2C0_W::new(self)
+    pub fn i2c0(&mut self) -> I2C0_W<RESET_SPEC> {
+        I2C0_W::new(self, 3)
     }
     #[doc = "Bit 4"]
     #[inline(always)]
     #[must_use]
-    pub fn i2c1(&mut self) -> I2C1_W<4> {
-        I2C1_W::new(self)
+    pub fn i2c1(&mut self) -> I2C1_W<RESET_SPEC> {
+        I2C1_W::new(self, 4)
     }
     #[doc = "Bit 5"]
     #[inline(always)]
     #[must_use]
-    pub fn io_bank0(&mut self) -> IO_BANK0_W<5> {
-        IO_BANK0_W::new(self)
+    pub fn io_bank0(&mut self) -> IO_BANK0_W<RESET_SPEC> {
+        IO_BANK0_W::new(self, 5)
     }
     #[doc = "Bit 6"]
     #[inline(always)]
     #[must_use]
-    pub fn io_qspi(&mut self) -> IO_QSPI_W<6> {
-        IO_QSPI_W::new(self)
+    pub fn io_qspi(&mut self) -> IO_QSPI_W<RESET_SPEC> {
+        IO_QSPI_W::new(self, 6)
     }
     #[doc = "Bit 7"]
     #[inline(always)]
     #[must_use]
-    pub fn jtag(&mut self) -> JTAG_W<7> {
-        JTAG_W::new(self)
+    pub fn jtag(&mut self) -> JTAG_W<RESET_SPEC> {
+        JTAG_W::new(self, 7)
     }
     #[doc = "Bit 8"]
     #[inline(always)]
     #[must_use]
-    pub fn pads_bank0(&mut self) -> PADS_BANK0_W<8> {
-        PADS_BANK0_W::new(self)
+    pub fn pads_bank0(&mut self) -> PADS_BANK0_W<RESET_SPEC> {
+        PADS_BANK0_W::new(self, 8)
     }
     #[doc = "Bit 9"]
     #[inline(always)]
     #[must_use]
-    pub fn pads_qspi(&mut self) -> PADS_QSPI_W<9> {
-        PADS_QSPI_W::new(self)
+    pub fn pads_qspi(&mut self) -> PADS_QSPI_W<RESET_SPEC> {
+        PADS_QSPI_W::new(self, 9)
     }
     #[doc = "Bit 10"]
     #[inline(always)]
     #[must_use]
-    pub fn pio0(&mut self) -> PIO0_W<10> {
-        PIO0_W::new(self)
+    pub fn pio0(&mut self) -> PIO0_W<RESET_SPEC> {
+        PIO0_W::new(self, 10)
     }
     #[doc = "Bit 11"]
     #[inline(always)]
     #[must_use]
-    pub fn pio1(&mut self) -> PIO1_W<11> {
-        PIO1_W::new(self)
+    pub fn pio1(&mut self) -> PIO1_W<RESET_SPEC> {
+        PIO1_W::new(self, 11)
     }
     #[doc = "Bit 12"]
     #[inline(always)]
     #[must_use]
-    pub fn pll_sys(&mut self) -> PLL_SYS_W<12> {
-        PLL_SYS_W::new(self)
+    pub fn pll_sys(&mut self) -> PLL_SYS_W<RESET_SPEC> {
+        PLL_SYS_W::new(self, 12)
     }
     #[doc = "Bit 13"]
     #[inline(always)]
     #[must_use]
-    pub fn pll_usb(&mut self) -> PLL_USB_W<13> {
-        PLL_USB_W::new(self)
+    pub fn pll_usb(&mut self) -> PLL_USB_W<RESET_SPEC> {
+        PLL_USB_W::new(self, 13)
     }
     #[doc = "Bit 14"]
     #[inline(always)]
     #[must_use]
-    pub fn pwm(&mut self) -> PWM_W<14> {
-        PWM_W::new(self)
+    pub fn pwm(&mut self) -> PWM_W<RESET_SPEC> {
+        PWM_W::new(self, 14)
     }
     #[doc = "Bit 15"]
     #[inline(always)]
     #[must_use]
-    pub fn rtc(&mut self) -> RTC_W<15> {
-        RTC_W::new(self)
+    pub fn rtc(&mut self) -> RTC_W<RESET_SPEC> {
+        RTC_W::new(self, 15)
     }
     #[doc = "Bit 16"]
     #[inline(always)]
     #[must_use]
-    pub fn spi0(&mut self) -> SPI0_W<16> {
-        SPI0_W::new(self)
+    pub fn spi0(&mut self) -> SPI0_W<RESET_SPEC> {
+        SPI0_W::new(self, 16)
     }
     #[doc = "Bit 17"]
     #[inline(always)]
     #[must_use]
-    pub fn spi1(&mut self) -> SPI1_W<17> {
-        SPI1_W::new(self)
+    pub fn spi1(&mut self) -> SPI1_W<RESET_SPEC> {
+        SPI1_W::new(self, 17)
     }
     #[doc = "Bit 18"]
     #[inline(always)]
     #[must_use]
-    pub fn syscfg(&mut self) -> SYSCFG_W<18> {
-        SYSCFG_W::new(self)
+    pub fn syscfg(&mut self) -> SYSCFG_W<RESET_SPEC> {
+        SYSCFG_W::new(self, 18)
     }
     #[doc = "Bit 19"]
     #[inline(always)]
     #[must_use]
-    pub fn sysinfo(&mut self) -> SYSINFO_W<19> {
-        SYSINFO_W::new(self)
+    pub fn sysinfo(&mut self) -> SYSINFO_W<RESET_SPEC> {
+        SYSINFO_W::new(self, 19)
     }
     #[doc = "Bit 20"]
     #[inline(always)]
     #[must_use]
-    pub fn tbman(&mut self) -> TBMAN_W<20> {
-        TBMAN_W::new(self)
+    pub fn tbman(&mut self) -> TBMAN_W<RESET_SPEC> {
+        TBMAN_W::new(self, 20)
     }
     #[doc = "Bit 21"]
     #[inline(always)]
     #[must_use]
-    pub fn timer(&mut self) -> TIMER_W<21> {
-        TIMER_W::new(self)
+    pub fn timer(&mut self) -> TIMER_W<RESET_SPEC> {
+        TIMER_W::new(self, 21)
     }
     #[doc = "Bit 22"]
     #[inline(always)]
     #[must_use]
-    pub fn uart0(&mut self) -> UART0_W<22> {
-        UART0_W::new(self)
+    pub fn uart0(&mut self) -> UART0_W<RESET_SPEC> {
+        UART0_W::new(self, 22)
     }
     #[doc = "Bit 23"]
     #[inline(always)]
     #[must_use]
-    pub fn uart1(&mut self) -> UART1_W<23> {
-        UART1_W::new(self)
+    pub fn uart1(&mut self) -> UART1_W<RESET_SPEC> {
+        UART1_W::new(self, 23)
     }
     #[doc = "Bit 24"]
     #[inline(always)]
     #[must_use]
-    pub fn usbctrl(&mut self) -> USBCTRL_W<24> {
-        USBCTRL_W::new(self)
+    pub fn usbctrl(&mut self) -> USBCTRL_W<RESET_SPEC> {
+        USBCTRL_W::new(self, 24)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
 #[doc = "Reset control. If a bit is set it means the peripheral is in reset. 0 means the peripheral's reset is deasserted.  
 
-This register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
-
-For information about available fields see [reset](index.html) module"]
+You can [`read`](crate::generic::Reg::read) this register and get [`reset::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`reset::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct RESET_SPEC;
 impl crate::RegisterSpec for RESET_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [reset::R](R) reader structure"]
-impl crate::Readable for RESET_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [reset::W](W) writer structure"]
+#[doc = "`read()` method returns [`reset::R`](R) reader structure"]
+impl crate::Readable for RESET_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`reset::W`](W) writer structure"]
 impl crate::Writable for RESET_SPEC {
-    type Writer = W;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets RESET to value 0x01ff_ffff"]
 impl crate::Resettable for RESET_SPEC {
-    const RESET_VALUE: Self::Ux = 0x01ff_ffff;
+    const RESET_VALUE: u32 = 0x01ff_ffff;
 }

@@ -1,18 +1,5 @@
 #[doc = "Register `FSTAT` reader"]
-pub struct R(crate::R<FSTAT_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<FSTAT_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<FSTAT_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<FSTAT_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<FSTAT_SPEC>;
 #[doc = "Field `RXFULL` reader - State machine RX FIFO is full"]
 pub type RXFULL_R = crate::FieldReader;
 #[doc = "Field `RXEMPTY` reader - State machine RX FIFO is empty"]
@@ -45,18 +32,14 @@ impl R {
 }
 #[doc = "FIFO status register  
 
-This register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
-
-For information about available fields see [fstat](index.html) module"]
+You can [`read`](crate::generic::Reg::read) this register and get [`fstat::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct FSTAT_SPEC;
 impl crate::RegisterSpec for FSTAT_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [fstat::R](R) reader structure"]
-impl crate::Readable for FSTAT_SPEC {
-    type Reader = R;
-}
+#[doc = "`read()` method returns [`fstat::R`](R) reader structure"]
+impl crate::Readable for FSTAT_SPEC {}
 #[doc = "`reset()` method sets FSTAT to value 0x0f00_0f00"]
 impl crate::Resettable for FSTAT_SPEC {
-    const RESET_VALUE: Self::Ux = 0x0f00_0f00;
+    const RESET_VALUE: u32 = 0x0f00_0f00;
 }

@@ -1,167 +1,135 @@
 #[doc = "Register `SLEEP_EN0` reader"]
-pub struct R(crate::R<SLEEP_EN0_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<SLEEP_EN0_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<SLEEP_EN0_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<SLEEP_EN0_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<SLEEP_EN0_SPEC>;
 #[doc = "Register `SLEEP_EN0` writer"]
-pub struct W(crate::W<SLEEP_EN0_SPEC>);
-impl core::ops::Deref for W {
-    type Target = crate::W<SLEEP_EN0_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl core::ops::DerefMut for W {
-    #[inline(always)]
-    fn deref_mut(&mut self) -> &mut Self::Target {
-        &mut self.0
-    }
-}
-impl From<crate::W<SLEEP_EN0_SPEC>> for W {
-    #[inline(always)]
-    fn from(writer: crate::W<SLEEP_EN0_SPEC>) -> Self {
-        W(writer)
-    }
-}
+pub type W = crate::W<SLEEP_EN0_SPEC>;
 #[doc = "Field `clk_sys_clocks` reader - "]
 pub type CLK_SYS_CLOCKS_R = crate::BitReader;
 #[doc = "Field `clk_sys_clocks` writer - "]
-pub type CLK_SYS_CLOCKS_W<'a, const O: u8> = crate::BitWriter<'a, SLEEP_EN0_SPEC, O>;
+pub type CLK_SYS_CLOCKS_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `clk_adc_adc` reader - "]
 pub type CLK_ADC_ADC_R = crate::BitReader;
 #[doc = "Field `clk_adc_adc` writer - "]
-pub type CLK_ADC_ADC_W<'a, const O: u8> = crate::BitWriter<'a, SLEEP_EN0_SPEC, O>;
+pub type CLK_ADC_ADC_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `clk_sys_adc` reader - "]
 pub type CLK_SYS_ADC_R = crate::BitReader;
 #[doc = "Field `clk_sys_adc` writer - "]
-pub type CLK_SYS_ADC_W<'a, const O: u8> = crate::BitWriter<'a, SLEEP_EN0_SPEC, O>;
+pub type CLK_SYS_ADC_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `clk_sys_busctrl` reader - "]
 pub type CLK_SYS_BUSCTRL_R = crate::BitReader;
 #[doc = "Field `clk_sys_busctrl` writer - "]
-pub type CLK_SYS_BUSCTRL_W<'a, const O: u8> = crate::BitWriter<'a, SLEEP_EN0_SPEC, O>;
+pub type CLK_SYS_BUSCTRL_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `clk_sys_busfabric` reader - "]
 pub type CLK_SYS_BUSFABRIC_R = crate::BitReader;
 #[doc = "Field `clk_sys_busfabric` writer - "]
-pub type CLK_SYS_BUSFABRIC_W<'a, const O: u8> = crate::BitWriter<'a, SLEEP_EN0_SPEC, O>;
+pub type CLK_SYS_BUSFABRIC_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `clk_sys_dma` reader - "]
 pub type CLK_SYS_DMA_R = crate::BitReader;
 #[doc = "Field `clk_sys_dma` writer - "]
-pub type CLK_SYS_DMA_W<'a, const O: u8> = crate::BitWriter<'a, SLEEP_EN0_SPEC, O>;
+pub type CLK_SYS_DMA_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `clk_sys_i2c0` reader - "]
 pub type CLK_SYS_I2C0_R = crate::BitReader;
 #[doc = "Field `clk_sys_i2c0` writer - "]
-pub type CLK_SYS_I2C0_W<'a, const O: u8> = crate::BitWriter<'a, SLEEP_EN0_SPEC, O>;
+pub type CLK_SYS_I2C0_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `clk_sys_i2c1` reader - "]
 pub type CLK_SYS_I2C1_R = crate::BitReader;
 #[doc = "Field `clk_sys_i2c1` writer - "]
-pub type CLK_SYS_I2C1_W<'a, const O: u8> = crate::BitWriter<'a, SLEEP_EN0_SPEC, O>;
+pub type CLK_SYS_I2C1_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `clk_sys_io` reader - "]
 pub type CLK_SYS_IO_R = crate::BitReader;
 #[doc = "Field `clk_sys_io` writer - "]
-pub type CLK_SYS_IO_W<'a, const O: u8> = crate::BitWriter<'a, SLEEP_EN0_SPEC, O>;
+pub type CLK_SYS_IO_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `clk_sys_jtag` reader - "]
 pub type CLK_SYS_JTAG_R = crate::BitReader;
 #[doc = "Field `clk_sys_jtag` writer - "]
-pub type CLK_SYS_JTAG_W<'a, const O: u8> = crate::BitWriter<'a, SLEEP_EN0_SPEC, O>;
+pub type CLK_SYS_JTAG_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `clk_sys_vreg_and_chip_reset` reader - "]
 pub type CLK_SYS_VREG_AND_CHIP_RESET_R = crate::BitReader;
 #[doc = "Field `clk_sys_vreg_and_chip_reset` writer - "]
-pub type CLK_SYS_VREG_AND_CHIP_RESET_W<'a, const O: u8> = crate::BitWriter<'a, SLEEP_EN0_SPEC, O>;
+pub type CLK_SYS_VREG_AND_CHIP_RESET_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `clk_sys_pads` reader - "]
 pub type CLK_SYS_PADS_R = crate::BitReader;
 #[doc = "Field `clk_sys_pads` writer - "]
-pub type CLK_SYS_PADS_W<'a, const O: u8> = crate::BitWriter<'a, SLEEP_EN0_SPEC, O>;
+pub type CLK_SYS_PADS_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `clk_sys_pio0` reader - "]
 pub type CLK_SYS_PIO0_R = crate::BitReader;
 #[doc = "Field `clk_sys_pio0` writer - "]
-pub type CLK_SYS_PIO0_W<'a, const O: u8> = crate::BitWriter<'a, SLEEP_EN0_SPEC, O>;
+pub type CLK_SYS_PIO0_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `clk_sys_pio1` reader - "]
 pub type CLK_SYS_PIO1_R = crate::BitReader;
 #[doc = "Field `clk_sys_pio1` writer - "]
-pub type CLK_SYS_PIO1_W<'a, const O: u8> = crate::BitWriter<'a, SLEEP_EN0_SPEC, O>;
+pub type CLK_SYS_PIO1_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `clk_sys_pll_sys` reader - "]
 pub type CLK_SYS_PLL_SYS_R = crate::BitReader;
 #[doc = "Field `clk_sys_pll_sys` writer - "]
-pub type CLK_SYS_PLL_SYS_W<'a, const O: u8> = crate::BitWriter<'a, SLEEP_EN0_SPEC, O>;
+pub type CLK_SYS_PLL_SYS_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `clk_sys_pll_usb` reader - "]
 pub type CLK_SYS_PLL_USB_R = crate::BitReader;
 #[doc = "Field `clk_sys_pll_usb` writer - "]
-pub type CLK_SYS_PLL_USB_W<'a, const O: u8> = crate::BitWriter<'a, SLEEP_EN0_SPEC, O>;
+pub type CLK_SYS_PLL_USB_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `clk_sys_psm` reader - "]
 pub type CLK_SYS_PSM_R = crate::BitReader;
 #[doc = "Field `clk_sys_psm` writer - "]
-pub type CLK_SYS_PSM_W<'a, const O: u8> = crate::BitWriter<'a, SLEEP_EN0_SPEC, O>;
+pub type CLK_SYS_PSM_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `clk_sys_pwm` reader - "]
 pub type CLK_SYS_PWM_R = crate::BitReader;
 #[doc = "Field `clk_sys_pwm` writer - "]
-pub type CLK_SYS_PWM_W<'a, const O: u8> = crate::BitWriter<'a, SLEEP_EN0_SPEC, O>;
+pub type CLK_SYS_PWM_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `clk_sys_resets` reader - "]
 pub type CLK_SYS_RESETS_R = crate::BitReader;
 #[doc = "Field `clk_sys_resets` writer - "]
-pub type CLK_SYS_RESETS_W<'a, const O: u8> = crate::BitWriter<'a, SLEEP_EN0_SPEC, O>;
+pub type CLK_SYS_RESETS_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `clk_sys_rom` reader - "]
 pub type CLK_SYS_ROM_R = crate::BitReader;
 #[doc = "Field `clk_sys_rom` writer - "]
-pub type CLK_SYS_ROM_W<'a, const O: u8> = crate::BitWriter<'a, SLEEP_EN0_SPEC, O>;
+pub type CLK_SYS_ROM_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `clk_sys_rosc` reader - "]
 pub type CLK_SYS_ROSC_R = crate::BitReader;
 #[doc = "Field `clk_sys_rosc` writer - "]
-pub type CLK_SYS_ROSC_W<'a, const O: u8> = crate::BitWriter<'a, SLEEP_EN0_SPEC, O>;
+pub type CLK_SYS_ROSC_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `clk_rtc_rtc` reader - "]
 pub type CLK_RTC_RTC_R = crate::BitReader;
 #[doc = "Field `clk_rtc_rtc` writer - "]
-pub type CLK_RTC_RTC_W<'a, const O: u8> = crate::BitWriter<'a, SLEEP_EN0_SPEC, O>;
+pub type CLK_RTC_RTC_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `clk_sys_rtc` reader - "]
 pub type CLK_SYS_RTC_R = crate::BitReader;
 #[doc = "Field `clk_sys_rtc` writer - "]
-pub type CLK_SYS_RTC_W<'a, const O: u8> = crate::BitWriter<'a, SLEEP_EN0_SPEC, O>;
+pub type CLK_SYS_RTC_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `clk_sys_sio` reader - "]
 pub type CLK_SYS_SIO_R = crate::BitReader;
 #[doc = "Field `clk_sys_sio` writer - "]
-pub type CLK_SYS_SIO_W<'a, const O: u8> = crate::BitWriter<'a, SLEEP_EN0_SPEC, O>;
+pub type CLK_SYS_SIO_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `clk_peri_spi0` reader - "]
 pub type CLK_PERI_SPI0_R = crate::BitReader;
 #[doc = "Field `clk_peri_spi0` writer - "]
-pub type CLK_PERI_SPI0_W<'a, const O: u8> = crate::BitWriter<'a, SLEEP_EN0_SPEC, O>;
+pub type CLK_PERI_SPI0_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `clk_sys_spi0` reader - "]
 pub type CLK_SYS_SPI0_R = crate::BitReader;
 #[doc = "Field `clk_sys_spi0` writer - "]
-pub type CLK_SYS_SPI0_W<'a, const O: u8> = crate::BitWriter<'a, SLEEP_EN0_SPEC, O>;
+pub type CLK_SYS_SPI0_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `clk_peri_spi1` reader - "]
 pub type CLK_PERI_SPI1_R = crate::BitReader;
 #[doc = "Field `clk_peri_spi1` writer - "]
-pub type CLK_PERI_SPI1_W<'a, const O: u8> = crate::BitWriter<'a, SLEEP_EN0_SPEC, O>;
+pub type CLK_PERI_SPI1_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `clk_sys_spi1` reader - "]
 pub type CLK_SYS_SPI1_R = crate::BitReader;
 #[doc = "Field `clk_sys_spi1` writer - "]
-pub type CLK_SYS_SPI1_W<'a, const O: u8> = crate::BitWriter<'a, SLEEP_EN0_SPEC, O>;
+pub type CLK_SYS_SPI1_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `clk_sys_sram0` reader - "]
 pub type CLK_SYS_SRAM0_R = crate::BitReader;
 #[doc = "Field `clk_sys_sram0` writer - "]
-pub type CLK_SYS_SRAM0_W<'a, const O: u8> = crate::BitWriter<'a, SLEEP_EN0_SPEC, O>;
+pub type CLK_SYS_SRAM0_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `clk_sys_sram1` reader - "]
 pub type CLK_SYS_SRAM1_R = crate::BitReader;
 #[doc = "Field `clk_sys_sram1` writer - "]
-pub type CLK_SYS_SRAM1_W<'a, const O: u8> = crate::BitWriter<'a, SLEEP_EN0_SPEC, O>;
+pub type CLK_SYS_SRAM1_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `clk_sys_sram2` reader - "]
 pub type CLK_SYS_SRAM2_R = crate::BitReader;
 #[doc = "Field `clk_sys_sram2` writer - "]
-pub type CLK_SYS_SRAM2_W<'a, const O: u8> = crate::BitWriter<'a, SLEEP_EN0_SPEC, O>;
+pub type CLK_SYS_SRAM2_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `clk_sys_sram3` reader - "]
 pub type CLK_SYS_SRAM3_R = crate::BitReader;
 #[doc = "Field `clk_sys_sram3` writer - "]
-pub type CLK_SYS_SRAM3_W<'a, const O: u8> = crate::BitWriter<'a, SLEEP_EN0_SPEC, O>;
+pub type CLK_SYS_SRAM3_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0"]
     #[inline(always)]
@@ -328,222 +296,221 @@ impl W {
     #[doc = "Bit 0"]
     #[inline(always)]
     #[must_use]
-    pub fn clk_sys_clocks(&mut self) -> CLK_SYS_CLOCKS_W<0> {
-        CLK_SYS_CLOCKS_W::new(self)
+    pub fn clk_sys_clocks(&mut self) -> CLK_SYS_CLOCKS_W<SLEEP_EN0_SPEC> {
+        CLK_SYS_CLOCKS_W::new(self, 0)
     }
     #[doc = "Bit 1"]
     #[inline(always)]
     #[must_use]
-    pub fn clk_adc_adc(&mut self) -> CLK_ADC_ADC_W<1> {
-        CLK_ADC_ADC_W::new(self)
+    pub fn clk_adc_adc(&mut self) -> CLK_ADC_ADC_W<SLEEP_EN0_SPEC> {
+        CLK_ADC_ADC_W::new(self, 1)
     }
     #[doc = "Bit 2"]
     #[inline(always)]
     #[must_use]
-    pub fn clk_sys_adc(&mut self) -> CLK_SYS_ADC_W<2> {
-        CLK_SYS_ADC_W::new(self)
+    pub fn clk_sys_adc(&mut self) -> CLK_SYS_ADC_W<SLEEP_EN0_SPEC> {
+        CLK_SYS_ADC_W::new(self, 2)
     }
     #[doc = "Bit 3"]
     #[inline(always)]
     #[must_use]
-    pub fn clk_sys_busctrl(&mut self) -> CLK_SYS_BUSCTRL_W<3> {
-        CLK_SYS_BUSCTRL_W::new(self)
+    pub fn clk_sys_busctrl(&mut self) -> CLK_SYS_BUSCTRL_W<SLEEP_EN0_SPEC> {
+        CLK_SYS_BUSCTRL_W::new(self, 3)
     }
     #[doc = "Bit 4"]
     #[inline(always)]
     #[must_use]
-    pub fn clk_sys_busfabric(&mut self) -> CLK_SYS_BUSFABRIC_W<4> {
-        CLK_SYS_BUSFABRIC_W::new(self)
+    pub fn clk_sys_busfabric(&mut self) -> CLK_SYS_BUSFABRIC_W<SLEEP_EN0_SPEC> {
+        CLK_SYS_BUSFABRIC_W::new(self, 4)
     }
     #[doc = "Bit 5"]
     #[inline(always)]
     #[must_use]
-    pub fn clk_sys_dma(&mut self) -> CLK_SYS_DMA_W<5> {
-        CLK_SYS_DMA_W::new(self)
+    pub fn clk_sys_dma(&mut self) -> CLK_SYS_DMA_W<SLEEP_EN0_SPEC> {
+        CLK_SYS_DMA_W::new(self, 5)
     }
     #[doc = "Bit 6"]
     #[inline(always)]
     #[must_use]
-    pub fn clk_sys_i2c0(&mut self) -> CLK_SYS_I2C0_W<6> {
-        CLK_SYS_I2C0_W::new(self)
+    pub fn clk_sys_i2c0(&mut self) -> CLK_SYS_I2C0_W<SLEEP_EN0_SPEC> {
+        CLK_SYS_I2C0_W::new(self, 6)
     }
     #[doc = "Bit 7"]
     #[inline(always)]
     #[must_use]
-    pub fn clk_sys_i2c1(&mut self) -> CLK_SYS_I2C1_W<7> {
-        CLK_SYS_I2C1_W::new(self)
+    pub fn clk_sys_i2c1(&mut self) -> CLK_SYS_I2C1_W<SLEEP_EN0_SPEC> {
+        CLK_SYS_I2C1_W::new(self, 7)
     }
     #[doc = "Bit 8"]
     #[inline(always)]
     #[must_use]
-    pub fn clk_sys_io(&mut self) -> CLK_SYS_IO_W<8> {
-        CLK_SYS_IO_W::new(self)
+    pub fn clk_sys_io(&mut self) -> CLK_SYS_IO_W<SLEEP_EN0_SPEC> {
+        CLK_SYS_IO_W::new(self, 8)
     }
     #[doc = "Bit 9"]
     #[inline(always)]
     #[must_use]
-    pub fn clk_sys_jtag(&mut self) -> CLK_SYS_JTAG_W<9> {
-        CLK_SYS_JTAG_W::new(self)
+    pub fn clk_sys_jtag(&mut self) -> CLK_SYS_JTAG_W<SLEEP_EN0_SPEC> {
+        CLK_SYS_JTAG_W::new(self, 9)
     }
     #[doc = "Bit 10"]
     #[inline(always)]
     #[must_use]
-    pub fn clk_sys_vreg_and_chip_reset(&mut self) -> CLK_SYS_VREG_AND_CHIP_RESET_W<10> {
-        CLK_SYS_VREG_AND_CHIP_RESET_W::new(self)
+    pub fn clk_sys_vreg_and_chip_reset(&mut self) -> CLK_SYS_VREG_AND_CHIP_RESET_W<SLEEP_EN0_SPEC> {
+        CLK_SYS_VREG_AND_CHIP_RESET_W::new(self, 10)
     }
     #[doc = "Bit 11"]
     #[inline(always)]
     #[must_use]
-    pub fn clk_sys_pads(&mut self) -> CLK_SYS_PADS_W<11> {
-        CLK_SYS_PADS_W::new(self)
+    pub fn clk_sys_pads(&mut self) -> CLK_SYS_PADS_W<SLEEP_EN0_SPEC> {
+        CLK_SYS_PADS_W::new(self, 11)
     }
     #[doc = "Bit 12"]
     #[inline(always)]
     #[must_use]
-    pub fn clk_sys_pio0(&mut self) -> CLK_SYS_PIO0_W<12> {
-        CLK_SYS_PIO0_W::new(self)
+    pub fn clk_sys_pio0(&mut self) -> CLK_SYS_PIO0_W<SLEEP_EN0_SPEC> {
+        CLK_SYS_PIO0_W::new(self, 12)
     }
     #[doc = "Bit 13"]
     #[inline(always)]
     #[must_use]
-    pub fn clk_sys_pio1(&mut self) -> CLK_SYS_PIO1_W<13> {
-        CLK_SYS_PIO1_W::new(self)
+    pub fn clk_sys_pio1(&mut self) -> CLK_SYS_PIO1_W<SLEEP_EN0_SPEC> {
+        CLK_SYS_PIO1_W::new(self, 13)
     }
     #[doc = "Bit 14"]
     #[inline(always)]
     #[must_use]
-    pub fn clk_sys_pll_sys(&mut self) -> CLK_SYS_PLL_SYS_W<14> {
-        CLK_SYS_PLL_SYS_W::new(self)
+    pub fn clk_sys_pll_sys(&mut self) -> CLK_SYS_PLL_SYS_W<SLEEP_EN0_SPEC> {
+        CLK_SYS_PLL_SYS_W::new(self, 14)
     }
     #[doc = "Bit 15"]
     #[inline(always)]
     #[must_use]
-    pub fn clk_sys_pll_usb(&mut self) -> CLK_SYS_PLL_USB_W<15> {
-        CLK_SYS_PLL_USB_W::new(self)
+    pub fn clk_sys_pll_usb(&mut self) -> CLK_SYS_PLL_USB_W<SLEEP_EN0_SPEC> {
+        CLK_SYS_PLL_USB_W::new(self, 15)
     }
     #[doc = "Bit 16"]
     #[inline(always)]
     #[must_use]
-    pub fn clk_sys_psm(&mut self) -> CLK_SYS_PSM_W<16> {
-        CLK_SYS_PSM_W::new(self)
+    pub fn clk_sys_psm(&mut self) -> CLK_SYS_PSM_W<SLEEP_EN0_SPEC> {
+        CLK_SYS_PSM_W::new(self, 16)
     }
     #[doc = "Bit 17"]
     #[inline(always)]
     #[must_use]
-    pub fn clk_sys_pwm(&mut self) -> CLK_SYS_PWM_W<17> {
-        CLK_SYS_PWM_W::new(self)
+    pub fn clk_sys_pwm(&mut self) -> CLK_SYS_PWM_W<SLEEP_EN0_SPEC> {
+        CLK_SYS_PWM_W::new(self, 17)
     }
     #[doc = "Bit 18"]
     #[inline(always)]
     #[must_use]
-    pub fn clk_sys_resets(&mut self) -> CLK_SYS_RESETS_W<18> {
-        CLK_SYS_RESETS_W::new(self)
+    pub fn clk_sys_resets(&mut self) -> CLK_SYS_RESETS_W<SLEEP_EN0_SPEC> {
+        CLK_SYS_RESETS_W::new(self, 18)
     }
     #[doc = "Bit 19"]
     #[inline(always)]
     #[must_use]
-    pub fn clk_sys_rom(&mut self) -> CLK_SYS_ROM_W<19> {
-        CLK_SYS_ROM_W::new(self)
+    pub fn clk_sys_rom(&mut self) -> CLK_SYS_ROM_W<SLEEP_EN0_SPEC> {
+        CLK_SYS_ROM_W::new(self, 19)
     }
     #[doc = "Bit 20"]
     #[inline(always)]
     #[must_use]
-    pub fn clk_sys_rosc(&mut self) -> CLK_SYS_ROSC_W<20> {
-        CLK_SYS_ROSC_W::new(self)
+    pub fn clk_sys_rosc(&mut self) -> CLK_SYS_ROSC_W<SLEEP_EN0_SPEC> {
+        CLK_SYS_ROSC_W::new(self, 20)
     }
     #[doc = "Bit 21"]
     #[inline(always)]
     #[must_use]
-    pub fn clk_rtc_rtc(&mut self) -> CLK_RTC_RTC_W<21> {
-        CLK_RTC_RTC_W::new(self)
+    pub fn clk_rtc_rtc(&mut self) -> CLK_RTC_RTC_W<SLEEP_EN0_SPEC> {
+        CLK_RTC_RTC_W::new(self, 21)
     }
     #[doc = "Bit 22"]
     #[inline(always)]
     #[must_use]
-    pub fn clk_sys_rtc(&mut self) -> CLK_SYS_RTC_W<22> {
-        CLK_SYS_RTC_W::new(self)
+    pub fn clk_sys_rtc(&mut self) -> CLK_SYS_RTC_W<SLEEP_EN0_SPEC> {
+        CLK_SYS_RTC_W::new(self, 22)
     }
     #[doc = "Bit 23"]
     #[inline(always)]
     #[must_use]
-    pub fn clk_sys_sio(&mut self) -> CLK_SYS_SIO_W<23> {
-        CLK_SYS_SIO_W::new(self)
+    pub fn clk_sys_sio(&mut self) -> CLK_SYS_SIO_W<SLEEP_EN0_SPEC> {
+        CLK_SYS_SIO_W::new(self, 23)
     }
     #[doc = "Bit 24"]
     #[inline(always)]
     #[must_use]
-    pub fn clk_peri_spi0(&mut self) -> CLK_PERI_SPI0_W<24> {
-        CLK_PERI_SPI0_W::new(self)
+    pub fn clk_peri_spi0(&mut self) -> CLK_PERI_SPI0_W<SLEEP_EN0_SPEC> {
+        CLK_PERI_SPI0_W::new(self, 24)
     }
     #[doc = "Bit 25"]
     #[inline(always)]
     #[must_use]
-    pub fn clk_sys_spi0(&mut self) -> CLK_SYS_SPI0_W<25> {
-        CLK_SYS_SPI0_W::new(self)
+    pub fn clk_sys_spi0(&mut self) -> CLK_SYS_SPI0_W<SLEEP_EN0_SPEC> {
+        CLK_SYS_SPI0_W::new(self, 25)
     }
     #[doc = "Bit 26"]
     #[inline(always)]
     #[must_use]
-    pub fn clk_peri_spi1(&mut self) -> CLK_PERI_SPI1_W<26> {
-        CLK_PERI_SPI1_W::new(self)
+    pub fn clk_peri_spi1(&mut self) -> CLK_PERI_SPI1_W<SLEEP_EN0_SPEC> {
+        CLK_PERI_SPI1_W::new(self, 26)
     }
     #[doc = "Bit 27"]
     #[inline(always)]
     #[must_use]
-    pub fn clk_sys_spi1(&mut self) -> CLK_SYS_SPI1_W<27> {
-        CLK_SYS_SPI1_W::new(self)
+    pub fn clk_sys_spi1(&mut self) -> CLK_SYS_SPI1_W<SLEEP_EN0_SPEC> {
+        CLK_SYS_SPI1_W::new(self, 27)
     }
     #[doc = "Bit 28"]
     #[inline(always)]
     #[must_use]
-    pub fn clk_sys_sram0(&mut self) -> CLK_SYS_SRAM0_W<28> {
-        CLK_SYS_SRAM0_W::new(self)
+    pub fn clk_sys_sram0(&mut self) -> CLK_SYS_SRAM0_W<SLEEP_EN0_SPEC> {
+        CLK_SYS_SRAM0_W::new(self, 28)
     }
     #[doc = "Bit 29"]
     #[inline(always)]
     #[must_use]
-    pub fn clk_sys_sram1(&mut self) -> CLK_SYS_SRAM1_W<29> {
-        CLK_SYS_SRAM1_W::new(self)
+    pub fn clk_sys_sram1(&mut self) -> CLK_SYS_SRAM1_W<SLEEP_EN0_SPEC> {
+        CLK_SYS_SRAM1_W::new(self, 29)
     }
     #[doc = "Bit 30"]
     #[inline(always)]
     #[must_use]
-    pub fn clk_sys_sram2(&mut self) -> CLK_SYS_SRAM2_W<30> {
-        CLK_SYS_SRAM2_W::new(self)
+    pub fn clk_sys_sram2(&mut self) -> CLK_SYS_SRAM2_W<SLEEP_EN0_SPEC> {
+        CLK_SYS_SRAM2_W::new(self, 30)
     }
     #[doc = "Bit 31"]
     #[inline(always)]
     #[must_use]
-    pub fn clk_sys_sram3(&mut self) -> CLK_SYS_SRAM3_W<31> {
-        CLK_SYS_SRAM3_W::new(self)
+    pub fn clk_sys_sram3(&mut self) -> CLK_SYS_SRAM3_W<SLEEP_EN0_SPEC> {
+        CLK_SYS_SRAM3_W::new(self, 31)
     }
-    #[doc = "Writes raw bits to the register."]
+    #[doc = r" Writes raw bits to the register."]
+    #[doc = r""]
+    #[doc = r" # Safety"]
+    #[doc = r""]
+    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
     #[inline(always)]
     pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.0.bits(bits);
+        self.bits = bits;
         self
     }
 }
 #[doc = "enable clock in sleep mode  
 
-This register you can [`read`](crate::generic::Reg::read), [`write_with_zero`](crate::generic::Reg::write_with_zero), [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`modify`](crate::generic::Reg::modify). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
-
-For information about available fields see [sleep_en0](index.html) module"]
+You can [`read`](crate::generic::Reg::read) this register and get [`sleep_en0::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`sleep_en0::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct SLEEP_EN0_SPEC;
 impl crate::RegisterSpec for SLEEP_EN0_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [sleep_en0::R](R) reader structure"]
-impl crate::Readable for SLEEP_EN0_SPEC {
-    type Reader = R;
-}
-#[doc = "`write(|w| ..)` method takes [sleep_en0::W](W) writer structure"]
+#[doc = "`read()` method returns [`sleep_en0::R`](R) reader structure"]
+impl crate::Readable for SLEEP_EN0_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`sleep_en0::W`](W) writer structure"]
 impl crate::Writable for SLEEP_EN0_SPEC {
-    type Writer = W;
-    const ZERO_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: Self::Ux = 0;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
 #[doc = "`reset()` method sets SLEEP_EN0 to value 0xffff_ffff"]
 impl crate::Resettable for SLEEP_EN0_SPEC {
-    const RESET_VALUE: Self::Ux = 0xffff_ffff;
+    const RESET_VALUE: u32 = 0xffff_ffff;
 }

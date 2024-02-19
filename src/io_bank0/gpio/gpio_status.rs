@@ -1,18 +1,5 @@
 #[doc = "Register `GPIO_STATUS` reader"]
-pub struct R(crate::R<GPIO_STATUS_SPEC>);
-impl core::ops::Deref for R {
-    type Target = crate::R<GPIO_STATUS_SPEC>;
-    #[inline(always)]
-    fn deref(&self) -> &Self::Target {
-        &self.0
-    }
-}
-impl From<crate::R<GPIO_STATUS_SPEC>> for R {
-    #[inline(always)]
-    fn from(reader: crate::R<GPIO_STATUS_SPEC>) -> Self {
-        R(reader)
-    }
-}
+pub type R = crate::R<GPIO_STATUS_SPEC>;
 #[doc = "Field `OUTFROMPERI` reader - output signal from selected peripheral, before register override is applied"]
 pub type OUTFROMPERI_R = crate::BitReader;
 #[doc = "Field `OUTTOPAD` reader - output signal to pad after register override is applied"]
@@ -73,18 +60,14 @@ impl R {
 }
 #[doc = "GPIO status  
 
-This register you can [`read`](crate::generic::Reg::read). See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
-
-For information about available fields see [gpio_status](index.html) module"]
+You can [`read`](crate::generic::Reg::read) this register and get [`gpio_status::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct GPIO_STATUS_SPEC;
 impl crate::RegisterSpec for GPIO_STATUS_SPEC {
     type Ux = u32;
 }
-#[doc = "`read()` method returns [gpio_status::R](R) reader structure"]
-impl crate::Readable for GPIO_STATUS_SPEC {
-    type Reader = R;
-}
+#[doc = "`read()` method returns [`gpio_status::R`](R) reader structure"]
+impl crate::Readable for GPIO_STATUS_SPEC {}
 #[doc = "`reset()` method sets GPIO_STATUS to value 0"]
 impl crate::Resettable for GPIO_STATUS_SPEC {
-    const RESET_VALUE: Self::Ux = 0;
+    const RESET_VALUE: u32 = 0;
 }
