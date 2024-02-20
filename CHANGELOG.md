@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## Unreleased
 
+## [0.6.0] [Crates.io](https://crates.io/crates/rp2040-pac/0.6.0) [Github](https://github.com/rp-rs/rp2040-pac/releases/tag/v0.6.0)
+
 - Collect ADDR\_ENDP\* registers into an array
 - Add `host_poll_interval` field to EP\_CONTROL registers
 - add EPX\_CONTROL register to USBCTRL\_DPRAM
@@ -89,7 +91,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Initialized crate
 
-[Unreleased]: https://github.com/rp-rs/rp2040-pac/compare/v0.5.0...HEAD
+[Unreleased]: https://github.com/rp-rs/rp2040-pac/compare/v0.6.0...HEAD
+[0.6.0]: https://github.com/rp-rs/rp2040-pac/compare/v0.5.0...v0.6.0
 [0.5.0]: https://github.com/rp-rs/rp2040-pac/compare/v0.4.0...v0.5.0
 [0.4.0]: https://github.com/rp-rs/rp2040-pac/compare/v0.3.0...v0.4.0
 [0.3.0]: https://github.com/rp-rs/rp2040-pac/compare/v0.2.1...v0.3.0
