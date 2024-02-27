@@ -1,5 +1,5 @@
-#[doc = r"Register block"]
 #[repr(C)]
+#[doc = "Cluster GPIO%s, containing GPIO*_STATUS, GPIO*_CTRL"]
 pub struct GPIO {
     gpio_status: GPIO_STATUS,
     gpio_ctrl: GPIO_CTRL,

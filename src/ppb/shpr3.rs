@@ -35,16 +35,6 @@ impl W {
     pub fn pri_15(&mut self) -> PRI_15_W<SHPR3_SPEC> {
         PRI_15_W::new(self, 30)
     }
-    #[doc = r" Writes raw bits to the register."]
-    #[doc = r""]
-    #[doc = r" # Safety"]
-    #[doc = r""]
-    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.bits = bits;
-        self
-    }
 }
 #[doc = "System handlers are a special class of exception handler that can have their priority set to any of the priority levels. Use the System Handler Priority Register 3 to set the priority of PendSV and SysTick.  
 
@@ -57,6 +47,7 @@ impl crate::RegisterSpec for SHPR3_SPEC {
 impl crate::Readable for SHPR3_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`shpr3::W`](W) writer structure"]
 impl crate::Writable for SHPR3_SPEC {
+    type Safety = crate::Unsafe;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }

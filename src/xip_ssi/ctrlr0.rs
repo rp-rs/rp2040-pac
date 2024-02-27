@@ -18,8 +18,6 @@ pub type SCPH_W<'a, REG> = crate::BitWriter<'a, REG>;
 pub type SCPOL_R = crate::BitReader;
 #[doc = "Field `SCPOL` writer - Serial clock polarity"]
 pub type SCPOL_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `TMOD` reader - Transfer mode"]
-pub type TMOD_R = crate::FieldReader<TMOD_A>;
 #[doc = "Transfer mode  
 
 Value on reset: 0"]
@@ -44,6 +42,8 @@ impl From<TMOD_A> for u8 {
 impl crate::FieldSpec for TMOD_A {
     type Ux = u8;
 }
+#[doc = "Field `TMOD` reader - Transfer mode"]
+pub type TMOD_R = crate::FieldReader<TMOD_A>;
 impl TMOD_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
@@ -125,8 +125,6 @@ pub type DFS_32_R = crate::FieldReader;
 #[doc = "Field `DFS_32` writer - Data frame size in 32b transfer mode  
  Value of n -> n+1 clocks per frame."]
 pub type DFS_32_W<'a, REG> = crate::FieldWriter<'a, REG, 5>;
-#[doc = "Field `SPI_FRF` reader - SPI frame format"]
-pub type SPI_FRF_R = crate::FieldReader<SPI_FRF_A>;
 #[doc = "SPI frame format  
 
 Value on reset: 0"]
@@ -149,6 +147,8 @@ impl From<SPI_FRF_A> for u8 {
 impl crate::FieldSpec for SPI_FRF_A {
     type Ux = u8;
 }
+#[doc = "Field `SPI_FRF` reader - SPI frame format"]
+pub type SPI_FRF_R = crate::FieldReader<SPI_FRF_A>;
 impl SPI_FRF_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
@@ -331,16 +331,6 @@ impl W {
     pub fn sste(&mut self) -> SSTE_W<CTRLR0_SPEC> {
         SSTE_W::new(self, 24)
     }
-    #[doc = r" Writes raw bits to the register."]
-    #[doc = r""]
-    #[doc = r" # Safety"]
-    #[doc = r""]
-    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.bits = bits;
-        self
-    }
 }
 #[doc = "Control register 0  
 
@@ -353,6 +343,7 @@ impl crate::RegisterSpec for CTRLR0_SPEC {
 impl crate::Readable for CTRLR0_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`ctrlr0::W`](W) writer structure"]
 impl crate::Writable for CTRLR0_SPEC {
+    type Safety = crate::Unsafe;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }

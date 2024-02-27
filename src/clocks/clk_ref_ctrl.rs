@@ -2,8 +2,6 @@
 pub type R = crate::R<CLK_REF_CTRL_SPEC>;
 #[doc = "Register `CLK_REF_CTRL` writer"]
 pub type W = crate::W<CLK_REF_CTRL_SPEC>;
-#[doc = "Field `SRC` reader - Selects the clock source glitchlessly, can be changed on-the-fly"]
-pub type SRC_R = crate::FieldReader<SRC_A>;
 #[doc = "Selects the clock source glitchlessly, can be changed on-the-fly  
 
 Value on reset: 0"]
@@ -26,6 +24,8 @@ impl From<SRC_A> for u8 {
 impl crate::FieldSpec for SRC_A {
     type Ux = u8;
 }
+#[doc = "Field `SRC` reader - Selects the clock source glitchlessly, can be changed on-the-fly"]
+pub type SRC_R = crate::FieldReader<SRC_A>;
 impl SRC_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
@@ -76,8 +76,6 @@ where
         self.variant(SRC_A::XOSC_CLKSRC)
     }
 }
-#[doc = "Field `AUXSRC` reader - Selects the auxiliary clock source, will glitch when switching"]
-pub type AUXSRC_R = crate::FieldReader<AUXSRC_A>;
 #[doc = "Selects the auxiliary clock source, will glitch when switching  
 
 Value on reset: 0"]
@@ -100,6 +98,8 @@ impl From<AUXSRC_A> for u8 {
 impl crate::FieldSpec for AUXSRC_A {
     type Ux = u8;
 }
+#[doc = "Field `AUXSRC` reader - Selects the auxiliary clock source, will glitch when switching"]
+pub type AUXSRC_R = crate::FieldReader<AUXSRC_A>;
 impl AUXSRC_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
@@ -175,16 +175,6 @@ impl W {
     pub fn auxsrc(&mut self) -> AUXSRC_W<CLK_REF_CTRL_SPEC> {
         AUXSRC_W::new(self, 5)
     }
-    #[doc = r" Writes raw bits to the register."]
-    #[doc = r""]
-    #[doc = r" # Safety"]
-    #[doc = r""]
-    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.bits = bits;
-        self
-    }
 }
 #[doc = "Clock control, can be changed on-the-fly (except for auxsrc)  
 
@@ -197,6 +187,7 @@ impl crate::RegisterSpec for CLK_REF_CTRL_SPEC {
 impl crate::Readable for CLK_REF_CTRL_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`clk_ref_ctrl::W`](W) writer structure"]
 impl crate::Writable for CLK_REF_CTRL_SPEC {
+    type Safety = crate::Unsafe;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }

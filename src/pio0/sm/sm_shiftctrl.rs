@@ -149,16 +149,6 @@ impl W {
     pub fn fjoin_rx(&mut self) -> FJOIN_RX_W<SM_SHIFTCTRL_SPEC> {
         FJOIN_RX_W::new(self, 31)
     }
-    #[doc = r" Writes raw bits to the register."]
-    #[doc = r""]
-    #[doc = r" # Safety"]
-    #[doc = r""]
-    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.bits = bits;
-        self
-    }
 }
 #[doc = "Control behaviour of the input/output shift registers for state machine 0  
 
@@ -171,6 +161,7 @@ impl crate::RegisterSpec for SM_SHIFTCTRL_SPEC {
 impl crate::Readable for SM_SHIFTCTRL_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`sm_shiftctrl::W`](W) writer structure"]
 impl crate::Writable for SM_SHIFTCTRL_SPEC {
+    type Safety = crate::Unsafe;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }

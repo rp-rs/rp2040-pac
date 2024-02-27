@@ -485,16 +485,6 @@ impl W {
     pub fn ep15_out(&mut self) -> EP15_OUT_W<EP_ABORT_DONE_SPEC> {
         EP15_OUT_W::new(self, 31)
     }
-    #[doc = r" Writes raw bits to the register."]
-    #[doc = r""]
-    #[doc = r" # Safety"]
-    #[doc = r""]
-    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.bits = bits;
-        self
-    }
 }
 #[doc = "Device only: Used in conjunction with `EP_ABORT`. Set once an endpoint is idle so the programmer knows it is safe to modify the buffer control register.  
 
@@ -507,6 +497,7 @@ impl crate::RegisterSpec for EP_ABORT_DONE_SPEC {
 impl crate::Readable for EP_ABORT_DONE_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`ep_abort_done::W`](W) writer structure"]
 impl crate::Writable for EP_ABORT_DONE_SPEC {
+    type Safety = crate::Unsafe;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0xffff_ffff;
 }

@@ -18,9 +18,6 @@ pub type DS2_W<'a, REG> = crate::FieldWriter<'a, REG, 3>;
 pub type DS3_R = crate::FieldReader;
 #[doc = "Field `DS3` writer - Stage 3 drive strength"]
 pub type DS3_W<'a, REG> = crate::FieldWriter<'a, REG, 3>;
-#[doc = "Field `PASSWD` reader - Set to 0x9696 to apply the settings  
- Any other value in this field will set all drive strengths to 0"]
-pub type PASSWD_R = crate::FieldReader<PASSWD_A>;
 #[doc = "Set to 0x9696 to apply the settings  
  Any other value in this field will set all drive strengths to 0  
 
@@ -40,6 +37,9 @@ impl From<PASSWD_A> for u16 {
 impl crate::FieldSpec for PASSWD_A {
     type Ux = u16;
 }
+#[doc = "Field `PASSWD` reader - Set to 0x9696 to apply the settings  
+ Any other value in this field will set all drive strengths to 0"]
+pub type PASSWD_R = crate::FieldReader<PASSWD_A>;
 impl PASSWD_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
@@ -129,16 +129,6 @@ impl W {
     pub fn passwd(&mut self) -> PASSWD_W<FREQA_SPEC> {
         PASSWD_W::new(self, 16)
     }
-    #[doc = r" Writes raw bits to the register."]
-    #[doc = r""]
-    #[doc = r" # Safety"]
-    #[doc = r""]
-    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.bits = bits;
-        self
-    }
 }
 #[doc = "The FREQA &amp; FREQB registers control the frequency by controlling the drive strength of each stage  
  The drive strength has 4 levels determined by the number of bits set  
@@ -157,6 +147,7 @@ impl crate::RegisterSpec for FREQA_SPEC {
 impl crate::Readable for FREQA_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`freqa::W`](W) writer structure"]
 impl crate::Writable for FREQA_SPEC {
+    type Safety = crate::Unsafe;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }

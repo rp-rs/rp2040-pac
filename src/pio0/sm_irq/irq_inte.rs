@@ -185,16 +185,6 @@ impl W {
     pub fn sm3(&mut self) -> SM3_W<IRQ_INTE_SPEC> {
         SM3_W::new(self, 11)
     }
-    #[doc = r" Writes raw bits to the register."]
-    #[doc = r""]
-    #[doc = r" # Safety"]
-    #[doc = r""]
-    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.bits = bits;
-        self
-    }
 }
 #[doc = "Interrupt Enable for irq0  
 
@@ -207,6 +197,7 @@ impl crate::RegisterSpec for IRQ_INTE_SPEC {
 impl crate::Readable for IRQ_INTE_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`irq_inte::W`](W) writer structure"]
 impl crate::Writable for IRQ_INTE_SPEC {
+    type Safety = crate::Unsafe;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }

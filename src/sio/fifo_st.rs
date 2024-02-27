@@ -49,16 +49,6 @@ impl W {
     pub fn roe(&mut self) -> ROE_W<FIFO_ST_SPEC> {
         ROE_W::new(self, 3)
     }
-    #[doc = r" Writes raw bits to the register."]
-    #[doc = r""]
-    #[doc = r" # Safety"]
-    #[doc = r""]
-    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.bits = bits;
-        self
-    }
 }
 #[doc = "Status register for inter-core FIFOs (mailboxes).  
  There is one FIFO in the core 0 -> core 1 direction, and one core 1 -> core 0. Both are 32 bits wide and 8 words deep.  
@@ -75,6 +65,7 @@ impl crate::RegisterSpec for FIFO_ST_SPEC {
 impl crate::Readable for FIFO_ST_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`fifo_st::W`](W) writer structure"]
 impl crate::Writable for FIFO_ST_SPEC {
+    type Safety = crate::Unsafe;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0x0c;
 }

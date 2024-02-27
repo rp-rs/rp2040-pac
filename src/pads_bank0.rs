@@ -1,5 +1,5 @@
-#[doc = r"Register block"]
 #[repr(C)]
+#[doc = "Register block"]
 pub struct RegisterBlock {
     voltage_select: VOLTAGE_SELECT,
     gpio: [GPIO; 30],

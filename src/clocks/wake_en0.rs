@@ -485,16 +485,6 @@ impl W {
     pub fn clk_sys_sram3(&mut self) -> CLK_SYS_SRAM3_W<WAKE_EN0_SPEC> {
         CLK_SYS_SRAM3_W::new(self, 31)
     }
-    #[doc = r" Writes raw bits to the register."]
-    #[doc = r""]
-    #[doc = r" # Safety"]
-    #[doc = r""]
-    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.bits = bits;
-        self
-    }
 }
 #[doc = "enable clock in wake mode  
 
@@ -507,6 +497,7 @@ impl crate::RegisterSpec for WAKE_EN0_SPEC {
 impl crate::Readable for WAKE_EN0_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`wake_en0::W`](W) writer structure"]
 impl crate::Writable for WAKE_EN0_SPEC {
+    type Safety = crate::Unsafe;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }

@@ -20,16 +20,6 @@ impl W {
     pub fn ndf(&mut self) -> NDF_W<CTRLR1_SPEC> {
         NDF_W::new(self, 0)
     }
-    #[doc = r" Writes raw bits to the register."]
-    #[doc = r""]
-    #[doc = r" # Safety"]
-    #[doc = r""]
-    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.bits = bits;
-        self
-    }
 }
 #[doc = "Master Control register 1  
 
@@ -42,6 +32,7 @@ impl crate::RegisterSpec for CTRLR1_SPEC {
 impl crate::Readable for CTRLR1_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`ctrlr1::W`](W) writer structure"]
 impl crate::Writable for CTRLR1_SPEC {
+    type Safety = crate::Unsafe;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }

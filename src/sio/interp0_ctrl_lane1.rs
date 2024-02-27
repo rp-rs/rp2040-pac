@@ -145,16 +145,6 @@ impl W {
     pub fn force_msb(&mut self) -> FORCE_MSB_W<INTERP0_CTRL_LANE1_SPEC> {
         FORCE_MSB_W::new(self, 19)
     }
-    #[doc = r" Writes raw bits to the register."]
-    #[doc = r""]
-    #[doc = r" # Safety"]
-    #[doc = r""]
-    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.bits = bits;
-        self
-    }
 }
 #[doc = "Control register for lane 1  
 
@@ -167,6 +157,7 @@ impl crate::RegisterSpec for INTERP0_CTRL_LANE1_SPEC {
 impl crate::Readable for INTERP0_CTRL_LANE1_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`interp0_ctrl_lane1::W`](W) writer structure"]
 impl crate::Writable for INTERP0_CTRL_LANE1_SPEC {
+    type Safety = crate::Unsafe;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }

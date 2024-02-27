@@ -2,8 +2,6 @@
 pub type R = crate::R<IC_ACK_GENERAL_CALL_SPEC>;
 #[doc = "Register `IC_ACK_GENERAL_CALL` writer"]
 pub type W = crate::W<IC_ACK_GENERAL_CALL_SPEC>;
-#[doc = "Field `ACK_GEN_CALL` reader - ACK General Call. When set to 1, DW_apb_i2c responds with a ACK (by asserting ic_data_oe) when it receives a General Call. Otherwise, DW_apb_i2c responds with a NACK (by negating ic_data_oe)."]
-pub type ACK_GEN_CALL_R = crate::BitReader<ACK_GEN_CALL_A>;
 #[doc = "ACK General Call. When set to 1, DW_apb_i2c responds with a ACK (by asserting ic_data_oe) when it receives a General Call. Otherwise, DW_apb_i2c responds with a NACK (by negating ic_data_oe).  
 
 Value on reset: 1"]
@@ -20,6 +18,8 @@ impl From<ACK_GEN_CALL_A> for bool {
         variant as u8 != 0
     }
 }
+#[doc = "Field `ACK_GEN_CALL` reader - ACK General Call. When set to 1, DW_apb_i2c responds with a ACK (by asserting ic_data_oe) when it receives a General Call. Otherwise, DW_apb_i2c responds with a NACK (by negating ic_data_oe)."]
+pub type ACK_GEN_CALL_R = crate::BitReader<ACK_GEN_CALL_A>;
 impl ACK_GEN_CALL_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
@@ -71,16 +71,6 @@ impl W {
     pub fn ack_gen_call(&mut self) -> ACK_GEN_CALL_W<IC_ACK_GENERAL_CALL_SPEC> {
         ACK_GEN_CALL_W::new(self, 0)
     }
-    #[doc = r" Writes raw bits to the register."]
-    #[doc = r""]
-    #[doc = r" # Safety"]
-    #[doc = r""]
-    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.bits = bits;
-        self
-    }
 }
 #[doc = "I2C ACK General Call Register  
 
@@ -97,6 +87,7 @@ impl crate::RegisterSpec for IC_ACK_GENERAL_CALL_SPEC {
 impl crate::Readable for IC_ACK_GENERAL_CALL_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`ic_ack_general_call::W`](W) writer structure"]
 impl crate::Writable for IC_ACK_GENERAL_CALL_SPEC {
+    type Safety = crate::Unsafe;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }

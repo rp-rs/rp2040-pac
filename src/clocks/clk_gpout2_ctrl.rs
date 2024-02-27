@@ -2,8 +2,6 @@
 pub type R = crate::R<CLK_GPOUT2_CTRL_SPEC>;
 #[doc = "Register `CLK_GPOUT2_CTRL` writer"]
 pub type W = crate::W<CLK_GPOUT2_CTRL_SPEC>;
-#[doc = "Field `AUXSRC` reader - Selects the auxiliary clock source, will glitch when switching"]
-pub type AUXSRC_R = crate::FieldReader<AUXSRC_A>;
 #[doc = "Selects the auxiliary clock source, will glitch when switching  
 
 Value on reset: 0"]
@@ -42,6 +40,8 @@ impl From<AUXSRC_A> for u8 {
 impl crate::FieldSpec for AUXSRC_A {
     type Ux = u8;
 }
+#[doc = "Field `AUXSRC` reader - Selects the auxiliary clock source, will glitch when switching"]
+pub type AUXSRC_R = crate::FieldReader<AUXSRC_A>;
 impl AUXSRC_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
@@ -277,16 +277,6 @@ impl W {
     pub fn nudge(&mut self) -> NUDGE_W<CLK_GPOUT2_CTRL_SPEC> {
         NUDGE_W::new(self, 20)
     }
-    #[doc = r" Writes raw bits to the register."]
-    #[doc = r""]
-    #[doc = r" # Safety"]
-    #[doc = r""]
-    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.bits = bits;
-        self
-    }
 }
 #[doc = "Clock control, can be changed on-the-fly (except for auxsrc)  
 
@@ -299,6 +289,7 @@ impl crate::RegisterSpec for CLK_GPOUT2_CTRL_SPEC {
 impl crate::Readable for CLK_GPOUT2_CTRL_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`clk_gpout2_ctrl::W`](W) writer structure"]
 impl crate::Writable for CLK_GPOUT2_CTRL_SPEC {
+    type Safety = crate::Unsafe;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }

@@ -485,16 +485,6 @@ impl W {
     pub fn ep15_out(&mut self) -> EP15_OUT_W<EP_STATUS_STALL_NAK_SPEC> {
         EP15_OUT_W::new(self, 31)
     }
-    #[doc = r" Writes raw bits to the register."]
-    #[doc = r""]
-    #[doc = r" # Safety"]
-    #[doc = r""]
-    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.bits = bits;
-        self
-    }
 }
 #[doc = "Device: bits are set when the `IRQ_ON_NAK` or `IRQ_ON_STALL` bits are set. For EP0 this comes from `SIE_CTRL`. For all other endpoints it comes from the endpoint control register.  
 
@@ -507,6 +497,7 @@ impl crate::RegisterSpec for EP_STATUS_STALL_NAK_SPEC {
 impl crate::Readable for EP_STATUS_STALL_NAK_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`ep_status_stall_nak::W`](W) writer structure"]
 impl crate::Writable for EP_STATUS_STALL_NAK_SPEC {
+    type Safety = crate::Unsafe;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0xffff_ffff;
 }

@@ -18,8 +18,6 @@ pub type A_INV_W<'a, REG> = crate::BitWriter<'a, REG>;
 pub type B_INV_R = crate::BitReader;
 #[doc = "Field `B_INV` writer - Invert output B"]
 pub type B_INV_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `DIVMODE` reader - "]
-pub type DIVMODE_R = crate::FieldReader<DIVMODE_A>;
 #[doc = "  
 
 Value on reset: 0"]
@@ -44,6 +42,8 @@ impl From<DIVMODE_A> for u8 {
 impl crate::FieldSpec for DIVMODE_A {
     type Ux = u8;
 }
+#[doc = "Field `DIVMODE` reader - "]
+pub type DIVMODE_R = crate::FieldReader<DIVMODE_A>;
 impl DIVMODE_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
@@ -205,16 +205,6 @@ impl W {
     pub fn ph_adv(&mut self) -> PH_ADV_W<CSR_SPEC> {
         PH_ADV_W::new(self, 7)
     }
-    #[doc = r" Writes raw bits to the register."]
-    #[doc = r""]
-    #[doc = r" # Safety"]
-    #[doc = r""]
-    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.bits = bits;
-        self
-    }
 }
 #[doc = "Control and status register  
 
@@ -227,6 +217,7 @@ impl crate::RegisterSpec for CSR_SPEC {
 impl crate::Readable for CSR_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`csr::W`](W) writer structure"]
 impl crate::Writable for CSR_SPEC {
+    type Safety = crate::Unsafe;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }

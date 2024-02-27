@@ -1,5 +1,5 @@
-#[doc = r"Register block"]
 #[repr(C)]
+#[doc = "Register block"]
 pub struct RegisterBlock {
     frce_on: FRCE_ON,
     frce_off: FRCE_OFF,

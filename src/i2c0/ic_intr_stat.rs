@@ -1,9 +1,5 @@
 #[doc = "Register `IC_INTR_STAT` reader"]
 pub type R = crate::R<IC_INTR_STAT_SPEC>;
-#[doc = "Field `R_RX_UNDER` reader - See IC_RAW_INTR_STAT for a detailed description of R_RX_UNDER bit.  
-
- Reset value: 0x0"]
-pub type R_RX_UNDER_R = crate::BitReader<R_RX_UNDER_A>;
 #[doc = "See IC_RAW_INTR_STAT for a detailed description of R_RX_UNDER bit.  
 
  Reset value: 0x0  
@@ -22,6 +18,10 @@ impl From<R_RX_UNDER_A> for bool {
         variant as u8 != 0
     }
 }
+#[doc = "Field `R_RX_UNDER` reader - See IC_RAW_INTR_STAT for a detailed description of R_RX_UNDER bit.  
+
+ Reset value: 0x0"]
+pub type R_RX_UNDER_R = crate::BitReader<R_RX_UNDER_A>;
 impl R_RX_UNDER_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
@@ -42,10 +42,6 @@ impl R_RX_UNDER_R {
         *self == R_RX_UNDER_A::ACTIVE
     }
 }
-#[doc = "Field `R_RX_OVER` reader - See IC_RAW_INTR_STAT for a detailed description of R_RX_OVER bit.  
-
- Reset value: 0x0"]
-pub type R_RX_OVER_R = crate::BitReader<R_RX_OVER_A>;
 #[doc = "See IC_RAW_INTR_STAT for a detailed description of R_RX_OVER bit.  
 
  Reset value: 0x0  
@@ -64,6 +60,10 @@ impl From<R_RX_OVER_A> for bool {
         variant as u8 != 0
     }
 }
+#[doc = "Field `R_RX_OVER` reader - See IC_RAW_INTR_STAT for a detailed description of R_RX_OVER bit.  
+
+ Reset value: 0x0"]
+pub type R_RX_OVER_R = crate::BitReader<R_RX_OVER_A>;
 impl R_RX_OVER_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
@@ -84,10 +84,6 @@ impl R_RX_OVER_R {
         *self == R_RX_OVER_A::ACTIVE
     }
 }
-#[doc = "Field `R_RX_FULL` reader - See IC_RAW_INTR_STAT for a detailed description of R_RX_FULL bit.  
-
- Reset value: 0x0"]
-pub type R_RX_FULL_R = crate::BitReader<R_RX_FULL_A>;
 #[doc = "See IC_RAW_INTR_STAT for a detailed description of R_RX_FULL bit.  
 
  Reset value: 0x0  
@@ -106,6 +102,10 @@ impl From<R_RX_FULL_A> for bool {
         variant as u8 != 0
     }
 }
+#[doc = "Field `R_RX_FULL` reader - See IC_RAW_INTR_STAT for a detailed description of R_RX_FULL bit.  
+
+ Reset value: 0x0"]
+pub type R_RX_FULL_R = crate::BitReader<R_RX_FULL_A>;
 impl R_RX_FULL_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
@@ -126,10 +126,6 @@ impl R_RX_FULL_R {
         *self == R_RX_FULL_A::ACTIVE
     }
 }
-#[doc = "Field `R_TX_OVER` reader - See IC_RAW_INTR_STAT for a detailed description of R_TX_OVER bit.  
-
- Reset value: 0x0"]
-pub type R_TX_OVER_R = crate::BitReader<R_TX_OVER_A>;
 #[doc = "See IC_RAW_INTR_STAT for a detailed description of R_TX_OVER bit.  
 
  Reset value: 0x0  
@@ -148,6 +144,10 @@ impl From<R_TX_OVER_A> for bool {
         variant as u8 != 0
     }
 }
+#[doc = "Field `R_TX_OVER` reader - See IC_RAW_INTR_STAT for a detailed description of R_TX_OVER bit.  
+
+ Reset value: 0x0"]
+pub type R_TX_OVER_R = crate::BitReader<R_TX_OVER_A>;
 impl R_TX_OVER_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
@@ -168,10 +168,6 @@ impl R_TX_OVER_R {
         *self == R_TX_OVER_A::ACTIVE
     }
 }
-#[doc = "Field `R_TX_EMPTY` reader - See IC_RAW_INTR_STAT for a detailed description of R_TX_EMPTY bit.  
-
- Reset value: 0x0"]
-pub type R_TX_EMPTY_R = crate::BitReader<R_TX_EMPTY_A>;
 #[doc = "See IC_RAW_INTR_STAT for a detailed description of R_TX_EMPTY bit.  
 
  Reset value: 0x0  
@@ -190,6 +186,10 @@ impl From<R_TX_EMPTY_A> for bool {
         variant as u8 != 0
     }
 }
+#[doc = "Field `R_TX_EMPTY` reader - See IC_RAW_INTR_STAT for a detailed description of R_TX_EMPTY bit.  
+
+ Reset value: 0x0"]
+pub type R_TX_EMPTY_R = crate::BitReader<R_TX_EMPTY_A>;
 impl R_TX_EMPTY_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
@@ -210,10 +210,6 @@ impl R_TX_EMPTY_R {
         *self == R_TX_EMPTY_A::ACTIVE
     }
 }
-#[doc = "Field `R_RD_REQ` reader - See IC_RAW_INTR_STAT for a detailed description of R_RD_REQ bit.  
-
- Reset value: 0x0"]
-pub type R_RD_REQ_R = crate::BitReader<R_RD_REQ_A>;
 #[doc = "See IC_RAW_INTR_STAT for a detailed description of R_RD_REQ bit.  
 
  Reset value: 0x0  
@@ -232,6 +228,10 @@ impl From<R_RD_REQ_A> for bool {
         variant as u8 != 0
     }
 }
+#[doc = "Field `R_RD_REQ` reader - See IC_RAW_INTR_STAT for a detailed description of R_RD_REQ bit.  
+
+ Reset value: 0x0"]
+pub type R_RD_REQ_R = crate::BitReader<R_RD_REQ_A>;
 impl R_RD_REQ_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
@@ -252,10 +252,6 @@ impl R_RD_REQ_R {
         *self == R_RD_REQ_A::ACTIVE
     }
 }
-#[doc = "Field `R_TX_ABRT` reader - See IC_RAW_INTR_STAT for a detailed description of R_TX_ABRT bit.  
-
- Reset value: 0x0"]
-pub type R_TX_ABRT_R = crate::BitReader<R_TX_ABRT_A>;
 #[doc = "See IC_RAW_INTR_STAT for a detailed description of R_TX_ABRT bit.  
 
  Reset value: 0x0  
@@ -274,6 +270,10 @@ impl From<R_TX_ABRT_A> for bool {
         variant as u8 != 0
     }
 }
+#[doc = "Field `R_TX_ABRT` reader - See IC_RAW_INTR_STAT for a detailed description of R_TX_ABRT bit.  
+
+ Reset value: 0x0"]
+pub type R_TX_ABRT_R = crate::BitReader<R_TX_ABRT_A>;
 impl R_TX_ABRT_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
@@ -294,10 +294,6 @@ impl R_TX_ABRT_R {
         *self == R_TX_ABRT_A::ACTIVE
     }
 }
-#[doc = "Field `R_RX_DONE` reader - See IC_RAW_INTR_STAT for a detailed description of R_RX_DONE bit.  
-
- Reset value: 0x0"]
-pub type R_RX_DONE_R = crate::BitReader<R_RX_DONE_A>;
 #[doc = "See IC_RAW_INTR_STAT for a detailed description of R_RX_DONE bit.  
 
  Reset value: 0x0  
@@ -316,6 +312,10 @@ impl From<R_RX_DONE_A> for bool {
         variant as u8 != 0
     }
 }
+#[doc = "Field `R_RX_DONE` reader - See IC_RAW_INTR_STAT for a detailed description of R_RX_DONE bit.  
+
+ Reset value: 0x0"]
+pub type R_RX_DONE_R = crate::BitReader<R_RX_DONE_A>;
 impl R_RX_DONE_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
@@ -336,10 +336,6 @@ impl R_RX_DONE_R {
         *self == R_RX_DONE_A::ACTIVE
     }
 }
-#[doc = "Field `R_ACTIVITY` reader - See IC_RAW_INTR_STAT for a detailed description of R_ACTIVITY bit.  
-
- Reset value: 0x0"]
-pub type R_ACTIVITY_R = crate::BitReader<R_ACTIVITY_A>;
 #[doc = "See IC_RAW_INTR_STAT for a detailed description of R_ACTIVITY bit.  
 
  Reset value: 0x0  
@@ -358,6 +354,10 @@ impl From<R_ACTIVITY_A> for bool {
         variant as u8 != 0
     }
 }
+#[doc = "Field `R_ACTIVITY` reader - See IC_RAW_INTR_STAT for a detailed description of R_ACTIVITY bit.  
+
+ Reset value: 0x0"]
+pub type R_ACTIVITY_R = crate::BitReader<R_ACTIVITY_A>;
 impl R_ACTIVITY_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
@@ -378,10 +378,6 @@ impl R_ACTIVITY_R {
         *self == R_ACTIVITY_A::ACTIVE
     }
 }
-#[doc = "Field `R_STOP_DET` reader - See IC_RAW_INTR_STAT for a detailed description of R_STOP_DET bit.  
-
- Reset value: 0x0"]
-pub type R_STOP_DET_R = crate::BitReader<R_STOP_DET_A>;
 #[doc = "See IC_RAW_INTR_STAT for a detailed description of R_STOP_DET bit.  
 
  Reset value: 0x0  
@@ -400,6 +396,10 @@ impl From<R_STOP_DET_A> for bool {
         variant as u8 != 0
     }
 }
+#[doc = "Field `R_STOP_DET` reader - See IC_RAW_INTR_STAT for a detailed description of R_STOP_DET bit.  
+
+ Reset value: 0x0"]
+pub type R_STOP_DET_R = crate::BitReader<R_STOP_DET_A>;
 impl R_STOP_DET_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
@@ -420,10 +420,6 @@ impl R_STOP_DET_R {
         *self == R_STOP_DET_A::ACTIVE
     }
 }
-#[doc = "Field `R_START_DET` reader - See IC_RAW_INTR_STAT for a detailed description of R_START_DET bit.  
-
- Reset value: 0x0"]
-pub type R_START_DET_R = crate::BitReader<R_START_DET_A>;
 #[doc = "See IC_RAW_INTR_STAT for a detailed description of R_START_DET bit.  
 
  Reset value: 0x0  
@@ -442,6 +438,10 @@ impl From<R_START_DET_A> for bool {
         variant as u8 != 0
     }
 }
+#[doc = "Field `R_START_DET` reader - See IC_RAW_INTR_STAT for a detailed description of R_START_DET bit.  
+
+ Reset value: 0x0"]
+pub type R_START_DET_R = crate::BitReader<R_START_DET_A>;
 impl R_START_DET_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
@@ -462,10 +462,6 @@ impl R_START_DET_R {
         *self == R_START_DET_A::ACTIVE
     }
 }
-#[doc = "Field `R_GEN_CALL` reader - See IC_RAW_INTR_STAT for a detailed description of R_GEN_CALL bit.  
-
- Reset value: 0x0"]
-pub type R_GEN_CALL_R = crate::BitReader<R_GEN_CALL_A>;
 #[doc = "See IC_RAW_INTR_STAT for a detailed description of R_GEN_CALL bit.  
 
  Reset value: 0x0  
@@ -484,6 +480,10 @@ impl From<R_GEN_CALL_A> for bool {
         variant as u8 != 0
     }
 }
+#[doc = "Field `R_GEN_CALL` reader - See IC_RAW_INTR_STAT for a detailed description of R_GEN_CALL bit.  
+
+ Reset value: 0x0"]
+pub type R_GEN_CALL_R = crate::BitReader<R_GEN_CALL_A>;
 impl R_GEN_CALL_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
@@ -504,10 +504,6 @@ impl R_GEN_CALL_R {
         *self == R_GEN_CALL_A::ACTIVE
     }
 }
-#[doc = "Field `R_RESTART_DET` reader - See IC_RAW_INTR_STAT for a detailed description of R_RESTART_DET bit.  
-
- Reset value: 0x0"]
-pub type R_RESTART_DET_R = crate::BitReader<R_RESTART_DET_A>;
 #[doc = "See IC_RAW_INTR_STAT for a detailed description of R_RESTART_DET bit.  
 
  Reset value: 0x0  
@@ -526,6 +522,10 @@ impl From<R_RESTART_DET_A> for bool {
         variant as u8 != 0
     }
 }
+#[doc = "Field `R_RESTART_DET` reader - See IC_RAW_INTR_STAT for a detailed description of R_RESTART_DET bit.  
+
+ Reset value: 0x0"]
+pub type R_RESTART_DET_R = crate::BitReader<R_RESTART_DET_A>;
 impl R_RESTART_DET_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]

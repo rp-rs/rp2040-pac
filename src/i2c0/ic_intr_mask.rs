@@ -2,10 +2,6 @@
 pub type R = crate::R<IC_INTR_MASK_SPEC>;
 #[doc = "Register `IC_INTR_MASK` writer"]
 pub type W = crate::W<IC_INTR_MASK_SPEC>;
-#[doc = "Field `M_RX_UNDER` reader - This bit masks the R_RX_UNDER interrupt in IC_INTR_STAT register.  
-
- Reset value: 0x1"]
-pub type M_RX_UNDER_R = crate::BitReader<M_RX_UNDER_A>;
 #[doc = "This bit masks the R_RX_UNDER interrupt in IC_INTR_STAT register.  
 
  Reset value: 0x1  
@@ -24,6 +20,10 @@ impl From<M_RX_UNDER_A> for bool {
         variant as u8 != 0
     }
 }
+#[doc = "Field `M_RX_UNDER` reader - This bit masks the R_RX_UNDER interrupt in IC_INTR_STAT register.  
+
+ Reset value: 0x1"]
+pub type M_RX_UNDER_R = crate::BitReader<M_RX_UNDER_A>;
 impl M_RX_UNDER_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
@@ -63,10 +63,6 @@ where
         self.variant(M_RX_UNDER_A::DISABLED)
     }
 }
-#[doc = "Field `M_RX_OVER` reader - This bit masks the R_RX_OVER interrupt in IC_INTR_STAT register.  
-
- Reset value: 0x1"]
-pub type M_RX_OVER_R = crate::BitReader<M_RX_OVER_A>;
 #[doc = "This bit masks the R_RX_OVER interrupt in IC_INTR_STAT register.  
 
  Reset value: 0x1  
@@ -85,6 +81,10 @@ impl From<M_RX_OVER_A> for bool {
         variant as u8 != 0
     }
 }
+#[doc = "Field `M_RX_OVER` reader - This bit masks the R_RX_OVER interrupt in IC_INTR_STAT register.  
+
+ Reset value: 0x1"]
+pub type M_RX_OVER_R = crate::BitReader<M_RX_OVER_A>;
 impl M_RX_OVER_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
@@ -124,10 +124,6 @@ where
         self.variant(M_RX_OVER_A::DISABLED)
     }
 }
-#[doc = "Field `M_RX_FULL` reader - This bit masks the R_RX_FULL interrupt in IC_INTR_STAT register.  
-
- Reset value: 0x1"]
-pub type M_RX_FULL_R = crate::BitReader<M_RX_FULL_A>;
 #[doc = "This bit masks the R_RX_FULL interrupt in IC_INTR_STAT register.  
 
  Reset value: 0x1  
@@ -146,6 +142,10 @@ impl From<M_RX_FULL_A> for bool {
         variant as u8 != 0
     }
 }
+#[doc = "Field `M_RX_FULL` reader - This bit masks the R_RX_FULL interrupt in IC_INTR_STAT register.  
+
+ Reset value: 0x1"]
+pub type M_RX_FULL_R = crate::BitReader<M_RX_FULL_A>;
 impl M_RX_FULL_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
@@ -185,10 +185,6 @@ where
         self.variant(M_RX_FULL_A::DISABLED)
     }
 }
-#[doc = "Field `M_TX_OVER` reader - This bit masks the R_TX_OVER interrupt in IC_INTR_STAT register.  
-
- Reset value: 0x1"]
-pub type M_TX_OVER_R = crate::BitReader<M_TX_OVER_A>;
 #[doc = "This bit masks the R_TX_OVER interrupt in IC_INTR_STAT register.  
 
  Reset value: 0x1  
@@ -207,6 +203,10 @@ impl From<M_TX_OVER_A> for bool {
         variant as u8 != 0
     }
 }
+#[doc = "Field `M_TX_OVER` reader - This bit masks the R_TX_OVER interrupt in IC_INTR_STAT register.  
+
+ Reset value: 0x1"]
+pub type M_TX_OVER_R = crate::BitReader<M_TX_OVER_A>;
 impl M_TX_OVER_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
@@ -246,10 +246,6 @@ where
         self.variant(M_TX_OVER_A::DISABLED)
     }
 }
-#[doc = "Field `M_TX_EMPTY` reader - This bit masks the R_TX_EMPTY interrupt in IC_INTR_STAT register.  
-
- Reset value: 0x1"]
-pub type M_TX_EMPTY_R = crate::BitReader<M_TX_EMPTY_A>;
 #[doc = "This bit masks the R_TX_EMPTY interrupt in IC_INTR_STAT register.  
 
  Reset value: 0x1  
@@ -268,6 +264,10 @@ impl From<M_TX_EMPTY_A> for bool {
         variant as u8 != 0
     }
 }
+#[doc = "Field `M_TX_EMPTY` reader - This bit masks the R_TX_EMPTY interrupt in IC_INTR_STAT register.  
+
+ Reset value: 0x1"]
+pub type M_TX_EMPTY_R = crate::BitReader<M_TX_EMPTY_A>;
 impl M_TX_EMPTY_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
@@ -307,10 +307,6 @@ where
         self.variant(M_TX_EMPTY_A::DISABLED)
     }
 }
-#[doc = "Field `M_RD_REQ` reader - This bit masks the R_RD_REQ interrupt in IC_INTR_STAT register.  
-
- Reset value: 0x1"]
-pub type M_RD_REQ_R = crate::BitReader<M_RD_REQ_A>;
 #[doc = "This bit masks the R_RD_REQ interrupt in IC_INTR_STAT register.  
 
  Reset value: 0x1  
@@ -329,6 +325,10 @@ impl From<M_RD_REQ_A> for bool {
         variant as u8 != 0
     }
 }
+#[doc = "Field `M_RD_REQ` reader - This bit masks the R_RD_REQ interrupt in IC_INTR_STAT register.  
+
+ Reset value: 0x1"]
+pub type M_RD_REQ_R = crate::BitReader<M_RD_REQ_A>;
 impl M_RD_REQ_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
@@ -368,10 +368,6 @@ where
         self.variant(M_RD_REQ_A::DISABLED)
     }
 }
-#[doc = "Field `M_TX_ABRT` reader - This bit masks the R_TX_ABRT interrupt in IC_INTR_STAT register.  
-
- Reset value: 0x1"]
-pub type M_TX_ABRT_R = crate::BitReader<M_TX_ABRT_A>;
 #[doc = "This bit masks the R_TX_ABRT interrupt in IC_INTR_STAT register.  
 
  Reset value: 0x1  
@@ -390,6 +386,10 @@ impl From<M_TX_ABRT_A> for bool {
         variant as u8 != 0
     }
 }
+#[doc = "Field `M_TX_ABRT` reader - This bit masks the R_TX_ABRT interrupt in IC_INTR_STAT register.  
+
+ Reset value: 0x1"]
+pub type M_TX_ABRT_R = crate::BitReader<M_TX_ABRT_A>;
 impl M_TX_ABRT_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
@@ -429,10 +429,6 @@ where
         self.variant(M_TX_ABRT_A::DISABLED)
     }
 }
-#[doc = "Field `M_RX_DONE` reader - This bit masks the R_RX_DONE interrupt in IC_INTR_STAT register.  
-
- Reset value: 0x1"]
-pub type M_RX_DONE_R = crate::BitReader<M_RX_DONE_A>;
 #[doc = "This bit masks the R_RX_DONE interrupt in IC_INTR_STAT register.  
 
  Reset value: 0x1  
@@ -451,6 +447,10 @@ impl From<M_RX_DONE_A> for bool {
         variant as u8 != 0
     }
 }
+#[doc = "Field `M_RX_DONE` reader - This bit masks the R_RX_DONE interrupt in IC_INTR_STAT register.  
+
+ Reset value: 0x1"]
+pub type M_RX_DONE_R = crate::BitReader<M_RX_DONE_A>;
 impl M_RX_DONE_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
@@ -490,10 +490,6 @@ where
         self.variant(M_RX_DONE_A::DISABLED)
     }
 }
-#[doc = "Field `M_ACTIVITY` reader - This bit masks the R_ACTIVITY interrupt in IC_INTR_STAT register.  
-
- Reset value: 0x0"]
-pub type M_ACTIVITY_R = crate::BitReader<M_ACTIVITY_A>;
 #[doc = "This bit masks the R_ACTIVITY interrupt in IC_INTR_STAT register.  
 
  Reset value: 0x0  
@@ -512,6 +508,10 @@ impl From<M_ACTIVITY_A> for bool {
         variant as u8 != 0
     }
 }
+#[doc = "Field `M_ACTIVITY` reader - This bit masks the R_ACTIVITY interrupt in IC_INTR_STAT register.  
+
+ Reset value: 0x0"]
+pub type M_ACTIVITY_R = crate::BitReader<M_ACTIVITY_A>;
 impl M_ACTIVITY_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
@@ -551,10 +551,6 @@ where
         self.variant(M_ACTIVITY_A::DISABLED)
     }
 }
-#[doc = "Field `M_STOP_DET` reader - This bit masks the R_STOP_DET interrupt in IC_INTR_STAT register.  
-
- Reset value: 0x0"]
-pub type M_STOP_DET_R = crate::BitReader<M_STOP_DET_A>;
 #[doc = "This bit masks the R_STOP_DET interrupt in IC_INTR_STAT register.  
 
  Reset value: 0x0  
@@ -573,6 +569,10 @@ impl From<M_STOP_DET_A> for bool {
         variant as u8 != 0
     }
 }
+#[doc = "Field `M_STOP_DET` reader - This bit masks the R_STOP_DET interrupt in IC_INTR_STAT register.  
+
+ Reset value: 0x0"]
+pub type M_STOP_DET_R = crate::BitReader<M_STOP_DET_A>;
 impl M_STOP_DET_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
@@ -612,10 +612,6 @@ where
         self.variant(M_STOP_DET_A::DISABLED)
     }
 }
-#[doc = "Field `M_START_DET` reader - This bit masks the R_START_DET interrupt in IC_INTR_STAT register.  
-
- Reset value: 0x0"]
-pub type M_START_DET_R = crate::BitReader<M_START_DET_A>;
 #[doc = "This bit masks the R_START_DET interrupt in IC_INTR_STAT register.  
 
  Reset value: 0x0  
@@ -634,6 +630,10 @@ impl From<M_START_DET_A> for bool {
         variant as u8 != 0
     }
 }
+#[doc = "Field `M_START_DET` reader - This bit masks the R_START_DET interrupt in IC_INTR_STAT register.  
+
+ Reset value: 0x0"]
+pub type M_START_DET_R = crate::BitReader<M_START_DET_A>;
 impl M_START_DET_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
@@ -673,10 +673,6 @@ where
         self.variant(M_START_DET_A::DISABLED)
     }
 }
-#[doc = "Field `M_GEN_CALL` reader - This bit masks the R_GEN_CALL interrupt in IC_INTR_STAT register.  
-
- Reset value: 0x1"]
-pub type M_GEN_CALL_R = crate::BitReader<M_GEN_CALL_A>;
 #[doc = "This bit masks the R_GEN_CALL interrupt in IC_INTR_STAT register.  
 
  Reset value: 0x1  
@@ -695,6 +691,10 @@ impl From<M_GEN_CALL_A> for bool {
         variant as u8 != 0
     }
 }
+#[doc = "Field `M_GEN_CALL` reader - This bit masks the R_GEN_CALL interrupt in IC_INTR_STAT register.  
+
+ Reset value: 0x1"]
+pub type M_GEN_CALL_R = crate::BitReader<M_GEN_CALL_A>;
 impl M_GEN_CALL_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
@@ -734,10 +734,6 @@ where
         self.variant(M_GEN_CALL_A::DISABLED)
     }
 }
-#[doc = "Field `M_RESTART_DET` reader - This bit masks the R_RESTART_DET interrupt in IC_INTR_STAT register.  
-
- Reset value: 0x0"]
-pub type M_RESTART_DET_R = crate::BitReader<M_RESTART_DET_A>;
 #[doc = "This bit masks the R_RESTART_DET interrupt in IC_INTR_STAT register.  
 
  Reset value: 0x0  
@@ -756,6 +752,10 @@ impl From<M_RESTART_DET_A> for bool {
         variant as u8 != 0
     }
 }
+#[doc = "Field `M_RESTART_DET` reader - This bit masks the R_RESTART_DET interrupt in IC_INTR_STAT register.  
+
+ Reset value: 0x0"]
+pub type M_RESTART_DET_R = crate::BitReader<M_RESTART_DET_A>;
 impl M_RESTART_DET_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
@@ -993,16 +993,6 @@ impl W {
     pub fn m_restart_det(&mut self) -> M_RESTART_DET_W<IC_INTR_MASK_SPEC> {
         M_RESTART_DET_W::new(self, 12)
     }
-    #[doc = r" Writes raw bits to the register."]
-    #[doc = r""]
-    #[doc = r" # Safety"]
-    #[doc = r""]
-    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.bits = bits;
-        self
-    }
 }
 #[doc = "I2C Interrupt Mask Register.  
 
@@ -1017,6 +1007,7 @@ impl crate::RegisterSpec for IC_INTR_MASK_SPEC {
 impl crate::Readable for IC_INTR_MASK_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`ic_intr_mask::W`](W) writer structure"]
 impl crate::Writable for IC_INTR_MASK_SPEC {
+    type Safety = crate::Unsafe;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }

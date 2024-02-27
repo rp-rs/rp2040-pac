@@ -12,18 +12,7 @@ impl core::fmt::Debug for crate::generic::Reg<DIV_REMAINDER_SPEC> {
         core::fmt::Debug::fmt(&self.read(), f)
     }
 }
-impl W {
-    #[doc = r" Writes raw bits to the register."]
-    #[doc = r""]
-    #[doc = r" # Safety"]
-    #[doc = r""]
-    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.bits = bits;
-        self
-    }
-}
+impl W {}
 #[doc = "Divider result remainder  
  The result of `DIVIDEND % DIVISOR` (modulo). Contents undefined while CSR_READY is low.  
  For signed calculations, REMAINDER is negative only when DIVIDEND is negative.  
@@ -39,6 +28,7 @@ impl crate::RegisterSpec for DIV_REMAINDER_SPEC {
 impl crate::Readable for DIV_REMAINDER_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`div_remainder::W`](W) writer structure"]
 impl crate::Writable for DIV_REMAINDER_SPEC {
+    type Safety = crate::Unsafe;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }

@@ -28,16 +28,6 @@ impl W {
     pub fn tx_tl(&mut self) -> TX_TL_W<IC_TX_TL_SPEC> {
         TX_TL_W::new(self, 0)
     }
-    #[doc = r" Writes raw bits to the register."]
-    #[doc = r""]
-    #[doc = r" # Safety"]
-    #[doc = r""]
-    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.bits = bits;
-        self
-    }
 }
 #[doc = "I2C Transmit FIFO Threshold Register  
 
@@ -50,6 +40,7 @@ impl crate::RegisterSpec for IC_TX_TL_SPEC {
 impl crate::Readable for IC_TX_TL_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`ic_tx_tl::W`](W) writer structure"]
 impl crate::Writable for IC_TX_TL_SPEC {
+    type Safety = crate::Unsafe;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }

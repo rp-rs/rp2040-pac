@@ -44,16 +44,6 @@ impl W {
     pub fn setena(&mut self) -> SETENA_W<NVIC_ISER_SPEC> {
         SETENA_W::new(self, 0)
     }
-    #[doc = r" Writes raw bits to the register."]
-    #[doc = r""]
-    #[doc = r" # Safety"]
-    #[doc = r""]
-    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.bits = bits;
-        self
-    }
 }
 #[doc = "Use the Interrupt Set-Enable Register to enable interrupts and determine which interrupts are currently enabled.  
  If a pending interrupt is enabled, the NVIC activates the interrupt based on its priority. If an interrupt is not enabled, asserting its interrupt signal changes the interrupt state to pending, but the NVIC never activates the interrupt, regardless of its priority.  
@@ -67,6 +57,7 @@ impl crate::RegisterSpec for NVIC_ISER_SPEC {
 impl crate::Readable for NVIC_ISER_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`nvic_iser::W`](W) writer structure"]
 impl crate::Writable for NVIC_ISER_SPEC {
+    type Safety = crate::Unsafe;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
