@@ -18,8 +18,6 @@ pub type PDE_W<'a, REG> = crate::BitWriter<'a, REG>;
 pub type PUE_R = crate::BitReader;
 #[doc = "Field `PUE` writer - Pull up enable"]
 pub type PUE_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `DRIVE` reader - Drive strength."]
-pub type DRIVE_R = crate::FieldReader<DRIVE_A>;
 #[doc = "Drive strength.  
 
 Value on reset: 1"]
@@ -44,6 +42,8 @@ impl From<DRIVE_A> for u8 {
 impl crate::FieldSpec for DRIVE_A {
     type Ux = u8;
 }
+#[doc = "Field `DRIVE` reader - Drive strength."]
+pub type DRIVE_R = crate::FieldReader<DRIVE_A>;
 impl DRIVE_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
@@ -193,16 +193,6 @@ impl W {
     pub fn od(&mut self) -> OD_W<GPIO_QSPI_SD3_SPEC> {
         OD_W::new(self, 7)
     }
-    #[doc = r" Writes raw bits to the register."]
-    #[doc = r""]
-    #[doc = r" # Safety"]
-    #[doc = r""]
-    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.bits = bits;
-        self
-    }
 }
 #[doc = "Pad control register  
 
@@ -215,6 +205,7 @@ impl crate::RegisterSpec for GPIO_QSPI_SD3_SPEC {
 impl crate::Readable for GPIO_QSPI_SD3_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`gpio_qspi_sd3::W`](W) writer structure"]
 impl crate::Writable for GPIO_QSPI_SD3_SPEC {
+    type Safety = crate::Unsafe;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }

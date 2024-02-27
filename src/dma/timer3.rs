@@ -35,16 +35,6 @@ impl W {
     pub fn x(&mut self) -> X_W<TIMER3_SPEC> {
         X_W::new(self, 16)
     }
-    #[doc = r" Writes raw bits to the register."]
-    #[doc = r""]
-    #[doc = r" # Safety"]
-    #[doc = r""]
-    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.bits = bits;
-        self
-    }
 }
 #[doc = "Pacing (X/Y) Fractional Timer  
  The pacing timer produces TREQ assertions at a rate set by ((X/Y) * sys_clk). This equation is evaluated every sys_clk cycles and therefore can only generate TREQs at a rate of 1 per sys_clk (i.e. permanent TREQ) or less.  
@@ -58,6 +48,7 @@ impl crate::RegisterSpec for TIMER3_SPEC {
 impl crate::Readable for TIMER3_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`timer3::W`](W) writer structure"]
 impl crate::Writable for TIMER3_SPEC {
+    type Safety = crate::Unsafe;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }

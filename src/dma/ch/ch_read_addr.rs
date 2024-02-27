@@ -12,18 +12,7 @@ impl core::fmt::Debug for crate::generic::Reg<CH_READ_ADDR_SPEC> {
         core::fmt::Debug::fmt(&self.read(), f)
     }
 }
-impl W {
-    #[doc = r" Writes raw bits to the register."]
-    #[doc = r""]
-    #[doc = r" # Safety"]
-    #[doc = r""]
-    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.bits = bits;
-        self
-    }
-}
+impl W {}
 #[doc = "DMA Channel 0 Read Address pointer  
  This register updates automatically each time a read completes. The current value is the next address to be read by this channel.  
 
@@ -36,6 +25,7 @@ impl crate::RegisterSpec for CH_READ_ADDR_SPEC {
 impl crate::Readable for CH_READ_ADDR_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`ch_read_addr::W`](W) writer structure"]
 impl crate::Writable for CH_READ_ADDR_SPEC {
+    type Safety = crate::Unsafe;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }

@@ -12,18 +12,7 @@ impl core::fmt::Debug for crate::generic::Reg<SPINLOCK_SPEC> {
         core::fmt::Debug::fmt(&self.read(), f)
     }
 }
-impl W {
-    #[doc = r" Writes raw bits to the register."]
-    #[doc = r""]
-    #[doc = r" # Safety"]
-    #[doc = r""]
-    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.bits = bits;
-        self
-    }
-}
+impl W {}
 #[doc = "Reading from a spinlock address will:  
  - Return 0 if lock is already locked  
  - Otherwise return nonzero, and simultaneously claim the lock  
@@ -41,6 +30,7 @@ impl crate::RegisterSpec for SPINLOCK_SPEC {
 impl crate::Readable for SPINLOCK_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`spinlock::W`](W) writer structure"]
 impl crate::Writable for SPINLOCK_SPEC {
+    type Safety = crate::Unsafe;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }

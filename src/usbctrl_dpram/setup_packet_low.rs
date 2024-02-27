@@ -50,16 +50,6 @@ impl W {
     pub fn wvalue(&mut self) -> WVALUE_W<SETUP_PACKET_LOW_SPEC> {
         WVALUE_W::new(self, 16)
     }
-    #[doc = r" Writes raw bits to the register."]
-    #[doc = r""]
-    #[doc = r" # Safety"]
-    #[doc = r""]
-    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.bits = bits;
-        self
-    }
 }
 #[doc = "Bytes 0-3 of the SETUP packet from the host.  
 
@@ -72,6 +62,7 @@ impl crate::RegisterSpec for SETUP_PACKET_LOW_SPEC {
 impl crate::Readable for SETUP_PACKET_LOW_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`setup_packet_low::W`](W) writer structure"]
 impl crate::Writable for SETUP_PACKET_LOW_SPEC {
+    type Safety = crate::Unsafe;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }

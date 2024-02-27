@@ -65,16 +65,6 @@ impl W {
     pub fn txim(&mut self) -> TXIM_W<SSPIMSC_SPEC> {
         TXIM_W::new(self, 3)
     }
-    #[doc = r" Writes raw bits to the register."]
-    #[doc = r""]
-    #[doc = r" # Safety"]
-    #[doc = r""]
-    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.bits = bits;
-        self
-    }
 }
 #[doc = "Interrupt mask set or clear register, SSPIMSC on page 3-9  
 
@@ -87,6 +77,7 @@ impl crate::RegisterSpec for SSPIMSC_SPEC {
 impl crate::Readable for SSPIMSC_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`sspimsc::W`](W) writer structure"]
 impl crate::Writable for SSPIMSC_SPEC {
+    type Safety = crate::Unsafe;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }

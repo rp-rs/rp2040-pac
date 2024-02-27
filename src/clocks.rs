@@ -1,5 +1,5 @@
-#[doc = r"Register block"]
 #[repr(C)]
+#[doc = "Register block"]
 pub struct RegisterBlock {
     clk_gpout0_ctrl: CLK_GPOUT0_CTRL,
     clk_gpout0_div: CLK_GPOUT0_DIV,

@@ -20,16 +20,6 @@ impl W {
     pub fn fc0_delay(&mut self) -> FC0_DELAY_W<FC0_DELAY_SPEC> {
         FC0_DELAY_W::new(self, 0)
     }
-    #[doc = r" Writes raw bits to the register."]
-    #[doc = r""]
-    #[doc = r" # Safety"]
-    #[doc = r""]
-    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.bits = bits;
-        self
-    }
 }
 #[doc = "Delays the start of frequency counting to allow the mux to settle  
  Delay is measured in multiples of the reference clock period  
@@ -43,6 +33,7 @@ impl crate::RegisterSpec for FC0_DELAY_SPEC {
 impl crate::Readable for FC0_DELAY_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`fc0_delay::W`](W) writer structure"]
 impl crate::Writable for FC0_DELAY_SPEC {
+    type Safety = crate::Unsafe;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }

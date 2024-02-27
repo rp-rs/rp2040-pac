@@ -14,8 +14,6 @@ pub type HIZ_R = crate::BitReader;
 #[doc = "Field `HIZ` writer - high impedance mode select  
  0=not in high impedance mode, 1=in high impedance mode"]
 pub type HIZ_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `VSEL` reader - Output voltage select for on-chip voltage regulator."]
-pub type VSEL_R = crate::FieldReader<VSEL_A>;
 #[doc = "Output voltage select for on-chip voltage regulator.  
 
 Value on reset: 11"]
@@ -54,6 +52,8 @@ impl From<VSEL_A> for u8 {
 impl crate::FieldSpec for VSEL_A {
     type Ux = u8;
 }
+#[doc = "Field `VSEL` reader - Output voltage select for on-chip voltage regulator."]
+pub type VSEL_R = crate::FieldReader<VSEL_A>;
 impl VSEL_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
@@ -241,16 +241,6 @@ impl W {
     pub fn vsel(&mut self) -> VSEL_W<VREG_SPEC> {
         VSEL_W::new(self, 4)
     }
-    #[doc = r" Writes raw bits to the register."]
-    #[doc = r""]
-    #[doc = r" # Safety"]
-    #[doc = r""]
-    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.bits = bits;
-        self
-    }
 }
 #[doc = "Voltage regulator control and status  
 
@@ -263,6 +253,7 @@ impl crate::RegisterSpec for VREG_SPEC {
 impl crate::Readable for VREG_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`vreg::W`](W) writer structure"]
 impl crate::Writable for VREG_SPEC {
+    type Safety = crate::Unsafe;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }

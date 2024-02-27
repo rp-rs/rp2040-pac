@@ -110,16 +110,6 @@ impl W {
     pub fn sideset_count(&mut self) -> SIDESET_COUNT_W<SM_PINCTRL_SPEC> {
         SIDESET_COUNT_W::new(self, 29)
     }
-    #[doc = r" Writes raw bits to the register."]
-    #[doc = r""]
-    #[doc = r" # Safety"]
-    #[doc = r""]
-    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.bits = bits;
-        self
-    }
 }
 #[doc = "State machine pin control  
 
@@ -132,6 +122,7 @@ impl crate::RegisterSpec for SM_PINCTRL_SPEC {
 impl crate::Readable for SM_PINCTRL_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`sm_pinctrl::W`](W) writer structure"]
 impl crate::Writable for SM_PINCTRL_SPEC {
+    type Safety = crate::Unsafe;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }

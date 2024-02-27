@@ -2,8 +2,6 @@
 pub type R = crate::R<VOLTAGE_SELECT_SPEC>;
 #[doc = "Register `VOLTAGE_SELECT` writer"]
 pub type W = crate::W<VOLTAGE_SELECT_SPEC>;
-#[doc = "Field `VOLTAGE_SELECT` reader - "]
-pub type VOLTAGE_SELECT_R = crate::BitReader<VOLTAGE_SELECT_A>;
 #[doc = "  
 
 Value on reset: 0"]
@@ -20,6 +18,8 @@ impl From<VOLTAGE_SELECT_A> for bool {
         variant as u8 != 0
     }
 }
+#[doc = "Field `VOLTAGE_SELECT` reader - "]
+pub type VOLTAGE_SELECT_R = crate::BitReader<VOLTAGE_SELECT_A>;
 impl VOLTAGE_SELECT_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
@@ -71,16 +71,6 @@ impl W {
     pub fn voltage_select(&mut self) -> VOLTAGE_SELECT_W<VOLTAGE_SELECT_SPEC> {
         VOLTAGE_SELECT_W::new(self, 0)
     }
-    #[doc = r" Writes raw bits to the register."]
-    #[doc = r""]
-    #[doc = r" # Safety"]
-    #[doc = r""]
-    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.bits = bits;
-        self
-    }
 }
 #[doc = "Voltage select. Per bank control  
 
@@ -93,6 +83,7 @@ impl crate::RegisterSpec for VOLTAGE_SELECT_SPEC {
 impl crate::Readable for VOLTAGE_SELECT_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`voltage_select::W`](W) writer structure"]
 impl crate::Writable for VOLTAGE_SELECT_SPEC {
+    type Safety = crate::Unsafe;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }

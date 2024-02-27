@@ -2,8 +2,6 @@
 pub type R = crate::R<PERFSEL2_SPEC>;
 #[doc = "Register `PERFSEL2` writer"]
 pub type W = crate::W<PERFSEL2_SPEC>;
-#[doc = "Field `PERFSEL2` reader - Select an event for PERFCTR2. Count either contested accesses, or all accesses, on a downstream port of the main crossbar."]
-pub type PERFSEL2_R = crate::FieldReader<PERFSEL2_A>;
 #[doc = "Select an event for PERFCTR2. Count either contested accesses, or all accesses, on a downstream port of the main crossbar.  
 
 Value on reset: 31"]
@@ -60,6 +58,8 @@ impl From<PERFSEL2_A> for u8 {
 impl crate::FieldSpec for PERFSEL2_A {
     type Ux = u8;
 }
+#[doc = "Field `PERFSEL2` reader - Select an event for PERFCTR2. Count either contested accesses, or all accesses, on a downstream port of the main crossbar."]
+pub type PERFSEL2_R = crate::FieldReader<PERFSEL2_A>;
 impl PERFSEL2_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
@@ -311,16 +311,6 @@ impl W {
     pub fn perfsel2(&mut self) -> PERFSEL2_W<PERFSEL2_SPEC> {
         PERFSEL2_W::new(self, 0)
     }
-    #[doc = r" Writes raw bits to the register."]
-    #[doc = r""]
-    #[doc = r" # Safety"]
-    #[doc = r""]
-    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.bits = bits;
-        self
-    }
 }
 #[doc = "Bus fabric performance event select for PERFCTR2  
 
@@ -333,6 +323,7 @@ impl crate::RegisterSpec for PERFSEL2_SPEC {
 impl crate::Readable for PERFSEL2_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`perfsel2::W`](W) writer structure"]
 impl crate::Writable for PERFSEL2_SPEC {
+    type Safety = crate::Unsafe;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }

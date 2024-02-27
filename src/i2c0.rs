@@ -1,5 +1,5 @@
-#[doc = r"Register block"]
 #[repr(C)]
+#[doc = "Register block"]
 pub struct RegisterBlock {
     ic_con: IC_CON,
     ic_tar: IC_TAR,

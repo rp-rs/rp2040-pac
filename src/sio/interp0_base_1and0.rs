@@ -5,18 +5,7 @@ impl core::fmt::Debug for crate::generic::Reg<INTERP0_BASE_1AND0_SPEC> {
         write!(f, "(not readable)")
     }
 }
-impl W {
-    #[doc = r" Writes raw bits to the register."]
-    #[doc = r""]
-    #[doc = r" # Safety"]
-    #[doc = r""]
-    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.bits = bits;
-        self
-    }
-}
+impl W {}
 #[doc = "On write, the lower 16 bits go to BASE0, upper bits to BASE1 simultaneously.  
  Each half is sign-extended to 32 bits if that lane's SIGNED flag is set.  
 
@@ -27,6 +16,7 @@ impl crate::RegisterSpec for INTERP0_BASE_1AND0_SPEC {
 }
 #[doc = "`write(|w| ..)` method takes [`interp0_base_1and0::W`](W) writer structure"]
 impl crate::Writable for INTERP0_BASE_1AND0_SPEC {
+    type Safety = crate::Unsafe;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }

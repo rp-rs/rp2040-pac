@@ -6,8 +6,6 @@ pub type W = crate::W<SM_EXECCTRL_SPEC>;
 pub type STATUS_N_R = crate::FieldReader;
 #[doc = "Field `STATUS_N` writer - Comparison level for the MOV x, STATUS instruction"]
 pub type STATUS_N_W<'a, REG> = crate::FieldWriter<'a, REG, 4>;
-#[doc = "Field `STATUS_SEL` reader - Comparison used for the MOV x, STATUS instruction."]
-pub type STATUS_SEL_R = crate::BitReader<STATUS_SEL_A>;
 #[doc = "Comparison used for the MOV x, STATUS instruction.  
 
 Value on reset: 0"]
@@ -24,6 +22,8 @@ impl From<STATUS_SEL_A> for bool {
         variant as u8 != 0
     }
 }
+#[doc = "Field `STATUS_SEL` reader - Comparison used for the MOV x, STATUS instruction."]
+pub type STATUS_SEL_R = crate::BitReader<STATUS_SEL_A>;
 impl STATUS_SEL_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
@@ -229,16 +229,6 @@ impl W {
     pub fn side_en(&mut self) -> SIDE_EN_W<SM_EXECCTRL_SPEC> {
         SIDE_EN_W::new(self, 30)
     }
-    #[doc = r" Writes raw bits to the register."]
-    #[doc = r""]
-    #[doc = r" # Safety"]
-    #[doc = r""]
-    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.bits = bits;
-        self
-    }
 }
 #[doc = "Execution/behavioural settings for state machine 0  
 
@@ -251,6 +241,7 @@ impl crate::RegisterSpec for SM_EXECCTRL_SPEC {
 impl crate::Readable for SM_EXECCTRL_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`sm_execctrl::W`](W) writer structure"]
 impl crate::Writable for SM_EXECCTRL_SPEC {
+    type Safety = crate::Unsafe;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }

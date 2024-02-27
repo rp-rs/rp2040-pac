@@ -16,8 +16,6 @@ pub type HIGH_PRIORITY_R = crate::BitReader;
 
  This only affects the order in which the DMA schedules channels. The DMA's bus priority is not changed. If the DMA is not saturated then a low priority channel will see no loss of throughput."]
 pub type HIGH_PRIORITY_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `DATA_SIZE` reader - Set the size of each bus transfer (byte/halfword/word). READ_ADDR and WRITE_ADDR advance by this amount (1/2/4 bytes) with each transfer."]
-pub type DATA_SIZE_R = crate::FieldReader<DATA_SIZE_A>;
 #[doc = "Set the size of each bus transfer (byte/halfword/word). READ_ADDR and WRITE_ADDR advance by this amount (1/2/4 bytes) with each transfer.  
 
 Value on reset: 0"]
@@ -40,6 +38,8 @@ impl From<DATA_SIZE_A> for u8 {
 impl crate::FieldSpec for DATA_SIZE_A {
     type Ux = u8;
 }
+#[doc = "Field `DATA_SIZE` reader - Set the size of each bus transfer (byte/halfword/word). READ_ADDR and WRITE_ADDR advance by this amount (1/2/4 bytes) with each transfer."]
+pub type DATA_SIZE_R = crate::FieldReader<DATA_SIZE_A>;
 impl DATA_SIZE_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
@@ -106,10 +106,6 @@ pub type INCR_WRITE_R = crate::BitReader;
 
  Generally this should be disabled for memory-to-peripheral transfers."]
 pub type INCR_WRITE_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `RING_SIZE` reader - Size of address wrap region. If 0, don't wrap. For values n > 0, only the lower n bits of the address will change. This wraps the address on a (1 &lt;&lt; n) byte boundary, facilitating access to naturally-aligned ring buffers.  
-
- Ring sizes between 2 and 32768 bytes are possible. This can apply to either read or write addresses, based on value of RING_SEL."]
-pub type RING_SIZE_R = crate::FieldReader<RING_SIZE_A>;
 #[doc = "Size of address wrap region. If 0, don't wrap. For values n > 0, only the lower n bits of the address will change. This wraps the address on a (1 &lt;&lt; n) byte boundary, facilitating access to naturally-aligned ring buffers.  
 
  Ring sizes between 2 and 32768 bytes are possible. This can apply to either read or write addresses, based on value of RING_SEL.  
@@ -130,6 +126,10 @@ impl From<RING_SIZE_A> for u8 {
 impl crate::FieldSpec for RING_SIZE_A {
     type Ux = u8;
 }
+#[doc = "Field `RING_SIZE` reader - Size of address wrap region. If 0, don't wrap. For values n > 0, only the lower n bits of the address will change. This wraps the address on a (1 &lt;&lt; n) byte boundary, facilitating access to naturally-aligned ring buffers.  
+
+ Ring sizes between 2 and 32768 bytes are possible. This can apply to either read or write addresses, based on value of RING_SEL."]
+pub type RING_SIZE_R = crate::FieldReader<RING_SIZE_A>;
 impl RING_SIZE_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
@@ -172,10 +172,6 @@ pub type CHAIN_TO_R = crate::FieldReader;
 #[doc = "Field `CHAIN_TO` writer - When this channel completes, it will trigger the channel indicated by CHAIN_TO. Disable by setting CHAIN_TO = _(this channel)_.   
  Reset value is 0, which means for channels 1 and above the default will be to chain to channel 0 - set this field to avoid this behaviour."]
 pub type CHAIN_TO_W<'a, REG> = crate::FieldWriter<'a, REG, 4>;
-#[doc = "Field `TREQ_SEL` reader - Select a Transfer Request signal.  
- The channel uses the transfer request signal to pace its data transfer rate. Sources for TREQ signals are internal (TIMERS) or external (DREQ, a Data Request from the system).  
- 0x0 to 0x3a -> select DREQ n as TREQ"]
-pub type TREQ_SEL_R = crate::FieldReader<TREQ_SEL_A>;
 #[doc = "Select a Transfer Request signal.  
  The channel uses the transfer request signal to pace its data transfer rate. Sources for TREQ signals are internal (TIMERS) or external (DREQ, a Data Request from the system).  
  0x0 to 0x3a -> select DREQ n as TREQ  
@@ -284,6 +280,10 @@ impl From<TREQ_SEL_A> for u8 {
 impl crate::FieldSpec for TREQ_SEL_A {
     type Ux = u8;
 }
+#[doc = "Field `TREQ_SEL` reader - Select a Transfer Request signal.  
+ The channel uses the transfer request signal to pace its data transfer rate. Sources for TREQ signals are internal (TIMERS) or external (DREQ, a Data Request from the system).  
+ 0x0 to 0x3a -> select DREQ n as TREQ"]
+pub type TREQ_SEL_R = crate::FieldReader<TREQ_SEL_A>;
 impl TREQ_SEL_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
@@ -1047,16 +1047,6 @@ impl W {
     pub fn read_error(&mut self) -> READ_ERROR_W<CH_AL3_CTRL_SPEC> {
         READ_ERROR_W::new(self, 30)
     }
-    #[doc = r" Writes raw bits to the register."]
-    #[doc = r""]
-    #[doc = r" # Safety"]
-    #[doc = r""]
-    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.bits = bits;
-        self
-    }
 }
 #[doc = "DMA Channel 0 Control and Status  
 
@@ -1069,6 +1059,7 @@ impl crate::RegisterSpec for CH_AL3_CTRL_SPEC {
 impl crate::Readable for CH_AL3_CTRL_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`ch_al3_ctrl::W`](W) writer structure"]
 impl crate::Writable for CH_AL3_CTRL_SPEC {
+    type Safety = crate::Unsafe;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0x6000_0000;
 }

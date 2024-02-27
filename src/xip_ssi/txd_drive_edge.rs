@@ -20,16 +20,6 @@ impl W {
     pub fn tde(&mut self) -> TDE_W<TXD_DRIVE_EDGE_SPEC> {
         TDE_W::new(self, 0)
     }
-    #[doc = r" Writes raw bits to the register."]
-    #[doc = r""]
-    #[doc = r" # Safety"]
-    #[doc = r""]
-    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.bits = bits;
-        self
-    }
 }
 #[doc = "TX drive edge  
 
@@ -42,6 +32,7 @@ impl crate::RegisterSpec for TXD_DRIVE_EDGE_SPEC {
 impl crate::Readable for TXD_DRIVE_EDGE_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`txd_drive_edge::W`](W) writer structure"]
 impl crate::Writable for TXD_DRIVE_EDGE_SPEC {
+    type Safety = crate::Unsafe;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }

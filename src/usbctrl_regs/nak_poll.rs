@@ -35,16 +35,6 @@ impl W {
     pub fn delay_fs(&mut self) -> DELAY_FS_W<NAK_POLL_SPEC> {
         DELAY_FS_W::new(self, 16)
     }
-    #[doc = r" Writes raw bits to the register."]
-    #[doc = r""]
-    #[doc = r" # Safety"]
-    #[doc = r""]
-    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.bits = bits;
-        self
-    }
 }
 #[doc = "Used by the host controller. Sets the wait time in microseconds before trying again if the device replies with a NAK.  
 
@@ -57,6 +47,7 @@ impl crate::RegisterSpec for NAK_POLL_SPEC {
 impl crate::Readable for NAK_POLL_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`nak_poll::W`](W) writer structure"]
 impl crate::Writable for NAK_POLL_SPEC {
+    type Safety = crate::Unsafe;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }

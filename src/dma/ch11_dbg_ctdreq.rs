@@ -20,16 +20,6 @@ impl W {
     pub fn ch11_dbg_ctdreq(&mut self) -> CH11_DBG_CTDREQ_W<CH11_DBG_CTDREQ_SPEC> {
         CH11_DBG_CTDREQ_W::new(self, 0)
     }
-    #[doc = r" Writes raw bits to the register."]
-    #[doc = r""]
-    #[doc = r" # Safety"]
-    #[doc = r""]
-    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.bits = bits;
-        self
-    }
 }
 #[doc = "Read: get channel DREQ counter (i.e. how many accesses the DMA expects it can perform on the peripheral without overflow/underflow. Write any value: clears the counter, and cause channel to re-initiate DREQ handshake.  
 
@@ -42,6 +32,7 @@ impl crate::RegisterSpec for CH11_DBG_CTDREQ_SPEC {
 impl crate::Readable for CH11_DBG_CTDREQ_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`ch11_dbg_ctdreq::W`](W) writer structure"]
 impl crate::Writable for CH11_DBG_CTDREQ_SPEC {
+    type Safety = crate::Unsafe;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0x3f;
 }

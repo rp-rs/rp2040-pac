@@ -1,5 +1,5 @@
-#[doc = r"Register block"]
 #[repr(C)]
+#[doc = "Register block"]
 pub struct RegisterBlock {
     ctrlr0: CTRLR0,
     ctrlr1: CTRLR1,

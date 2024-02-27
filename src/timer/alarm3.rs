@@ -12,18 +12,7 @@ impl core::fmt::Debug for crate::generic::Reg<ALARM3_SPEC> {
         core::fmt::Debug::fmt(&self.read(), f)
     }
 }
-impl W {
-    #[doc = r" Writes raw bits to the register."]
-    #[doc = r""]
-    #[doc = r" # Safety"]
-    #[doc = r""]
-    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.bits = bits;
-        self
-    }
-}
+impl W {}
 #[doc = "Arm alarm 3, and configure the time it will fire.  
  Once armed, the alarm fires when TIMER_ALARM3 == TIMELR.  
  The alarm will disarm itself once it fires, and can  
@@ -38,6 +27,7 @@ impl crate::RegisterSpec for ALARM3_SPEC {
 impl crate::Readable for ALARM3_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`alarm3::W`](W) writer structure"]
 impl crate::Writable for ALARM3_SPEC {
+    type Safety = crate::Unsafe;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }

@@ -2,10 +2,6 @@
 pub type R = crate::R<IC_SLV_DATA_NACK_ONLY_SPEC>;
 #[doc = "Register `IC_SLV_DATA_NACK_ONLY` writer"]
 pub type W = crate::W<IC_SLV_DATA_NACK_ONLY_SPEC>;
-#[doc = "Field `NACK` reader - Generate NACK. This NACK generation only occurs when DW_apb_i2c is a slave-receiver. If this register is set to a value of 1, it can only generate a NACK after a data byte is received; hence, the data transfer is aborted and the data received is not pushed to the receive buffer.  
-
- When the register is set to a value of 0, it generates NACK/ACK, depending on normal criteria. - 1: generate NACK after data byte received - 0: generate NACK/ACK normally Reset value: 0x0"]
-pub type NACK_R = crate::BitReader<NACK_A>;
 #[doc = "Generate NACK. This NACK generation only occurs when DW_apb_i2c is a slave-receiver. If this register is set to a value of 1, it can only generate a NACK after a data byte is received; hence, the data transfer is aborted and the data received is not pushed to the receive buffer.  
 
  When the register is set to a value of 0, it generates NACK/ACK, depending on normal criteria. - 1: generate NACK after data byte received - 0: generate NACK/ACK normally Reset value: 0x0  
@@ -24,6 +20,10 @@ impl From<NACK_A> for bool {
         variant as u8 != 0
     }
 }
+#[doc = "Field `NACK` reader - Generate NACK. This NACK generation only occurs when DW_apb_i2c is a slave-receiver. If this register is set to a value of 1, it can only generate a NACK after a data byte is received; hence, the data transfer is aborted and the data received is not pushed to the receive buffer.  
+
+ When the register is set to a value of 0, it generates NACK/ACK, depending on normal criteria. - 1: generate NACK after data byte received - 0: generate NACK/ACK normally Reset value: 0x0"]
+pub type NACK_R = crate::BitReader<NACK_A>;
 impl NACK_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
@@ -81,16 +81,6 @@ impl W {
     pub fn nack(&mut self) -> NACK_W<IC_SLV_DATA_NACK_ONLY_SPEC> {
         NACK_W::new(self, 0)
     }
-    #[doc = r" Writes raw bits to the register."]
-    #[doc = r""]
-    #[doc = r" # Safety"]
-    #[doc = r""]
-    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.bits = bits;
-        self
-    }
 }
 #[doc = "Generate Slave Data NACK Register  
 
@@ -110,6 +100,7 @@ impl crate::RegisterSpec for IC_SLV_DATA_NACK_ONLY_SPEC {
 impl crate::Readable for IC_SLV_DATA_NACK_ONLY_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`ic_slv_data_nack_only::W`](W) writer structure"]
 impl crate::Writable for IC_SLV_DATA_NACK_ONLY_SPEC {
+    type Safety = crate::Unsafe;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }

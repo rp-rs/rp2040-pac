@@ -86,16 +86,6 @@ impl W {
     pub fn privdefena(&mut self) -> PRIVDEFENA_W<MPU_CTRL_SPEC> {
         PRIVDEFENA_W::new(self, 2)
     }
-    #[doc = r" Writes raw bits to the register."]
-    #[doc = r""]
-    #[doc = r" # Safety"]
-    #[doc = r""]
-    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.bits = bits;
-        self
-    }
 }
 #[doc = "Use the MPU Control Register to enable and disable the MPU, and to control whether the default memory map is enabled as a background region for privileged accesses, and whether the MPU is enabled for HardFaults and NMIs.  
 
@@ -108,6 +98,7 @@ impl crate::RegisterSpec for MPU_CTRL_SPEC {
 impl crate::Readable for MPU_CTRL_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`mpu_ctrl::W`](W) writer structure"]
 impl crate::Writable for MPU_CTRL_SPEC {
+    type Safety = crate::Unsafe;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }

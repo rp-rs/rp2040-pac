@@ -10,14 +10,6 @@ pub type DAT_R = crate::FieldReader;
 
  Reset value: 0x0"]
 pub type DAT_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
-#[doc = "Field `CMD` reader - This bit controls whether a read or a write is performed. This bit does not control the direction when the DW_apb_i2con acts as a slave. It controls only the direction when it acts as a master.  
-
- When a command is entered in the TX FIFO, this bit distinguishes the write and read commands. In slave-receiver mode, this bit is a 'don't care' because writes to this register are not required. In slave-transmitter mode, a '0' indicates that the data in IC_DATA_CMD is to be transmitted.  
-
- When programming this bit, you should remember the following: attempting to perform a read operation after a General Call command has been sent results in a TX_ABRT interrupt (bit 6 of the IC_RAW_INTR_STAT register), unless bit 11 (SPECIAL) in the IC_TAR register has been cleared. If a '1' is written to this bit after receiving a RD_REQ interrupt, then a TX_ABRT interrupt occurs.  
-
- Reset value: 0x0"]
-pub type CMD_R = crate::BitReader<CMD_A>;
 #[doc = "This bit controls whether a read or a write is performed. This bit does not control the direction when the DW_apb_i2con acts as a slave. It controls only the direction when it acts as a master.  
 
  When a command is entered in the TX FIFO, this bit distinguishes the write and read commands. In slave-receiver mode, this bit is a 'don't care' because writes to this register are not required. In slave-transmitter mode, a '0' indicates that the data in IC_DATA_CMD is to be transmitted.  
@@ -40,6 +32,14 @@ impl From<CMD_A> for bool {
         variant as u8 != 0
     }
 }
+#[doc = "Field `CMD` reader - This bit controls whether a read or a write is performed. This bit does not control the direction when the DW_apb_i2con acts as a slave. It controls only the direction when it acts as a master.  
+
+ When a command is entered in the TX FIFO, this bit distinguishes the write and read commands. In slave-receiver mode, this bit is a 'don't care' because writes to this register are not required. In slave-transmitter mode, a '0' indicates that the data in IC_DATA_CMD is to be transmitted.  
+
+ When programming this bit, you should remember the following: attempting to perform a read operation after a General Call command has been sent results in a TX_ABRT interrupt (bit 6 of the IC_RAW_INTR_STAT register), unless bit 11 (SPECIAL) in the IC_TAR register has been cleared. If a '1' is written to this bit after receiving a RD_REQ interrupt, then a TX_ABRT interrupt occurs.  
+
+ Reset value: 0x0"]
+pub type CMD_R = crate::BitReader<CMD_A>;
 impl CMD_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
@@ -83,10 +83,6 @@ where
         self.variant(CMD_A::READ)
     }
 }
-#[doc = "Field `STOP` reader - This bit controls whether a STOP is issued after the byte is sent or received.  
-
- - 1 - STOP is issued after this byte, regardless of whether or not the Tx FIFO is empty. If the Tx FIFO is not empty, the master immediately tries to start a new transfer by issuing a START and arbitrating for the bus. - 0 - STOP is not issued after this byte, regardless of whether or not the Tx FIFO is empty. If the Tx FIFO is not empty, the master continues the current transfer by sending/receiving data bytes according to the value of the CMD bit. If the Tx FIFO is empty, the master holds the SCL line low and stalls the bus until a new command is available in the Tx FIFO. Reset value: 0x0"]
-pub type STOP_R = crate::BitReader<STOP_A>;
 #[doc = "This bit controls whether a STOP is issued after the byte is sent or received.  
 
  - 1 - STOP is issued after this byte, regardless of whether or not the Tx FIFO is empty. If the Tx FIFO is not empty, the master immediately tries to start a new transfer by issuing a START and arbitrating for the bus. - 0 - STOP is not issued after this byte, regardless of whether or not the Tx FIFO is empty. If the Tx FIFO is not empty, the master continues the current transfer by sending/receiving data bytes according to the value of the CMD bit. If the Tx FIFO is empty, the master holds the SCL line low and stalls the bus until a new command is available in the Tx FIFO. Reset value: 0x0  
@@ -105,6 +101,10 @@ impl From<STOP_A> for bool {
         variant as u8 != 0
     }
 }
+#[doc = "Field `STOP` reader - This bit controls whether a STOP is issued after the byte is sent or received.  
+
+ - 1 - STOP is issued after this byte, regardless of whether or not the Tx FIFO is empty. If the Tx FIFO is not empty, the master immediately tries to start a new transfer by issuing a START and arbitrating for the bus. - 0 - STOP is not issued after this byte, regardless of whether or not the Tx FIFO is empty. If the Tx FIFO is not empty, the master continues the current transfer by sending/receiving data bytes according to the value of the CMD bit. If the Tx FIFO is empty, the master holds the SCL line low and stalls the bus until a new command is available in the Tx FIFO. Reset value: 0x0"]
+pub type STOP_R = crate::BitReader<STOP_A>;
 impl STOP_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
@@ -144,14 +144,6 @@ where
         self.variant(STOP_A::ENABLE)
     }
 }
-#[doc = "Field `RESTART` reader - This bit controls whether a RESTART is issued before the byte is sent or received.  
-
- 1 - If IC_RESTART_EN is 1, a RESTART is issued before the data is sent/received (according to the value of CMD), regardless of whether or not the transfer direction is changing from the previous command; if IC_RESTART_EN is 0, a STOP followed by a START is issued instead.  
-
- 0 - If IC_RESTART_EN is 1, a RESTART is issued only if the transfer direction is changing from the previous command; if IC_RESTART_EN is 0, a STOP followed by a START is issued instead.  
-
- Reset value: 0x0"]
-pub type RESTART_R = crate::BitReader<RESTART_A>;
 #[doc = "This bit controls whether a RESTART is issued before the byte is sent or received.  
 
  1 - If IC_RESTART_EN is 1, a RESTART is issued before the data is sent/received (according to the value of CMD), regardless of whether or not the transfer direction is changing from the previous command; if IC_RESTART_EN is 0, a STOP followed by a START is issued instead.  
@@ -174,6 +166,14 @@ impl From<RESTART_A> for bool {
         variant as u8 != 0
     }
 }
+#[doc = "Field `RESTART` reader - This bit controls whether a RESTART is issued before the byte is sent or received.  
+
+ 1 - If IC_RESTART_EN is 1, a RESTART is issued before the data is sent/received (according to the value of CMD), regardless of whether or not the transfer direction is changing from the previous command; if IC_RESTART_EN is 0, a STOP followed by a START is issued instead.  
+
+ 0 - If IC_RESTART_EN is 1, a RESTART is issued only if the transfer direction is changing from the previous command; if IC_RESTART_EN is 0, a STOP followed by a START is issued instead.  
+
+ Reset value: 0x0"]
+pub type RESTART_R = crate::BitReader<RESTART_A>;
 impl RESTART_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
@@ -217,21 +217,6 @@ where
         self.variant(RESTART_A::ENABLE)
     }
 }
-#[doc = "Field `FIRST_DATA_BYTE` reader - Indicates the first data byte received after the address phase for receive transfer in Master receiver or Slave receiver mode.  
-
- Reset value : 0x0  
-
- NOTE: In case of APB_DATA_WIDTH=8,  
-
- 1. The user has to perform two APB Reads to IC_DATA_CMD in order to get status on 11 bit.  
-
- 2. In order to read the 11 bit, the user has to perform the first data byte read \\[7:0\\]
-(offset 0x10) and then perform the second read \\[15:8\\]
-(offset 0x11) in order to know the status of 11 bit (whether the data received in previous read is a first data byte or not).  
-
- 3. The 11th bit is an optional read field, user can ignore 2nd byte read \\[15:8\\]
-(offset 0x11) if not interested in FIRST_DATA_BYTE status."]
-pub type FIRST_DATA_BYTE_R = crate::BitReader<FIRST_DATA_BYTE_A>;
 #[doc = "Indicates the first data byte received after the address phase for receive transfer in Master receiver or Slave receiver mode.  
 
  Reset value : 0x0  
@@ -261,6 +246,21 @@ impl From<FIRST_DATA_BYTE_A> for bool {
         variant as u8 != 0
     }
 }
+#[doc = "Field `FIRST_DATA_BYTE` reader - Indicates the first data byte received after the address phase for receive transfer in Master receiver or Slave receiver mode.  
+
+ Reset value : 0x0  
+
+ NOTE: In case of APB_DATA_WIDTH=8,  
+
+ 1. The user has to perform two APB Reads to IC_DATA_CMD in order to get status on 11 bit.  
+
+ 2. In order to read the 11 bit, the user has to perform the first data byte read \\[7:0\\]
+(offset 0x10) and then perform the second read \\[15:8\\]
+(offset 0x11) in order to know the status of 11 bit (whether the data received in previous read is a first data byte or not).  
+
+ 3. The 11th bit is an optional read field, user can ignore 2nd byte read \\[15:8\\]
+(offset 0x11) if not interested in FIRST_DATA_BYTE status."]
+pub type FIRST_DATA_BYTE_R = crate::BitReader<FIRST_DATA_BYTE_A>;
 impl FIRST_DATA_BYTE_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
@@ -378,16 +378,6 @@ impl W {
     pub fn restart(&mut self) -> RESTART_W<IC_DATA_CMD_SPEC> {
         RESTART_W::new(self, 10)
     }
-    #[doc = r" Writes raw bits to the register."]
-    #[doc = r""]
-    #[doc = r" # Safety"]
-    #[doc = r""]
-    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.bits = bits;
-        self
-    }
 }
 #[doc = "I2C Rx/Tx Data Buffer and Command Register; this is the register the CPU writes to when filling the TX FIFO and the CPU reads from when retrieving bytes from RX FIFO.  
 
@@ -404,6 +394,7 @@ impl crate::RegisterSpec for IC_DATA_CMD_SPEC {
 impl crate::Readable for IC_DATA_CMD_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`ic_data_cmd::W`](W) writer structure"]
 impl crate::Writable for IC_DATA_CMD_SPEC {
+    type Safety = crate::Unsafe;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }

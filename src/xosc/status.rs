@@ -2,8 +2,6 @@
 pub type R = crate::R<STATUS_SPEC>;
 #[doc = "Register `STATUS` writer"]
 pub type W = crate::W<STATUS_SPEC>;
-#[doc = "Field `FREQ_RANGE` reader - The current frequency range setting, always reads 0"]
-pub type FREQ_RANGE_R = crate::FieldReader<FREQ_RANGE_A>;
 #[doc = "The current frequency range setting, always reads 0  
 
 Value on reset: 0"]
@@ -28,6 +26,8 @@ impl From<FREQ_RANGE_A> for u8 {
 impl crate::FieldSpec for FREQ_RANGE_A {
     type Ux = u8;
 }
+#[doc = "Field `FREQ_RANGE` reader - The current frequency range setting, always reads 0"]
+pub type FREQ_RANGE_R = crate::FieldReader<FREQ_RANGE_A>;
 impl FREQ_RANGE_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
@@ -98,16 +98,6 @@ impl W {
     pub fn badwrite(&mut self) -> BADWRITE_W<STATUS_SPEC> {
         BADWRITE_W::new(self, 24)
     }
-    #[doc = r" Writes raw bits to the register."]
-    #[doc = r""]
-    #[doc = r" # Safety"]
-    #[doc = r""]
-    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.bits = bits;
-        self
-    }
 }
 #[doc = "Crystal Oscillator Status  
 
@@ -120,6 +110,7 @@ impl crate::RegisterSpec for STATUS_SPEC {
 impl crate::Readable for STATUS_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`status::W`](W) writer structure"]
 impl crate::Writable for STATUS_SPEC {
+    type Safety = crate::Unsafe;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0x0100_0000;
 }

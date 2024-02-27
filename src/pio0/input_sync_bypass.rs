@@ -12,18 +12,7 @@ impl core::fmt::Debug for crate::generic::Reg<INPUT_SYNC_BYPASS_SPEC> {
         core::fmt::Debug::fmt(&self.read(), f)
     }
 }
-impl W {
-    #[doc = r" Writes raw bits to the register."]
-    #[doc = r""]
-    #[doc = r" # Safety"]
-    #[doc = r""]
-    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.bits = bits;
-        self
-    }
-}
+impl W {}
 #[doc = "There is a 2-flipflop synchronizer on each GPIO input, which protects PIO logic from metastabilities. This increases input delay, and for fast synchronous IO (e.g. SPI) these synchronizers may need to be bypassed. Each bit in this register corresponds to one GPIO.  
  0 -> input is synchronized (default)  
  1 -> synchronizer is bypassed  
@@ -38,6 +27,7 @@ impl crate::RegisterSpec for INPUT_SYNC_BYPASS_SPEC {
 impl crate::Readable for INPUT_SYNC_BYPASS_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`input_sync_bypass::W`](W) writer structure"]
 impl crate::Writable for INPUT_SYNC_BYPASS_SPEC {
+    type Safety = crate::Unsafe;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }

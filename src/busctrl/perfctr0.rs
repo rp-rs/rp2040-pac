@@ -28,16 +28,6 @@ impl W {
     pub fn perfctr0(&mut self) -> PERFCTR0_W<PERFCTR0_SPEC> {
         PERFCTR0_W::new(self, 0)
     }
-    #[doc = r" Writes raw bits to the register."]
-    #[doc = r""]
-    #[doc = r" # Safety"]
-    #[doc = r""]
-    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.bits = bits;
-        self
-    }
 }
 #[doc = "Bus fabric performance counter 0  
 
@@ -50,6 +40,7 @@ impl crate::RegisterSpec for PERFCTR0_SPEC {
 impl crate::Readable for PERFCTR0_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`perfctr0::W`](W) writer structure"]
 impl crate::Writable for PERFCTR0_SPEC {
+    type Safety = crate::Unsafe;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0x00ff_ffff;
 }

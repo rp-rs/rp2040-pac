@@ -1,5 +1,5 @@
-#[doc = r"Register block"]
 #[repr(C)]
+#[doc = "Cluster SM_IRQ%s, containing IRQ*_INTE, IRQ*_INTF, IRQ*_INTS"]
 pub struct SM_IRQ {
     irq_inte: IRQ_INTE,
     irq_intf: IRQ_INTF,

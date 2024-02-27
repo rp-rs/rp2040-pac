@@ -69,16 +69,6 @@ impl W {
     pub fn clear(&mut self) -> CLEAR_W<CLK_SYS_RESUS_CTRL_SPEC> {
         CLEAR_W::new(self, 16)
     }
-    #[doc = r" Writes raw bits to the register."]
-    #[doc = r""]
-    #[doc = r" # Safety"]
-    #[doc = r""]
-    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.bits = bits;
-        self
-    }
 }
 #[doc = "  
 
@@ -91,6 +81,7 @@ impl crate::RegisterSpec for CLK_SYS_RESUS_CTRL_SPEC {
 impl crate::Readable for CLK_SYS_RESUS_CTRL_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`clk_sys_resus_ctrl::W`](W) writer structure"]
 impl crate::Writable for CLK_SYS_RESUS_CTRL_SPEC {
+    type Safety = crate::Unsafe;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }

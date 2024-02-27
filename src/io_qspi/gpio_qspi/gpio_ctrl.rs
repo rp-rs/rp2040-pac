@@ -2,9 +2,6 @@
 pub type R = crate::R<GPIO_CTRL_SPEC>;
 #[doc = "Register `GPIO_CTRL` writer"]
 pub type W = crate::W<GPIO_CTRL_SPEC>;
-#[doc = "Field `FUNCSEL` reader - 0-31 -> selects pin function according to the gpio table  
- 31 == NULL"]
-pub type FUNCSEL_R = crate::FieldReader<FUNCSEL_A>;
 #[doc = "0-31 -> selects pin function according to the gpio table  
  31 == NULL  
 
@@ -28,6 +25,9 @@ impl From<FUNCSEL_A> for u8 {
 impl crate::FieldSpec for FUNCSEL_A {
     type Ux = u8;
 }
+#[doc = "Field `FUNCSEL` reader - 0-31 -> selects pin function according to the gpio table  
+ 31 == NULL"]
+pub type FUNCSEL_R = crate::FieldReader<FUNCSEL_A>;
 impl FUNCSEL_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
@@ -79,8 +79,6 @@ where
         self.variant(FUNCSEL_A::NULL)
     }
 }
-#[doc = "Field `OUTOVER` reader - "]
-pub type OUTOVER_R = crate::FieldReader<OUTOVER_A>;
 #[doc = "  
 
 Value on reset: 0"]
@@ -105,6 +103,8 @@ impl From<OUTOVER_A> for u8 {
 impl crate::FieldSpec for OUTOVER_A {
     type Ux = u8;
 }
+#[doc = "Field `OUTOVER` reader - "]
+pub type OUTOVER_R = crate::FieldReader<OUTOVER_A>;
 impl OUTOVER_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
@@ -166,8 +166,6 @@ where
         self.variant(OUTOVER_A::HIGH)
     }
 }
-#[doc = "Field `OEOVER` reader - "]
-pub type OEOVER_R = crate::FieldReader<OEOVER_A>;
 #[doc = "  
 
 Value on reset: 0"]
@@ -192,6 +190,8 @@ impl From<OEOVER_A> for u8 {
 impl crate::FieldSpec for OEOVER_A {
     type Ux = u8;
 }
+#[doc = "Field `OEOVER` reader - "]
+pub type OEOVER_R = crate::FieldReader<OEOVER_A>;
 impl OEOVER_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
@@ -253,8 +253,6 @@ where
         self.variant(OEOVER_A::ENABLE)
     }
 }
-#[doc = "Field `INOVER` reader - "]
-pub type INOVER_R = crate::FieldReader<INOVER_A>;
 #[doc = "  
 
 Value on reset: 0"]
@@ -279,6 +277,8 @@ impl From<INOVER_A> for u8 {
 impl crate::FieldSpec for INOVER_A {
     type Ux = u8;
 }
+#[doc = "Field `INOVER` reader - "]
+pub type INOVER_R = crate::FieldReader<INOVER_A>;
 impl INOVER_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
@@ -340,8 +340,6 @@ where
         self.variant(INOVER_A::HIGH)
     }
 }
-#[doc = "Field `IRQOVER` reader - "]
-pub type IRQOVER_R = crate::FieldReader<IRQOVER_A>;
 #[doc = "  
 
 Value on reset: 0"]
@@ -366,6 +364,8 @@ impl From<IRQOVER_A> for u8 {
 impl crate::FieldSpec for IRQOVER_A {
     type Ux = u8;
 }
+#[doc = "Field `IRQOVER` reader - "]
+pub type IRQOVER_R = crate::FieldReader<IRQOVER_A>;
 impl IRQOVER_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
@@ -487,16 +487,6 @@ impl W {
     pub fn irqover(&mut self) -> IRQOVER_W<GPIO_CTRL_SPEC> {
         IRQOVER_W::new(self, 28)
     }
-    #[doc = r" Writes raw bits to the register."]
-    #[doc = r""]
-    #[doc = r" # Safety"]
-    #[doc = r""]
-    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.bits = bits;
-        self
-    }
 }
 #[doc = "GPIO control including function select and overrides.  
 
@@ -509,6 +499,7 @@ impl crate::RegisterSpec for GPIO_CTRL_SPEC {
 impl crate::Readable for GPIO_CTRL_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`gpio_ctrl::W`](W) writer structure"]
 impl crate::Writable for GPIO_CTRL_SPEC {
+    type Safety = crate::Unsafe;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }

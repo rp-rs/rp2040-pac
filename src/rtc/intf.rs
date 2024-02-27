@@ -20,16 +20,6 @@ impl W {
     pub fn rtc(&mut self) -> RTC_W<INTF_SPEC> {
         RTC_W::new(self, 0)
     }
-    #[doc = r" Writes raw bits to the register."]
-    #[doc = r""]
-    #[doc = r" # Safety"]
-    #[doc = r""]
-    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.bits = bits;
-        self
-    }
 }
 #[doc = "Interrupt Force  
 
@@ -42,6 +32,7 @@ impl crate::RegisterSpec for INTF_SPEC {
 impl crate::Readable for INTF_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`intf::W`](W) writer structure"]
 impl crate::Writable for INTF_SPEC {
+    type Safety = crate::Unsafe;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }

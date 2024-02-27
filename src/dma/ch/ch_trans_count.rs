@@ -12,18 +12,7 @@ impl core::fmt::Debug for crate::generic::Reg<CH_TRANS_COUNT_SPEC> {
         core::fmt::Debug::fmt(&self.read(), f)
     }
 }
-impl W {
-    #[doc = r" Writes raw bits to the register."]
-    #[doc = r""]
-    #[doc = r" # Safety"]
-    #[doc = r""]
-    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.bits = bits;
-        self
-    }
-}
+impl W {}
 #[doc = "DMA Channel 0 Transfer Count  
  Program the number of bus transfers a channel will perform before halting. Note that, if transfers are larger than one byte in size, this is not equal to the number of bytes transferred (see CTRL_DATA_SIZE).  
 
@@ -42,6 +31,7 @@ impl crate::RegisterSpec for CH_TRANS_COUNT_SPEC {
 impl crate::Readable for CH_TRANS_COUNT_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`ch_trans_count::W`](W) writer structure"]
 impl crate::Writable for CH_TRANS_COUNT_SPEC {
+    type Safety = crate::Unsafe;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }

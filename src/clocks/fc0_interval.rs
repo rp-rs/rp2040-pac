@@ -20,16 +20,6 @@ impl W {
     pub fn fc0_interval(&mut self) -> FC0_INTERVAL_W<FC0_INTERVAL_SPEC> {
         FC0_INTERVAL_W::new(self, 0)
     }
-    #[doc = r" Writes raw bits to the register."]
-    #[doc = r""]
-    #[doc = r" # Safety"]
-    #[doc = r""]
-    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.bits = bits;
-        self
-    }
 }
 #[doc = "The test interval is 0.98us * 2**interval, but let's call it 1us * 2**interval  
  The default gives a test interval of 250us  
@@ -43,6 +33,7 @@ impl crate::RegisterSpec for FC0_INTERVAL_SPEC {
 impl crate::Readable for FC0_INTERVAL_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`fc0_interval::W`](W) writer structure"]
 impl crate::Writable for FC0_INTERVAL_SPEC {
+    type Safety = crate::Unsafe;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }

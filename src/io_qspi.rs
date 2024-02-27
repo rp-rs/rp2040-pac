@@ -1,5 +1,5 @@
-#[doc = r"Register block"]
 #[repr(C)]
+#[doc = "Register block"]
 pub struct RegisterBlock {
     gpio_qspi: [GPIO_QSPI; 6],
     intr: INTR,

@@ -365,16 +365,6 @@ impl W {
     pub fn ep0_int_stall(&mut self) -> EP0_INT_STALL_W<SIE_CTRL_SPEC> {
         EP0_INT_STALL_W::new(self, 31)
     }
-    #[doc = r" Writes raw bits to the register."]
-    #[doc = r""]
-    #[doc = r" # Safety"]
-    #[doc = r""]
-    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.bits = bits;
-        self
-    }
 }
 #[doc = "SIE control register  
 
@@ -387,6 +377,7 @@ impl crate::RegisterSpec for SIE_CTRL_SPEC {
 impl crate::Readable for SIE_CTRL_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`sie_ctrl::W`](W) writer structure"]
 impl crate::Writable for SIE_CTRL_SPEC {
+    type Safety = crate::Unsafe;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }

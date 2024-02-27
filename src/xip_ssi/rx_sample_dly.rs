@@ -20,16 +20,6 @@ impl W {
     pub fn rsd(&mut self) -> RSD_W<RX_SAMPLE_DLY_SPEC> {
         RSD_W::new(self, 0)
     }
-    #[doc = r" Writes raw bits to the register."]
-    #[doc = r""]
-    #[doc = r" # Safety"]
-    #[doc = r""]
-    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.bits = bits;
-        self
-    }
 }
 #[doc = "RX sample delay  
 
@@ -42,6 +32,7 @@ impl crate::RegisterSpec for RX_SAMPLE_DLY_SPEC {
 impl crate::Readable for RX_SAMPLE_DLY_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`rx_sample_dly::W`](W) writer structure"]
 impl crate::Writable for RX_SAMPLE_DLY_SPEC {
+    type Safety = crate::Unsafe;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }

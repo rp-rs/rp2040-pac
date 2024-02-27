@@ -2,8 +2,6 @@
 pub type R = crate::R<SPI_CTRLR0_SPEC>;
 #[doc = "Register `SPI_CTRLR0` writer"]
 pub type W = crate::W<SPI_CTRLR0_SPEC>;
-#[doc = "Field `TRANS_TYPE` reader - Address and instruction transfer format"]
-pub type TRANS_TYPE_R = crate::FieldReader<TRANS_TYPE_A>;
 #[doc = "Address and instruction transfer format  
 
 Value on reset: 0"]
@@ -26,6 +24,8 @@ impl From<TRANS_TYPE_A> for u8 {
 impl crate::FieldSpec for TRANS_TYPE_A {
     type Ux = u8;
 }
+#[doc = "Field `TRANS_TYPE` reader - Address and instruction transfer format"]
+pub type TRANS_TYPE_R = crate::FieldReader<TRANS_TYPE_A>;
 impl TRANS_TYPE_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
@@ -80,8 +80,6 @@ where
 pub type ADDR_L_R = crate::FieldReader;
 #[doc = "Field `ADDR_L` writer - Address length (0b-60b in 4b increments)"]
 pub type ADDR_L_W<'a, REG> = crate::FieldWriter<'a, REG, 4>;
-#[doc = "Field `INST_L` reader - Instruction length (0/4/8/16b)"]
-pub type INST_L_R = crate::FieldReader<INST_L_A>;
 #[doc = "Instruction length (0/4/8/16b)  
 
 Value on reset: 0"]
@@ -106,6 +104,8 @@ impl From<INST_L_A> for u8 {
 impl crate::FieldSpec for INST_L_A {
     type Ux = u8;
 }
+#[doc = "Field `INST_L` reader - Instruction length (0/4/8/16b)"]
+pub type INST_L_R = crate::FieldReader<INST_L_A>;
 impl INST_L_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
@@ -278,16 +278,6 @@ impl W {
     pub fn xip_cmd(&mut self) -> XIP_CMD_W<SPI_CTRLR0_SPEC> {
         XIP_CMD_W::new(self, 24)
     }
-    #[doc = r" Writes raw bits to the register."]
-    #[doc = r""]
-    #[doc = r" # Safety"]
-    #[doc = r""]
-    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.bits = bits;
-        self
-    }
 }
 #[doc = "SPI control  
 
@@ -300,6 +290,7 @@ impl crate::RegisterSpec for SPI_CTRLR0_SPEC {
 impl crate::Readable for SPI_CTRLR0_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`spi_ctrlr0::W`](W) writer structure"]
 impl crate::Writable for SPI_CTRLR0_SPEC {
+    type Safety = crate::Unsafe;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }

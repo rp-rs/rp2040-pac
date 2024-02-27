@@ -5,18 +5,7 @@ impl core::fmt::Debug for crate::generic::Reg<TIMEHW_SPEC> {
         write!(f, "(not readable)")
     }
 }
-impl W {
-    #[doc = r" Writes raw bits to the register."]
-    #[doc = r""]
-    #[doc = r" # Safety"]
-    #[doc = r""]
-    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.bits = bits;
-        self
-    }
-}
+impl W {}
 #[doc = "Write to bits 63:32 of time  
  always write timelw before timehw  
 
@@ -27,6 +16,7 @@ impl crate::RegisterSpec for TIMEHW_SPEC {
 }
 #[doc = "`write(|w| ..)` method takes [`timehw::W`](W) writer structure"]
 impl crate::Writable for TIMEHW_SPEC {
+    type Safety = crate::Unsafe;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }

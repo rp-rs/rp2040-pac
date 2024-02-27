@@ -9,16 +9,6 @@ impl W {
     pub fn irq_force(&mut self) -> IRQ_FORCE_W<IRQ_FORCE_SPEC> {
         IRQ_FORCE_W::new(self, 0)
     }
-    #[doc = r" Writes raw bits to the register."]
-    #[doc = r""]
-    #[doc = r" # Safety"]
-    #[doc = r""]
-    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.bits = bits;
-        self
-    }
 }
 #[doc = "Writing a 1 to each of these bits will forcibly assert the corresponding IRQ. Note this is different to the INTF register: writing here affects PIO internal state. INTF just asserts the processor-facing IRQ signal for testing ISRs, and is not visible to the state machines.  
 
@@ -29,6 +19,7 @@ impl crate::RegisterSpec for IRQ_FORCE_SPEC {
 }
 #[doc = "`write(|w| ..)` method takes [`irq_force::W`](W) writer structure"]
 impl crate::Writable for IRQ_FORCE_SPEC {
+    type Safety = crate::Unsafe;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }

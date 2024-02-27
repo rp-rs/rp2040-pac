@@ -12,18 +12,7 @@ impl core::fmt::Debug for crate::generic::Reg<DIV_UDIVIDEND_SPEC> {
         core::fmt::Debug::fmt(&self.read(), f)
     }
 }
-impl W {
-    #[doc = r" Writes raw bits to the register."]
-    #[doc = r""]
-    #[doc = r" # Safety"]
-    #[doc = r""]
-    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.bits = bits;
-        self
-    }
-}
+impl W {}
 #[doc = "Divider unsigned dividend  
  Write to the DIVIDEND operand of the divider, i.e. the p in `p / q`.  
  Any operand write starts a new calculation. The results appear in QUOTIENT, REMAINDER.  
@@ -39,6 +28,7 @@ impl crate::RegisterSpec for DIV_UDIVIDEND_SPEC {
 impl crate::Readable for DIV_UDIVIDEND_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`div_udividend::W`](W) writer structure"]
 impl crate::Writable for DIV_UDIVIDEND_SPEC {
+    type Safety = crate::Unsafe;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }

@@ -20,16 +20,6 @@ impl W {
     pub fn irq(&mut self) -> IRQ_W<IRQ_SPEC> {
         IRQ_W::new(self, 0)
     }
-    #[doc = r" Writes raw bits to the register."]
-    #[doc = r""]
-    #[doc = r" # Safety"]
-    #[doc = r""]
-    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.bits = bits;
-        self
-    }
 }
 #[doc = "State machine IRQ flags register. Write 1 to clear. There are 8 state machine IRQ flags, which can be set, cleared, and waited on by the state machines. There's no fixed association between flags and state machines -- any state machine can use any flag.  
 
@@ -44,6 +34,7 @@ impl crate::RegisterSpec for IRQ_SPEC {
 impl crate::Readable for IRQ_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`irq::W`](W) writer structure"]
 impl crate::Writable for IRQ_SPEC {
+    type Safety = crate::Unsafe;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0xff;
 }

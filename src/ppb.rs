@@ -1,5 +1,5 @@
-#[doc = r"Register block"]
 #[repr(C)]
+#[doc = "Register block"]
 pub struct RegisterBlock {
     _reserved0: [u8; 0xe010],
     syst_csr: SYST_CSR,

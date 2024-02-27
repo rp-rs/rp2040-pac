@@ -2,8 +2,6 @@
 pub type R = crate::R<CTRL_SPEC>;
 #[doc = "Register `CTRL` writer"]
 pub type W = crate::W<CTRL_SPEC>;
-#[doc = "Field `FREQ_RANGE` reader - Frequency range. This resets to 0xAA0 and cannot be changed."]
-pub type FREQ_RANGE_R = crate::FieldReader<FREQ_RANGE_A>;
 #[doc = "Frequency range. This resets to 0xAA0 and cannot be changed.  
 
 Value on reset: 0"]
@@ -28,6 +26,8 @@ impl From<FREQ_RANGE_A> for u16 {
 impl crate::FieldSpec for FREQ_RANGE_A {
     type Ux = u16;
 }
+#[doc = "Field `FREQ_RANGE` reader - Frequency range. This resets to 0xAA0 and cannot be changed."]
+pub type FREQ_RANGE_R = crate::FieldReader<FREQ_RANGE_A>;
 impl FREQ_RANGE_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
@@ -89,10 +89,6 @@ where
         self.variant(FREQ_RANGE_A::RESERVED_3)
     }
 }
-#[doc = "Field `ENABLE` reader - On power-up this field is initialised to DISABLE and the chip runs from the ROSC.  
- If the chip has subsequently been programmed to run from the XOSC then setting this field to DISABLE may lock-up the chip. If this is a concern then run the clk_ref from the ROSC and enable the clk_sys RESUS feature.  
- The 12-bit code is intended to give some protection against accidental writes. An invalid setting will enable the oscillator."]
-pub type ENABLE_R = crate::FieldReader<ENABLE_A>;
 #[doc = "On power-up this field is initialised to DISABLE and the chip runs from the ROSC.  
  If the chip has subsequently been programmed to run from the XOSC then setting this field to DISABLE may lock-up the chip. If this is a concern then run the clk_ref from the ROSC and enable the clk_sys RESUS feature.  
  The 12-bit code is intended to give some protection against accidental writes. An invalid setting will enable the oscillator.  
@@ -115,6 +111,10 @@ impl From<ENABLE_A> for u16 {
 impl crate::FieldSpec for ENABLE_A {
     type Ux = u16;
 }
+#[doc = "Field `ENABLE` reader - On power-up this field is initialised to DISABLE and the chip runs from the ROSC.  
+ If the chip has subsequently been programmed to run from the XOSC then setting this field to DISABLE may lock-up the chip. If this is a concern then run the clk_ref from the ROSC and enable the clk_sys RESUS feature.  
+ The 12-bit code is intended to give some protection against accidental writes. An invalid setting will enable the oscillator."]
+pub type ENABLE_R = crate::FieldReader<ENABLE_A>;
 impl ENABLE_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
@@ -185,16 +185,6 @@ impl W {
     pub fn enable(&mut self) -> ENABLE_W<CTRL_SPEC> {
         ENABLE_W::new(self, 12)
     }
-    #[doc = r" Writes raw bits to the register."]
-    #[doc = r""]
-    #[doc = r" # Safety"]
-    #[doc = r""]
-    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.bits = bits;
-        self
-    }
 }
 #[doc = "Crystal Oscillator Control  
 
@@ -207,6 +197,7 @@ impl crate::RegisterSpec for CTRL_SPEC {
 impl crate::Readable for CTRL_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`ctrl::W`](W) writer structure"]
 impl crate::Writable for CTRL_SPEC {
+    type Safety = crate::Unsafe;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }

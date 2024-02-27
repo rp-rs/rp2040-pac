@@ -1,11 +1,5 @@
 #[doc = "Register `IC_TX_ABRT_SOURCE` reader"]
 pub type R = crate::R<IC_TX_ABRT_SOURCE_SPEC>;
-#[doc = "Field `ABRT_7B_ADDR_NOACK` reader - This field indicates that the Master is in 7-bit addressing mode and the address sent was not acknowledged by any slave.  
-
- Reset value: 0x0  
-
- Role of DW_apb_i2c: Master-Transmitter or Master-Receiver"]
-pub type ABRT_7B_ADDR_NOACK_R = crate::BitReader<ABRT_7B_ADDR_NOACK_A>;
 #[doc = "This field indicates that the Master is in 7-bit addressing mode and the address sent was not acknowledged by any slave.  
 
  Reset value: 0x0  
@@ -26,6 +20,12 @@ impl From<ABRT_7B_ADDR_NOACK_A> for bool {
         variant as u8 != 0
     }
 }
+#[doc = "Field `ABRT_7B_ADDR_NOACK` reader - This field indicates that the Master is in 7-bit addressing mode and the address sent was not acknowledged by any slave.  
+
+ Reset value: 0x0  
+
+ Role of DW_apb_i2c: Master-Transmitter or Master-Receiver"]
+pub type ABRT_7B_ADDR_NOACK_R = crate::BitReader<ABRT_7B_ADDR_NOACK_A>;
 impl ABRT_7B_ADDR_NOACK_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
@@ -46,12 +46,6 @@ impl ABRT_7B_ADDR_NOACK_R {
         *self == ABRT_7B_ADDR_NOACK_A::ACTIVE
     }
 }
-#[doc = "Field `ABRT_10ADDR1_NOACK` reader - This field indicates that the Master is in 10-bit address mode and the first 10-bit address byte was not acknowledged by any slave.  
-
- Reset value: 0x0  
-
- Role of DW_apb_i2c: Master-Transmitter or Master-Receiver"]
-pub type ABRT_10ADDR1_NOACK_R = crate::BitReader<ABRT_10ADDR1_NOACK_A>;
 #[doc = "This field indicates that the Master is in 10-bit address mode and the first 10-bit address byte was not acknowledged by any slave.  
 
  Reset value: 0x0  
@@ -72,6 +66,12 @@ impl From<ABRT_10ADDR1_NOACK_A> for bool {
         variant as u8 != 0
     }
 }
+#[doc = "Field `ABRT_10ADDR1_NOACK` reader - This field indicates that the Master is in 10-bit address mode and the first 10-bit address byte was not acknowledged by any slave.  
+
+ Reset value: 0x0  
+
+ Role of DW_apb_i2c: Master-Transmitter or Master-Receiver"]
+pub type ABRT_10ADDR1_NOACK_R = crate::BitReader<ABRT_10ADDR1_NOACK_A>;
 impl ABRT_10ADDR1_NOACK_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
@@ -92,12 +92,6 @@ impl ABRT_10ADDR1_NOACK_R {
         *self == ABRT_10ADDR1_NOACK_A::ACTIVE
     }
 }
-#[doc = "Field `ABRT_10ADDR2_NOACK` reader - This field indicates that the Master is in 10-bit address mode and that the second address byte of the 10-bit address was not acknowledged by any slave.  
-
- Reset value: 0x0  
-
- Role of DW_apb_i2c: Master-Transmitter or Master-Receiver"]
-pub type ABRT_10ADDR2_NOACK_R = crate::BitReader<ABRT_10ADDR2_NOACK_A>;
 #[doc = "This field indicates that the Master is in 10-bit address mode and that the second address byte of the 10-bit address was not acknowledged by any slave.  
 
  Reset value: 0x0  
@@ -118,6 +112,12 @@ impl From<ABRT_10ADDR2_NOACK_A> for bool {
         variant as u8 != 0
     }
 }
+#[doc = "Field `ABRT_10ADDR2_NOACK` reader - This field indicates that the Master is in 10-bit address mode and that the second address byte of the 10-bit address was not acknowledged by any slave.  
+
+ Reset value: 0x0  
+
+ Role of DW_apb_i2c: Master-Transmitter or Master-Receiver"]
+pub type ABRT_10ADDR2_NOACK_R = crate::BitReader<ABRT_10ADDR2_NOACK_A>;
 impl ABRT_10ADDR2_NOACK_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
@@ -138,12 +138,6 @@ impl ABRT_10ADDR2_NOACK_R {
         *self == ABRT_10ADDR2_NOACK_A::ACTIVE
     }
 }
-#[doc = "Field `ABRT_TXDATA_NOACK` reader - This field indicates the master-mode only bit. When the master receives an acknowledgement for the address, but when it sends data byte(s) following the address, it did not receive an acknowledge from the remote slave(s).  
-
- Reset value: 0x0  
-
- Role of DW_apb_i2c: Master-Transmitter"]
-pub type ABRT_TXDATA_NOACK_R = crate::BitReader<ABRT_TXDATA_NOACK_A>;
 #[doc = "This field indicates the master-mode only bit. When the master receives an acknowledgement for the address, but when it sends data byte(s) following the address, it did not receive an acknowledge from the remote slave(s).  
 
  Reset value: 0x0  
@@ -164,6 +158,12 @@ impl From<ABRT_TXDATA_NOACK_A> for bool {
         variant as u8 != 0
     }
 }
+#[doc = "Field `ABRT_TXDATA_NOACK` reader - This field indicates the master-mode only bit. When the master receives an acknowledgement for the address, but when it sends data byte(s) following the address, it did not receive an acknowledge from the remote slave(s).  
+
+ Reset value: 0x0  
+
+ Role of DW_apb_i2c: Master-Transmitter"]
+pub type ABRT_TXDATA_NOACK_R = crate::BitReader<ABRT_TXDATA_NOACK_A>;
 impl ABRT_TXDATA_NOACK_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
@@ -184,12 +184,6 @@ impl ABRT_TXDATA_NOACK_R {
         *self == ABRT_TXDATA_NOACK_A::ABRT_TXDATA_NOACK_GENERATED
     }
 }
-#[doc = "Field `ABRT_GCALL_NOACK` reader - This field indicates that DW_apb_i2c in master mode has sent a General Call and no slave on the bus acknowledged the General Call.  
-
- Reset value: 0x0  
-
- Role of DW_apb_i2c: Master-Transmitter"]
-pub type ABRT_GCALL_NOACK_R = crate::BitReader<ABRT_GCALL_NOACK_A>;
 #[doc = "This field indicates that DW_apb_i2c in master mode has sent a General Call and no slave on the bus acknowledged the General Call.  
 
  Reset value: 0x0  
@@ -210,6 +204,12 @@ impl From<ABRT_GCALL_NOACK_A> for bool {
         variant as u8 != 0
     }
 }
+#[doc = "Field `ABRT_GCALL_NOACK` reader - This field indicates that DW_apb_i2c in master mode has sent a General Call and no slave on the bus acknowledged the General Call.  
+
+ Reset value: 0x0  
+
+ Role of DW_apb_i2c: Master-Transmitter"]
+pub type ABRT_GCALL_NOACK_R = crate::BitReader<ABRT_GCALL_NOACK_A>;
 impl ABRT_GCALL_NOACK_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
@@ -230,13 +230,6 @@ impl ABRT_GCALL_NOACK_R {
         *self == ABRT_GCALL_NOACK_A::ABRT_GCALL_NOACK_GENERATED
     }
 }
-#[doc = "Field `ABRT_GCALL_READ` reader - This field indicates that DW_apb_i2c in the master mode has sent a General Call but the user programmed the byte following the General Call to be a read from the bus (IC_DATA_CMD\\[9\\]
-is set to 1).  
-
- Reset value: 0x0  
-
- Role of DW_apb_i2c: Master-Transmitter"]
-pub type ABRT_GCALL_READ_R = crate::BitReader<ABRT_GCALL_READ_A>;
 #[doc = "This field indicates that DW_apb_i2c in the master mode has sent a General Call but the user programmed the byte following the General Call to be a read from the bus (IC_DATA_CMD\\[9\\]
 is set to 1).  
 
@@ -258,6 +251,13 @@ impl From<ABRT_GCALL_READ_A> for bool {
         variant as u8 != 0
     }
 }
+#[doc = "Field `ABRT_GCALL_READ` reader - This field indicates that DW_apb_i2c in the master mode has sent a General Call but the user programmed the byte following the General Call to be a read from the bus (IC_DATA_CMD\\[9\\]
+is set to 1).  
+
+ Reset value: 0x0  
+
+ Role of DW_apb_i2c: Master-Transmitter"]
+pub type ABRT_GCALL_READ_R = crate::BitReader<ABRT_GCALL_READ_A>;
 impl ABRT_GCALL_READ_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
@@ -278,12 +278,6 @@ impl ABRT_GCALL_READ_R {
         *self == ABRT_GCALL_READ_A::ABRT_GCALL_READ_GENERATED
     }
 }
-#[doc = "Field `ABRT_HS_ACKDET` reader - This field indicates that the Master is in High Speed mode and the High Speed Master code was acknowledged (wrong behavior).  
-
- Reset value: 0x0  
-
- Role of DW_apb_i2c: Master"]
-pub type ABRT_HS_ACKDET_R = crate::BitReader<ABRT_HS_ACKDET_A>;
 #[doc = "This field indicates that the Master is in High Speed mode and the High Speed Master code was acknowledged (wrong behavior).  
 
  Reset value: 0x0  
@@ -304,6 +298,12 @@ impl From<ABRT_HS_ACKDET_A> for bool {
         variant as u8 != 0
     }
 }
+#[doc = "Field `ABRT_HS_ACKDET` reader - This field indicates that the Master is in High Speed mode and the High Speed Master code was acknowledged (wrong behavior).  
+
+ Reset value: 0x0  
+
+ Role of DW_apb_i2c: Master"]
+pub type ABRT_HS_ACKDET_R = crate::BitReader<ABRT_HS_ACKDET_A>;
 impl ABRT_HS_ACKDET_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
@@ -324,12 +324,6 @@ impl ABRT_HS_ACKDET_R {
         *self == ABRT_HS_ACKDET_A::ABRT_HS_ACK_GENERATED
     }
 }
-#[doc = "Field `ABRT_SBYTE_ACKDET` reader - This field indicates that the Master has sent a START Byte and the START Byte was acknowledged (wrong behavior).  
-
- Reset value: 0x0  
-
- Role of DW_apb_i2c: Master"]
-pub type ABRT_SBYTE_ACKDET_R = crate::BitReader<ABRT_SBYTE_ACKDET_A>;
 #[doc = "This field indicates that the Master has sent a START Byte and the START Byte was acknowledged (wrong behavior).  
 
  Reset value: 0x0  
@@ -350,6 +344,12 @@ impl From<ABRT_SBYTE_ACKDET_A> for bool {
         variant as u8 != 0
     }
 }
+#[doc = "Field `ABRT_SBYTE_ACKDET` reader - This field indicates that the Master has sent a START Byte and the START Byte was acknowledged (wrong behavior).  
+
+ Reset value: 0x0  
+
+ Role of DW_apb_i2c: Master"]
+pub type ABRT_SBYTE_ACKDET_R = crate::BitReader<ABRT_SBYTE_ACKDET_A>;
 impl ABRT_SBYTE_ACKDET_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
@@ -370,12 +370,6 @@ impl ABRT_SBYTE_ACKDET_R {
         *self == ABRT_SBYTE_ACKDET_A::ABRT_SBYTE_ACKDET_GENERATED
     }
 }
-#[doc = "Field `ABRT_HS_NORSTRT` reader - This field indicates that the restart is disabled (IC_RESTART_EN bit (IC_CON\\[5\\]) =0) and the user is trying to use the master to transfer data in High Speed mode.  
-
- Reset value: 0x0  
-
- Role of DW_apb_i2c: Master-Transmitter or Master-Receiver"]
-pub type ABRT_HS_NORSTRT_R = crate::BitReader<ABRT_HS_NORSTRT_A>;
 #[doc = "This field indicates that the restart is disabled (IC_RESTART_EN bit (IC_CON\\[5\\]) =0) and the user is trying to use the master to transfer data in High Speed mode.  
 
  Reset value: 0x0  
@@ -396,6 +390,12 @@ impl From<ABRT_HS_NORSTRT_A> for bool {
         variant as u8 != 0
     }
 }
+#[doc = "Field `ABRT_HS_NORSTRT` reader - This field indicates that the restart is disabled (IC_RESTART_EN bit (IC_CON\\[5\\]) =0) and the user is trying to use the master to transfer data in High Speed mode.  
+
+ Reset value: 0x0  
+
+ Role of DW_apb_i2c: Master-Transmitter or Master-Receiver"]
+pub type ABRT_HS_NORSTRT_R = crate::BitReader<ABRT_HS_NORSTRT_A>;
 impl ABRT_HS_NORSTRT_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
@@ -416,12 +416,6 @@ impl ABRT_HS_NORSTRT_R {
         *self == ABRT_HS_NORSTRT_A::ABRT_HS_NORSTRT_GENERATED
     }
 }
-#[doc = "Field `ABRT_SBYTE_NORSTRT` reader - To clear Bit 9, the source of the ABRT_SBYTE_NORSTRT must be fixed first; restart must be enabled (IC_CON\\[5\\]=1), the SPECIAL bit must be cleared (IC_TAR\\[11\\]), or the GC_OR_START bit must be cleared (IC_TAR\\[10\\]). Once the source of the ABRT_SBYTE_NORSTRT is fixed, then this bit can be cleared in the same manner as other bits in this register. If the source of the ABRT_SBYTE_NORSTRT is not fixed before attempting to clear this bit, bit 9 clears for one cycle and then gets reasserted. When this field is set to 1, the restart is disabled (IC_RESTART_EN bit (IC_CON\\[5\\]) =0) and the user is trying to send a START Byte.  
-
- Reset value: 0x0  
-
- Role of DW_apb_i2c: Master"]
-pub type ABRT_SBYTE_NORSTRT_R = crate::BitReader<ABRT_SBYTE_NORSTRT_A>;
 #[doc = "To clear Bit 9, the source of the ABRT_SBYTE_NORSTRT must be fixed first; restart must be enabled (IC_CON\\[5\\]=1), the SPECIAL bit must be cleared (IC_TAR\\[11\\]), or the GC_OR_START bit must be cleared (IC_TAR\\[10\\]). Once the source of the ABRT_SBYTE_NORSTRT is fixed, then this bit can be cleared in the same manner as other bits in this register. If the source of the ABRT_SBYTE_NORSTRT is not fixed before attempting to clear this bit, bit 9 clears for one cycle and then gets reasserted. When this field is set to 1, the restart is disabled (IC_RESTART_EN bit (IC_CON\\[5\\]) =0) and the user is trying to send a START Byte.  
 
  Reset value: 0x0  
@@ -442,6 +436,12 @@ impl From<ABRT_SBYTE_NORSTRT_A> for bool {
         variant as u8 != 0
     }
 }
+#[doc = "Field `ABRT_SBYTE_NORSTRT` reader - To clear Bit 9, the source of the ABRT_SBYTE_NORSTRT must be fixed first; restart must be enabled (IC_CON\\[5\\]=1), the SPECIAL bit must be cleared (IC_TAR\\[11\\]), or the GC_OR_START bit must be cleared (IC_TAR\\[10\\]). Once the source of the ABRT_SBYTE_NORSTRT is fixed, then this bit can be cleared in the same manner as other bits in this register. If the source of the ABRT_SBYTE_NORSTRT is not fixed before attempting to clear this bit, bit 9 clears for one cycle and then gets reasserted. When this field is set to 1, the restart is disabled (IC_RESTART_EN bit (IC_CON\\[5\\]) =0) and the user is trying to send a START Byte.  
+
+ Reset value: 0x0  
+
+ Role of DW_apb_i2c: Master"]
+pub type ABRT_SBYTE_NORSTRT_R = crate::BitReader<ABRT_SBYTE_NORSTRT_A>;
 impl ABRT_SBYTE_NORSTRT_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
@@ -462,12 +462,6 @@ impl ABRT_SBYTE_NORSTRT_R {
         *self == ABRT_SBYTE_NORSTRT_A::ABRT_SBYTE_NORSTRT_GENERATED
     }
 }
-#[doc = "Field `ABRT_10B_RD_NORSTRT` reader - This field indicates that the restart is disabled (IC_RESTART_EN bit (IC_CON\\[5\\]) =0) and the master sends a read command in 10-bit addressing mode.  
-
- Reset value: 0x0  
-
- Role of DW_apb_i2c: Master-Receiver"]
-pub type ABRT_10B_RD_NORSTRT_R = crate::BitReader<ABRT_10B_RD_NORSTRT_A>;
 #[doc = "This field indicates that the restart is disabled (IC_RESTART_EN bit (IC_CON\\[5\\]) =0) and the master sends a read command in 10-bit addressing mode.  
 
  Reset value: 0x0  
@@ -488,6 +482,12 @@ impl From<ABRT_10B_RD_NORSTRT_A> for bool {
         variant as u8 != 0
     }
 }
+#[doc = "Field `ABRT_10B_RD_NORSTRT` reader - This field indicates that the restart is disabled (IC_RESTART_EN bit (IC_CON\\[5\\]) =0) and the master sends a read command in 10-bit addressing mode.  
+
+ Reset value: 0x0  
+
+ Role of DW_apb_i2c: Master-Receiver"]
+pub type ABRT_10B_RD_NORSTRT_R = crate::BitReader<ABRT_10B_RD_NORSTRT_A>;
 impl ABRT_10B_RD_NORSTRT_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
@@ -508,12 +508,6 @@ impl ABRT_10B_RD_NORSTRT_R {
         *self == ABRT_10B_RD_NORSTRT_A::ABRT_10B_RD_GENERATED
     }
 }
-#[doc = "Field `ABRT_MASTER_DIS` reader - This field indicates that the User tries to initiate a Master operation with the Master mode disabled.  
-
- Reset value: 0x0  
-
- Role of DW_apb_i2c: Master-Transmitter or Master-Receiver"]
-pub type ABRT_MASTER_DIS_R = crate::BitReader<ABRT_MASTER_DIS_A>;
 #[doc = "This field indicates that the User tries to initiate a Master operation with the Master mode disabled.  
 
  Reset value: 0x0  
@@ -534,6 +528,12 @@ impl From<ABRT_MASTER_DIS_A> for bool {
         variant as u8 != 0
     }
 }
+#[doc = "Field `ABRT_MASTER_DIS` reader - This field indicates that the User tries to initiate a Master operation with the Master mode disabled.  
+
+ Reset value: 0x0  
+
+ Role of DW_apb_i2c: Master-Transmitter or Master-Receiver"]
+pub type ABRT_MASTER_DIS_R = crate::BitReader<ABRT_MASTER_DIS_A>;
 impl ABRT_MASTER_DIS_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
@@ -554,13 +554,6 @@ impl ABRT_MASTER_DIS_R {
         *self == ABRT_MASTER_DIS_A::ABRT_MASTER_DIS_GENERATED
     }
 }
-#[doc = "Field `ARB_LOST` reader - This field specifies that the Master has lost arbitration, or if IC_TX_ABRT_SOURCE\\[14\\]
-is also set, then the slave transmitter has lost arbitration.  
-
- Reset value: 0x0  
-
- Role of DW_apb_i2c: Master-Transmitter or Slave-Transmitter"]
-pub type ARB_LOST_R = crate::BitReader<ARB_LOST_A>;
 #[doc = "This field specifies that the Master has lost arbitration, or if IC_TX_ABRT_SOURCE\\[14\\]
 is also set, then the slave transmitter has lost arbitration.  
 
@@ -582,6 +575,13 @@ impl From<ARB_LOST_A> for bool {
         variant as u8 != 0
     }
 }
+#[doc = "Field `ARB_LOST` reader - This field specifies that the Master has lost arbitration, or if IC_TX_ABRT_SOURCE\\[14\\]
+is also set, then the slave transmitter has lost arbitration.  
+
+ Reset value: 0x0  
+
+ Role of DW_apb_i2c: Master-Transmitter or Slave-Transmitter"]
+pub type ARB_LOST_R = crate::BitReader<ARB_LOST_A>;
 impl ARB_LOST_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
@@ -602,12 +602,6 @@ impl ARB_LOST_R {
         *self == ARB_LOST_A::ABRT_LOST_GENERATED
     }
 }
-#[doc = "Field `ABRT_SLVFLUSH_TXFIFO` reader - This field specifies that the Slave has received a read command and some data exists in the TX FIFO, so the slave issues a TX_ABRT interrupt to flush old data in TX FIFO.  
-
- Reset value: 0x0  
-
- Role of DW_apb_i2c: Slave-Transmitter"]
-pub type ABRT_SLVFLUSH_TXFIFO_R = crate::BitReader<ABRT_SLVFLUSH_TXFIFO_A>;
 #[doc = "This field specifies that the Slave has received a read command and some data exists in the TX FIFO, so the slave issues a TX_ABRT interrupt to flush old data in TX FIFO.  
 
  Reset value: 0x0  
@@ -628,6 +622,12 @@ impl From<ABRT_SLVFLUSH_TXFIFO_A> for bool {
         variant as u8 != 0
     }
 }
+#[doc = "Field `ABRT_SLVFLUSH_TXFIFO` reader - This field specifies that the Slave has received a read command and some data exists in the TX FIFO, so the slave issues a TX_ABRT interrupt to flush old data in TX FIFO.  
+
+ Reset value: 0x0  
+
+ Role of DW_apb_i2c: Slave-Transmitter"]
+pub type ABRT_SLVFLUSH_TXFIFO_R = crate::BitReader<ABRT_SLVFLUSH_TXFIFO_A>;
 impl ABRT_SLVFLUSH_TXFIFO_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
@@ -648,13 +648,6 @@ impl ABRT_SLVFLUSH_TXFIFO_R {
         *self == ABRT_SLVFLUSH_TXFIFO_A::ABRT_SLVFLUSH_TXFIFO_GENERATED
     }
 }
-#[doc = "Field `ABRT_SLV_ARBLOST` reader - This field indicates that a Slave has lost the bus while transmitting data to a remote master. IC_TX_ABRT_SOURCE\\[12\\]
-is set at the same time. Note: Even though the slave never 'owns' the bus, something could go wrong on the bus. This is a fail safe check. For instance, during a data transmission at the low-to-high transition of SCL, if what is on the data bus is not what is supposed to be transmitted, then DW_apb_i2c no longer own the bus.  
-
- Reset value: 0x0  
-
- Role of DW_apb_i2c: Slave-Transmitter"]
-pub type ABRT_SLV_ARBLOST_R = crate::BitReader<ABRT_SLV_ARBLOST_A>;
 #[doc = "This field indicates that a Slave has lost the bus while transmitting data to a remote master. IC_TX_ABRT_SOURCE\\[12\\]
 is set at the same time. Note: Even though the slave never 'owns' the bus, something could go wrong on the bus. This is a fail safe check. For instance, during a data transmission at the low-to-high transition of SCL, if what is on the data bus is not what is supposed to be transmitted, then DW_apb_i2c no longer own the bus.  
 
@@ -676,6 +669,13 @@ impl From<ABRT_SLV_ARBLOST_A> for bool {
         variant as u8 != 0
     }
 }
+#[doc = "Field `ABRT_SLV_ARBLOST` reader - This field indicates that a Slave has lost the bus while transmitting data to a remote master. IC_TX_ABRT_SOURCE\\[12\\]
+is set at the same time. Note: Even though the slave never 'owns' the bus, something could go wrong on the bus. This is a fail safe check. For instance, during a data transmission at the low-to-high transition of SCL, if what is on the data bus is not what is supposed to be transmitted, then DW_apb_i2c no longer own the bus.  
+
+ Reset value: 0x0  
+
+ Role of DW_apb_i2c: Slave-Transmitter"]
+pub type ABRT_SLV_ARBLOST_R = crate::BitReader<ABRT_SLV_ARBLOST_A>;
 impl ABRT_SLV_ARBLOST_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
@@ -696,12 +696,6 @@ impl ABRT_SLV_ARBLOST_R {
         *self == ABRT_SLV_ARBLOST_A::ABRT_SLV_ARBLOST_GENERATED
     }
 }
-#[doc = "Field `ABRT_SLVRD_INTX` reader - 1: When the processor side responds to a slave mode request for data to be transmitted to a remote master and user writes a 1 in CMD (bit 8) of IC_DATA_CMD register.  
-
- Reset value: 0x0  
-
- Role of DW_apb_i2c: Slave-Transmitter"]
-pub type ABRT_SLVRD_INTX_R = crate::BitReader<ABRT_SLVRD_INTX_A>;
 #[doc = "1: When the processor side responds to a slave mode request for data to be transmitted to a remote master and user writes a 1 in CMD (bit 8) of IC_DATA_CMD register.  
 
  Reset value: 0x0  
@@ -722,6 +716,12 @@ impl From<ABRT_SLVRD_INTX_A> for bool {
         variant as u8 != 0
     }
 }
+#[doc = "Field `ABRT_SLVRD_INTX` reader - 1: When the processor side responds to a slave mode request for data to be transmitted to a remote master and user writes a 1 in CMD (bit 8) of IC_DATA_CMD register.  
+
+ Reset value: 0x0  
+
+ Role of DW_apb_i2c: Slave-Transmitter"]
+pub type ABRT_SLVRD_INTX_R = crate::BitReader<ABRT_SLVRD_INTX_A>;
 impl ABRT_SLVRD_INTX_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
@@ -742,12 +742,6 @@ impl ABRT_SLVRD_INTX_R {
         *self == ABRT_SLVRD_INTX_A::ABRT_SLVRD_INTX_GENERATED
     }
 }
-#[doc = "Field `ABRT_USER_ABRT` reader - This is a master-mode-only bit. Master has detected the transfer abort (IC_ENABLE\\[1\\])  
-
- Reset value: 0x0  
-
- Role of DW_apb_i2c: Master-Transmitter"]
-pub type ABRT_USER_ABRT_R = crate::BitReader<ABRT_USER_ABRT_A>;
 #[doc = "This is a master-mode-only bit. Master has detected the transfer abort (IC_ENABLE\\[1\\])  
 
  Reset value: 0x0  
@@ -768,6 +762,12 @@ impl From<ABRT_USER_ABRT_A> for bool {
         variant as u8 != 0
     }
 }
+#[doc = "Field `ABRT_USER_ABRT` reader - This is a master-mode-only bit. Master has detected the transfer abort (IC_ENABLE\\[1\\])  
+
+ Reset value: 0x0  
+
+ Role of DW_apb_i2c: Master-Transmitter"]
+pub type ABRT_USER_ABRT_R = crate::BitReader<ABRT_USER_ABRT_A>;
 impl ABRT_USER_ABRT_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]

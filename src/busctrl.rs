@@ -1,5 +1,5 @@
-#[doc = r"Register block"]
 #[repr(C)]
+#[doc = "Register block"]
 pub struct RegisterBlock {
     bus_priority: BUS_PRIORITY,
     bus_priority_ack: BUS_PRIORITY_ACK,

@@ -288,16 +288,6 @@ impl W {
     pub fn tx_diffmode(&mut self) -> TX_DIFFMODE_W<USBPHY_DIRECT_SPEC> {
         TX_DIFFMODE_W::new(self, 15)
     }
-    #[doc = r" Writes raw bits to the register."]
-    #[doc = r""]
-    #[doc = r" # Safety"]
-    #[doc = r""]
-    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.bits = bits;
-        self
-    }
 }
 #[doc = "This register allows for direct control of the USB phy. Use in conjunction with usbphy_direct_override register to enable each override bit.  
 
@@ -310,6 +300,7 @@ impl crate::RegisterSpec for USBPHY_DIRECT_SPEC {
 impl crate::Readable for USBPHY_DIRECT_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`usbphy_direct::W`](W) writer structure"]
 impl crate::Writable for USBPHY_DIRECT_SPEC {
+    type Safety = crate::Unsafe;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }

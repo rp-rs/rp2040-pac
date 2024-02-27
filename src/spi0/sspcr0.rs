@@ -6,8 +6,6 @@ pub type W = crate::W<SSPCR0_SPEC>;
 pub type DSS_R = crate::FieldReader;
 #[doc = "Field `DSS` writer - Data Size Select: 0000 Reserved, undefined operation. 0001 Reserved, undefined operation. 0010 Reserved, undefined operation. 0011 4-bit data. 0100 5-bit data. 0101 6-bit data. 0110 7-bit data. 0111 8-bit data. 1000 9-bit data. 1001 10-bit data. 1010 11-bit data. 1011 12-bit data. 1100 13-bit data. 1101 14-bit data. 1110 15-bit data. 1111 16-bit data."]
 pub type DSS_W<'a, REG> = crate::FieldWriter<'a, REG, 4>;
-#[doc = "Field `FRF` reader - Frame format."]
-pub type FRF_R = crate::FieldReader<FRF_A>;
 #[doc = "Frame format.  
 
 Value on reset: 0"]
@@ -30,6 +28,8 @@ impl From<FRF_A> for u8 {
 impl crate::FieldSpec for FRF_A {
     type Ux = u8;
 }
+#[doc = "Field `FRF` reader - Frame format."]
+pub type FRF_R = crate::FieldReader<FRF_A>;
 impl FRF_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
@@ -150,16 +150,6 @@ impl W {
     pub fn scr(&mut self) -> SCR_W<SSPCR0_SPEC> {
         SCR_W::new(self, 8)
     }
-    #[doc = r" Writes raw bits to the register."]
-    #[doc = r""]
-    #[doc = r" # Safety"]
-    #[doc = r""]
-    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.bits = bits;
-        self
-    }
 }
 #[doc = "Control register 0, SSPCR0 on page 3-4  
 
@@ -172,6 +162,7 @@ impl crate::RegisterSpec for SSPCR0_SPEC {
 impl crate::Readable for SSPCR0_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`sspcr0::W`](W) writer structure"]
 impl crate::Writable for SSPCR0_SPEC {
+    type Safety = crate::Unsafe;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }

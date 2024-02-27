@@ -4,8 +4,6 @@ pub type R = crate::R<SIE_STATUS_SPEC>;
 pub type W = crate::W<SIE_STATUS_SPEC>;
 #[doc = "Field `VBUS_DETECTED` reader - Device: VBUS Detected"]
 pub type VBUS_DETECTED_R = crate::BitReader;
-#[doc = "Field `LINE_STATE` reader - USB bus line state"]
-pub type LINE_STATE_R = crate::FieldReader<LINE_STATE_A>;
 #[doc = "USB bus line state  
 
 Value on reset: 0"]
@@ -30,6 +28,8 @@ impl From<LINE_STATE_A> for u8 {
 impl crate::FieldSpec for LINE_STATE_A {
     type Ux = u8;
 }
+#[doc = "Field `LINE_STATE` reader - USB bus line state"]
+pub type LINE_STATE_R = crate::FieldReader<LINE_STATE_A>;
 impl LINE_STATE_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
@@ -372,16 +372,6 @@ impl W {
     pub fn data_seq_error(&mut self) -> DATA_SEQ_ERROR_W<SIE_STATUS_SPEC> {
         DATA_SEQ_ERROR_W::new(self, 31)
     }
-    #[doc = r" Writes raw bits to the register."]
-    #[doc = r""]
-    #[doc = r" # Safety"]
-    #[doc = r""]
-    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.bits = bits;
-        self
-    }
 }
 #[doc = "SIE status register  
 
@@ -394,6 +384,7 @@ impl crate::RegisterSpec for SIE_STATUS_SPEC {
 impl crate::Readable for SIE_STATUS_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`sie_status::W`](W) writer structure"]
 impl crate::Writable for SIE_STATUS_SPEC {
+    type Safety = crate::Unsafe;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0xff0f_0b10;
 }

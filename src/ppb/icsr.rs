@@ -232,16 +232,6 @@ impl W {
     pub fn nmipendset(&mut self) -> NMIPENDSET_W<ICSR_SPEC> {
         NMIPENDSET_W::new(self, 31)
     }
-    #[doc = r" Writes raw bits to the register."]
-    #[doc = r""]
-    #[doc = r" # Safety"]
-    #[doc = r""]
-    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.bits = bits;
-        self
-    }
 }
 #[doc = "Use the Interrupt Control State Register to set a pending Non-Maskable Interrupt (NMI), set or clear a pending PendSV, set or clear a pending SysTick, check for pending exceptions, check the vector number of the highest priority pended exception, check the vector number of the active exception.  
 
@@ -254,6 +244,7 @@ impl crate::RegisterSpec for ICSR_SPEC {
 impl crate::Readable for ICSR_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`icsr::W`](W) writer structure"]
 impl crate::Writable for ICSR_SPEC {
+    type Safety = crate::Unsafe;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }

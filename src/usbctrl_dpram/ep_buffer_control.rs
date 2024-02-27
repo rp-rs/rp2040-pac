@@ -38,9 +38,6 @@ pub type LENGTH_1_W<'a, REG> = crate::FieldWriter<'a, REG, 10, u16>;
 pub type AVAILABLE_1_R = crate::BitReader;
 #[doc = "Field `AVAILABLE_1` writer - Buffer 1 is available. This bit is set to indicate the buffer can be used by the controller. The controller clears the available bit when writing the status back."]
 pub type AVAILABLE_1_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `DOUBLE_BUFFER_ISO_OFFSET` reader - The number of bytes buffer 1 is offset from buffer 0 in Isochronous mode. Only valid in double buffered mode for an Isochronous endpoint.  
- For a non Isochronous endpoint the offset is always 64 bytes."]
-pub type DOUBLE_BUFFER_ISO_OFFSET_R = crate::FieldReader<DOUBLE_BUFFER_ISO_OFFSET_A>;
 #[doc = "The number of bytes buffer 1 is offset from buffer 0 in Isochronous mode. Only valid in double buffered mode for an Isochronous endpoint.  
  For a non Isochronous endpoint the offset is always 64 bytes.  
 
@@ -66,6 +63,9 @@ impl From<DOUBLE_BUFFER_ISO_OFFSET_A> for u8 {
 impl crate::FieldSpec for DOUBLE_BUFFER_ISO_OFFSET_A {
     type Ux = u8;
 }
+#[doc = "Field `DOUBLE_BUFFER_ISO_OFFSET` reader - The number of bytes buffer 1 is offset from buffer 0 in Isochronous mode. Only valid in double buffered mode for an Isochronous endpoint.  
+ For a non Isochronous endpoint the offset is always 64 bytes."]
+pub type DOUBLE_BUFFER_ISO_OFFSET_R = crate::FieldReader<DOUBLE_BUFFER_ISO_OFFSET_A>;
 impl DOUBLE_BUFFER_ISO_OFFSET_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
@@ -291,16 +291,6 @@ impl W {
     pub fn full_1(&mut self) -> FULL_1_W<EP_BUFFER_CONTROL_SPEC> {
         FULL_1_W::new(self, 31)
     }
-    #[doc = r" Writes raw bits to the register."]
-    #[doc = r""]
-    #[doc = r" # Safety"]
-    #[doc = r""]
-    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.bits = bits;
-        self
-    }
 }
 #[doc = "-  
 
@@ -313,6 +303,7 @@ impl crate::RegisterSpec for EP_BUFFER_CONTROL_SPEC {
 impl crate::Readable for EP_BUFFER_CONTROL_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`ep_buffer_control::W`](W) writer structure"]
 impl crate::Writable for EP_BUFFER_CONTROL_SPEC {
+    type Safety = crate::Unsafe;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }

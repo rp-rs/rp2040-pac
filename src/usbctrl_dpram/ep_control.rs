@@ -18,8 +18,6 @@ pub type HOST_POLL_INTERVAL_W<'a, REG> = crate::FieldWriter<'a, REG, 10, u16>;
 pub type INTERRUPT_ON_STALL_R = crate::BitReader;
 #[doc = "Field `INTERRUPT_ON_STALL` writer - Trigger an interrupt if a STALL is sent. Intended for debug only."]
 pub type INTERRUPT_ON_STALL_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `ENDPOINT_TYPE` reader - "]
-pub type ENDPOINT_TYPE_R = crate::FieldReader<ENDPOINT_TYPE_A>;
 #[doc = "  
 
 Value on reset: 0"]
@@ -44,6 +42,8 @@ impl From<ENDPOINT_TYPE_A> for u8 {
 impl crate::FieldSpec for ENDPOINT_TYPE_A {
     type Ux = u8;
 }
+#[doc = "Field `ENDPOINT_TYPE` reader - "]
+pub type ENDPOINT_TYPE_R = crate::FieldReader<ENDPOINT_TYPE_A>;
 impl ENDPOINT_TYPE_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
@@ -223,16 +223,6 @@ impl W {
     pub fn enable(&mut self) -> ENABLE_W<EP_CONTROL_SPEC> {
         ENABLE_W::new(self, 31)
     }
-    #[doc = r" Writes raw bits to the register."]
-    #[doc = r""]
-    #[doc = r" # Safety"]
-    #[doc = r""]
-    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.bits = bits;
-        self
-    }
 }
 #[doc = "-  
 
@@ -245,6 +235,7 @@ impl crate::RegisterSpec for EP_CONTROL_SPEC {
 impl crate::Readable for EP_CONTROL_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`ep_control::W`](W) writer structure"]
 impl crate::Writable for EP_CONTROL_SPEC {
+    type Safety = crate::Unsafe;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }

@@ -380,16 +380,6 @@ impl W {
     pub fn usbctrl(&mut self) -> USBCTRL_W<RESET_SPEC> {
         USBCTRL_W::new(self, 24)
     }
-    #[doc = r" Writes raw bits to the register."]
-    #[doc = r""]
-    #[doc = r" # Safety"]
-    #[doc = r""]
-    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.bits = bits;
-        self
-    }
 }
 #[doc = "Reset control. If a bit is set it means the peripheral is in reset. 0 means the peripheral's reset is deasserted.  
 
@@ -402,6 +392,7 @@ impl crate::RegisterSpec for RESET_SPEC {
 impl crate::Readable for RESET_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`reset::W`](W) writer structure"]
 impl crate::Writable for RESET_SPEC {
+    type Safety = crate::Unsafe;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }

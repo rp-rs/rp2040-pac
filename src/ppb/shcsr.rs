@@ -20,16 +20,6 @@ impl W {
     pub fn svcallpended(&mut self) -> SVCALLPENDED_W<SHCSR_SPEC> {
         SVCALLPENDED_W::new(self, 15)
     }
-    #[doc = r" Writes raw bits to the register."]
-    #[doc = r""]
-    #[doc = r" # Safety"]
-    #[doc = r""]
-    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.bits = bits;
-        self
-    }
 }
 #[doc = "Use the System Handler Control and State Register to determine or clear the pending status of SVCall.  
 
@@ -42,6 +32,7 @@ impl crate::RegisterSpec for SHCSR_SPEC {
 impl crate::Readable for SHCSR_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`shcsr::W`](W) writer structure"]
 impl crate::Writable for SHCSR_SPEC {
+    type Safety = crate::Unsafe;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }

@@ -260,16 +260,6 @@ impl W {
     pub fn proc1(&mut self) -> PROC1_W<WDSEL_SPEC> {
         PROC1_W::new(self, 16)
     }
-    #[doc = r" Writes raw bits to the register."]
-    #[doc = r""]
-    #[doc = r" # Safety"]
-    #[doc = r""]
-    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.bits = bits;
-        self
-    }
 }
 #[doc = "Set to 1 if this peripheral should be reset when the watchdog fires.  
 
@@ -282,6 +272,7 @@ impl crate::RegisterSpec for WDSEL_SPEC {
 impl crate::Readable for WDSEL_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`wdsel::W`](W) writer structure"]
 impl crate::Writable for WDSEL_SPEC {
+    type Safety = crate::Unsafe;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }

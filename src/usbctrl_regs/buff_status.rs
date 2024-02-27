@@ -485,16 +485,6 @@ impl W {
     pub fn ep15_out(&mut self) -> EP15_OUT_W<BUFF_STATUS_SPEC> {
         EP15_OUT_W::new(self, 31)
     }
-    #[doc = r" Writes raw bits to the register."]
-    #[doc = r""]
-    #[doc = r" # Safety"]
-    #[doc = r""]
-    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.bits = bits;
-        self
-    }
 }
 #[doc = "Buffer status register. A bit set here indicates that a buffer has completed on the endpoint (if the buffer interrupt is enabled). It is possible for 2 buffers to be completed, so clearing the buffer status bit may instantly re set it on the next clock cycle.  
 
@@ -507,6 +497,7 @@ impl crate::RegisterSpec for BUFF_STATUS_SPEC {
 impl crate::Readable for BUFF_STATUS_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`buff_status::W`](W) writer structure"]
 impl crate::Writable for BUFF_STATUS_SPEC {
+    type Safety = crate::Unsafe;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0xffff_ffff;
 }

@@ -20,16 +20,6 @@ impl W {
     pub fn armed(&mut self) -> ARMED_W<ARMED_SPEC> {
         ARMED_W::new(self, 0)
     }
-    #[doc = r" Writes raw bits to the register."]
-    #[doc = r""]
-    #[doc = r" # Safety"]
-    #[doc = r""]
-    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.bits = bits;
-        self
-    }
 }
 #[doc = "Indicates the armed/disarmed status of each alarm.  
  A write to the corresponding ALARMx register arms the alarm.  
@@ -45,6 +35,7 @@ impl crate::RegisterSpec for ARMED_SPEC {
 impl crate::Readable for ARMED_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`armed::W`](W) writer structure"]
 impl crate::Writable for ARMED_SPEC {
+    type Safety = crate::Unsafe;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0x0f;
 }

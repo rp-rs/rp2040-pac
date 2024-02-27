@@ -12,18 +12,7 @@ impl core::fmt::Debug for crate::generic::Reg<CTR_HIT_SPEC> {
         core::fmt::Debug::fmt(&self.read(), f)
     }
 }
-impl W {
-    #[doc = r" Writes raw bits to the register."]
-    #[doc = r""]
-    #[doc = r" # Safety"]
-    #[doc = r""]
-    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.bits = bits;
-        self
-    }
-}
+impl W {}
 #[doc = "Cache Hit counter  
  A 32 bit saturating counter that increments upon each cache hit,  
  i.e. when an XIP access is serviced directly from cached data.  
@@ -38,6 +27,7 @@ impl crate::RegisterSpec for CTR_HIT_SPEC {
 impl crate::Readable for CTR_HIT_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`ctr_hit::W`](W) writer structure"]
 impl crate::Writable for CTR_HIT_SPEC {
+    type Safety = crate::Unsafe;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }

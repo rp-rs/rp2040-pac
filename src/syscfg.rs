@@ -1,5 +1,5 @@
-#[doc = r"Register block"]
 #[repr(C)]
+#[doc = "Register block"]
 pub struct RegisterBlock {
     proc0_nmi_mask: PROC0_NMI_MASK,
     proc1_nmi_mask: PROC1_NMI_MASK,

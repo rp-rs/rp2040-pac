@@ -49,16 +49,6 @@ impl W {
     pub fn psm_restart_flag(&mut self) -> PSM_RESTART_FLAG_W<CHIP_RESET_SPEC> {
         PSM_RESTART_FLAG_W::new(self, 24)
     }
-    #[doc = r" Writes raw bits to the register."]
-    #[doc = r""]
-    #[doc = r" # Safety"]
-    #[doc = r""]
-    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.bits = bits;
-        self
-    }
 }
 #[doc = "Chip reset control and status  
 
@@ -71,6 +61,7 @@ impl crate::RegisterSpec for CHIP_RESET_SPEC {
 impl crate::Readable for CHIP_RESET_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`chip_reset::W`](W) writer structure"]
 impl crate::Writable for CHIP_RESET_SPEC {
+    type Safety = crate::Unsafe;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0x0100_0000;
 }

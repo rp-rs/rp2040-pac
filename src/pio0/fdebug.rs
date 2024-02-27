@@ -65,16 +65,6 @@ impl W {
     pub fn txstall(&mut self) -> TXSTALL_W<FDEBUG_SPEC> {
         TXSTALL_W::new(self, 24)
     }
-    #[doc = r" Writes raw bits to the register."]
-    #[doc = r""]
-    #[doc = r" # Safety"]
-    #[doc = r""]
-    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.bits = bits;
-        self
-    }
 }
 #[doc = "FIFO debug register  
 
@@ -87,6 +77,7 @@ impl crate::RegisterSpec for FDEBUG_SPEC {
 impl crate::Readable for FDEBUG_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`fdebug::W`](W) writer structure"]
 impl crate::Writable for FDEBUG_SPEC {
+    type Safety = crate::Unsafe;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0x0f0f_0f0f;
 }

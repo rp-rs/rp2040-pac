@@ -35,16 +35,6 @@ impl W {
     pub fn ep0_out(&mut self) -> EP0_OUT_W<EP_STALL_ARM_SPEC> {
         EP0_OUT_W::new(self, 1)
     }
-    #[doc = r" Writes raw bits to the register."]
-    #[doc = r""]
-    #[doc = r" # Safety"]
-    #[doc = r""]
-    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.bits = bits;
-        self
-    }
 }
 #[doc = "Device: this bit must be set in conjunction with the `STALL` bit in the buffer control register to send a STALL on EP0. The device controller clears these bits when a SETUP packet is received because the USB spec requires that a STALL condition is cleared when a SETUP packet is received.  
 
@@ -57,6 +47,7 @@ impl crate::RegisterSpec for EP_STALL_ARM_SPEC {
 impl crate::Readable for EP_STALL_ARM_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`ep_stall_arm::W`](W) writer structure"]
 impl crate::Writable for EP_STALL_ARM_SPEC {
+    type Safety = crate::Unsafe;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }

@@ -5,7 +5,7 @@ SVDTOOLS="${SVDTOOLS:-svdtools}"
 
 set -ex
 
-cargo install --version 0.31.5 svd2rust
+cargo install --version 0.32.0 svd2rust
 cargo install --version 0.11.1  form
 rustup component add rustfmt
 if [ "$SVDTOOLS" == "svdtools" ]; then
@@ -25,7 +25,7 @@ fi
 rm -rf src
 mkdir src
 
-svd2rust -i svd/rp2040.svd.patched --reexport-core-peripherals --reexport-interrupt
+svd2rust -i svd/rp2040.svd.patched --reexport-core-peripherals --reexport-interrupt --ident-formats-theme legacy
 
 form -i lib.rs -o src
 rm lib.rs

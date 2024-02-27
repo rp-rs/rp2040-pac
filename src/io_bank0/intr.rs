@@ -357,16 +357,6 @@ impl W {
     pub fn gpio7_edge_high(&mut self) -> GPIO7_EDGE_HIGH_W<INTR_SPEC> {
         GPIO7_EDGE_HIGH_W::new(self, 31)
     }
-    #[doc = r" Writes raw bits to the register."]
-    #[doc = r""]
-    #[doc = r" # Safety"]
-    #[doc = r""]
-    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.bits = bits;
-        self
-    }
 }
 #[doc = "Raw Interrupts  
 
@@ -379,6 +369,7 @@ impl crate::RegisterSpec for INTR_SPEC {
 impl crate::Readable for INTR_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`intr::W`](W) writer structure"]
 impl crate::Writable for INTR_SPEC {
+    type Safety = crate::Unsafe;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0xcccc_cccc;
 }
