@@ -25,7 +25,7 @@ impl R {
 }
 #[doc = "Debug RAF, WAF, TDF levels  
 
-You can [`read`](crate::generic::Reg::read) this register and get [`fifo_levels::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+You can [`read`](crate::Reg::read) this register and get [`fifo_levels::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct FIFO_LEVELS_SPEC;
 impl crate::RegisterSpec for FIFO_LEVELS_SPEC {
     type Ux = u32;

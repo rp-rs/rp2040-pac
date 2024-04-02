@@ -88,7 +88,7 @@ impl R {
 }
 #[doc = "Interrupt status after masking &amp; forcing for irq0  
 
-You can [`read`](crate::generic::Reg::read) this register and get [`irq_ints::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+You can [`read`](crate::Reg::read) this register and get [`irq_ints::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct IRQ_INTS_SPEC;
 impl crate::RegisterSpec for IRQ_INTS_SPEC {
     type Ux = u32;

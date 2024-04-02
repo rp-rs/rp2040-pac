@@ -643,7 +643,7 @@ impl R {
 
  Each bit in this register has a corresponding mask bit in the IC_INTR_MASK register. These bits are cleared by reading the matching interrupt clear register. The unmasked raw versions of these bits are available in the IC_RAW_INTR_STAT register.  
 
-You can [`read`](crate::generic::Reg::read) this register and get [`ic_intr_stat::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+You can [`read`](crate::Reg::read) this register and get [`ic_intr_stat::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct IC_INTR_STAT_SPEC;
 impl crate::RegisterSpec for IC_INTR_STAT_SPEC {
     type Ux = u32;

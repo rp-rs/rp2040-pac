@@ -79,7 +79,7 @@ impl RegisterBlock {
 }
 #[doc = "CLKDIV_M1 (rw) register accessor: Divider minus 1 for the 1 second counter. Safe to change the value when RTC is not enabled.  
 
-You can [`read`](crate::generic::Reg::read) this register and get [`clkdiv_m1::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`clkdiv_m1::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+You can [`read`](crate::Reg::read) this register and get [`clkdiv_m1::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`clkdiv_m1::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
 
 For information about available fields see [`mod@clkdiv_m1`]
 module"]
@@ -88,7 +88,7 @@ pub type CLKDIV_M1 = crate::Reg<clkdiv_m1::CLKDIV_M1_SPEC>;
 pub mod clkdiv_m1;
 #[doc = "SETUP_0 (rw) register accessor: RTC setup register 0  
 
-You can [`read`](crate::generic::Reg::read) this register and get [`setup_0::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`setup_0::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+You can [`read`](crate::Reg::read) this register and get [`setup_0::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`setup_0::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
 
 For information about available fields see [`mod@setup_0`]
 module"]
@@ -97,7 +97,7 @@ pub type SETUP_0 = crate::Reg<setup_0::SETUP_0_SPEC>;
 pub mod setup_0;
 #[doc = "SETUP_1 (rw) register accessor: RTC setup register 1  
 
-You can [`read`](crate::generic::Reg::read) this register and get [`setup_1::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`setup_1::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+You can [`read`](crate::Reg::read) this register and get [`setup_1::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`setup_1::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
 
 For information about available fields see [`mod@setup_1`]
 module"]
@@ -106,7 +106,7 @@ pub type SETUP_1 = crate::Reg<setup_1::SETUP_1_SPEC>;
 pub mod setup_1;
 #[doc = "CTRL (rw) register accessor: RTC Control and status  
 
-You can [`read`](crate::generic::Reg::read) this register and get [`ctrl::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`ctrl::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+You can [`read`](crate::Reg::read) this register and get [`ctrl::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`ctrl::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
 
 For information about available fields see [`mod@ctrl`]
 module"]
@@ -115,7 +115,7 @@ pub type CTRL = crate::Reg<ctrl::CTRL_SPEC>;
 pub mod ctrl;
 #[doc = "IRQ_SETUP_0 (rw) register accessor: Interrupt setup register 0  
 
-You can [`read`](crate::generic::Reg::read) this register and get [`irq_setup_0::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`irq_setup_0::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+You can [`read`](crate::Reg::read) this register and get [`irq_setup_0::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`irq_setup_0::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
 
 For information about available fields see [`mod@irq_setup_0`]
 module"]
@@ -124,7 +124,7 @@ pub type IRQ_SETUP_0 = crate::Reg<irq_setup_0::IRQ_SETUP_0_SPEC>;
 pub mod irq_setup_0;
 #[doc = "IRQ_SETUP_1 (rw) register accessor: Interrupt setup register 1  
 
-You can [`read`](crate::generic::Reg::read) this register and get [`irq_setup_1::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`irq_setup_1::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+You can [`read`](crate::Reg::read) this register and get [`irq_setup_1::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`irq_setup_1::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
 
 For information about available fields see [`mod@irq_setup_1`]
 module"]
@@ -133,7 +133,7 @@ pub type IRQ_SETUP_1 = crate::Reg<irq_setup_1::IRQ_SETUP_1_SPEC>;
 pub mod irq_setup_1;
 #[doc = "RTC_1 (r) register accessor: RTC register 1.  
 
-You can [`read`](crate::generic::Reg::read) this register and get [`rtc_1::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+You can [`read`](crate::Reg::read) this register and get [`rtc_1::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
 
 For information about available fields see [`mod@rtc_1`]
 module"]
@@ -143,7 +143,7 @@ pub mod rtc_1;
 #[doc = "RTC_0 (r) register accessor: RTC register 0  
  Read this before RTC 1!  
 
-You can [`read`](crate::generic::Reg::read) this register and get [`rtc_0::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+You can [`read`](crate::Reg::read) this register and get [`rtc_0::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
 
 For information about available fields see [`mod@rtc_0`]
 module"]
@@ -153,7 +153,7 @@ pub type RTC_0 = crate::Reg<rtc_0::RTC_0_SPEC>;
 pub mod rtc_0;
 #[doc = "INTR (r) register accessor: Raw Interrupts  
 
-You can [`read`](crate::generic::Reg::read) this register and get [`intr::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+You can [`read`](crate::Reg::read) this register and get [`intr::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
 
 For information about available fields see [`mod@intr`]
 module"]
@@ -162,7 +162,7 @@ pub type INTR = crate::Reg<intr::INTR_SPEC>;
 pub mod intr;
 #[doc = "INTE (rw) register accessor: Interrupt Enable  
 
-You can [`read`](crate::generic::Reg::read) this register and get [`inte::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`inte::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+You can [`read`](crate::Reg::read) this register and get [`inte::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`inte::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
 
 For information about available fields see [`mod@inte`]
 module"]
@@ -171,7 +171,7 @@ pub type INTE = crate::Reg<inte::INTE_SPEC>;
 pub mod inte;
 #[doc = "INTF (rw) register accessor: Interrupt Force  
 
-You can [`read`](crate::generic::Reg::read) this register and get [`intf::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`intf::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+You can [`read`](crate::Reg::read) this register and get [`intf::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`intf::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
 
 For information about available fields see [`mod@intf`]
 module"]
@@ -180,7 +180,7 @@ pub type INTF = crate::Reg<intf::INTF_SPEC>;
 pub mod intf;
 #[doc = "INTS (r) register accessor: Interrupt status after masking &amp; forcing  
 
-You can [`read`](crate::generic::Reg::read) this register and get [`ints::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+You can [`read`](crate::Reg::read) this register and get [`ints::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
 
 For information about available fields see [`mod@ints`]
 module"]

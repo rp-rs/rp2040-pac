@@ -38,6 +38,7 @@ impl From<ENDPOINT_TYPE_A> for u8 {
 impl crate::FieldSpec for ENDPOINT_TYPE_A {
     type Ux = u8;
 }
+impl crate::IsEnum for ENDPOINT_TYPE_A {}
 #[doc = "Field `ENDPOINT_TYPE` reader - "]
 pub type ENDPOINT_TYPE_R = crate::FieldReader<ENDPOINT_TYPE_A>;
 impl ENDPOINT_TYPE_R {
@@ -74,7 +75,7 @@ impl ENDPOINT_TYPE_R {
     }
 }
 #[doc = "Field `ENDPOINT_TYPE` writer - "]
-pub type ENDPOINT_TYPE_W<'a, REG> = crate::FieldWriterSafe<'a, REG, 2, ENDPOINT_TYPE_A>;
+pub type ENDPOINT_TYPE_W<'a, REG> = crate::FieldWriter<'a, REG, 2, ENDPOINT_TYPE_A, crate::Safe>;
 impl<'a, REG> ENDPOINT_TYPE_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
@@ -211,7 +212,7 @@ impl W {
 }
 #[doc = "EPx Control (Host-mode only!)  
 
-You can [`read`](crate::generic::Reg::read) this register and get [`epx_control::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`epx_control::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+You can [`read`](crate::Reg::read) this register and get [`epx_control::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`epx_control::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct EPX_CONTROL_SPEC;
 impl crate::RegisterSpec for EPX_CONTROL_SPEC {
     type Ux = u32;

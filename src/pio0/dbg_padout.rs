@@ -5,14 +5,9 @@ impl core::fmt::Debug for R {
         write!(f, "{}", self.bits())
     }
 }
-impl core::fmt::Debug for crate::generic::Reg<DBG_PADOUT_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
-    }
-}
 #[doc = "Read to sample the pad output values PIO is currently driving to the GPIOs. On RP2040 there are 30 GPIOs, so the two most significant bits are hardwired to 0.  
 
-You can [`read`](crate::generic::Reg::read) this register and get [`dbg_padout::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+You can [`read`](crate::Reg::read) this register and get [`dbg_padout::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct DBG_PADOUT_SPEC;
 impl crate::RegisterSpec for DBG_PADOUT_SPEC {
     type Ux = u32;

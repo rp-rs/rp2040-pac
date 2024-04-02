@@ -11,7 +11,7 @@ impl R {
 }
 #[doc = "Current instruction address of state machine 0  
 
-You can [`read`](crate::generic::Reg::read) this register and get [`sm_addr::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+You can [`read`](crate::Reg::read) this register and get [`sm_addr::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct SM_ADDR_SPEC;
 impl crate::RegisterSpec for SM_ADDR_SPEC {
     type Ux = u32;

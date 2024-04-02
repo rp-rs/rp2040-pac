@@ -40,6 +40,7 @@ impl From<FUNCSEL_A> for u8 {
 impl crate::FieldSpec for FUNCSEL_A {
     type Ux = u8;
 }
+impl crate::IsEnum for FUNCSEL_A {}
 #[doc = "Field `FUNCSEL` reader - 0-31 -> selects pin function according to the GPIO table. Not all options are valid for all GPIO pins."]
 pub type FUNCSEL_R = crate::FieldReader<FUNCSEL_A>;
 impl FUNCSEL_R {
@@ -204,6 +205,7 @@ impl From<OUTOVER_A> for u8 {
 impl crate::FieldSpec for OUTOVER_A {
     type Ux = u8;
 }
+impl crate::IsEnum for OUTOVER_A {}
 #[doc = "Field `OUTOVER` reader - "]
 pub type OUTOVER_R = crate::FieldReader<OUTOVER_A>;
 impl OUTOVER_R {
@@ -240,7 +242,7 @@ impl OUTOVER_R {
     }
 }
 #[doc = "Field `OUTOVER` writer - "]
-pub type OUTOVER_W<'a, REG> = crate::FieldWriterSafe<'a, REG, 2, OUTOVER_A>;
+pub type OUTOVER_W<'a, REG> = crate::FieldWriter<'a, REG, 2, OUTOVER_A, crate::Safe>;
 impl<'a, REG> OUTOVER_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
@@ -291,6 +293,7 @@ impl From<OEOVER_A> for u8 {
 impl crate::FieldSpec for OEOVER_A {
     type Ux = u8;
 }
+impl crate::IsEnum for OEOVER_A {}
 #[doc = "Field `OEOVER` reader - "]
 pub type OEOVER_R = crate::FieldReader<OEOVER_A>;
 impl OEOVER_R {
@@ -327,7 +330,7 @@ impl OEOVER_R {
     }
 }
 #[doc = "Field `OEOVER` writer - "]
-pub type OEOVER_W<'a, REG> = crate::FieldWriterSafe<'a, REG, 2, OEOVER_A>;
+pub type OEOVER_W<'a, REG> = crate::FieldWriter<'a, REG, 2, OEOVER_A, crate::Safe>;
 impl<'a, REG> OEOVER_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
@@ -378,6 +381,7 @@ impl From<INOVER_A> for u8 {
 impl crate::FieldSpec for INOVER_A {
     type Ux = u8;
 }
+impl crate::IsEnum for INOVER_A {}
 #[doc = "Field `INOVER` reader - "]
 pub type INOVER_R = crate::FieldReader<INOVER_A>;
 impl INOVER_R {
@@ -414,7 +418,7 @@ impl INOVER_R {
     }
 }
 #[doc = "Field `INOVER` writer - "]
-pub type INOVER_W<'a, REG> = crate::FieldWriterSafe<'a, REG, 2, INOVER_A>;
+pub type INOVER_W<'a, REG> = crate::FieldWriter<'a, REG, 2, INOVER_A, crate::Safe>;
 impl<'a, REG> INOVER_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
@@ -465,6 +469,7 @@ impl From<IRQOVER_A> for u8 {
 impl crate::FieldSpec for IRQOVER_A {
     type Ux = u8;
 }
+impl crate::IsEnum for IRQOVER_A {}
 #[doc = "Field `IRQOVER` reader - "]
 pub type IRQOVER_R = crate::FieldReader<IRQOVER_A>;
 impl IRQOVER_R {
@@ -501,7 +506,7 @@ impl IRQOVER_R {
     }
 }
 #[doc = "Field `IRQOVER` writer - "]
-pub type IRQOVER_W<'a, REG> = crate::FieldWriterSafe<'a, REG, 2, IRQOVER_A>;
+pub type IRQOVER_W<'a, REG> = crate::FieldWriter<'a, REG, 2, IRQOVER_A, crate::Safe>;
 impl<'a, REG> IRQOVER_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
@@ -589,7 +594,7 @@ impl W {
 }
 #[doc = "GPIO control including function select and overrides.  
 
-You can [`read`](crate::generic::Reg::read) this register and get [`gpio_ctrl::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`gpio_ctrl::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+You can [`read`](crate::Reg::read) this register and get [`gpio_ctrl::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`gpio_ctrl::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct GPIO_CTRL_SPEC;
 impl crate::RegisterSpec for GPIO_CTRL_SPEC {
     type Ux = u32;

@@ -81,7 +81,7 @@ impl R {
 }
 #[doc = "Masked Interrupt Status Register, UARTMIS  
 
-You can [`read`](crate::generic::Reg::read) this register and get [`uartmis::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+You can [`read`](crate::Reg::read) this register and get [`uartmis::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct UARTMIS_SPEC;
 impl crate::RegisterSpec for UARTMIS_SPEC {
     type Ux = u32;

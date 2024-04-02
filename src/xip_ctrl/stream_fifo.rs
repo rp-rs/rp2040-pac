@@ -5,17 +5,12 @@ impl core::fmt::Debug for R {
         write!(f, "{}", self.bits())
     }
 }
-impl core::fmt::Debug for crate::generic::Reg<STREAM_FIFO_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
-    }
-}
 #[doc = "FIFO stream data  
  Streamed data is buffered here, for retrieval by the system DMA.  
  This FIFO can also be accessed via the XIP_AUX slave, to avoid exposing  
  the DMA to bus stalls caused by other XIP traffic.  
 
-You can [`read`](crate::generic::Reg::read) this register and get [`stream_fifo::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+You can [`read`](crate::Reg::read) this register and get [`stream_fifo::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct STREAM_FIFO_SPEC;
 impl crate::RegisterSpec for STREAM_FIFO_SPEC {
     type Ux = u32;

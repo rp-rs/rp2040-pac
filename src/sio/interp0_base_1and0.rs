@@ -9,7 +9,7 @@ impl W {}
 #[doc = "On write, the lower 16 bits go to BASE0, upper bits to BASE1 simultaneously.  
  Each half is sign-extended to 32 bits if that lane's SIGNED flag is set.  
 
-You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`interp0_base_1and0::W`](W). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`interp0_base_1and0::W`](W). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct INTERP0_BASE_1AND0_SPEC;
 impl crate::RegisterSpec for INTERP0_BASE_1AND0_SPEC {
     type Ux = u32;

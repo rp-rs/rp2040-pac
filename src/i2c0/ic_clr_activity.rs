@@ -15,7 +15,7 @@ impl R {
 }
 #[doc = "Clear ACTIVITY Interrupt Register  
 
-You can [`read`](crate::generic::Reg::read) this register and get [`ic_clr_activity::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+You can [`read`](crate::Reg::read) this register and get [`ic_clr_activity::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct IC_CLR_ACTIVITY_SPEC;
 impl crate::RegisterSpec for IC_CLR_ACTIVITY_SPEC {
     type Ux = u32;

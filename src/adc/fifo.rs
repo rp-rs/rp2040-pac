@@ -18,7 +18,7 @@ impl R {
 }
 #[doc = "Conversion result FIFO  
 
-You can [`read`](crate::generic::Reg::read) this register and get [`fifo::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+You can [`read`](crate::Reg::read) this register and get [`fifo::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct FIFO_SPEC;
 impl crate::RegisterSpec for FIFO_SPEC {
     type Ux = u32;

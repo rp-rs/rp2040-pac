@@ -60,7 +60,7 @@ impl R {
 }
 #[doc = "GPIO status  
 
-You can [`read`](crate::generic::Reg::read) this register and get [`gpio_status::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+You can [`read`](crate::Reg::read) this register and get [`gpio_status::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct GPIO_STATUS_SPEC;
 impl crate::RegisterSpec for GPIO_STATUS_SPEC {
     type Ux = u32;

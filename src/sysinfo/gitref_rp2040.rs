@@ -5,14 +5,9 @@ impl core::fmt::Debug for R {
         write!(f, "{}", self.bits())
     }
 }
-impl core::fmt::Debug for crate::generic::Reg<GITREF_RP2040_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
-    }
-}
 #[doc = "Git hash of the chip source. Used to identify chip version.  
 
-You can [`read`](crate::generic::Reg::read) this register and get [`gitref_rp2040::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+You can [`read`](crate::Reg::read) this register and get [`gitref_rp2040::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct GITREF_RP2040_SPEC;
 impl crate::RegisterSpec for GITREF_RP2040_SPEC {
     type Ux = u32;

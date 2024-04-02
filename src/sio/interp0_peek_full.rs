@@ -5,14 +5,9 @@ impl core::fmt::Debug for R {
         write!(f, "{}", self.bits())
     }
 }
-impl core::fmt::Debug for crate::generic::Reg<INTERP0_PEEK_FULL_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
-    }
-}
 #[doc = "Read FULL result, without altering any internal state (PEEK).  
 
-You can [`read`](crate::generic::Reg::read) this register and get [`interp0_peek_full::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+You can [`read`](crate::Reg::read) this register and get [`interp0_peek_full::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct INTERP0_PEEK_FULL_SPEC;
 impl crate::RegisterSpec for INTERP0_PEEK_FULL_SPEC {
     type Ux = u32;

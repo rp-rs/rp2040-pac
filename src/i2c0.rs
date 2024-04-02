@@ -339,7 +339,7 @@ register being set to 0. Writes at other times have no effect.
 
  Read/Write Access: - bit 10 is read only. - bit 11 is read only - bit 16 is read only - bit 17 is read only - bits 18 and 19 are read only.  
 
-You can [`read`](crate::generic::Reg::read) this register and get [`ic_con::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`ic_con::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+You can [`read`](crate::Reg::read) this register and get [`ic_con::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`ic_con::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
 
 For information about available fields see [`mod@ic_con`]
 module"]
@@ -356,7 +356,7 @@ is set to 0.
 
  Note: If the software or application is aware that the DW_apb_i2c is not using the TAR address for the pending commands in the Tx FIFO, then it is possible to update the TAR address even while the Tx FIFO has entries (IC_STATUS\\[2\\]= 0). - It is not necessary to perform any write to this register if DW_apb_i2c is enabled as an I2C slave only.  
 
-You can [`read`](crate::generic::Reg::read) this register and get [`ic_tar::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`ic_tar::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+You can [`read`](crate::Reg::read) this register and get [`ic_tar::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`ic_tar::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
 
 For information about available fields see [`mod@ic_tar`]
 module"]
@@ -370,7 +370,7 @@ is set to 0.
 pub mod ic_tar;
 #[doc = "IC_SAR (rw) register accessor: I2C Slave Address Register  
 
-You can [`read`](crate::generic::Reg::read) this register and get [`ic_sar::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`ic_sar::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+You can [`read`](crate::Reg::read) this register and get [`ic_sar::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`ic_sar::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
 
 For information about available fields see [`mod@ic_sar`]
 module"]
@@ -383,7 +383,7 @@ pub mod ic_sar;
 
  Write: - 11 bits when IC_EMPTYFIFO_HOLD_MASTER_EN=1 - 9 bits when IC_EMPTYFIFO_HOLD_MASTER_EN=0 Read: - 12 bits when IC_FIRST_DATA_BYTE_STATUS = 1 - 8 bits when IC_FIRST_DATA_BYTE_STATUS = 0 Note: In order for the DW_apb_i2c to continue acknowledging reads, a read command should be written for every byte that is to be received; otherwise the DW_apb_i2c will stop acknowledging.  
 
-You can [`read`](crate::generic::Reg::read) this register and get [`ic_data_cmd::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`ic_data_cmd::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+You can [`read`](crate::Reg::read) this register and get [`ic_data_cmd::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`ic_data_cmd::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
 
 For information about available fields see [`mod@ic_data_cmd`]
 module"]
@@ -396,7 +396,7 @@ pub type IC_DATA_CMD = crate::Reg<ic_data_cmd::IC_DATA_CMD_SPEC>;
 pub mod ic_data_cmd;
 #[doc = "IC_SS_SCL_HCNT (rw) register accessor: Standard Speed I2C Clock SCL High Count Register  
 
-You can [`read`](crate::generic::Reg::read) this register and get [`ic_ss_scl_hcnt::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`ic_ss_scl_hcnt::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+You can [`read`](crate::Reg::read) this register and get [`ic_ss_scl_hcnt::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`ic_ss_scl_hcnt::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
 
 For information about available fields see [`mod@ic_ss_scl_hcnt`]
 module"]
@@ -405,7 +405,7 @@ pub type IC_SS_SCL_HCNT = crate::Reg<ic_ss_scl_hcnt::IC_SS_SCL_HCNT_SPEC>;
 pub mod ic_ss_scl_hcnt;
 #[doc = "IC_SS_SCL_LCNT (rw) register accessor: Standard Speed I2C Clock SCL Low Count Register  
 
-You can [`read`](crate::generic::Reg::read) this register and get [`ic_ss_scl_lcnt::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`ic_ss_scl_lcnt::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+You can [`read`](crate::Reg::read) this register and get [`ic_ss_scl_lcnt::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`ic_ss_scl_lcnt::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
 
 For information about available fields see [`mod@ic_ss_scl_lcnt`]
 module"]
@@ -414,7 +414,7 @@ pub type IC_SS_SCL_LCNT = crate::Reg<ic_ss_scl_lcnt::IC_SS_SCL_LCNT_SPEC>;
 pub mod ic_ss_scl_lcnt;
 #[doc = "IC_FS_SCL_HCNT (rw) register accessor: Fast Mode or Fast Mode Plus I2C Clock SCL High Count Register  
 
-You can [`read`](crate::generic::Reg::read) this register and get [`ic_fs_scl_hcnt::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`ic_fs_scl_hcnt::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+You can [`read`](crate::Reg::read) this register and get [`ic_fs_scl_hcnt::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`ic_fs_scl_hcnt::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
 
 For information about available fields see [`mod@ic_fs_scl_hcnt`]
 module"]
@@ -423,7 +423,7 @@ pub type IC_FS_SCL_HCNT = crate::Reg<ic_fs_scl_hcnt::IC_FS_SCL_HCNT_SPEC>;
 pub mod ic_fs_scl_hcnt;
 #[doc = "IC_FS_SCL_LCNT (rw) register accessor: Fast Mode or Fast Mode Plus I2C Clock SCL Low Count Register  
 
-You can [`read`](crate::generic::Reg::read) this register and get [`ic_fs_scl_lcnt::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`ic_fs_scl_lcnt::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+You can [`read`](crate::Reg::read) this register and get [`ic_fs_scl_lcnt::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`ic_fs_scl_lcnt::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
 
 For information about available fields see [`mod@ic_fs_scl_lcnt`]
 module"]
@@ -434,7 +434,7 @@ pub mod ic_fs_scl_lcnt;
 
  Each bit in this register has a corresponding mask bit in the IC_INTR_MASK register. These bits are cleared by reading the matching interrupt clear register. The unmasked raw versions of these bits are available in the IC_RAW_INTR_STAT register.  
 
-You can [`read`](crate::generic::Reg::read) this register and get [`ic_intr_stat::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+You can [`read`](crate::Reg::read) this register and get [`ic_intr_stat::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
 
 For information about available fields see [`mod@ic_intr_stat`]
 module"]
@@ -447,7 +447,7 @@ pub mod ic_intr_stat;
 
  These bits mask their corresponding interrupt status bits. This register is active low; a value of 0 masks the interrupt, whereas a value of 1 unmasks the interrupt.  
 
-You can [`read`](crate::generic::Reg::read) this register and get [`ic_intr_mask::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`ic_intr_mask::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+You can [`read`](crate::Reg::read) this register and get [`ic_intr_mask::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`ic_intr_mask::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
 
 For information about available fields see [`mod@ic_intr_mask`]
 module"]
@@ -460,7 +460,7 @@ pub mod ic_intr_mask;
 
  Unlike the IC_INTR_STAT register, these bits are not masked so they always show the true status of the DW_apb_i2c.  
 
-You can [`read`](crate::generic::Reg::read) this register and get [`ic_raw_intr_stat::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+You can [`read`](crate::Reg::read) this register and get [`ic_raw_intr_stat::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
 
 For information about available fields see [`mod@ic_raw_intr_stat`]
 module"]
@@ -471,7 +471,7 @@ pub type IC_RAW_INTR_STAT = crate::Reg<ic_raw_intr_stat::IC_RAW_INTR_STAT_SPEC>;
 pub mod ic_raw_intr_stat;
 #[doc = "IC_RX_TL (rw) register accessor: I2C Receive FIFO Threshold Register  
 
-You can [`read`](crate::generic::Reg::read) this register and get [`ic_rx_tl::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`ic_rx_tl::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+You can [`read`](crate::Reg::read) this register and get [`ic_rx_tl::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`ic_rx_tl::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
 
 For information about available fields see [`mod@ic_rx_tl`]
 module"]
@@ -480,7 +480,7 @@ pub type IC_RX_TL = crate::Reg<ic_rx_tl::IC_RX_TL_SPEC>;
 pub mod ic_rx_tl;
 #[doc = "IC_TX_TL (rw) register accessor: I2C Transmit FIFO Threshold Register  
 
-You can [`read`](crate::generic::Reg::read) this register and get [`ic_tx_tl::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`ic_tx_tl::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+You can [`read`](crate::Reg::read) this register and get [`ic_tx_tl::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`ic_tx_tl::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
 
 For information about available fields see [`mod@ic_tx_tl`]
 module"]
@@ -489,7 +489,7 @@ pub type IC_TX_TL = crate::Reg<ic_tx_tl::IC_TX_TL_SPEC>;
 pub mod ic_tx_tl;
 #[doc = "IC_CLR_INTR (r) register accessor: Clear Combined and Individual Interrupt Register  
 
-You can [`read`](crate::generic::Reg::read) this register and get [`ic_clr_intr::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+You can [`read`](crate::Reg::read) this register and get [`ic_clr_intr::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
 
 For information about available fields see [`mod@ic_clr_intr`]
 module"]
@@ -498,7 +498,7 @@ pub type IC_CLR_INTR = crate::Reg<ic_clr_intr::IC_CLR_INTR_SPEC>;
 pub mod ic_clr_intr;
 #[doc = "IC_CLR_RX_UNDER (r) register accessor: Clear RX_UNDER Interrupt Register  
 
-You can [`read`](crate::generic::Reg::read) this register and get [`ic_clr_rx_under::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+You can [`read`](crate::Reg::read) this register and get [`ic_clr_rx_under::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
 
 For information about available fields see [`mod@ic_clr_rx_under`]
 module"]
@@ -507,7 +507,7 @@ pub type IC_CLR_RX_UNDER = crate::Reg<ic_clr_rx_under::IC_CLR_RX_UNDER_SPEC>;
 pub mod ic_clr_rx_under;
 #[doc = "IC_CLR_RX_OVER (r) register accessor: Clear RX_OVER Interrupt Register  
 
-You can [`read`](crate::generic::Reg::read) this register and get [`ic_clr_rx_over::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+You can [`read`](crate::Reg::read) this register and get [`ic_clr_rx_over::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
 
 For information about available fields see [`mod@ic_clr_rx_over`]
 module"]
@@ -516,7 +516,7 @@ pub type IC_CLR_RX_OVER = crate::Reg<ic_clr_rx_over::IC_CLR_RX_OVER_SPEC>;
 pub mod ic_clr_rx_over;
 #[doc = "IC_CLR_TX_OVER (r) register accessor: Clear TX_OVER Interrupt Register  
 
-You can [`read`](crate::generic::Reg::read) this register and get [`ic_clr_tx_over::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+You can [`read`](crate::Reg::read) this register and get [`ic_clr_tx_over::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
 
 For information about available fields see [`mod@ic_clr_tx_over`]
 module"]
@@ -525,7 +525,7 @@ pub type IC_CLR_TX_OVER = crate::Reg<ic_clr_tx_over::IC_CLR_TX_OVER_SPEC>;
 pub mod ic_clr_tx_over;
 #[doc = "IC_CLR_RD_REQ (r) register accessor: Clear RD_REQ Interrupt Register  
 
-You can [`read`](crate::generic::Reg::read) this register and get [`ic_clr_rd_req::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+You can [`read`](crate::Reg::read) this register and get [`ic_clr_rd_req::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
 
 For information about available fields see [`mod@ic_clr_rd_req`]
 module"]
@@ -534,7 +534,7 @@ pub type IC_CLR_RD_REQ = crate::Reg<ic_clr_rd_req::IC_CLR_RD_REQ_SPEC>;
 pub mod ic_clr_rd_req;
 #[doc = "IC_CLR_TX_ABRT (r) register accessor: Clear TX_ABRT Interrupt Register  
 
-You can [`read`](crate::generic::Reg::read) this register and get [`ic_clr_tx_abrt::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+You can [`read`](crate::Reg::read) this register and get [`ic_clr_tx_abrt::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
 
 For information about available fields see [`mod@ic_clr_tx_abrt`]
 module"]
@@ -543,7 +543,7 @@ pub type IC_CLR_TX_ABRT = crate::Reg<ic_clr_tx_abrt::IC_CLR_TX_ABRT_SPEC>;
 pub mod ic_clr_tx_abrt;
 #[doc = "IC_CLR_RX_DONE (r) register accessor: Clear RX_DONE Interrupt Register  
 
-You can [`read`](crate::generic::Reg::read) this register and get [`ic_clr_rx_done::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+You can [`read`](crate::Reg::read) this register and get [`ic_clr_rx_done::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
 
 For information about available fields see [`mod@ic_clr_rx_done`]
 module"]
@@ -552,7 +552,7 @@ pub type IC_CLR_RX_DONE = crate::Reg<ic_clr_rx_done::IC_CLR_RX_DONE_SPEC>;
 pub mod ic_clr_rx_done;
 #[doc = "IC_CLR_ACTIVITY (r) register accessor: Clear ACTIVITY Interrupt Register  
 
-You can [`read`](crate::generic::Reg::read) this register and get [`ic_clr_activity::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+You can [`read`](crate::Reg::read) this register and get [`ic_clr_activity::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
 
 For information about available fields see [`mod@ic_clr_activity`]
 module"]
@@ -561,7 +561,7 @@ pub type IC_CLR_ACTIVITY = crate::Reg<ic_clr_activity::IC_CLR_ACTIVITY_SPEC>;
 pub mod ic_clr_activity;
 #[doc = "IC_CLR_STOP_DET (r) register accessor: Clear STOP_DET Interrupt Register  
 
-You can [`read`](crate::generic::Reg::read) this register and get [`ic_clr_stop_det::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+You can [`read`](crate::Reg::read) this register and get [`ic_clr_stop_det::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
 
 For information about available fields see [`mod@ic_clr_stop_det`]
 module"]
@@ -570,7 +570,7 @@ pub type IC_CLR_STOP_DET = crate::Reg<ic_clr_stop_det::IC_CLR_STOP_DET_SPEC>;
 pub mod ic_clr_stop_det;
 #[doc = "IC_CLR_START_DET (r) register accessor: Clear START_DET Interrupt Register  
 
-You can [`read`](crate::generic::Reg::read) this register and get [`ic_clr_start_det::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+You can [`read`](crate::Reg::read) this register and get [`ic_clr_start_det::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
 
 For information about available fields see [`mod@ic_clr_start_det`]
 module"]
@@ -579,7 +579,7 @@ pub type IC_CLR_START_DET = crate::Reg<ic_clr_start_det::IC_CLR_START_DET_SPEC>;
 pub mod ic_clr_start_det;
 #[doc = "IC_CLR_GEN_CALL (r) register accessor: Clear GEN_CALL Interrupt Register  
 
-You can [`read`](crate::generic::Reg::read) this register and get [`ic_clr_gen_call::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+You can [`read`](crate::Reg::read) this register and get [`ic_clr_gen_call::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
 
 For information about available fields see [`mod@ic_clr_gen_call`]
 module"]
@@ -588,7 +588,7 @@ pub type IC_CLR_GEN_CALL = crate::Reg<ic_clr_gen_call::IC_CLR_GEN_CALL_SPEC>;
 pub mod ic_clr_gen_call;
 #[doc = "IC_ENABLE (rw) register accessor: I2C Enable Register  
 
-You can [`read`](crate::generic::Reg::read) this register and get [`ic_enable::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`ic_enable::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+You can [`read`](crate::Reg::read) this register and get [`ic_enable::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`ic_enable::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
 
 For information about available fields see [`mod@ic_enable`]
 module"]
@@ -601,7 +601,7 @@ pub mod ic_enable;
 
  When the I2C is disabled by writing 0 in bit 0 of the IC_ENABLE register: - Bits 1 and 2 are set to 1 - Bits 3 and 10 are set to 0 When the master or slave state machines goes to idle and ic_en=0: - Bits 5 and 6 are set to 0  
 
-You can [`read`](crate::generic::Reg::read) this register and get [`ic_status::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+You can [`read`](crate::Reg::read) this register and get [`ic_status::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
 
 For information about available fields see [`mod@ic_status`]
 module"]
@@ -614,7 +614,7 @@ pub type IC_STATUS = crate::Reg<ic_status::IC_STATUS_SPEC>;
 pub mod ic_status;
 #[doc = "IC_TXFLR (r) register accessor: I2C Transmit FIFO Level Register This register contains the number of valid data entries in the transmit FIFO buffer. It is cleared whenever: - The I2C is disabled - There is a transmit abort - that is, TX_ABRT bit is set in the IC_RAW_INTR_STAT register - The slave bulk transmit mode is aborted The register increments whenever data is placed into the transmit FIFO and decrements when data is taken from the transmit FIFO.  
 
-You can [`read`](crate::generic::Reg::read) this register and get [`ic_txflr::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+You can [`read`](crate::Reg::read) this register and get [`ic_txflr::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
 
 For information about available fields see [`mod@ic_txflr`]
 module"]
@@ -623,7 +623,7 @@ pub type IC_TXFLR = crate::Reg<ic_txflr::IC_TXFLR_SPEC>;
 pub mod ic_txflr;
 #[doc = "IC_RXFLR (r) register accessor: I2C Receive FIFO Level Register This register contains the number of valid data entries in the receive FIFO buffer. It is cleared whenever: - The I2C is disabled - Whenever there is a transmit abort caused by any of the events tracked in IC_TX_ABRT_SOURCE The register increments whenever data is placed into the receive FIFO and decrements when data is taken from the receive FIFO.  
 
-You can [`read`](crate::generic::Reg::read) this register and get [`ic_rxflr::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+You can [`read`](crate::Reg::read) this register and get [`ic_rxflr::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
 
 For information about available fields see [`mod@ic_rxflr`]
 module"]
@@ -644,7 +644,7 @@ of this register are used to extend the SDA transition (if any) whenever SCL is 
 
  The programmed SDA hold time during transmit (IC_SDA_TX_HOLD) cannot exceed at any time the duration of the low part of scl. Therefore the programmed value cannot be larger than N_SCL_LOW-2, where N_SCL_LOW is the duration of the low part of the scl period measured in ic_clk cycles.  
 
-You can [`read`](crate::generic::Reg::read) this register and get [`ic_sda_hold::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`ic_sda_hold::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+You can [`read`](crate::Reg::read) this register and get [`ic_sda_hold::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`ic_sda_hold::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
 
 For information about available fields see [`mod@ic_sda_hold`]
 module"]
@@ -669,7 +669,7 @@ pub mod ic_sda_hold;
 
  Once the source of the ABRT_SBYTE_NORSTRT is fixed, then this bit can be cleared in the same manner as other bits in this register. If the source of the ABRT_SBYTE_NORSTRT is not fixed before attempting to clear this bit, Bit 9 clears for one cycle and is then re-asserted.  
 
-You can [`read`](crate::generic::Reg::read) this register and get [`ic_tx_abrt_source::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+You can [`read`](crate::Reg::read) this register and get [`ic_tx_abrt_source::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
 
 For information about available fields see [`mod@ic_tx_abrt_source`]
 module"]
@@ -689,7 +689,7 @@ pub mod ic_tx_abrt_source;
 = 0) Note: The IC_STATUS\\[6\\]
 is a register read-back location for the internal slv_activity signal; the user should poll this before writing the ic_slv_data_nack_only bit.  
 
-You can [`read`](crate::generic::Reg::read) this register and get [`ic_slv_data_nack_only::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`ic_slv_data_nack_only::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+You can [`read`](crate::Reg::read) this register and get [`ic_slv_data_nack_only::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`ic_slv_data_nack_only::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
 
 For information about available fields see [`mod@ic_slv_data_nack_only`]
 module"]
@@ -707,7 +707,7 @@ pub mod ic_slv_data_nack_only;
 
  The register is used to enable the DMA Controller interface operation. There is a separate bit for transmit and receive. This can be programmed regardless of the state of IC_ENABLE.  
 
-You can [`read`](crate::generic::Reg::read) this register and get [`ic_dma_cr::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`ic_dma_cr::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+You can [`read`](crate::Reg::read) this register and get [`ic_dma_cr::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`ic_dma_cr::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
 
 For information about available fields see [`mod@ic_dma_cr`]
 module"]
@@ -718,7 +718,7 @@ pub type IC_DMA_CR = crate::Reg<ic_dma_cr::IC_DMA_CR_SPEC>;
 pub mod ic_dma_cr;
 #[doc = "IC_DMA_TDLR (rw) register accessor: DMA Transmit Data Level Register  
 
-You can [`read`](crate::generic::Reg::read) this register and get [`ic_dma_tdlr::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`ic_dma_tdlr::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+You can [`read`](crate::Reg::read) this register and get [`ic_dma_tdlr::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`ic_dma_tdlr::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
 
 For information about available fields see [`mod@ic_dma_tdlr`]
 module"]
@@ -727,7 +727,7 @@ pub type IC_DMA_TDLR = crate::Reg<ic_dma_tdlr::IC_DMA_TDLR_SPEC>;
 pub mod ic_dma_tdlr;
 #[doc = "IC_DMA_RDLR (rw) register accessor: I2C Receive Data Level Register  
 
-You can [`read`](crate::generic::Reg::read) this register and get [`ic_dma_rdlr::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`ic_dma_rdlr::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+You can [`read`](crate::Reg::read) this register and get [`ic_dma_rdlr::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`ic_dma_rdlr::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
 
 For information about available fields see [`mod@ic_dma_rdlr`]
 module"]
@@ -743,7 +743,7 @@ pub mod ic_dma_rdlr;
 
  Note: The length of setup time is calculated using \\[(IC_SDA_SETUP - 1) * (ic_clk_period)\\], so if the user requires 10 ic_clk periods of setup time, they should program a value of 11. The IC_SDA_SETUP register is only used by the DW_apb_i2c when operating as a slave transmitter.  
 
-You can [`read`](crate::generic::Reg::read) this register and get [`ic_sda_setup::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`ic_sda_setup::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+You can [`read`](crate::Reg::read) this register and get [`ic_sda_setup::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`ic_sda_setup::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
 
 For information about available fields see [`mod@ic_sda_setup`]
 module"]
@@ -763,7 +763,7 @@ pub mod ic_sda_setup;
 
  This register is applicable only when the DW_apb_i2c is in slave mode.  
 
-You can [`read`](crate::generic::Reg::read) this register and get [`ic_ack_general_call::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`ic_ack_general_call::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+You can [`read`](crate::Reg::read) this register and get [`ic_ack_general_call::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`ic_ack_general_call::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
 
 For information about available fields see [`mod@ic_ack_general_call`]
 module"]
@@ -788,7 +788,7 @@ has been set to 0, bits 2:1 is only be valid as soon as bit 0 is read as '0'.
  Note: When IC_ENABLE\\[0\\]
 has been set to 0, a delay occurs for bit 0 to be read as 0 because disabling the DW_apb_i2c depends on I2C bus activities.  
 
-You can [`read`](crate::generic::Reg::read) this register and get [`ic_enable_status::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+You can [`read`](crate::Reg::read) this register and get [`ic_enable_status::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
 
 For information about available fields see [`mod@ic_enable_status`]
 module"]
@@ -811,7 +811,7 @@ pub mod ic_enable_status;
 
  This register is used to store the duration, measured in ic_clk cycles, of the longest spike that is filtered out by the spike suppression logic when the component is operating in SS, FS or FM+ modes. The relevant I2C requirement is tSP (table 4) as detailed in the I2C Bus Specification. This register must be programmed with a minimum value of 1.  
 
-You can [`read`](crate::generic::Reg::read) this register and get [`ic_fs_spklen::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`ic_fs_spklen::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+You can [`read`](crate::Reg::read) this register and get [`ic_fs_spklen::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`ic_fs_spklen::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
 
 For information about available fields see [`mod@ic_fs_spklen`]
 module"]
@@ -822,7 +822,7 @@ pub type IC_FS_SPKLEN = crate::Reg<ic_fs_spklen::IC_FS_SPKLEN_SPEC>;
 pub mod ic_fs_spklen;
 #[doc = "IC_CLR_RESTART_DET (r) register accessor: Clear RESTART_DET Interrupt Register  
 
-You can [`read`](crate::generic::Reg::read) this register and get [`ic_clr_restart_det::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+You can [`read`](crate::Reg::read) this register and get [`ic_clr_restart_det::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
 
 For information about available fields see [`mod@ic_clr_restart_det`]
 module"]
@@ -833,7 +833,7 @@ pub mod ic_clr_restart_det;
 
  Note This register is not implemented and therefore reads as 0. If it was implemented it would be a constant read-only register that contains encoded information about the component's parameter settings. Fields shown below are the settings for those parameters  
 
-You can [`read`](crate::generic::Reg::read) this register and get [`ic_comp_param_1::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+You can [`read`](crate::Reg::read) this register and get [`ic_comp_param_1::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
 
 For information about available fields see [`mod@ic_comp_param_1`]
 module"]
@@ -844,7 +844,7 @@ pub type IC_COMP_PARAM_1 = crate::Reg<ic_comp_param_1::IC_COMP_PARAM_1_SPEC>;
 pub mod ic_comp_param_1;
 #[doc = "IC_COMP_VERSION (r) register accessor: I2C Component Version Register  
 
-You can [`read`](crate::generic::Reg::read) this register and get [`ic_comp_version::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+You can [`read`](crate::Reg::read) this register and get [`ic_comp_version::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
 
 For information about available fields see [`mod@ic_comp_version`]
 module"]
@@ -853,7 +853,7 @@ pub type IC_COMP_VERSION = crate::Reg<ic_comp_version::IC_COMP_VERSION_SPEC>;
 pub mod ic_comp_version;
 #[doc = "IC_COMP_TYPE (r) register accessor: I2C Component Type Register  
 
-You can [`read`](crate::generic::Reg::read) this register and get [`ic_comp_type::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+You can [`read`](crate::Reg::read) this register and get [`ic_comp_type::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
 
 For information about available fields see [`mod@ic_comp_type`]
 module"]

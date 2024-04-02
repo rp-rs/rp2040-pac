@@ -39,7 +39,7 @@ impl R {
 }
 #[doc = "Status register, SSPSR on page 3-7  
 
-You can [`read`](crate::generic::Reg::read) this register and get [`sspsr::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+You can [`read`](crate::Reg::read) this register and get [`sspsr::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct SSPSR_SPEC;
 impl crate::RegisterSpec for SSPSR_SPEC {
     type Ux = u32;

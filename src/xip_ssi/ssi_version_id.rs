@@ -11,7 +11,7 @@ impl R {
 }
 #[doc = "Version ID  
 
-You can [`read`](crate::generic::Reg::read) this register and get [`ssi_version_id::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+You can [`read`](crate::Reg::read) this register and get [`ssi_version_id::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct SSI_VERSION_ID_SPEC;
 impl crate::RegisterSpec for SSI_VERSION_ID_SPEC {
     type Ux = u32;

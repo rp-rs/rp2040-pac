@@ -12,7 +12,7 @@ impl W {
 }
 #[doc = "Writing a 1 to each of these bits will forcibly assert the corresponding IRQ. Note this is different to the INTF register: writing here affects PIO internal state. INTF just asserts the processor-facing IRQ signal for testing ISRs, and is not visible to the state machines.  
 
-You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`irq_force::W`](W). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`irq_force::W`](W). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct IRQ_FORCE_SPEC;
 impl crate::RegisterSpec for IRQ_FORCE_SPEC {
     type Ux = u32;

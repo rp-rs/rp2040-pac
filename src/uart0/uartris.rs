@@ -81,7 +81,7 @@ impl R {
 }
 #[doc = "Raw Interrupt Status Register, UARTRIS  
 
-You can [`read`](crate::generic::Reg::read) this register and get [`uartris::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+You can [`read`](crate::Reg::read) this register and get [`uartris::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct UARTRIS_SPEC;
 impl crate::RegisterSpec for UARTRIS_SPEC {
     type Ux = u32;

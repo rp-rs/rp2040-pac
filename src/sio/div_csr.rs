@@ -32,7 +32,7 @@ impl R {
 }
 #[doc = "Control and status register for divider.  
 
-You can [`read`](crate::generic::Reg::read) this register and get [`div_csr::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+You can [`read`](crate::Reg::read) this register and get [`div_csr::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct DIV_CSR_SPEC;
 impl crate::RegisterSpec for DIV_CSR_SPEC {
     type Ux = u32;

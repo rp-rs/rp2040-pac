@@ -32,7 +32,7 @@ impl R {
 }
 #[doc = "Masked interrupt status register, SSPMIS on page 3-11  
 
-You can [`read`](crate::generic::Reg::read) this register and get [`sspmis::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+You can [`read`](crate::Reg::read) this register and get [`sspmis::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct SSPMIS_SPEC;
 impl crate::RegisterSpec for SSPMIS_SPEC {
     type Ux = u32;

@@ -58,6 +58,7 @@ impl From<PERFSEL2_A> for u8 {
 impl crate::FieldSpec for PERFSEL2_A {
     type Ux = u8;
 }
+impl crate::IsEnum for PERFSEL2_A {}
 #[doc = "Field `PERFSEL2` reader - Select an event for PERFCTR2. Count either contested accesses, or all accesses, on a downstream port of the main crossbar."]
 pub type PERFSEL2_R = crate::FieldReader<PERFSEL2_A>;
 impl PERFSEL2_R {
@@ -314,7 +315,7 @@ impl W {
 }
 #[doc = "Bus fabric performance event select for PERFCTR2  
 
-You can [`read`](crate::generic::Reg::read) this register and get [`perfsel2::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`perfsel2::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+You can [`read`](crate::Reg::read) this register and get [`perfsel2::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`perfsel2::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct PERFSEL2_SPEC;
 impl crate::RegisterSpec for PERFSEL2_SPEC {
     type Ux = u32;

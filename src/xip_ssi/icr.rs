@@ -11,7 +11,7 @@ impl R {
 }
 #[doc = "Interrupt clear  
 
-You can [`read`](crate::generic::Reg::read) this register and get [`icr::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+You can [`read`](crate::Reg::read) this register and get [`icr::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct ICR_SPEC;
 impl crate::RegisterSpec for ICR_SPEC {
     type Ux = u32;

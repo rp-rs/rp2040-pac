@@ -33,7 +33,7 @@ impl R {
 #[doc = "RTC register 0  
  Read this before RTC 1!  
 
-You can [`read`](crate::generic::Reg::read) this register and get [`rtc_0::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+You can [`read`](crate::Reg::read) this register and get [`rtc_0::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct RTC_0_SPEC;
 impl crate::RegisterSpec for RTC_0_SPEC {
     type Ux = u32;

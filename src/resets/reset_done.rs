@@ -179,7 +179,7 @@ impl R {
 }
 #[doc = "Reset done. If a bit is set then a reset done signal has been returned by the peripheral. This indicates that the peripheral's registers are ready to be accessed.  
 
-You can [`read`](crate::generic::Reg::read) this register and get [`reset_done::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+You can [`read`](crate::Reg::read) this register and get [`reset_done::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct RESET_DONE_SPEC;
 impl crate::RegisterSpec for RESET_DONE_SPEC {
     type Ux = u32;

@@ -60,7 +60,7 @@ impl R {
 }
 #[doc = "Interrupt status after masking &amp; forcing  
 
-You can [`read`](crate::generic::Reg::read) this register and get [`ints::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+You can [`read`](crate::Reg::read) this register and get [`ints::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct INTS_SPEC;
 impl crate::RegisterSpec for INTS_SPEC {
     type Ux = u32;

@@ -11,7 +11,7 @@ impl R {
 }
 #[doc = "RX FIFO overflow interrupt clear  
 
-You can [`read`](crate::generic::Reg::read) this register and get [`rxoicr::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+You can [`read`](crate::Reg::read) this register and get [`rxoicr::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct RXOICR_SPEC;
 impl crate::RegisterSpec for RXOICR_SPEC {
     type Ux = u32;

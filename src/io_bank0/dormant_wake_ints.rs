@@ -228,7 +228,7 @@ impl R {
 }
 #[doc = "Interrupt status after masking &amp; forcing for dormant_wake  
 
-You can [`read`](crate::generic::Reg::read) this register and get [`dormant_wake_ints::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+You can [`read`](crate::Reg::read) this register and get [`dormant_wake_ints::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct DORMANT_WAKE_INTS_SPEC;
 impl crate::RegisterSpec for DORMANT_WAKE_INTS_SPEC {
     type Ux = u32;

@@ -967,7 +967,7 @@ is set at the same time. Note: Even though the slave never 'owns' the bus, somet
 
  Once the source of the ABRT_SBYTE_NORSTRT is fixed, then this bit can be cleared in the same manner as other bits in this register. If the source of the ABRT_SBYTE_NORSTRT is not fixed before attempting to clear this bit, Bit 9 clears for one cycle and is then re-asserted.  
 
-You can [`read`](crate::generic::Reg::read) this register and get [`ic_tx_abrt_source::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+You can [`read`](crate::Reg::read) this register and get [`ic_tx_abrt_source::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct IC_TX_ABRT_SOURCE_SPEC;
 impl crate::RegisterSpec for IC_TX_ABRT_SOURCE_SPEC {
     type Ux = u32;

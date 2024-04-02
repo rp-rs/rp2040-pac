@@ -11,7 +11,7 @@ impl R {
 }
 #[doc = "Input value for GPIO pins  
 
-You can [`read`](crate::generic::Reg::read) this register and get [`gpio_in::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+You can [`read`](crate::Reg::read) this register and get [`gpio_in::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct GPIO_IN_SPEC;
 impl crate::RegisterSpec for GPIO_IN_SPEC {
     type Ux = u32;

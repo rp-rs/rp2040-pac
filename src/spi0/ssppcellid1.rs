@@ -11,7 +11,7 @@ impl R {
 }
 #[doc = "PrimeCell identification registers, SSPPCellID0-3 on page 3-16  
 
-You can [`read`](crate::generic::Reg::read) this register and get [`ssppcellid1::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+You can [`read`](crate::Reg::read) this register and get [`ssppcellid1::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct SSPPCELLID1_SPEC;
 impl crate::RegisterSpec for SSPPCELLID1_SPEC {
     type Ux = u32;

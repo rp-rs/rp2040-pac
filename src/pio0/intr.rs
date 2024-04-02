@@ -88,7 +88,7 @@ impl R {
 }
 #[doc = "Raw Interrupts  
 
-You can [`read`](crate::generic::Reg::read) this register and get [`intr::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+You can [`read`](crate::Reg::read) this register and get [`intr::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct INTR_SPEC;
 impl crate::RegisterSpec for INTR_SPEC {
     type Ux = u32;

@@ -46,7 +46,7 @@ impl R {
 }
 #[doc = "Raw interrupt status  
 
-You can [`read`](crate::generic::Reg::read) this register and get [`risr::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+You can [`read`](crate::Reg::read) this register and get [`risr::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct RISR_SPEC;
 impl crate::RegisterSpec for RISR_SPEC {
     type Ux = u32;

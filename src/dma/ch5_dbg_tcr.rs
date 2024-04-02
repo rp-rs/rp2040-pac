@@ -5,14 +5,9 @@ impl core::fmt::Debug for R {
         write!(f, "{}", self.bits())
     }
 }
-impl core::fmt::Debug for crate::generic::Reg<CH5_DBG_TCR_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
-    }
-}
 #[doc = "Read to get channel TRANS_COUNT reload value, i.e. the length of the next transfer  
 
-You can [`read`](crate::generic::Reg::read) this register and get [`ch5_dbg_tcr::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+You can [`read`](crate::Reg::read) this register and get [`ch5_dbg_tcr::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct CH5_DBG_TCR_SPEC;
 impl crate::RegisterSpec for CH5_DBG_TCR_SPEC {
     type Ux = u32;

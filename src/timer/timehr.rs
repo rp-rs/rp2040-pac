@@ -5,15 +5,10 @@ impl core::fmt::Debug for R {
         write!(f, "{}", self.bits())
     }
 }
-impl core::fmt::Debug for crate::generic::Reg<TIMEHR_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
-    }
-}
 #[doc = "Read from bits 63:32 of time  
  always read timelr before timehr  
 
-You can [`read`](crate::generic::Reg::read) this register and get [`timehr::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+You can [`read`](crate::Reg::read) this register and get [`timehr::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct TIMEHR_SPEC;
 impl crate::RegisterSpec for TIMEHR_SPEC {
     type Ux = u32;

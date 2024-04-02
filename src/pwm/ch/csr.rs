@@ -42,6 +42,7 @@ impl From<DIVMODE_A> for u8 {
 impl crate::FieldSpec for DIVMODE_A {
     type Ux = u8;
 }
+impl crate::IsEnum for DIVMODE_A {}
 #[doc = "Field `DIVMODE` reader - "]
 pub type DIVMODE_R = crate::FieldReader<DIVMODE_A>;
 impl DIVMODE_R {
@@ -78,7 +79,7 @@ impl DIVMODE_R {
     }
 }
 #[doc = "Field `DIVMODE` writer - "]
-pub type DIVMODE_W<'a, REG> = crate::FieldWriterSafe<'a, REG, 2, DIVMODE_A>;
+pub type DIVMODE_W<'a, REG> = crate::FieldWriter<'a, REG, 2, DIVMODE_A, crate::Safe>;
 impl<'a, REG> DIVMODE_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
@@ -208,7 +209,7 @@ impl W {
 }
 #[doc = "Control and status register  
 
-You can [`read`](crate::generic::Reg::read) this register and get [`csr::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`csr::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+You can [`read`](crate::Reg::read) this register and get [`csr::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`csr::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct CSR_SPEC;
 impl crate::RegisterSpec for CSR_SPEC {
     type Ux = u32;

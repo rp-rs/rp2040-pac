@@ -11,7 +11,7 @@ impl R {
 }
 #[doc = "I2C Component Type Register  
 
-You can [`read`](crate::generic::Reg::read) this register and get [`ic_comp_type::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+You can [`read`](crate::Reg::read) this register and get [`ic_comp_type::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct IC_COMP_TYPE_SPEC;
 impl crate::RegisterSpec for IC_COMP_TYPE_SPEC {
     type Ux = u32;

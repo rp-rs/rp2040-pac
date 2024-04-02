@@ -25,7 +25,7 @@ impl R {
 }
 #[doc = "Use the SysTick Calibration Value Register to enable software to scale to any required speed using divide and multiply.  
 
-You can [`read`](crate::generic::Reg::read) this register and get [`syst_calib::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+You can [`read`](crate::Reg::read) this register and get [`syst_calib::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct SYST_CALIB_SPEC;
 impl crate::RegisterSpec for SYST_CALIB_SPEC {
     type Ux = u32;
