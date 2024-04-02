@@ -42,6 +42,7 @@ impl From<DRIVE_A> for u8 {
 impl crate::FieldSpec for DRIVE_A {
     type Ux = u8;
 }
+impl crate::IsEnum for DRIVE_A {}
 #[doc = "Field `DRIVE` reader - Drive strength."]
 pub type DRIVE_R = crate::FieldReader<DRIVE_A>;
 impl DRIVE_R {
@@ -78,7 +79,7 @@ impl DRIVE_R {
     }
 }
 #[doc = "Field `DRIVE` writer - Drive strength."]
-pub type DRIVE_W<'a, REG> = crate::FieldWriterSafe<'a, REG, 2, DRIVE_A>;
+pub type DRIVE_W<'a, REG> = crate::FieldWriter<'a, REG, 2, DRIVE_A, crate::Safe>;
 impl<'a, REG> DRIVE_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,

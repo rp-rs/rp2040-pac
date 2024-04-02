@@ -28,6 +28,7 @@ impl From<FRF_A> for u8 {
 impl crate::FieldSpec for FRF_A {
     type Ux = u8;
 }
+impl crate::IsEnum for FRF_A {}
 #[doc = "Field `FRF` reader - Frame format."]
 pub type FRF_R = crate::FieldReader<FRF_A>;
 impl FRF_R {

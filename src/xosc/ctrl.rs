@@ -26,6 +26,7 @@ impl From<FREQ_RANGE_A> for u16 {
 impl crate::FieldSpec for FREQ_RANGE_A {
     type Ux = u16;
 }
+impl crate::IsEnum for FREQ_RANGE_A {}
 #[doc = "Field `FREQ_RANGE` reader - Frequency range. This resets to 0xAA0 and cannot be changed."]
 pub type FREQ_RANGE_R = crate::FieldReader<FREQ_RANGE_A>;
 impl FREQ_RANGE_R {
@@ -111,6 +112,7 @@ impl From<ENABLE_A> for u16 {
 impl crate::FieldSpec for ENABLE_A {
     type Ux = u16;
 }
+impl crate::IsEnum for ENABLE_A {}
 #[doc = "Field `ENABLE` reader - On power-up this field is initialised to DISABLE and the chip runs from the ROSC.  
  If the chip has subsequently been programmed to run from the XOSC then setting this field to DISABLE may lock-up the chip. If this is a concern then run the clk_ref from the ROSC and enable the clk_sys RESUS feature.  
  The 12-bit code is intended to give some protection against accidental writes. An invalid setting will enable the oscillator."]

@@ -42,6 +42,7 @@ impl From<DIVMODE_A> for u8 {
 impl crate::FieldSpec for DIVMODE_A {
     type Ux = u8;
 }
+impl crate::IsEnum for DIVMODE_A {}
 #[doc = "Field `DIVMODE` reader - "]
 pub type DIVMODE_R = crate::FieldReader<DIVMODE_A>;
 impl DIVMODE_R {
@@ -78,7 +79,7 @@ impl DIVMODE_R {
     }
 }
 #[doc = "Field `DIVMODE` writer - "]
-pub type DIVMODE_W<'a, REG> = crate::FieldWriterSafe<'a, REG, 2, DIVMODE_A>;
+pub type DIVMODE_W<'a, REG> = crate::FieldWriter<'a, REG, 2, DIVMODE_A, crate::Safe>;
 impl<'a, REG> DIVMODE_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,

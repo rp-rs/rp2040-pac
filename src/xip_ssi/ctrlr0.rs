@@ -42,6 +42,7 @@ impl From<TMOD_A> for u8 {
 impl crate::FieldSpec for TMOD_A {
     type Ux = u8;
 }
+impl crate::IsEnum for TMOD_A {}
 #[doc = "Field `TMOD` reader - Transfer mode"]
 pub type TMOD_R = crate::FieldReader<TMOD_A>;
 impl TMOD_R {
@@ -78,7 +79,7 @@ impl TMOD_R {
     }
 }
 #[doc = "Field `TMOD` writer - Transfer mode"]
-pub type TMOD_W<'a, REG> = crate::FieldWriterSafe<'a, REG, 2, TMOD_A>;
+pub type TMOD_W<'a, REG> = crate::FieldWriter<'a, REG, 2, TMOD_A, crate::Safe>;
 impl<'a, REG> TMOD_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
@@ -147,6 +148,7 @@ impl From<SPI_FRF_A> for u8 {
 impl crate::FieldSpec for SPI_FRF_A {
     type Ux = u8;
 }
+impl crate::IsEnum for SPI_FRF_A {}
 #[doc = "Field `SPI_FRF` reader - SPI frame format"]
 pub type SPI_FRF_R = crate::FieldReader<SPI_FRF_A>;
 impl SPI_FRF_R {

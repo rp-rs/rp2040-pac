@@ -58,6 +58,7 @@ impl From<PERFSEL3_A> for u8 {
 impl crate::FieldSpec for PERFSEL3_A {
     type Ux = u8;
 }
+impl crate::IsEnum for PERFSEL3_A {}
 #[doc = "Field `PERFSEL3` reader - Select an event for PERFCTR3. Count either contested accesses, or all accesses, on a downstream port of the main crossbar."]
 pub type PERFSEL3_R = crate::FieldReader<PERFSEL3_A>;
 impl PERFSEL3_R {
