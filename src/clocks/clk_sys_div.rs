@@ -35,16 +35,6 @@ impl W {
     pub fn int(&mut self) -> INT_W<CLK_SYS_DIV_SPEC> {
         INT_W::new(self, 8)
     }
-    #[doc = r" Writes raw bits to the register."]
-    #[doc = r""]
-    #[doc = r" # Safety"]
-    #[doc = r""]
-    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.bits = bits;
-        self
-    }
 }
 #[doc = "Clock divisor, can be changed on-the-fly  
 
@@ -57,6 +47,7 @@ impl crate::RegisterSpec for CLK_SYS_DIV_SPEC {
 impl crate::Readable for CLK_SYS_DIV_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`clk_sys_div::W`](W) writer structure"]
 impl crate::Writable for CLK_SYS_DIV_SPEC {
+    type Safety = crate::Unsafe;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }

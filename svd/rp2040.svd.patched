@@ -282,14 +282,14 @@
             <field>
               <name>DFS_32</name>
               <description>Data frame size in 32b transfer mode\n
-                Value of n -> n+1 clocks per frame.</description>
+                Value of n -&gt; n+1 clocks per frame.</description>
               <bitRange>[20:16]</bitRange>
               <access>read-write</access>
             </field>
             <field>
               <name>CFS</name>
               <description>Control frame size\n
-                Value of n -> n+1 clocks per frame.</description>
+                Value of n -&gt; n+1 clocks per frame.</description>
               <bitRange>[15:12]</bitRange>
               <access>read-write</access>
             </field>
@@ -422,8 +422,8 @@
             <field>
               <name>SER</name>
               <description>For each bit:\n
-                0 -> slave not selected\n
-                1 -> slave selected</description>
+                0 -&gt; slave not selected\n
+                1 -&gt; slave selected</description>
               <bitRange>[0:0]</bitRange>
               <access>read-write</access>
             </field>
@@ -1347,7 +1347,7 @@
           <fields>
             <field>
               <name>INT</name>
-              <description>Integer component of the divisor, 0 -> divide by 2^16</description>
+              <description>Integer component of the divisor, 0 -&gt; divide by 2^16</description>
               <bitRange>[31:8]</bitRange>
               <access>read-write</access>
             </field>
@@ -1467,7 +1467,7 @@
           <fields>
             <field>
               <name>INT</name>
-              <description>Integer component of the divisor, 0 -> divide by 2^16</description>
+              <description>Integer component of the divisor, 0 -&gt; divide by 2^16</description>
               <bitRange>[31:8]</bitRange>
               <access>read-write</access>
             </field>
@@ -1587,7 +1587,7 @@
           <fields>
             <field>
               <name>INT</name>
-              <description>Integer component of the divisor, 0 -> divide by 2^16</description>
+              <description>Integer component of the divisor, 0 -&gt; divide by 2^16</description>
               <bitRange>[31:8]</bitRange>
               <access>read-write</access>
             </field>
@@ -1707,7 +1707,7 @@
           <fields>
             <field>
               <name>INT</name>
-              <description>Integer component of the divisor, 0 -> divide by 2^16</description>
+              <description>Integer component of the divisor, 0 -&gt; divide by 2^16</description>
               <bitRange>[31:8]</bitRange>
               <access>read-write</access>
             </field>
@@ -1783,7 +1783,7 @@
           <fields>
             <field>
               <name>INT</name>
-              <description>Integer component of the divisor, 0 -> divide by 2^16</description>
+              <description>Integer component of the divisor, 0 -&gt; divide by 2^16</description>
               <bitRange>[9:8]</bitRange>
               <access>read-write</access>
             </field>
@@ -1861,7 +1861,7 @@
           <fields>
             <field>
               <name>INT</name>
-              <description>Integer component of the divisor, 0 -> divide by 2^16</description>
+              <description>Integer component of the divisor, 0 -&gt; divide by 2^16</description>
               <bitRange>[31:8]</bitRange>
               <access>read-write</access>
             </field>
@@ -2019,7 +2019,7 @@
           <fields>
             <field>
               <name>INT</name>
-              <description>Integer component of the divisor, 0 -> divide by 2^16</description>
+              <description>Integer component of the divisor, 0 -&gt; divide by 2^16</description>
               <bitRange>[9:8]</bitRange>
               <access>read-write</access>
             </field>
@@ -2107,7 +2107,7 @@
           <fields>
             <field>
               <name>INT</name>
-              <description>Integer component of the divisor, 0 -> divide by 2^16</description>
+              <description>Integer component of the divisor, 0 -&gt; divide by 2^16</description>
               <bitRange>[9:8]</bitRange>
               <access>read-write</access>
             </field>
@@ -2195,7 +2195,7 @@
           <fields>
             <field>
               <name>INT</name>
-              <description>Integer component of the divisor, 0 -> divide by 2^16</description>
+              <description>Integer component of the divisor, 0 -&gt; divide by 2^16</description>
               <bitRange>[31:8]</bitRange>
               <access>read-write</access>
             </field>
@@ -2241,7 +2241,7 @@
             <field>
               <name>TIMEOUT</name>
               <description>This is expressed as a number of clk_ref cycles\n
-                and must be >= 2x clk_ref_freq/min_clk_tst_freq</description>
+                and must be &gt;= 2x clk_ref_freq/min_clk_tst_freq</description>
               <bitRange>[7:0]</bitRange>
               <access>read-write</access>
             </field>
@@ -4271,7 +4271,7 @@
               </field>
               <field>
                 <name>FUNCSEL</name>
-                <description>0-31 -> selects pin function according to the GPIO table. Not all options are valid for all GPIO pins.</description>
+                <description>0-31 -&gt; selects pin function according to the GPIO table. Not all options are valid for all GPIO pins.</description>
                 <bitRange>[4:0]</bitRange>
                 <access>read-write</access>
                 <enumeratedValues>
@@ -6258,7 +6258,7 @@
               </field>
               <field>
                 <name>FUNCSEL</name>
-                <description>0-31 -> selects pin function according to the gpio table\n
+                <description>0-31 -&gt; selects pin function according to the gpio table\n
                 31 == NULL</description>
                 <bitRange>[4:0]</bitRange>
                 <access>read-write</access>
@@ -7598,7 +7598,7 @@
               <enumeratedValues>
                 <enumeratedValue>
                   <name>3v3</name>
-                  <description>Set voltage to 3.3V (DVDD >= 2V5)</description>
+                  <description>Set voltage to 3.3V (DVDD &gt;= 2V5)</description>
                   <value>0</value>
                 </enumeratedValue>
                 <enumeratedValue>
@@ -7843,7 +7843,7 @@
               <enumeratedValues>
                 <enumeratedValue>
                   <name>3v3</name>
-                  <description>Set voltage to 3.3V (DVDD >= 2V5)</description>
+                  <description>Set voltage to 3.3V (DVDD &gt;= 2V5)</description>
                   <value>0</value>
                 </enumeratedValue>
                 <enumeratedValue>
@@ -9379,7 +9379,7 @@
           <fields>
             <field>
               <name>RXIFLSEL</name>
-              <description>Receive interrupt FIFO level select. The trigger points for the receive interrupt are as follows: b000 = Receive FIFO becomes >= 1 / 8 full b001 = Receive FIFO becomes >= 1 / 4 full b010 = Receive FIFO becomes >= 1 / 2 full b011 = Receive FIFO becomes >= 3 / 4 full b100 = Receive FIFO becomes >= 7 / 8 full b101-b111 = reserved.</description>
+              <description>Receive interrupt FIFO level select. The trigger points for the receive interrupt are as follows: b000 = Receive FIFO becomes &gt;= 1 / 8 full b001 = Receive FIFO becomes &gt;= 1 / 4 full b010 = Receive FIFO becomes &gt;= 1 / 2 full b011 = Receive FIFO becomes &gt;= 3 / 4 full b100 = Receive FIFO becomes &gt;= 7 / 8 full b101-b111 = reserved.</description>
               <bitRange>[5:3]</bitRange>
               <access>read-write</access>
             </field>
@@ -10641,7 +10641,7 @@
               <name>IC_SAR</name>
               <description>The IC_SAR holds the slave address when the I2C is operating as a slave. For 7-bit addressing, only IC_SAR[6:0] is used.\n\n
                 This register can be written only when the I2C interface is disabled, which corresponds to the IC_ENABLE[0] register being set to 0. Writes at other times have no effect.\n\n
-                Note: The default values cannot be any of the reserved address locations: that is, 0x00 to 0x07, or 0x78 to 0x7f. The correct operation of the device is not guaranteed if you program the IC_SAR or IC_TAR to a reserved value. Refer to &lt;&lt;table_I2C_firstbyte_bit_defs>> for a complete list of these reserved values.</description>
+                Note: The default values cannot be any of the reserved address locations: that is, 0x00 to 0x07, or 0x78 to 0x7f. The correct operation of the device is not guaranteed if you program the IC_SAR or IC_TAR to a reserved value. Refer to &lt;&lt;table_I2C_firstbyte_bit_defs&gt;&gt; for a complete list of these reserved values.</description>
               <bitRange>[9:0]</bitRange>
               <access>read-write</access>
             </field>
@@ -12860,7 +12860,7 @@
           <fields>
             <field>
               <name>THRESH</name>
-              <description>DREQ/IRQ asserted when level >= threshold</description>
+              <description>DREQ/IRQ asserted when level &gt;= threshold</description>
               <bitRange>[27:24]</bitRange>
               <access>read-write</access>
             </field>
@@ -13075,7 +13075,7 @@
                 <name>PH_ADV</name>
                 <description>Advance the phase of the counter by 1 count, while it is running.\n
                 Self-clearing. Write a 1, and poll until low. Counter must be running\n
-                at less than full speed (div_int + div_frac / 16 > 1)</description>
+                at less than full speed (div_int + div_frac / 16 &gt; 1)</description>
                 <bitRange>[7:7]</bitRange>
                 <access>read-write</access>
                 <modifiedWriteValues>clear</modifiedWriteValues>
@@ -14865,7 +14865,7 @@
                 <name>TREQ_SEL</name>
                 <description>Select a Transfer Request signal.\n
                 The channel uses the transfer request signal to pace its data transfer rate. Sources for TREQ signals are internal (TIMERS) or external (DREQ, a Data Request from the system).\n
-                0x0 to 0x3a -> select DREQ n as TREQ</description>
+                0x0 to 0x3a -&gt; select DREQ n as TREQ</description>
                 <bitRange>[20:15]</bitRange>
                 <access>read-write</access>
                 <enumeratedValues>
@@ -15112,7 +15112,7 @@
               </field>
               <field>
                 <name>RING_SIZE</name>
-                <description>Size of address wrap region. If 0, don't wrap. For values n > 0, only the lower n bits of the address will change. This wraps the address on a (1 &lt;&lt; n) byte boundary, facilitating access to naturally-aligned ring buffers.\n\n
+                <description>Size of address wrap region. If 0, don't wrap. For values n &gt; 0, only the lower n bits of the address will change. This wraps the address on a (1 &lt;&lt; n) byte boundary, facilitating access to naturally-aligned ring buffers.\n\n
                 Ring sizes between 2 and 32768 bytes are possible. This can apply to either read or write addresses, based on value of RING_SEL.</description>
                 <bitRange>[9:6]</bitRange>
                 <access>read-write</access>
@@ -15233,7 +15233,7 @@
                 <name>TREQ_SEL</name>
                 <description>Select a Transfer Request signal.\n
                 The channel uses the transfer request signal to pace its data transfer rate. Sources for TREQ signals are internal (TIMERS) or external (DREQ, a Data Request from the system).\n
-                0x0 to 0x3a -> select DREQ n as TREQ</description>
+                0x0 to 0x3a -&gt; select DREQ n as TREQ</description>
                 <bitRange>[20:15]</bitRange>
                 <access>read-write</access>
                 <enumeratedValues>
@@ -15480,7 +15480,7 @@
               </field>
               <field>
                 <name>RING_SIZE</name>
-                <description>Size of address wrap region. If 0, don't wrap. For values n > 0, only the lower n bits of the address will change. This wraps the address on a (1 &lt;&lt; n) byte boundary, facilitating access to naturally-aligned ring buffers.\n\n
+                <description>Size of address wrap region. If 0, don't wrap. For values n &gt; 0, only the lower n bits of the address will change. This wraps the address on a (1 &lt;&lt; n) byte boundary, facilitating access to naturally-aligned ring buffers.\n\n
                 Ring sizes between 2 and 32768 bytes are possible. This can apply to either read or write addresses, based on value of RING_SEL.</description>
                 <bitRange>[9:6]</bitRange>
                 <access>read-write</access>
@@ -15624,7 +15624,7 @@
                 <name>TREQ_SEL</name>
                 <description>Select a Transfer Request signal.\n
                 The channel uses the transfer request signal to pace its data transfer rate. Sources for TREQ signals are internal (TIMERS) or external (DREQ, a Data Request from the system).\n
-                0x0 to 0x3a -> select DREQ n as TREQ</description>
+                0x0 to 0x3a -&gt; select DREQ n as TREQ</description>
                 <bitRange>[20:15]</bitRange>
                 <access>read-write</access>
                 <enumeratedValues>
@@ -15871,7 +15871,7 @@
               </field>
               <field>
                 <name>RING_SIZE</name>
-                <description>Size of address wrap region. If 0, don't wrap. For values n > 0, only the lower n bits of the address will change. This wraps the address on a (1 &lt;&lt; n) byte boundary, facilitating access to naturally-aligned ring buffers.\n\n
+                <description>Size of address wrap region. If 0, don't wrap. For values n &gt; 0, only the lower n bits of the address will change. This wraps the address on a (1 &lt;&lt; n) byte boundary, facilitating access to naturally-aligned ring buffers.\n\n
                 Ring sizes between 2 and 32768 bytes are possible. This can apply to either read or write addresses, based on value of RING_SEL.</description>
                 <bitRange>[9:6]</bitRange>
                 <access>read-write</access>
@@ -16015,7 +16015,7 @@
                 <name>TREQ_SEL</name>
                 <description>Select a Transfer Request signal.\n
                 The channel uses the transfer request signal to pace its data transfer rate. Sources for TREQ signals are internal (TIMERS) or external (DREQ, a Data Request from the system).\n
-                0x0 to 0x3a -> select DREQ n as TREQ</description>
+                0x0 to 0x3a -&gt; select DREQ n as TREQ</description>
                 <bitRange>[20:15]</bitRange>
                 <access>read-write</access>
                 <enumeratedValues>
@@ -16262,7 +16262,7 @@
               </field>
               <field>
                 <name>RING_SIZE</name>
-                <description>Size of address wrap region. If 0, don't wrap. For values n > 0, only the lower n bits of the address will change. This wraps the address on a (1 &lt;&lt; n) byte boundary, facilitating access to naturally-aligned ring buffers.\n\n
+                <description>Size of address wrap region. If 0, don't wrap. For values n &gt; 0, only the lower n bits of the address will change. This wraps the address on a (1 &lt;&lt; n) byte boundary, facilitating access to naturally-aligned ring buffers.\n\n
                 Ring sizes between 2 and 32768 bytes are possible. This can apply to either read or write addresses, based on value of RING_SEL.</description>
                 <bitRange>[9:6]</bitRange>
                 <access>read-write</access>
@@ -17712,7 +17712,7 @@
           <fields>
             <field>
               <name>INT_EP_ACTIVE</name>
-              <description>Host: Enable interrupt endpoint 1 -> 15</description>
+              <description>Host: Enable interrupt endpoint 1 -&gt; 15</description>
               <bitRange>[15:1]</bitRange>
               <access>read-write</access>
             </field>
@@ -19733,8 +19733,8 @@
         <register>
           <name>INPUT_SYNC_BYPASS</name>
           <description>There is a 2-flipflop synchronizer on each GPIO input, which protects PIO logic from metastabilities. This increases input delay, and for fast synchronous IO (e.g. SPI) these synchronizers may need to be bypassed. Each bit in this register corresponds to one GPIO.\n
-            0 -> input is synchronized (default)\n
-            1 -> synchronizer is bypassed\n
+            0 -&gt; input is synchronized (default)\n
+            1 -&gt; synchronizer is bypassed\n
             If in doubt, leave this register as all zeroes.</description>
           <addressOffset>0x38</addressOffset>
           <access>read-write</access>
@@ -20417,7 +20417,7 @@
           <fields>
             <field>
               <name>GPIO_OUT</name>
-              <description>Set output level (1/0 -> high/low) for GPIO0...29.\n
+              <description>Set output level (1/0 -&gt; high/low) for GPIO0...29.\n
                 Reading back gives the last value written, NOT the input value from the pins.\n
                 If core 0 and core 1 both write to GPIO_OUT simultaneously (or to a SET/CLR/XOR alias),\n
                 the result is as though the write from core 0 took place first,\n
@@ -20477,7 +20477,7 @@
           <fields>
             <field>
               <name>GPIO_OE</name>
-              <description>Set output enable (1/0 -> output/input) for GPIO0...29.\n
+              <description>Set output enable (1/0 -&gt; output/input) for GPIO0...29.\n
                 Reading back gives the last value written.\n
                 If core 0 and core 1 both write to GPIO_OE simultaneously (or to a SET/CLR/XOR alias),\n
                 the result is as though the write from core 0 took place first,\n
@@ -20537,7 +20537,7 @@
           <fields>
             <field>
               <name>GPIO_HI_OUT</name>
-              <description>Set output level (1/0 -> high/low) for QSPI IO0...5.\n
+              <description>Set output level (1/0 -&gt; high/low) for QSPI IO0...5.\n
                 Reading back gives the last value written, NOT the input value from the pins.\n
                 If core 0 and core 1 both write to GPIO_HI_OUT simultaneously (or to a SET/CLR/XOR alias),\n
                 the result is as though the write from core 0 took place first,\n
@@ -20597,7 +20597,7 @@
           <fields>
             <field>
               <name>GPIO_HI_OE</name>
-              <description>Set output enable (1/0 -> output/input) for QSPI IO0...5.\n
+              <description>Set output enable (1/0 -&gt; output/input) for QSPI IO0...5.\n
                 Reading back gives the last value written.\n
                 If core 0 and core 1 both write to GPIO_HI_OE simultaneously (or to a SET/CLR/XOR alias),\n
                 the result is as though the write from core 0 took place first,\n
@@ -20652,9 +20652,9 @@
         <register>
           <name>FIFO_ST</name>
           <description>Status register for inter-core FIFOs (mailboxes).\n
-            There is one FIFO in the core 0 -> core 1 direction, and one core 1 -> core 0. Both are 32 bits wide and 8 words deep.\n
-            Core 0 can see the read side of the 1->0 FIFO (RX), and the write side of 0->1 FIFO (TX).\n
-            Core 1 can see the read side of the 0->1 FIFO (RX), and the write side of 1->0 FIFO (TX).\n
+            There is one FIFO in the core 0 -&gt; core 1 direction, and one core 1 -&gt; core 0. Both are 32 bits wide and 8 words deep.\n
+            Core 0 can see the read side of the 1-&gt;0 FIFO (RX), and the write side of 0-&gt;1 FIFO (TX).\n
+            Core 1 can see the read side of the 0-&gt;1 FIFO (RX), and the write side of 1-&gt;0 FIFO (TX).\n
             The SIO IRQ for each core is the logical OR of the VLD, WOF and ROE fields of its FIFO_ST register.</description>
           <addressOffset>0x50</addressOffset>
           <resetValue>0x00000002</resetValue>

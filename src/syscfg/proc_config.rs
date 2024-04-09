@@ -65,16 +65,6 @@ impl W {
     pub fn proc1_dap_instid(&mut self) -> PROC1_DAP_INSTID_W<PROC_CONFIG_SPEC> {
         PROC1_DAP_INSTID_W::new(self, 28)
     }
-    #[doc = r" Writes raw bits to the register."]
-    #[doc = r""]
-    #[doc = r" # Safety"]
-    #[doc = r""]
-    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.bits = bits;
-        self
-    }
 }
 #[doc = "Configuration for processors  
 
@@ -87,6 +77,7 @@ impl crate::RegisterSpec for PROC_CONFIG_SPEC {
 impl crate::Readable for PROC_CONFIG_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`proc_config::W`](W) writer structure"]
 impl crate::Writable for PROC_CONFIG_SPEC {
+    type Safety = crate::Unsafe;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }

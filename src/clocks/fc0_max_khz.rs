@@ -20,16 +20,6 @@ impl W {
     pub fn fc0_max_khz(&mut self) -> FC0_MAX_KHZ_W<FC0_MAX_KHZ_SPEC> {
         FC0_MAX_KHZ_W::new(self, 0)
     }
-    #[doc = r" Writes raw bits to the register."]
-    #[doc = r""]
-    #[doc = r" # Safety"]
-    #[doc = r""]
-    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.bits = bits;
-        self
-    }
 }
 #[doc = "Maximum pass frequency in kHz. This is optional. Set to 0x1ffffff if you are not using the pass/fail flags  
 
@@ -42,6 +32,7 @@ impl crate::RegisterSpec for FC0_MAX_KHZ_SPEC {
 impl crate::Readable for FC0_MAX_KHZ_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`fc0_max_khz::W`](W) writer structure"]
 impl crate::Writable for FC0_MAX_KHZ_SPEC {
+    type Safety = crate::Unsafe;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }

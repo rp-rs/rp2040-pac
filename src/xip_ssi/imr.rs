@@ -95,16 +95,6 @@ impl W {
     pub fn mstim(&mut self) -> MSTIM_W<IMR_SPEC> {
         MSTIM_W::new(self, 5)
     }
-    #[doc = r" Writes raw bits to the register."]
-    #[doc = r""]
-    #[doc = r" # Safety"]
-    #[doc = r""]
-    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.bits = bits;
-        self
-    }
 }
 #[doc = "Interrupt mask  
 
@@ -117,6 +107,7 @@ impl crate::RegisterSpec for IMR_SPEC {
 impl crate::Readable for IMR_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`imr::W`](W) writer structure"]
 impl crate::Writable for IMR_SPEC {
+    type Safety = crate::Unsafe;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }

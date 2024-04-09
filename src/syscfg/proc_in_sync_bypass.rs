@@ -20,16 +20,6 @@ impl W {
     pub fn proc_in_sync_bypass(&mut self) -> PROC_IN_SYNC_BYPASS_W<PROC_IN_SYNC_BYPASS_SPEC> {
         PROC_IN_SYNC_BYPASS_W::new(self, 0)
     }
-    #[doc = r" Writes raw bits to the register."]
-    #[doc = r""]
-    #[doc = r" # Safety"]
-    #[doc = r""]
-    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.bits = bits;
-        self
-    }
 }
 #[doc = "For each bit, if 1, bypass the input synchronizer between that GPIO  
  and the GPIO input register in the SIO. The input synchronizers should  
@@ -46,6 +36,7 @@ impl crate::RegisterSpec for PROC_IN_SYNC_BYPASS_SPEC {
 impl crate::Readable for PROC_IN_SYNC_BYPASS_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`proc_in_sync_bypass::W`](W) writer structure"]
 impl crate::Writable for PROC_IN_SYNC_BYPASS_SPEC {
+    type Safety = crate::Unsafe;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }

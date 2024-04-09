@@ -2,8 +2,6 @@
 pub type R = crate::R<IC_DMA_CR_SPEC>;
 #[doc = "Register `IC_DMA_CR` writer"]
 pub type W = crate::W<IC_DMA_CR_SPEC>;
-#[doc = "Field `RDMAE` reader - Receive DMA Enable. This bit enables/disables the receive FIFO DMA channel. Reset value: 0x0"]
-pub type RDMAE_R = crate::BitReader<RDMAE_A>;
 #[doc = "Receive DMA Enable. This bit enables/disables the receive FIFO DMA channel. Reset value: 0x0  
 
 Value on reset: 0"]
@@ -20,6 +18,8 @@ impl From<RDMAE_A> for bool {
         variant as u8 != 0
     }
 }
+#[doc = "Field `RDMAE` reader - Receive DMA Enable. This bit enables/disables the receive FIFO DMA channel. Reset value: 0x0"]
+pub type RDMAE_R = crate::BitReader<RDMAE_A>;
 impl RDMAE_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
@@ -57,8 +57,6 @@ where
         self.variant(RDMAE_A::ENABLED)
     }
 }
-#[doc = "Field `TDMAE` reader - Transmit DMA Enable. This bit enables/disables the transmit FIFO DMA channel. Reset value: 0x0"]
-pub type TDMAE_R = crate::BitReader<TDMAE_A>;
 #[doc = "Transmit DMA Enable. This bit enables/disables the transmit FIFO DMA channel. Reset value: 0x0  
 
 Value on reset: 0"]
@@ -75,6 +73,8 @@ impl From<TDMAE_A> for bool {
         variant as u8 != 0
     }
 }
+#[doc = "Field `TDMAE` reader - Transmit DMA Enable. This bit enables/disables the transmit FIFO DMA channel. Reset value: 0x0"]
+pub type TDMAE_R = crate::BitReader<TDMAE_A>;
 impl TDMAE_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
@@ -137,16 +137,6 @@ impl W {
     pub fn tdmae(&mut self) -> TDMAE_W<IC_DMA_CR_SPEC> {
         TDMAE_W::new(self, 1)
     }
-    #[doc = r" Writes raw bits to the register."]
-    #[doc = r""]
-    #[doc = r" # Safety"]
-    #[doc = r""]
-    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.bits = bits;
-        self
-    }
 }
 #[doc = "DMA Control Register  
 
@@ -161,6 +151,7 @@ impl crate::RegisterSpec for IC_DMA_CR_SPEC {
 impl crate::Readable for IC_DMA_CR_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`ic_dma_cr::W`](W) writer structure"]
 impl crate::Writable for IC_DMA_CR_SPEC {
+    type Safety = crate::Unsafe;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }

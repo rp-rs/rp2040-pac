@@ -1,5 +1,5 @@
-#[doc = r"Register block"]
 #[repr(C)]
+#[doc = "Register block"]
 pub struct RegisterBlock {
     addr_endp: ADDR_ENDP,
     host_addr_endp: [HOST_ADDR_ENDP; 15],

@@ -2,8 +2,6 @@
 pub type R = crate::R<FC0_SRC_SPEC>;
 #[doc = "Register `FC0_SRC` writer"]
 pub type W = crate::W<FC0_SRC_SPEC>;
-#[doc = "Field `FC0_SRC` reader - "]
-pub type FC0_SRC_R = crate::FieldReader<FC0_SRC_A>;
 #[doc = "  
 
 Value on reset: 0"]
@@ -48,6 +46,8 @@ impl From<FC0_SRC_A> for u8 {
 impl crate::FieldSpec for FC0_SRC_A {
     type Ux = u8;
 }
+#[doc = "Field `FC0_SRC` reader - "]
+pub type FC0_SRC_R = crate::FieldReader<FC0_SRC_A>;
 impl FC0_SRC_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
@@ -233,16 +233,6 @@ impl W {
     pub fn fc0_src(&mut self) -> FC0_SRC_W<FC0_SRC_SPEC> {
         FC0_SRC_W::new(self, 0)
     }
-    #[doc = r" Writes raw bits to the register."]
-    #[doc = r""]
-    #[doc = r" # Safety"]
-    #[doc = r""]
-    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.bits = bits;
-        self
-    }
 }
 #[doc = "Clock sent to frequency counter, set to 0 when not required  
  Writing to this register initiates the frequency count  
@@ -256,6 +246,7 @@ impl crate::RegisterSpec for FC0_SRC_SPEC {
 impl crate::Readable for FC0_SRC_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`fc0_src::W`](W) writer structure"]
 impl crate::Writable for FC0_SRC_SPEC {
+    type Safety = crate::Unsafe;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }

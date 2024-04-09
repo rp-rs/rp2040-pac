@@ -1,5 +1,5 @@
-#[doc = r"Register block"]
 #[repr(C)]
+#[doc = "Register block"]
 pub struct RegisterBlock {
     setup_packet_low: SETUP_PACKET_LOW,
     setup_packet_high: SETUP_PACKET_HIGH,

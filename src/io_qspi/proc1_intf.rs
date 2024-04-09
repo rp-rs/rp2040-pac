@@ -365,16 +365,6 @@ impl W {
     pub fn gpio_qspi_sd3_edge_high(&mut self) -> GPIO_QSPI_SD3_EDGE_HIGH_W<PROC1_INTF_SPEC> {
         GPIO_QSPI_SD3_EDGE_HIGH_W::new(self, 23)
     }
-    #[doc = r" Writes raw bits to the register."]
-    #[doc = r""]
-    #[doc = r" # Safety"]
-    #[doc = r""]
-    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.bits = bits;
-        self
-    }
 }
 #[doc = "Interrupt Force for proc1  
 
@@ -387,6 +377,7 @@ impl crate::RegisterSpec for PROC1_INTF_SPEC {
 impl crate::Readable for PROC1_INTF_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`proc1_intf::W`](W) writer structure"]
 impl crate::Writable for PROC1_INTF_SPEC {
+    type Safety = crate::Unsafe;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }

@@ -35,16 +35,6 @@ impl W {
     pub fn postdiv1(&mut self) -> POSTDIV1_W<PRIM_SPEC> {
         POSTDIV1_W::new(self, 16)
     }
-    #[doc = r" Writes raw bits to the register."]
-    #[doc = r""]
-    #[doc = r" # Safety"]
-    #[doc = r""]
-    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.bits = bits;
-        self
-    }
 }
 #[doc = "Controls the PLL post dividers for the primary output  
  (note: this PLL does not have a secondary output)  
@@ -59,6 +49,7 @@ impl crate::RegisterSpec for PRIM_SPEC {
 impl crate::Readable for PRIM_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`prim::W`](W) writer structure"]
 impl crate::Writable for PRIM_SPEC {
+    type Safety = crate::Unsafe;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }

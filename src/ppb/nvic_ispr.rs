@@ -56,16 +56,6 @@ impl W {
     pub fn setpend(&mut self) -> SETPEND_W<NVIC_ISPR_SPEC> {
         SETPEND_W::new(self, 0)
     }
-    #[doc = r" Writes raw bits to the register."]
-    #[doc = r""]
-    #[doc = r" # Safety"]
-    #[doc = r""]
-    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.bits = bits;
-        self
-    }
 }
 #[doc = "The NVIC_ISPR forces interrupts into the pending state, and shows which interrupts are pending.  
 
@@ -78,6 +68,7 @@ impl crate::RegisterSpec for NVIC_ISPR_SPEC {
 impl crate::Readable for NVIC_ISPR_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`nvic_ispr::W`](W) writer structure"]
 impl crate::Writable for NVIC_ISPR_SPEC {
+    type Safety = crate::Unsafe;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }

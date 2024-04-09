@@ -95,16 +95,6 @@ impl W {
     pub fn overcurr_detect_en(&mut self) -> OVERCURR_DETECT_EN_W<USB_PWR_SPEC> {
         OVERCURR_DETECT_EN_W::new(self, 5)
     }
-    #[doc = r" Writes raw bits to the register."]
-    #[doc = r""]
-    #[doc = r" # Safety"]
-    #[doc = r""]
-    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.bits = bits;
-        self
-    }
 }
 #[doc = "Overrides for the power signals in the event that the VBUS signals are not hooked up to GPIO. Set the value of the override and then the override enable to switch over to the override value.  
 
@@ -117,6 +107,7 @@ impl crate::RegisterSpec for USB_PWR_SPEC {
 impl crate::Readable for USB_PWR_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`usb_pwr::W`](W) writer structure"]
 impl crate::Writable for USB_PWR_SPEC {
+    type Safety = crate::Unsafe;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }

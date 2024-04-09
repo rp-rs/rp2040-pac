@@ -12,18 +12,7 @@ impl core::fmt::Debug for crate::generic::Reg<CH_AL3_READ_ADDR_TRIG_SPEC> {
         core::fmt::Debug::fmt(&self.read(), f)
     }
 }
-impl W {
-    #[doc = r" Writes raw bits to the register."]
-    #[doc = r""]
-    #[doc = r" # Safety"]
-    #[doc = r""]
-    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.bits = bits;
-        self
-    }
-}
+impl W {}
 #[doc = "Alias for channel 0 READ_ADDR register  
  This is a trigger register (0xc). Writing a nonzero value will  
  reload the channel counter and start the channel.  
@@ -37,6 +26,7 @@ impl crate::RegisterSpec for CH_AL3_READ_ADDR_TRIG_SPEC {
 impl crate::Readable for CH_AL3_READ_ADDR_TRIG_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`ch_al3_read_addr_trig::W`](W) writer structure"]
 impl crate::Writable for CH_AL3_READ_ADDR_TRIG_SPEC {
+    type Safety = crate::Unsafe;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }

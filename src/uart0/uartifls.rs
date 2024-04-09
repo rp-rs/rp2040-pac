@@ -35,16 +35,6 @@ impl W {
     pub fn rxiflsel(&mut self) -> RXIFLSEL_W<UARTIFLS_SPEC> {
         RXIFLSEL_W::new(self, 3)
     }
-    #[doc = r" Writes raw bits to the register."]
-    #[doc = r""]
-    #[doc = r" # Safety"]
-    #[doc = r""]
-    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.bits = bits;
-        self
-    }
 }
 #[doc = "Interrupt FIFO Level Select Register, UARTIFLS  
 
@@ -57,6 +47,7 @@ impl crate::RegisterSpec for UARTIFLS_SPEC {
 impl crate::Readable for UARTIFLS_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`uartifls::W`](W) writer structure"]
 impl crate::Writable for UARTIFLS_SPEC {
+    type Safety = crate::Unsafe;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }

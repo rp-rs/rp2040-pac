@@ -65,16 +65,6 @@ impl W {
     pub fn dma_w(&mut self) -> DMA_W_W<BUS_PRIORITY_SPEC> {
         DMA_W_W::new(self, 12)
     }
-    #[doc = r" Writes raw bits to the register."]
-    #[doc = r""]
-    #[doc = r" # Safety"]
-    #[doc = r""]
-    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.bits = bits;
-        self
-    }
 }
 #[doc = "Set the priority of each master for bus arbitration.  
 
@@ -87,6 +77,7 @@ impl crate::RegisterSpec for BUS_PRIORITY_SPEC {
 impl crate::Readable for BUS_PRIORITY_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`bus_priority::W`](W) writer structure"]
 impl crate::Writable for BUS_PRIORITY_SPEC {
+    type Safety = crate::Unsafe;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }

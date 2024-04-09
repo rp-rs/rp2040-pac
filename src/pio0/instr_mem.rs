@@ -9,16 +9,6 @@ impl W {
     pub fn instr_mem0(&mut self) -> INSTR_MEM0_W<INSTR_MEM_SPEC> {
         INSTR_MEM0_W::new(self, 0)
     }
-    #[doc = r" Writes raw bits to the register."]
-    #[doc = r""]
-    #[doc = r" # Safety"]
-    #[doc = r""]
-    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.bits = bits;
-        self
-    }
 }
 #[doc = "Write-only access to instruction memory location %s  
 
@@ -29,6 +19,7 @@ impl crate::RegisterSpec for INSTR_MEM_SPEC {
 }
 #[doc = "`write(|w| ..)` method takes [`instr_mem::W`](W) writer structure"]
 impl crate::Writable for INSTR_MEM_SPEC {
+    type Safety = crate::Unsafe;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }

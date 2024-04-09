@@ -110,16 +110,6 @@ impl W {
     pub fn sps(&mut self) -> SPS_W<UARTLCR_H_SPEC> {
         SPS_W::new(self, 7)
     }
-    #[doc = r" Writes raw bits to the register."]
-    #[doc = r""]
-    #[doc = r" # Safety"]
-    #[doc = r""]
-    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.bits = bits;
-        self
-    }
 }
 #[doc = "Line Control Register, UARTLCR_H  
 
@@ -132,6 +122,7 @@ impl crate::RegisterSpec for UARTLCR_H_SPEC {
 impl crate::Readable for UARTLCR_H_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`uartlcr_h::W`](W) writer structure"]
 impl crate::Writable for UARTLCR_H_SPEC {
+    type Safety = crate::Unsafe;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }

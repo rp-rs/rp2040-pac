@@ -1,7 +1,5 @@
 #[doc = "Register `IC_STATUS` reader"]
 pub type R = crate::R<IC_STATUS_SPEC>;
-#[doc = "Field `ACTIVITY` reader - I2C Activity Status. Reset value: 0x0"]
-pub type ACTIVITY_R = crate::BitReader<ACTIVITY_A>;
 #[doc = "I2C Activity Status. Reset value: 0x0  
 
 Value on reset: 0"]
@@ -18,6 +16,8 @@ impl From<ACTIVITY_A> for bool {
         variant as u8 != 0
     }
 }
+#[doc = "Field `ACTIVITY` reader - I2C Activity Status. Reset value: 0x0"]
+pub type ACTIVITY_R = crate::BitReader<ACTIVITY_A>;
 impl ACTIVITY_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
@@ -38,8 +38,6 @@ impl ACTIVITY_R {
         *self == ACTIVITY_A::ACTIVE
     }
 }
-#[doc = "Field `TFNF` reader - Transmit FIFO Not Full. Set when the transmit FIFO contains one or more empty locations, and is cleared when the FIFO is full. - 0: Transmit FIFO is full - 1: Transmit FIFO is not full Reset value: 0x1"]
-pub type TFNF_R = crate::BitReader<TFNF_A>;
 #[doc = "Transmit FIFO Not Full. Set when the transmit FIFO contains one or more empty locations, and is cleared when the FIFO is full. - 0: Transmit FIFO is full - 1: Transmit FIFO is not full Reset value: 0x1  
 
 Value on reset: 1"]
@@ -56,6 +54,8 @@ impl From<TFNF_A> for bool {
         variant as u8 != 0
     }
 }
+#[doc = "Field `TFNF` reader - Transmit FIFO Not Full. Set when the transmit FIFO contains one or more empty locations, and is cleared when the FIFO is full. - 0: Transmit FIFO is full - 1: Transmit FIFO is not full Reset value: 0x1"]
+pub type TFNF_R = crate::BitReader<TFNF_A>;
 impl TFNF_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
@@ -76,8 +76,6 @@ impl TFNF_R {
         *self == TFNF_A::NOT_FULL
     }
 }
-#[doc = "Field `TFE` reader - Transmit FIFO Completely Empty. When the transmit FIFO is completely empty, this bit is set. When it contains one or more valid entries, this bit is cleared. This bit field does not request an interrupt. - 0: Transmit FIFO is not empty - 1: Transmit FIFO is empty Reset value: 0x1"]
-pub type TFE_R = crate::BitReader<TFE_A>;
 #[doc = "Transmit FIFO Completely Empty. When the transmit FIFO is completely empty, this bit is set. When it contains one or more valid entries, this bit is cleared. This bit field does not request an interrupt. - 0: Transmit FIFO is not empty - 1: Transmit FIFO is empty Reset value: 0x1  
 
 Value on reset: 1"]
@@ -94,6 +92,8 @@ impl From<TFE_A> for bool {
         variant as u8 != 0
     }
 }
+#[doc = "Field `TFE` reader - Transmit FIFO Completely Empty. When the transmit FIFO is completely empty, this bit is set. When it contains one or more valid entries, this bit is cleared. This bit field does not request an interrupt. - 0: Transmit FIFO is not empty - 1: Transmit FIFO is empty Reset value: 0x1"]
+pub type TFE_R = crate::BitReader<TFE_A>;
 impl TFE_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
@@ -114,8 +114,6 @@ impl TFE_R {
         *self == TFE_A::EMPTY
     }
 }
-#[doc = "Field `RFNE` reader - Receive FIFO Not Empty. This bit is set when the receive FIFO contains one or more entries; it is cleared when the receive FIFO is empty. - 0: Receive FIFO is empty - 1: Receive FIFO is not empty Reset value: 0x0"]
-pub type RFNE_R = crate::BitReader<RFNE_A>;
 #[doc = "Receive FIFO Not Empty. This bit is set when the receive FIFO contains one or more entries; it is cleared when the receive FIFO is empty. - 0: Receive FIFO is empty - 1: Receive FIFO is not empty Reset value: 0x0  
 
 Value on reset: 0"]
@@ -132,6 +130,8 @@ impl From<RFNE_A> for bool {
         variant as u8 != 0
     }
 }
+#[doc = "Field `RFNE` reader - Receive FIFO Not Empty. This bit is set when the receive FIFO contains one or more entries; it is cleared when the receive FIFO is empty. - 0: Receive FIFO is empty - 1: Receive FIFO is not empty Reset value: 0x0"]
+pub type RFNE_R = crate::BitReader<RFNE_A>;
 impl RFNE_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
@@ -152,8 +152,6 @@ impl RFNE_R {
         *self == RFNE_A::NOT_EMPTY
     }
 }
-#[doc = "Field `RFF` reader - Receive FIFO Completely Full. When the receive FIFO is completely full, this bit is set. When the receive FIFO contains one or more empty location, this bit is cleared. - 0: Receive FIFO is not full - 1: Receive FIFO is full Reset value: 0x0"]
-pub type RFF_R = crate::BitReader<RFF_A>;
 #[doc = "Receive FIFO Completely Full. When the receive FIFO is completely full, this bit is set. When the receive FIFO contains one or more empty location, this bit is cleared. - 0: Receive FIFO is not full - 1: Receive FIFO is full Reset value: 0x0  
 
 Value on reset: 0"]
@@ -170,6 +168,8 @@ impl From<RFF_A> for bool {
         variant as u8 != 0
     }
 }
+#[doc = "Field `RFF` reader - Receive FIFO Completely Full. When the receive FIFO is completely full, this bit is set. When the receive FIFO contains one or more empty location, this bit is cleared. - 0: Receive FIFO is not full - 1: Receive FIFO is full Reset value: 0x0"]
+pub type RFF_R = crate::BitReader<RFF_A>;
 impl RFF_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
@@ -190,10 +190,6 @@ impl RFF_R {
         *self == RFF_A::FULL
     }
 }
-#[doc = "Field `MST_ACTIVITY` reader - Master FSM Activity Status. When the Master Finite State Machine (FSM) is not in the IDLE state, this bit is set. - 0: Master FSM is in IDLE state so the Master part of DW_apb_i2c is not Active - 1: Master FSM is not in IDLE state so the Master part of DW_apb_i2c is Active Note: IC_STATUS\\[0\\]-that is, ACTIVITY bit-is the OR of SLV_ACTIVITY and MST_ACTIVITY bits.  
-
- Reset value: 0x0"]
-pub type MST_ACTIVITY_R = crate::BitReader<MST_ACTIVITY_A>;
 #[doc = "Master FSM Activity Status. When the Master Finite State Machine (FSM) is not in the IDLE state, this bit is set. - 0: Master FSM is in IDLE state so the Master part of DW_apb_i2c is not Active - 1: Master FSM is not in IDLE state so the Master part of DW_apb_i2c is Active Note: IC_STATUS\\[0\\]-that is, ACTIVITY bit-is the OR of SLV_ACTIVITY and MST_ACTIVITY bits.  
 
  Reset value: 0x0  
@@ -212,6 +208,10 @@ impl From<MST_ACTIVITY_A> for bool {
         variant as u8 != 0
     }
 }
+#[doc = "Field `MST_ACTIVITY` reader - Master FSM Activity Status. When the Master Finite State Machine (FSM) is not in the IDLE state, this bit is set. - 0: Master FSM is in IDLE state so the Master part of DW_apb_i2c is not Active - 1: Master FSM is not in IDLE state so the Master part of DW_apb_i2c is Active Note: IC_STATUS\\[0\\]-that is, ACTIVITY bit-is the OR of SLV_ACTIVITY and MST_ACTIVITY bits.  
+
+ Reset value: 0x0"]
+pub type MST_ACTIVITY_R = crate::BitReader<MST_ACTIVITY_A>;
 impl MST_ACTIVITY_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
@@ -232,8 +232,6 @@ impl MST_ACTIVITY_R {
         *self == MST_ACTIVITY_A::ACTIVE
     }
 }
-#[doc = "Field `SLV_ACTIVITY` reader - Slave FSM Activity Status. When the Slave Finite State Machine (FSM) is not in the IDLE state, this bit is set. - 0: Slave FSM is in IDLE state so the Slave part of DW_apb_i2c is not Active - 1: Slave FSM is not in IDLE state so the Slave part of DW_apb_i2c is Active Reset value: 0x0"]
-pub type SLV_ACTIVITY_R = crate::BitReader<SLV_ACTIVITY_A>;
 #[doc = "Slave FSM Activity Status. When the Slave Finite State Machine (FSM) is not in the IDLE state, this bit is set. - 0: Slave FSM is in IDLE state so the Slave part of DW_apb_i2c is not Active - 1: Slave FSM is not in IDLE state so the Slave part of DW_apb_i2c is Active Reset value: 0x0  
 
 Value on reset: 0"]
@@ -250,6 +248,8 @@ impl From<SLV_ACTIVITY_A> for bool {
         variant as u8 != 0
     }
 }
+#[doc = "Field `SLV_ACTIVITY` reader - Slave FSM Activity Status. When the Slave Finite State Machine (FSM) is not in the IDLE state, this bit is set. - 0: Slave FSM is in IDLE state so the Slave part of DW_apb_i2c is not Active - 1: Slave FSM is not in IDLE state so the Slave part of DW_apb_i2c is Active Reset value: 0x0"]
+pub type SLV_ACTIVITY_R = crate::BitReader<SLV_ACTIVITY_A>;
 impl SLV_ACTIVITY_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]

@@ -20,16 +20,6 @@ impl W {
     pub fn data(&mut self) -> DATA_W<SSPDR_SPEC> {
         DATA_W::new(self, 0)
     }
-    #[doc = r" Writes raw bits to the register."]
-    #[doc = r""]
-    #[doc = r" # Safety"]
-    #[doc = r""]
-    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.bits = bits;
-        self
-    }
 }
 #[doc = "Data register, SSPDR on page 3-6  
 
@@ -42,6 +32,7 @@ impl crate::RegisterSpec for SSPDR_SPEC {
 impl crate::Readable for SSPDR_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`sspdr::W`](W) writer structure"]
 impl crate::Writable for SSPDR_SPEC {
+    type Safety = crate::Unsafe;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }

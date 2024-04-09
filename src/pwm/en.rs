@@ -125,16 +125,6 @@ impl W {
     pub fn ch7(&mut self) -> CH7_W<EN_SPEC> {
         CH7_W::new(self, 7)
     }
-    #[doc = r" Writes raw bits to the register."]
-    #[doc = r""]
-    #[doc = r" # Safety"]
-    #[doc = r""]
-    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.bits = bits;
-        self
-    }
 }
 #[doc = "This register aliases the CSR_EN bits for all channels.  
  Writing to this register allows multiple channels to be enabled  
@@ -151,6 +141,7 @@ impl crate::RegisterSpec for EN_SPEC {
 impl crate::Readable for EN_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`en::W`](W) writer structure"]
 impl crate::Writable for EN_SPEC {
+    type Safety = crate::Unsafe;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }

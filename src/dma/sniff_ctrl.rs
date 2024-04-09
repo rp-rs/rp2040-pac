@@ -10,8 +10,6 @@ pub type EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 pub type DMACH_R = crate::FieldReader;
 #[doc = "Field `DMACH` writer - DMA channel for Sniffer to observe"]
 pub type DMACH_W<'a, REG> = crate::FieldWriter<'a, REG, 4>;
-#[doc = "Field `CALC` reader - "]
-pub type CALC_R = crate::FieldReader<CALC_A>;
 #[doc = "  
 
 Value on reset: 0"]
@@ -40,6 +38,8 @@ impl From<CALC_A> for u8 {
 impl crate::FieldSpec for CALC_A {
     type Ux = u8;
 }
+#[doc = "Field `CALC` reader - "]
+pub type CALC_R = crate::FieldReader<CALC_A>;
 impl CALC_R {
     #[doc = "Get enumerated values variant"]
     #[inline(always)]
@@ -212,16 +212,6 @@ impl W {
     pub fn out_inv(&mut self) -> OUT_INV_W<SNIFF_CTRL_SPEC> {
         OUT_INV_W::new(self, 11)
     }
-    #[doc = r" Writes raw bits to the register."]
-    #[doc = r""]
-    #[doc = r" # Safety"]
-    #[doc = r""]
-    #[doc = r" Passing incorrect value can cause undefined behaviour. See reference manual"]
-    #[inline(always)]
-    pub unsafe fn bits(&mut self, bits: u32) -> &mut Self {
-        self.bits = bits;
-        self
-    }
 }
 #[doc = "Sniffer Control  
 
@@ -234,6 +224,7 @@ impl crate::RegisterSpec for SNIFF_CTRL_SPEC {
 impl crate::Readable for SNIFF_CTRL_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`sniff_ctrl::W`](W) writer structure"]
 impl crate::Writable for SNIFF_CTRL_SPEC {
+    type Safety = crate::Unsafe;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
