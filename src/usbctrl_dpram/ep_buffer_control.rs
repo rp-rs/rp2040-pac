@@ -63,6 +63,7 @@ impl From<DOUBLE_BUFFER_ISO_OFFSET_A> for u8 {
 impl crate::FieldSpec for DOUBLE_BUFFER_ISO_OFFSET_A {
     type Ux = u8;
 }
+impl crate::IsEnum for DOUBLE_BUFFER_ISO_OFFSET_A {}
 #[doc = "Field `DOUBLE_BUFFER_ISO_OFFSET` reader - The number of bytes buffer 1 is offset from buffer 0 in Isochronous mode. Only valid in double buffered mode for an Isochronous endpoint.  
  For a non Isochronous endpoint the offset is always 64 bytes."]
 pub type DOUBLE_BUFFER_ISO_OFFSET_R = crate::FieldReader<DOUBLE_BUFFER_ISO_OFFSET_A>;
@@ -102,7 +103,7 @@ impl DOUBLE_BUFFER_ISO_OFFSET_R {
 #[doc = "Field `DOUBLE_BUFFER_ISO_OFFSET` writer - The number of bytes buffer 1 is offset from buffer 0 in Isochronous mode. Only valid in double buffered mode for an Isochronous endpoint.  
  For a non Isochronous endpoint the offset is always 64 bytes."]
 pub type DOUBLE_BUFFER_ISO_OFFSET_W<'a, REG> =
-    crate::FieldWriterSafe<'a, REG, 2, DOUBLE_BUFFER_ISO_OFFSET_A>;
+    crate::FieldWriter<'a, REG, 2, DOUBLE_BUFFER_ISO_OFFSET_A, crate::Safe>;
 impl<'a, REG> DOUBLE_BUFFER_ISO_OFFSET_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,

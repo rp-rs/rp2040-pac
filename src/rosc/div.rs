@@ -24,6 +24,7 @@ impl From<DIV_A> for u16 {
 impl crate::FieldSpec for DIV_A {
     type Ux = u16;
 }
+impl crate::IsEnum for DIV_A {}
 #[doc = "Field `DIV` reader - set to 0xaa0 + div where  
  div = 0 divides by 32  
  div = 1-31 divides by div  

@@ -32,6 +32,7 @@ impl From<AUXSRC_A> for u8 {
 impl crate::FieldSpec for AUXSRC_A {
     type Ux = u8;
 }
+impl crate::IsEnum for AUXSRC_A {}
 #[doc = "Field `AUXSRC` reader - Selects the auxiliary clock source, will glitch when switching"]
 pub type AUXSRC_R = crate::FieldReader<AUXSRC_A>;
 impl AUXSRC_R {

@@ -24,6 +24,7 @@ impl From<SRC_A> for u8 {
 impl crate::FieldSpec for SRC_A {
     type Ux = u8;
 }
+impl crate::IsEnum for SRC_A {}
 #[doc = "Field `SRC` reader - Selects the clock source glitchlessly, can be changed on-the-fly"]
 pub type SRC_R = crate::FieldReader<SRC_A>;
 impl SRC_R {
@@ -98,6 +99,7 @@ impl From<AUXSRC_A> for u8 {
 impl crate::FieldSpec for AUXSRC_A {
     type Ux = u8;
 }
+impl crate::IsEnum for AUXSRC_A {}
 #[doc = "Field `AUXSRC` reader - Selects the auxiliary clock source, will glitch when switching"]
 pub type AUXSRC_R = crate::FieldReader<AUXSRC_A>;
 impl AUXSRC_R {

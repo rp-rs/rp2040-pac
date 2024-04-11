@@ -95,6 +95,7 @@ impl From<SPEED_A> for u8 {
 impl crate::FieldSpec for SPEED_A {
     type Ux = u8;
 }
+impl crate::IsEnum for SPEED_A {}
 #[doc = "Field `SPEED` reader - These bits control at which speed the DW_apb_i2c operates; its setting is relevant only if one is operating the DW_apb_i2c in master mode. Hardware protects against illegal values being programmed by software. These bits must be programmed appropriately for slave mode also, as it is used to capture correct value of spike filter as per the speed mode.  
 
  This register should be programmed only with a value in the range of 1 to IC_MAX_SPEED_MODE; otherwise, hardware updates this register with the value of IC_MAX_SPEED_MODE.  

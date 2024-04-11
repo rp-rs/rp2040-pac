@@ -38,6 +38,7 @@ impl From<CALC_A> for u8 {
 impl crate::FieldSpec for CALC_A {
     type Ux = u8;
 }
+impl crate::IsEnum for CALC_A {}
 #[doc = "Field `CALC` reader - "]
 pub type CALC_R = crate::FieldReader<CALC_A>;
 impl CALC_R {

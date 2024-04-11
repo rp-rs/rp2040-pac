@@ -52,6 +52,7 @@ impl From<VSEL_A> for u8 {
 impl crate::FieldSpec for VSEL_A {
     type Ux = u8;
 }
+impl crate::IsEnum for VSEL_A {}
 #[doc = "Field `VSEL` reader - Output voltage select for on-chip voltage regulator."]
 pub type VSEL_R = crate::FieldReader<VSEL_A>;
 impl VSEL_R {

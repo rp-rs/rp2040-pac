@@ -33,6 +33,7 @@ impl From<FREQ_RANGE_A> for u16 {
 impl crate::FieldSpec for FREQ_RANGE_A {
     type Ux = u16;
 }
+impl crate::IsEnum for FREQ_RANGE_A {}
 #[doc = "Field `FREQ_RANGE` reader - Controls the number of delay stages in the ROSC ring  
  LOW uses stages 0 to 7  
  MEDIUM uses stages 0 to 5  
@@ -132,6 +133,7 @@ impl From<ENABLE_A> for u16 {
 impl crate::FieldSpec for ENABLE_A {
     type Ux = u16;
 }
+impl crate::IsEnum for ENABLE_A {}
 #[doc = "Field `ENABLE` reader - On power-up this field is initialised to ENABLE  
  The system clock must be switched to another source before setting this field to DISABLE otherwise the chip will lock up  
  The 12-bit code is intended to give some protection against accidental writes. An invalid setting will enable the oscillator."]

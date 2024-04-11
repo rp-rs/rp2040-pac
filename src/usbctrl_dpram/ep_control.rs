@@ -42,6 +42,7 @@ impl From<ENDPOINT_TYPE_A> for u8 {
 impl crate::FieldSpec for ENDPOINT_TYPE_A {
     type Ux = u8;
 }
+impl crate::IsEnum for ENDPOINT_TYPE_A {}
 #[doc = "Field `ENDPOINT_TYPE` reader - "]
 pub type ENDPOINT_TYPE_R = crate::FieldReader<ENDPOINT_TYPE_A>;
 impl ENDPOINT_TYPE_R {
@@ -78,7 +79,7 @@ impl ENDPOINT_TYPE_R {
     }
 }
 #[doc = "Field `ENDPOINT_TYPE` writer - "]
-pub type ENDPOINT_TYPE_W<'a, REG> = crate::FieldWriterSafe<'a, REG, 2, ENDPOINT_TYPE_A>;
+pub type ENDPOINT_TYPE_W<'a, REG> = crate::FieldWriter<'a, REG, 2, ENDPOINT_TYPE_A, crate::Safe>;
 impl<'a, REG> ENDPOINT_TYPE_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,

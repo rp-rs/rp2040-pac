@@ -46,6 +46,7 @@ impl From<FC0_SRC_A> for u8 {
 impl crate::FieldSpec for FC0_SRC_A {
     type Ux = u8;
 }
+impl crate::IsEnum for FC0_SRC_A {}
 #[doc = "Field `FC0_SRC` reader - "]
 pub type FC0_SRC_R = crate::FieldReader<FC0_SRC_A>;
 impl FC0_SRC_R {

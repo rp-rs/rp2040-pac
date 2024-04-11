@@ -37,6 +37,7 @@ impl From<PASSWD_A> for u16 {
 impl crate::FieldSpec for PASSWD_A {
     type Ux = u16;
 }
+impl crate::IsEnum for PASSWD_A {}
 #[doc = "Field `PASSWD` reader - Set to 0x9696 to apply the settings  
  Any other value in this field will set all drive strengths to 0"]
 pub type PASSWD_R = crate::FieldReader<PASSWD_A>;

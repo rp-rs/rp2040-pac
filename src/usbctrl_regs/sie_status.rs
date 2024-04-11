@@ -28,6 +28,7 @@ impl From<LINE_STATE_A> for u8 {
 impl crate::FieldSpec for LINE_STATE_A {
     type Ux = u8;
 }
+impl crate::IsEnum for LINE_STATE_A {}
 #[doc = "Field `LINE_STATE` reader - USB bus line state"]
 pub type LINE_STATE_R = crate::FieldReader<LINE_STATE_A>;
 impl LINE_STATE_R {

@@ -26,6 +26,7 @@ impl From<FREQ_RANGE_A> for u8 {
 impl crate::FieldSpec for FREQ_RANGE_A {
     type Ux = u8;
 }
+impl crate::IsEnum for FREQ_RANGE_A {}
 #[doc = "Field `FREQ_RANGE` reader - The current frequency range setting, always reads 0"]
 pub type FREQ_RANGE_R = crate::FieldReader<FREQ_RANGE_A>;
 impl FREQ_RANGE_R {
