@@ -7,6 +7,11 @@ _modify:
     name: USBCTRL_DPRAM
 
 DMA:
+  CHAN_ABORT:
+    _modify:
+      CHAN_ABORT:
+        access: read-write
+
   CH0_CTRL_TRIG:
     _modify:
       "CHAIN_TO":
