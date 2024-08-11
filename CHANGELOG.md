@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## Unreleased
 
+- Updated to SVD from pico-sdk 2.0.0
+- Reverted some changes in the SVD to improve compatibility with previous versions:
+  - Rename USB peripheral back to USBCTRL\_REGS, and USB\_DPRAM to USBCTRL\_DPRAM.
+  - Rename SSI back to XIP\_SSI
+  - Reverted access attributes of SIE\_STATUS.SUSPENDED and DMA.CHAN\_ABORT.
+
 ## [0.6.0] [Crates.io](https://crates.io/crates/rp2040-pac/0.6.0) [Github](https://github.com/rp-rs/rp2040-pac/releases/tag/v0.6.0)
 
 - Collect ADDR\_ENDP\* registers into an array
