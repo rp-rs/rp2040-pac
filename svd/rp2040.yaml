@@ -1,5 +1,11 @@
 _svd: "./rp2040.svd"
 
+_modify:
+  USB:
+    name: USBCTRL_REGS
+  USB_DPRAM:
+    name: USBCTRL_DPRAM
+
 DMA:
   CH0_CTRL_TRIG:
     _modify:
