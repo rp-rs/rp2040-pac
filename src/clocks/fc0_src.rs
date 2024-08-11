@@ -234,8 +234,7 @@ impl W {
         FC0_SRC_W::new(self, 0)
     }
 }
-#[doc = "Clock sent to frequency counter, set to 0 when not required  
- Writing to this register initiates the frequency count  
+#[doc = "Clock sent to frequency counter, set to 0 when not required Writing to this register initiates the frequency count  
 
 You can [`read`](crate::generic::Reg::read) this register and get [`fc0_src::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`fc0_src::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct FC0_SRC_SPEC;

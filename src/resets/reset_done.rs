@@ -1,54 +1,56 @@
 #[doc = "Register `RESET_DONE` reader"]
 pub type R = crate::R<RESET_DONE_SPEC>;
-#[doc = "Field `adc` reader - "]
+#[doc = "Register `RESET_DONE` writer"]
+pub type W = crate::W<RESET_DONE_SPEC>;
+#[doc = "Field `ADC` reader - "]
 pub type ADC_R = crate::BitReader;
-#[doc = "Field `busctrl` reader - "]
+#[doc = "Field `BUSCTRL` reader - "]
 pub type BUSCTRL_R = crate::BitReader;
-#[doc = "Field `dma` reader - "]
+#[doc = "Field `DMA` reader - "]
 pub type DMA_R = crate::BitReader;
-#[doc = "Field `i2c0` reader - "]
+#[doc = "Field `I2C0` reader - "]
 pub type I2C0_R = crate::BitReader;
-#[doc = "Field `i2c1` reader - "]
+#[doc = "Field `I2C1` reader - "]
 pub type I2C1_R = crate::BitReader;
-#[doc = "Field `io_bank0` reader - "]
+#[doc = "Field `IO_BANK0` reader - "]
 pub type IO_BANK0_R = crate::BitReader;
-#[doc = "Field `io_qspi` reader - "]
+#[doc = "Field `IO_QSPI` reader - "]
 pub type IO_QSPI_R = crate::BitReader;
-#[doc = "Field `jtag` reader - "]
+#[doc = "Field `JTAG` reader - "]
 pub type JTAG_R = crate::BitReader;
-#[doc = "Field `pads_bank0` reader - "]
+#[doc = "Field `PADS_BANK0` reader - "]
 pub type PADS_BANK0_R = crate::BitReader;
-#[doc = "Field `pads_qspi` reader - "]
+#[doc = "Field `PADS_QSPI` reader - "]
 pub type PADS_QSPI_R = crate::BitReader;
-#[doc = "Field `pio0` reader - "]
+#[doc = "Field `PIO0` reader - "]
 pub type PIO0_R = crate::BitReader;
-#[doc = "Field `pio1` reader - "]
+#[doc = "Field `PIO1` reader - "]
 pub type PIO1_R = crate::BitReader;
-#[doc = "Field `pll_sys` reader - "]
+#[doc = "Field `PLL_SYS` reader - "]
 pub type PLL_SYS_R = crate::BitReader;
-#[doc = "Field `pll_usb` reader - "]
+#[doc = "Field `PLL_USB` reader - "]
 pub type PLL_USB_R = crate::BitReader;
-#[doc = "Field `pwm` reader - "]
+#[doc = "Field `PWM` reader - "]
 pub type PWM_R = crate::BitReader;
-#[doc = "Field `rtc` reader - "]
+#[doc = "Field `RTC` reader - "]
 pub type RTC_R = crate::BitReader;
-#[doc = "Field `spi0` reader - "]
+#[doc = "Field `SPI0` reader - "]
 pub type SPI0_R = crate::BitReader;
-#[doc = "Field `spi1` reader - "]
+#[doc = "Field `SPI1` reader - "]
 pub type SPI1_R = crate::BitReader;
-#[doc = "Field `syscfg` reader - "]
+#[doc = "Field `SYSCFG` reader - "]
 pub type SYSCFG_R = crate::BitReader;
-#[doc = "Field `sysinfo` reader - "]
+#[doc = "Field `SYSINFO` reader - "]
 pub type SYSINFO_R = crate::BitReader;
-#[doc = "Field `tbman` reader - "]
+#[doc = "Field `TBMAN` reader - "]
 pub type TBMAN_R = crate::BitReader;
-#[doc = "Field `timer` reader - "]
+#[doc = "Field `TIMER` reader - "]
 pub type TIMER_R = crate::BitReader;
-#[doc = "Field `uart0` reader - "]
+#[doc = "Field `UART0` reader - "]
 pub type UART0_R = crate::BitReader;
-#[doc = "Field `uart1` reader - "]
+#[doc = "Field `UART1` reader - "]
 pub type UART1_R = crate::BitReader;
-#[doc = "Field `usbctrl` reader - "]
+#[doc = "Field `USBCTRL` reader - "]
 pub type USBCTRL_R = crate::BitReader;
 impl R {
     #[doc = "Bit 0"]
@@ -177,15 +179,22 @@ impl R {
         USBCTRL_R::new(((self.bits >> 24) & 1) != 0)
     }
 }
+impl W {}
 #[doc = "Reset done. If a bit is set then a reset done signal has been returned by the peripheral. This indicates that the peripheral's registers are ready to be accessed.  
 
-You can [`read`](crate::generic::Reg::read) this register and get [`reset_done::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+You can [`read`](crate::generic::Reg::read) this register and get [`reset_done::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`reset_done::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct RESET_DONE_SPEC;
 impl crate::RegisterSpec for RESET_DONE_SPEC {
     type Ux = u32;
 }
 #[doc = "`read()` method returns [`reset_done::R`](R) reader structure"]
 impl crate::Readable for RESET_DONE_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`reset_done::W`](W) writer structure"]
+impl crate::Writable for RESET_DONE_SPEC {
+    type Safety = crate::Unsafe;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+}
 #[doc = "`reset()` method sets RESET_DONE to value 0"]
 impl crate::Resettable for RESET_DONE_SPEC {
     const RESET_VALUE: u32 = 0;

@@ -2,102 +2,34 @@
 pub type R = crate::R<BOD_SPEC>;
 #[doc = "Register `BOD` writer"]
 pub type W = crate::W<BOD_SPEC>;
-#[doc = "Field `EN` reader - enable  
- 0=not enabled, 1=enabled"]
+#[doc = "Field `EN` reader - enable 0=not enabled, 1=enabled"]
 pub type EN_R = crate::BitReader;
-#[doc = "Field `EN` writer - enable  
- 0=not enabled, 1=enabled"]
+#[doc = "Field `EN` writer - enable 0=not enabled, 1=enabled"]
 pub type EN_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `VSEL` reader - threshold select  
- 0000 - 0.473V  
- 0001 - 0.516V  
- 0010 - 0.559V  
- 0011 - 0.602V  
- 0100 - 0.645V  
- 0101 - 0.688V  
- 0110 - 0.731V  
- 0111 - 0.774V  
- 1000 - 0.817V  
- 1001 - 0.860V (default)  
- 1010 - 0.903V  
- 1011 - 0.946V  
- 1100 - 0.989V  
- 1101 - 1.032V  
- 1110 - 1.075V  
- 1111 - 1.118V"]
+#[doc = "Field `VSEL` reader - threshold select 0000 - 0.473V 0001 - 0.516V 0010 - 0.559V 0011 - 0.602V 0100 - 0.645V 0101 - 0.688V 0110 - 0.731V 0111 - 0.774V 1000 - 0.817V 1001 - 0.860V (default) 1010 - 0.903V 1011 - 0.946V 1100 - 0.989V 1101 - 1.032V 1110 - 1.075V 1111 - 1.118V"]
 pub type VSEL_R = crate::FieldReader;
-#[doc = "Field `VSEL` writer - threshold select  
- 0000 - 0.473V  
- 0001 - 0.516V  
- 0010 - 0.559V  
- 0011 - 0.602V  
- 0100 - 0.645V  
- 0101 - 0.688V  
- 0110 - 0.731V  
- 0111 - 0.774V  
- 1000 - 0.817V  
- 1001 - 0.860V (default)  
- 1010 - 0.903V  
- 1011 - 0.946V  
- 1100 - 0.989V  
- 1101 - 1.032V  
- 1110 - 1.075V  
- 1111 - 1.118V"]
+#[doc = "Field `VSEL` writer - threshold select 0000 - 0.473V 0001 - 0.516V 0010 - 0.559V 0011 - 0.602V 0100 - 0.645V 0101 - 0.688V 0110 - 0.731V 0111 - 0.774V 1000 - 0.817V 1001 - 0.860V (default) 1010 - 0.903V 1011 - 0.946V 1100 - 0.989V 1101 - 1.032V 1110 - 1.075V 1111 - 1.118V"]
 pub type VSEL_W<'a, REG> = crate::FieldWriter<'a, REG, 4>;
 impl R {
-    #[doc = "Bit 0 - enable  
- 0=not enabled, 1=enabled"]
+    #[doc = "Bit 0 - enable 0=not enabled, 1=enabled"]
     #[inline(always)]
     pub fn en(&self) -> EN_R {
         EN_R::new((self.bits & 1) != 0)
     }
-    #[doc = "Bits 4:7 - threshold select  
- 0000 - 0.473V  
- 0001 - 0.516V  
- 0010 - 0.559V  
- 0011 - 0.602V  
- 0100 - 0.645V  
- 0101 - 0.688V  
- 0110 - 0.731V  
- 0111 - 0.774V  
- 1000 - 0.817V  
- 1001 - 0.860V (default)  
- 1010 - 0.903V  
- 1011 - 0.946V  
- 1100 - 0.989V  
- 1101 - 1.032V  
- 1110 - 1.075V  
- 1111 - 1.118V"]
+    #[doc = "Bits 4:7 - threshold select 0000 - 0.473V 0001 - 0.516V 0010 - 0.559V 0011 - 0.602V 0100 - 0.645V 0101 - 0.688V 0110 - 0.731V 0111 - 0.774V 1000 - 0.817V 1001 - 0.860V (default) 1010 - 0.903V 1011 - 0.946V 1100 - 0.989V 1101 - 1.032V 1110 - 1.075V 1111 - 1.118V"]
     #[inline(always)]
     pub fn vsel(&self) -> VSEL_R {
         VSEL_R::new(((self.bits >> 4) & 0x0f) as u8)
     }
 }
 impl W {
-    #[doc = "Bit 0 - enable  
- 0=not enabled, 1=enabled"]
+    #[doc = "Bit 0 - enable 0=not enabled, 1=enabled"]
     #[inline(always)]
     #[must_use]
     pub fn en(&mut self) -> EN_W<BOD_SPEC> {
         EN_W::new(self, 0)
     }
-    #[doc = "Bits 4:7 - threshold select  
- 0000 - 0.473V  
- 0001 - 0.516V  
- 0010 - 0.559V  
- 0011 - 0.602V  
- 0100 - 0.645V  
- 0101 - 0.688V  
- 0110 - 0.731V  
- 0111 - 0.774V  
- 1000 - 0.817V  
- 1001 - 0.860V (default)  
- 1010 - 0.903V  
- 1011 - 0.946V  
- 1100 - 0.989V  
- 1101 - 1.032V  
- 1110 - 1.075V  
- 1111 - 1.118V"]
+    #[doc = "Bits 4:7 - threshold select 0000 - 0.473V 0001 - 0.516V 0010 - 0.559V 0011 - 0.602V 0100 - 0.645V 0101 - 0.688V 0110 - 0.731V 0111 - 0.774V 1000 - 0.817V 1001 - 0.860V (default) 1010 - 0.903V 1011 - 0.946V 1100 - 0.989V 1101 - 1.032V 1110 - 1.075V 1111 - 1.118V"]
     #[inline(always)]
     #[must_use]
     pub fn vsel(&mut self) -> VSEL_W<BOD_SPEC> {

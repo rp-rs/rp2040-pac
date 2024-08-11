@@ -36,10 +36,7 @@ impl W {
         INT_W::new(self, 8)
     }
 }
-#[doc = "Clock divider. If non-zero, CS_START_MANY will start conversions  
- at regular intervals rather than back-to-back.  
- The divider is reset when either of these fields are written.  
- Total period is 1 + INT + FRAC / 256  
+#[doc = "Clock divider. If non-zero, CS_START_MANY will start conversions at regular intervals rather than back-to-back. The divider is reset when either of these fields are written. Total period is 1 + INT + FRAC / 256  
 
 You can [`read`](crate::generic::Reg::read) this register and get [`div::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`div::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct DIV_SPEC;

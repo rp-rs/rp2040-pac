@@ -2,11 +2,7 @@
 pub type R = crate::R<DIV_SPEC>;
 #[doc = "Register `DIV` writer"]
 pub type W = crate::W<DIV_SPEC>;
-#[doc = "set to 0xaa0 + div where  
- div = 0 divides by 32  
- div = 1-31 divides by div  
- any other value sets div=31  
- this register resets to div=16  
+#[doc = "set to 0xaa0 + div where div = 0 divides by 32 div = 1-31 divides by div any other value sets div=31 this register resets to div=16  
 
 Value on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
@@ -24,11 +20,7 @@ impl From<DIV_A> for u16 {
 impl crate::FieldSpec for DIV_A {
     type Ux = u16;
 }
-#[doc = "Field `DIV` reader - set to 0xaa0 + div where  
- div = 0 divides by 32  
- div = 1-31 divides by div  
- any other value sets div=31  
- this register resets to div=16"]
+#[doc = "Field `DIV` reader - set to 0xaa0 + div where div = 0 divides by 32 div = 1-31 divides by div any other value sets div=31 this register resets to div=16"]
 pub type DIV_R = crate::FieldReader<DIV_A>;
 impl DIV_R {
     #[doc = "Get enumerated values variant"]
@@ -45,11 +37,7 @@ impl DIV_R {
         *self == DIV_A::PASS
     }
 }
-#[doc = "Field `DIV` writer - set to 0xaa0 + div where  
- div = 0 divides by 32  
- div = 1-31 divides by div  
- any other value sets div=31  
- this register resets to div=16"]
+#[doc = "Field `DIV` writer - set to 0xaa0 + div where div = 0 divides by 32 div = 1-31 divides by div any other value sets div=31 this register resets to div=16"]
 pub type DIV_W<'a, REG> = crate::FieldWriter<'a, REG, 12, DIV_A>;
 impl<'a, REG> DIV_W<'a, REG>
 where
@@ -63,22 +51,14 @@ where
     }
 }
 impl R {
-    #[doc = "Bits 0:11 - set to 0xaa0 + div where  
- div = 0 divides by 32  
- div = 1-31 divides by div  
- any other value sets div=31  
- this register resets to div=16"]
+    #[doc = "Bits 0:11 - set to 0xaa0 + div where div = 0 divides by 32 div = 1-31 divides by div any other value sets div=31 this register resets to div=16"]
     #[inline(always)]
     pub fn div(&self) -> DIV_R {
         DIV_R::new((self.bits & 0x0fff) as u16)
     }
 }
 impl W {
-    #[doc = "Bits 0:11 - set to 0xaa0 + div where  
- div = 0 divides by 32  
- div = 1-31 divides by div  
- any other value sets div=31  
- this register resets to div=16"]
+    #[doc = "Bits 0:11 - set to 0xaa0 + div where div = 0 divides by 32 div = 1-31 divides by div any other value sets div=31 this register resets to div=16"]
     #[inline(always)]
     #[must_use]
     pub fn div(&mut self) -> DIV_W<DIV_SPEC> {

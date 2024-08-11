@@ -1,8 +1,8 @@
 #[doc = "Register `IC_INTR_STAT` reader"]
 pub type R = crate::R<IC_INTR_STAT_SPEC>;
-#[doc = "See IC_RAW_INTR_STAT for a detailed description of R_RX_UNDER bit.  
-
- Reset value: 0x0  
+#[doc = "Register `IC_INTR_STAT` writer"]
+pub type W = crate::W<IC_INTR_STAT_SPEC>;
+#[doc = "See IC_RAW_INTR_STAT for a detailed description of R_RX_UNDER bit. Reset value: 0x0  
 
 Value on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
@@ -18,9 +18,7 @@ impl From<R_RX_UNDER_A> for bool {
         variant as u8 != 0
     }
 }
-#[doc = "Field `R_RX_UNDER` reader - See IC_RAW_INTR_STAT for a detailed description of R_RX_UNDER bit.  
-
- Reset value: 0x0"]
+#[doc = "Field `R_RX_UNDER` reader - See IC_RAW_INTR_STAT for a detailed description of R_RX_UNDER bit. Reset value: 0x0"]
 pub type R_RX_UNDER_R = crate::BitReader<R_RX_UNDER_A>;
 impl R_RX_UNDER_R {
     #[doc = "Get enumerated values variant"]
@@ -42,9 +40,7 @@ impl R_RX_UNDER_R {
         *self == R_RX_UNDER_A::ACTIVE
     }
 }
-#[doc = "See IC_RAW_INTR_STAT for a detailed description of R_RX_OVER bit.  
-
- Reset value: 0x0  
+#[doc = "See IC_RAW_INTR_STAT for a detailed description of R_RX_OVER bit. Reset value: 0x0  
 
 Value on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
@@ -60,9 +56,7 @@ impl From<R_RX_OVER_A> for bool {
         variant as u8 != 0
     }
 }
-#[doc = "Field `R_RX_OVER` reader - See IC_RAW_INTR_STAT for a detailed description of R_RX_OVER bit.  
-
- Reset value: 0x0"]
+#[doc = "Field `R_RX_OVER` reader - See IC_RAW_INTR_STAT for a detailed description of R_RX_OVER bit. Reset value: 0x0"]
 pub type R_RX_OVER_R = crate::BitReader<R_RX_OVER_A>;
 impl R_RX_OVER_R {
     #[doc = "Get enumerated values variant"]
@@ -84,9 +78,7 @@ impl R_RX_OVER_R {
         *self == R_RX_OVER_A::ACTIVE
     }
 }
-#[doc = "See IC_RAW_INTR_STAT for a detailed description of R_RX_FULL bit.  
-
- Reset value: 0x0  
+#[doc = "See IC_RAW_INTR_STAT for a detailed description of R_RX_FULL bit. Reset value: 0x0  
 
 Value on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
@@ -102,9 +94,7 @@ impl From<R_RX_FULL_A> for bool {
         variant as u8 != 0
     }
 }
-#[doc = "Field `R_RX_FULL` reader - See IC_RAW_INTR_STAT for a detailed description of R_RX_FULL bit.  
-
- Reset value: 0x0"]
+#[doc = "Field `R_RX_FULL` reader - See IC_RAW_INTR_STAT for a detailed description of R_RX_FULL bit. Reset value: 0x0"]
 pub type R_RX_FULL_R = crate::BitReader<R_RX_FULL_A>;
 impl R_RX_FULL_R {
     #[doc = "Get enumerated values variant"]
@@ -126,9 +116,7 @@ impl R_RX_FULL_R {
         *self == R_RX_FULL_A::ACTIVE
     }
 }
-#[doc = "See IC_RAW_INTR_STAT for a detailed description of R_TX_OVER bit.  
-
- Reset value: 0x0  
+#[doc = "See IC_RAW_INTR_STAT for a detailed description of R_TX_OVER bit. Reset value: 0x0  
 
 Value on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
@@ -144,9 +132,7 @@ impl From<R_TX_OVER_A> for bool {
         variant as u8 != 0
     }
 }
-#[doc = "Field `R_TX_OVER` reader - See IC_RAW_INTR_STAT for a detailed description of R_TX_OVER bit.  
-
- Reset value: 0x0"]
+#[doc = "Field `R_TX_OVER` reader - See IC_RAW_INTR_STAT for a detailed description of R_TX_OVER bit. Reset value: 0x0"]
 pub type R_TX_OVER_R = crate::BitReader<R_TX_OVER_A>;
 impl R_TX_OVER_R {
     #[doc = "Get enumerated values variant"]
@@ -168,9 +154,7 @@ impl R_TX_OVER_R {
         *self == R_TX_OVER_A::ACTIVE
     }
 }
-#[doc = "See IC_RAW_INTR_STAT for a detailed description of R_TX_EMPTY bit.  
-
- Reset value: 0x0  
+#[doc = "See IC_RAW_INTR_STAT for a detailed description of R_TX_EMPTY bit. Reset value: 0x0  
 
 Value on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
@@ -186,9 +170,7 @@ impl From<R_TX_EMPTY_A> for bool {
         variant as u8 != 0
     }
 }
-#[doc = "Field `R_TX_EMPTY` reader - See IC_RAW_INTR_STAT for a detailed description of R_TX_EMPTY bit.  
-
- Reset value: 0x0"]
+#[doc = "Field `R_TX_EMPTY` reader - See IC_RAW_INTR_STAT for a detailed description of R_TX_EMPTY bit. Reset value: 0x0"]
 pub type R_TX_EMPTY_R = crate::BitReader<R_TX_EMPTY_A>;
 impl R_TX_EMPTY_R {
     #[doc = "Get enumerated values variant"]
@@ -210,9 +192,7 @@ impl R_TX_EMPTY_R {
         *self == R_TX_EMPTY_A::ACTIVE
     }
 }
-#[doc = "See IC_RAW_INTR_STAT for a detailed description of R_RD_REQ bit.  
-
- Reset value: 0x0  
+#[doc = "See IC_RAW_INTR_STAT for a detailed description of R_RD_REQ bit. Reset value: 0x0  
 
 Value on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
@@ -228,9 +208,7 @@ impl From<R_RD_REQ_A> for bool {
         variant as u8 != 0
     }
 }
-#[doc = "Field `R_RD_REQ` reader - See IC_RAW_INTR_STAT for a detailed description of R_RD_REQ bit.  
-
- Reset value: 0x0"]
+#[doc = "Field `R_RD_REQ` reader - See IC_RAW_INTR_STAT for a detailed description of R_RD_REQ bit. Reset value: 0x0"]
 pub type R_RD_REQ_R = crate::BitReader<R_RD_REQ_A>;
 impl R_RD_REQ_R {
     #[doc = "Get enumerated values variant"]
@@ -252,9 +230,7 @@ impl R_RD_REQ_R {
         *self == R_RD_REQ_A::ACTIVE
     }
 }
-#[doc = "See IC_RAW_INTR_STAT for a detailed description of R_TX_ABRT bit.  
-
- Reset value: 0x0  
+#[doc = "See IC_RAW_INTR_STAT for a detailed description of R_TX_ABRT bit. Reset value: 0x0  
 
 Value on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
@@ -270,9 +246,7 @@ impl From<R_TX_ABRT_A> for bool {
         variant as u8 != 0
     }
 }
-#[doc = "Field `R_TX_ABRT` reader - See IC_RAW_INTR_STAT for a detailed description of R_TX_ABRT bit.  
-
- Reset value: 0x0"]
+#[doc = "Field `R_TX_ABRT` reader - See IC_RAW_INTR_STAT for a detailed description of R_TX_ABRT bit. Reset value: 0x0"]
 pub type R_TX_ABRT_R = crate::BitReader<R_TX_ABRT_A>;
 impl R_TX_ABRT_R {
     #[doc = "Get enumerated values variant"]
@@ -294,9 +268,7 @@ impl R_TX_ABRT_R {
         *self == R_TX_ABRT_A::ACTIVE
     }
 }
-#[doc = "See IC_RAW_INTR_STAT for a detailed description of R_RX_DONE bit.  
-
- Reset value: 0x0  
+#[doc = "See IC_RAW_INTR_STAT for a detailed description of R_RX_DONE bit. Reset value: 0x0  
 
 Value on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
@@ -312,9 +284,7 @@ impl From<R_RX_DONE_A> for bool {
         variant as u8 != 0
     }
 }
-#[doc = "Field `R_RX_DONE` reader - See IC_RAW_INTR_STAT for a detailed description of R_RX_DONE bit.  
-
- Reset value: 0x0"]
+#[doc = "Field `R_RX_DONE` reader - See IC_RAW_INTR_STAT for a detailed description of R_RX_DONE bit. Reset value: 0x0"]
 pub type R_RX_DONE_R = crate::BitReader<R_RX_DONE_A>;
 impl R_RX_DONE_R {
     #[doc = "Get enumerated values variant"]
@@ -336,9 +306,7 @@ impl R_RX_DONE_R {
         *self == R_RX_DONE_A::ACTIVE
     }
 }
-#[doc = "See IC_RAW_INTR_STAT for a detailed description of R_ACTIVITY bit.  
-
- Reset value: 0x0  
+#[doc = "See IC_RAW_INTR_STAT for a detailed description of R_ACTIVITY bit. Reset value: 0x0  
 
 Value on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
@@ -354,9 +322,7 @@ impl From<R_ACTIVITY_A> for bool {
         variant as u8 != 0
     }
 }
-#[doc = "Field `R_ACTIVITY` reader - See IC_RAW_INTR_STAT for a detailed description of R_ACTIVITY bit.  
-
- Reset value: 0x0"]
+#[doc = "Field `R_ACTIVITY` reader - See IC_RAW_INTR_STAT for a detailed description of R_ACTIVITY bit. Reset value: 0x0"]
 pub type R_ACTIVITY_R = crate::BitReader<R_ACTIVITY_A>;
 impl R_ACTIVITY_R {
     #[doc = "Get enumerated values variant"]
@@ -378,9 +344,7 @@ impl R_ACTIVITY_R {
         *self == R_ACTIVITY_A::ACTIVE
     }
 }
-#[doc = "See IC_RAW_INTR_STAT for a detailed description of R_STOP_DET bit.  
-
- Reset value: 0x0  
+#[doc = "See IC_RAW_INTR_STAT for a detailed description of R_STOP_DET bit. Reset value: 0x0  
 
 Value on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
@@ -396,9 +360,7 @@ impl From<R_STOP_DET_A> for bool {
         variant as u8 != 0
     }
 }
-#[doc = "Field `R_STOP_DET` reader - See IC_RAW_INTR_STAT for a detailed description of R_STOP_DET bit.  
-
- Reset value: 0x0"]
+#[doc = "Field `R_STOP_DET` reader - See IC_RAW_INTR_STAT for a detailed description of R_STOP_DET bit. Reset value: 0x0"]
 pub type R_STOP_DET_R = crate::BitReader<R_STOP_DET_A>;
 impl R_STOP_DET_R {
     #[doc = "Get enumerated values variant"]
@@ -420,9 +382,7 @@ impl R_STOP_DET_R {
         *self == R_STOP_DET_A::ACTIVE
     }
 }
-#[doc = "See IC_RAW_INTR_STAT for a detailed description of R_START_DET bit.  
-
- Reset value: 0x0  
+#[doc = "See IC_RAW_INTR_STAT for a detailed description of R_START_DET bit. Reset value: 0x0  
 
 Value on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
@@ -438,9 +398,7 @@ impl From<R_START_DET_A> for bool {
         variant as u8 != 0
     }
 }
-#[doc = "Field `R_START_DET` reader - See IC_RAW_INTR_STAT for a detailed description of R_START_DET bit.  
-
- Reset value: 0x0"]
+#[doc = "Field `R_START_DET` reader - See IC_RAW_INTR_STAT for a detailed description of R_START_DET bit. Reset value: 0x0"]
 pub type R_START_DET_R = crate::BitReader<R_START_DET_A>;
 impl R_START_DET_R {
     #[doc = "Get enumerated values variant"]
@@ -462,9 +420,7 @@ impl R_START_DET_R {
         *self == R_START_DET_A::ACTIVE
     }
 }
-#[doc = "See IC_RAW_INTR_STAT for a detailed description of R_GEN_CALL bit.  
-
- Reset value: 0x0  
+#[doc = "See IC_RAW_INTR_STAT for a detailed description of R_GEN_CALL bit. Reset value: 0x0  
 
 Value on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
@@ -480,9 +436,7 @@ impl From<R_GEN_CALL_A> for bool {
         variant as u8 != 0
     }
 }
-#[doc = "Field `R_GEN_CALL` reader - See IC_RAW_INTR_STAT for a detailed description of R_GEN_CALL bit.  
-
- Reset value: 0x0"]
+#[doc = "Field `R_GEN_CALL` reader - See IC_RAW_INTR_STAT for a detailed description of R_GEN_CALL bit. Reset value: 0x0"]
 pub type R_GEN_CALL_R = crate::BitReader<R_GEN_CALL_A>;
 impl R_GEN_CALL_R {
     #[doc = "Get enumerated values variant"]
@@ -504,9 +458,7 @@ impl R_GEN_CALL_R {
         *self == R_GEN_CALL_A::ACTIVE
     }
 }
-#[doc = "See IC_RAW_INTR_STAT for a detailed description of R_RESTART_DET bit.  
-
- Reset value: 0x0  
+#[doc = "See IC_RAW_INTR_STAT for a detailed description of R_RESTART_DET bit. Reset value: 0x0  
 
 Value on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
@@ -522,9 +474,7 @@ impl From<R_RESTART_DET_A> for bool {
         variant as u8 != 0
     }
 }
-#[doc = "Field `R_RESTART_DET` reader - See IC_RAW_INTR_STAT for a detailed description of R_RESTART_DET bit.  
-
- Reset value: 0x0"]
+#[doc = "Field `R_RESTART_DET` reader - See IC_RAW_INTR_STAT for a detailed description of R_RESTART_DET bit. Reset value: 0x0"]
 pub type R_RESTART_DET_R = crate::BitReader<R_RESTART_DET_A>;
 impl R_RESTART_DET_R {
     #[doc = "Get enumerated values variant"]
@@ -547,109 +497,88 @@ impl R_RESTART_DET_R {
     }
 }
 impl R {
-    #[doc = "Bit 0 - See IC_RAW_INTR_STAT for a detailed description of R_RX_UNDER bit.  
-
- Reset value: 0x0"]
+    #[doc = "Bit 0 - See IC_RAW_INTR_STAT for a detailed description of R_RX_UNDER bit. Reset value: 0x0"]
     #[inline(always)]
     pub fn r_rx_under(&self) -> R_RX_UNDER_R {
         R_RX_UNDER_R::new((self.bits & 1) != 0)
     }
-    #[doc = "Bit 1 - See IC_RAW_INTR_STAT for a detailed description of R_RX_OVER bit.  
-
- Reset value: 0x0"]
+    #[doc = "Bit 1 - See IC_RAW_INTR_STAT for a detailed description of R_RX_OVER bit. Reset value: 0x0"]
     #[inline(always)]
     pub fn r_rx_over(&self) -> R_RX_OVER_R {
         R_RX_OVER_R::new(((self.bits >> 1) & 1) != 0)
     }
-    #[doc = "Bit 2 - See IC_RAW_INTR_STAT for a detailed description of R_RX_FULL bit.  
-
- Reset value: 0x0"]
+    #[doc = "Bit 2 - See IC_RAW_INTR_STAT for a detailed description of R_RX_FULL bit. Reset value: 0x0"]
     #[inline(always)]
     pub fn r_rx_full(&self) -> R_RX_FULL_R {
         R_RX_FULL_R::new(((self.bits >> 2) & 1) != 0)
     }
-    #[doc = "Bit 3 - See IC_RAW_INTR_STAT for a detailed description of R_TX_OVER bit.  
-
- Reset value: 0x0"]
+    #[doc = "Bit 3 - See IC_RAW_INTR_STAT for a detailed description of R_TX_OVER bit. Reset value: 0x0"]
     #[inline(always)]
     pub fn r_tx_over(&self) -> R_TX_OVER_R {
         R_TX_OVER_R::new(((self.bits >> 3) & 1) != 0)
     }
-    #[doc = "Bit 4 - See IC_RAW_INTR_STAT for a detailed description of R_TX_EMPTY bit.  
-
- Reset value: 0x0"]
+    #[doc = "Bit 4 - See IC_RAW_INTR_STAT for a detailed description of R_TX_EMPTY bit. Reset value: 0x0"]
     #[inline(always)]
     pub fn r_tx_empty(&self) -> R_TX_EMPTY_R {
         R_TX_EMPTY_R::new(((self.bits >> 4) & 1) != 0)
     }
-    #[doc = "Bit 5 - See IC_RAW_INTR_STAT for a detailed description of R_RD_REQ bit.  
-
- Reset value: 0x0"]
+    #[doc = "Bit 5 - See IC_RAW_INTR_STAT for a detailed description of R_RD_REQ bit. Reset value: 0x0"]
     #[inline(always)]
     pub fn r_rd_req(&self) -> R_RD_REQ_R {
         R_RD_REQ_R::new(((self.bits >> 5) & 1) != 0)
     }
-    #[doc = "Bit 6 - See IC_RAW_INTR_STAT for a detailed description of R_TX_ABRT bit.  
-
- Reset value: 0x0"]
+    #[doc = "Bit 6 - See IC_RAW_INTR_STAT for a detailed description of R_TX_ABRT bit. Reset value: 0x0"]
     #[inline(always)]
     pub fn r_tx_abrt(&self) -> R_TX_ABRT_R {
         R_TX_ABRT_R::new(((self.bits >> 6) & 1) != 0)
     }
-    #[doc = "Bit 7 - See IC_RAW_INTR_STAT for a detailed description of R_RX_DONE bit.  
-
- Reset value: 0x0"]
+    #[doc = "Bit 7 - See IC_RAW_INTR_STAT for a detailed description of R_RX_DONE bit. Reset value: 0x0"]
     #[inline(always)]
     pub fn r_rx_done(&self) -> R_RX_DONE_R {
         R_RX_DONE_R::new(((self.bits >> 7) & 1) != 0)
     }
-    #[doc = "Bit 8 - See IC_RAW_INTR_STAT for a detailed description of R_ACTIVITY bit.  
-
- Reset value: 0x0"]
+    #[doc = "Bit 8 - See IC_RAW_INTR_STAT for a detailed description of R_ACTIVITY bit. Reset value: 0x0"]
     #[inline(always)]
     pub fn r_activity(&self) -> R_ACTIVITY_R {
         R_ACTIVITY_R::new(((self.bits >> 8) & 1) != 0)
     }
-    #[doc = "Bit 9 - See IC_RAW_INTR_STAT for a detailed description of R_STOP_DET bit.  
-
- Reset value: 0x0"]
+    #[doc = "Bit 9 - See IC_RAW_INTR_STAT for a detailed description of R_STOP_DET bit. Reset value: 0x0"]
     #[inline(always)]
     pub fn r_stop_det(&self) -> R_STOP_DET_R {
         R_STOP_DET_R::new(((self.bits >> 9) & 1) != 0)
     }
-    #[doc = "Bit 10 - See IC_RAW_INTR_STAT for a detailed description of R_START_DET bit.  
-
- Reset value: 0x0"]
+    #[doc = "Bit 10 - See IC_RAW_INTR_STAT for a detailed description of R_START_DET bit. Reset value: 0x0"]
     #[inline(always)]
     pub fn r_start_det(&self) -> R_START_DET_R {
         R_START_DET_R::new(((self.bits >> 10) & 1) != 0)
     }
-    #[doc = "Bit 11 - See IC_RAW_INTR_STAT for a detailed description of R_GEN_CALL bit.  
-
- Reset value: 0x0"]
+    #[doc = "Bit 11 - See IC_RAW_INTR_STAT for a detailed description of R_GEN_CALL bit. Reset value: 0x0"]
     #[inline(always)]
     pub fn r_gen_call(&self) -> R_GEN_CALL_R {
         R_GEN_CALL_R::new(((self.bits >> 11) & 1) != 0)
     }
-    #[doc = "Bit 12 - See IC_RAW_INTR_STAT for a detailed description of R_RESTART_DET bit.  
-
- Reset value: 0x0"]
+    #[doc = "Bit 12 - See IC_RAW_INTR_STAT for a detailed description of R_RESTART_DET bit. Reset value: 0x0"]
     #[inline(always)]
     pub fn r_restart_det(&self) -> R_RESTART_DET_R {
         R_RESTART_DET_R::new(((self.bits >> 12) & 1) != 0)
     }
 }
-#[doc = "I2C Interrupt Status Register  
+impl W {}
+#[doc = "I2C Interrupt Status Register Each bit in this register has a corresponding mask bit in the IC_INTR_MASK register. These bits are cleared by reading the matching interrupt clear register. The unmasked raw versions of these bits are available in the IC_RAW_INTR_STAT register.  
 
- Each bit in this register has a corresponding mask bit in the IC_INTR_MASK register. These bits are cleared by reading the matching interrupt clear register. The unmasked raw versions of these bits are available in the IC_RAW_INTR_STAT register.  
-
-You can [`read`](crate::generic::Reg::read) this register and get [`ic_intr_stat::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+You can [`read`](crate::generic::Reg::read) this register and get [`ic_intr_stat::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`ic_intr_stat::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct IC_INTR_STAT_SPEC;
 impl crate::RegisterSpec for IC_INTR_STAT_SPEC {
     type Ux = u32;
 }
 #[doc = "`read()` method returns [`ic_intr_stat::R`](R) reader structure"]
 impl crate::Readable for IC_INTR_STAT_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`ic_intr_stat::W`](W) writer structure"]
+impl crate::Writable for IC_INTR_STAT_SPEC {
+    type Safety = crate::Unsafe;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+}
 #[doc = "`reset()` method sets IC_INTR_STAT to value 0"]
 impl crate::Resettable for IC_INTR_STAT_SPEC {
     const RESET_VALUE: u32 = 0;

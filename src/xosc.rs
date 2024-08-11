@@ -17,12 +17,7 @@ impl RegisterBlock {
     pub const fn status(&self) -> &STATUS {
         &self.status
     }
-    #[doc = "0x08 - Crystal Oscillator pause control  
- This is used to save power by pausing the XOSC  
- On power-up this field is initialised to WAKE  
- An invalid write will also select WAKE  
- WARNING: stop the PLLs before selecting dormant mode  
- WARNING: setup the irq before selecting dormant mode"]
+    #[doc = "0x08 - Crystal Oscillator pause control"]
     #[inline(always)]
     pub const fn dormant(&self) -> &DORMANT {
         &self.dormant
@@ -52,23 +47,13 @@ pub type STATUS = crate::Reg<status::STATUS_SPEC>;
 #[doc = "Crystal Oscillator Status"]
 pub mod status;
 #[doc = "DORMANT (rw) register accessor: Crystal Oscillator pause control  
- This is used to save power by pausing the XOSC  
- On power-up this field is initialised to WAKE  
- An invalid write will also select WAKE  
- WARNING: stop the PLLs before selecting dormant mode  
- WARNING: setup the irq before selecting dormant mode  
 
 You can [`read`](crate::generic::Reg::read) this register and get [`dormant::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`dormant::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
 
 For information about available fields see [`mod@dormant`]
 module"]
 pub type DORMANT = crate::Reg<dormant::DORMANT_SPEC>;
-#[doc = "Crystal Oscillator pause control  
- This is used to save power by pausing the XOSC  
- On power-up this field is initialised to WAKE  
- An invalid write will also select WAKE  
- WARNING: stop the PLLs before selecting dormant mode  
- WARNING: setup the irq before selecting dormant mode"]
+#[doc = "Crystal Oscillator pause control"]
 pub mod dormant;
 #[doc = "STARTUP (rw) register accessor: Controls the startup delay  
 

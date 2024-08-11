@@ -2,19 +2,26 @@
 pub type R = crate::R<CH_WRITE_ADDR_SPEC>;
 #[doc = "Register `CH_WRITE_ADDR` writer"]
 pub type W = crate::W<CH_WRITE_ADDR_SPEC>;
-impl core::fmt::Debug for R {
-    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        write!(f, "{}", self.bits())
+#[doc = "Field `CH0_WRITE_ADDR` reader - This register updates automatically each time a write completes. The current value is the next address to be written by this channel."]
+pub type CH0_WRITE_ADDR_R = crate::FieldReader<u32>;
+#[doc = "Field `CH0_WRITE_ADDR` writer - This register updates automatically each time a write completes. The current value is the next address to be written by this channel."]
+pub type CH0_WRITE_ADDR_W<'a, REG> = crate::FieldWriter<'a, REG, 32, u32>;
+impl R {
+    #[doc = "Bits 0:31 - This register updates automatically each time a write completes. The current value is the next address to be written by this channel."]
+    #[inline(always)]
+    pub fn ch0_write_addr(&self) -> CH0_WRITE_ADDR_R {
+        CH0_WRITE_ADDR_R::new(self.bits)
     }
 }
-impl core::fmt::Debug for crate::generic::Reg<CH_WRITE_ADDR_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
+impl W {
+    #[doc = "Bits 0:31 - This register updates automatically each time a write completes. The current value is the next address to be written by this channel."]
+    #[inline(always)]
+    #[must_use]
+    pub fn ch0_write_addr(&mut self) -> CH0_WRITE_ADDR_W<CH_WRITE_ADDR_SPEC> {
+        CH0_WRITE_ADDR_W::new(self, 0)
     }
 }
-impl W {}
 #[doc = "DMA Channel 0 Write Address pointer  
- This register updates automatically each time a write completes. The current value is the next address to be written by this channel.  
 
 You can [`read`](crate::generic::Reg::read) this register and get [`ch_write_addr::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`ch_write_addr::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct CH_WRITE_ADDR_SPEC;

@@ -6,9 +6,9 @@ pub type W = crate::W<INTE_SPEC>;
 pub type HOST_CONN_DIS_R = crate::BitReader;
 #[doc = "Field `HOST_CONN_DIS` writer - Host: raised when a device is connected or disconnected (i.e. when SIE_STATUS.SPEED changes). Cleared by writing to SIE_STATUS.SPEED"]
 pub type HOST_CONN_DIS_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `HOST_RESUME` reader - Host: raised when a device wakes up the host. Cleared by writing to SIE_STATUS.RESUME"]
+#[doc = "Field `HOST_RESUME` reader - Host: raised when a device wakes up the host. Cleared by writing to SIE_STATUS.RESUME_REMOTE"]
 pub type HOST_RESUME_R = crate::BitReader;
-#[doc = "Field `HOST_RESUME` writer - Host: raised when a device wakes up the host. Cleared by writing to SIE_STATUS.RESUME"]
+#[doc = "Field `HOST_RESUME` writer - Host: raised when a device wakes up the host. Cleared by writing to SIE_STATUS.RESUME_REMOTE"]
 pub type HOST_RESUME_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `HOST_SOF` reader - Host: raised every time the host sends a SOF (Start of Frame). Cleared by reading SOF_RD"]
 pub type HOST_SOF_R = crate::BitReader;
@@ -46,9 +46,9 @@ pub type ERROR_CRC_W<'a, REG> = crate::BitWriter<'a, REG>;
 pub type STALL_R = crate::BitReader;
 #[doc = "Field `STALL` writer - Source: SIE_STATUS.STALL_REC"]
 pub type STALL_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `VBUS_DETECT` reader - Source: SIE_STATUS.VBUS_DETECTED"]
+#[doc = "Field `VBUS_DETECT` reader - Source: SIE_STATUS.VBUS_DETECT"]
 pub type VBUS_DETECT_R = crate::BitReader;
-#[doc = "Field `VBUS_DETECT` writer - Source: SIE_STATUS.VBUS_DETECTED"]
+#[doc = "Field `VBUS_DETECT` writer - Source: SIE_STATUS.VBUS_DETECT"]
 pub type VBUS_DETECT_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `BUS_RESET` reader - Source: SIE_STATUS.BUS_RESET"]
 pub type BUS_RESET_R = crate::BitReader;
@@ -62,9 +62,9 @@ pub type DEV_CONN_DIS_W<'a, REG> = crate::BitWriter<'a, REG>;
 pub type DEV_SUSPEND_R = crate::BitReader;
 #[doc = "Field `DEV_SUSPEND` writer - Set when the device suspend state changes. Cleared by writing to SIE_STATUS.SUSPENDED"]
 pub type DEV_SUSPEND_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `DEV_RESUME_FROM_HOST` reader - Set when the device receives a resume from the host. Cleared by writing to SIE_STATUS.RESUME"]
+#[doc = "Field `DEV_RESUME_FROM_HOST` reader - Set when the device receives a resume from the host. Cleared by writing to SIE_STATUS.RESUME_REMOTE"]
 pub type DEV_RESUME_FROM_HOST_R = crate::BitReader;
-#[doc = "Field `DEV_RESUME_FROM_HOST` writer - Set when the device receives a resume from the host. Cleared by writing to SIE_STATUS.RESUME"]
+#[doc = "Field `DEV_RESUME_FROM_HOST` writer - Set when the device receives a resume from the host. Cleared by writing to SIE_STATUS.RESUME_REMOTE"]
 pub type DEV_RESUME_FROM_HOST_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SETUP_REQ` reader - Device. Source: SIE_STATUS.SETUP_REC"]
 pub type SETUP_REQ_R = crate::BitReader;
@@ -88,7 +88,7 @@ impl R {
     pub fn host_conn_dis(&self) -> HOST_CONN_DIS_R {
         HOST_CONN_DIS_R::new((self.bits & 1) != 0)
     }
-    #[doc = "Bit 1 - Host: raised when a device wakes up the host. Cleared by writing to SIE_STATUS.RESUME"]
+    #[doc = "Bit 1 - Host: raised when a device wakes up the host. Cleared by writing to SIE_STATUS.RESUME_REMOTE"]
     #[inline(always)]
     pub fn host_resume(&self) -> HOST_RESUME_R {
         HOST_RESUME_R::new(((self.bits >> 1) & 1) != 0)
@@ -138,7 +138,7 @@ impl R {
     pub fn stall(&self) -> STALL_R {
         STALL_R::new(((self.bits >> 10) & 1) != 0)
     }
-    #[doc = "Bit 11 - Source: SIE_STATUS.VBUS_DETECTED"]
+    #[doc = "Bit 11 - Source: SIE_STATUS.VBUS_DETECT"]
     #[inline(always)]
     pub fn vbus_detect(&self) -> VBUS_DETECT_R {
         VBUS_DETECT_R::new(((self.bits >> 11) & 1) != 0)
@@ -158,7 +158,7 @@ impl R {
     pub fn dev_suspend(&self) -> DEV_SUSPEND_R {
         DEV_SUSPEND_R::new(((self.bits >> 14) & 1) != 0)
     }
-    #[doc = "Bit 15 - Set when the device receives a resume from the host. Cleared by writing to SIE_STATUS.RESUME"]
+    #[doc = "Bit 15 - Set when the device receives a resume from the host. Cleared by writing to SIE_STATUS.RESUME_REMOTE"]
     #[inline(always)]
     pub fn dev_resume_from_host(&self) -> DEV_RESUME_FROM_HOST_R {
         DEV_RESUME_FROM_HOST_R::new(((self.bits >> 15) & 1) != 0)
@@ -191,7 +191,7 @@ impl W {
     pub fn host_conn_dis(&mut self) -> HOST_CONN_DIS_W<INTE_SPEC> {
         HOST_CONN_DIS_W::new(self, 0)
     }
-    #[doc = "Bit 1 - Host: raised when a device wakes up the host. Cleared by writing to SIE_STATUS.RESUME"]
+    #[doc = "Bit 1 - Host: raised when a device wakes up the host. Cleared by writing to SIE_STATUS.RESUME_REMOTE"]
     #[inline(always)]
     #[must_use]
     pub fn host_resume(&mut self) -> HOST_RESUME_W<INTE_SPEC> {
@@ -251,7 +251,7 @@ impl W {
     pub fn stall(&mut self) -> STALL_W<INTE_SPEC> {
         STALL_W::new(self, 10)
     }
-    #[doc = "Bit 11 - Source: SIE_STATUS.VBUS_DETECTED"]
+    #[doc = "Bit 11 - Source: SIE_STATUS.VBUS_DETECT"]
     #[inline(always)]
     #[must_use]
     pub fn vbus_detect(&mut self) -> VBUS_DETECT_W<INTE_SPEC> {
@@ -275,7 +275,7 @@ impl W {
     pub fn dev_suspend(&mut self) -> DEV_SUSPEND_W<INTE_SPEC> {
         DEV_SUSPEND_W::new(self, 14)
     }
-    #[doc = "Bit 15 - Set when the device receives a resume from the host. Cleared by writing to SIE_STATUS.RESUME"]
+    #[doc = "Bit 15 - Set when the device receives a resume from the host. Cleared by writing to SIE_STATUS.RESUME_REMOTE"]
     #[inline(always)]
     #[must_use]
     pub fn dev_resume_from_host(&mut self) -> DEV_RESUME_FROM_HOST_W<INTE_SPEC> {

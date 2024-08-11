@@ -13,9 +13,7 @@ impl CH {
     pub const fn csr(&self) -> &CSR {
         &self.csr
     }
-    #[doc = "0x04 - INT and FRAC form a fixed-point fractional number.  
- Counting rate is system clock frequency divided by this number.  
- Fractional division uses simple 1st-order sigma-delta."]
+    #[doc = "0x04 - INT and FRAC form a fixed-point fractional number. Counting rate is system clock frequency divided by this number. Fractional division uses simple 1st-order sigma-delta."]
     #[inline(always)]
     pub const fn div(&self) -> &DIV {
         &self.div
@@ -63,18 +61,14 @@ module"]
 pub type CTR = crate::Reg<ctr::CTR_SPEC>;
 #[doc = "Direct access to the PWM counter"]
 pub mod ctr;
-#[doc = "DIV (rw) register accessor: INT and FRAC form a fixed-point fractional number.  
- Counting rate is system clock frequency divided by this number.  
- Fractional division uses simple 1st-order sigma-delta.  
+#[doc = "DIV (rw) register accessor: INT and FRAC form a fixed-point fractional number. Counting rate is system clock frequency divided by this number. Fractional division uses simple 1st-order sigma-delta.  
 
 You can [`read`](crate::generic::Reg::read) this register and get [`div::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`div::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
 
 For information about available fields see [`mod@div`]
 module"]
 pub type DIV = crate::Reg<div::DIV_SPEC>;
-#[doc = "INT and FRAC form a fixed-point fractional number.  
- Counting rate is system clock frequency divided by this number.  
- Fractional division uses simple 1st-order sigma-delta."]
+#[doc = "INT and FRAC form a fixed-point fractional number. Counting rate is system clock frequency divided by this number. Fractional division uses simple 1st-order sigma-delta."]
 pub mod div;
 #[doc = "TOP (rw) register accessor: Counter wrap value  
 

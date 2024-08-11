@@ -2,43 +2,19 @@
 pub type R = crate::R<NVIC_ICPR_SPEC>;
 #[doc = "Register `NVIC_ICPR` writer"]
 pub type W = crate::W<NVIC_ICPR_SPEC>;
-#[doc = "Field `CLRPEND` reader - Interrupt clear-pending bits.  
- Write:  
- 0 = No effect.  
- 1 = Removes pending state and interrupt.  
- Read:  
- 0 = Interrupt is not pending.  
- 1 = Interrupt is pending."]
+#[doc = "Field `CLRPEND` reader - Interrupt clear-pending bits. Write: 0 = No effect. 1 = Removes pending state and interrupt. Read: 0 = Interrupt is not pending. 1 = Interrupt is pending."]
 pub type CLRPEND_R = crate::FieldReader<u32>;
-#[doc = "Field `CLRPEND` writer - Interrupt clear-pending bits.  
- Write:  
- 0 = No effect.  
- 1 = Removes pending state and interrupt.  
- Read:  
- 0 = Interrupt is not pending.  
- 1 = Interrupt is pending."]
+#[doc = "Field `CLRPEND` writer - Interrupt clear-pending bits. Write: 0 = No effect. 1 = Removes pending state and interrupt. Read: 0 = Interrupt is not pending. 1 = Interrupt is pending."]
 pub type CLRPEND_W<'a, REG> = crate::FieldWriter<'a, REG, 32, u32>;
 impl R {
-    #[doc = "Bits 0:31 - Interrupt clear-pending bits.  
- Write:  
- 0 = No effect.  
- 1 = Removes pending state and interrupt.  
- Read:  
- 0 = Interrupt is not pending.  
- 1 = Interrupt is pending."]
+    #[doc = "Bits 0:31 - Interrupt clear-pending bits. Write: 0 = No effect. 1 = Removes pending state and interrupt. Read: 0 = Interrupt is not pending. 1 = Interrupt is pending."]
     #[inline(always)]
     pub fn clrpend(&self) -> CLRPEND_R {
         CLRPEND_R::new(self.bits)
     }
 }
 impl W {
-    #[doc = "Bits 0:31 - Interrupt clear-pending bits.  
- Write:  
- 0 = No effect.  
- 1 = Removes pending state and interrupt.  
- Read:  
- 0 = Interrupt is not pending.  
- 1 = Interrupt is pending."]
+    #[doc = "Bits 0:31 - Interrupt clear-pending bits. Write: 0 = No effect. 1 = Removes pending state and interrupt. Read: 0 = Interrupt is not pending. 1 = Interrupt is pending."]
     #[inline(always)]
     #[must_use]
     pub fn clrpend(&mut self) -> CLRPEND_W<NVIC_ICPR_SPEC> {

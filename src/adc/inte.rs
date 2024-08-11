@@ -2,23 +2,19 @@
 pub type R = crate::R<INTE_SPEC>;
 #[doc = "Register `INTE` writer"]
 pub type W = crate::W<INTE_SPEC>;
-#[doc = "Field `FIFO` reader - Triggered when the sample FIFO reaches a certain level.  
- This level can be programmed via the FCS_THRESH field."]
+#[doc = "Field `FIFO` reader - Triggered when the sample FIFO reaches a certain level. This level can be programmed via the FCS_THRESH field."]
 pub type FIFO_R = crate::BitReader;
-#[doc = "Field `FIFO` writer - Triggered when the sample FIFO reaches a certain level.  
- This level can be programmed via the FCS_THRESH field."]
+#[doc = "Field `FIFO` writer - Triggered when the sample FIFO reaches a certain level. This level can be programmed via the FCS_THRESH field."]
 pub type FIFO_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
-    #[doc = "Bit 0 - Triggered when the sample FIFO reaches a certain level.  
- This level can be programmed via the FCS_THRESH field."]
+    #[doc = "Bit 0 - Triggered when the sample FIFO reaches a certain level. This level can be programmed via the FCS_THRESH field."]
     #[inline(always)]
     pub fn fifo(&self) -> FIFO_R {
         FIFO_R::new((self.bits & 1) != 0)
     }
 }
 impl W {
-    #[doc = "Bit 0 - Triggered when the sample FIFO reaches a certain level.  
- This level can be programmed via the FCS_THRESH field."]
+    #[doc = "Bit 0 - Triggered when the sample FIFO reaches a certain level. This level can be programmed via the FCS_THRESH field."]
     #[inline(always)]
     #[must_use]
     pub fn fifo(&mut self) -> FIFO_W<INTE_SPEC> {

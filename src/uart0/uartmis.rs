@@ -1,5 +1,7 @@
 #[doc = "Register `UARTMIS` reader"]
 pub type R = crate::R<UARTMIS_SPEC>;
+#[doc = "Register `UARTMIS` writer"]
+pub type W = crate::W<UARTMIS_SPEC>;
 #[doc = "Field `RIMMIS` reader - nUARTRI modem masked interrupt status. Returns the masked interrupt state of the UARTRIINTR interrupt."]
 pub type RIMMIS_R = crate::BitReader;
 #[doc = "Field `CTSMMIS` reader - nUARTCTS modem masked interrupt status. Returns the masked interrupt state of the UARTCTSINTR interrupt."]
@@ -79,15 +81,22 @@ impl R {
         OEMIS_R::new(((self.bits >> 10) & 1) != 0)
     }
 }
+impl W {}
 #[doc = "Masked Interrupt Status Register, UARTMIS  
 
-You can [`read`](crate::generic::Reg::read) this register and get [`uartmis::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+You can [`read`](crate::generic::Reg::read) this register and get [`uartmis::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`uartmis::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct UARTMIS_SPEC;
 impl crate::RegisterSpec for UARTMIS_SPEC {
     type Ux = u32;
 }
 #[doc = "`read()` method returns [`uartmis::R`](R) reader structure"]
 impl crate::Readable for UARTMIS_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`uartmis::W`](W) writer structure"]
+impl crate::Writable for UARTMIS_SPEC {
+    type Safety = crate::Unsafe;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+}
 #[doc = "`reset()` method sets UARTMIS to value 0"]
 impl crate::Resettable for UARTMIS_SPEC {
     const RESET_VALUE: u32 = 0;

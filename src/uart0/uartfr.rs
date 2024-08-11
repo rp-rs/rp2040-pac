@@ -1,5 +1,7 @@
 #[doc = "Register `UARTFR` reader"]
 pub type R = crate::R<UARTFR_SPEC>;
+#[doc = "Register `UARTFR` writer"]
+pub type W = crate::W<UARTFR_SPEC>;
 #[doc = "Field `CTS` reader - Clear to send. This bit is the complement of the UART clear to send, nUARTCTS, modem status input. That is, the bit is 1 when nUARTCTS is LOW."]
 pub type CTS_R = crate::BitReader;
 #[doc = "Field `DSR` reader - Data set ready. This bit is the complement of the UART data set ready, nUARTDSR, modem status input. That is, the bit is 1 when nUARTDSR is LOW."]
@@ -65,15 +67,22 @@ impl R {
         RI_R::new(((self.bits >> 8) & 1) != 0)
     }
 }
+impl W {}
 #[doc = "Flag Register, UARTFR  
 
-You can [`read`](crate::generic::Reg::read) this register and get [`uartfr::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+You can [`read`](crate::generic::Reg::read) this register and get [`uartfr::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`uartfr::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct UARTFR_SPEC;
 impl crate::RegisterSpec for UARTFR_SPEC {
     type Ux = u32;
 }
 #[doc = "`read()` method returns [`uartfr::R`](R) reader structure"]
 impl crate::Readable for UARTFR_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`uartfr::W`](W) writer structure"]
+impl crate::Writable for UARTFR_SPEC {
+    type Safety = crate::Unsafe;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+}
 #[doc = "`reset()` method sets UARTFR to value 0x90"]
 impl crate::Resettable for UARTFR_SPEC {
     const RESET_VALUE: u32 = 0x90;

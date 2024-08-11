@@ -2,23 +2,19 @@
 pub type R = crate::R<INTS1_SPEC>;
 #[doc = "Register `INTS1` writer"]
 pub type W = crate::W<INTS1_SPEC>;
-#[doc = "Field `INTS1` reader - Indicates active channel interrupt requests which are currently causing IRQ 1 to be asserted.  
- Channel interrupts can be cleared by writing a bit mask here."]
+#[doc = "Field `INTS1` reader - Indicates active channel interrupt requests which are currently causing IRQ 1 to be asserted. Channel interrupts can be cleared by writing a bit mask here."]
 pub type INTS1_R = crate::FieldReader<u16>;
-#[doc = "Field `INTS1` writer - Indicates active channel interrupt requests which are currently causing IRQ 1 to be asserted.  
- Channel interrupts can be cleared by writing a bit mask here."]
+#[doc = "Field `INTS1` writer - Indicates active channel interrupt requests which are currently causing IRQ 1 to be asserted. Channel interrupts can be cleared by writing a bit mask here."]
 pub type INTS1_W<'a, REG> = crate::FieldWriter<'a, REG, 16, u16>;
 impl R {
-    #[doc = "Bits 0:15 - Indicates active channel interrupt requests which are currently causing IRQ 1 to be asserted.  
- Channel interrupts can be cleared by writing a bit mask here."]
+    #[doc = "Bits 0:15 - Indicates active channel interrupt requests which are currently causing IRQ 1 to be asserted. Channel interrupts can be cleared by writing a bit mask here."]
     #[inline(always)]
     pub fn ints1(&self) -> INTS1_R {
         INTS1_R::new((self.bits & 0xffff) as u16)
     }
 }
 impl W {
-    #[doc = "Bits 0:15 - Indicates active channel interrupt requests which are currently causing IRQ 1 to be asserted.  
- Channel interrupts can be cleared by writing a bit mask here."]
+    #[doc = "Bits 0:15 - Indicates active channel interrupt requests which are currently causing IRQ 1 to be asserted. Channel interrupts can be cleared by writing a bit mask here."]
     #[inline(always)]
     #[must_use]
     pub fn ints1(&mut self) -> INTS1_W<INTS1_SPEC> {

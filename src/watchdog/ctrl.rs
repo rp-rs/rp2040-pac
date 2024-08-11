@@ -20,8 +20,6 @@ pub type PAUSE_DBG1_W<'a, REG> = crate::BitWriter<'a, REG>;
 pub type ENABLE_R = crate::BitReader;
 #[doc = "Field `ENABLE` writer - When not enabled the watchdog timer is paused"]
 pub type ENABLE_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `TRIGGER` reader - Trigger a watchdog reset"]
-pub type TRIGGER_R = crate::BitReader;
 #[doc = "Field `TRIGGER` writer - Trigger a watchdog reset"]
 pub type TRIGGER_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
@@ -49,11 +47,6 @@ impl R {
     #[inline(always)]
     pub fn enable(&self) -> ENABLE_R {
         ENABLE_R::new(((self.bits >> 30) & 1) != 0)
-    }
-    #[doc = "Bit 31 - Trigger a watchdog reset"]
-    #[inline(always)]
-    pub fn trigger(&self) -> TRIGGER_R {
-        TRIGGER_R::new(((self.bits >> 31) & 1) != 0)
     }
 }
 impl W {
@@ -88,9 +81,7 @@ impl W {
         TRIGGER_W::new(self, 31)
     }
 }
-#[doc = "Watchdog control  
- The rst_wdsel register determines which subsystems are reset when the watchdog is triggered.  
- The watchdog can be triggered in software.  
+#[doc = "Watchdog control The rst_wdsel register determines which subsystems are reset when the watchdog is triggered. The watchdog can be triggered in software.  
 
 You can [`read`](crate::generic::Reg::read) this register and get [`ctrl::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`ctrl::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct CTRL_SPEC;

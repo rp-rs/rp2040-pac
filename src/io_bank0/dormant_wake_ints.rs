@@ -1,5 +1,7 @@
 #[doc = "Register `DORMANT_WAKE_INTS%s` reader"]
 pub type R = crate::R<DORMANT_WAKE_INTS_SPEC>;
+#[doc = "Register `DORMANT_WAKE_INTS%s` writer"]
+pub type W = crate::W<DORMANT_WAKE_INTS_SPEC>;
 #[doc = "Field `GPIO0_LEVEL_LOW` reader - "]
 pub type GPIO0_LEVEL_LOW_R = crate::BitReader;
 #[doc = "Field `GPIO0_LEVEL_HIGH` reader - "]
@@ -226,15 +228,22 @@ impl R {
         GPIO7_EDGE_HIGH_R::new(((self.bits >> 31) & 1) != 0)
     }
 }
+impl W {}
 #[doc = "Interrupt status after masking &amp; forcing for dormant_wake  
 
-You can [`read`](crate::generic::Reg::read) this register and get [`dormant_wake_ints::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+You can [`read`](crate::generic::Reg::read) this register and get [`dormant_wake_ints::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`dormant_wake_ints::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct DORMANT_WAKE_INTS_SPEC;
 impl crate::RegisterSpec for DORMANT_WAKE_INTS_SPEC {
     type Ux = u32;
 }
 #[doc = "`read()` method returns [`dormant_wake_ints::R`](R) reader structure"]
 impl crate::Readable for DORMANT_WAKE_INTS_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`dormant_wake_ints::W`](W) writer structure"]
+impl crate::Writable for DORMANT_WAKE_INTS_SPEC {
+    type Safety = crate::Unsafe;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+}
 #[doc = "`reset()` method sets DORMANT_WAKE_INTS%s to value 0"]
 impl crate::Resettable for DORMANT_WAKE_INTS_SPEC {
     const RESET_VALUE: u32 = 0;

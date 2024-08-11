@@ -2,27 +2,19 @@
 pub type R = crate::R<STREAM_ADDR_SPEC>;
 #[doc = "Register `STREAM_ADDR` writer"]
 pub type W = crate::W<STREAM_ADDR_SPEC>;
-#[doc = "Field `STREAM_ADDR` reader - The address of the next word to be streamed from flash to the streaming FIFO.  
- Increments automatically after each flash access.  
- Write the initial access address here before starting a streaming read."]
+#[doc = "Field `STREAM_ADDR` reader - The address of the next word to be streamed from flash to the streaming FIFO. Increments automatically after each flash access. Write the initial access address here before starting a streaming read."]
 pub type STREAM_ADDR_R = crate::FieldReader<u32>;
-#[doc = "Field `STREAM_ADDR` writer - The address of the next word to be streamed from flash to the streaming FIFO.  
- Increments automatically after each flash access.  
- Write the initial access address here before starting a streaming read."]
+#[doc = "Field `STREAM_ADDR` writer - The address of the next word to be streamed from flash to the streaming FIFO. Increments automatically after each flash access. Write the initial access address here before starting a streaming read."]
 pub type STREAM_ADDR_W<'a, REG> = crate::FieldWriter<'a, REG, 30, u32>;
 impl R {
-    #[doc = "Bits 2:31 - The address of the next word to be streamed from flash to the streaming FIFO.  
- Increments automatically after each flash access.  
- Write the initial access address here before starting a streaming read."]
+    #[doc = "Bits 2:31 - The address of the next word to be streamed from flash to the streaming FIFO. Increments automatically after each flash access. Write the initial access address here before starting a streaming read."]
     #[inline(always)]
     pub fn stream_addr(&self) -> STREAM_ADDR_R {
         STREAM_ADDR_R::new((self.bits >> 2) & 0x3fff_ffff)
     }
 }
 impl W {
-    #[doc = "Bits 2:31 - The address of the next word to be streamed from flash to the streaming FIFO.  
- Increments automatically after each flash access.  
- Write the initial access address here before starting a streaming read."]
+    #[doc = "Bits 2:31 - The address of the next word to be streamed from flash to the streaming FIFO. Increments automatically after each flash access. Write the initial access address here before starting a streaming read."]
     #[inline(always)]
     #[must_use]
     pub fn stream_addr(&mut self) -> STREAM_ADDR_W<STREAM_ADDR_SPEC> {

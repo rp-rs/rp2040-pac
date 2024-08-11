@@ -2,19 +2,19 @@
 pub type R = crate::R<INT_EP_CTRL_SPEC>;
 #[doc = "Register `INT_EP_CTRL` writer"]
 pub type W = crate::W<INT_EP_CTRL_SPEC>;
-#[doc = "Field `INT_EP_ACTIVE` reader - Host: Enable interrupt endpoint 1 -> 15"]
+#[doc = "Field `INT_EP_ACTIVE` reader - Host: Enable interrupt endpoint 1 => 15"]
 pub type INT_EP_ACTIVE_R = crate::FieldReader<u16>;
-#[doc = "Field `INT_EP_ACTIVE` writer - Host: Enable interrupt endpoint 1 -> 15"]
+#[doc = "Field `INT_EP_ACTIVE` writer - Host: Enable interrupt endpoint 1 => 15"]
 pub type INT_EP_ACTIVE_W<'a, REG> = crate::FieldWriter<'a, REG, 15, u16>;
 impl R {
-    #[doc = "Bits 1:15 - Host: Enable interrupt endpoint 1 -> 15"]
+    #[doc = "Bits 1:15 - Host: Enable interrupt endpoint 1 => 15"]
     #[inline(always)]
     pub fn int_ep_active(&self) -> INT_EP_ACTIVE_R {
         INT_EP_ACTIVE_R::new(((self.bits >> 1) & 0x7fff) as u16)
     }
 }
 impl W {
-    #[doc = "Bits 1:15 - Host: Enable interrupt endpoint 1 -> 15"]
+    #[doc = "Bits 1:15 - Host: Enable interrupt endpoint 1 => 15"]
     #[inline(always)]
     #[must_use]
     pub fn int_ep_active(&mut self) -> INT_EP_ACTIVE_W<INT_EP_CTRL_SPEC> {

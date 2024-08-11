@@ -65,25 +65,17 @@ where
 pub type WRAP_BOTTOM_R = crate::FieldReader;
 #[doc = "Field `WRAP_BOTTOM` writer - After reaching wrap_top, execution is wrapped to this address."]
 pub type WRAP_BOTTOM_W<'a, REG> = crate::FieldWriter<'a, REG, 5>;
-#[doc = "Field `WRAP_TOP` reader - After reaching this address, execution is wrapped to wrap_bottom.  
- If the instruction is a jump, and the jump condition is true, the jump takes priority."]
+#[doc = "Field `WRAP_TOP` reader - After reaching this address, execution is wrapped to wrap_bottom. If the instruction is a jump, and the jump condition is true, the jump takes priority."]
 pub type WRAP_TOP_R = crate::FieldReader;
-#[doc = "Field `WRAP_TOP` writer - After reaching this address, execution is wrapped to wrap_bottom.  
- If the instruction is a jump, and the jump condition is true, the jump takes priority."]
+#[doc = "Field `WRAP_TOP` writer - After reaching this address, execution is wrapped to wrap_bottom. If the instruction is a jump, and the jump condition is true, the jump takes priority."]
 pub type WRAP_TOP_W<'a, REG> = crate::FieldWriter<'a, REG, 5>;
 #[doc = "Field `OUT_STICKY` reader - Continuously assert the most recent OUT/SET to the pins"]
 pub type OUT_STICKY_R = crate::BitReader;
 #[doc = "Field `OUT_STICKY` writer - Continuously assert the most recent OUT/SET to the pins"]
 pub type OUT_STICKY_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `INLINE_OUT_EN` reader - If 1, use a bit of OUT data as an auxiliary write enable  
- When used in conjunction with OUT_STICKY, writes with an enable of 0 will  
- deassert the latest pin write. This can create useful masking/override behaviour  
- due to the priority ordering of state machine pin writes (SM0 &lt; SM1 &lt; ...)"]
+#[doc = "Field `INLINE_OUT_EN` reader - If 1, use a bit of OUT data as an auxiliary write enable When used in conjunction with OUT_STICKY, writes with an enable of 0 will deassert the latest pin write. This can create useful masking/override behaviour due to the priority ordering of state machine pin writes (SM0 &lt; SM1 &lt; ...)"]
 pub type INLINE_OUT_EN_R = crate::BitReader;
-#[doc = "Field `INLINE_OUT_EN` writer - If 1, use a bit of OUT data as an auxiliary write enable  
- When used in conjunction with OUT_STICKY, writes with an enable of 0 will  
- deassert the latest pin write. This can create useful masking/override behaviour  
- due to the priority ordering of state machine pin writes (SM0 &lt; SM1 &lt; ...)"]
+#[doc = "Field `INLINE_OUT_EN` writer - If 1, use a bit of OUT data as an auxiliary write enable When used in conjunction with OUT_STICKY, writes with an enable of 0 will deassert the latest pin write. This can create useful masking/override behaviour due to the priority ordering of state machine pin writes (SM0 &lt; SM1 &lt; ...)"]
 pub type INLINE_OUT_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `OUT_EN_SEL` reader - Which data bit to use for inline OUT enable"]
 pub type OUT_EN_SEL_R = crate::FieldReader;
@@ -119,8 +111,7 @@ impl R {
     pub fn wrap_bottom(&self) -> WRAP_BOTTOM_R {
         WRAP_BOTTOM_R::new(((self.bits >> 7) & 0x1f) as u8)
     }
-    #[doc = "Bits 12:16 - After reaching this address, execution is wrapped to wrap_bottom.  
- If the instruction is a jump, and the jump condition is true, the jump takes priority."]
+    #[doc = "Bits 12:16 - After reaching this address, execution is wrapped to wrap_bottom. If the instruction is a jump, and the jump condition is true, the jump takes priority."]
     #[inline(always)]
     pub fn wrap_top(&self) -> WRAP_TOP_R {
         WRAP_TOP_R::new(((self.bits >> 12) & 0x1f) as u8)
@@ -130,10 +121,7 @@ impl R {
     pub fn out_sticky(&self) -> OUT_STICKY_R {
         OUT_STICKY_R::new(((self.bits >> 17) & 1) != 0)
     }
-    #[doc = "Bit 18 - If 1, use a bit of OUT data as an auxiliary write enable  
- When used in conjunction with OUT_STICKY, writes with an enable of 0 will  
- deassert the latest pin write. This can create useful masking/override behaviour  
- due to the priority ordering of state machine pin writes (SM0 &lt; SM1 &lt; ...)"]
+    #[doc = "Bit 18 - If 1, use a bit of OUT data as an auxiliary write enable When used in conjunction with OUT_STICKY, writes with an enable of 0 will deassert the latest pin write. This can create useful masking/override behaviour due to the priority ordering of state machine pin writes (SM0 &lt; SM1 &lt; ...)"]
     #[inline(always)]
     pub fn inline_out_en(&self) -> INLINE_OUT_EN_R {
         INLINE_OUT_EN_R::new(((self.bits >> 18) & 1) != 0)
@@ -183,8 +171,7 @@ impl W {
     pub fn wrap_bottom(&mut self) -> WRAP_BOTTOM_W<SM_EXECCTRL_SPEC> {
         WRAP_BOTTOM_W::new(self, 7)
     }
-    #[doc = "Bits 12:16 - After reaching this address, execution is wrapped to wrap_bottom.  
- If the instruction is a jump, and the jump condition is true, the jump takes priority."]
+    #[doc = "Bits 12:16 - After reaching this address, execution is wrapped to wrap_bottom. If the instruction is a jump, and the jump condition is true, the jump takes priority."]
     #[inline(always)]
     #[must_use]
     pub fn wrap_top(&mut self) -> WRAP_TOP_W<SM_EXECCTRL_SPEC> {
@@ -196,10 +183,7 @@ impl W {
     pub fn out_sticky(&mut self) -> OUT_STICKY_W<SM_EXECCTRL_SPEC> {
         OUT_STICKY_W::new(self, 17)
     }
-    #[doc = "Bit 18 - If 1, use a bit of OUT data as an auxiliary write enable  
- When used in conjunction with OUT_STICKY, writes with an enable of 0 will  
- deassert the latest pin write. This can create useful masking/override behaviour  
- due to the priority ordering of state machine pin writes (SM0 &lt; SM1 &lt; ...)"]
+    #[doc = "Bit 18 - If 1, use a bit of OUT data as an auxiliary write enable When used in conjunction with OUT_STICKY, writes with an enable of 0 will deassert the latest pin write. This can create useful masking/override behaviour due to the priority ordering of state machine pin writes (SM0 &lt; SM1 &lt; ...)"]
     #[inline(always)]
     #[must_use]
     pub fn inline_out_en(&mut self) -> INLINE_OUT_EN_W<SM_EXECCTRL_SPEC> {

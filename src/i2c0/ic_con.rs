@@ -2,9 +2,7 @@
 pub type R = crate::R<IC_CON_SPEC>;
 #[doc = "Register `IC_CON` writer"]
 pub type W = crate::W<IC_CON_SPEC>;
-#[doc = "This bit controls whether the DW_apb_i2c master is enabled.  
-
- NOTE: Software should ensure that if this bit is written with '1' then bit 6 should also be written with a '1'.  
+#[doc = "This bit controls whether the DW_apb_i2c master is enabled. NOTE: Software should ensure that if this bit is written with '1' then bit 6 should also be written with a '1'.  
 
 Value on reset: 1"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
@@ -20,9 +18,7 @@ impl From<MASTER_MODE_A> for bool {
         variant as u8 != 0
     }
 }
-#[doc = "Field `MASTER_MODE` reader - This bit controls whether the DW_apb_i2c master is enabled.  
-
- NOTE: Software should ensure that if this bit is written with '1' then bit 6 should also be written with a '1'."]
+#[doc = "Field `MASTER_MODE` reader - This bit controls whether the DW_apb_i2c master is enabled. NOTE: Software should ensure that if this bit is written with '1' then bit 6 should also be written with a '1'."]
 pub type MASTER_MODE_R = crate::BitReader<MASTER_MODE_A>;
 impl MASTER_MODE_R {
     #[doc = "Get enumerated values variant"]
@@ -44,9 +40,7 @@ impl MASTER_MODE_R {
         *self == MASTER_MODE_A::ENABLED
     }
 }
-#[doc = "Field `MASTER_MODE` writer - This bit controls whether the DW_apb_i2c master is enabled.  
-
- NOTE: Software should ensure that if this bit is written with '1' then bit 6 should also be written with a '1'."]
+#[doc = "Field `MASTER_MODE` writer - This bit controls whether the DW_apb_i2c master is enabled. NOTE: Software should ensure that if this bit is written with '1' then bit 6 should also be written with a '1'."]
 pub type MASTER_MODE_W<'a, REG> = crate::BitWriter<'a, REG, MASTER_MODE_A>;
 impl<'a, REG> MASTER_MODE_W<'a, REG>
 where
@@ -63,17 +57,7 @@ where
         self.variant(MASTER_MODE_A::ENABLED)
     }
 }
-#[doc = "These bits control at which speed the DW_apb_i2c operates; its setting is relevant only if one is operating the DW_apb_i2c in master mode. Hardware protects against illegal values being programmed by software. These bits must be programmed appropriately for slave mode also, as it is used to capture correct value of spike filter as per the speed mode.  
-
- This register should be programmed only with a value in the range of 1 to IC_MAX_SPEED_MODE; otherwise, hardware updates this register with the value of IC_MAX_SPEED_MODE.  
-
- 1: standard mode (100 kbit/s)  
-
- 2: fast mode (&lt;=400 kbit/s) or fast mode plus (&lt;=1000Kbit/s)  
-
- 3: high speed mode (3.4 Mbit/s)  
-
- Note: This field is not applicable when IC_ULTRA_FAST_MODE=1  
+#[doc = "These bits control at which speed the DW_apb_i2c operates; its setting is relevant only if one is operating the DW_apb_i2c in master mode. Hardware protects against illegal values being programmed by software. These bits must be programmed appropriately for slave mode also, as it is used to capture correct value of spike filter as per the speed mode. This register should be programmed only with a value in the range of 1 to IC_MAX_SPEED_MODE; otherwise, hardware updates this register with the value of IC_MAX_SPEED_MODE. 1: standard mode (100 kbit/s) 2: fast mode (&lt;=400 kbit/s) or fast mode plus (&lt;=1000Kbit/s) 3: high speed mode (3.4 Mbit/s) Note: This field is not applicable when IC_ULTRA_FAST_MODE=1  
 
 Value on reset: 2"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
@@ -95,17 +79,7 @@ impl From<SPEED_A> for u8 {
 impl crate::FieldSpec for SPEED_A {
     type Ux = u8;
 }
-#[doc = "Field `SPEED` reader - These bits control at which speed the DW_apb_i2c operates; its setting is relevant only if one is operating the DW_apb_i2c in master mode. Hardware protects against illegal values being programmed by software. These bits must be programmed appropriately for slave mode also, as it is used to capture correct value of spike filter as per the speed mode.  
-
- This register should be programmed only with a value in the range of 1 to IC_MAX_SPEED_MODE; otherwise, hardware updates this register with the value of IC_MAX_SPEED_MODE.  
-
- 1: standard mode (100 kbit/s)  
-
- 2: fast mode (&lt;=400 kbit/s) or fast mode plus (&lt;=1000Kbit/s)  
-
- 3: high speed mode (3.4 Mbit/s)  
-
- Note: This field is not applicable when IC_ULTRA_FAST_MODE=1"]
+#[doc = "Field `SPEED` reader - These bits control at which speed the DW_apb_i2c operates; its setting is relevant only if one is operating the DW_apb_i2c in master mode. Hardware protects against illegal values being programmed by software. These bits must be programmed appropriately for slave mode also, as it is used to capture correct value of spike filter as per the speed mode. This register should be programmed only with a value in the range of 1 to IC_MAX_SPEED_MODE; otherwise, hardware updates this register with the value of IC_MAX_SPEED_MODE. 1: standard mode (100 kbit/s) 2: fast mode (&lt;=400 kbit/s) or fast mode plus (&lt;=1000Kbit/s) 3: high speed mode (3.4 Mbit/s) Note: This field is not applicable when IC_ULTRA_FAST_MODE=1"]
 pub type SPEED_R = crate::FieldReader<SPEED_A>;
 impl SPEED_R {
     #[doc = "Get enumerated values variant"]
@@ -134,17 +108,7 @@ impl SPEED_R {
         *self == SPEED_A::HIGH
     }
 }
-#[doc = "Field `SPEED` writer - These bits control at which speed the DW_apb_i2c operates; its setting is relevant only if one is operating the DW_apb_i2c in master mode. Hardware protects against illegal values being programmed by software. These bits must be programmed appropriately for slave mode also, as it is used to capture correct value of spike filter as per the speed mode.  
-
- This register should be programmed only with a value in the range of 1 to IC_MAX_SPEED_MODE; otherwise, hardware updates this register with the value of IC_MAX_SPEED_MODE.  
-
- 1: standard mode (100 kbit/s)  
-
- 2: fast mode (&lt;=400 kbit/s) or fast mode plus (&lt;=1000Kbit/s)  
-
- 3: high speed mode (3.4 Mbit/s)  
-
- Note: This field is not applicable when IC_ULTRA_FAST_MODE=1"]
+#[doc = "Field `SPEED` writer - These bits control at which speed the DW_apb_i2c operates; its setting is relevant only if one is operating the DW_apb_i2c in master mode. Hardware protects against illegal values being programmed by software. These bits must be programmed appropriately for slave mode also, as it is used to capture correct value of spike filter as per the speed mode. This register should be programmed only with a value in the range of 1 to IC_MAX_SPEED_MODE; otherwise, hardware updates this register with the value of IC_MAX_SPEED_MODE. 1: standard mode (100 kbit/s) 2: fast mode (&lt;=400 kbit/s) or fast mode plus (&lt;=1000Kbit/s) 3: high speed mode (3.4 Mbit/s) Note: This field is not applicable when IC_ULTRA_FAST_MODE=1"]
 pub type SPEED_W<'a, REG> = crate::FieldWriter<'a, REG, 2, SPEED_A>;
 impl<'a, REG> SPEED_W<'a, REG>
 where
@@ -277,9 +241,7 @@ where
         self.variant(IC_10BITADDR_MASTER_A::ADDR_10BITS)
     }
 }
-#[doc = "Determines whether RESTART conditions may be sent when acting as a master. Some older slaves do not support handling RESTART conditions; however, RESTART conditions are used in several DW_apb_i2c operations. When RESTART is disabled, the master is prohibited from performing the following functions: - Sending a START BYTE - Performing any high-speed mode operation - High-speed mode operation - Performing direction changes in combined format mode - Performing a read operation with a 10-bit address By replacing RESTART condition followed by a STOP and a subsequent START condition, split operations are broken down into multiple DW_apb_i2c transfers. If the above operations are performed, it will result in setting bit 6 (TX_ABRT) of the IC_RAW_INTR_STAT register.  
-
- Reset value: ENABLED  
+#[doc = "Determines whether RESTART conditions may be sent when acting as a master. Some older slaves do not support handling RESTART conditions; however, RESTART conditions are used in several DW_apb_i2c operations. When RESTART is disabled, the master is prohibited from performing the following functions: - Sending a START BYTE - Performing any high-speed mode operation - High-speed mode operation - Performing direction changes in combined format mode - Performing a read operation with a 10-bit address By replacing RESTART condition followed by a STOP and a subsequent START condition, split operations are broken down into multiple DW_apb_i2c transfers. If the above operations are performed, it will result in setting bit 6 (TX_ABRT) of the IC_RAW_INTR_STAT register. Reset value: ENABLED  
 
 Value on reset: 1"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
@@ -295,9 +257,7 @@ impl From<IC_RESTART_EN_A> for bool {
         variant as u8 != 0
     }
 }
-#[doc = "Field `IC_RESTART_EN` reader - Determines whether RESTART conditions may be sent when acting as a master. Some older slaves do not support handling RESTART conditions; however, RESTART conditions are used in several DW_apb_i2c operations. When RESTART is disabled, the master is prohibited from performing the following functions: - Sending a START BYTE - Performing any high-speed mode operation - High-speed mode operation - Performing direction changes in combined format mode - Performing a read operation with a 10-bit address By replacing RESTART condition followed by a STOP and a subsequent START condition, split operations are broken down into multiple DW_apb_i2c transfers. If the above operations are performed, it will result in setting bit 6 (TX_ABRT) of the IC_RAW_INTR_STAT register.  
-
- Reset value: ENABLED"]
+#[doc = "Field `IC_RESTART_EN` reader - Determines whether RESTART conditions may be sent when acting as a master. Some older slaves do not support handling RESTART conditions; however, RESTART conditions are used in several DW_apb_i2c operations. When RESTART is disabled, the master is prohibited from performing the following functions: - Sending a START BYTE - Performing any high-speed mode operation - High-speed mode operation - Performing direction changes in combined format mode - Performing a read operation with a 10-bit address By replacing RESTART condition followed by a STOP and a subsequent START condition, split operations are broken down into multiple DW_apb_i2c transfers. If the above operations are performed, it will result in setting bit 6 (TX_ABRT) of the IC_RAW_INTR_STAT register. Reset value: ENABLED"]
 pub type IC_RESTART_EN_R = crate::BitReader<IC_RESTART_EN_A>;
 impl IC_RESTART_EN_R {
     #[doc = "Get enumerated values variant"]
@@ -319,9 +279,7 @@ impl IC_RESTART_EN_R {
         *self == IC_RESTART_EN_A::ENABLED
     }
 }
-#[doc = "Field `IC_RESTART_EN` writer - Determines whether RESTART conditions may be sent when acting as a master. Some older slaves do not support handling RESTART conditions; however, RESTART conditions are used in several DW_apb_i2c operations. When RESTART is disabled, the master is prohibited from performing the following functions: - Sending a START BYTE - Performing any high-speed mode operation - High-speed mode operation - Performing direction changes in combined format mode - Performing a read operation with a 10-bit address By replacing RESTART condition followed by a STOP and a subsequent START condition, split operations are broken down into multiple DW_apb_i2c transfers. If the above operations are performed, it will result in setting bit 6 (TX_ABRT) of the IC_RAW_INTR_STAT register.  
-
- Reset value: ENABLED"]
+#[doc = "Field `IC_RESTART_EN` writer - Determines whether RESTART conditions may be sent when acting as a master. Some older slaves do not support handling RESTART conditions; however, RESTART conditions are used in several DW_apb_i2c operations. When RESTART is disabled, the master is prohibited from performing the following functions: - Sending a START BYTE - Performing any high-speed mode operation - High-speed mode operation - Performing direction changes in combined format mode - Performing a read operation with a 10-bit address By replacing RESTART condition followed by a STOP and a subsequent START condition, split operations are broken down into multiple DW_apb_i2c transfers. If the above operations are performed, it will result in setting bit 6 (TX_ABRT) of the IC_RAW_INTR_STAT register. Reset value: ENABLED"]
 pub type IC_RESTART_EN_W<'a, REG> = crate::BitWriter<'a, REG, IC_RESTART_EN_A>;
 impl<'a, REG> IC_RESTART_EN_W<'a, REG>
 where
@@ -338,11 +296,7 @@ where
         self.variant(IC_RESTART_EN_A::ENABLED)
     }
 }
-#[doc = "This bit controls whether I2C has its slave disabled, which means once the presetn signal is applied, then this bit is set and the slave is disabled.  
-
- If this bit is set (slave is disabled), DW_apb_i2c functions only as a master and does not perform any action that requires a slave.  
-
- NOTE: Software should ensure that if this bit is written with 0, then bit 0 should also be written with a 0.  
+#[doc = "This bit controls whether I2C has its slave disabled, which means once the presetn signal is applied, then this bit is set and the slave is disabled. If this bit is set (slave is disabled), DW_apb_i2c functions only as a master and does not perform any action that requires a slave. NOTE: Software should ensure that if this bit is written with 0, then bit 0 should also be written with a 0.  
 
 Value on reset: 1"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
@@ -358,11 +312,7 @@ impl From<IC_SLAVE_DISABLE_A> for bool {
         variant as u8 != 0
     }
 }
-#[doc = "Field `IC_SLAVE_DISABLE` reader - This bit controls whether I2C has its slave disabled, which means once the presetn signal is applied, then this bit is set and the slave is disabled.  
-
- If this bit is set (slave is disabled), DW_apb_i2c functions only as a master and does not perform any action that requires a slave.  
-
- NOTE: Software should ensure that if this bit is written with 0, then bit 0 should also be written with a 0."]
+#[doc = "Field `IC_SLAVE_DISABLE` reader - This bit controls whether I2C has its slave disabled, which means once the presetn signal is applied, then this bit is set and the slave is disabled. If this bit is set (slave is disabled), DW_apb_i2c functions only as a master and does not perform any action that requires a slave. NOTE: Software should ensure that if this bit is written with 0, then bit 0 should also be written with a 0."]
 pub type IC_SLAVE_DISABLE_R = crate::BitReader<IC_SLAVE_DISABLE_A>;
 impl IC_SLAVE_DISABLE_R {
     #[doc = "Get enumerated values variant"]
@@ -384,11 +334,7 @@ impl IC_SLAVE_DISABLE_R {
         *self == IC_SLAVE_DISABLE_A::SLAVE_DISABLED
     }
 }
-#[doc = "Field `IC_SLAVE_DISABLE` writer - This bit controls whether I2C has its slave disabled, which means once the presetn signal is applied, then this bit is set and the slave is disabled.  
-
- If this bit is set (slave is disabled), DW_apb_i2c functions only as a master and does not perform any action that requires a slave.  
-
- NOTE: Software should ensure that if this bit is written with 0, then bit 0 should also be written with a 0."]
+#[doc = "Field `IC_SLAVE_DISABLE` writer - This bit controls whether I2C has its slave disabled, which means once the presetn signal is applied, then this bit is set and the slave is disabled. If this bit is set (slave is disabled), DW_apb_i2c functions only as a master and does not perform any action that requires a slave. NOTE: Software should ensure that if this bit is written with 0, then bit 0 should also be written with a 0."]
 pub type IC_SLAVE_DISABLE_W<'a, REG> = crate::BitWriter<'a, REG, IC_SLAVE_DISABLE_A>;
 impl<'a, REG> IC_SLAVE_DISABLE_W<'a, REG>
 where
@@ -405,9 +351,7 @@ where
         self.variant(IC_SLAVE_DISABLE_A::SLAVE_DISABLED)
     }
 }
-#[doc = "In slave mode: - 1'b1: issues the STOP_DET interrupt only when it is addressed. - 1'b0: issues the STOP_DET irrespective of whether it's addressed or not. Reset value: 0x0  
-
- NOTE: During a general call address, this slave does not issue the STOP_DET interrupt if STOP_DET_IF_ADDRESSED = 1'b1, even if the slave responds to the general call address by generating ACK. The STOP_DET interrupt is generated only when the transmitted address matches the slave address (SAR).  
+#[doc = "In slave mode: - 1'b1: issues the STOP_DET interrupt only when it is addressed. - 1'b0: issues the STOP_DET irrespective of whether it's addressed or not. Reset value: 0x0 NOTE: During a general call address, this slave does not issue the STOP_DET interrupt if STOP_DET_IF_ADDRESSED = 1'b1, even if the slave responds to the general call address by generating ACK. The STOP_DET interrupt is generated only when the transmitted address matches the slave address (SAR).  
 
 Value on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
@@ -423,9 +367,7 @@ impl From<STOP_DET_IFADDRESSED_A> for bool {
         variant as u8 != 0
     }
 }
-#[doc = "Field `STOP_DET_IFADDRESSED` reader - In slave mode: - 1'b1: issues the STOP_DET interrupt only when it is addressed. - 1'b0: issues the STOP_DET irrespective of whether it's addressed or not. Reset value: 0x0  
-
- NOTE: During a general call address, this slave does not issue the STOP_DET interrupt if STOP_DET_IF_ADDRESSED = 1'b1, even if the slave responds to the general call address by generating ACK. The STOP_DET interrupt is generated only when the transmitted address matches the slave address (SAR)."]
+#[doc = "Field `STOP_DET_IFADDRESSED` reader - In slave mode: - 1'b1: issues the STOP_DET interrupt only when it is addressed. - 1'b0: issues the STOP_DET irrespective of whether it's addressed or not. Reset value: 0x0 NOTE: During a general call address, this slave does not issue the STOP_DET interrupt if STOP_DET_IF_ADDRESSED = 1'b1, even if the slave responds to the general call address by generating ACK. The STOP_DET interrupt is generated only when the transmitted address matches the slave address (SAR)."]
 pub type STOP_DET_IFADDRESSED_R = crate::BitReader<STOP_DET_IFADDRESSED_A>;
 impl STOP_DET_IFADDRESSED_R {
     #[doc = "Get enumerated values variant"]
@@ -447,9 +389,7 @@ impl STOP_DET_IFADDRESSED_R {
         *self == STOP_DET_IFADDRESSED_A::ENABLED
     }
 }
-#[doc = "Field `STOP_DET_IFADDRESSED` writer - In slave mode: - 1'b1: issues the STOP_DET interrupt only when it is addressed. - 1'b0: issues the STOP_DET irrespective of whether it's addressed or not. Reset value: 0x0  
-
- NOTE: During a general call address, this slave does not issue the STOP_DET interrupt if STOP_DET_IF_ADDRESSED = 1'b1, even if the slave responds to the general call address by generating ACK. The STOP_DET interrupt is generated only when the transmitted address matches the slave address (SAR)."]
+#[doc = "Field `STOP_DET_IFADDRESSED` writer - In slave mode: - 1'b1: issues the STOP_DET interrupt only when it is addressed. - 1'b0: issues the STOP_DET irrespective of whether it's addressed or not. Reset value: 0x0 NOTE: During a general call address, this slave does not issue the STOP_DET interrupt if STOP_DET_IF_ADDRESSED = 1'b1, even if the slave responds to the general call address by generating ACK. The STOP_DET interrupt is generated only when the transmitted address matches the slave address (SAR)."]
 pub type STOP_DET_IFADDRESSED_W<'a, REG> = crate::BitWriter<'a, REG, STOP_DET_IFADDRESSED_A>;
 impl<'a, REG> STOP_DET_IFADDRESSED_W<'a, REG>
 where
@@ -466,9 +406,7 @@ where
         self.variant(STOP_DET_IFADDRESSED_A::ENABLED)
     }
 }
-#[doc = "This bit controls the generation of the TX_EMPTY interrupt, as described in the IC_RAW_INTR_STAT register.  
-
- Reset value: 0x0.  
+#[doc = "This bit controls the generation of the TX_EMPTY interrupt, as described in the IC_RAW_INTR_STAT register. Reset value: 0x0.  
 
 Value on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
@@ -484,9 +422,7 @@ impl From<TX_EMPTY_CTRL_A> for bool {
         variant as u8 != 0
     }
 }
-#[doc = "Field `TX_EMPTY_CTRL` reader - This bit controls the generation of the TX_EMPTY interrupt, as described in the IC_RAW_INTR_STAT register.  
-
- Reset value: 0x0."]
+#[doc = "Field `TX_EMPTY_CTRL` reader - This bit controls the generation of the TX_EMPTY interrupt, as described in the IC_RAW_INTR_STAT register. Reset value: 0x0."]
 pub type TX_EMPTY_CTRL_R = crate::BitReader<TX_EMPTY_CTRL_A>;
 impl TX_EMPTY_CTRL_R {
     #[doc = "Get enumerated values variant"]
@@ -508,9 +444,7 @@ impl TX_EMPTY_CTRL_R {
         *self == TX_EMPTY_CTRL_A::ENABLED
     }
 }
-#[doc = "Field `TX_EMPTY_CTRL` writer - This bit controls the generation of the TX_EMPTY interrupt, as described in the IC_RAW_INTR_STAT register.  
-
- Reset value: 0x0."]
+#[doc = "Field `TX_EMPTY_CTRL` writer - This bit controls the generation of the TX_EMPTY interrupt, as described in the IC_RAW_INTR_STAT register. Reset value: 0x0."]
 pub type TX_EMPTY_CTRL_W<'a, REG> = crate::BitWriter<'a, REG, TX_EMPTY_CTRL_A>;
 impl<'a, REG> TX_EMPTY_CTRL_W<'a, REG>
 where
@@ -527,9 +461,7 @@ where
         self.variant(TX_EMPTY_CTRL_A::ENABLED)
     }
 }
-#[doc = "This bit controls whether DW_apb_i2c should hold the bus when the Rx FIFO is physically full to its RX_BUFFER_DEPTH, as described in the IC_RX_FULL_HLD_BUS_EN parameter.  
-
- Reset value: 0x0.  
+#[doc = "This bit controls whether DW_apb_i2c should hold the bus when the Rx FIFO is physically full to its RX_BUFFER_DEPTH, as described in the IC_RX_FULL_HLD_BUS_EN parameter. Reset value: 0x0.  
 
 Value on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
@@ -545,9 +477,7 @@ impl From<RX_FIFO_FULL_HLD_CTRL_A> for bool {
         variant as u8 != 0
     }
 }
-#[doc = "Field `RX_FIFO_FULL_HLD_CTRL` reader - This bit controls whether DW_apb_i2c should hold the bus when the Rx FIFO is physically full to its RX_BUFFER_DEPTH, as described in the IC_RX_FULL_HLD_BUS_EN parameter.  
-
- Reset value: 0x0."]
+#[doc = "Field `RX_FIFO_FULL_HLD_CTRL` reader - This bit controls whether DW_apb_i2c should hold the bus when the Rx FIFO is physically full to its RX_BUFFER_DEPTH, as described in the IC_RX_FULL_HLD_BUS_EN parameter. Reset value: 0x0."]
 pub type RX_FIFO_FULL_HLD_CTRL_R = crate::BitReader<RX_FIFO_FULL_HLD_CTRL_A>;
 impl RX_FIFO_FULL_HLD_CTRL_R {
     #[doc = "Get enumerated values variant"]
@@ -569,9 +499,7 @@ impl RX_FIFO_FULL_HLD_CTRL_R {
         *self == RX_FIFO_FULL_HLD_CTRL_A::ENABLED
     }
 }
-#[doc = "Field `RX_FIFO_FULL_HLD_CTRL` writer - This bit controls whether DW_apb_i2c should hold the bus when the Rx FIFO is physically full to its RX_BUFFER_DEPTH, as described in the IC_RX_FULL_HLD_BUS_EN parameter.  
-
- Reset value: 0x0."]
+#[doc = "Field `RX_FIFO_FULL_HLD_CTRL` writer - This bit controls whether DW_apb_i2c should hold the bus when the Rx FIFO is physically full to its RX_BUFFER_DEPTH, as described in the IC_RX_FULL_HLD_BUS_EN parameter. Reset value: 0x0."]
 pub type RX_FIFO_FULL_HLD_CTRL_W<'a, REG> = crate::BitWriter<'a, REG, RX_FIFO_FULL_HLD_CTRL_A>;
 impl<'a, REG> RX_FIFO_FULL_HLD_CTRL_W<'a, REG>
 where
@@ -591,24 +519,12 @@ where
 #[doc = "Field `STOP_DET_IF_MASTER_ACTIVE` reader - Master issues the STOP_DET interrupt irrespective of whether master is active or not"]
 pub type STOP_DET_IF_MASTER_ACTIVE_R = crate::BitReader;
 impl R {
-    #[doc = "Bit 0 - This bit controls whether the DW_apb_i2c master is enabled.  
-
- NOTE: Software should ensure that if this bit is written with '1' then bit 6 should also be written with a '1'."]
+    #[doc = "Bit 0 - This bit controls whether the DW_apb_i2c master is enabled. NOTE: Software should ensure that if this bit is written with '1' then bit 6 should also be written with a '1'."]
     #[inline(always)]
     pub fn master_mode(&self) -> MASTER_MODE_R {
         MASTER_MODE_R::new((self.bits & 1) != 0)
     }
-    #[doc = "Bits 1:2 - These bits control at which speed the DW_apb_i2c operates; its setting is relevant only if one is operating the DW_apb_i2c in master mode. Hardware protects against illegal values being programmed by software. These bits must be programmed appropriately for slave mode also, as it is used to capture correct value of spike filter as per the speed mode.  
-
- This register should be programmed only with a value in the range of 1 to IC_MAX_SPEED_MODE; otherwise, hardware updates this register with the value of IC_MAX_SPEED_MODE.  
-
- 1: standard mode (100 kbit/s)  
-
- 2: fast mode (&lt;=400 kbit/s) or fast mode plus (&lt;=1000Kbit/s)  
-
- 3: high speed mode (3.4 Mbit/s)  
-
- Note: This field is not applicable when IC_ULTRA_FAST_MODE=1"]
+    #[doc = "Bits 1:2 - These bits control at which speed the DW_apb_i2c operates; its setting is relevant only if one is operating the DW_apb_i2c in master mode. Hardware protects against illegal values being programmed by software. These bits must be programmed appropriately for slave mode also, as it is used to capture correct value of spike filter as per the speed mode. This register should be programmed only with a value in the range of 1 to IC_MAX_SPEED_MODE; otherwise, hardware updates this register with the value of IC_MAX_SPEED_MODE. 1: standard mode (100 kbit/s) 2: fast mode (&lt;=400 kbit/s) or fast mode plus (&lt;=1000Kbit/s) 3: high speed mode (3.4 Mbit/s) Note: This field is not applicable when IC_ULTRA_FAST_MODE=1"]
     #[inline(always)]
     pub fn speed(&self) -> SPEED_R {
         SPEED_R::new(((self.bits >> 1) & 3) as u8)
@@ -623,39 +539,27 @@ impl R {
     pub fn ic_10bitaddr_master(&self) -> IC_10BITADDR_MASTER_R {
         IC_10BITADDR_MASTER_R::new(((self.bits >> 4) & 1) != 0)
     }
-    #[doc = "Bit 5 - Determines whether RESTART conditions may be sent when acting as a master. Some older slaves do not support handling RESTART conditions; however, RESTART conditions are used in several DW_apb_i2c operations. When RESTART is disabled, the master is prohibited from performing the following functions: - Sending a START BYTE - Performing any high-speed mode operation - High-speed mode operation - Performing direction changes in combined format mode - Performing a read operation with a 10-bit address By replacing RESTART condition followed by a STOP and a subsequent START condition, split operations are broken down into multiple DW_apb_i2c transfers. If the above operations are performed, it will result in setting bit 6 (TX_ABRT) of the IC_RAW_INTR_STAT register.  
-
- Reset value: ENABLED"]
+    #[doc = "Bit 5 - Determines whether RESTART conditions may be sent when acting as a master. Some older slaves do not support handling RESTART conditions; however, RESTART conditions are used in several DW_apb_i2c operations. When RESTART is disabled, the master is prohibited from performing the following functions: - Sending a START BYTE - Performing any high-speed mode operation - High-speed mode operation - Performing direction changes in combined format mode - Performing a read operation with a 10-bit address By replacing RESTART condition followed by a STOP and a subsequent START condition, split operations are broken down into multiple DW_apb_i2c transfers. If the above operations are performed, it will result in setting bit 6 (TX_ABRT) of the IC_RAW_INTR_STAT register. Reset value: ENABLED"]
     #[inline(always)]
     pub fn ic_restart_en(&self) -> IC_RESTART_EN_R {
         IC_RESTART_EN_R::new(((self.bits >> 5) & 1) != 0)
     }
-    #[doc = "Bit 6 - This bit controls whether I2C has its slave disabled, which means once the presetn signal is applied, then this bit is set and the slave is disabled.  
-
- If this bit is set (slave is disabled), DW_apb_i2c functions only as a master and does not perform any action that requires a slave.  
-
- NOTE: Software should ensure that if this bit is written with 0, then bit 0 should also be written with a 0."]
+    #[doc = "Bit 6 - This bit controls whether I2C has its slave disabled, which means once the presetn signal is applied, then this bit is set and the slave is disabled. If this bit is set (slave is disabled), DW_apb_i2c functions only as a master and does not perform any action that requires a slave. NOTE: Software should ensure that if this bit is written with 0, then bit 0 should also be written with a 0."]
     #[inline(always)]
     pub fn ic_slave_disable(&self) -> IC_SLAVE_DISABLE_R {
         IC_SLAVE_DISABLE_R::new(((self.bits >> 6) & 1) != 0)
     }
-    #[doc = "Bit 7 - In slave mode: - 1'b1: issues the STOP_DET interrupt only when it is addressed. - 1'b0: issues the STOP_DET irrespective of whether it's addressed or not. Reset value: 0x0  
-
- NOTE: During a general call address, this slave does not issue the STOP_DET interrupt if STOP_DET_IF_ADDRESSED = 1'b1, even if the slave responds to the general call address by generating ACK. The STOP_DET interrupt is generated only when the transmitted address matches the slave address (SAR)."]
+    #[doc = "Bit 7 - In slave mode: - 1'b1: issues the STOP_DET interrupt only when it is addressed. - 1'b0: issues the STOP_DET irrespective of whether it's addressed or not. Reset value: 0x0 NOTE: During a general call address, this slave does not issue the STOP_DET interrupt if STOP_DET_IF_ADDRESSED = 1'b1, even if the slave responds to the general call address by generating ACK. The STOP_DET interrupt is generated only when the transmitted address matches the slave address (SAR)."]
     #[inline(always)]
     pub fn stop_det_ifaddressed(&self) -> STOP_DET_IFADDRESSED_R {
         STOP_DET_IFADDRESSED_R::new(((self.bits >> 7) & 1) != 0)
     }
-    #[doc = "Bit 8 - This bit controls the generation of the TX_EMPTY interrupt, as described in the IC_RAW_INTR_STAT register.  
-
- Reset value: 0x0."]
+    #[doc = "Bit 8 - This bit controls the generation of the TX_EMPTY interrupt, as described in the IC_RAW_INTR_STAT register. Reset value: 0x0."]
     #[inline(always)]
     pub fn tx_empty_ctrl(&self) -> TX_EMPTY_CTRL_R {
         TX_EMPTY_CTRL_R::new(((self.bits >> 8) & 1) != 0)
     }
-    #[doc = "Bit 9 - This bit controls whether DW_apb_i2c should hold the bus when the Rx FIFO is physically full to its RX_BUFFER_DEPTH, as described in the IC_RX_FULL_HLD_BUS_EN parameter.  
-
- Reset value: 0x0."]
+    #[doc = "Bit 9 - This bit controls whether DW_apb_i2c should hold the bus when the Rx FIFO is physically full to its RX_BUFFER_DEPTH, as described in the IC_RX_FULL_HLD_BUS_EN parameter. Reset value: 0x0."]
     #[inline(always)]
     pub fn rx_fifo_full_hld_ctrl(&self) -> RX_FIFO_FULL_HLD_CTRL_R {
         RX_FIFO_FULL_HLD_CTRL_R::new(((self.bits >> 9) & 1) != 0)
@@ -667,25 +571,13 @@ impl R {
     }
 }
 impl W {
-    #[doc = "Bit 0 - This bit controls whether the DW_apb_i2c master is enabled.  
-
- NOTE: Software should ensure that if this bit is written with '1' then bit 6 should also be written with a '1'."]
+    #[doc = "Bit 0 - This bit controls whether the DW_apb_i2c master is enabled. NOTE: Software should ensure that if this bit is written with '1' then bit 6 should also be written with a '1'."]
     #[inline(always)]
     #[must_use]
     pub fn master_mode(&mut self) -> MASTER_MODE_W<IC_CON_SPEC> {
         MASTER_MODE_W::new(self, 0)
     }
-    #[doc = "Bits 1:2 - These bits control at which speed the DW_apb_i2c operates; its setting is relevant only if one is operating the DW_apb_i2c in master mode. Hardware protects against illegal values being programmed by software. These bits must be programmed appropriately for slave mode also, as it is used to capture correct value of spike filter as per the speed mode.  
-
- This register should be programmed only with a value in the range of 1 to IC_MAX_SPEED_MODE; otherwise, hardware updates this register with the value of IC_MAX_SPEED_MODE.  
-
- 1: standard mode (100 kbit/s)  
-
- 2: fast mode (&lt;=400 kbit/s) or fast mode plus (&lt;=1000Kbit/s)  
-
- 3: high speed mode (3.4 Mbit/s)  
-
- Note: This field is not applicable when IC_ULTRA_FAST_MODE=1"]
+    #[doc = "Bits 1:2 - These bits control at which speed the DW_apb_i2c operates; its setting is relevant only if one is operating the DW_apb_i2c in master mode. Hardware protects against illegal values being programmed by software. These bits must be programmed appropriately for slave mode also, as it is used to capture correct value of spike filter as per the speed mode. This register should be programmed only with a value in the range of 1 to IC_MAX_SPEED_MODE; otherwise, hardware updates this register with the value of IC_MAX_SPEED_MODE. 1: standard mode (100 kbit/s) 2: fast mode (&lt;=400 kbit/s) or fast mode plus (&lt;=1000Kbit/s) 3: high speed mode (3.4 Mbit/s) Note: This field is not applicable when IC_ULTRA_FAST_MODE=1"]
     #[inline(always)]
     #[must_use]
     pub fn speed(&mut self) -> SPEED_W<IC_CON_SPEC> {
@@ -703,43 +595,31 @@ impl W {
     pub fn ic_10bitaddr_master(&mut self) -> IC_10BITADDR_MASTER_W<IC_CON_SPEC> {
         IC_10BITADDR_MASTER_W::new(self, 4)
     }
-    #[doc = "Bit 5 - Determines whether RESTART conditions may be sent when acting as a master. Some older slaves do not support handling RESTART conditions; however, RESTART conditions are used in several DW_apb_i2c operations. When RESTART is disabled, the master is prohibited from performing the following functions: - Sending a START BYTE - Performing any high-speed mode operation - High-speed mode operation - Performing direction changes in combined format mode - Performing a read operation with a 10-bit address By replacing RESTART condition followed by a STOP and a subsequent START condition, split operations are broken down into multiple DW_apb_i2c transfers. If the above operations are performed, it will result in setting bit 6 (TX_ABRT) of the IC_RAW_INTR_STAT register.  
-
- Reset value: ENABLED"]
+    #[doc = "Bit 5 - Determines whether RESTART conditions may be sent when acting as a master. Some older slaves do not support handling RESTART conditions; however, RESTART conditions are used in several DW_apb_i2c operations. When RESTART is disabled, the master is prohibited from performing the following functions: - Sending a START BYTE - Performing any high-speed mode operation - High-speed mode operation - Performing direction changes in combined format mode - Performing a read operation with a 10-bit address By replacing RESTART condition followed by a STOP and a subsequent START condition, split operations are broken down into multiple DW_apb_i2c transfers. If the above operations are performed, it will result in setting bit 6 (TX_ABRT) of the IC_RAW_INTR_STAT register. Reset value: ENABLED"]
     #[inline(always)]
     #[must_use]
     pub fn ic_restart_en(&mut self) -> IC_RESTART_EN_W<IC_CON_SPEC> {
         IC_RESTART_EN_W::new(self, 5)
     }
-    #[doc = "Bit 6 - This bit controls whether I2C has its slave disabled, which means once the presetn signal is applied, then this bit is set and the slave is disabled.  
-
- If this bit is set (slave is disabled), DW_apb_i2c functions only as a master and does not perform any action that requires a slave.  
-
- NOTE: Software should ensure that if this bit is written with 0, then bit 0 should also be written with a 0."]
+    #[doc = "Bit 6 - This bit controls whether I2C has its slave disabled, which means once the presetn signal is applied, then this bit is set and the slave is disabled. If this bit is set (slave is disabled), DW_apb_i2c functions only as a master and does not perform any action that requires a slave. NOTE: Software should ensure that if this bit is written with 0, then bit 0 should also be written with a 0."]
     #[inline(always)]
     #[must_use]
     pub fn ic_slave_disable(&mut self) -> IC_SLAVE_DISABLE_W<IC_CON_SPEC> {
         IC_SLAVE_DISABLE_W::new(self, 6)
     }
-    #[doc = "Bit 7 - In slave mode: - 1'b1: issues the STOP_DET interrupt only when it is addressed. - 1'b0: issues the STOP_DET irrespective of whether it's addressed or not. Reset value: 0x0  
-
- NOTE: During a general call address, this slave does not issue the STOP_DET interrupt if STOP_DET_IF_ADDRESSED = 1'b1, even if the slave responds to the general call address by generating ACK. The STOP_DET interrupt is generated only when the transmitted address matches the slave address (SAR)."]
+    #[doc = "Bit 7 - In slave mode: - 1'b1: issues the STOP_DET interrupt only when it is addressed. - 1'b0: issues the STOP_DET irrespective of whether it's addressed or not. Reset value: 0x0 NOTE: During a general call address, this slave does not issue the STOP_DET interrupt if STOP_DET_IF_ADDRESSED = 1'b1, even if the slave responds to the general call address by generating ACK. The STOP_DET interrupt is generated only when the transmitted address matches the slave address (SAR)."]
     #[inline(always)]
     #[must_use]
     pub fn stop_det_ifaddressed(&mut self) -> STOP_DET_IFADDRESSED_W<IC_CON_SPEC> {
         STOP_DET_IFADDRESSED_W::new(self, 7)
     }
-    #[doc = "Bit 8 - This bit controls the generation of the TX_EMPTY interrupt, as described in the IC_RAW_INTR_STAT register.  
-
- Reset value: 0x0."]
+    #[doc = "Bit 8 - This bit controls the generation of the TX_EMPTY interrupt, as described in the IC_RAW_INTR_STAT register. Reset value: 0x0."]
     #[inline(always)]
     #[must_use]
     pub fn tx_empty_ctrl(&mut self) -> TX_EMPTY_CTRL_W<IC_CON_SPEC> {
         TX_EMPTY_CTRL_W::new(self, 8)
     }
-    #[doc = "Bit 9 - This bit controls whether DW_apb_i2c should hold the bus when the Rx FIFO is physically full to its RX_BUFFER_DEPTH, as described in the IC_RX_FULL_HLD_BUS_EN parameter.  
-
- Reset value: 0x0."]
+    #[doc = "Bit 9 - This bit controls whether DW_apb_i2c should hold the bus when the Rx FIFO is physically full to its RX_BUFFER_DEPTH, as described in the IC_RX_FULL_HLD_BUS_EN parameter. Reset value: 0x0."]
     #[inline(always)]
     #[must_use]
     pub fn rx_fifo_full_hld_ctrl(&mut self) -> RX_FIFO_FULL_HLD_CTRL_W<IC_CON_SPEC> {
@@ -747,9 +627,7 @@ impl W {
     }
 }
 #[doc = "I2C Control Register. This register can be written only when the DW_apb_i2c is disabled, which corresponds to the IC_ENABLE\\[0\\]
-register being set to 0. Writes at other times have no effect.  
-
- Read/Write Access: - bit 10 is read only. - bit 11 is read only - bit 16 is read only - bit 17 is read only - bits 18 and 19 are read only.  
+register being set to 0. Writes at other times have no effect. Read/Write Access: - bit 10 is read only. - bit 11 is read only - bit 16 is read only - bit 17 is read only - bits 18 and 19 are read only.  
 
 You can [`read`](crate::generic::Reg::read) this register and get [`ic_con::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`ic_con::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct IC_CON_SPEC;

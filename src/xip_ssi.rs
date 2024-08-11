@@ -245,27 +245,27 @@ module"]
 pub type RXFTLR = crate::Reg<rxftlr::RXFTLR_SPEC>;
 #[doc = "RX FIFO threshold level"]
 pub mod rxftlr;
-#[doc = "TXFLR (r) register accessor: TX FIFO level  
+#[doc = "TXFLR (rw) register accessor: TX FIFO level  
 
-You can [`read`](crate::generic::Reg::read) this register and get [`txflr::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+You can [`read`](crate::generic::Reg::read) this register and get [`txflr::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`txflr::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
 
 For information about available fields see [`mod@txflr`]
 module"]
 pub type TXFLR = crate::Reg<txflr::TXFLR_SPEC>;
 #[doc = "TX FIFO level"]
 pub mod txflr;
-#[doc = "RXFLR (r) register accessor: RX FIFO level  
+#[doc = "RXFLR (rw) register accessor: RX FIFO level  
 
-You can [`read`](crate::generic::Reg::read) this register and get [`rxflr::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+You can [`read`](crate::generic::Reg::read) this register and get [`rxflr::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`rxflr::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
 
 For information about available fields see [`mod@rxflr`]
 module"]
 pub type RXFLR = crate::Reg<rxflr::RXFLR_SPEC>;
 #[doc = "RX FIFO level"]
 pub mod rxflr;
-#[doc = "SR (r) register accessor: Status register  
+#[doc = "SR (rw) register accessor: Status register  
 
-You can [`read`](crate::generic::Reg::read) this register and get [`sr::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+You can [`read`](crate::generic::Reg::read) this register and get [`sr::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`sr::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
 
 For information about available fields see [`mod@sr`]
 module"]
@@ -281,63 +281,63 @@ module"]
 pub type IMR = crate::Reg<imr::IMR_SPEC>;
 #[doc = "Interrupt mask"]
 pub mod imr;
-#[doc = "ISR (r) register accessor: Interrupt status  
+#[doc = "ISR (rw) register accessor: Interrupt status  
 
-You can [`read`](crate::generic::Reg::read) this register and get [`isr::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+You can [`read`](crate::generic::Reg::read) this register and get [`isr::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`isr::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
 
 For information about available fields see [`mod@isr`]
 module"]
 pub type ISR = crate::Reg<isr::ISR_SPEC>;
 #[doc = "Interrupt status"]
 pub mod isr;
-#[doc = "RISR (r) register accessor: Raw interrupt status  
+#[doc = "RISR (rw) register accessor: Raw interrupt status  
 
-You can [`read`](crate::generic::Reg::read) this register and get [`risr::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+You can [`read`](crate::generic::Reg::read) this register and get [`risr::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`risr::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
 
 For information about available fields see [`mod@risr`]
 module"]
 pub type RISR = crate::Reg<risr::RISR_SPEC>;
 #[doc = "Raw interrupt status"]
 pub mod risr;
-#[doc = "TXOICR (r) register accessor: TX FIFO overflow interrupt clear  
+#[doc = "TXOICR (rw) register accessor: TX FIFO overflow interrupt clear  
 
-You can [`read`](crate::generic::Reg::read) this register and get [`txoicr::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+You can [`read`](crate::generic::Reg::read) this register and get [`txoicr::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`txoicr::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
 
 For information about available fields see [`mod@txoicr`]
 module"]
 pub type TXOICR = crate::Reg<txoicr::TXOICR_SPEC>;
 #[doc = "TX FIFO overflow interrupt clear"]
 pub mod txoicr;
-#[doc = "RXOICR (r) register accessor: RX FIFO overflow interrupt clear  
+#[doc = "RXOICR (rw) register accessor: RX FIFO overflow interrupt clear  
 
-You can [`read`](crate::generic::Reg::read) this register and get [`rxoicr::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+You can [`read`](crate::generic::Reg::read) this register and get [`rxoicr::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`rxoicr::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
 
 For information about available fields see [`mod@rxoicr`]
 module"]
 pub type RXOICR = crate::Reg<rxoicr::RXOICR_SPEC>;
 #[doc = "RX FIFO overflow interrupt clear"]
 pub mod rxoicr;
-#[doc = "RXUICR (r) register accessor: RX FIFO underflow interrupt clear  
+#[doc = "RXUICR (rw) register accessor: RX FIFO underflow interrupt clear  
 
-You can [`read`](crate::generic::Reg::read) this register and get [`rxuicr::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+You can [`read`](crate::generic::Reg::read) this register and get [`rxuicr::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`rxuicr::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
 
 For information about available fields see [`mod@rxuicr`]
 module"]
 pub type RXUICR = crate::Reg<rxuicr::RXUICR_SPEC>;
 #[doc = "RX FIFO underflow interrupt clear"]
 pub mod rxuicr;
-#[doc = "MSTICR (r) register accessor: Multi-master interrupt clear  
+#[doc = "MSTICR (rw) register accessor: Multi-master interrupt clear  
 
-You can [`read`](crate::generic::Reg::read) this register and get [`msticr::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+You can [`read`](crate::generic::Reg::read) this register and get [`msticr::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`msticr::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
 
 For information about available fields see [`mod@msticr`]
 module"]
 pub type MSTICR = crate::Reg<msticr::MSTICR_SPEC>;
 #[doc = "Multi-master interrupt clear"]
 pub mod msticr;
-#[doc = "ICR (r) register accessor: Interrupt clear  
+#[doc = "ICR (rw) register accessor: Interrupt clear  
 
-You can [`read`](crate::generic::Reg::read) this register and get [`icr::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+You can [`read`](crate::generic::Reg::read) this register and get [`icr::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`icr::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
 
 For information about available fields see [`mod@icr`]
 module"]
@@ -371,18 +371,18 @@ module"]
 pub type DMARDLR = crate::Reg<dmardlr::DMARDLR_SPEC>;
 #[doc = "DMA RX data level"]
 pub mod dmardlr;
-#[doc = "IDR (r) register accessor: Identification register  
+#[doc = "IDR (rw) register accessor: Identification register  
 
-You can [`read`](crate::generic::Reg::read) this register and get [`idr::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+You can [`read`](crate::generic::Reg::read) this register and get [`idr::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`idr::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
 
 For information about available fields see [`mod@idr`]
 module"]
 pub type IDR = crate::Reg<idr::IDR_SPEC>;
 #[doc = "Identification register"]
 pub mod idr;
-#[doc = "SSI_VERSION_ID (r) register accessor: Version ID  
+#[doc = "SSI_VERSION_ID (rw) register accessor: Version ID  
 
-You can [`read`](crate::generic::Reg::read) this register and get [`ssi_version_id::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+You can [`read`](crate::generic::Reg::read) this register and get [`ssi_version_id::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`ssi_version_id::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
 
 For information about available fields see [`mod@ssi_version_id`]
 module"]
