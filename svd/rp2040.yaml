@@ -5,6 +5,8 @@ _modify:
     name: USBCTRL_REGS
   USB_DPRAM:
     name: USBCTRL_DPRAM
+  SSI:
+    name: XIP_SSI
 
 DMA:
   CHAN_ABORT:
