@@ -11,7 +11,7 @@ impl R {
 }
 #[doc = "Result of most recent ADC conversion  
 
-You can [`read`](crate::generic::Reg::read) this register and get [`result::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+You can [`read`](crate::Reg::read) this register and get [`result::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct RESULT_SPEC;
 impl crate::RegisterSpec for RESULT_SPEC {
     type Ux = u32;

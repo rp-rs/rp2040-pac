@@ -12,7 +12,7 @@ impl W {
 }
 #[doc = "Set the SOF (Start of Frame) frame number in the host controller. The SOF packet is sent every 1ms and the host will increment the frame number by 1 each time.  
 
-You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`sof_wr::W`](W). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`sof_wr::W`](W). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct SOF_WR_SPEC;
 impl crate::RegisterSpec for SOF_WR_SPEC {
     type Ux = u32;

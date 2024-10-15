@@ -5,14 +5,9 @@ impl core::fmt::Debug for R {
         write!(f, "{}", self.bits())
     }
 }
-impl core::fmt::Debug for crate::generic::Reg<TIMERAWH_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
-    }
-}
 #[doc = "Raw read from bits 63:32 of time (no side effects)  
 
-You can [`read`](crate::generic::Reg::read) this register and get [`timerawh::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+You can [`read`](crate::Reg::read) this register and get [`timerawh::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct TIMERAWH_SPEC;
 impl crate::RegisterSpec for TIMERAWH_SPEC {
     type Ux = u32;

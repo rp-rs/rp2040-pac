@@ -70,7 +70,7 @@ impl W {
  Note: Writing 1 to an NVIC_ICPR bit does not affect the active state of the corresponding interrupt.  
  These registers are only word-accessible  
 
-You can [`read`](crate::generic::Reg::read) this register and get [`nvic_ipr0::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`nvic_ipr0::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+You can [`read`](crate::Reg::read) this register and get [`nvic_ipr0::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`nvic_ipr0::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct NVIC_IPR0_SPEC;
 impl crate::RegisterSpec for NVIC_IPR0_SPEC {
     type Ux = u32;

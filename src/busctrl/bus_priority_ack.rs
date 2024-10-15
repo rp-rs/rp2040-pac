@@ -15,7 +15,7 @@ impl R {
 }
 #[doc = "Bus priority acknowledge  
 
-You can [`read`](crate::generic::Reg::read) this register and get [`bus_priority_ack::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+You can [`read`](crate::Reg::read) this register and get [`bus_priority_ack::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct BUS_PRIORITY_ACK_SPEC;
 impl crate::RegisterSpec for BUS_PRIORITY_ACK_SPEC {
     type Ux = u32;

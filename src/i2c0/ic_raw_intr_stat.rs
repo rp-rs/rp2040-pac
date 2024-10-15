@@ -664,7 +664,7 @@ is set to 0, the TX FIFO is flushed and held in reset. There the TX FIFO looks l
 
  Unlike the IC_INTR_STAT register, these bits are not masked so they always show the true status of the DW_apb_i2c.  
 
-You can [`read`](crate::generic::Reg::read) this register and get [`ic_raw_intr_stat::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+You can [`read`](crate::Reg::read) this register and get [`ic_raw_intr_stat::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct IC_RAW_INTR_STAT_SPEC;
 impl crate::RegisterSpec for IC_RAW_INTR_STAT_SPEC {
     type Ux = u32;

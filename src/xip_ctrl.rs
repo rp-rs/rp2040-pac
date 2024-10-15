@@ -63,7 +63,7 @@ impl RegisterBlock {
 }
 #[doc = "CTRL (rw) register accessor: Cache control  
 
-You can [`read`](crate::generic::Reg::read) this register and get [`ctrl::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`ctrl::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+You can [`read`](crate::Reg::read) this register and get [`ctrl::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`ctrl::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
 
 For information about available fields see [`mod@ctrl`]
 module"]
@@ -72,7 +72,7 @@ pub type CTRL = crate::Reg<ctrl::CTRL_SPEC>;
 pub mod ctrl;
 #[doc = "FLUSH (rw) register accessor: Cache Flush control  
 
-You can [`read`](crate::generic::Reg::read) this register and get [`flush::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`flush::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+You can [`read`](crate::Reg::read) this register and get [`flush::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`flush::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
 
 For information about available fields see [`mod@flush`]
 module"]
@@ -81,7 +81,7 @@ pub type FLUSH = crate::Reg<flush::FLUSH_SPEC>;
 pub mod flush;
 #[doc = "STAT (r) register accessor: Cache Status  
 
-You can [`read`](crate::generic::Reg::read) this register and get [`stat::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+You can [`read`](crate::Reg::read) this register and get [`stat::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
 
 For information about available fields see [`mod@stat`]
 module"]
@@ -93,7 +93,7 @@ pub mod stat;
  i.e. when an XIP access is serviced directly from cached data.  
  Write any value to clear.  
 
-You can [`read`](crate::generic::Reg::read) this register and get [`ctr_hit::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`ctr_hit::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+You can [`read`](crate::Reg::read) this register and get [`ctr_hit::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`ctr_hit::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
 
 For information about available fields see [`mod@ctr_hit`]
 module"]
@@ -108,7 +108,7 @@ pub mod ctr_hit;
  whether the cache is hit or not. This includes noncacheable accesses.  
  Write any value to clear.  
 
-You can [`read`](crate::generic::Reg::read) this register and get [`ctr_acc::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`ctr_acc::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+You can [`read`](crate::Reg::read) this register and get [`ctr_acc::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`ctr_acc::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
 
 For information about available fields see [`mod@ctr_acc`]
 module"]
@@ -120,7 +120,7 @@ pub type CTR_ACC = crate::Reg<ctr_acc::CTR_ACC_SPEC>;
 pub mod ctr_acc;
 #[doc = "STREAM_ADDR (rw) register accessor: FIFO stream address  
 
-You can [`read`](crate::generic::Reg::read) this register and get [`stream_addr::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`stream_addr::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+You can [`read`](crate::Reg::read) this register and get [`stream_addr::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`stream_addr::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
 
 For information about available fields see [`mod@stream_addr`]
 module"]
@@ -129,7 +129,7 @@ pub type STREAM_ADDR = crate::Reg<stream_addr::STREAM_ADDR_SPEC>;
 pub mod stream_addr;
 #[doc = "STREAM_CTR (rw) register accessor: FIFO stream control  
 
-You can [`read`](crate::generic::Reg::read) this register and get [`stream_ctr::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`stream_ctr::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+You can [`read`](crate::Reg::read) this register and get [`stream_ctr::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`stream_ctr::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
 
 For information about available fields see [`mod@stream_ctr`]
 module"]
@@ -141,7 +141,7 @@ pub mod stream_ctr;
  This FIFO can also be accessed via the XIP_AUX slave, to avoid exposing  
  the DMA to bus stalls caused by other XIP traffic.  
 
-You can [`read`](crate::generic::Reg::read) this register and get [`stream_fifo::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+You can [`read`](crate::Reg::read) this register and get [`stream_fifo::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
 
 For information about available fields see [`mod@stream_fifo`]
 module"]

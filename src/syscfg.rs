@@ -60,7 +60,7 @@ impl RegisterBlock {
 #[doc = "PROC0_NMI_MASK (rw) register accessor: Processor core 0 NMI source mask  
  Set a bit high to enable NMI from that IRQ  
 
-You can [`read`](crate::generic::Reg::read) this register and get [`proc0_nmi_mask::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`proc0_nmi_mask::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+You can [`read`](crate::Reg::read) this register and get [`proc0_nmi_mask::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`proc0_nmi_mask::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
 
 For information about available fields see [`mod@proc0_nmi_mask`]
 module"]
@@ -71,7 +71,7 @@ pub mod proc0_nmi_mask;
 #[doc = "PROC1_NMI_MASK (rw) register accessor: Processor core 1 NMI source mask  
  Set a bit high to enable NMI from that IRQ  
 
-You can [`read`](crate::generic::Reg::read) this register and get [`proc1_nmi_mask::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`proc1_nmi_mask::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+You can [`read`](crate::Reg::read) this register and get [`proc1_nmi_mask::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`proc1_nmi_mask::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
 
 For information about available fields see [`mod@proc1_nmi_mask`]
 module"]
@@ -81,7 +81,7 @@ pub type PROC1_NMI_MASK = crate::Reg<proc1_nmi_mask::PROC1_NMI_MASK_SPEC>;
 pub mod proc1_nmi_mask;
 #[doc = "PROC_CONFIG (rw) register accessor: Configuration for processors  
 
-You can [`read`](crate::generic::Reg::read) this register and get [`proc_config::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`proc_config::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+You can [`read`](crate::Reg::read) this register and get [`proc_config::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`proc_config::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
 
 For information about available fields see [`mod@proc_config`]
 module"]
@@ -94,7 +94,7 @@ pub mod proc_config;
  If you're feeling brave, you can bypass to save two cycles of input  
  latency. This register applies to GPIO 0...29.  
 
-You can [`read`](crate::generic::Reg::read) this register and get [`proc_in_sync_bypass::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`proc_in_sync_bypass::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+You can [`read`](crate::Reg::read) this register and get [`proc_in_sync_bypass::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`proc_in_sync_bypass::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
 
 For information about available fields see [`mod@proc_in_sync_bypass`]
 module"]
@@ -111,7 +111,7 @@ pub mod proc_in_sync_bypass;
  If you're feeling brave, you can bypass to save two cycles of input  
  latency. This register applies to GPIO 30...35 (the QSPI IOs).  
 
-You can [`read`](crate::generic::Reg::read) this register and get [`proc_in_sync_bypass_hi::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`proc_in_sync_bypass_hi::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+You can [`read`](crate::Reg::read) this register and get [`proc_in_sync_bypass_hi::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`proc_in_sync_bypass_hi::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
 
 For information about available fields see [`mod@proc_in_sync_bypass_hi`]
 module"]
@@ -124,7 +124,7 @@ pub type PROC_IN_SYNC_BYPASS_HI = crate::Reg<proc_in_sync_bypass_hi::PROC_IN_SYN
 pub mod proc_in_sync_bypass_hi;
 #[doc = "DBGFORCE (rw) register accessor: Directly control the SWD debug port of either processor  
 
-You can [`read`](crate::generic::Reg::read) this register and get [`dbgforce::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`dbgforce::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+You can [`read`](crate::Reg::read) this register and get [`dbgforce::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`dbgforce::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
 
 For information about available fields see [`mod@dbgforce`]
 module"]
@@ -134,7 +134,7 @@ pub mod dbgforce;
 #[doc = "MEMPOWERDOWN (rw) register accessor: Control power downs to memories. Set high to power down memories.  
  Use with extreme caution  
 
-You can [`read`](crate::generic::Reg::read) this register and get [`mempowerdown::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`mempowerdown::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+You can [`read`](crate::Reg::read) this register and get [`mempowerdown::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`mempowerdown::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
 
 For information about available fields see [`mod@mempowerdown`]
 module"]

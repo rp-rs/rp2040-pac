@@ -228,7 +228,7 @@ impl R {
 }
 #[doc = "indicates the state of the clock enable  
 
-You can [`read`](crate::generic::Reg::read) this register and get [`enabled0::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+You can [`read`](crate::Reg::read) this register and get [`enabled0::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct ENABLED0_SPEC;
 impl crate::RegisterSpec for ENABLED0_SPEC {
     type Ux = u32;

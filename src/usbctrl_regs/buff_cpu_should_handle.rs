@@ -228,7 +228,7 @@ impl R {
 }
 #[doc = "Which of the double buffers should be handled. Only valid if using an interrupt per buffer (i.e. not per 2 buffers). Not valid for host interrupt endpoint polling because they are only single buffered.  
 
-You can [`read`](crate::generic::Reg::read) this register and get [`buff_cpu_should_handle::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+You can [`read`](crate::Reg::read) this register and get [`buff_cpu_should_handle::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct BUFF_CPU_SHOULD_HANDLE_SPEC;
 impl crate::RegisterSpec for BUFF_CPU_SHOULD_HANDLE_SPEC {
     type Ux = u32;

@@ -8,7 +8,7 @@ impl core::fmt::Debug for crate::generic::Reg<FIFO_WR_SPEC> {
 impl W {}
 #[doc = "Write access to this core's TX FIFO  
 
-You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`fifo_wr::W`](W). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`fifo_wr::W`](W). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct FIFO_WR_SPEC;
 impl crate::RegisterSpec for FIFO_WR_SPEC {
     type Ux = u32;

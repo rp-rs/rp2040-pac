@@ -5,15 +5,10 @@ impl core::fmt::Debug for R {
         write!(f, "{}", self.bits())
     }
 }
-impl core::fmt::Debug for crate::generic::Reg<CLK_REF_SELECTED_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
-    }
-}
 #[doc = "Indicates which SRC is currently selected by the glitchless mux (one-hot).  
  The glitchless multiplexer does not switch instantaneously (to avoid glitches), so software should poll this register to wait for the switch to complete. This register contains one decoded bit for each of the clock sources enumerated in the CTRL SRC field. At most one of these bits will be set at any time, indicating that clock is currently present at the output of the glitchless mux. Whilst switching is in progress, this register may briefly show all-0s.  
 
-You can [`read`](crate::generic::Reg::read) this register and get [`clk_ref_selected::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+You can [`read`](crate::Reg::read) this register and get [`clk_ref_selected::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct CLK_REF_SELECTED_SPEC;
 impl crate::RegisterSpec for CLK_REF_SELECTED_SPEC {
     type Ux = u32;

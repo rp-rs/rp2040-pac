@@ -18,7 +18,7 @@ impl R {
 }
 #[doc = "Platform register. Allows software to know what environment it is running in.  
 
-You can [`read`](crate::generic::Reg::read) this register and get [`platform::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+You can [`read`](crate::Reg::read) this register and get [`platform::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct PLATFORM_SPEC;
 impl crate::RegisterSpec for PLATFORM_SPEC {
     type Ux = u32;

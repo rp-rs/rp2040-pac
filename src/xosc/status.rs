@@ -26,6 +26,7 @@ impl From<FREQ_RANGE_A> for u8 {
 impl crate::FieldSpec for FREQ_RANGE_A {
     type Ux = u8;
 }
+impl crate::IsEnum for FREQ_RANGE_A {}
 #[doc = "Field `FREQ_RANGE` reader - The current frequency range setting, always reads 0"]
 pub type FREQ_RANGE_R = crate::FieldReader<FREQ_RANGE_A>;
 impl FREQ_RANGE_R {
@@ -101,7 +102,7 @@ impl W {
 }
 #[doc = "Crystal Oscillator Status  
 
-You can [`read`](crate::generic::Reg::read) this register and get [`status::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`status::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+You can [`read`](crate::Reg::read) this register and get [`status::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`status::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct STATUS_SPEC;
 impl crate::RegisterSpec for STATUS_SPEC {
     type Ux = u32;

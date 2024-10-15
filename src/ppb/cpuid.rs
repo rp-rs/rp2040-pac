@@ -45,7 +45,7 @@ impl R {
 }
 #[doc = "Read the CPU ID Base Register to determine: the ID number of the processor core, the version number of the processor core, the implementation details of the processor core.  
 
-You can [`read`](crate::generic::Reg::read) this register and get [`cpuid::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+You can [`read`](crate::Reg::read) this register and get [`cpuid::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct CPUID_SPEC;
 impl crate::RegisterSpec for CPUID_SPEC {
     type Ux = u32;

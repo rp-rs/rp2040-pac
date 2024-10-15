@@ -63,6 +63,7 @@ impl From<DOUBLE_BUFFER_ISO_OFFSET_A> for u8 {
 impl crate::FieldSpec for DOUBLE_BUFFER_ISO_OFFSET_A {
     type Ux = u8;
 }
+impl crate::IsEnum for DOUBLE_BUFFER_ISO_OFFSET_A {}
 #[doc = "Field `DOUBLE_BUFFER_ISO_OFFSET` reader - The number of bytes buffer 1 is offset from buffer 0 in Isochronous mode. Only valid in double buffered mode for an Isochronous endpoint.  
  For a non Isochronous endpoint the offset is always 64 bytes."]
 pub type DOUBLE_BUFFER_ISO_OFFSET_R = crate::FieldReader<DOUBLE_BUFFER_ISO_OFFSET_A>;
@@ -102,7 +103,7 @@ impl DOUBLE_BUFFER_ISO_OFFSET_R {
 #[doc = "Field `DOUBLE_BUFFER_ISO_OFFSET` writer - The number of bytes buffer 1 is offset from buffer 0 in Isochronous mode. Only valid in double buffered mode for an Isochronous endpoint.  
  For a non Isochronous endpoint the offset is always 64 bytes."]
 pub type DOUBLE_BUFFER_ISO_OFFSET_W<'a, REG> =
-    crate::FieldWriterSafe<'a, REG, 2, DOUBLE_BUFFER_ISO_OFFSET_A>;
+    crate::FieldWriter<'a, REG, 2, DOUBLE_BUFFER_ISO_OFFSET_A, crate::Safe>;
 impl<'a, REG> DOUBLE_BUFFER_ISO_OFFSET_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
@@ -294,7 +295,7 @@ impl W {
 }
 #[doc = "-  
 
-You can [`read`](crate::generic::Reg::read) this register and get [`ep_buffer_control::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`ep_buffer_control::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+You can [`read`](crate::Reg::read) this register and get [`ep_buffer_control::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`ep_buffer_control::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct EP_BUFFER_CONTROL_SPEC;
 impl crate::RegisterSpec for EP_BUFFER_CONTROL_SPEC {
     type Ux = u32;

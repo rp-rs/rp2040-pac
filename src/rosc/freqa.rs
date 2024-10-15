@@ -37,6 +37,7 @@ impl From<PASSWD_A> for u16 {
 impl crate::FieldSpec for PASSWD_A {
     type Ux = u16;
 }
+impl crate::IsEnum for PASSWD_A {}
 #[doc = "Field `PASSWD` reader - Set to 0x9696 to apply the settings  
  Any other value in this field will set all drive strengths to 0"]
 pub type PASSWD_R = crate::FieldReader<PASSWD_A>;
@@ -138,7 +139,7 @@ impl W {
  2 bits set triples drive strength  
  3 bits set quadruples drive strength  
 
-You can [`read`](crate::generic::Reg::read) this register and get [`freqa::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`freqa::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+You can [`read`](crate::Reg::read) this register and get [`freqa::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`freqa::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct FREQA_SPEC;
 impl crate::RegisterSpec for FREQA_SPEC {
     type Ux = u32;

@@ -127,7 +127,7 @@ impl RegisterBlock {
 #[doc = "TIMEHW (w) register accessor: Write to bits 63:32 of time  
  always write timelw before timehw  
 
-You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`timehw::W`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`timehw::W`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
 
 For information about available fields see [`mod@timehw`]
 module"]
@@ -138,7 +138,7 @@ pub mod timehw;
 #[doc = "TIMELW (w) register accessor: Write to bits 31:0 of time  
  writes do not get copied to time until timehw is written  
 
-You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`timelw::W`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`timelw::W`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
 
 For information about available fields see [`mod@timelw`]
 module"]
@@ -149,7 +149,7 @@ pub mod timelw;
 #[doc = "TIMEHR (r) register accessor: Read from bits 63:32 of time  
  always read timelr before timehr  
 
-You can [`read`](crate::generic::Reg::read) this register and get [`timehr::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+You can [`read`](crate::Reg::read) this register and get [`timehr::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
 
 For information about available fields see [`mod@timehr`]
 module"]
@@ -159,7 +159,7 @@ pub type TIMEHR = crate::Reg<timehr::TIMEHR_SPEC>;
 pub mod timehr;
 #[doc = "TIMELR (r) register accessor: Read from bits 31:0 of time  
 
-You can [`read`](crate::generic::Reg::read) this register and get [`timelr::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+You can [`read`](crate::Reg::read) this register and get [`timelr::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
 
 For information about available fields see [`mod@timelr`]
 module"]
@@ -171,7 +171,7 @@ pub mod timelr;
  The alarm will disarm itself once it fires, and can  
  be disarmed early using the ARMED status register.  
 
-You can [`read`](crate::generic::Reg::read) this register and get [`alarm0::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`alarm0::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+You can [`read`](crate::Reg::read) this register and get [`alarm0::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`alarm0::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
 
 For information about available fields see [`mod@alarm0`]
 module"]
@@ -186,7 +186,7 @@ pub mod alarm0;
  The alarm will disarm itself once it fires, and can  
  be disarmed early using the ARMED status register.  
 
-You can [`read`](crate::generic::Reg::read) this register and get [`alarm1::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`alarm1::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+You can [`read`](crate::Reg::read) this register and get [`alarm1::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`alarm1::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
 
 For information about available fields see [`mod@alarm1`]
 module"]
@@ -201,7 +201,7 @@ pub mod alarm1;
  The alarm will disarm itself once it fires, and can  
  be disarmed early using the ARMED status register.  
 
-You can [`read`](crate::generic::Reg::read) this register and get [`alarm2::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`alarm2::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+You can [`read`](crate::Reg::read) this register and get [`alarm2::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`alarm2::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
 
 For information about available fields see [`mod@alarm2`]
 module"]
@@ -216,7 +216,7 @@ pub mod alarm2;
  The alarm will disarm itself once it fires, and can  
  be disarmed early using the ARMED status register.  
 
-You can [`read`](crate::generic::Reg::read) this register and get [`alarm3::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`alarm3::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+You can [`read`](crate::Reg::read) this register and get [`alarm3::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`alarm3::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
 
 For information about available fields see [`mod@alarm3`]
 module"]
@@ -231,7 +231,7 @@ pub mod alarm3;
  Alarms automatically disarm upon firing, but writing ones here  
  will disarm immediately without waiting to fire.  
 
-You can [`read`](crate::generic::Reg::read) this register and get [`armed::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`armed::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+You can [`read`](crate::Reg::read) this register and get [`armed::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`armed::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
 
 For information about available fields see [`mod@armed`]
 module"]
@@ -243,7 +243,7 @@ pub type ARMED = crate::Reg<armed::ARMED_SPEC>;
 pub mod armed;
 #[doc = "TIMERAWH (r) register accessor: Raw read from bits 63:32 of time (no side effects)  
 
-You can [`read`](crate::generic::Reg::read) this register and get [`timerawh::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+You can [`read`](crate::Reg::read) this register and get [`timerawh::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
 
 For information about available fields see [`mod@timerawh`]
 module"]
@@ -252,7 +252,7 @@ pub type TIMERAWH = crate::Reg<timerawh::TIMERAWH_SPEC>;
 pub mod timerawh;
 #[doc = "TIMERAWL (r) register accessor: Raw read from bits 31:0 of time (no side effects)  
 
-You can [`read`](crate::generic::Reg::read) this register and get [`timerawl::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+You can [`read`](crate::Reg::read) this register and get [`timerawl::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
 
 For information about available fields see [`mod@timerawl`]
 module"]
@@ -261,7 +261,7 @@ pub type TIMERAWL = crate::Reg<timerawl::TIMERAWL_SPEC>;
 pub mod timerawl;
 #[doc = "DBGPAUSE (rw) register accessor: Set bits high to enable pause when the corresponding debug ports are active  
 
-You can [`read`](crate::generic::Reg::read) this register and get [`dbgpause::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`dbgpause::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+You can [`read`](crate::Reg::read) this register and get [`dbgpause::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`dbgpause::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
 
 For information about available fields see [`mod@dbgpause`]
 module"]
@@ -270,7 +270,7 @@ pub type DBGPAUSE = crate::Reg<dbgpause::DBGPAUSE_SPEC>;
 pub mod dbgpause;
 #[doc = "PAUSE (rw) register accessor: Set high to pause the timer  
 
-You can [`read`](crate::generic::Reg::read) this register and get [`pause::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`pause::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+You can [`read`](crate::Reg::read) this register and get [`pause::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`pause::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
 
 For information about available fields see [`mod@pause`]
 module"]
@@ -279,7 +279,7 @@ pub type PAUSE = crate::Reg<pause::PAUSE_SPEC>;
 pub mod pause;
 #[doc = "INTR (rw) register accessor: Raw Interrupts  
 
-You can [`read`](crate::generic::Reg::read) this register and get [`intr::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`intr::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+You can [`read`](crate::Reg::read) this register and get [`intr::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`intr::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
 
 For information about available fields see [`mod@intr`]
 module"]
@@ -288,7 +288,7 @@ pub type INTR = crate::Reg<intr::INTR_SPEC>;
 pub mod intr;
 #[doc = "INTE (rw) register accessor: Interrupt Enable  
 
-You can [`read`](crate::generic::Reg::read) this register and get [`inte::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`inte::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+You can [`read`](crate::Reg::read) this register and get [`inte::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`inte::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
 
 For information about available fields see [`mod@inte`]
 module"]
@@ -297,7 +297,7 @@ pub type INTE = crate::Reg<inte::INTE_SPEC>;
 pub mod inte;
 #[doc = "INTF (rw) register accessor: Interrupt Force  
 
-You can [`read`](crate::generic::Reg::read) this register and get [`intf::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`intf::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+You can [`read`](crate::Reg::read) this register and get [`intf::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`intf::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
 
 For information about available fields see [`mod@intf`]
 module"]
@@ -306,7 +306,7 @@ pub type INTF = crate::Reg<intf::INTF_SPEC>;
 pub mod intf;
 #[doc = "INTS (r) register accessor: Interrupt status after masking &amp; forcing  
 
-You can [`read`](crate::generic::Reg::read) this register and get [`ints::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+You can [`read`](crate::Reg::read) this register and get [`ints::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
 
 For information about available fields see [`mod@ints`]
 module"]

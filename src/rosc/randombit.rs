@@ -11,7 +11,7 @@ impl R {
 }
 #[doc = "This just reads the state of the oscillator output so randomness is compromised if the ring oscillator is stopped or run at a harmonic of the bus frequency  
 
-You can [`read`](crate::generic::Reg::read) this register and get [`randombit::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+You can [`read`](crate::Reg::read) this register and get [`randombit::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct RANDOMBIT_SPEC;
 impl crate::RegisterSpec for RANDOMBIT_SPEC {
     type Ux = u32;

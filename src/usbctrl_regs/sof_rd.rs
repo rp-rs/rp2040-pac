@@ -11,7 +11,7 @@ impl R {
 }
 #[doc = "Read the last SOF (Start of Frame) frame number seen. In device mode the last SOF received from the host. In host mode the last SOF sent by the host.  
 
-You can [`read`](crate::generic::Reg::read) this register and get [`sof_rd::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+You can [`read`](crate::Reg::read) this register and get [`sof_rd::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct SOF_RD_SPEC;
 impl crate::RegisterSpec for SOF_RD_SPEC {
     type Ux = u32;

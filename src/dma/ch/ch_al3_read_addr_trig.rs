@@ -7,17 +7,12 @@ impl core::fmt::Debug for R {
         write!(f, "{}", self.bits())
     }
 }
-impl core::fmt::Debug for crate::generic::Reg<CH_AL3_READ_ADDR_TRIG_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
-    }
-}
 impl W {}
 #[doc = "Alias for channel 0 READ_ADDR register  
  This is a trigger register (0xc). Writing a nonzero value will  
  reload the channel counter and start the channel.  
 
-You can [`read`](crate::generic::Reg::read) this register and get [`ch_al3_read_addr_trig::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`ch_al3_read_addr_trig::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+You can [`read`](crate::Reg::read) this register and get [`ch_al3_read_addr_trig::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`ch_al3_read_addr_trig::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct CH_AL3_READ_ADDR_TRIG_SPEC;
 impl crate::RegisterSpec for CH_AL3_READ_ADDR_TRIG_SPEC {
     type Ux = u32;

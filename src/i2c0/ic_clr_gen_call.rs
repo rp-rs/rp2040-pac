@@ -15,7 +15,7 @@ impl R {
 }
 #[doc = "Clear GEN_CALL Interrupt Register  
 
-You can [`read`](crate::generic::Reg::read) this register and get [`ic_clr_gen_call::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+You can [`read`](crate::Reg::read) this register and get [`ic_clr_gen_call::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct IC_CLR_GEN_CALL_SPEC;
 impl crate::RegisterSpec for IC_CLR_GEN_CALL_SPEC {
     type Ux = u32;

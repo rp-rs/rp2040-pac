@@ -18,7 +18,7 @@ impl R {
 }
 #[doc = "Peripheral identification registers, SSPPeriphID0-3 on page 3-13  
 
-You can [`read`](crate::generic::Reg::read) this register and get [`sspperiphid1::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+You can [`read`](crate::Reg::read) this register and get [`sspperiphid1::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct SSPPERIPHID1_SPEC;
 impl crate::RegisterSpec for SSPPERIPHID1_SPEC {
     type Ux = u32;

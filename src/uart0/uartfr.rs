@@ -67,7 +67,7 @@ impl R {
 }
 #[doc = "Flag Register, UARTFR  
 
-You can [`read`](crate::generic::Reg::read) this register and get [`uartfr::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+You can [`read`](crate::Reg::read) this register and get [`uartfr::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct UARTFR_SPEC;
 impl crate::RegisterSpec for UARTFR_SPEC {
     type Ux = u32;

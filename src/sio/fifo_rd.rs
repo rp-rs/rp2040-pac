@@ -5,14 +5,9 @@ impl core::fmt::Debug for R {
         write!(f, "{}", self.bits())
     }
 }
-impl core::fmt::Debug for crate::generic::Reg<FIFO_RD_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
-    }
-}
 #[doc = "Read access to this core's RX FIFO  
 
-You can [`read`](crate::generic::Reg::read) this register and get [`fifo_rd::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+You can [`read`](crate::Reg::read) this register and get [`fifo_rd::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct FIFO_RD_SPEC;
 impl crate::RegisterSpec for FIFO_RD_SPEC {
     type Ux = u32;

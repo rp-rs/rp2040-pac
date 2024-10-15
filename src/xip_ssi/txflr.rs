@@ -11,7 +11,7 @@ impl R {
 }
 #[doc = "TX FIFO level  
 
-You can [`read`](crate::generic::Reg::read) this register and get [`txflr::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+You can [`read`](crate::Reg::read) this register and get [`txflr::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct TXFLR_SPEC;
 impl crate::RegisterSpec for TXFLR_SPEC {
     type Ux = u32;

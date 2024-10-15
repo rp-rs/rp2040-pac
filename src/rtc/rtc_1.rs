@@ -25,7 +25,7 @@ impl R {
 }
 #[doc = "RTC register 1.  
 
-You can [`read`](crate::generic::Reg::read) this register and get [`rtc_1::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+You can [`read`](crate::Reg::read) this register and get [`rtc_1::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct RTC_1_SPEC;
 impl crate::RegisterSpec for RTC_1_SPEC {
     type Ux = u32;

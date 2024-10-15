@@ -18,7 +18,7 @@ impl GPIO {
 }
 #[doc = "GPIO_STATUS (r) register accessor: GPIO status  
 
-You can [`read`](crate::generic::Reg::read) this register and get [`gpio_status::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+You can [`read`](crate::Reg::read) this register and get [`gpio_status::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
 
 For information about available fields see [`mod@gpio_status`]
 module"]
@@ -27,7 +27,7 @@ pub type GPIO_STATUS = crate::Reg<gpio_status::GPIO_STATUS_SPEC>;
 pub mod gpio_status;
 #[doc = "GPIO_CTRL (rw) register accessor: GPIO control including function select and overrides.  
 
-You can [`read`](crate::generic::Reg::read) this register and get [`gpio_ctrl::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`gpio_ctrl::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+You can [`read`](crate::Reg::read) this register and get [`gpio_ctrl::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`gpio_ctrl::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
 
 For information about available fields see [`mod@gpio_ctrl`]
 module"]

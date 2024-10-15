@@ -60,7 +60,7 @@ impl R {
 }
 #[doc = "Frequency counter status  
 
-You can [`read`](crate::generic::Reg::read) this register and get [`fc0_status::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+You can [`read`](crate::Reg::read) this register and get [`fc0_status::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct FC0_STATUS_SPEC;
 impl crate::RegisterSpec for FC0_STATUS_SPEC {
     type Ux = u32;

@@ -7,11 +7,6 @@ impl core::fmt::Debug for R {
         write!(f, "{}", self.bits())
     }
 }
-impl core::fmt::Debug for crate::generic::Reg<DIV_REMAINDER_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
-    }
-}
 impl W {}
 #[doc = "Divider result remainder  
  The result of `DIVIDEND % DIVISOR` (modulo). Contents undefined while CSR_READY is low.  
@@ -19,7 +14,7 @@ impl W {}
  This register can be written to directly, for context save/restore purposes. This halts any  
  in-progress calculation and sets the CSR_READY and CSR_DIRTY flags.  
 
-You can [`read`](crate::generic::Reg::read) this register and get [`div_remainder::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`div_remainder::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+You can [`read`](crate::Reg::read) this register and get [`div_remainder::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`div_remainder::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct DIV_REMAINDER_SPEC;
 impl crate::RegisterSpec for DIV_REMAINDER_SPEC {
     type Ux = u32;

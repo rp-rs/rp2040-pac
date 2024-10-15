@@ -18,7 +18,7 @@ impl R {
 }
 #[doc = "Result of frequency measurement, only valid when status_done=1  
 
-You can [`read`](crate::generic::Reg::read) this register and get [`fc0_result::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+You can [`read`](crate::Reg::read) this register and get [`fc0_result::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct FC0_RESULT_SPEC;
 impl crate::RegisterSpec for FC0_RESULT_SPEC {
     type Ux = u32;

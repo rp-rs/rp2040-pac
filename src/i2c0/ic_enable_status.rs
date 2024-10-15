@@ -229,7 +229,7 @@ has been set to 0, bits 2:1 is only be valid as soon as bit 0 is read as '0'.
  Note: When IC_ENABLE\\[0\\]
 has been set to 0, a delay occurs for bit 0 to be read as 0 because disabling the DW_apb_i2c depends on I2C bus activities.  
 
-You can [`read`](crate::generic::Reg::read) this register and get [`ic_enable_status::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+You can [`read`](crate::Reg::read) this register and get [`ic_enable_status::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct IC_ENABLE_STATUS_SPEC;
 impl crate::RegisterSpec for IC_ENABLE_STATUS_SPEC {
     type Ux = u32;

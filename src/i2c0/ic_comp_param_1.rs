@@ -62,7 +62,7 @@ impl R {
 
  Note This register is not implemented and therefore reads as 0. If it was implemented it would be a constant read-only register that contains encoded information about the component's parameter settings. Fields shown below are the settings for those parameters  
 
-You can [`read`](crate::generic::Reg::read) this register and get [`ic_comp_param_1::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+You can [`read`](crate::Reg::read) this register and get [`ic_comp_param_1::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct IC_COMP_PARAM_1_SPEC;
 impl crate::RegisterSpec for IC_COMP_PARAM_1_SPEC {
     type Ux = u32;

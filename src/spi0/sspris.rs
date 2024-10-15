@@ -32,7 +32,7 @@ impl R {
 }
 #[doc = "Raw interrupt status register, SSPRIS on page 3-10  
 
-You can [`read`](crate::generic::Reg::read) this register and get [`sspris::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+You can [`read`](crate::Reg::read) this register and get [`sspris::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct SSPRIS_SPEC;
 impl crate::RegisterSpec for SSPRIS_SPEC {
     type Ux = u32;

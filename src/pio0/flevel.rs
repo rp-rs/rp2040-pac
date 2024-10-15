@@ -60,7 +60,7 @@ impl R {
 }
 #[doc = "FIFO levels  
 
-You can [`read`](crate::generic::Reg::read) this register and get [`flevel::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+You can [`read`](crate::Reg::read) this register and get [`flevel::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct FLEVEL_SPEC;
 impl crate::RegisterSpec for FLEVEL_SPEC {
     type Ux = u32;

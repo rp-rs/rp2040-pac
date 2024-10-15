@@ -11,7 +11,7 @@ impl R {
 }
 #[doc = "The number of channels this DMA instance is equipped with. This DMA supports up to 16 hardware channels, but can be configured with as few as one, to minimise silicon area.  
 
-You can [`read`](crate::generic::Reg::read) this register and get [`n_channels::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+You can [`read`](crate::Reg::read) this register and get [`n_channels::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct N_CHANNELS_SPEC;
 impl crate::RegisterSpec for N_CHANNELS_SPEC {
     type Ux = u32;

@@ -88,7 +88,7 @@ impl W {
 }
 #[doc = "Use the SysTick Control and Status Register to enable the SysTick features.  
 
-You can [`read`](crate::generic::Reg::read) this register and get [`syst_csr::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`syst_csr::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+You can [`read`](crate::Reg::read) this register and get [`syst_csr::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`syst_csr::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct SYST_CSR_SPEC;
 impl crate::RegisterSpec for SYST_CSR_SPEC {
     type Ux = u32;

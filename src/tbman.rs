@@ -12,7 +12,7 @@ impl RegisterBlock {
 }
 #[doc = "PLATFORM (r) register accessor: Indicates the type of platform in use  
 
-You can [`read`](crate::generic::Reg::read) this register and get [`platform::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+You can [`read`](crate::Reg::read) this register and get [`platform::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
 
 For information about available fields see [`mod@platform`]
 module"]

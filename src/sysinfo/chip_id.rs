@@ -25,7 +25,7 @@ impl R {
 }
 #[doc = "JEDEC JEP-106 compliant chip identifier.  
 
-You can [`read`](crate::generic::Reg::read) this register and get [`chip_id::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+You can [`read`](crate::Reg::read) this register and get [`chip_id::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct CHIP_ID_SPEC;
 impl crate::RegisterSpec for CHIP_ID_SPEC {
     type Ux = u32;

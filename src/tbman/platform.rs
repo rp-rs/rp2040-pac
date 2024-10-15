@@ -18,7 +18,7 @@ impl R {
 }
 #[doc = "Indicates the type of platform in use  
 
-You can [`read`](crate::generic::Reg::read) this register and get [`platform::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+You can [`read`](crate::Reg::read) this register and get [`platform::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct PLATFORM_SPEC;
 impl crate::RegisterSpec for PLATFORM_SPEC {
     type Ux = u32;

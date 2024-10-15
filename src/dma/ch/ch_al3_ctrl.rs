@@ -38,6 +38,7 @@ impl From<DATA_SIZE_A> for u8 {
 impl crate::FieldSpec for DATA_SIZE_A {
     type Ux = u8;
 }
+impl crate::IsEnum for DATA_SIZE_A {}
 #[doc = "Field `DATA_SIZE` reader - Set the size of each bus transfer (byte/halfword/word). READ_ADDR and WRITE_ADDR advance by this amount (1/2/4 bytes) with each transfer."]
 pub type DATA_SIZE_R = crate::FieldReader<DATA_SIZE_A>;
 impl DATA_SIZE_R {
@@ -126,6 +127,7 @@ impl From<RING_SIZE_A> for u8 {
 impl crate::FieldSpec for RING_SIZE_A {
     type Ux = u8;
 }
+impl crate::IsEnum for RING_SIZE_A {}
 #[doc = "Field `RING_SIZE` reader - Size of address wrap region. If 0, don't wrap. For values n > 0, only the lower n bits of the address will change. This wraps the address on a (1 &lt;&lt; n) byte boundary, facilitating access to naturally-aligned ring buffers.  
 
  Ring sizes between 2 and 32768 bytes are possible. This can apply to either read or write addresses, based on value of RING_SEL."]
@@ -280,6 +282,7 @@ impl From<TREQ_SEL_A> for u8 {
 impl crate::FieldSpec for TREQ_SEL_A {
     type Ux = u8;
 }
+impl crate::IsEnum for TREQ_SEL_A {}
 #[doc = "Field `TREQ_SEL` reader - Select a Transfer Request signal.  
  The channel uses the transfer request signal to pace its data transfer rate. Sources for TREQ signals are internal (TIMERS) or external (DREQ, a Data Request from the system).  
  0x0 to 0x3a -> select DREQ n as TREQ"]
@@ -1050,7 +1053,7 @@ impl W {
 }
 #[doc = "DMA Channel 0 Control and Status  
 
-You can [`read`](crate::generic::Reg::read) this register and get [`ch_al3_ctrl::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`ch_al3_ctrl::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+You can [`read`](crate::Reg::read) this register and get [`ch_al3_ctrl::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`ch_al3_ctrl::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct CH_AL3_CTRL_SPEC;
 impl crate::RegisterSpec for CH_AL3_CTRL_SPEC {
     type Ux = u32;

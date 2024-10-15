@@ -51,7 +51,7 @@ register being set to 0. Writes at other times have no effect.
 }
 #[doc = "Standard Speed I2C Clock SCL High Count Register  
 
-You can [`read`](crate::generic::Reg::read) this register and get [`ic_ss_scl_hcnt::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`ic_ss_scl_hcnt::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+You can [`read`](crate::Reg::read) this register and get [`ic_ss_scl_hcnt::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`ic_ss_scl_hcnt::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct IC_SS_SCL_HCNT_SPEC;
 impl crate::RegisterSpec for IC_SS_SCL_HCNT_SPEC {
     type Ux = u32;

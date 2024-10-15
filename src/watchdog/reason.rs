@@ -18,7 +18,7 @@ impl R {
 }
 #[doc = "Logs the reason for the last reset. Both bits are zero for the case of a hardware reset.  
 
-You can [`read`](crate::generic::Reg::read) this register and get [`reason::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+You can [`read`](crate::Reg::read) this register and get [`reason::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct REASON_SPEC;
 impl crate::RegisterSpec for REASON_SPEC {
     type Ux = u32;

@@ -315,7 +315,7 @@ impl R {
 
  When the I2C is disabled by writing 0 in bit 0 of the IC_ENABLE register: - Bits 1 and 2 are set to 1 - Bits 3 and 10 are set to 0 When the master or slave state machines goes to idle and ic_en=0: - Bits 5 and 6 are set to 0  
 
-You can [`read`](crate::generic::Reg::read) this register and get [`ic_status::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+You can [`read`](crate::Reg::read) this register and get [`ic_status::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct IC_STATUS_SPEC;
 impl crate::RegisterSpec for IC_STATUS_SPEC {
     type Ux = u32;

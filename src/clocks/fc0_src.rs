@@ -46,6 +46,7 @@ impl From<FC0_SRC_A> for u8 {
 impl crate::FieldSpec for FC0_SRC_A {
     type Ux = u8;
 }
+impl crate::IsEnum for FC0_SRC_A {}
 #[doc = "Field `FC0_SRC` reader - "]
 pub type FC0_SRC_R = crate::FieldReader<FC0_SRC_A>;
 impl FC0_SRC_R {
@@ -237,7 +238,7 @@ impl W {
 #[doc = "Clock sent to frequency counter, set to 0 when not required  
  Writing to this register initiates the frequency count  
 
-You can [`read`](crate::generic::Reg::read) this register and get [`fc0_src::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`fc0_src::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+You can [`read`](crate::Reg::read) this register and get [`fc0_src::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`fc0_src::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct FC0_SRC_SPEC;
 impl crate::RegisterSpec for FC0_SRC_SPEC {
     type Ux = u32;

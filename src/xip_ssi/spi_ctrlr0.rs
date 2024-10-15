@@ -24,6 +24,7 @@ impl From<TRANS_TYPE_A> for u8 {
 impl crate::FieldSpec for TRANS_TYPE_A {
     type Ux = u8;
 }
+impl crate::IsEnum for TRANS_TYPE_A {}
 #[doc = "Field `TRANS_TYPE` reader - Address and instruction transfer format"]
 pub type TRANS_TYPE_R = crate::FieldReader<TRANS_TYPE_A>;
 impl TRANS_TYPE_R {
@@ -104,6 +105,7 @@ impl From<INST_L_A> for u8 {
 impl crate::FieldSpec for INST_L_A {
     type Ux = u8;
 }
+impl crate::IsEnum for INST_L_A {}
 #[doc = "Field `INST_L` reader - Instruction length (0/4/8/16b)"]
 pub type INST_L_R = crate::FieldReader<INST_L_A>;
 impl INST_L_R {
@@ -140,7 +142,7 @@ impl INST_L_R {
     }
 }
 #[doc = "Field `INST_L` writer - Instruction length (0/4/8/16b)"]
-pub type INST_L_W<'a, REG> = crate::FieldWriterSafe<'a, REG, 2, INST_L_A>;
+pub type INST_L_W<'a, REG> = crate::FieldWriter<'a, REG, 2, INST_L_A, crate::Safe>;
 impl<'a, REG> INST_L_W<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
@@ -281,7 +283,7 @@ impl W {
 }
 #[doc = "SPI control  
 
-You can [`read`](crate::generic::Reg::read) this register and get [`spi_ctrlr0::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`spi_ctrlr0::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+You can [`read`](crate::Reg::read) this register and get [`spi_ctrlr0::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`spi_ctrlr0::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct SPI_CTRLR0_SPEC;
 impl crate::RegisterSpec for SPI_CTRLR0_SPEC {
     type Ux = u32;

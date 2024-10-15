@@ -38,7 +38,7 @@ impl W {
 }
 #[doc = "Used by the host controller. Sets the wait time in microseconds before trying again if the device replies with a NAK.  
 
-You can [`read`](crate::generic::Reg::read) this register and get [`nak_poll::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`nak_poll::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+You can [`read`](crate::Reg::read) this register and get [`nak_poll::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`nak_poll::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct NAK_POLL_SPEC;
 impl crate::RegisterSpec for NAK_POLL_SPEC {
     type Ux = u32;

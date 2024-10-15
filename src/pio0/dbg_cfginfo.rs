@@ -30,7 +30,7 @@ impl R {
 #[doc = "The PIO hardware has some free parameters that may vary between chip products.  
  These should be provided in the chip datasheet, but are also exposed here.  
 
-You can [`read`](crate::generic::Reg::read) this register and get [`dbg_cfginfo::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+You can [`read`](crate::Reg::read) this register and get [`dbg_cfginfo::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct DBG_CFGINFO_SPEC;
 impl crate::RegisterSpec for DBG_CFGINFO_SPEC {
     type Ux = u32;

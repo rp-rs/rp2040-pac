@@ -33,6 +33,7 @@ impl From<FREQ_RANGE_A> for u16 {
 impl crate::FieldSpec for FREQ_RANGE_A {
     type Ux = u16;
 }
+impl crate::IsEnum for FREQ_RANGE_A {}
 #[doc = "Field `FREQ_RANGE` reader - Controls the number of delay stages in the ROSC ring  
  LOW uses stages 0 to 7  
  MEDIUM uses stages 0 to 5  
@@ -132,6 +133,7 @@ impl From<ENABLE_A> for u16 {
 impl crate::FieldSpec for ENABLE_A {
     type Ux = u16;
 }
+impl crate::IsEnum for ENABLE_A {}
 #[doc = "Field `ENABLE` reader - On power-up this field is initialised to ENABLE  
  The system clock must be switched to another source before setting this field to DISABLE otherwise the chip will lock up  
  The 12-bit code is intended to give some protection against accidental writes. An invalid setting will enable the oscillator."]
@@ -223,7 +225,7 @@ impl W {
 }
 #[doc = "Ring Oscillator control  
 
-You can [`read`](crate::generic::Reg::read) this register and get [`ctrl::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`ctrl::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+You can [`read`](crate::Reg::read) this register and get [`ctrl::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`ctrl::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct CTRL_SPEC;
 impl crate::RegisterSpec for CTRL_SPEC {
     type Ux = u32;

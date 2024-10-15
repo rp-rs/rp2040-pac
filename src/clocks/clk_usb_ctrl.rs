@@ -30,6 +30,7 @@ impl From<AUXSRC_A> for u8 {
 impl crate::FieldSpec for AUXSRC_A {
     type Ux = u8;
 }
+impl crate::IsEnum for AUXSRC_A {}
 #[doc = "Field `AUXSRC` reader - Selects the auxiliary clock source, will glitch when switching"]
 pub type AUXSRC_R = crate::FieldReader<AUXSRC_A>;
 impl AUXSRC_R {
@@ -200,7 +201,7 @@ impl W {
 }
 #[doc = "Clock control, can be changed on-the-fly (except for auxsrc)  
 
-You can [`read`](crate::generic::Reg::read) this register and get [`clk_usb_ctrl::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`clk_usb_ctrl::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+You can [`read`](crate::Reg::read) this register and get [`clk_usb_ctrl::R`](R). You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`clk_usb_ctrl::W`](W). You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct CLK_USB_CTRL_SPEC;
 impl crate::RegisterSpec for CLK_USB_CTRL_SPEC {
     type Ux = u32;

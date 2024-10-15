@@ -11,7 +11,7 @@ impl R {
 }
 #[doc = "Multi-master interrupt clear  
 
-You can [`read`](crate::generic::Reg::read) this register and get [`msticr::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+You can [`read`](crate::Reg::read) this register and get [`msticr::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct MSTICR_SPEC;
 impl crate::RegisterSpec for MSTICR_SPEC {
     type Ux = u32;

@@ -5,15 +5,10 @@ impl core::fmt::Debug for R {
         write!(f, "{}", self.bits())
     }
 }
-impl core::fmt::Debug for crate::generic::Reg<CLK_ADC_SELECTED_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
-    }
-}
 #[doc = "Indicates which SRC is currently selected by the glitchless mux (one-hot).  
  This slice does not have a glitchless mux (only the AUX_SRC field is present, not SRC) so this register is hardwired to 0x1.  
 
-You can [`read`](crate::generic::Reg::read) this register and get [`clk_adc_selected::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+You can [`read`](crate::Reg::read) this register and get [`clk_adc_selected::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct CLK_ADC_SELECTED_SPEC;
 impl crate::RegisterSpec for CLK_ADC_SELECTED_SPEC {
     type Ux = u32;

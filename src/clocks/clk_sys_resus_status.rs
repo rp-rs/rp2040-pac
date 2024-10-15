@@ -11,7 +11,7 @@ impl R {
 }
 #[doc = "  
 
-You can [`read`](crate::generic::Reg::read) this register and get [`clk_sys_resus_status::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+You can [`read`](crate::Reg::read) this register and get [`clk_sys_resus_status::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct CLK_SYS_RESUS_STATUS_SPEC;
 impl crate::RegisterSpec for CLK_SYS_RESUS_STATUS_SPEC {
     type Ux = u32;

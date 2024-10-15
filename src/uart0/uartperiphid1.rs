@@ -18,7 +18,7 @@ impl R {
 }
 #[doc = "UARTPeriphID1 Register  
 
-You can [`read`](crate::generic::Reg::read) this register and get [`uartperiphid1::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+You can [`read`](crate::Reg::read) this register and get [`uartperiphid1::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct UARTPERIPHID1_SPEC;
 impl crate::RegisterSpec for UARTPERIPHID1_SPEC {
     type Ux = u32;
