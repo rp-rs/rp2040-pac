@@ -5,11 +5,11 @@ SVDTOOLS="${SVDTOOLS:-svdtools}"
 
 set -ex
 
-cargo install --version 0.32.0 svd2rust
-cargo install --version 0.11.1  form
+cargo install --version 0.32.0 svd2rust --locked
+cargo install --version 0.12.1 form --locked
 rustup component add rustfmt
 if [ "$SVDTOOLS" == "svdtools" ]; then
-    cargo install --version 0.3.12 svdtools
+    cargo install --version 0.3.20 svdtools --locked
 else
     python3 -mvenv --clear .venv
     source .venv/bin/activate
