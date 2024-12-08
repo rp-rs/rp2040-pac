@@ -21,8 +21,7 @@ impl W {
         FC0_INTERVAL_W::new(self, 0)
     }
 }
-#[doc = "The test interval is 0.98us * 2**interval, but let's call it 1us * 2**interval  
- The default gives a test interval of 250us  
+#[doc = "The test interval is 0.98us * 2**interval, but let's call it 1us * 2**interval The default gives a test interval of 250us  
 
 You can [`read`](crate::generic::Reg::read) this register and get [`fc0_interval::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`fc0_interval::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct FC0_INTERVAL_SPEC;

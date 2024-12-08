@@ -2,23 +2,19 @@
 pub type R = crate::R<MPU_RNR_SPEC>;
 #[doc = "Register `MPU_RNR` writer"]
 pub type W = crate::W<MPU_RNR_SPEC>;
-#[doc = "Field `REGION` reader - Indicates the MPU region referenced by the MPU_RBAR and MPU_RASR registers.  
- The MPU supports 8 memory regions, so the permitted values of this field are 0-7."]
+#[doc = "Field `REGION` reader - Indicates the MPU region referenced by the MPU_RBAR and MPU_RASR registers. The MPU supports 8 memory regions, so the permitted values of this field are 0-7."]
 pub type REGION_R = crate::FieldReader;
-#[doc = "Field `REGION` writer - Indicates the MPU region referenced by the MPU_RBAR and MPU_RASR registers.  
- The MPU supports 8 memory regions, so the permitted values of this field are 0-7."]
+#[doc = "Field `REGION` writer - Indicates the MPU region referenced by the MPU_RBAR and MPU_RASR registers. The MPU supports 8 memory regions, so the permitted values of this field are 0-7."]
 pub type REGION_W<'a, REG> = crate::FieldWriter<'a, REG, 4>;
 impl R {
-    #[doc = "Bits 0:3 - Indicates the MPU region referenced by the MPU_RBAR and MPU_RASR registers.  
- The MPU supports 8 memory regions, so the permitted values of this field are 0-7."]
+    #[doc = "Bits 0:3 - Indicates the MPU region referenced by the MPU_RBAR and MPU_RASR registers. The MPU supports 8 memory regions, so the permitted values of this field are 0-7."]
     #[inline(always)]
     pub fn region(&self) -> REGION_R {
         REGION_R::new((self.bits & 0x0f) as u8)
     }
 }
 impl W {
-    #[doc = "Bits 0:3 - Indicates the MPU region referenced by the MPU_RBAR and MPU_RASR registers.  
- The MPU supports 8 memory regions, so the permitted values of this field are 0-7."]
+    #[doc = "Bits 0:3 - Indicates the MPU region referenced by the MPU_RBAR and MPU_RASR registers. The MPU supports 8 memory regions, so the permitted values of this field are 0-7."]
     #[inline(always)]
     #[must_use]
     pub fn region(&mut self) -> REGION_W<MPU_RNR_SPEC> {

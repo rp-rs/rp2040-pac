@@ -1,6 +1,19 @@
 _svd: "./rp2040.svd"
 
+_modify:
+  USB:
+    name: USBCTRL_REGS
+  USB_DPRAM:
+    name: USBCTRL_DPRAM
+  SSI:
+    name: XIP_SSI
+
 DMA:
+  CHAN_ABORT:
+    _modify:
+      CHAN_ABORT:
+        access: read-write
+
   CH0_CTRL_TRIG:
     _modify:
       "CHAIN_TO":
@@ -682,6 +695,10 @@ USBCTRL_REGS:
       J: [1, "J"]
       K: [2, "K"]
       SE1: [3, "SE1"]
+    _modify:
+      SUSPENDED:
+        access: read-write
+        modifiedWriteValues: oneToClear
 
   # The ADDR_ENDP* registers collected into the array HOST_ADDR_ENDP.
   # This renaming is necessary to avoid collision with the "ADDR_ENDP" register used in device mode.

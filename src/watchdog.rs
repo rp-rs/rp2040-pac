@@ -15,9 +15,7 @@ pub struct RegisterBlock {
     tick: TICK,
 }
 impl RegisterBlock {
-    #[doc = "0x00 - Watchdog control  
- The rst_wdsel register determines which subsystems are reset when the watchdog is triggered.  
- The watchdog can be triggered in software."]
+    #[doc = "0x00 - Watchdog control The rst_wdsel register determines which subsystems are reset when the watchdog is triggered. The watchdog can be triggered in software."]
     #[inline(always)]
     pub const fn ctrl(&self) -> &CTRL {
         &self.ctrl
@@ -78,31 +76,27 @@ impl RegisterBlock {
         &self.tick
     }
 }
-#[doc = "CTRL (rw) register accessor: Watchdog control  
- The rst_wdsel register determines which subsystems are reset when the watchdog is triggered.  
- The watchdog can be triggered in software.  
+#[doc = "CTRL (rw) register accessor: Watchdog control The rst_wdsel register determines which subsystems are reset when the watchdog is triggered. The watchdog can be triggered in software.  
 
 You can [`read`](crate::generic::Reg::read) this register and get [`ctrl::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`ctrl::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
 
 For information about available fields see [`mod@ctrl`]
 module"]
 pub type CTRL = crate::Reg<ctrl::CTRL_SPEC>;
-#[doc = "Watchdog control  
- The rst_wdsel register determines which subsystems are reset when the watchdog is triggered.  
- The watchdog can be triggered in software."]
+#[doc = "Watchdog control The rst_wdsel register determines which subsystems are reset when the watchdog is triggered. The watchdog can be triggered in software."]
 pub mod ctrl;
-#[doc = "LOAD (w) register accessor: Load the watchdog timer. The maximum setting is 0xffffff which corresponds to 0xffffff / 2 ticks before triggering a watchdog reset (see errata RP2040-E1).  
+#[doc = "LOAD (rw) register accessor: Load the watchdog timer. The maximum setting is 0xffffff which corresponds to 0xffffff / 2 ticks before triggering a watchdog reset (see errata RP2040-E1).  
 
-You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`load::W`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+You can [`read`](crate::generic::Reg::read) this register and get [`load::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`load::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
 
 For information about available fields see [`mod@load`]
 module"]
 pub type LOAD = crate::Reg<load::LOAD_SPEC>;
 #[doc = "Load the watchdog timer. The maximum setting is 0xffffff which corresponds to 0xffffff / 2 ticks before triggering a watchdog reset (see errata RP2040-E1)."]
 pub mod load;
-#[doc = "REASON (r) register accessor: Logs the reason for the last reset. Both bits are zero for the case of a hardware reset.  
+#[doc = "REASON (rw) register accessor: Logs the reason for the last reset. Both bits are zero for the case of a hardware reset.  
 
-You can [`read`](crate::generic::Reg::read) this register and get [`reason::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+You can [`read`](crate::generic::Reg::read) this register and get [`reason::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`reason::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
 
 For information about available fields see [`mod@reason`]
 module"]

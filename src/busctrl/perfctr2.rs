@@ -2,27 +2,19 @@
 pub type R = crate::R<PERFCTR2_SPEC>;
 #[doc = "Register `PERFCTR2` writer"]
 pub type W = crate::W<PERFCTR2_SPEC>;
-#[doc = "Field `PERFCTR2` reader - Busfabric saturating performance counter 2  
- Count some event signal from the busfabric arbiters.  
- Write any value to clear. Select an event to count using PERFSEL2"]
+#[doc = "Field `PERFCTR2` reader - Busfabric saturating performance counter 2 Count some event signal from the busfabric arbiters. Write any value to clear. Select an event to count using PERFSEL2"]
 pub type PERFCTR2_R = crate::FieldReader<u32>;
-#[doc = "Field `PERFCTR2` writer - Busfabric saturating performance counter 2  
- Count some event signal from the busfabric arbiters.  
- Write any value to clear. Select an event to count using PERFSEL2"]
+#[doc = "Field `PERFCTR2` writer - Busfabric saturating performance counter 2 Count some event signal from the busfabric arbiters. Write any value to clear. Select an event to count using PERFSEL2"]
 pub type PERFCTR2_W<'a, REG> = crate::FieldWriter<'a, REG, 24, u32>;
 impl R {
-    #[doc = "Bits 0:23 - Busfabric saturating performance counter 2  
- Count some event signal from the busfabric arbiters.  
- Write any value to clear. Select an event to count using PERFSEL2"]
+    #[doc = "Bits 0:23 - Busfabric saturating performance counter 2 Count some event signal from the busfabric arbiters. Write any value to clear. Select an event to count using PERFSEL2"]
     #[inline(always)]
     pub fn perfctr2(&self) -> PERFCTR2_R {
         PERFCTR2_R::new(self.bits & 0x00ff_ffff)
     }
 }
 impl W {
-    #[doc = "Bits 0:23 - Busfabric saturating performance counter 2  
- Count some event signal from the busfabric arbiters.  
- Write any value to clear. Select an event to count using PERFSEL2"]
+    #[doc = "Bits 0:23 - Busfabric saturating performance counter 2 Count some event signal from the busfabric arbiters. Write any value to clear. Select an event to count using PERFSEL2"]
     #[inline(always)]
     #[must_use]
     pub fn perfctr2(&mut self) -> PERFCTR2_W<PERFCTR2_SPEC> {

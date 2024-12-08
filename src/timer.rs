@@ -20,20 +20,17 @@ pub struct RegisterBlock {
     ints: INTS,
 }
 impl RegisterBlock {
-    #[doc = "0x00 - Write to bits 63:32 of time  
- always write timelw before timehw"]
+    #[doc = "0x00 - Write to bits 63:32 of time always write timelw before timehw"]
     #[inline(always)]
     pub const fn timehw(&self) -> &TIMEHW {
         &self.timehw
     }
-    #[doc = "0x04 - Write to bits 31:0 of time  
- writes do not get copied to time until timehw is written"]
+    #[doc = "0x04 - Write to bits 31:0 of time writes do not get copied to time until timehw is written"]
     #[inline(always)]
     pub const fn timelw(&self) -> &TIMELW {
         &self.timelw
     }
-    #[doc = "0x08 - Read from bits 63:32 of time  
- always read timelr before timehr"]
+    #[doc = "0x08 - Read from bits 63:32 of time always read timelr before timehr"]
     #[inline(always)]
     pub const fn timehr(&self) -> &TIMEHR {
         &self.timehr
@@ -43,42 +40,27 @@ impl RegisterBlock {
     pub const fn timelr(&self) -> &TIMELR {
         &self.timelr
     }
-    #[doc = "0x10 - Arm alarm 0, and configure the time it will fire.  
- Once armed, the alarm fires when TIMER_ALARM0 == TIMELR.  
- The alarm will disarm itself once it fires, and can  
- be disarmed early using the ARMED status register."]
+    #[doc = "0x10 - Arm alarm 0, and configure the time it will fire. Once armed, the alarm fires when TIMER_ALARM0 == TIMELR. The alarm will disarm itself once it fires, and can be disarmed early using the ARMED status register."]
     #[inline(always)]
     pub const fn alarm0(&self) -> &ALARM0 {
         &self.alarm0
     }
-    #[doc = "0x14 - Arm alarm 1, and configure the time it will fire.  
- Once armed, the alarm fires when TIMER_ALARM1 == TIMELR.  
- The alarm will disarm itself once it fires, and can  
- be disarmed early using the ARMED status register."]
+    #[doc = "0x14 - Arm alarm 1, and configure the time it will fire. Once armed, the alarm fires when TIMER_ALARM1 == TIMELR. The alarm will disarm itself once it fires, and can be disarmed early using the ARMED status register."]
     #[inline(always)]
     pub const fn alarm1(&self) -> &ALARM1 {
         &self.alarm1
     }
-    #[doc = "0x18 - Arm alarm 2, and configure the time it will fire.  
- Once armed, the alarm fires when TIMER_ALARM2 == TIMELR.  
- The alarm will disarm itself once it fires, and can  
- be disarmed early using the ARMED status register."]
+    #[doc = "0x18 - Arm alarm 2, and configure the time it will fire. Once armed, the alarm fires when TIMER_ALARM2 == TIMELR. The alarm will disarm itself once it fires, and can be disarmed early using the ARMED status register."]
     #[inline(always)]
     pub const fn alarm2(&self) -> &ALARM2 {
         &self.alarm2
     }
-    #[doc = "0x1c - Arm alarm 3, and configure the time it will fire.  
- Once armed, the alarm fires when TIMER_ALARM3 == TIMELR.  
- The alarm will disarm itself once it fires, and can  
- be disarmed early using the ARMED status register."]
+    #[doc = "0x1c - Arm alarm 3, and configure the time it will fire. Once armed, the alarm fires when TIMER_ALARM3 == TIMELR. The alarm will disarm itself once it fires, and can be disarmed early using the ARMED status register."]
     #[inline(always)]
     pub const fn alarm3(&self) -> &ALARM3 {
         &self.alarm3
     }
-    #[doc = "0x20 - Indicates the armed/disarmed status of each alarm.  
- A write to the corresponding ALARMx register arms the alarm.  
- Alarms automatically disarm upon firing, but writing ones here  
- will disarm immediately without waiting to fire."]
+    #[doc = "0x20 - Indicates the armed/disarmed status of each alarm. A write to the corresponding ALARMx register arms the alarm. Alarms automatically disarm upon firing, but writing ones here will disarm immediately without waiting to fire."]
     #[inline(always)]
     pub const fn armed(&self) -> &ARMED {
         &self.armed
@@ -124,135 +106,99 @@ impl RegisterBlock {
         &self.ints
     }
 }
-#[doc = "TIMEHW (w) register accessor: Write to bits 63:32 of time  
- always write timelw before timehw  
+#[doc = "TIMEHW (rw) register accessor: Write to bits 63:32 of time always write timelw before timehw  
 
-You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`timehw::W`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+You can [`read`](crate::generic::Reg::read) this register and get [`timehw::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`timehw::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
 
 For information about available fields see [`mod@timehw`]
 module"]
 pub type TIMEHW = crate::Reg<timehw::TIMEHW_SPEC>;
-#[doc = "Write to bits 63:32 of time  
- always write timelw before timehw"]
+#[doc = "Write to bits 63:32 of time always write timelw before timehw"]
 pub mod timehw;
-#[doc = "TIMELW (w) register accessor: Write to bits 31:0 of time  
- writes do not get copied to time until timehw is written  
+#[doc = "TIMELW (rw) register accessor: Write to bits 31:0 of time writes do not get copied to time until timehw is written  
 
-You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`timelw::W`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+You can [`read`](crate::generic::Reg::read) this register and get [`timelw::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`timelw::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
 
 For information about available fields see [`mod@timelw`]
 module"]
 pub type TIMELW = crate::Reg<timelw::TIMELW_SPEC>;
-#[doc = "Write to bits 31:0 of time  
- writes do not get copied to time until timehw is written"]
+#[doc = "Write to bits 31:0 of time writes do not get copied to time until timehw is written"]
 pub mod timelw;
-#[doc = "TIMEHR (r) register accessor: Read from bits 63:32 of time  
- always read timelr before timehr  
+#[doc = "TIMEHR (rw) register accessor: Read from bits 63:32 of time always read timelr before timehr  
 
-You can [`read`](crate::generic::Reg::read) this register and get [`timehr::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+You can [`read`](crate::generic::Reg::read) this register and get [`timehr::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`timehr::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
 
 For information about available fields see [`mod@timehr`]
 module"]
 pub type TIMEHR = crate::Reg<timehr::TIMEHR_SPEC>;
-#[doc = "Read from bits 63:32 of time  
- always read timelr before timehr"]
+#[doc = "Read from bits 63:32 of time always read timelr before timehr"]
 pub mod timehr;
-#[doc = "TIMELR (r) register accessor: Read from bits 31:0 of time  
+#[doc = "TIMELR (rw) register accessor: Read from bits 31:0 of time  
 
-You can [`read`](crate::generic::Reg::read) this register and get [`timelr::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+You can [`read`](crate::generic::Reg::read) this register and get [`timelr::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`timelr::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
 
 For information about available fields see [`mod@timelr`]
 module"]
 pub type TIMELR = crate::Reg<timelr::TIMELR_SPEC>;
 #[doc = "Read from bits 31:0 of time"]
 pub mod timelr;
-#[doc = "ALARM0 (rw) register accessor: Arm alarm 0, and configure the time it will fire.  
- Once armed, the alarm fires when TIMER_ALARM0 == TIMELR.  
- The alarm will disarm itself once it fires, and can  
- be disarmed early using the ARMED status register.  
+#[doc = "ALARM0 (rw) register accessor: Arm alarm 0, and configure the time it will fire. Once armed, the alarm fires when TIMER_ALARM0 == TIMELR. The alarm will disarm itself once it fires, and can be disarmed early using the ARMED status register.  
 
 You can [`read`](crate::generic::Reg::read) this register and get [`alarm0::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`alarm0::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
 
 For information about available fields see [`mod@alarm0`]
 module"]
 pub type ALARM0 = crate::Reg<alarm0::ALARM0_SPEC>;
-#[doc = "Arm alarm 0, and configure the time it will fire.  
- Once armed, the alarm fires when TIMER_ALARM0 == TIMELR.  
- The alarm will disarm itself once it fires, and can  
- be disarmed early using the ARMED status register."]
+#[doc = "Arm alarm 0, and configure the time it will fire. Once armed, the alarm fires when TIMER_ALARM0 == TIMELR. The alarm will disarm itself once it fires, and can be disarmed early using the ARMED status register."]
 pub mod alarm0;
-#[doc = "ALARM1 (rw) register accessor: Arm alarm 1, and configure the time it will fire.  
- Once armed, the alarm fires when TIMER_ALARM1 == TIMELR.  
- The alarm will disarm itself once it fires, and can  
- be disarmed early using the ARMED status register.  
+#[doc = "ALARM1 (rw) register accessor: Arm alarm 1, and configure the time it will fire. Once armed, the alarm fires when TIMER_ALARM1 == TIMELR. The alarm will disarm itself once it fires, and can be disarmed early using the ARMED status register.  
 
 You can [`read`](crate::generic::Reg::read) this register and get [`alarm1::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`alarm1::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
 
 For information about available fields see [`mod@alarm1`]
 module"]
 pub type ALARM1 = crate::Reg<alarm1::ALARM1_SPEC>;
-#[doc = "Arm alarm 1, and configure the time it will fire.  
- Once armed, the alarm fires when TIMER_ALARM1 == TIMELR.  
- The alarm will disarm itself once it fires, and can  
- be disarmed early using the ARMED status register."]
+#[doc = "Arm alarm 1, and configure the time it will fire. Once armed, the alarm fires when TIMER_ALARM1 == TIMELR. The alarm will disarm itself once it fires, and can be disarmed early using the ARMED status register."]
 pub mod alarm1;
-#[doc = "ALARM2 (rw) register accessor: Arm alarm 2, and configure the time it will fire.  
- Once armed, the alarm fires when TIMER_ALARM2 == TIMELR.  
- The alarm will disarm itself once it fires, and can  
- be disarmed early using the ARMED status register.  
+#[doc = "ALARM2 (rw) register accessor: Arm alarm 2, and configure the time it will fire. Once armed, the alarm fires when TIMER_ALARM2 == TIMELR. The alarm will disarm itself once it fires, and can be disarmed early using the ARMED status register.  
 
 You can [`read`](crate::generic::Reg::read) this register and get [`alarm2::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`alarm2::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
 
 For information about available fields see [`mod@alarm2`]
 module"]
 pub type ALARM2 = crate::Reg<alarm2::ALARM2_SPEC>;
-#[doc = "Arm alarm 2, and configure the time it will fire.  
- Once armed, the alarm fires when TIMER_ALARM2 == TIMELR.  
- The alarm will disarm itself once it fires, and can  
- be disarmed early using the ARMED status register."]
+#[doc = "Arm alarm 2, and configure the time it will fire. Once armed, the alarm fires when TIMER_ALARM2 == TIMELR. The alarm will disarm itself once it fires, and can be disarmed early using the ARMED status register."]
 pub mod alarm2;
-#[doc = "ALARM3 (rw) register accessor: Arm alarm 3, and configure the time it will fire.  
- Once armed, the alarm fires when TIMER_ALARM3 == TIMELR.  
- The alarm will disarm itself once it fires, and can  
- be disarmed early using the ARMED status register.  
+#[doc = "ALARM3 (rw) register accessor: Arm alarm 3, and configure the time it will fire. Once armed, the alarm fires when TIMER_ALARM3 == TIMELR. The alarm will disarm itself once it fires, and can be disarmed early using the ARMED status register.  
 
 You can [`read`](crate::generic::Reg::read) this register and get [`alarm3::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`alarm3::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
 
 For information about available fields see [`mod@alarm3`]
 module"]
 pub type ALARM3 = crate::Reg<alarm3::ALARM3_SPEC>;
-#[doc = "Arm alarm 3, and configure the time it will fire.  
- Once armed, the alarm fires when TIMER_ALARM3 == TIMELR.  
- The alarm will disarm itself once it fires, and can  
- be disarmed early using the ARMED status register."]
+#[doc = "Arm alarm 3, and configure the time it will fire. Once armed, the alarm fires when TIMER_ALARM3 == TIMELR. The alarm will disarm itself once it fires, and can be disarmed early using the ARMED status register."]
 pub mod alarm3;
-#[doc = "ARMED (rw) register accessor: Indicates the armed/disarmed status of each alarm.  
- A write to the corresponding ALARMx register arms the alarm.  
- Alarms automatically disarm upon firing, but writing ones here  
- will disarm immediately without waiting to fire.  
+#[doc = "ARMED (rw) register accessor: Indicates the armed/disarmed status of each alarm. A write to the corresponding ALARMx register arms the alarm. Alarms automatically disarm upon firing, but writing ones here will disarm immediately without waiting to fire.  
 
 You can [`read`](crate::generic::Reg::read) this register and get [`armed::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`armed::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
 
 For information about available fields see [`mod@armed`]
 module"]
 pub type ARMED = crate::Reg<armed::ARMED_SPEC>;
-#[doc = "Indicates the armed/disarmed status of each alarm.  
- A write to the corresponding ALARMx register arms the alarm.  
- Alarms automatically disarm upon firing, but writing ones here  
- will disarm immediately without waiting to fire."]
+#[doc = "Indicates the armed/disarmed status of each alarm. A write to the corresponding ALARMx register arms the alarm. Alarms automatically disarm upon firing, but writing ones here will disarm immediately without waiting to fire."]
 pub mod armed;
-#[doc = "TIMERAWH (r) register accessor: Raw read from bits 63:32 of time (no side effects)  
+#[doc = "TIMERAWH (rw) register accessor: Raw read from bits 63:32 of time (no side effects)  
 
-You can [`read`](crate::generic::Reg::read) this register and get [`timerawh::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+You can [`read`](crate::generic::Reg::read) this register and get [`timerawh::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`timerawh::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
 
 For information about available fields see [`mod@timerawh`]
 module"]
 pub type TIMERAWH = crate::Reg<timerawh::TIMERAWH_SPEC>;
 #[doc = "Raw read from bits 63:32 of time (no side effects)"]
 pub mod timerawh;
-#[doc = "TIMERAWL (r) register accessor: Raw read from bits 31:0 of time (no side effects)  
+#[doc = "TIMERAWL (rw) register accessor: Raw read from bits 31:0 of time (no side effects)  
 
-You can [`read`](crate::generic::Reg::read) this register and get [`timerawl::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+You can [`read`](crate::generic::Reg::read) this register and get [`timerawl::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`timerawl::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
 
 For information about available fields see [`mod@timerawl`]
 module"]
@@ -304,9 +250,9 @@ module"]
 pub type INTF = crate::Reg<intf::INTF_SPEC>;
 #[doc = "Interrupt Force"]
 pub mod intf;
-#[doc = "INTS (r) register accessor: Interrupt status after masking &amp; forcing  
+#[doc = "INTS (rw) register accessor: Interrupt status after masking &amp; forcing  
 
-You can [`read`](crate::generic::Reg::read) this register and get [`ints::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+You can [`read`](crate::generic::Reg::read) this register and get [`ints::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`ints::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
 
 For information about available fields see [`mod@ints`]
 module"]

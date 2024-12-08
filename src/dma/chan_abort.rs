@@ -2,27 +2,19 @@
 pub type R = crate::R<CHAN_ABORT_SPEC>;
 #[doc = "Register `CHAN_ABORT` writer"]
 pub type W = crate::W<CHAN_ABORT_SPEC>;
-#[doc = "Field `CHAN_ABORT` reader - Each bit corresponds to a channel. Writing a 1 aborts whatever transfer sequence is in progress on that channel. The bit will remain high until any in-flight transfers have been flushed through the address and data FIFOs.  
-
- After writing, this register must be polled until it returns all-zero. Until this point, it is unsafe to restart the channel."]
+#[doc = "Field `CHAN_ABORT` reader - Each bit corresponds to a channel. Writing a 1 aborts whatever transfer sequence is in progress on that channel. The bit will remain high until any in-flight transfers have been flushed through the address and data FIFOs. After writing, this register must be polled until it returns all-zero. Until this point, it is unsafe to restart the channel."]
 pub type CHAN_ABORT_R = crate::FieldReader<u16>;
-#[doc = "Field `CHAN_ABORT` writer - Each bit corresponds to a channel. Writing a 1 aborts whatever transfer sequence is in progress on that channel. The bit will remain high until any in-flight transfers have been flushed through the address and data FIFOs.  
-
- After writing, this register must be polled until it returns all-zero. Until this point, it is unsafe to restart the channel."]
+#[doc = "Field `CHAN_ABORT` writer - Each bit corresponds to a channel. Writing a 1 aborts whatever transfer sequence is in progress on that channel. The bit will remain high until any in-flight transfers have been flushed through the address and data FIFOs. After writing, this register must be polled until it returns all-zero. Until this point, it is unsafe to restart the channel."]
 pub type CHAN_ABORT_W<'a, REG> = crate::FieldWriter<'a, REG, 16, u16>;
 impl R {
-    #[doc = "Bits 0:15 - Each bit corresponds to a channel. Writing a 1 aborts whatever transfer sequence is in progress on that channel. The bit will remain high until any in-flight transfers have been flushed through the address and data FIFOs.  
-
- After writing, this register must be polled until it returns all-zero. Until this point, it is unsafe to restart the channel."]
+    #[doc = "Bits 0:15 - Each bit corresponds to a channel. Writing a 1 aborts whatever transfer sequence is in progress on that channel. The bit will remain high until any in-flight transfers have been flushed through the address and data FIFOs. After writing, this register must be polled until it returns all-zero. Until this point, it is unsafe to restart the channel."]
     #[inline(always)]
     pub fn chan_abort(&self) -> CHAN_ABORT_R {
         CHAN_ABORT_R::new((self.bits & 0xffff) as u16)
     }
 }
 impl W {
-    #[doc = "Bits 0:15 - Each bit corresponds to a channel. Writing a 1 aborts whatever transfer sequence is in progress on that channel. The bit will remain high until any in-flight transfers have been flushed through the address and data FIFOs.  
-
- After writing, this register must be polled until it returns all-zero. Until this point, it is unsafe to restart the channel."]
+    #[doc = "Bits 0:15 - Each bit corresponds to a channel. Writing a 1 aborts whatever transfer sequence is in progress on that channel. The bit will remain high until any in-flight transfers have been flushed through the address and data FIFOs. After writing, this register must be polled until it returns all-zero. Until this point, it is unsafe to restart the channel."]
     #[inline(always)]
     #[must_use]
     pub fn chan_abort(&mut self) -> CHAN_ABORT_W<CHAN_ABORT_SPEC> {

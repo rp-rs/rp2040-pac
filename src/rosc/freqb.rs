@@ -18,8 +18,7 @@ pub type DS6_W<'a, REG> = crate::FieldWriter<'a, REG, 3>;
 pub type DS7_R = crate::FieldReader;
 #[doc = "Field `DS7` writer - Stage 7 drive strength"]
 pub type DS7_W<'a, REG> = crate::FieldWriter<'a, REG, 3>;
-#[doc = "Set to 0x9696 to apply the settings  
- Any other value in this field will set all drive strengths to 0  
+#[doc = "Set to 0x9696 to apply the settings Any other value in this field will set all drive strengths to 0  
 
 Value on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
@@ -37,8 +36,7 @@ impl From<PASSWD_A> for u16 {
 impl crate::FieldSpec for PASSWD_A {
     type Ux = u16;
 }
-#[doc = "Field `PASSWD` reader - Set to 0x9696 to apply the settings  
- Any other value in this field will set all drive strengths to 0"]
+#[doc = "Field `PASSWD` reader - Set to 0x9696 to apply the settings Any other value in this field will set all drive strengths to 0"]
 pub type PASSWD_R = crate::FieldReader<PASSWD_A>;
 impl PASSWD_R {
     #[doc = "Get enumerated values variant"]
@@ -55,8 +53,7 @@ impl PASSWD_R {
         *self == PASSWD_A::PASS
     }
 }
-#[doc = "Field `PASSWD` writer - Set to 0x9696 to apply the settings  
- Any other value in this field will set all drive strengths to 0"]
+#[doc = "Field `PASSWD` writer - Set to 0x9696 to apply the settings Any other value in this field will set all drive strengths to 0"]
 pub type PASSWD_W<'a, REG> = crate::FieldWriter<'a, REG, 16, PASSWD_A>;
 impl<'a, REG> PASSWD_W<'a, REG>
 where
@@ -90,8 +87,7 @@ impl R {
     pub fn ds7(&self) -> DS7_R {
         DS7_R::new(((self.bits >> 12) & 7) as u8)
     }
-    #[doc = "Bits 16:31 - Set to 0x9696 to apply the settings  
- Any other value in this field will set all drive strengths to 0"]
+    #[doc = "Bits 16:31 - Set to 0x9696 to apply the settings Any other value in this field will set all drive strengths to 0"]
     #[inline(always)]
     pub fn passwd(&self) -> PASSWD_R {
         PASSWD_R::new(((self.bits >> 16) & 0xffff) as u16)
@@ -122,8 +118,7 @@ impl W {
     pub fn ds7(&mut self) -> DS7_W<FREQB_SPEC> {
         DS7_W::new(self, 12)
     }
-    #[doc = "Bits 16:31 - Set to 0x9696 to apply the settings  
- Any other value in this field will set all drive strengths to 0"]
+    #[doc = "Bits 16:31 - Set to 0x9696 to apply the settings Any other value in this field will set all drive strengths to 0"]
     #[inline(always)]
     #[must_use]
     pub fn passwd(&mut self) -> PASSWD_W<FREQB_SPEC> {

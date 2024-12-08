@@ -2,43 +2,19 @@
 pub type R = crate::R<NVIC_ICER_SPEC>;
 #[doc = "Register `NVIC_ICER` writer"]
 pub type W = crate::W<NVIC_ICER_SPEC>;
-#[doc = "Field `CLRENA` reader - Interrupt clear-enable bits.  
- Write:  
- 0 = No effect.  
- 1 = Disable interrupt.  
- Read:  
- 0 = Interrupt disabled.  
- 1 = Interrupt enabled."]
+#[doc = "Field `CLRENA` reader - Interrupt clear-enable bits. Write: 0 = No effect. 1 = Disable interrupt. Read: 0 = Interrupt disabled. 1 = Interrupt enabled."]
 pub type CLRENA_R = crate::FieldReader<u32>;
-#[doc = "Field `CLRENA` writer - Interrupt clear-enable bits.  
- Write:  
- 0 = No effect.  
- 1 = Disable interrupt.  
- Read:  
- 0 = Interrupt disabled.  
- 1 = Interrupt enabled."]
+#[doc = "Field `CLRENA` writer - Interrupt clear-enable bits. Write: 0 = No effect. 1 = Disable interrupt. Read: 0 = Interrupt disabled. 1 = Interrupt enabled."]
 pub type CLRENA_W<'a, REG> = crate::FieldWriter<'a, REG, 32, u32>;
 impl R {
-    #[doc = "Bits 0:31 - Interrupt clear-enable bits.  
- Write:  
- 0 = No effect.  
- 1 = Disable interrupt.  
- Read:  
- 0 = Interrupt disabled.  
- 1 = Interrupt enabled."]
+    #[doc = "Bits 0:31 - Interrupt clear-enable bits. Write: 0 = No effect. 1 = Disable interrupt. Read: 0 = Interrupt disabled. 1 = Interrupt enabled."]
     #[inline(always)]
     pub fn clrena(&self) -> CLRENA_R {
         CLRENA_R::new(self.bits)
     }
 }
 impl W {
-    #[doc = "Bits 0:31 - Interrupt clear-enable bits.  
- Write:  
- 0 = No effect.  
- 1 = Disable interrupt.  
- Read:  
- 0 = Interrupt disabled.  
- 1 = Interrupt enabled."]
+    #[doc = "Bits 0:31 - Interrupt clear-enable bits. Write: 0 = No effect. 1 = Disable interrupt. Read: 0 = Interrupt disabled. 1 = Interrupt enabled."]
     #[inline(always)]
     #[must_use]
     pub fn clrena(&mut self) -> CLRENA_W<NVIC_ICER_SPEC> {

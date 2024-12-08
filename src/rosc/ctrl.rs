@@ -2,14 +2,7 @@
 pub type R = crate::R<CTRL_SPEC>;
 #[doc = "Register `CTRL` writer"]
 pub type W = crate::W<CTRL_SPEC>;
-#[doc = "Controls the number of delay stages in the ROSC ring  
- LOW uses stages 0 to 7  
- MEDIUM uses stages 0 to 5  
- HIGH uses stages 0 to 3  
- TOOHIGH uses stages 0 to 1 and should not be used because its frequency exceeds design specifications  
- The clock output will not glitch when changing the range up one step at a time  
- The clock output will glitch when changing the range down  
- Note: the values here are gray coded which is why HIGH comes before TOOHIGH  
+#[doc = "Controls the number of delay stages in the ROSC ring LOW uses stages 0 to 7 MEDIUM uses stages 2 to 7 HIGH uses stages 4 to 7 TOOHIGH uses stages 6 to 7 and should not be used because its frequency exceeds design specifications The clock output will not glitch when changing the range up one step at a time The clock output will glitch when changing the range down Note: the values here are gray coded which is why HIGH comes before TOOHIGH  
 
 Value on reset: 2720"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
@@ -33,14 +26,7 @@ impl From<FREQ_RANGE_A> for u16 {
 impl crate::FieldSpec for FREQ_RANGE_A {
     type Ux = u16;
 }
-#[doc = "Field `FREQ_RANGE` reader - Controls the number of delay stages in the ROSC ring  
- LOW uses stages 0 to 7  
- MEDIUM uses stages 0 to 5  
- HIGH uses stages 0 to 3  
- TOOHIGH uses stages 0 to 1 and should not be used because its frequency exceeds design specifications  
- The clock output will not glitch when changing the range up one step at a time  
- The clock output will glitch when changing the range down  
- Note: the values here are gray coded which is why HIGH comes before TOOHIGH"]
+#[doc = "Field `FREQ_RANGE` reader - Controls the number of delay stages in the ROSC ring LOW uses stages 0 to 7 MEDIUM uses stages 2 to 7 HIGH uses stages 4 to 7 TOOHIGH uses stages 6 to 7 and should not be used because its frequency exceeds design specifications The clock output will not glitch when changing the range up one step at a time The clock output will glitch when changing the range down Note: the values here are gray coded which is why HIGH comes before TOOHIGH"]
 pub type FREQ_RANGE_R = crate::FieldReader<FREQ_RANGE_A>;
 impl FREQ_RANGE_R {
     #[doc = "Get enumerated values variant"]
@@ -75,14 +61,7 @@ impl FREQ_RANGE_R {
         *self == FREQ_RANGE_A::TOOHIGH
     }
 }
-#[doc = "Field `FREQ_RANGE` writer - Controls the number of delay stages in the ROSC ring  
- LOW uses stages 0 to 7  
- MEDIUM uses stages 0 to 5  
- HIGH uses stages 0 to 3  
- TOOHIGH uses stages 0 to 1 and should not be used because its frequency exceeds design specifications  
- The clock output will not glitch when changing the range up one step at a time  
- The clock output will glitch when changing the range down  
- Note: the values here are gray coded which is why HIGH comes before TOOHIGH"]
+#[doc = "Field `FREQ_RANGE` writer - Controls the number of delay stages in the ROSC ring LOW uses stages 0 to 7 MEDIUM uses stages 2 to 7 HIGH uses stages 4 to 7 TOOHIGH uses stages 6 to 7 and should not be used because its frequency exceeds design specifications The clock output will not glitch when changing the range up one step at a time The clock output will glitch when changing the range down Note: the values here are gray coded which is why HIGH comes before TOOHIGH"]
 pub type FREQ_RANGE_W<'a, REG> = crate::FieldWriter<'a, REG, 12, FREQ_RANGE_A>;
 impl<'a, REG> FREQ_RANGE_W<'a, REG>
 where
@@ -110,9 +89,7 @@ where
         self.variant(FREQ_RANGE_A::TOOHIGH)
     }
 }
-#[doc = "On power-up this field is initialised to ENABLE  
- The system clock must be switched to another source before setting this field to DISABLE otherwise the chip will lock up  
- The 12-bit code is intended to give some protection against accidental writes. An invalid setting will enable the oscillator.  
+#[doc = "On power-up this field is initialised to ENABLE The system clock must be switched to another source before setting this field to DISABLE otherwise the chip will lock up The 12-bit code is intended to give some protection against accidental writes. An invalid setting will enable the oscillator.  
 
 Value on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
@@ -132,9 +109,7 @@ impl From<ENABLE_A> for u16 {
 impl crate::FieldSpec for ENABLE_A {
     type Ux = u16;
 }
-#[doc = "Field `ENABLE` reader - On power-up this field is initialised to ENABLE  
- The system clock must be switched to another source before setting this field to DISABLE otherwise the chip will lock up  
- The 12-bit code is intended to give some protection against accidental writes. An invalid setting will enable the oscillator."]
+#[doc = "Field `ENABLE` reader - On power-up this field is initialised to ENABLE The system clock must be switched to another source before setting this field to DISABLE otherwise the chip will lock up The 12-bit code is intended to give some protection against accidental writes. An invalid setting will enable the oscillator."]
 pub type ENABLE_R = crate::FieldReader<ENABLE_A>;
 impl ENABLE_R {
     #[doc = "Get enumerated values variant"]
@@ -157,9 +132,7 @@ impl ENABLE_R {
         *self == ENABLE_A::ENABLE
     }
 }
-#[doc = "Field `ENABLE` writer - On power-up this field is initialised to ENABLE  
- The system clock must be switched to another source before setting this field to DISABLE otherwise the chip will lock up  
- The 12-bit code is intended to give some protection against accidental writes. An invalid setting will enable the oscillator."]
+#[doc = "Field `ENABLE` writer - On power-up this field is initialised to ENABLE The system clock must be switched to another source before setting this field to DISABLE otherwise the chip will lock up The 12-bit code is intended to give some protection against accidental writes. An invalid setting will enable the oscillator."]
 pub type ENABLE_W<'a, REG> = crate::FieldWriter<'a, REG, 12, ENABLE_A>;
 impl<'a, REG> ENABLE_W<'a, REG>
 where
@@ -178,43 +151,25 @@ where
     }
 }
 impl R {
-    #[doc = "Bits 0:11 - Controls the number of delay stages in the ROSC ring  
- LOW uses stages 0 to 7  
- MEDIUM uses stages 0 to 5  
- HIGH uses stages 0 to 3  
- TOOHIGH uses stages 0 to 1 and should not be used because its frequency exceeds design specifications  
- The clock output will not glitch when changing the range up one step at a time  
- The clock output will glitch when changing the range down  
- Note: the values here are gray coded which is why HIGH comes before TOOHIGH"]
+    #[doc = "Bits 0:11 - Controls the number of delay stages in the ROSC ring LOW uses stages 0 to 7 MEDIUM uses stages 2 to 7 HIGH uses stages 4 to 7 TOOHIGH uses stages 6 to 7 and should not be used because its frequency exceeds design specifications The clock output will not glitch when changing the range up one step at a time The clock output will glitch when changing the range down Note: the values here are gray coded which is why HIGH comes before TOOHIGH"]
     #[inline(always)]
     pub fn freq_range(&self) -> FREQ_RANGE_R {
         FREQ_RANGE_R::new((self.bits & 0x0fff) as u16)
     }
-    #[doc = "Bits 12:23 - On power-up this field is initialised to ENABLE  
- The system clock must be switched to another source before setting this field to DISABLE otherwise the chip will lock up  
- The 12-bit code is intended to give some protection against accidental writes. An invalid setting will enable the oscillator."]
+    #[doc = "Bits 12:23 - On power-up this field is initialised to ENABLE The system clock must be switched to another source before setting this field to DISABLE otherwise the chip will lock up The 12-bit code is intended to give some protection against accidental writes. An invalid setting will enable the oscillator."]
     #[inline(always)]
     pub fn enable(&self) -> ENABLE_R {
         ENABLE_R::new(((self.bits >> 12) & 0x0fff) as u16)
     }
 }
 impl W {
-    #[doc = "Bits 0:11 - Controls the number of delay stages in the ROSC ring  
- LOW uses stages 0 to 7  
- MEDIUM uses stages 0 to 5  
- HIGH uses stages 0 to 3  
- TOOHIGH uses stages 0 to 1 and should not be used because its frequency exceeds design specifications  
- The clock output will not glitch when changing the range up one step at a time  
- The clock output will glitch when changing the range down  
- Note: the values here are gray coded which is why HIGH comes before TOOHIGH"]
+    #[doc = "Bits 0:11 - Controls the number of delay stages in the ROSC ring LOW uses stages 0 to 7 MEDIUM uses stages 2 to 7 HIGH uses stages 4 to 7 TOOHIGH uses stages 6 to 7 and should not be used because its frequency exceeds design specifications The clock output will not glitch when changing the range up one step at a time The clock output will glitch when changing the range down Note: the values here are gray coded which is why HIGH comes before TOOHIGH"]
     #[inline(always)]
     #[must_use]
     pub fn freq_range(&mut self) -> FREQ_RANGE_W<CTRL_SPEC> {
         FREQ_RANGE_W::new(self, 0)
     }
-    #[doc = "Bits 12:23 - On power-up this field is initialised to ENABLE  
- The system clock must be switched to another source before setting this field to DISABLE otherwise the chip will lock up  
- The 12-bit code is intended to give some protection against accidental writes. An invalid setting will enable the oscillator."]
+    #[doc = "Bits 12:23 - On power-up this field is initialised to ENABLE The system clock must be switched to another source before setting this field to DISABLE otherwise the chip will lock up The 12-bit code is intended to give some protection against accidental writes. An invalid setting will enable the oscillator."]
     #[inline(always)]
     #[must_use]
     pub fn enable(&mut self) -> ENABLE_W<CTRL_SPEC> {

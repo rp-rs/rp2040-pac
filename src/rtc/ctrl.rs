@@ -8,15 +8,11 @@ pub type RTC_ENABLE_R = crate::BitReader;
 pub type RTC_ENABLE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RTC_ACTIVE` reader - RTC enabled (running)"]
 pub type RTC_ACTIVE_R = crate::BitReader;
-#[doc = "Field `LOAD` reader - Load RTC"]
-pub type LOAD_R = crate::BitReader;
 #[doc = "Field `LOAD` writer - Load RTC"]
 pub type LOAD_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `FORCE_NOTLEAPYEAR` reader - If set, leapyear is forced off.  
- Useful for years divisible by 100 but not by 400"]
+#[doc = "Field `FORCE_NOTLEAPYEAR` reader - If set, leapyear is forced off. Useful for years divisible by 100 but not by 400"]
 pub type FORCE_NOTLEAPYEAR_R = crate::BitReader;
-#[doc = "Field `FORCE_NOTLEAPYEAR` writer - If set, leapyear is forced off.  
- Useful for years divisible by 100 but not by 400"]
+#[doc = "Field `FORCE_NOTLEAPYEAR` writer - If set, leapyear is forced off. Useful for years divisible by 100 but not by 400"]
 pub type FORCE_NOTLEAPYEAR_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - Enable RTC"]
@@ -29,13 +25,7 @@ impl R {
     pub fn rtc_active(&self) -> RTC_ACTIVE_R {
         RTC_ACTIVE_R::new(((self.bits >> 1) & 1) != 0)
     }
-    #[doc = "Bit 4 - Load RTC"]
-    #[inline(always)]
-    pub fn load(&self) -> LOAD_R {
-        LOAD_R::new(((self.bits >> 4) & 1) != 0)
-    }
-    #[doc = "Bit 8 - If set, leapyear is forced off.  
- Useful for years divisible by 100 but not by 400"]
+    #[doc = "Bit 8 - If set, leapyear is forced off. Useful for years divisible by 100 but not by 400"]
     #[inline(always)]
     pub fn force_notleapyear(&self) -> FORCE_NOTLEAPYEAR_R {
         FORCE_NOTLEAPYEAR_R::new(((self.bits >> 8) & 1) != 0)
@@ -54,8 +44,7 @@ impl W {
     pub fn load(&mut self) -> LOAD_W<CTRL_SPEC> {
         LOAD_W::new(self, 4)
     }
-    #[doc = "Bit 8 - If set, leapyear is forced off.  
- Useful for years divisible by 100 but not by 400"]
+    #[doc = "Bit 8 - If set, leapyear is forced off. Useful for years divisible by 100 but not by 400"]
     #[inline(always)]
     #[must_use]
     pub fn force_notleapyear(&mut self) -> FORCE_NOTLEAPYEAR_W<CTRL_SPEC> {

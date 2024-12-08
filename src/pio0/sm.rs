@@ -9,8 +9,7 @@ pub struct SM {
     sm_pinctrl: SM_PINCTRL,
 }
 impl SM {
-    #[doc = "0x00 - Clock divisor register for state machine 0  
- Frequency = clock freq / (CLKDIV_INT + CLKDIV_FRAC / 256)"]
+    #[doc = "0x00 - Clock divisor register for state machine 0 Frequency = clock freq / (CLKDIV_INT + CLKDIV_FRAC / 256)"]
     #[inline(always)]
     pub const fn sm_clkdiv(&self) -> &SM_CLKDIV {
         &self.sm_clkdiv
@@ -30,8 +29,7 @@ impl SM {
     pub const fn sm_addr(&self) -> &SM_ADDR {
         &self.sm_addr
     }
-    #[doc = "0x10 - Read to see the instruction currently addressed by state machine 0's program counter  
- Write to execute an instruction immediately (including jumps) and then resume execution."]
+    #[doc = "0x10 - Read to see the instruction currently addressed by state machine 0's program counter Write to execute an instruction immediately (including jumps) and then resume execution."]
     #[inline(always)]
     pub const fn sm_instr(&self) -> &SM_INSTR {
         &self.sm_instr
@@ -42,16 +40,14 @@ impl SM {
         &self.sm_pinctrl
     }
 }
-#[doc = "SM_CLKDIV (rw) register accessor: Clock divisor register for state machine 0  
- Frequency = clock freq / (CLKDIV_INT + CLKDIV_FRAC / 256)  
+#[doc = "SM_CLKDIV (rw) register accessor: Clock divisor register for state machine 0 Frequency = clock freq / (CLKDIV_INT + CLKDIV_FRAC / 256)  
 
 You can [`read`](crate::generic::Reg::read) this register and get [`sm_clkdiv::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`sm_clkdiv::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
 
 For information about available fields see [`mod@sm_clkdiv`]
 module"]
 pub type SM_CLKDIV = crate::Reg<sm_clkdiv::SM_CLKDIV_SPEC>;
-#[doc = "Clock divisor register for state machine 0  
- Frequency = clock freq / (CLKDIV_INT + CLKDIV_FRAC / 256)"]
+#[doc = "Clock divisor register for state machine 0 Frequency = clock freq / (CLKDIV_INT + CLKDIV_FRAC / 256)"]
 pub mod sm_clkdiv;
 #[doc = "SM_EXECCTRL (rw) register accessor: Execution/behavioural settings for state machine 0  
 
@@ -71,25 +67,23 @@ module"]
 pub type SM_SHIFTCTRL = crate::Reg<sm_shiftctrl::SM_SHIFTCTRL_SPEC>;
 #[doc = "Control behaviour of the input/output shift registers for state machine 0"]
 pub mod sm_shiftctrl;
-#[doc = "SM_ADDR (r) register accessor: Current instruction address of state machine 0  
+#[doc = "SM_ADDR (rw) register accessor: Current instruction address of state machine 0  
 
-You can [`read`](crate::generic::Reg::read) this register and get [`sm_addr::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+You can [`read`](crate::generic::Reg::read) this register and get [`sm_addr::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`sm_addr::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
 
 For information about available fields see [`mod@sm_addr`]
 module"]
 pub type SM_ADDR = crate::Reg<sm_addr::SM_ADDR_SPEC>;
 #[doc = "Current instruction address of state machine 0"]
 pub mod sm_addr;
-#[doc = "SM_INSTR (rw) register accessor: Read to see the instruction currently addressed by state machine 0's program counter  
- Write to execute an instruction immediately (including jumps) and then resume execution.  
+#[doc = "SM_INSTR (rw) register accessor: Read to see the instruction currently addressed by state machine 0's program counter Write to execute an instruction immediately (including jumps) and then resume execution.  
 
 You can [`read`](crate::generic::Reg::read) this register and get [`sm_instr::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`sm_instr::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
 
 For information about available fields see [`mod@sm_instr`]
 module"]
 pub type SM_INSTR = crate::Reg<sm_instr::SM_INSTR_SPEC>;
-#[doc = "Read to see the instruction currently addressed by state machine 0's program counter  
- Write to execute an instruction immediately (including jumps) and then resume execution."]
+#[doc = "Read to see the instruction currently addressed by state machine 0's program counter Write to execute an instruction immediately (including jumps) and then resume execution."]
 pub mod sm_instr;
 #[doc = "SM_PINCTRL (rw) register accessor: State machine pin control  
 

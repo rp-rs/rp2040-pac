@@ -2,17 +2,13 @@
 pub type R = crate::R<VREG_SPEC>;
 #[doc = "Register `VREG` writer"]
 pub type W = crate::W<VREG_SPEC>;
-#[doc = "Field `EN` reader - enable  
- 0=not enabled, 1=enabled"]
+#[doc = "Field `EN` reader - enable 0=not enabled, 1=enabled"]
 pub type EN_R = crate::BitReader;
-#[doc = "Field `EN` writer - enable  
- 0=not enabled, 1=enabled"]
+#[doc = "Field `EN` writer - enable 0=not enabled, 1=enabled"]
 pub type EN_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `HIZ` reader - high impedance mode select  
- 0=not in high impedance mode, 1=in high impedance mode"]
+#[doc = "Field `HIZ` reader - high impedance mode select 0=not in high impedance mode, 1=in high impedance mode"]
 pub type HIZ_R = crate::BitReader;
-#[doc = "Field `HIZ` writer - high impedance mode select  
- 0=not in high impedance mode, 1=in high impedance mode"]
+#[doc = "Field `HIZ` writer - high impedance mode select 0=not in high impedance mode, 1=in high impedance mode"]
 pub type HIZ_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Output voltage select for on-chip voltage regulator.  
 
@@ -192,18 +188,15 @@ where
         self.variant(VSEL_A::VOLTAGE1_30)
     }
 }
-#[doc = "Field `ROK` reader - regulation status  
- 0=not in regulation, 1=in regulation"]
+#[doc = "Field `ROK` reader - regulation status 0=not in regulation, 1=in regulation"]
 pub type ROK_R = crate::BitReader;
 impl R {
-    #[doc = "Bit 0 - enable  
- 0=not enabled, 1=enabled"]
+    #[doc = "Bit 0 - enable 0=not enabled, 1=enabled"]
     #[inline(always)]
     pub fn en(&self) -> EN_R {
         EN_R::new((self.bits & 1) != 0)
     }
-    #[doc = "Bit 1 - high impedance mode select  
- 0=not in high impedance mode, 1=in high impedance mode"]
+    #[doc = "Bit 1 - high impedance mode select 0=not in high impedance mode, 1=in high impedance mode"]
     #[inline(always)]
     pub fn hiz(&self) -> HIZ_R {
         HIZ_R::new(((self.bits >> 1) & 1) != 0)
@@ -213,23 +206,20 @@ impl R {
     pub fn vsel(&self) -> VSEL_R {
         VSEL_R::new(((self.bits >> 4) & 0x0f) as u8)
     }
-    #[doc = "Bit 12 - regulation status  
- 0=not in regulation, 1=in regulation"]
+    #[doc = "Bit 12 - regulation status 0=not in regulation, 1=in regulation"]
     #[inline(always)]
     pub fn rok(&self) -> ROK_R {
         ROK_R::new(((self.bits >> 12) & 1) != 0)
     }
 }
 impl W {
-    #[doc = "Bit 0 - enable  
- 0=not enabled, 1=enabled"]
+    #[doc = "Bit 0 - enable 0=not enabled, 1=enabled"]
     #[inline(always)]
     #[must_use]
     pub fn en(&mut self) -> EN_W<VREG_SPEC> {
         EN_W::new(self, 0)
     }
-    #[doc = "Bit 1 - high impedance mode select  
- 0=not in high impedance mode, 1=in high impedance mode"]
+    #[doc = "Bit 1 - high impedance mode select 0=not in high impedance mode, 1=in high impedance mode"]
     #[inline(always)]
     #[must_use]
     pub fn hiz(&mut self) -> HIZ_W<VREG_SPEC> {

@@ -1,38 +1,40 @@
 #[doc = "Register `DONE` reader"]
 pub type R = crate::R<DONE_SPEC>;
-#[doc = "Field `rosc` reader - "]
+#[doc = "Register `DONE` writer"]
+pub type W = crate::W<DONE_SPEC>;
+#[doc = "Field `ROSC` reader - "]
 pub type ROSC_R = crate::BitReader;
-#[doc = "Field `xosc` reader - "]
+#[doc = "Field `XOSC` reader - "]
 pub type XOSC_R = crate::BitReader;
-#[doc = "Field `clocks` reader - "]
+#[doc = "Field `CLOCKS` reader - "]
 pub type CLOCKS_R = crate::BitReader;
-#[doc = "Field `resets` reader - "]
+#[doc = "Field `RESETS` reader - "]
 pub type RESETS_R = crate::BitReader;
-#[doc = "Field `busfabric` reader - "]
+#[doc = "Field `BUSFABRIC` reader - "]
 pub type BUSFABRIC_R = crate::BitReader;
-#[doc = "Field `rom` reader - "]
+#[doc = "Field `ROM` reader - "]
 pub type ROM_R = crate::BitReader;
-#[doc = "Field `sram0` reader - "]
+#[doc = "Field `SRAM0` reader - "]
 pub type SRAM0_R = crate::BitReader;
-#[doc = "Field `sram1` reader - "]
+#[doc = "Field `SRAM1` reader - "]
 pub type SRAM1_R = crate::BitReader;
-#[doc = "Field `sram2` reader - "]
+#[doc = "Field `SRAM2` reader - "]
 pub type SRAM2_R = crate::BitReader;
-#[doc = "Field `sram3` reader - "]
+#[doc = "Field `SRAM3` reader - "]
 pub type SRAM3_R = crate::BitReader;
-#[doc = "Field `sram4` reader - "]
+#[doc = "Field `SRAM4` reader - "]
 pub type SRAM4_R = crate::BitReader;
-#[doc = "Field `sram5` reader - "]
+#[doc = "Field `SRAM5` reader - "]
 pub type SRAM5_R = crate::BitReader;
-#[doc = "Field `xip` reader - "]
+#[doc = "Field `XIP` reader - "]
 pub type XIP_R = crate::BitReader;
-#[doc = "Field `vreg_and_chip_reset` reader - "]
+#[doc = "Field `VREG_AND_CHIP_RESET` reader - "]
 pub type VREG_AND_CHIP_RESET_R = crate::BitReader;
-#[doc = "Field `sio` reader - "]
+#[doc = "Field `SIO` reader - "]
 pub type SIO_R = crate::BitReader;
-#[doc = "Field `proc0` reader - "]
+#[doc = "Field `PROC0` reader - "]
 pub type PROC0_R = crate::BitReader;
-#[doc = "Field `proc1` reader - "]
+#[doc = "Field `PROC1` reader - "]
 pub type PROC1_R = crate::BitReader;
 impl R {
     #[doc = "Bit 0"]
@@ -121,15 +123,22 @@ impl R {
         PROC1_R::new(((self.bits >> 16) & 1) != 0)
     }
 }
+impl W {}
 #[doc = "Indicates the peripheral's registers are ready to access.  
 
-You can [`read`](crate::generic::Reg::read) this register and get [`done::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+You can [`read`](crate::generic::Reg::read) this register and get [`done::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`done::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct DONE_SPEC;
 impl crate::RegisterSpec for DONE_SPEC {
     type Ux = u32;
 }
 #[doc = "`read()` method returns [`done::R`](R) reader structure"]
 impl crate::Readable for DONE_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`done::W`](W) writer structure"]
+impl crate::Writable for DONE_SPEC {
+    type Safety = crate::Unsafe;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+}
 #[doc = "`reset()` method sets DONE to value 0"]
 impl crate::Resettable for DONE_SPEC {
     const RESET_VALUE: u32 = 0;

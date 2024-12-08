@@ -18,8 +18,7 @@ pub type DS2_W<'a, REG> = crate::FieldWriter<'a, REG, 3>;
 pub type DS3_R = crate::FieldReader;
 #[doc = "Field `DS3` writer - Stage 3 drive strength"]
 pub type DS3_W<'a, REG> = crate::FieldWriter<'a, REG, 3>;
-#[doc = "Set to 0x9696 to apply the settings  
- Any other value in this field will set all drive strengths to 0  
+#[doc = "Set to 0x9696 to apply the settings Any other value in this field will set all drive strengths to 0  
 
 Value on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
@@ -37,8 +36,7 @@ impl From<PASSWD_A> for u16 {
 impl crate::FieldSpec for PASSWD_A {
     type Ux = u16;
 }
-#[doc = "Field `PASSWD` reader - Set to 0x9696 to apply the settings  
- Any other value in this field will set all drive strengths to 0"]
+#[doc = "Field `PASSWD` reader - Set to 0x9696 to apply the settings Any other value in this field will set all drive strengths to 0"]
 pub type PASSWD_R = crate::FieldReader<PASSWD_A>;
 impl PASSWD_R {
     #[doc = "Get enumerated values variant"]
@@ -55,8 +53,7 @@ impl PASSWD_R {
         *self == PASSWD_A::PASS
     }
 }
-#[doc = "Field `PASSWD` writer - Set to 0x9696 to apply the settings  
- Any other value in this field will set all drive strengths to 0"]
+#[doc = "Field `PASSWD` writer - Set to 0x9696 to apply the settings Any other value in this field will set all drive strengths to 0"]
 pub type PASSWD_W<'a, REG> = crate::FieldWriter<'a, REG, 16, PASSWD_A>;
 impl<'a, REG> PASSWD_W<'a, REG>
 where
@@ -90,8 +87,7 @@ impl R {
     pub fn ds3(&self) -> DS3_R {
         DS3_R::new(((self.bits >> 12) & 7) as u8)
     }
-    #[doc = "Bits 16:31 - Set to 0x9696 to apply the settings  
- Any other value in this field will set all drive strengths to 0"]
+    #[doc = "Bits 16:31 - Set to 0x9696 to apply the settings Any other value in this field will set all drive strengths to 0"]
     #[inline(always)]
     pub fn passwd(&self) -> PASSWD_R {
         PASSWD_R::new(((self.bits >> 16) & 0xffff) as u16)
@@ -122,21 +118,14 @@ impl W {
     pub fn ds3(&mut self) -> DS3_W<FREQA_SPEC> {
         DS3_W::new(self, 12)
     }
-    #[doc = "Bits 16:31 - Set to 0x9696 to apply the settings  
- Any other value in this field will set all drive strengths to 0"]
+    #[doc = "Bits 16:31 - Set to 0x9696 to apply the settings Any other value in this field will set all drive strengths to 0"]
     #[inline(always)]
     #[must_use]
     pub fn passwd(&mut self) -> PASSWD_W<FREQA_SPEC> {
         PASSWD_W::new(self, 16)
     }
 }
-#[doc = "The FREQA &amp; FREQB registers control the frequency by controlling the drive strength of each stage  
- The drive strength has 4 levels determined by the number of bits set  
- Increasing the number of bits set increases the drive strength and increases the oscillation frequency  
- 0 bits set is the default drive strength  
- 1 bit set doubles the drive strength  
- 2 bits set triples drive strength  
- 3 bits set quadruples drive strength  
+#[doc = "The FREQA &amp; FREQB registers control the frequency by controlling the drive strength of each stage The drive strength has 4 levels determined by the number of bits set Increasing the number of bits set increases the drive strength and increases the oscillation frequency 0 bits set is the default drive strength 1 bit set doubles the drive strength 2 bits set triples drive strength 3 bits set quadruples drive strength  
 
 You can [`read`](crate::generic::Reg::read) this register and get [`freqa::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`freqa::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct FREQA_SPEC;

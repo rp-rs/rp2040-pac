@@ -140,9 +140,9 @@ module"]
 pub type SSPDR = crate::Reg<sspdr::SSPDR_SPEC>;
 #[doc = "Data register, SSPDR on page 3-6"]
 pub mod sspdr;
-#[doc = "SSPSR (r) register accessor: Status register, SSPSR on page 3-7  
+#[doc = "SSPSR (rw) register accessor: Status register, SSPSR on page 3-7  
 
-You can [`read`](crate::generic::Reg::read) this register and get [`sspsr::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+You can [`read`](crate::generic::Reg::read) this register and get [`sspsr::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`sspsr::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
 
 For information about available fields see [`mod@sspsr`]
 module"]
@@ -167,18 +167,18 @@ module"]
 pub type SSPIMSC = crate::Reg<sspimsc::SSPIMSC_SPEC>;
 #[doc = "Interrupt mask set or clear register, SSPIMSC on page 3-9"]
 pub mod sspimsc;
-#[doc = "SSPRIS (r) register accessor: Raw interrupt status register, SSPRIS on page 3-10  
+#[doc = "SSPRIS (rw) register accessor: Raw interrupt status register, SSPRIS on page 3-10  
 
-You can [`read`](crate::generic::Reg::read) this register and get [`sspris::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+You can [`read`](crate::generic::Reg::read) this register and get [`sspris::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`sspris::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
 
 For information about available fields see [`mod@sspris`]
 module"]
 pub type SSPRIS = crate::Reg<sspris::SSPRIS_SPEC>;
 #[doc = "Raw interrupt status register, SSPRIS on page 3-10"]
 pub mod sspris;
-#[doc = "SSPMIS (r) register accessor: Masked interrupt status register, SSPMIS on page 3-11  
+#[doc = "SSPMIS (rw) register accessor: Masked interrupt status register, SSPMIS on page 3-11  
 
-You can [`read`](crate::generic::Reg::read) this register and get [`sspmis::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+You can [`read`](crate::generic::Reg::read) this register and get [`sspmis::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`sspmis::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
 
 For information about available fields see [`mod@sspmis`]
 module"]
@@ -203,72 +203,72 @@ module"]
 pub type SSPDMACR = crate::Reg<sspdmacr::SSPDMACR_SPEC>;
 #[doc = "DMA control register, SSPDMACR on page 3-12"]
 pub mod sspdmacr;
-#[doc = "SSPPERIPHID0 (r) register accessor: Peripheral identification registers, SSPPeriphID0-3 on page 3-13  
+#[doc = "SSPPERIPHID0 (rw) register accessor: Peripheral identification registers, SSPPeriphID0-3 on page 3-13  
 
-You can [`read`](crate::generic::Reg::read) this register and get [`sspperiphid0::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+You can [`read`](crate::generic::Reg::read) this register and get [`sspperiphid0::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`sspperiphid0::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
 
 For information about available fields see [`mod@sspperiphid0`]
 module"]
 pub type SSPPERIPHID0 = crate::Reg<sspperiphid0::SSPPERIPHID0_SPEC>;
 #[doc = "Peripheral identification registers, SSPPeriphID0-3 on page 3-13"]
 pub mod sspperiphid0;
-#[doc = "SSPPERIPHID1 (r) register accessor: Peripheral identification registers, SSPPeriphID0-3 on page 3-13  
+#[doc = "SSPPERIPHID1 (rw) register accessor: Peripheral identification registers, SSPPeriphID0-3 on page 3-13  
 
-You can [`read`](crate::generic::Reg::read) this register and get [`sspperiphid1::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+You can [`read`](crate::generic::Reg::read) this register and get [`sspperiphid1::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`sspperiphid1::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
 
 For information about available fields see [`mod@sspperiphid1`]
 module"]
 pub type SSPPERIPHID1 = crate::Reg<sspperiphid1::SSPPERIPHID1_SPEC>;
 #[doc = "Peripheral identification registers, SSPPeriphID0-3 on page 3-13"]
 pub mod sspperiphid1;
-#[doc = "SSPPERIPHID2 (r) register accessor: Peripheral identification registers, SSPPeriphID0-3 on page 3-13  
+#[doc = "SSPPERIPHID2 (rw) register accessor: Peripheral identification registers, SSPPeriphID0-3 on page 3-13  
 
-You can [`read`](crate::generic::Reg::read) this register and get [`sspperiphid2::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+You can [`read`](crate::generic::Reg::read) this register and get [`sspperiphid2::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`sspperiphid2::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
 
 For information about available fields see [`mod@sspperiphid2`]
 module"]
 pub type SSPPERIPHID2 = crate::Reg<sspperiphid2::SSPPERIPHID2_SPEC>;
 #[doc = "Peripheral identification registers, SSPPeriphID0-3 on page 3-13"]
 pub mod sspperiphid2;
-#[doc = "SSPPERIPHID3 (r) register accessor: Peripheral identification registers, SSPPeriphID0-3 on page 3-13  
+#[doc = "SSPPERIPHID3 (rw) register accessor: Peripheral identification registers, SSPPeriphID0-3 on page 3-13  
 
-You can [`read`](crate::generic::Reg::read) this register and get [`sspperiphid3::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+You can [`read`](crate::generic::Reg::read) this register and get [`sspperiphid3::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`sspperiphid3::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
 
 For information about available fields see [`mod@sspperiphid3`]
 module"]
 pub type SSPPERIPHID3 = crate::Reg<sspperiphid3::SSPPERIPHID3_SPEC>;
 #[doc = "Peripheral identification registers, SSPPeriphID0-3 on page 3-13"]
 pub mod sspperiphid3;
-#[doc = "SSPPCELLID0 (r) register accessor: PrimeCell identification registers, SSPPCellID0-3 on page 3-16  
+#[doc = "SSPPCELLID0 (rw) register accessor: PrimeCell identification registers, SSPPCellID0-3 on page 3-16  
 
-You can [`read`](crate::generic::Reg::read) this register and get [`ssppcellid0::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+You can [`read`](crate::generic::Reg::read) this register and get [`ssppcellid0::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`ssppcellid0::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
 
 For information about available fields see [`mod@ssppcellid0`]
 module"]
 pub type SSPPCELLID0 = crate::Reg<ssppcellid0::SSPPCELLID0_SPEC>;
 #[doc = "PrimeCell identification registers, SSPPCellID0-3 on page 3-16"]
 pub mod ssppcellid0;
-#[doc = "SSPPCELLID1 (r) register accessor: PrimeCell identification registers, SSPPCellID0-3 on page 3-16  
+#[doc = "SSPPCELLID1 (rw) register accessor: PrimeCell identification registers, SSPPCellID0-3 on page 3-16  
 
-You can [`read`](crate::generic::Reg::read) this register and get [`ssppcellid1::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+You can [`read`](crate::generic::Reg::read) this register and get [`ssppcellid1::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`ssppcellid1::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
 
 For information about available fields see [`mod@ssppcellid1`]
 module"]
 pub type SSPPCELLID1 = crate::Reg<ssppcellid1::SSPPCELLID1_SPEC>;
 #[doc = "PrimeCell identification registers, SSPPCellID0-3 on page 3-16"]
 pub mod ssppcellid1;
-#[doc = "SSPPCELLID2 (r) register accessor: PrimeCell identification registers, SSPPCellID0-3 on page 3-16  
+#[doc = "SSPPCELLID2 (rw) register accessor: PrimeCell identification registers, SSPPCellID0-3 on page 3-16  
 
-You can [`read`](crate::generic::Reg::read) this register and get [`ssppcellid2::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+You can [`read`](crate::generic::Reg::read) this register and get [`ssppcellid2::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`ssppcellid2::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
 
 For information about available fields see [`mod@ssppcellid2`]
 module"]
 pub type SSPPCELLID2 = crate::Reg<ssppcellid2::SSPPCELLID2_SPEC>;
 #[doc = "PrimeCell identification registers, SSPPCellID0-3 on page 3-16"]
 pub mod ssppcellid2;
-#[doc = "SSPPCELLID3 (r) register accessor: PrimeCell identification registers, SSPPCellID0-3 on page 3-16  
+#[doc = "SSPPCELLID3 (rw) register accessor: PrimeCell identification registers, SSPPCellID0-3 on page 3-16  
 
-You can [`read`](crate::generic::Reg::read) this register and get [`ssppcellid3::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+You can [`read`](crate::generic::Reg::read) this register and get [`ssppcellid3::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`ssppcellid3::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
 
 For information about available fields see [`mod@ssppcellid3`]
 module"]

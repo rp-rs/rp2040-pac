@@ -1,5 +1,7 @@
 #[doc = "Register `IC_STATUS` reader"]
 pub type R = crate::R<IC_STATUS_SPEC>;
+#[doc = "Register `IC_STATUS` writer"]
+pub type W = crate::W<IC_STATUS_SPEC>;
 #[doc = "I2C Activity Status. Reset value: 0x0  
 
 Value on reset: 0"]
@@ -190,9 +192,7 @@ impl RFF_R {
         *self == RFF_A::FULL
     }
 }
-#[doc = "Master FSM Activity Status. When the Master Finite State Machine (FSM) is not in the IDLE state, this bit is set. - 0: Master FSM is in IDLE state so the Master part of DW_apb_i2c is not Active - 1: Master FSM is not in IDLE state so the Master part of DW_apb_i2c is Active Note: IC_STATUS\\[0\\]-that is, ACTIVITY bit-is the OR of SLV_ACTIVITY and MST_ACTIVITY bits.  
-
- Reset value: 0x0  
+#[doc = "Master FSM Activity Status. When the Master Finite State Machine (FSM) is not in the IDLE state, this bit is set. - 0: Master FSM is in IDLE state so the Master part of DW_apb_i2c is not Active - 1: Master FSM is not in IDLE state so the Master part of DW_apb_i2c is Active Note: IC_STATUS\\[0\\]-that is, ACTIVITY bit-is the OR of SLV_ACTIVITY and MST_ACTIVITY bits. Reset value: 0x0  
 
 Value on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
@@ -208,9 +208,7 @@ impl From<MST_ACTIVITY_A> for bool {
         variant as u8 != 0
     }
 }
-#[doc = "Field `MST_ACTIVITY` reader - Master FSM Activity Status. When the Master Finite State Machine (FSM) is not in the IDLE state, this bit is set. - 0: Master FSM is in IDLE state so the Master part of DW_apb_i2c is not Active - 1: Master FSM is not in IDLE state so the Master part of DW_apb_i2c is Active Note: IC_STATUS\\[0\\]-that is, ACTIVITY bit-is the OR of SLV_ACTIVITY and MST_ACTIVITY bits.  
-
- Reset value: 0x0"]
+#[doc = "Field `MST_ACTIVITY` reader - Master FSM Activity Status. When the Master Finite State Machine (FSM) is not in the IDLE state, this bit is set. - 0: Master FSM is in IDLE state so the Master part of DW_apb_i2c is not Active - 1: Master FSM is not in IDLE state so the Master part of DW_apb_i2c is Active Note: IC_STATUS\\[0\\]-that is, ACTIVITY bit-is the OR of SLV_ACTIVITY and MST_ACTIVITY bits. Reset value: 0x0"]
 pub type MST_ACTIVITY_R = crate::BitReader<MST_ACTIVITY_A>;
 impl MST_ACTIVITY_R {
     #[doc = "Get enumerated values variant"]
@@ -296,9 +294,7 @@ impl R {
     pub fn rff(&self) -> RFF_R {
         RFF_R::new(((self.bits >> 4) & 1) != 0)
     }
-    #[doc = "Bit 5 - Master FSM Activity Status. When the Master Finite State Machine (FSM) is not in the IDLE state, this bit is set. - 0: Master FSM is in IDLE state so the Master part of DW_apb_i2c is not Active - 1: Master FSM is not in IDLE state so the Master part of DW_apb_i2c is Active Note: IC_STATUS\\[0\\]-that is, ACTIVITY bit-is the OR of SLV_ACTIVITY and MST_ACTIVITY bits.  
-
- Reset value: 0x0"]
+    #[doc = "Bit 5 - Master FSM Activity Status. When the Master Finite State Machine (FSM) is not in the IDLE state, this bit is set. - 0: Master FSM is in IDLE state so the Master part of DW_apb_i2c is not Active - 1: Master FSM is not in IDLE state so the Master part of DW_apb_i2c is Active Note: IC_STATUS\\[0\\]-that is, ACTIVITY bit-is the OR of SLV_ACTIVITY and MST_ACTIVITY bits. Reset value: 0x0"]
     #[inline(always)]
     pub fn mst_activity(&self) -> MST_ACTIVITY_R {
         MST_ACTIVITY_R::new(((self.bits >> 5) & 1) != 0)
@@ -309,19 +305,22 @@ impl R {
         SLV_ACTIVITY_R::new(((self.bits >> 6) & 1) != 0)
     }
 }
-#[doc = "I2C Status Register  
+impl W {}
+#[doc = "I2C Status Register This is a read-only register used to indicate the current transfer status and FIFO status. The status register may be read at any time. None of the bits in this register request an interrupt. When the I2C is disabled by writing 0 in bit 0 of the IC_ENABLE register: - Bits 1 and 2 are set to 1 - Bits 3 and 10 are set to 0 When the master or slave state machines goes to idle and ic_en=0: - Bits 5 and 6 are set to 0  
 
- This is a read-only register used to indicate the current transfer status and FIFO status. The status register may be read at any time. None of the bits in this register request an interrupt.  
-
- When the I2C is disabled by writing 0 in bit 0 of the IC_ENABLE register: - Bits 1 and 2 are set to 1 - Bits 3 and 10 are set to 0 When the master or slave state machines goes to idle and ic_en=0: - Bits 5 and 6 are set to 0  
-
-You can [`read`](crate::generic::Reg::read) this register and get [`ic_status::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+You can [`read`](crate::generic::Reg::read) this register and get [`ic_status::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`ic_status::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct IC_STATUS_SPEC;
 impl crate::RegisterSpec for IC_STATUS_SPEC {
     type Ux = u32;
 }
 #[doc = "`read()` method returns [`ic_status::R`](R) reader structure"]
 impl crate::Readable for IC_STATUS_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`ic_status::W`](W) writer structure"]
+impl crate::Writable for IC_STATUS_SPEC {
+    type Safety = crate::Unsafe;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+}
 #[doc = "`reset()` method sets IC_STATUS to value 0x06"]
 impl crate::Resettable for IC_STATUS_SPEC {
     const RESET_VALUE: u32 = 0x06;

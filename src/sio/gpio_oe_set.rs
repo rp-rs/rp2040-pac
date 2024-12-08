@@ -1,3 +1,5 @@
+#[doc = "Register `GPIO_OE_SET` reader"]
+pub type R = crate::R<GPIO_OE_SET_SPEC>;
 #[doc = "Register `GPIO_OE_SET` writer"]
 pub type W = crate::W<GPIO_OE_SET_SPEC>;
 #[doc = "Field `GPIO_OE_SET` writer - Perform an atomic bit-set on GPIO_OE, i.e. `GPIO_OE |= wdata`"]
@@ -12,11 +14,13 @@ impl W {
 }
 #[doc = "GPIO output enable set  
 
-You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`gpio_oe_set::W`](W). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+You can [`read`](crate::generic::Reg::read) this register and get [`gpio_oe_set::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`gpio_oe_set::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct GPIO_OE_SET_SPEC;
 impl crate::RegisterSpec for GPIO_OE_SET_SPEC {
     type Ux = u32;
 }
+#[doc = "`read()` method returns [`gpio_oe_set::R`](R) reader structure"]
+impl crate::Readable for GPIO_OE_SET_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`gpio_oe_set::W`](W) writer structure"]
 impl crate::Writable for GPIO_OE_SET_SPEC {
     type Safety = crate::Unsafe;

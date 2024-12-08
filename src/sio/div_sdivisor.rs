@@ -2,19 +2,26 @@
 pub type R = crate::R<DIV_SDIVISOR_SPEC>;
 #[doc = "Register `DIV_SDIVISOR` writer"]
 pub type W = crate::W<DIV_SDIVISOR_SPEC>;
-impl core::fmt::Debug for R {
-    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        write!(f, "{}", self.bits())
+#[doc = "Field `DIV_SDIVISOR` reader - "]
+pub type DIV_SDIVISOR_R = crate::FieldReader<u32>;
+#[doc = "Field `DIV_SDIVISOR` writer - "]
+pub type DIV_SDIVISOR_W<'a, REG> = crate::FieldWriter<'a, REG, 32, u32>;
+impl R {
+    #[doc = "Bits 0:31"]
+    #[inline(always)]
+    pub fn div_sdivisor(&self) -> DIV_SDIVISOR_R {
+        DIV_SDIVISOR_R::new(self.bits)
     }
 }
-impl core::fmt::Debug for crate::generic::Reg<DIV_SDIVISOR_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
+impl W {
+    #[doc = "Bits 0:31"]
+    #[inline(always)]
+    #[must_use]
+    pub fn div_sdivisor(&mut self) -> DIV_SDIVISOR_W<DIV_SDIVISOR_SPEC> {
+        DIV_SDIVISOR_W::new(self, 0)
     }
 }
-impl W {}
-#[doc = "Divider signed divisor  
- The same as UDIVISOR, but starts a signed calculation, rather than unsigned.  
+#[doc = "Divider signed divisor The same as UDIVISOR, but starts a signed calculation, rather than unsigned.  
 
 You can [`read`](crate::generic::Reg::read) this register and get [`div_sdivisor::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`div_sdivisor::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct DIV_SDIVISOR_SPEC;

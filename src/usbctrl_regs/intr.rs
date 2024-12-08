@@ -1,8 +1,10 @@
 #[doc = "Register `INTR` reader"]
 pub type R = crate::R<INTR_SPEC>;
+#[doc = "Register `INTR` writer"]
+pub type W = crate::W<INTR_SPEC>;
 #[doc = "Field `HOST_CONN_DIS` reader - Host: raised when a device is connected or disconnected (i.e. when SIE_STATUS.SPEED changes). Cleared by writing to SIE_STATUS.SPEED"]
 pub type HOST_CONN_DIS_R = crate::BitReader;
-#[doc = "Field `HOST_RESUME` reader - Host: raised when a device wakes up the host. Cleared by writing to SIE_STATUS.RESUME"]
+#[doc = "Field `HOST_RESUME` reader - Host: raised when a device wakes up the host. Cleared by writing to SIE_STATUS.RESUME_REMOTE"]
 pub type HOST_RESUME_R = crate::BitReader;
 #[doc = "Field `HOST_SOF` reader - Host: raised every time the host sends a SOF (Start of Frame). Cleared by reading SOF_RD"]
 pub type HOST_SOF_R = crate::BitReader;
@@ -22,7 +24,7 @@ pub type ERROR_BIT_STUFF_R = crate::BitReader;
 pub type ERROR_CRC_R = crate::BitReader;
 #[doc = "Field `STALL` reader - Source: SIE_STATUS.STALL_REC"]
 pub type STALL_R = crate::BitReader;
-#[doc = "Field `VBUS_DETECT` reader - Source: SIE_STATUS.VBUS_DETECTED"]
+#[doc = "Field `VBUS_DETECT` reader - Source: SIE_STATUS.VBUS_DETECT"]
 pub type VBUS_DETECT_R = crate::BitReader;
 #[doc = "Field `BUS_RESET` reader - Source: SIE_STATUS.BUS_RESET"]
 pub type BUS_RESET_R = crate::BitReader;
@@ -30,7 +32,7 @@ pub type BUS_RESET_R = crate::BitReader;
 pub type DEV_CONN_DIS_R = crate::BitReader;
 #[doc = "Field `DEV_SUSPEND` reader - Set when the device suspend state changes. Cleared by writing to SIE_STATUS.SUSPENDED"]
 pub type DEV_SUSPEND_R = crate::BitReader;
-#[doc = "Field `DEV_RESUME_FROM_HOST` reader - Set when the device receives a resume from the host. Cleared by writing to SIE_STATUS.RESUME"]
+#[doc = "Field `DEV_RESUME_FROM_HOST` reader - Set when the device receives a resume from the host. Cleared by writing to SIE_STATUS.RESUME_REMOTE"]
 pub type DEV_RESUME_FROM_HOST_R = crate::BitReader;
 #[doc = "Field `SETUP_REQ` reader - Device. Source: SIE_STATUS.SETUP_REC"]
 pub type SETUP_REQ_R = crate::BitReader;
@@ -46,7 +48,7 @@ impl R {
     pub fn host_conn_dis(&self) -> HOST_CONN_DIS_R {
         HOST_CONN_DIS_R::new((self.bits & 1) != 0)
     }
-    #[doc = "Bit 1 - Host: raised when a device wakes up the host. Cleared by writing to SIE_STATUS.RESUME"]
+    #[doc = "Bit 1 - Host: raised when a device wakes up the host. Cleared by writing to SIE_STATUS.RESUME_REMOTE"]
     #[inline(always)]
     pub fn host_resume(&self) -> HOST_RESUME_R {
         HOST_RESUME_R::new(((self.bits >> 1) & 1) != 0)
@@ -96,7 +98,7 @@ impl R {
     pub fn stall(&self) -> STALL_R {
         STALL_R::new(((self.bits >> 10) & 1) != 0)
     }
-    #[doc = "Bit 11 - Source: SIE_STATUS.VBUS_DETECTED"]
+    #[doc = "Bit 11 - Source: SIE_STATUS.VBUS_DETECT"]
     #[inline(always)]
     pub fn vbus_detect(&self) -> VBUS_DETECT_R {
         VBUS_DETECT_R::new(((self.bits >> 11) & 1) != 0)
@@ -116,7 +118,7 @@ impl R {
     pub fn dev_suspend(&self) -> DEV_SUSPEND_R {
         DEV_SUSPEND_R::new(((self.bits >> 14) & 1) != 0)
     }
-    #[doc = "Bit 15 - Set when the device receives a resume from the host. Cleared by writing to SIE_STATUS.RESUME"]
+    #[doc = "Bit 15 - Set when the device receives a resume from the host. Cleared by writing to SIE_STATUS.RESUME_REMOTE"]
     #[inline(always)]
     pub fn dev_resume_from_host(&self) -> DEV_RESUME_FROM_HOST_R {
         DEV_RESUME_FROM_HOST_R::new(((self.bits >> 15) & 1) != 0)
@@ -142,15 +144,22 @@ impl R {
         EP_STALL_NAK_R::new(((self.bits >> 19) & 1) != 0)
     }
 }
+impl W {}
 #[doc = "Raw Interrupts  
 
-You can [`read`](crate::generic::Reg::read) this register and get [`intr::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+You can [`read`](crate::generic::Reg::read) this register and get [`intr::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`intr::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct INTR_SPEC;
 impl crate::RegisterSpec for INTR_SPEC {
     type Ux = u32;
 }
 #[doc = "`read()` method returns [`intr::R`](R) reader structure"]
 impl crate::Readable for INTR_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`intr::W`](W) writer structure"]
+impl crate::Writable for INTR_SPEC {
+    type Safety = crate::Unsafe;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+}
 #[doc = "`reset()` method sets INTR to value 0"]
 impl crate::Resettable for INTR_SPEC {
     const RESET_VALUE: u32 = 0;

@@ -105,19 +105,9 @@ where
         self.variant(DIVMODE_A::FALL)
     }
 }
-#[doc = "Field `PH_RET` reader - Retard the phase of the counter by 1 count, while it is running.  
- Self-clearing. Write a 1, and poll until low. Counter must be running."]
-pub type PH_RET_R = crate::BitReader;
-#[doc = "Field `PH_RET` writer - Retard the phase of the counter by 1 count, while it is running.  
- Self-clearing. Write a 1, and poll until low. Counter must be running."]
+#[doc = "Field `PH_RET` writer - Retard the phase of the counter by 1 count, while it is running. Self-clearing. Write a 1, and poll until low. Counter must be running."]
 pub type PH_RET_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `PH_ADV` reader - Advance the phase of the counter by 1 count, while it is running.  
- Self-clearing. Write a 1, and poll until low. Counter must be running  
- at less than full speed (div_int + div_frac / 16 > 1)"]
-pub type PH_ADV_R = crate::BitReader;
-#[doc = "Field `PH_ADV` writer - Advance the phase of the counter by 1 count, while it is running.  
- Self-clearing. Write a 1, and poll until low. Counter must be running  
- at less than full speed (div_int + div_frac / 16 > 1)"]
+#[doc = "Field `PH_ADV` writer - Advance the phase of the counter by 1 count, while it is running. Self-clearing. Write a 1, and poll until low. Counter must be running at less than full speed (div_int + div_frac / 16 > 1)"]
 pub type PH_ADV_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 0 - Enable the PWM channel."]
@@ -144,19 +134,6 @@ impl R {
     #[inline(always)]
     pub fn divmode(&self) -> DIVMODE_R {
         DIVMODE_R::new(((self.bits >> 4) & 3) as u8)
-    }
-    #[doc = "Bit 6 - Retard the phase of the counter by 1 count, while it is running.  
- Self-clearing. Write a 1, and poll until low. Counter must be running."]
-    #[inline(always)]
-    pub fn ph_ret(&self) -> PH_RET_R {
-        PH_RET_R::new(((self.bits >> 6) & 1) != 0)
-    }
-    #[doc = "Bit 7 - Advance the phase of the counter by 1 count, while it is running.  
- Self-clearing. Write a 1, and poll until low. Counter must be running  
- at less than full speed (div_int + div_frac / 16 > 1)"]
-    #[inline(always)]
-    pub fn ph_adv(&self) -> PH_ADV_R {
-        PH_ADV_R::new(((self.bits >> 7) & 1) != 0)
     }
 }
 impl W {
@@ -190,16 +167,13 @@ impl W {
     pub fn divmode(&mut self) -> DIVMODE_W<CSR_SPEC> {
         DIVMODE_W::new(self, 4)
     }
-    #[doc = "Bit 6 - Retard the phase of the counter by 1 count, while it is running.  
- Self-clearing. Write a 1, and poll until low. Counter must be running."]
+    #[doc = "Bit 6 - Retard the phase of the counter by 1 count, while it is running. Self-clearing. Write a 1, and poll until low. Counter must be running."]
     #[inline(always)]
     #[must_use]
     pub fn ph_ret(&mut self) -> PH_RET_W<CSR_SPEC> {
         PH_RET_W::new(self, 6)
     }
-    #[doc = "Bit 7 - Advance the phase of the counter by 1 count, while it is running.  
- Self-clearing. Write a 1, and poll until low. Counter must be running  
- at less than full speed (div_int + div_frac / 16 > 1)"]
+    #[doc = "Bit 7 - Advance the phase of the counter by 1 count, while it is running. Self-clearing. Write a 1, and poll until low. Counter must be running at less than full speed (div_int + div_frac / 16 > 1)"]
     #[inline(always)]
     #[must_use]
     pub fn ph_adv(&mut self) -> PH_ADV_W<CSR_SPEC> {

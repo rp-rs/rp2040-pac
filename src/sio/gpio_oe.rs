@@ -2,35 +2,19 @@
 pub type R = crate::R<GPIO_OE_SPEC>;
 #[doc = "Register `GPIO_OE` writer"]
 pub type W = crate::W<GPIO_OE_SPEC>;
-#[doc = "Field `GPIO_OE` reader - Set output enable (1/0 -> output/input) for GPIO0...29.  
- Reading back gives the last value written.  
- If core 0 and core 1 both write to GPIO_OE simultaneously (or to a SET/CLR/XOR alias),  
- the result is as though the write from core 0 took place first,  
- and the write from core 1 was then applied to that intermediate result."]
+#[doc = "Field `GPIO_OE` reader - Set output enable (1/0 -> output/input) for GPIO0...29. Reading back gives the last value written. If core 0 and core 1 both write to GPIO_OE simultaneously (or to a SET/CLR/XOR alias), the result is as though the write from core 0 took place first, and the write from core 1 was then applied to that intermediate result."]
 pub type GPIO_OE_R = crate::FieldReader<u32>;
-#[doc = "Field `GPIO_OE` writer - Set output enable (1/0 -> output/input) for GPIO0...29.  
- Reading back gives the last value written.  
- If core 0 and core 1 both write to GPIO_OE simultaneously (or to a SET/CLR/XOR alias),  
- the result is as though the write from core 0 took place first,  
- and the write from core 1 was then applied to that intermediate result."]
+#[doc = "Field `GPIO_OE` writer - Set output enable (1/0 -> output/input) for GPIO0...29. Reading back gives the last value written. If core 0 and core 1 both write to GPIO_OE simultaneously (or to a SET/CLR/XOR alias), the result is as though the write from core 0 took place first, and the write from core 1 was then applied to that intermediate result."]
 pub type GPIO_OE_W<'a, REG> = crate::FieldWriter<'a, REG, 30, u32>;
 impl R {
-    #[doc = "Bits 0:29 - Set output enable (1/0 -> output/input) for GPIO0...29.  
- Reading back gives the last value written.  
- If core 0 and core 1 both write to GPIO_OE simultaneously (or to a SET/CLR/XOR alias),  
- the result is as though the write from core 0 took place first,  
- and the write from core 1 was then applied to that intermediate result."]
+    #[doc = "Bits 0:29 - Set output enable (1/0 -> output/input) for GPIO0...29. Reading back gives the last value written. If core 0 and core 1 both write to GPIO_OE simultaneously (or to a SET/CLR/XOR alias), the result is as though the write from core 0 took place first, and the write from core 1 was then applied to that intermediate result."]
     #[inline(always)]
     pub fn gpio_oe(&self) -> GPIO_OE_R {
         GPIO_OE_R::new(self.bits & 0x3fff_ffff)
     }
 }
 impl W {
-    #[doc = "Bits 0:29 - Set output enable (1/0 -> output/input) for GPIO0...29.  
- Reading back gives the last value written.  
- If core 0 and core 1 both write to GPIO_OE simultaneously (or to a SET/CLR/XOR alias),  
- the result is as though the write from core 0 took place first,  
- and the write from core 1 was then applied to that intermediate result."]
+    #[doc = "Bits 0:29 - Set output enable (1/0 -> output/input) for GPIO0...29. Reading back gives the last value written. If core 0 and core 1 both write to GPIO_OE simultaneously (or to a SET/CLR/XOR alias), the result is as though the write from core 0 took place first, and the write from core 1 was then applied to that intermediate result."]
     #[inline(always)]
     #[must_use]
     pub fn gpio_oe(&mut self) -> GPIO_OE_W<GPIO_OE_SPEC> {

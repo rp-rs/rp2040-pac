@@ -1,3 +1,5 @@
+#[doc = "Register `SOF_WR` reader"]
+pub type R = crate::R<SOF_WR_SPEC>;
 #[doc = "Register `SOF_WR` writer"]
 pub type W = crate::W<SOF_WR_SPEC>;
 #[doc = "Field `COUNT` writer - "]
@@ -12,11 +14,13 @@ impl W {
 }
 #[doc = "Set the SOF (Start of Frame) frame number in the host controller. The SOF packet is sent every 1ms and the host will increment the frame number by 1 each time.  
 
-You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`sof_wr::W`](W). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+You can [`read`](crate::generic::Reg::read) this register and get [`sof_wr::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`sof_wr::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct SOF_WR_SPEC;
 impl crate::RegisterSpec for SOF_WR_SPEC {
     type Ux = u32;
 }
+#[doc = "`read()` method returns [`sof_wr::R`](R) reader structure"]
+impl crate::Readable for SOF_WR_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`sof_wr::W`](W) writer structure"]
 impl crate::Writable for SOF_WR_SPEC {
     type Safety = crate::Unsafe;

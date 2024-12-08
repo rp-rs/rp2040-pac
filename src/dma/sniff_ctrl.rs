@@ -123,13 +123,9 @@ where
         self.variant(CALC_A::SUM)
     }
 }
-#[doc = "Field `BSWAP` reader - Locally perform a byte reverse on the sniffed data, before feeding into checksum.  
-
- Note that the sniff hardware is downstream of the DMA channel byteswap performed in the read master: if channel CTRL_BSWAP and SNIFF_CTRL_BSWAP are both enabled, their effects cancel from the sniffer's point of view."]
+#[doc = "Field `BSWAP` reader - Locally perform a byte reverse on the sniffed data, before feeding into checksum. Note that the sniff hardware is downstream of the DMA channel byteswap performed in the read master: if channel CTRL_BSWAP and SNIFF_CTRL_BSWAP are both enabled, their effects cancel from the sniffer's point of view."]
 pub type BSWAP_R = crate::BitReader;
-#[doc = "Field `BSWAP` writer - Locally perform a byte reverse on the sniffed data, before feeding into checksum.  
-
- Note that the sniff hardware is downstream of the DMA channel byteswap performed in the read master: if channel CTRL_BSWAP and SNIFF_CTRL_BSWAP are both enabled, their effects cancel from the sniffer's point of view."]
+#[doc = "Field `BSWAP` writer - Locally perform a byte reverse on the sniffed data, before feeding into checksum. Note that the sniff hardware is downstream of the DMA channel byteswap performed in the read master: if channel CTRL_BSWAP and SNIFF_CTRL_BSWAP are both enabled, their effects cancel from the sniffer's point of view."]
 pub type BSWAP_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `OUT_REV` reader - If set, the result appears bit-reversed when read. This does not affect the way the checksum is calculated; the result is transformed on-the-fly between the result register and the bus."]
 pub type OUT_REV_R = crate::BitReader;
@@ -155,9 +151,7 @@ impl R {
     pub fn calc(&self) -> CALC_R {
         CALC_R::new(((self.bits >> 5) & 0x0f) as u8)
     }
-    #[doc = "Bit 9 - Locally perform a byte reverse on the sniffed data, before feeding into checksum.  
-
- Note that the sniff hardware is downstream of the DMA channel byteswap performed in the read master: if channel CTRL_BSWAP and SNIFF_CTRL_BSWAP are both enabled, their effects cancel from the sniffer's point of view."]
+    #[doc = "Bit 9 - Locally perform a byte reverse on the sniffed data, before feeding into checksum. Note that the sniff hardware is downstream of the DMA channel byteswap performed in the read master: if channel CTRL_BSWAP and SNIFF_CTRL_BSWAP are both enabled, their effects cancel from the sniffer's point of view."]
     #[inline(always)]
     pub fn bswap(&self) -> BSWAP_R {
         BSWAP_R::new(((self.bits >> 9) & 1) != 0)
@@ -192,9 +186,7 @@ impl W {
     pub fn calc(&mut self) -> CALC_W<SNIFF_CTRL_SPEC> {
         CALC_W::new(self, 5)
     }
-    #[doc = "Bit 9 - Locally perform a byte reverse on the sniffed data, before feeding into checksum.  
-
- Note that the sniff hardware is downstream of the DMA channel byteswap performed in the read master: if channel CTRL_BSWAP and SNIFF_CTRL_BSWAP are both enabled, their effects cancel from the sniffer's point of view."]
+    #[doc = "Bit 9 - Locally perform a byte reverse on the sniffed data, before feeding into checksum. Note that the sniff hardware is downstream of the DMA channel byteswap performed in the read master: if channel CTRL_BSWAP and SNIFF_CTRL_BSWAP are both enabled, their effects cancel from the sniffer's point of view."]
     #[inline(always)]
     #[must_use]
     pub fn bswap(&mut self) -> BSWAP_W<SNIFF_CTRL_SPEC> {

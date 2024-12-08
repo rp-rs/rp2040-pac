@@ -1,5 +1,7 @@
 #[doc = "Register `SYST_CALIB` reader"]
 pub type R = crate::R<SYST_CALIB_SPEC>;
+#[doc = "Register `SYST_CALIB` writer"]
+pub type W = crate::W<SYST_CALIB_SPEC>;
 #[doc = "Field `TENMS` reader - An optional Reload value to be used for 10ms (100Hz) timing, subject to system clock skew errors. If the value reads as 0, the calibration value is not known."]
 pub type TENMS_R = crate::FieldReader<u32>;
 #[doc = "Field `SKEW` reader - If reads as 1, the calibration value for 10ms is inexact (due to clock frequency)."]
@@ -23,15 +25,22 @@ impl R {
         NOREF_R::new(((self.bits >> 31) & 1) != 0)
     }
 }
+impl W {}
 #[doc = "Use the SysTick Calibration Value Register to enable software to scale to any required speed using divide and multiply.  
 
-You can [`read`](crate::generic::Reg::read) this register and get [`syst_calib::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+You can [`read`](crate::generic::Reg::read) this register and get [`syst_calib::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`syst_calib::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct SYST_CALIB_SPEC;
 impl crate::RegisterSpec for SYST_CALIB_SPEC {
     type Ux = u32;
 }
 #[doc = "`read()` method returns [`syst_calib::R`](R) reader structure"]
 impl crate::Readable for SYST_CALIB_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`syst_calib::W`](W) writer structure"]
+impl crate::Writable for SYST_CALIB_SPEC {
+    type Safety = crate::Unsafe;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+}
 #[doc = "`reset()` method sets SYST_CALIB to value 0"]
 impl crate::Resettable for SYST_CALIB_SPEC {
     const RESET_VALUE: u32 = 0;

@@ -21,8 +21,7 @@ impl W {
         SM0_INSTR_W::new(self, 0)
     }
 }
-#[doc = "Read to see the instruction currently addressed by state machine 0's program counter  
- Write to execute an instruction immediately (including jumps) and then resume execution.  
+#[doc = "Read to see the instruction currently addressed by state machine 0's program counter Write to execute an instruction immediately (including jumps) and then resume execution.  
 
 You can [`read`](crate::generic::Reg::read) this register and get [`sm_instr::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`sm_instr::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct SM_INSTR_SPEC;

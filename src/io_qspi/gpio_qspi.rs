@@ -16,9 +16,9 @@ impl GPIO_QSPI {
         &self.gpio_ctrl
     }
 }
-#[doc = "GPIO_STATUS (r) register accessor: GPIO status  
+#[doc = "GPIO_STATUS (rw) register accessor: GPIO status  
 
-You can [`read`](crate::generic::Reg::read) this register and get [`gpio_status::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+You can [`read`](crate::generic::Reg::read) this register and get [`gpio_status::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`gpio_status::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
 
 For information about available fields see [`mod@gpio_status`]
 module"]

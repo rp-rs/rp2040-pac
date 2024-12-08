@@ -113,17 +113,13 @@ pub type SLV_OE_W<'a, REG> = crate::BitWriter<'a, REG>;
 pub type SRL_R = crate::BitReader;
 #[doc = "Field `SRL` writer - Shift register loop (test mode)"]
 pub type SRL_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `CFS` reader - Control frame size  
- Value of n -> n+1 clocks per frame."]
+#[doc = "Field `CFS` reader - Control frame size Value of n -> n+1 clocks per frame."]
 pub type CFS_R = crate::FieldReader;
-#[doc = "Field `CFS` writer - Control frame size  
- Value of n -> n+1 clocks per frame."]
+#[doc = "Field `CFS` writer - Control frame size Value of n -> n+1 clocks per frame."]
 pub type CFS_W<'a, REG> = crate::FieldWriter<'a, REG, 4>;
-#[doc = "Field `DFS_32` reader - Data frame size in 32b transfer mode  
- Value of n -> n+1 clocks per frame."]
+#[doc = "Field `DFS_32` reader - Data frame size in 32b transfer mode Value of n -> n+1 clocks per frame."]
 pub type DFS_32_R = crate::FieldReader;
-#[doc = "Field `DFS_32` writer - Data frame size in 32b transfer mode  
- Value of n -> n+1 clocks per frame."]
+#[doc = "Field `DFS_32` writer - Data frame size in 32b transfer mode Value of n -> n+1 clocks per frame."]
 pub type DFS_32_W<'a, REG> = crate::FieldWriter<'a, REG, 5>;
 #[doc = "SPI frame format  
 
@@ -239,14 +235,12 @@ impl R {
     pub fn srl(&self) -> SRL_R {
         SRL_R::new(((self.bits >> 11) & 1) != 0)
     }
-    #[doc = "Bits 12:15 - Control frame size  
- Value of n -> n+1 clocks per frame."]
+    #[doc = "Bits 12:15 - Control frame size Value of n -> n+1 clocks per frame."]
     #[inline(always)]
     pub fn cfs(&self) -> CFS_R {
         CFS_R::new(((self.bits >> 12) & 0x0f) as u8)
     }
-    #[doc = "Bits 16:20 - Data frame size in 32b transfer mode  
- Value of n -> n+1 clocks per frame."]
+    #[doc = "Bits 16:20 - Data frame size in 32b transfer mode Value of n -> n+1 clocks per frame."]
     #[inline(always)]
     pub fn dfs_32(&self) -> DFS_32_R {
         DFS_32_R::new(((self.bits >> 16) & 0x1f) as u8)
@@ -305,15 +299,13 @@ impl W {
     pub fn srl(&mut self) -> SRL_W<CTRLR0_SPEC> {
         SRL_W::new(self, 11)
     }
-    #[doc = "Bits 12:15 - Control frame size  
- Value of n -> n+1 clocks per frame."]
+    #[doc = "Bits 12:15 - Control frame size Value of n -> n+1 clocks per frame."]
     #[inline(always)]
     #[must_use]
     pub fn cfs(&mut self) -> CFS_W<CTRLR0_SPEC> {
         CFS_W::new(self, 12)
     }
-    #[doc = "Bits 16:20 - Data frame size in 32b transfer mode  
- Value of n -> n+1 clocks per frame."]
+    #[doc = "Bits 16:20 - Data frame size in 32b transfer mode Value of n -> n+1 clocks per frame."]
     #[inline(always)]
     #[must_use]
     pub fn dfs_32(&mut self) -> DFS_32_W<CTRLR0_SPEC> {

@@ -2,53 +2,32 @@
 pub type R = crate::R<SYST_CSR_SPEC>;
 #[doc = "Register `SYST_CSR` writer"]
 pub type W = crate::W<SYST_CSR_SPEC>;
-#[doc = "Field `ENABLE` reader - Enable SysTick counter:  
- 0 = Counter disabled.  
- 1 = Counter enabled."]
+#[doc = "Field `ENABLE` reader - Enable SysTick counter: 0 = Counter disabled. 1 = Counter enabled."]
 pub type ENABLE_R = crate::BitReader;
-#[doc = "Field `ENABLE` writer - Enable SysTick counter:  
- 0 = Counter disabled.  
- 1 = Counter enabled."]
+#[doc = "Field `ENABLE` writer - Enable SysTick counter: 0 = Counter disabled. 1 = Counter enabled."]
 pub type ENABLE_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `TICKINT` reader - Enables SysTick exception request:  
- 0 = Counting down to zero does not assert the SysTick exception request.  
- 1 = Counting down to zero to asserts the SysTick exception request."]
+#[doc = "Field `TICKINT` reader - Enables SysTick exception request: 0 = Counting down to zero does not assert the SysTick exception request. 1 = Counting down to zero to asserts the SysTick exception request."]
 pub type TICKINT_R = crate::BitReader;
-#[doc = "Field `TICKINT` writer - Enables SysTick exception request:  
- 0 = Counting down to zero does not assert the SysTick exception request.  
- 1 = Counting down to zero to asserts the SysTick exception request."]
+#[doc = "Field `TICKINT` writer - Enables SysTick exception request: 0 = Counting down to zero does not assert the SysTick exception request. 1 = Counting down to zero to asserts the SysTick exception request."]
 pub type TICKINT_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `CLKSOURCE` reader - SysTick clock source. Always reads as one if SYST_CALIB reports NOREF.  
- Selects the SysTick timer clock source:  
- 0 = External reference clock.  
- 1 = Processor clock."]
+#[doc = "Field `CLKSOURCE` reader - SysTick clock source. Always reads as one if SYST_CALIB reports NOREF. Selects the SysTick timer clock source: 0 = External reference clock. 1 = Processor clock."]
 pub type CLKSOURCE_R = crate::BitReader;
-#[doc = "Field `CLKSOURCE` writer - SysTick clock source. Always reads as one if SYST_CALIB reports NOREF.  
- Selects the SysTick timer clock source:  
- 0 = External reference clock.  
- 1 = Processor clock."]
+#[doc = "Field `CLKSOURCE` writer - SysTick clock source. Always reads as one if SYST_CALIB reports NOREF. Selects the SysTick timer clock source: 0 = External reference clock. 1 = Processor clock."]
 pub type CLKSOURCE_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `COUNTFLAG` reader - Returns 1 if timer counted to 0 since last time this was read. Clears on read by application or debugger."]
 pub type COUNTFLAG_R = crate::BitReader;
 impl R {
-    #[doc = "Bit 0 - Enable SysTick counter:  
- 0 = Counter disabled.  
- 1 = Counter enabled."]
+    #[doc = "Bit 0 - Enable SysTick counter: 0 = Counter disabled. 1 = Counter enabled."]
     #[inline(always)]
     pub fn enable(&self) -> ENABLE_R {
         ENABLE_R::new((self.bits & 1) != 0)
     }
-    #[doc = "Bit 1 - Enables SysTick exception request:  
- 0 = Counting down to zero does not assert the SysTick exception request.  
- 1 = Counting down to zero to asserts the SysTick exception request."]
+    #[doc = "Bit 1 - Enables SysTick exception request: 0 = Counting down to zero does not assert the SysTick exception request. 1 = Counting down to zero to asserts the SysTick exception request."]
     #[inline(always)]
     pub fn tickint(&self) -> TICKINT_R {
         TICKINT_R::new(((self.bits >> 1) & 1) != 0)
     }
-    #[doc = "Bit 2 - SysTick clock source. Always reads as one if SYST_CALIB reports NOREF.  
- Selects the SysTick timer clock source:  
- 0 = External reference clock.  
- 1 = Processor clock."]
+    #[doc = "Bit 2 - SysTick clock source. Always reads as one if SYST_CALIB reports NOREF. Selects the SysTick timer clock source: 0 = External reference clock. 1 = Processor clock."]
     #[inline(always)]
     pub fn clksource(&self) -> CLKSOURCE_R {
         CLKSOURCE_R::new(((self.bits >> 2) & 1) != 0)
@@ -60,26 +39,19 @@ impl R {
     }
 }
 impl W {
-    #[doc = "Bit 0 - Enable SysTick counter:  
- 0 = Counter disabled.  
- 1 = Counter enabled."]
+    #[doc = "Bit 0 - Enable SysTick counter: 0 = Counter disabled. 1 = Counter enabled."]
     #[inline(always)]
     #[must_use]
     pub fn enable(&mut self) -> ENABLE_W<SYST_CSR_SPEC> {
         ENABLE_W::new(self, 0)
     }
-    #[doc = "Bit 1 - Enables SysTick exception request:  
- 0 = Counting down to zero does not assert the SysTick exception request.  
- 1 = Counting down to zero to asserts the SysTick exception request."]
+    #[doc = "Bit 1 - Enables SysTick exception request: 0 = Counting down to zero does not assert the SysTick exception request. 1 = Counting down to zero to asserts the SysTick exception request."]
     #[inline(always)]
     #[must_use]
     pub fn tickint(&mut self) -> TICKINT_W<SYST_CSR_SPEC> {
         TICKINT_W::new(self, 1)
     }
-    #[doc = "Bit 2 - SysTick clock source. Always reads as one if SYST_CALIB reports NOREF.  
- Selects the SysTick timer clock source:  
- 0 = External reference clock.  
- 1 = Processor clock."]
+    #[doc = "Bit 2 - SysTick clock source. Always reads as one if SYST_CALIB reports NOREF. Selects the SysTick timer clock source: 0 = External reference clock. 1 = Processor clock."]
     #[inline(always)]
     #[must_use]
     pub fn clksource(&mut self) -> CLKSOURCE_W<SYST_CSR_SPEC> {

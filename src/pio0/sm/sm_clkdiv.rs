@@ -6,11 +6,9 @@ pub type W = crate::W<SM_CLKDIV_SPEC>;
 pub type FRAC_R = crate::FieldReader;
 #[doc = "Field `FRAC` writer - Fractional part of clock divisor"]
 pub type FRAC_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
-#[doc = "Field `INT` reader - Effective frequency is sysclk/(int + frac/256).  
- Value of 0 is interpreted as 65536. If INT is 0, FRAC must also be 0."]
+#[doc = "Field `INT` reader - Effective frequency is sysclk/(int + frac/256). Value of 0 is interpreted as 65536. If INT is 0, FRAC must also be 0."]
 pub type INT_R = crate::FieldReader<u16>;
-#[doc = "Field `INT` writer - Effective frequency is sysclk/(int + frac/256).  
- Value of 0 is interpreted as 65536. If INT is 0, FRAC must also be 0."]
+#[doc = "Field `INT` writer - Effective frequency is sysclk/(int + frac/256). Value of 0 is interpreted as 65536. If INT is 0, FRAC must also be 0."]
 pub type INT_W<'a, REG> = crate::FieldWriter<'a, REG, 16, u16>;
 impl R {
     #[doc = "Bits 8:15 - Fractional part of clock divisor"]
@@ -18,8 +16,7 @@ impl R {
     pub fn frac(&self) -> FRAC_R {
         FRAC_R::new(((self.bits >> 8) & 0xff) as u8)
     }
-    #[doc = "Bits 16:31 - Effective frequency is sysclk/(int + frac/256).  
- Value of 0 is interpreted as 65536. If INT is 0, FRAC must also be 0."]
+    #[doc = "Bits 16:31 - Effective frequency is sysclk/(int + frac/256). Value of 0 is interpreted as 65536. If INT is 0, FRAC must also be 0."]
     #[inline(always)]
     pub fn int(&self) -> INT_R {
         INT_R::new(((self.bits >> 16) & 0xffff) as u16)
@@ -32,16 +29,14 @@ impl W {
     pub fn frac(&mut self) -> FRAC_W<SM_CLKDIV_SPEC> {
         FRAC_W::new(self, 8)
     }
-    #[doc = "Bits 16:31 - Effective frequency is sysclk/(int + frac/256).  
- Value of 0 is interpreted as 65536. If INT is 0, FRAC must also be 0."]
+    #[doc = "Bits 16:31 - Effective frequency is sysclk/(int + frac/256). Value of 0 is interpreted as 65536. If INT is 0, FRAC must also be 0."]
     #[inline(always)]
     #[must_use]
     pub fn int(&mut self) -> INT_W<SM_CLKDIV_SPEC> {
         INT_W::new(self, 16)
     }
 }
-#[doc = "Clock divisor register for state machine 0  
- Frequency = clock freq / (CLKDIV_INT + CLKDIV_FRAC / 256)  
+#[doc = "Clock divisor register for state machine 0 Frequency = clock freq / (CLKDIV_INT + CLKDIV_FRAC / 256)  
 
 You can [`read`](crate::generic::Reg::read) this register and get [`sm_clkdiv::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`sm_clkdiv::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct SM_CLKDIV_SPEC;

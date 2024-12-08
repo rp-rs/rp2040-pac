@@ -189,22 +189,22 @@ impl RegisterBlock {
     pub const fn usb_muxing(&self) -> &USB_MUXING {
         &self.usb_muxing
     }
-    #[doc = "0x78 - Overrides for the power signals in the event that the VBUS signals are not hooked up to GPIO. Set the value of the override and then the override enable to switch over to the override value."]
+    #[doc = "0x78 - Overrides for the power signals in the event that the VBUS signals are not hooked up to GPIO. Set the value of the override and then the override enable so switch over to the override value."]
     #[inline(always)]
     pub const fn usb_pwr(&self) -> &USB_PWR {
         &self.usb_pwr
     }
-    #[doc = "0x7c - This register allows for direct control of the USB phy. Use in conjunction with usbphy_direct_override register to enable each override bit."]
+    #[doc = "0x7c - Note that most functions are driven directly from usb_fsls controller. This register allows more detailed control/status from the USB PHY. Useful for debug but not expected to be used in normal operation Use in conjunction with usbphy_direct_override register"]
     #[inline(always)]
     pub const fn usbphy_direct(&self) -> &USBPHY_DIRECT {
         &self.usbphy_direct
     }
-    #[doc = "0x80 - Override enable for each control in usbphy_direct"]
+    #[doc = "0x80 - "]
     #[inline(always)]
     pub const fn usbphy_direct_override(&self) -> &USBPHY_DIRECT_OVERRIDE {
         &self.usbphy_direct_override
     }
-    #[doc = "0x84 - Used to adjust trim values of USB phy pull down resistors."]
+    #[doc = "0x84 - Note that most functions are driven directly from usb_fsls controller. This register allows more detailed control/status from the USB PHY. Useful for debug but not expected to be used in normal operation"]
     #[inline(always)]
     pub const fn usbphy_trim(&self) -> &USBPHY_TRIM {
         &self.usbphy_trim
@@ -257,18 +257,18 @@ module"]
 pub type MAIN_CTRL = crate::Reg<main_ctrl::MAIN_CTRL_SPEC>;
 #[doc = "Main control register"]
 pub mod main_ctrl;
-#[doc = "SOF_WR (w) register accessor: Set the SOF (Start of Frame) frame number in the host controller. The SOF packet is sent every 1ms and the host will increment the frame number by 1 each time.  
+#[doc = "SOF_WR (rw) register accessor: Set the SOF (Start of Frame) frame number in the host controller. The SOF packet is sent every 1ms and the host will increment the frame number by 1 each time.  
 
-You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`sof_wr::W`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+You can [`read`](crate::generic::Reg::read) this register and get [`sof_wr::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`sof_wr::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
 
 For information about available fields see [`mod@sof_wr`]
 module"]
 pub type SOF_WR = crate::Reg<sof_wr::SOF_WR_SPEC>;
 #[doc = "Set the SOF (Start of Frame) frame number in the host controller. The SOF packet is sent every 1ms and the host will increment the frame number by 1 each time."]
 pub mod sof_wr;
-#[doc = "SOF_RD (r) register accessor: Read the last SOF (Start of Frame) frame number seen. In device mode the last SOF received from the host. In host mode the last SOF sent by the host.  
+#[doc = "SOF_RD (rw) register accessor: Read the last SOF (Start of Frame) frame number seen. In device mode the last SOF received from the host. In host mode the last SOF sent by the host.  
 
-You can [`read`](crate::generic::Reg::read) this register and get [`sof_rd::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+You can [`read`](crate::generic::Reg::read) this register and get [`sof_rd::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`sof_rd::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
 
 For information about available fields see [`mod@sof_rd`]
 module"]
@@ -311,9 +311,9 @@ module"]
 pub type BUFF_STATUS = crate::Reg<buff_status::BUFF_STATUS_SPEC>;
 #[doc = "Buffer status register. A bit set here indicates that a buffer has completed on the endpoint (if the buffer interrupt is enabled). It is possible for 2 buffers to be completed, so clearing the buffer status bit may instantly re set it on the next clock cycle."]
 pub mod buff_status;
-#[doc = "BUFF_CPU_SHOULD_HANDLE (r) register accessor: Which of the double buffers should be handled. Only valid if using an interrupt per buffer (i.e. not per 2 buffers). Not valid for host interrupt endpoint polling because they are only single buffered.  
+#[doc = "BUFF_CPU_SHOULD_HANDLE (rw) register accessor: Which of the double buffers should be handled. Only valid if using an interrupt per buffer (i.e. not per 2 buffers). Not valid for host interrupt endpoint polling because they are only single buffered.  
 
-You can [`read`](crate::generic::Reg::read) this register and get [`buff_cpu_should_handle::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+You can [`read`](crate::generic::Reg::read) this register and get [`buff_cpu_should_handle::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`buff_cpu_should_handle::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
 
 For information about available fields see [`mod@buff_cpu_should_handle`]
 module"]
@@ -374,45 +374,45 @@ module"]
 pub type USB_MUXING = crate::Reg<usb_muxing::USB_MUXING_SPEC>;
 #[doc = "Where to connect the USB controller. Should be to_phy by default."]
 pub mod usb_muxing;
-#[doc = "USB_PWR (rw) register accessor: Overrides for the power signals in the event that the VBUS signals are not hooked up to GPIO. Set the value of the override and then the override enable to switch over to the override value.  
+#[doc = "USB_PWR (rw) register accessor: Overrides for the power signals in the event that the VBUS signals are not hooked up to GPIO. Set the value of the override and then the override enable so switch over to the override value.  
 
 You can [`read`](crate::generic::Reg::read) this register and get [`usb_pwr::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`usb_pwr::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
 
 For information about available fields see [`mod@usb_pwr`]
 module"]
 pub type USB_PWR = crate::Reg<usb_pwr::USB_PWR_SPEC>;
-#[doc = "Overrides for the power signals in the event that the VBUS signals are not hooked up to GPIO. Set the value of the override and then the override enable to switch over to the override value."]
+#[doc = "Overrides for the power signals in the event that the VBUS signals are not hooked up to GPIO. Set the value of the override and then the override enable so switch over to the override value."]
 pub mod usb_pwr;
-#[doc = "USBPHY_DIRECT (rw) register accessor: This register allows for direct control of the USB phy. Use in conjunction with usbphy_direct_override register to enable each override bit.  
+#[doc = "USBPHY_DIRECT (rw) register accessor: Note that most functions are driven directly from usb_fsls controller. This register allows more detailed control/status from the USB PHY. Useful for debug but not expected to be used in normal operation Use in conjunction with usbphy_direct_override register  
 
 You can [`read`](crate::generic::Reg::read) this register and get [`usbphy_direct::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`usbphy_direct::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
 
 For information about available fields see [`mod@usbphy_direct`]
 module"]
 pub type USBPHY_DIRECT = crate::Reg<usbphy_direct::USBPHY_DIRECT_SPEC>;
-#[doc = "This register allows for direct control of the USB phy. Use in conjunction with usbphy_direct_override register to enable each override bit."]
+#[doc = "Note that most functions are driven directly from usb_fsls controller. This register allows more detailed control/status from the USB PHY. Useful for debug but not expected to be used in normal operation Use in conjunction with usbphy_direct_override register"]
 pub mod usbphy_direct;
-#[doc = "USBPHY_DIRECT_OVERRIDE (rw) register accessor: Override enable for each control in usbphy_direct  
+#[doc = "USBPHY_DIRECT_OVERRIDE (rw) register accessor:   
 
 You can [`read`](crate::generic::Reg::read) this register and get [`usbphy_direct_override::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`usbphy_direct_override::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
 
 For information about available fields see [`mod@usbphy_direct_override`]
 module"]
 pub type USBPHY_DIRECT_OVERRIDE = crate::Reg<usbphy_direct_override::USBPHY_DIRECT_OVERRIDE_SPEC>;
-#[doc = "Override enable for each control in usbphy_direct"]
+#[doc = ""]
 pub mod usbphy_direct_override;
-#[doc = "USBPHY_TRIM (rw) register accessor: Used to adjust trim values of USB phy pull down resistors.  
+#[doc = "USBPHY_TRIM (rw) register accessor: Note that most functions are driven directly from usb_fsls controller. This register allows more detailed control/status from the USB PHY. Useful for debug but not expected to be used in normal operation  
 
 You can [`read`](crate::generic::Reg::read) this register and get [`usbphy_trim::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`usbphy_trim::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
 
 For information about available fields see [`mod@usbphy_trim`]
 module"]
 pub type USBPHY_TRIM = crate::Reg<usbphy_trim::USBPHY_TRIM_SPEC>;
-#[doc = "Used to adjust trim values of USB phy pull down resistors."]
+#[doc = "Note that most functions are driven directly from usb_fsls controller. This register allows more detailed control/status from the USB PHY. Useful for debug but not expected to be used in normal operation"]
 pub mod usbphy_trim;
-#[doc = "INTR (r) register accessor: Raw Interrupts  
+#[doc = "INTR (rw) register accessor: Raw Interrupts  
 
-You can [`read`](crate::generic::Reg::read) this register and get [`intr::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+You can [`read`](crate::generic::Reg::read) this register and get [`intr::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`intr::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
 
 For information about available fields see [`mod@intr`]
 module"]
@@ -437,9 +437,9 @@ module"]
 pub type INTF = crate::Reg<intf::INTF_SPEC>;
 #[doc = "Interrupt Force"]
 pub mod intf;
-#[doc = "INTS (r) register accessor: Interrupt status after masking &amp; forcing  
+#[doc = "INTS (rw) register accessor: Interrupt status after masking &amp; forcing  
 
-You can [`read`](crate::generic::Reg::read) this register and get [`ints::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+You can [`read`](crate::generic::Reg::read) this register and get [`ints::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`ints::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
 
 For information about available fields see [`mod@ints`]
 module"]

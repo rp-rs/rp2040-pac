@@ -47,8 +47,7 @@ impl RegisterBlock {
     pub const fn syst_csr(&self) -> &SYST_CSR {
         &self.syst_csr
     }
-    #[doc = "0xe014 - Use the SysTick Reload Value Register to specify the start value to load into the current value register when the counter reaches 0. It can be any value between 0 and 0x00FFFFFF. A start value of 0 is possible, but has no effect because the SysTick interrupt and COUNTFLAG are activated when counting from 1 to 0. The reset value of this register is UNKNOWN.  
- To generate a multi-shot timer with a period of N processor clock cycles, use a RELOAD value of N-1. For example, if the SysTick interrupt is required every 100 clock pulses, set RELOAD to 99."]
+    #[doc = "0xe014 - Use the SysTick Reload Value Register to specify the start value to load into the current value register when the counter reaches 0. It can be any value between 0 and 0x00FFFFFF. A start value of 0 is possible, but has no effect because the SysTick interrupt and COUNTFLAG are activated when counting from 1 to 0. The reset value of this register is UNKNOWN. To generate a multi-shot timer with a period of N processor clock cycles, use a RELOAD value of N-1. For example, if the SysTick interrupt is required every 100 clock pulses, set RELOAD to 99."]
     #[inline(always)]
     pub const fn syst_rvr(&self) -> &SYST_RVR {
         &self.syst_rvr
@@ -63,8 +62,7 @@ impl RegisterBlock {
     pub const fn syst_calib(&self) -> &SYST_CALIB {
         &self.syst_calib
     }
-    #[doc = "0xe100 - Use the Interrupt Set-Enable Register to enable interrupts and determine which interrupts are currently enabled.  
- If a pending interrupt is enabled, the NVIC activates the interrupt based on its priority. If an interrupt is not enabled, asserting its interrupt signal changes the interrupt state to pending, but the NVIC never activates the interrupt, regardless of its priority."]
+    #[doc = "0xe100 - Use the Interrupt Set-Enable Register to enable interrupts and determine which interrupts are currently enabled. If a pending interrupt is enabled, the NVIC activates the interrupt based on its priority. If an interrupt is not enabled, asserting its interrupt signal changes the interrupt state to pending, but the NVIC never activates the interrupt, regardless of its priority."]
     #[inline(always)]
     pub const fn nvic_iser(&self) -> &NVIC_ISER {
         &self.nvic_iser
@@ -84,9 +82,7 @@ impl RegisterBlock {
     pub const fn nvic_icpr(&self) -> &NVIC_ICPR {
         &self.nvic_icpr
     }
-    #[doc = "0xe400 - Use the Interrupt Priority Registers to assign a priority from 0 to 3 to each of the available interrupts. 0 is the highest priority, and 3 is the lowest.  
- Note: Writing 1 to an NVIC_ICPR bit does not affect the active state of the corresponding interrupt.  
- These registers are only word-accessible"]
+    #[doc = "0xe400 - Use the Interrupt Priority Registers to assign a priority from 0 to 3 to each of the available interrupts. 0 is the highest priority, and 3 is the lowest. Note: Writing 1 to an NVIC_ICPR bit does not affect the active state of the corresponding interrupt. These registers are only word-accessible"]
     #[inline(always)]
     pub const fn nvic_ipr0(&self) -> &NVIC_IPR0 {
         &self.nvic_ipr0
@@ -206,16 +202,14 @@ module"]
 pub type SYST_CSR = crate::Reg<syst_csr::SYST_CSR_SPEC>;
 #[doc = "Use the SysTick Control and Status Register to enable the SysTick features."]
 pub mod syst_csr;
-#[doc = "SYST_RVR (rw) register accessor: Use the SysTick Reload Value Register to specify the start value to load into the current value register when the counter reaches 0. It can be any value between 0 and 0x00FFFFFF. A start value of 0 is possible, but has no effect because the SysTick interrupt and COUNTFLAG are activated when counting from 1 to 0. The reset value of this register is UNKNOWN.  
- To generate a multi-shot timer with a period of N processor clock cycles, use a RELOAD value of N-1. For example, if the SysTick interrupt is required every 100 clock pulses, set RELOAD to 99.  
+#[doc = "SYST_RVR (rw) register accessor: Use the SysTick Reload Value Register to specify the start value to load into the current value register when the counter reaches 0. It can be any value between 0 and 0x00FFFFFF. A start value of 0 is possible, but has no effect because the SysTick interrupt and COUNTFLAG are activated when counting from 1 to 0. The reset value of this register is UNKNOWN. To generate a multi-shot timer with a period of N processor clock cycles, use a RELOAD value of N-1. For example, if the SysTick interrupt is required every 100 clock pulses, set RELOAD to 99.  
 
 You can [`read`](crate::generic::Reg::read) this register and get [`syst_rvr::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`syst_rvr::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
 
 For information about available fields see [`mod@syst_rvr`]
 module"]
 pub type SYST_RVR = crate::Reg<syst_rvr::SYST_RVR_SPEC>;
-#[doc = "Use the SysTick Reload Value Register to specify the start value to load into the current value register when the counter reaches 0. It can be any value between 0 and 0x00FFFFFF. A start value of 0 is possible, but has no effect because the SysTick interrupt and COUNTFLAG are activated when counting from 1 to 0. The reset value of this register is UNKNOWN.  
- To generate a multi-shot timer with a period of N processor clock cycles, use a RELOAD value of N-1. For example, if the SysTick interrupt is required every 100 clock pulses, set RELOAD to 99."]
+#[doc = "Use the SysTick Reload Value Register to specify the start value to load into the current value register when the counter reaches 0. It can be any value between 0 and 0x00FFFFFF. A start value of 0 is possible, but has no effect because the SysTick interrupt and COUNTFLAG are activated when counting from 1 to 0. The reset value of this register is UNKNOWN. To generate a multi-shot timer with a period of N processor clock cycles, use a RELOAD value of N-1. For example, if the SysTick interrupt is required every 100 clock pulses, set RELOAD to 99."]
 pub mod syst_rvr;
 #[doc = "SYST_CVR (rw) register accessor: Use the SysTick Current Value Register to find the current value in the register. The reset value of this register is UNKNOWN.  
 
@@ -226,25 +220,23 @@ module"]
 pub type SYST_CVR = crate::Reg<syst_cvr::SYST_CVR_SPEC>;
 #[doc = "Use the SysTick Current Value Register to find the current value in the register. The reset value of this register is UNKNOWN."]
 pub mod syst_cvr;
-#[doc = "SYST_CALIB (r) register accessor: Use the SysTick Calibration Value Register to enable software to scale to any required speed using divide and multiply.  
+#[doc = "SYST_CALIB (rw) register accessor: Use the SysTick Calibration Value Register to enable software to scale to any required speed using divide and multiply.  
 
-You can [`read`](crate::generic::Reg::read) this register and get [`syst_calib::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+You can [`read`](crate::generic::Reg::read) this register and get [`syst_calib::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`syst_calib::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
 
 For information about available fields see [`mod@syst_calib`]
 module"]
 pub type SYST_CALIB = crate::Reg<syst_calib::SYST_CALIB_SPEC>;
 #[doc = "Use the SysTick Calibration Value Register to enable software to scale to any required speed using divide and multiply."]
 pub mod syst_calib;
-#[doc = "NVIC_ISER (rw) register accessor: Use the Interrupt Set-Enable Register to enable interrupts and determine which interrupts are currently enabled.  
- If a pending interrupt is enabled, the NVIC activates the interrupt based on its priority. If an interrupt is not enabled, asserting its interrupt signal changes the interrupt state to pending, but the NVIC never activates the interrupt, regardless of its priority.  
+#[doc = "NVIC_ISER (rw) register accessor: Use the Interrupt Set-Enable Register to enable interrupts and determine which interrupts are currently enabled. If a pending interrupt is enabled, the NVIC activates the interrupt based on its priority. If an interrupt is not enabled, asserting its interrupt signal changes the interrupt state to pending, but the NVIC never activates the interrupt, regardless of its priority.  
 
 You can [`read`](crate::generic::Reg::read) this register and get [`nvic_iser::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`nvic_iser::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
 
 For information about available fields see [`mod@nvic_iser`]
 module"]
 pub type NVIC_ISER = crate::Reg<nvic_iser::NVIC_ISER_SPEC>;
-#[doc = "Use the Interrupt Set-Enable Register to enable interrupts and determine which interrupts are currently enabled.  
- If a pending interrupt is enabled, the NVIC activates the interrupt based on its priority. If an interrupt is not enabled, asserting its interrupt signal changes the interrupt state to pending, but the NVIC never activates the interrupt, regardless of its priority."]
+#[doc = "Use the Interrupt Set-Enable Register to enable interrupts and determine which interrupts are currently enabled. If a pending interrupt is enabled, the NVIC activates the interrupt based on its priority. If an interrupt is not enabled, asserting its interrupt signal changes the interrupt state to pending, but the NVIC never activates the interrupt, regardless of its priority."]
 pub mod nvic_iser;
 #[doc = "NVIC_ICER (rw) register accessor: Use the Interrupt Clear-Enable Registers to disable interrupts and determine which interrupts are currently enabled.  
 
@@ -273,18 +265,14 @@ module"]
 pub type NVIC_ICPR = crate::Reg<nvic_icpr::NVIC_ICPR_SPEC>;
 #[doc = "Use the Interrupt Clear-Pending Register to clear pending interrupts and determine which interrupts are currently pending."]
 pub mod nvic_icpr;
-#[doc = "NVIC_IPR0 (rw) register accessor: Use the Interrupt Priority Registers to assign a priority from 0 to 3 to each of the available interrupts. 0 is the highest priority, and 3 is the lowest.  
- Note: Writing 1 to an NVIC_ICPR bit does not affect the active state of the corresponding interrupt.  
- These registers are only word-accessible  
+#[doc = "NVIC_IPR0 (rw) register accessor: Use the Interrupt Priority Registers to assign a priority from 0 to 3 to each of the available interrupts. 0 is the highest priority, and 3 is the lowest. Note: Writing 1 to an NVIC_ICPR bit does not affect the active state of the corresponding interrupt. These registers are only word-accessible  
 
 You can [`read`](crate::generic::Reg::read) this register and get [`nvic_ipr0::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`nvic_ipr0::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
 
 For information about available fields see [`mod@nvic_ipr0`]
 module"]
 pub type NVIC_IPR0 = crate::Reg<nvic_ipr0::NVIC_IPR0_SPEC>;
-#[doc = "Use the Interrupt Priority Registers to assign a priority from 0 to 3 to each of the available interrupts. 0 is the highest priority, and 3 is the lowest.  
- Note: Writing 1 to an NVIC_ICPR bit does not affect the active state of the corresponding interrupt.  
- These registers are only word-accessible"]
+#[doc = "Use the Interrupt Priority Registers to assign a priority from 0 to 3 to each of the available interrupts. 0 is the highest priority, and 3 is the lowest. Note: Writing 1 to an NVIC_ICPR bit does not affect the active state of the corresponding interrupt. These registers are only word-accessible"]
 pub mod nvic_ipr0;
 #[doc = "NVIC_IPR1 (rw) register accessor: Use the Interrupt Priority Registers to assign a priority from 0 to 3 to each of the available interrupts. 0 is the highest priority, and 3 is the lowest.  
 
@@ -349,9 +337,9 @@ module"]
 pub type NVIC_IPR7 = crate::Reg<nvic_ipr7::NVIC_IPR7_SPEC>;
 #[doc = "Use the Interrupt Priority Registers to assign a priority from 0 to 3 to each of the available interrupts. 0 is the highest priority, and 3 is the lowest."]
 pub mod nvic_ipr7;
-#[doc = "CPUID (r) register accessor: Read the CPU ID Base Register to determine: the ID number of the processor core, the version number of the processor core, the implementation details of the processor core.  
+#[doc = "CPUID (rw) register accessor: Read the CPU ID Base Register to determine: the ID number of the processor core, the version number of the processor core, the implementation details of the processor core.  
 
-You can [`read`](crate::generic::Reg::read) this register and get [`cpuid::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+You can [`read`](crate::generic::Reg::read) this register and get [`cpuid::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`cpuid::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
 
 For information about available fields see [`mod@cpuid`]
 module"]
@@ -394,9 +382,9 @@ module"]
 pub type SCR = crate::Reg<scr::SCR_SPEC>;
 #[doc = "System Control Register. Use the System Control Register for power-management functions: signal to the system when the processor can enter a low power state, control how the processor enters and exits low power states."]
 pub mod scr;
-#[doc = "CCR (r) register accessor: The Configuration and Control Register permanently enables stack alignment and causes unaligned accesses to result in a Hard Fault.  
+#[doc = "CCR (rw) register accessor: The Configuration and Control Register permanently enables stack alignment and causes unaligned accesses to result in a Hard Fault.  
 
-You can [`read`](crate::generic::Reg::read) this register and get [`ccr::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+You can [`read`](crate::generic::Reg::read) this register and get [`ccr::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`ccr::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
 
 For information about available fields see [`mod@ccr`]
 module"]
@@ -430,9 +418,9 @@ module"]
 pub type SHCSR = crate::Reg<shcsr::SHCSR_SPEC>;
 #[doc = "Use the System Handler Control and State Register to determine or clear the pending status of SVCall."]
 pub mod shcsr;
-#[doc = "MPU_TYPE (r) register accessor: Read the MPU Type Register to determine if the processor implements an MPU, and how many regions the MPU supports.  
+#[doc = "MPU_TYPE (rw) register accessor: Read the MPU Type Register to determine if the processor implements an MPU, and how many regions the MPU supports.  
 
-You can [`read`](crate::generic::Reg::read) this register and get [`mpu_type::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+You can [`read`](crate::generic::Reg::read) this register and get [`mpu_type::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`mpu_type::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
 
 For information about available fields see [`mod@mpu_type`]
 module"]

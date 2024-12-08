@@ -138,9 +138,9 @@ module"]
 pub type PROC0_INTF = crate::Reg<proc0_intf::PROC0_INTF_SPEC>;
 #[doc = "Interrupt Force for proc0"]
 pub mod proc0_intf;
-#[doc = "PROC0_INTS (r) register accessor: Interrupt status after masking &amp; forcing for proc0  
+#[doc = "PROC0_INTS (rw) register accessor: Interrupt status after masking &amp; forcing for proc0  
 
-You can [`read`](crate::generic::Reg::read) this register and get [`proc0_ints::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+You can [`read`](crate::generic::Reg::read) this register and get [`proc0_ints::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`proc0_ints::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
 
 For information about available fields see [`mod@proc0_ints`]
 module"]
@@ -165,9 +165,9 @@ module"]
 pub type PROC1_INTF = crate::Reg<proc1_intf::PROC1_INTF_SPEC>;
 #[doc = "Interrupt Force for proc1"]
 pub mod proc1_intf;
-#[doc = "PROC1_INTS (r) register accessor: Interrupt status after masking &amp; forcing for proc1  
+#[doc = "PROC1_INTS (rw) register accessor: Interrupt status after masking &amp; forcing for proc1  
 
-You can [`read`](crate::generic::Reg::read) this register and get [`proc1_ints::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+You can [`read`](crate::generic::Reg::read) this register and get [`proc1_ints::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`proc1_ints::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
 
 For information about available fields see [`mod@proc1_ints`]
 module"]
@@ -192,9 +192,9 @@ module"]
 pub type DORMANT_WAKE_INTF = crate::Reg<dormant_wake_intf::DORMANT_WAKE_INTF_SPEC>;
 #[doc = "Interrupt Force for dormant_wake"]
 pub mod dormant_wake_intf;
-#[doc = "DORMANT_WAKE_INTS (r) register accessor: Interrupt status after masking &amp; forcing for dormant_wake  
+#[doc = "DORMANT_WAKE_INTS (rw) register accessor: Interrupt status after masking &amp; forcing for dormant_wake  
 
-You can [`read`](crate::generic::Reg::read) this register and get [`dormant_wake_ints::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+You can [`read`](crate::generic::Reg::read) this register and get [`dormant_wake_ints::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`dormant_wake_ints::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
 
 For information about available fields see [`mod@dormant_wake_ints`]
 module"]

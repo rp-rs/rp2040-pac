@@ -18,33 +18,21 @@ pub type IN_SHIFTDIR_W<'a, REG> = crate::BitWriter<'a, REG>;
 pub type OUT_SHIFTDIR_R = crate::BitReader;
 #[doc = "Field `OUT_SHIFTDIR` writer - 1 = shift out of output shift register to right. 0 = to left."]
 pub type OUT_SHIFTDIR_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `PUSH_THRESH` reader - Number of bits shifted into ISR before autopush, or conditional push (PUSH IFFULL), will take place.  
- Write 0 for value of 32."]
+#[doc = "Field `PUSH_THRESH` reader - Number of bits shifted into ISR before autopush, or conditional push (PUSH IFFULL), will take place. Write 0 for value of 32."]
 pub type PUSH_THRESH_R = crate::FieldReader;
-#[doc = "Field `PUSH_THRESH` writer - Number of bits shifted into ISR before autopush, or conditional push (PUSH IFFULL), will take place.  
- Write 0 for value of 32."]
+#[doc = "Field `PUSH_THRESH` writer - Number of bits shifted into ISR before autopush, or conditional push (PUSH IFFULL), will take place. Write 0 for value of 32."]
 pub type PUSH_THRESH_W<'a, REG> = crate::FieldWriter<'a, REG, 5>;
-#[doc = "Field `PULL_THRESH` reader - Number of bits shifted out of OSR before autopull, or conditional pull (PULL IFEMPTY), will take place.  
- Write 0 for value of 32."]
+#[doc = "Field `PULL_THRESH` reader - Number of bits shifted out of OSR before autopull, or conditional pull (PULL IFEMPTY), will take place. Write 0 for value of 32."]
 pub type PULL_THRESH_R = crate::FieldReader;
-#[doc = "Field `PULL_THRESH` writer - Number of bits shifted out of OSR before autopull, or conditional pull (PULL IFEMPTY), will take place.  
- Write 0 for value of 32."]
+#[doc = "Field `PULL_THRESH` writer - Number of bits shifted out of OSR before autopull, or conditional pull (PULL IFEMPTY), will take place. Write 0 for value of 32."]
 pub type PULL_THRESH_W<'a, REG> = crate::FieldWriter<'a, REG, 5>;
-#[doc = "Field `FJOIN_TX` reader - When 1, TX FIFO steals the RX FIFO's storage, and becomes twice as deep.  
- RX FIFO is disabled as a result (always reads as both full and empty).  
- FIFOs are flushed when this bit is changed."]
+#[doc = "Field `FJOIN_TX` reader - When 1, TX FIFO steals the RX FIFO's storage, and becomes twice as deep. RX FIFO is disabled as a result (always reads as both full and empty). FIFOs are flushed when this bit is changed."]
 pub type FJOIN_TX_R = crate::BitReader;
-#[doc = "Field `FJOIN_TX` writer - When 1, TX FIFO steals the RX FIFO's storage, and becomes twice as deep.  
- RX FIFO is disabled as a result (always reads as both full and empty).  
- FIFOs are flushed when this bit is changed."]
+#[doc = "Field `FJOIN_TX` writer - When 1, TX FIFO steals the RX FIFO's storage, and becomes twice as deep. RX FIFO is disabled as a result (always reads as both full and empty). FIFOs are flushed when this bit is changed."]
 pub type FJOIN_TX_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `FJOIN_RX` reader - When 1, RX FIFO steals the TX FIFO's storage, and becomes twice as deep.  
- TX FIFO is disabled as a result (always reads as both full and empty).  
- FIFOs are flushed when this bit is changed."]
+#[doc = "Field `FJOIN_RX` reader - When 1, RX FIFO steals the TX FIFO's storage, and becomes twice as deep. TX FIFO is disabled as a result (always reads as both full and empty). FIFOs are flushed when this bit is changed."]
 pub type FJOIN_RX_R = crate::BitReader;
-#[doc = "Field `FJOIN_RX` writer - When 1, RX FIFO steals the TX FIFO's storage, and becomes twice as deep.  
- TX FIFO is disabled as a result (always reads as both full and empty).  
- FIFOs are flushed when this bit is changed."]
+#[doc = "Field `FJOIN_RX` writer - When 1, RX FIFO steals the TX FIFO's storage, and becomes twice as deep. TX FIFO is disabled as a result (always reads as both full and empty). FIFOs are flushed when this bit is changed."]
 pub type FJOIN_RX_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bit 16 - Push automatically when the input shift register is filled, i.e. on an IN instruction which causes the input shift counter to reach or exceed PUSH_THRESH."]
@@ -67,28 +55,22 @@ impl R {
     pub fn out_shiftdir(&self) -> OUT_SHIFTDIR_R {
         OUT_SHIFTDIR_R::new(((self.bits >> 19) & 1) != 0)
     }
-    #[doc = "Bits 20:24 - Number of bits shifted into ISR before autopush, or conditional push (PUSH IFFULL), will take place.  
- Write 0 for value of 32."]
+    #[doc = "Bits 20:24 - Number of bits shifted into ISR before autopush, or conditional push (PUSH IFFULL), will take place. Write 0 for value of 32."]
     #[inline(always)]
     pub fn push_thresh(&self) -> PUSH_THRESH_R {
         PUSH_THRESH_R::new(((self.bits >> 20) & 0x1f) as u8)
     }
-    #[doc = "Bits 25:29 - Number of bits shifted out of OSR before autopull, or conditional pull (PULL IFEMPTY), will take place.  
- Write 0 for value of 32."]
+    #[doc = "Bits 25:29 - Number of bits shifted out of OSR before autopull, or conditional pull (PULL IFEMPTY), will take place. Write 0 for value of 32."]
     #[inline(always)]
     pub fn pull_thresh(&self) -> PULL_THRESH_R {
         PULL_THRESH_R::new(((self.bits >> 25) & 0x1f) as u8)
     }
-    #[doc = "Bit 30 - When 1, TX FIFO steals the RX FIFO's storage, and becomes twice as deep.  
- RX FIFO is disabled as a result (always reads as both full and empty).  
- FIFOs are flushed when this bit is changed."]
+    #[doc = "Bit 30 - When 1, TX FIFO steals the RX FIFO's storage, and becomes twice as deep. RX FIFO is disabled as a result (always reads as both full and empty). FIFOs are flushed when this bit is changed."]
     #[inline(always)]
     pub fn fjoin_tx(&self) -> FJOIN_TX_R {
         FJOIN_TX_R::new(((self.bits >> 30) & 1) != 0)
     }
-    #[doc = "Bit 31 - When 1, RX FIFO steals the TX FIFO's storage, and becomes twice as deep.  
- TX FIFO is disabled as a result (always reads as both full and empty).  
- FIFOs are flushed when this bit is changed."]
+    #[doc = "Bit 31 - When 1, RX FIFO steals the TX FIFO's storage, and becomes twice as deep. TX FIFO is disabled as a result (always reads as both full and empty). FIFOs are flushed when this bit is changed."]
     #[inline(always)]
     pub fn fjoin_rx(&self) -> FJOIN_RX_R {
         FJOIN_RX_R::new(((self.bits >> 31) & 1) != 0)
@@ -119,31 +101,25 @@ impl W {
     pub fn out_shiftdir(&mut self) -> OUT_SHIFTDIR_W<SM_SHIFTCTRL_SPEC> {
         OUT_SHIFTDIR_W::new(self, 19)
     }
-    #[doc = "Bits 20:24 - Number of bits shifted into ISR before autopush, or conditional push (PUSH IFFULL), will take place.  
- Write 0 for value of 32."]
+    #[doc = "Bits 20:24 - Number of bits shifted into ISR before autopush, or conditional push (PUSH IFFULL), will take place. Write 0 for value of 32."]
     #[inline(always)]
     #[must_use]
     pub fn push_thresh(&mut self) -> PUSH_THRESH_W<SM_SHIFTCTRL_SPEC> {
         PUSH_THRESH_W::new(self, 20)
     }
-    #[doc = "Bits 25:29 - Number of bits shifted out of OSR before autopull, or conditional pull (PULL IFEMPTY), will take place.  
- Write 0 for value of 32."]
+    #[doc = "Bits 25:29 - Number of bits shifted out of OSR before autopull, or conditional pull (PULL IFEMPTY), will take place. Write 0 for value of 32."]
     #[inline(always)]
     #[must_use]
     pub fn pull_thresh(&mut self) -> PULL_THRESH_W<SM_SHIFTCTRL_SPEC> {
         PULL_THRESH_W::new(self, 25)
     }
-    #[doc = "Bit 30 - When 1, TX FIFO steals the RX FIFO's storage, and becomes twice as deep.  
- RX FIFO is disabled as a result (always reads as both full and empty).  
- FIFOs are flushed when this bit is changed."]
+    #[doc = "Bit 30 - When 1, TX FIFO steals the RX FIFO's storage, and becomes twice as deep. RX FIFO is disabled as a result (always reads as both full and empty). FIFOs are flushed when this bit is changed."]
     #[inline(always)]
     #[must_use]
     pub fn fjoin_tx(&mut self) -> FJOIN_TX_W<SM_SHIFTCTRL_SPEC> {
         FJOIN_TX_W::new(self, 30)
     }
-    #[doc = "Bit 31 - When 1, RX FIFO steals the TX FIFO's storage, and becomes twice as deep.  
- TX FIFO is disabled as a result (always reads as both full and empty).  
- FIFOs are flushed when this bit is changed."]
+    #[doc = "Bit 31 - When 1, RX FIFO steals the TX FIFO's storage, and becomes twice as deep. TX FIFO is disabled as a result (always reads as both full and empty). FIFOs are flushed when this bit is changed."]
     #[inline(always)]
     #[must_use]
     pub fn fjoin_rx(&mut self) -> FJOIN_RX_W<SM_SHIFTCTRL_SPEC> {

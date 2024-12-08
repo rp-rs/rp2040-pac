@@ -10,33 +10,33 @@ pub type DP_PULLUP_HISEL_OVERRIDE_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 pub type DM_PULLUP_HISEL_OVERRIDE_EN_R = crate::BitReader;
 #[doc = "Field `DM_PULLUP_HISEL_OVERRIDE_EN` writer - "]
 pub type DM_PULLUP_HISEL_OVERRIDE_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `DP_PULLUP_EN_OVERRIDE_EN` reader - "]
+#[doc = "Field `DP_PULLUP_EN_OVERRIDE_EN` reader - Override default value or value driven from USB Controller to PHY"]
 pub type DP_PULLUP_EN_OVERRIDE_EN_R = crate::BitReader;
-#[doc = "Field `DP_PULLUP_EN_OVERRIDE_EN` writer - "]
+#[doc = "Field `DP_PULLUP_EN_OVERRIDE_EN` writer - Override default value or value driven from USB Controller to PHY"]
 pub type DP_PULLUP_EN_OVERRIDE_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `DP_PULLDN_EN_OVERRIDE_EN` reader - "]
+#[doc = "Field `DP_PULLDN_EN_OVERRIDE_EN` reader - Override default value or value driven from USB Controller to PHY"]
 pub type DP_PULLDN_EN_OVERRIDE_EN_R = crate::BitReader;
-#[doc = "Field `DP_PULLDN_EN_OVERRIDE_EN` writer - "]
+#[doc = "Field `DP_PULLDN_EN_OVERRIDE_EN` writer - Override default value or value driven from USB Controller to PHY"]
 pub type DP_PULLDN_EN_OVERRIDE_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `DM_PULLDN_EN_OVERRIDE_EN` reader - "]
+#[doc = "Field `DM_PULLDN_EN_OVERRIDE_EN` reader - Override default value or value driven from USB Controller to PHY"]
 pub type DM_PULLDN_EN_OVERRIDE_EN_R = crate::BitReader;
-#[doc = "Field `DM_PULLDN_EN_OVERRIDE_EN` writer - "]
+#[doc = "Field `DM_PULLDN_EN_OVERRIDE_EN` writer - Override default value or value driven from USB Controller to PHY"]
 pub type DM_PULLDN_EN_OVERRIDE_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `TX_DP_OE_OVERRIDE_EN` reader - "]
+#[doc = "Field `TX_DP_OE_OVERRIDE_EN` reader - Override default value or value driven from USB Controller to PHY"]
 pub type TX_DP_OE_OVERRIDE_EN_R = crate::BitReader;
-#[doc = "Field `TX_DP_OE_OVERRIDE_EN` writer - "]
+#[doc = "Field `TX_DP_OE_OVERRIDE_EN` writer - Override default value or value driven from USB Controller to PHY"]
 pub type TX_DP_OE_OVERRIDE_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `TX_DM_OE_OVERRIDE_EN` reader - "]
+#[doc = "Field `TX_DM_OE_OVERRIDE_EN` reader - Override default value or value driven from USB Controller to PHY"]
 pub type TX_DM_OE_OVERRIDE_EN_R = crate::BitReader;
-#[doc = "Field `TX_DM_OE_OVERRIDE_EN` writer - "]
+#[doc = "Field `TX_DM_OE_OVERRIDE_EN` writer - Override default value or value driven from USB Controller to PHY"]
 pub type TX_DM_OE_OVERRIDE_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `TX_DP_OVERRIDE_EN` reader - "]
+#[doc = "Field `TX_DP_OVERRIDE_EN` reader - Override default value or value driven from USB Controller to PHY"]
 pub type TX_DP_OVERRIDE_EN_R = crate::BitReader;
-#[doc = "Field `TX_DP_OVERRIDE_EN` writer - "]
+#[doc = "Field `TX_DP_OVERRIDE_EN` writer - Override default value or value driven from USB Controller to PHY"]
 pub type TX_DP_OVERRIDE_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `TX_DM_OVERRIDE_EN` reader - "]
+#[doc = "Field `TX_DM_OVERRIDE_EN` reader - Override default value or value driven from USB Controller to PHY"]
 pub type TX_DM_OVERRIDE_EN_R = crate::BitReader;
-#[doc = "Field `TX_DM_OVERRIDE_EN` writer - "]
+#[doc = "Field `TX_DM_OVERRIDE_EN` writer - Override default value or value driven from USB Controller to PHY"]
 pub type TX_DM_OVERRIDE_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `RX_PD_OVERRIDE_EN` reader - "]
 pub type RX_PD_OVERRIDE_EN_R = crate::BitReader;
@@ -69,37 +69,37 @@ impl R {
     pub fn dm_pullup_hisel_override_en(&self) -> DM_PULLUP_HISEL_OVERRIDE_EN_R {
         DM_PULLUP_HISEL_OVERRIDE_EN_R::new(((self.bits >> 1) & 1) != 0)
     }
-    #[doc = "Bit 2"]
+    #[doc = "Bit 2 - Override default value or value driven from USB Controller to PHY"]
     #[inline(always)]
     pub fn dp_pullup_en_override_en(&self) -> DP_PULLUP_EN_OVERRIDE_EN_R {
         DP_PULLUP_EN_OVERRIDE_EN_R::new(((self.bits >> 2) & 1) != 0)
     }
-    #[doc = "Bit 3"]
+    #[doc = "Bit 3 - Override default value or value driven from USB Controller to PHY"]
     #[inline(always)]
     pub fn dp_pulldn_en_override_en(&self) -> DP_PULLDN_EN_OVERRIDE_EN_R {
         DP_PULLDN_EN_OVERRIDE_EN_R::new(((self.bits >> 3) & 1) != 0)
     }
-    #[doc = "Bit 4"]
+    #[doc = "Bit 4 - Override default value or value driven from USB Controller to PHY"]
     #[inline(always)]
     pub fn dm_pulldn_en_override_en(&self) -> DM_PULLDN_EN_OVERRIDE_EN_R {
         DM_PULLDN_EN_OVERRIDE_EN_R::new(((self.bits >> 4) & 1) != 0)
     }
-    #[doc = "Bit 5"]
+    #[doc = "Bit 5 - Override default value or value driven from USB Controller to PHY"]
     #[inline(always)]
     pub fn tx_dp_oe_override_en(&self) -> TX_DP_OE_OVERRIDE_EN_R {
         TX_DP_OE_OVERRIDE_EN_R::new(((self.bits >> 5) & 1) != 0)
     }
-    #[doc = "Bit 6"]
+    #[doc = "Bit 6 - Override default value or value driven from USB Controller to PHY"]
     #[inline(always)]
     pub fn tx_dm_oe_override_en(&self) -> TX_DM_OE_OVERRIDE_EN_R {
         TX_DM_OE_OVERRIDE_EN_R::new(((self.bits >> 6) & 1) != 0)
     }
-    #[doc = "Bit 7"]
+    #[doc = "Bit 7 - Override default value or value driven from USB Controller to PHY"]
     #[inline(always)]
     pub fn tx_dp_override_en(&self) -> TX_DP_OVERRIDE_EN_R {
         TX_DP_OVERRIDE_EN_R::new(((self.bits >> 7) & 1) != 0)
     }
-    #[doc = "Bit 8"]
+    #[doc = "Bit 8 - Override default value or value driven from USB Controller to PHY"]
     #[inline(always)]
     pub fn tx_dm_override_en(&self) -> TX_DM_OVERRIDE_EN_R {
         TX_DM_OVERRIDE_EN_R::new(((self.bits >> 8) & 1) != 0)
@@ -147,7 +147,7 @@ impl W {
     ) -> DM_PULLUP_HISEL_OVERRIDE_EN_W<USBPHY_DIRECT_OVERRIDE_SPEC> {
         DM_PULLUP_HISEL_OVERRIDE_EN_W::new(self, 1)
     }
-    #[doc = "Bit 2"]
+    #[doc = "Bit 2 - Override default value or value driven from USB Controller to PHY"]
     #[inline(always)]
     #[must_use]
     pub fn dp_pullup_en_override_en(
@@ -155,7 +155,7 @@ impl W {
     ) -> DP_PULLUP_EN_OVERRIDE_EN_W<USBPHY_DIRECT_OVERRIDE_SPEC> {
         DP_PULLUP_EN_OVERRIDE_EN_W::new(self, 2)
     }
-    #[doc = "Bit 3"]
+    #[doc = "Bit 3 - Override default value or value driven from USB Controller to PHY"]
     #[inline(always)]
     #[must_use]
     pub fn dp_pulldn_en_override_en(
@@ -163,7 +163,7 @@ impl W {
     ) -> DP_PULLDN_EN_OVERRIDE_EN_W<USBPHY_DIRECT_OVERRIDE_SPEC> {
         DP_PULLDN_EN_OVERRIDE_EN_W::new(self, 3)
     }
-    #[doc = "Bit 4"]
+    #[doc = "Bit 4 - Override default value or value driven from USB Controller to PHY"]
     #[inline(always)]
     #[must_use]
     pub fn dm_pulldn_en_override_en(
@@ -171,25 +171,25 @@ impl W {
     ) -> DM_PULLDN_EN_OVERRIDE_EN_W<USBPHY_DIRECT_OVERRIDE_SPEC> {
         DM_PULLDN_EN_OVERRIDE_EN_W::new(self, 4)
     }
-    #[doc = "Bit 5"]
+    #[doc = "Bit 5 - Override default value or value driven from USB Controller to PHY"]
     #[inline(always)]
     #[must_use]
     pub fn tx_dp_oe_override_en(&mut self) -> TX_DP_OE_OVERRIDE_EN_W<USBPHY_DIRECT_OVERRIDE_SPEC> {
         TX_DP_OE_OVERRIDE_EN_W::new(self, 5)
     }
-    #[doc = "Bit 6"]
+    #[doc = "Bit 6 - Override default value or value driven from USB Controller to PHY"]
     #[inline(always)]
     #[must_use]
     pub fn tx_dm_oe_override_en(&mut self) -> TX_DM_OE_OVERRIDE_EN_W<USBPHY_DIRECT_OVERRIDE_SPEC> {
         TX_DM_OE_OVERRIDE_EN_W::new(self, 6)
     }
-    #[doc = "Bit 7"]
+    #[doc = "Bit 7 - Override default value or value driven from USB Controller to PHY"]
     #[inline(always)]
     #[must_use]
     pub fn tx_dp_override_en(&mut self) -> TX_DP_OVERRIDE_EN_W<USBPHY_DIRECT_OVERRIDE_SPEC> {
         TX_DP_OVERRIDE_EN_W::new(self, 7)
     }
-    #[doc = "Bit 8"]
+    #[doc = "Bit 8 - Override default value or value driven from USB Controller to PHY"]
     #[inline(always)]
     #[must_use]
     pub fn tx_dm_override_en(&mut self) -> TX_DM_OVERRIDE_EN_W<USBPHY_DIRECT_OVERRIDE_SPEC> {
@@ -232,7 +232,7 @@ impl W {
         TX_DIFFMODE_OVERRIDE_EN_W::new(self, 15)
     }
 }
-#[doc = "Override enable for each control in usbphy_direct  
+#[doc = "  
 
 You can [`read`](crate::generic::Reg::read) this register and get [`usbphy_direct_override::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`usbphy_direct_override::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct USBPHY_DIRECT_OVERRIDE_SPEC;

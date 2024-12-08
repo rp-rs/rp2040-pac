@@ -21,11 +21,7 @@ impl W {
         PROC_IN_SYNC_BYPASS_W::new(self, 0)
     }
 }
-#[doc = "For each bit, if 1, bypass the input synchronizer between that GPIO  
- and the GPIO input register in the SIO. The input synchronizers should  
- generally be unbypassed, to avoid injecting metastabilities into processors.  
- If you're feeling brave, you can bypass to save two cycles of input  
- latency. This register applies to GPIO 0...29.  
+#[doc = "For each bit, if 1, bypass the input synchronizer between that GPIO and the GPIO input register in the SIO. The input synchronizers should generally be unbypassed, to avoid injecting metastabilities into processors. If you're feeling brave, you can bypass to save two cycles of input latency. This register applies to GPIO 0...29.  
 
 You can [`read`](crate::generic::Reg::read) this register and get [`proc_in_sync_bypass::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`proc_in_sync_bypass::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct PROC_IN_SYNC_BYPASS_SPEC;

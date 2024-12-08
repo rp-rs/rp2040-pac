@@ -2,7 +2,9 @@
 pub type R = crate::R<UARTDR_SPEC>;
 #[doc = "Register `UARTDR` writer"]
 pub type W = crate::W<UARTDR_SPEC>;
-#[doc = "Field `DATA` reader - Receive (read) data character. Transmit (write) data character."]
+#[doc = "Field `DATA` reader - Receive (read) data character. Transmit (write) data character.  
+
+The field is **modified** in some way after a read operation."]
 pub type DATA_R = crate::FieldReader;
 #[doc = "Field `DATA` writer - Receive (read) data character. Transmit (write) data character."]
 pub type DATA_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;

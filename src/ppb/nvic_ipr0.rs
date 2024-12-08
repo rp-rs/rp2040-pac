@@ -66,9 +66,7 @@ impl W {
         IP_3_W::new(self, 30)
     }
 }
-#[doc = "Use the Interrupt Priority Registers to assign a priority from 0 to 3 to each of the available interrupts. 0 is the highest priority, and 3 is the lowest.  
- Note: Writing 1 to an NVIC_ICPR bit does not affect the active state of the corresponding interrupt.  
- These registers are only word-accessible  
+#[doc = "Use the Interrupt Priority Registers to assign a priority from 0 to 3 to each of the available interrupts. 0 is the highest priority, and 3 is the lowest. Note: Writing 1 to an NVIC_ICPR bit does not affect the active state of the corresponding interrupt. These registers are only word-accessible  
 
 You can [`read`](crate::generic::Reg::read) this register and get [`nvic_ipr0::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`nvic_ipr0::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct NVIC_IPR0_SPEC;
