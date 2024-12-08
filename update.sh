@@ -9,7 +9,7 @@ cargo install --version 0.33.4 svd2rust --locked
 cargo install --version 0.12.1 form --locked
 rustup component add rustfmt
 if [ "$SVDTOOLS" == "svdtools" ]; then
-    cargo install --version 0.3.17 svdtools --locked
+    cargo install --version 0.3.20 svdtools --locked
 else
     python3 -mvenv --clear .venv
     source .venv/bin/activate
