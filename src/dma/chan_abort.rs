@@ -34,7 +34,7 @@ impl crate::Readable for CHAN_ABORT_SPEC {}
 impl crate::Writable for CHAN_ABORT_SPEC {
     type Safety = crate::Unsafe;
     const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
-    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0xffff;
 }
 #[doc = "`reset()` method sets CHAN_ABORT to value 0"]
 impl crate::Resettable for CHAN_ABORT_SPEC {
