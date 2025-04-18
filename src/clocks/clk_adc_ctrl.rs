@@ -123,17 +123,13 @@ pub type KILL_W<'a, REG> = crate::BitWriter<'a, REG>;
 pub type ENABLE_R = crate::BitReader;
 #[doc = "Field `ENABLE` writer - Starts and stops the clock generator cleanly"]
 pub type ENABLE_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `PHASE` reader - This delays the enable signal by up to 3 cycles of the input clock  
- This must be set before the clock is enabled to have any effect"]
+#[doc = "Field `PHASE` reader - This delays the enable signal by up to 3 cycles of the input clock This must be set before the clock is enabled to have any effect"]
 pub type PHASE_R = crate::FieldReader;
-#[doc = "Field `PHASE` writer - This delays the enable signal by up to 3 cycles of the input clock  
- This must be set before the clock is enabled to have any effect"]
+#[doc = "Field `PHASE` writer - This delays the enable signal by up to 3 cycles of the input clock This must be set before the clock is enabled to have any effect"]
 pub type PHASE_W<'a, REG> = crate::FieldWriter<'a, REG, 2>;
-#[doc = "Field `NUDGE` reader - An edge on this signal shifts the phase of the output by 1 cycle of the input clock  
- This can be done at any time"]
+#[doc = "Field `NUDGE` reader - An edge on this signal shifts the phase of the output by 1 cycle of the input clock This can be done at any time"]
 pub type NUDGE_R = crate::BitReader;
-#[doc = "Field `NUDGE` writer - An edge on this signal shifts the phase of the output by 1 cycle of the input clock  
- This can be done at any time"]
+#[doc = "Field `NUDGE` writer - An edge on this signal shifts the phase of the output by 1 cycle of the input clock This can be done at any time"]
 pub type NUDGE_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
     #[doc = "Bits 5:7 - Selects the auxiliary clock source, will glitch when switching"]
@@ -151,14 +147,12 @@ impl R {
     pub fn enable(&self) -> ENABLE_R {
         ENABLE_R::new(((self.bits >> 11) & 1) != 0)
     }
-    #[doc = "Bits 16:17 - This delays the enable signal by up to 3 cycles of the input clock  
- This must be set before the clock is enabled to have any effect"]
+    #[doc = "Bits 16:17 - This delays the enable signal by up to 3 cycles of the input clock This must be set before the clock is enabled to have any effect"]
     #[inline(always)]
     pub fn phase(&self) -> PHASE_R {
         PHASE_R::new(((self.bits >> 16) & 3) as u8)
     }
-    #[doc = "Bit 20 - An edge on this signal shifts the phase of the output by 1 cycle of the input clock  
- This can be done at any time"]
+    #[doc = "Bit 20 - An edge on this signal shifts the phase of the output by 1 cycle of the input clock This can be done at any time"]
     #[inline(always)]
     pub fn nudge(&self) -> NUDGE_R {
         NUDGE_R::new(((self.bits >> 20) & 1) != 0)
@@ -183,15 +177,13 @@ impl W {
     pub fn enable(&mut self) -> ENABLE_W<CLK_ADC_CTRL_SPEC> {
         ENABLE_W::new(self, 11)
     }
-    #[doc = "Bits 16:17 - This delays the enable signal by up to 3 cycles of the input clock  
- This must be set before the clock is enabled to have any effect"]
+    #[doc = "Bits 16:17 - This delays the enable signal by up to 3 cycles of the input clock This must be set before the clock is enabled to have any effect"]
     #[inline(always)]
     #[must_use]
     pub fn phase(&mut self) -> PHASE_W<CLK_ADC_CTRL_SPEC> {
         PHASE_W::new(self, 16)
     }
-    #[doc = "Bit 20 - An edge on this signal shifts the phase of the output by 1 cycle of the input clock  
- This can be done at any time"]
+    #[doc = "Bit 20 - An edge on this signal shifts the phase of the output by 1 cycle of the input clock This can be done at any time"]
     #[inline(always)]
     #[must_use]
     pub fn nudge(&mut self) -> NUDGE_W<CLK_ADC_CTRL_SPEC> {

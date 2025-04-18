@@ -51,7 +51,7 @@ impl crate::Writable for STARTUP_SPEC {
     const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
     const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
 }
-#[doc = "`reset()` method sets STARTUP to value 0xc4"]
+#[doc = "`reset()` method sets STARTUP to value 0"]
 impl crate::Resettable for STARTUP_SPEC {
-    const RESET_VALUE: u32 = 0xc4;
+    const RESET_VALUE: u32 = 0;
 }

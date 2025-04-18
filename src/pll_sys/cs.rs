@@ -2,13 +2,9 @@
 pub type R = crate::R<CS_SPEC>;
 #[doc = "Register `CS` writer"]
 pub type W = crate::W<CS_SPEC>;
-#[doc = "Field `REFDIV` reader - Divides the PLL input reference clock.  
- Behaviour is undefined for div=0.  
- PLL output will be unpredictable during refdiv changes, wait for lock=1 before using it."]
+#[doc = "Field `REFDIV` reader - Divides the PLL input reference clock. Behaviour is undefined for div=0. PLL output will be unpredictable during refdiv changes, wait for lock=1 before using it."]
 pub type REFDIV_R = crate::FieldReader;
-#[doc = "Field `REFDIV` writer - Divides the PLL input reference clock.  
- Behaviour is undefined for div=0.  
- PLL output will be unpredictable during refdiv changes, wait for lock=1 before using it."]
+#[doc = "Field `REFDIV` writer - Divides the PLL input reference clock. Behaviour is undefined for div=0. PLL output will be unpredictable during refdiv changes, wait for lock=1 before using it."]
 pub type REFDIV_W<'a, REG> = crate::FieldWriter<'a, REG, 6>;
 #[doc = "Field `BYPASS` reader - Passes the reference clock to the output instead of the divided VCO. The VCO continues to run so the user can switch between the reference clock and the divided VCO but the output will glitch when doing so."]
 pub type BYPASS_R = crate::BitReader;
@@ -17,9 +13,7 @@ pub type BYPASS_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `LOCK` reader - PLL is locked"]
 pub type LOCK_R = crate::BitReader;
 impl R {
-    #[doc = "Bits 0:5 - Divides the PLL input reference clock.  
- Behaviour is undefined for div=0.  
- PLL output will be unpredictable during refdiv changes, wait for lock=1 before using it."]
+    #[doc = "Bits 0:5 - Divides the PLL input reference clock. Behaviour is undefined for div=0. PLL output will be unpredictable during refdiv changes, wait for lock=1 before using it."]
     #[inline(always)]
     pub fn refdiv(&self) -> REFDIV_R {
         REFDIV_R::new((self.bits & 0x3f) as u8)
@@ -36,9 +30,7 @@ impl R {
     }
 }
 impl W {
-    #[doc = "Bits 0:5 - Divides the PLL input reference clock.  
- Behaviour is undefined for div=0.  
- PLL output will be unpredictable during refdiv changes, wait for lock=1 before using it."]
+    #[doc = "Bits 0:5 - Divides the PLL input reference clock. Behaviour is undefined for div=0. PLL output will be unpredictable during refdiv changes, wait for lock=1 before using it."]
     #[inline(always)]
     #[must_use]
     pub fn refdiv(&mut self) -> REFDIV_W<CS_SPEC> {
@@ -51,11 +43,7 @@ impl W {
         BYPASS_W::new(self, 8)
     }
 }
-#[doc = "Control and Status  
- GENERAL CONSTRAINTS:  
- Reference clock frequency min=5MHz, max=800MHz  
- Feedback divider min=16, max=320  
- VCO frequency min=750MHz, max=1600MHz  
+#[doc = "Control and Status GENERAL CONSTRAINTS: Reference clock frequency min=5MHz, max=800MHz Feedback divider min=16, max=320 VCO frequency min=750MHz, max=1600MHz  
 
 You can [`read`](crate::generic::Reg::read) this register and get [`cs::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`cs::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct CS_SPEC;

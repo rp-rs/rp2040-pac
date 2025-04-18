@@ -55,9 +55,9 @@ module"]
 pub type WDSEL = crate::Reg<wdsel::WDSEL_SPEC>;
 #[doc = "Set to 1 if this peripheral should be reset when the watchdog fires."]
 pub mod wdsel;
-#[doc = "DONE (r) register accessor: Indicates the peripheral's registers are ready to access.  
+#[doc = "DONE (rw) register accessor: Indicates the peripheral's registers are ready to access.  
 
-You can [`read`](crate::generic::Reg::read) this register and get [`done::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+You can [`read`](crate::generic::Reg::read) this register and get [`done::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`done::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
 
 For information about available fields see [`mod@done`]
 module"]

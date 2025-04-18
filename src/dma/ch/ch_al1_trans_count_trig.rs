@@ -2,20 +2,28 @@
 pub type R = crate::R<CH_AL1_TRANS_COUNT_TRIG_SPEC>;
 #[doc = "Register `CH_AL1_TRANS_COUNT_TRIG` writer"]
 pub type W = crate::W<CH_AL1_TRANS_COUNT_TRIG_SPEC>;
-impl core::fmt::Debug for R {
-    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        write!(f, "{}", self.bits())
+#[doc = "Field `CH0_AL1_TRANS_COUNT_TRIG` reader - "]
+pub type CH0_AL1_TRANS_COUNT_TRIG_R = crate::FieldReader<u32>;
+#[doc = "Field `CH0_AL1_TRANS_COUNT_TRIG` writer - "]
+pub type CH0_AL1_TRANS_COUNT_TRIG_W<'a, REG> = crate::FieldWriter<'a, REG, 32, u32>;
+impl R {
+    #[doc = "Bits 0:31"]
+    #[inline(always)]
+    pub fn ch0_al1_trans_count_trig(&self) -> CH0_AL1_TRANS_COUNT_TRIG_R {
+        CH0_AL1_TRANS_COUNT_TRIG_R::new(self.bits)
     }
 }
-impl core::fmt::Debug for crate::generic::Reg<CH_AL1_TRANS_COUNT_TRIG_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
+impl W {
+    #[doc = "Bits 0:31"]
+    #[inline(always)]
+    #[must_use]
+    pub fn ch0_al1_trans_count_trig(
+        &mut self,
+    ) -> CH0_AL1_TRANS_COUNT_TRIG_W<CH_AL1_TRANS_COUNT_TRIG_SPEC> {
+        CH0_AL1_TRANS_COUNT_TRIG_W::new(self, 0)
     }
 }
-impl W {}
-#[doc = "Alias for channel 0 TRANS_COUNT register  
- This is a trigger register (0xc). Writing a nonzero value will  
- reload the channel counter and start the channel.  
+#[doc = "Alias for channel 0 TRANS_COUNT register This is a trigger register (0xc). Writing a nonzero value will reload the channel counter and start the channel.  
 
 You can [`read`](crate::generic::Reg::read) this register and get [`ch_al1_trans_count_trig::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`ch_al1_trans_count_trig::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct CH_AL1_TRANS_COUNT_TRIG_SPEC;

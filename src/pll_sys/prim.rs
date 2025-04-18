@@ -36,9 +36,7 @@ impl W {
         POSTDIV1_W::new(self, 16)
     }
 }
-#[doc = "Controls the PLL post dividers for the primary output  
- (note: this PLL does not have a secondary output)  
- the primary output is driven from VCO divided by postdiv1*postdiv2  
+#[doc = "Controls the PLL post dividers for the primary output (note: this PLL does not have a secondary output) the primary output is driven from VCO divided by postdiv1*postdiv2  
 
 You can [`read`](crate::generic::Reg::read) this register and get [`prim::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`prim::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct PRIM_SPEC;

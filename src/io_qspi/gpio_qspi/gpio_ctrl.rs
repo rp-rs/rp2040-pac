@@ -2,8 +2,7 @@
 pub type R = crate::R<GPIO_CTRL_SPEC>;
 #[doc = "Register `GPIO_CTRL` writer"]
 pub type W = crate::W<GPIO_CTRL_SPEC>;
-#[doc = "0-31 -> selects pin function according to the gpio table  
- 31 == NULL  
+#[doc = "0-31 -> selects pin function according to the gpio table 31 == NULL  
 
 Value on reset: 31"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
@@ -25,8 +24,7 @@ impl From<FUNCSEL_A> for u8 {
 impl crate::FieldSpec for FUNCSEL_A {
     type Ux = u8;
 }
-#[doc = "Field `FUNCSEL` reader - 0-31 -> selects pin function according to the gpio table  
- 31 == NULL"]
+#[doc = "Field `FUNCSEL` reader - 0-31 -> selects pin function according to the gpio table 31 == NULL"]
 pub type FUNCSEL_R = crate::FieldReader<FUNCSEL_A>;
 impl FUNCSEL_R {
     #[doc = "Get enumerated values variant"]
@@ -55,8 +53,7 @@ impl FUNCSEL_R {
         *self == FUNCSEL_A::NULL
     }
 }
-#[doc = "Field `FUNCSEL` writer - 0-31 -> selects pin function according to the gpio table  
- 31 == NULL"]
+#[doc = "Field `FUNCSEL` writer - 0-31 -> selects pin function according to the gpio table 31 == NULL"]
 pub type FUNCSEL_W<'a, REG> = crate::FieldWriter<'a, REG, 5, FUNCSEL_A>;
 impl<'a, REG> FUNCSEL_W<'a, REG>
 where
@@ -428,8 +425,7 @@ where
     }
 }
 impl R {
-    #[doc = "Bits 0:4 - 0-31 -> selects pin function according to the gpio table  
- 31 == NULL"]
+    #[doc = "Bits 0:4 - 0-31 -> selects pin function according to the gpio table 31 == NULL"]
     #[inline(always)]
     pub fn funcsel(&self) -> FUNCSEL_R {
         FUNCSEL_R::new((self.bits & 0x1f) as u8)
@@ -456,8 +452,7 @@ impl R {
     }
 }
 impl W {
-    #[doc = "Bits 0:4 - 0-31 -> selects pin function according to the gpio table  
- 31 == NULL"]
+    #[doc = "Bits 0:4 - 0-31 -> selects pin function according to the gpio table 31 == NULL"]
     #[inline(always)]
     #[must_use]
     pub fn funcsel(&mut self) -> FUNCSEL_W<GPIO_CTRL_SPEC> {

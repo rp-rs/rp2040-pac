@@ -73,9 +73,9 @@ module"]
 pub type BUS_PRIORITY = crate::Reg<bus_priority::BUS_PRIORITY_SPEC>;
 #[doc = "Set the priority of each master for bus arbitration."]
 pub mod bus_priority;
-#[doc = "BUS_PRIORITY_ACK (r) register accessor: Bus priority acknowledge  
+#[doc = "BUS_PRIORITY_ACK (rw) register accessor: Bus priority acknowledge  
 
-You can [`read`](crate::generic::Reg::read) this register and get [`bus_priority_ack::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+You can [`read`](crate::generic::Reg::read) this register and get [`bus_priority_ack::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`bus_priority_ack::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
 
 For information about available fields see [`mod@bus_priority_ack`]
 module"]

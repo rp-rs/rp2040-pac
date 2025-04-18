@@ -1,24 +1,32 @@
 #[doc = "Register `INTERP0_PEEK_FULL` reader"]
 pub type R = crate::R<INTERP0_PEEK_FULL_SPEC>;
-impl core::fmt::Debug for R {
-    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        write!(f, "{}", self.bits())
+#[doc = "Register `INTERP0_PEEK_FULL` writer"]
+pub type W = crate::W<INTERP0_PEEK_FULL_SPEC>;
+#[doc = "Field `INTERP0_PEEK_FULL` reader - "]
+pub type INTERP0_PEEK_FULL_R = crate::FieldReader<u32>;
+impl R {
+    #[doc = "Bits 0:31"]
+    #[inline(always)]
+    pub fn interp0_peek_full(&self) -> INTERP0_PEEK_FULL_R {
+        INTERP0_PEEK_FULL_R::new(self.bits)
     }
 }
-impl core::fmt::Debug for crate::generic::Reg<INTERP0_PEEK_FULL_SPEC> {
-    fn fmt(&self, f: &mut core::fmt::Formatter<'_>) -> core::fmt::Result {
-        core::fmt::Debug::fmt(&self.read(), f)
-    }
-}
+impl W {}
 #[doc = "Read FULL result, without altering any internal state (PEEK).  
 
-You can [`read`](crate::generic::Reg::read) this register and get [`interp0_peek_full::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+You can [`read`](crate::generic::Reg::read) this register and get [`interp0_peek_full::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`interp0_peek_full::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct INTERP0_PEEK_FULL_SPEC;
 impl crate::RegisterSpec for INTERP0_PEEK_FULL_SPEC {
     type Ux = u32;
 }
 #[doc = "`read()` method returns [`interp0_peek_full::R`](R) reader structure"]
 impl crate::Readable for INTERP0_PEEK_FULL_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`interp0_peek_full::W`](W) writer structure"]
+impl crate::Writable for INTERP0_PEEK_FULL_SPEC {
+    type Safety = crate::Unsafe;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+}
 #[doc = "`reset()` method sets INTERP0_PEEK_FULL to value 0"]
 impl crate::Resettable for INTERP0_PEEK_FULL_SPEC {
     const RESET_VALUE: u32 = 0;

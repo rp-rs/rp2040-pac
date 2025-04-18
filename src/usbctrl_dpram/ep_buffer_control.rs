@@ -38,8 +38,7 @@ pub type LENGTH_1_W<'a, REG> = crate::FieldWriter<'a, REG, 10, u16>;
 pub type AVAILABLE_1_R = crate::BitReader;
 #[doc = "Field `AVAILABLE_1` writer - Buffer 1 is available. This bit is set to indicate the buffer can be used by the controller. The controller clears the available bit when writing the status back."]
 pub type AVAILABLE_1_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "The number of bytes buffer 1 is offset from buffer 0 in Isochronous mode. Only valid in double buffered mode for an Isochronous endpoint.  
- For a non Isochronous endpoint the offset is always 64 bytes.  
+#[doc = "The number of bytes buffer 1 is offset from buffer 0 in Isochronous mode. Only valid in double buffered mode for an Isochronous endpoint. For a non Isochronous endpoint the offset is always 64 bytes.  
 
 Value on reset: 0"]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
@@ -63,8 +62,7 @@ impl From<DOUBLE_BUFFER_ISO_OFFSET_A> for u8 {
 impl crate::FieldSpec for DOUBLE_BUFFER_ISO_OFFSET_A {
     type Ux = u8;
 }
-#[doc = "Field `DOUBLE_BUFFER_ISO_OFFSET` reader - The number of bytes buffer 1 is offset from buffer 0 in Isochronous mode. Only valid in double buffered mode for an Isochronous endpoint.  
- For a non Isochronous endpoint the offset is always 64 bytes."]
+#[doc = "Field `DOUBLE_BUFFER_ISO_OFFSET` reader - The number of bytes buffer 1 is offset from buffer 0 in Isochronous mode. Only valid in double buffered mode for an Isochronous endpoint. For a non Isochronous endpoint the offset is always 64 bytes."]
 pub type DOUBLE_BUFFER_ISO_OFFSET_R = crate::FieldReader<DOUBLE_BUFFER_ISO_OFFSET_A>;
 impl DOUBLE_BUFFER_ISO_OFFSET_R {
     #[doc = "Get enumerated values variant"]
@@ -99,8 +97,7 @@ impl DOUBLE_BUFFER_ISO_OFFSET_R {
         *self == DOUBLE_BUFFER_ISO_OFFSET_A::_1024
     }
 }
-#[doc = "Field `DOUBLE_BUFFER_ISO_OFFSET` writer - The number of bytes buffer 1 is offset from buffer 0 in Isochronous mode. Only valid in double buffered mode for an Isochronous endpoint.  
- For a non Isochronous endpoint the offset is always 64 bytes."]
+#[doc = "Field `DOUBLE_BUFFER_ISO_OFFSET` writer - The number of bytes buffer 1 is offset from buffer 0 in Isochronous mode. Only valid in double buffered mode for an Isochronous endpoint. For a non Isochronous endpoint the offset is always 64 bytes."]
 pub type DOUBLE_BUFFER_ISO_OFFSET_W<'a, REG> =
     crate::FieldWriterSafe<'a, REG, 2, DOUBLE_BUFFER_ISO_OFFSET_A>;
 impl<'a, REG> DOUBLE_BUFFER_ISO_OFFSET_W<'a, REG>
@@ -187,8 +184,7 @@ impl R {
     pub fn available_1(&self) -> AVAILABLE_1_R {
         AVAILABLE_1_R::new(((self.bits >> 26) & 1) != 0)
     }
-    #[doc = "Bits 27:28 - The number of bytes buffer 1 is offset from buffer 0 in Isochronous mode. Only valid in double buffered mode for an Isochronous endpoint.  
- For a non Isochronous endpoint the offset is always 64 bytes."]
+    #[doc = "Bits 27:28 - The number of bytes buffer 1 is offset from buffer 0 in Isochronous mode. Only valid in double buffered mode for an Isochronous endpoint. For a non Isochronous endpoint the offset is always 64 bytes."]
     #[inline(always)]
     pub fn double_buffer_iso_offset(&self) -> DOUBLE_BUFFER_ISO_OFFSET_R {
         DOUBLE_BUFFER_ISO_OFFSET_R::new(((self.bits >> 27) & 3) as u8)
@@ -264,8 +260,7 @@ impl W {
     pub fn available_1(&mut self) -> AVAILABLE_1_W<EP_BUFFER_CONTROL_SPEC> {
         AVAILABLE_1_W::new(self, 26)
     }
-    #[doc = "Bits 27:28 - The number of bytes buffer 1 is offset from buffer 0 in Isochronous mode. Only valid in double buffered mode for an Isochronous endpoint.  
- For a non Isochronous endpoint the offset is always 64 bytes."]
+    #[doc = "Bits 27:28 - The number of bytes buffer 1 is offset from buffer 0 in Isochronous mode. Only valid in double buffered mode for an Isochronous endpoint. For a non Isochronous endpoint the offset is always 64 bytes."]
     #[inline(always)]
     #[must_use]
     pub fn double_buffer_iso_offset(

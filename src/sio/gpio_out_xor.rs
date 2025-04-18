@@ -1,3 +1,5 @@
+#[doc = "Register `GPIO_OUT_XOR` reader"]
+pub type R = crate::R<GPIO_OUT_XOR_SPEC>;
 #[doc = "Register `GPIO_OUT_XOR` writer"]
 pub type W = crate::W<GPIO_OUT_XOR_SPEC>;
 #[doc = "Field `GPIO_OUT_XOR` writer - Perform an atomic bitwise XOR on GPIO_OUT, i.e. `GPIO_OUT ^= wdata`"]
@@ -12,11 +14,13 @@ impl W {
 }
 #[doc = "GPIO output value XOR  
 
-You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`gpio_out_xor::W`](W). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+You can [`read`](crate::generic::Reg::read) this register and get [`gpio_out_xor::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`gpio_out_xor::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct GPIO_OUT_XOR_SPEC;
 impl crate::RegisterSpec for GPIO_OUT_XOR_SPEC {
     type Ux = u32;
 }
+#[doc = "`read()` method returns [`gpio_out_xor::R`](R) reader structure"]
+impl crate::Readable for GPIO_OUT_XOR_SPEC {}
 #[doc = "`write(|w| ..)` method takes [`gpio_out_xor::W`](W) writer structure"]
 impl crate::Writable for GPIO_OUT_XOR_SPEC {
     type Safety = crate::Unsafe;

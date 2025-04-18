@@ -2,35 +2,19 @@
 pub type R = crate::R<GPIO_HI_OE_SPEC>;
 #[doc = "Register `GPIO_HI_OE` writer"]
 pub type W = crate::W<GPIO_HI_OE_SPEC>;
-#[doc = "Field `GPIO_HI_OE` reader - Set output enable (1/0 -> output/input) for QSPI IO0...5.  
- Reading back gives the last value written.  
- If core 0 and core 1 both write to GPIO_HI_OE simultaneously (or to a SET/CLR/XOR alias),  
- the result is as though the write from core 0 took place first,  
- and the write from core 1 was then applied to that intermediate result."]
+#[doc = "Field `GPIO_HI_OE` reader - Set output enable (1/0 -> output/input) for QSPI IO0...5. Reading back gives the last value written. If core 0 and core 1 both write to GPIO_HI_OE simultaneously (or to a SET/CLR/XOR alias), the result is as though the write from core 0 took place first, and the write from core 1 was then applied to that intermediate result."]
 pub type GPIO_HI_OE_R = crate::FieldReader;
-#[doc = "Field `GPIO_HI_OE` writer - Set output enable (1/0 -> output/input) for QSPI IO0...5.  
- Reading back gives the last value written.  
- If core 0 and core 1 both write to GPIO_HI_OE simultaneously (or to a SET/CLR/XOR alias),  
- the result is as though the write from core 0 took place first,  
- and the write from core 1 was then applied to that intermediate result."]
+#[doc = "Field `GPIO_HI_OE` writer - Set output enable (1/0 -> output/input) for QSPI IO0...5. Reading back gives the last value written. If core 0 and core 1 both write to GPIO_HI_OE simultaneously (or to a SET/CLR/XOR alias), the result is as though the write from core 0 took place first, and the write from core 1 was then applied to that intermediate result."]
 pub type GPIO_HI_OE_W<'a, REG> = crate::FieldWriter<'a, REG, 6>;
 impl R {
-    #[doc = "Bits 0:5 - Set output enable (1/0 -> output/input) for QSPI IO0...5.  
- Reading back gives the last value written.  
- If core 0 and core 1 both write to GPIO_HI_OE simultaneously (or to a SET/CLR/XOR alias),  
- the result is as though the write from core 0 took place first,  
- and the write from core 1 was then applied to that intermediate result."]
+    #[doc = "Bits 0:5 - Set output enable (1/0 -> output/input) for QSPI IO0...5. Reading back gives the last value written. If core 0 and core 1 both write to GPIO_HI_OE simultaneously (or to a SET/CLR/XOR alias), the result is as though the write from core 0 took place first, and the write from core 1 was then applied to that intermediate result."]
     #[inline(always)]
     pub fn gpio_hi_oe(&self) -> GPIO_HI_OE_R {
         GPIO_HI_OE_R::new((self.bits & 0x3f) as u8)
     }
 }
 impl W {
-    #[doc = "Bits 0:5 - Set output enable (1/0 -> output/input) for QSPI IO0...5.  
- Reading back gives the last value written.  
- If core 0 and core 1 both write to GPIO_HI_OE simultaneously (or to a SET/CLR/XOR alias),  
- the result is as though the write from core 0 took place first,  
- and the write from core 1 was then applied to that intermediate result."]
+    #[doc = "Bits 0:5 - Set output enable (1/0 -> output/input) for QSPI IO0...5. Reading back gives the last value written. If core 0 and core 1 both write to GPIO_HI_OE simultaneously (or to a SET/CLR/XOR alias), the result is as though the write from core 0 took place first, and the write from core 1 was then applied to that intermediate result."]
     #[inline(always)]
     #[must_use]
     pub fn gpio_hi_oe(&mut self) -> GPIO_HI_OE_W<GPIO_HI_OE_SPEC> {

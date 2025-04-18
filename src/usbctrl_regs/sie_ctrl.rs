@@ -2,8 +2,6 @@
 pub type R = crate::R<SIE_CTRL_SPEC>;
 #[doc = "Register `SIE_CTRL` writer"]
 pub type W = crate::W<SIE_CTRL_SPEC>;
-#[doc = "Field `START_TRANS` reader - Host: Start transaction"]
-pub type START_TRANS_R = crate::BitReader;
 #[doc = "Field `START_TRANS` writer - Host: Start transaction"]
 pub type START_TRANS_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `SEND_SETUP` reader - Host: Send Setup packet"]
@@ -18,8 +16,6 @@ pub type SEND_DATA_W<'a, REG> = crate::BitWriter<'a, REG>;
 pub type RECEIVE_DATA_R = crate::BitReader;
 #[doc = "Field `RECEIVE_DATA` writer - Host: Receive transaction (IN to host)"]
 pub type RECEIVE_DATA_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `STOP_TRANS` reader - Host: Stop transaction"]
-pub type STOP_TRANS_R = crate::BitReader;
 #[doc = "Field `STOP_TRANS` writer - Host: Stop transaction"]
 pub type STOP_TRANS_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PREAMBLE_EN` reader - Host: Preable enable for LS device on FS hub"]
@@ -42,12 +38,8 @@ pub type KEEP_ALIVE_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
 pub type VBUS_EN_R = crate::BitReader;
 #[doc = "Field `VBUS_EN` writer - Host: Enable VBUS"]
 pub type VBUS_EN_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `RESUME` reader - Device: Remote wakeup. Device can initiate its own resume after suspend."]
-pub type RESUME_R = crate::BitReader;
 #[doc = "Field `RESUME` writer - Device: Remote wakeup. Device can initiate its own resume after suspend."]
 pub type RESUME_W<'a, REG> = crate::BitWriter<'a, REG>;
-#[doc = "Field `RESET_BUS` reader - Host: Reset bus"]
-pub type RESET_BUS_R = crate::BitReader;
 #[doc = "Field `RESET_BUS` writer - Host: Reset bus"]
 pub type RESET_BUS_W<'a, REG> = crate::BitWriter<'a, REG>;
 #[doc = "Field `PULLDOWN_EN` reader - Host: Enable pull down resistors"]
@@ -99,11 +91,6 @@ pub type EP0_INT_STALL_R = crate::BitReader;
 #[doc = "Field `EP0_INT_STALL` writer - Device: Set bit in EP_STATUS_STALL_NAK when EP0 sends a STALL"]
 pub type EP0_INT_STALL_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
-    #[doc = "Bit 0 - Host: Start transaction"]
-    #[inline(always)]
-    pub fn start_trans(&self) -> START_TRANS_R {
-        START_TRANS_R::new((self.bits & 1) != 0)
-    }
     #[doc = "Bit 1 - Host: Send Setup packet"]
     #[inline(always)]
     pub fn send_setup(&self) -> SEND_SETUP_R {
@@ -118,11 +105,6 @@ impl R {
     #[inline(always)]
     pub fn receive_data(&self) -> RECEIVE_DATA_R {
         RECEIVE_DATA_R::new(((self.bits >> 3) & 1) != 0)
-    }
-    #[doc = "Bit 4 - Host: Stop transaction"]
-    #[inline(always)]
-    pub fn stop_trans(&self) -> STOP_TRANS_R {
-        STOP_TRANS_R::new(((self.bits >> 4) & 1) != 0)
     }
     #[doc = "Bit 6 - Host: Preable enable for LS device on FS hub"]
     #[inline(always)]
@@ -148,16 +130,6 @@ impl R {
     #[inline(always)]
     pub fn vbus_en(&self) -> VBUS_EN_R {
         VBUS_EN_R::new(((self.bits >> 11) & 1) != 0)
-    }
-    #[doc = "Bit 12 - Device: Remote wakeup. Device can initiate its own resume after suspend."]
-    #[inline(always)]
-    pub fn resume(&self) -> RESUME_R {
-        RESUME_R::new(((self.bits >> 12) & 1) != 0)
-    }
-    #[doc = "Bit 13 - Host: Reset bus"]
-    #[inline(always)]
-    pub fn reset_bus(&self) -> RESET_BUS_R {
-        RESET_BUS_R::new(((self.bits >> 13) & 1) != 0)
     }
     #[doc = "Bit 15 - Host: Enable pull down resistors"]
     #[inline(always)]

@@ -2,35 +2,19 @@
 pub type R = crate::R<GPIO_OUT_SPEC>;
 #[doc = "Register `GPIO_OUT` writer"]
 pub type W = crate::W<GPIO_OUT_SPEC>;
-#[doc = "Field `GPIO_OUT` reader - Set output level (1/0 -> high/low) for GPIO0...29.  
- Reading back gives the last value written, NOT the input value from the pins.  
- If core 0 and core 1 both write to GPIO_OUT simultaneously (or to a SET/CLR/XOR alias),  
- the result is as though the write from core 0 took place first,  
- and the write from core 1 was then applied to that intermediate result."]
+#[doc = "Field `GPIO_OUT` reader - Set output level (1/0 -> high/low) for GPIO0...29. Reading back gives the last value written, NOT the input value from the pins. If core 0 and core 1 both write to GPIO_OUT simultaneously (or to a SET/CLR/XOR alias), the result is as though the write from core 0 took place first, and the write from core 1 was then applied to that intermediate result."]
 pub type GPIO_OUT_R = crate::FieldReader<u32>;
-#[doc = "Field `GPIO_OUT` writer - Set output level (1/0 -> high/low) for GPIO0...29.  
- Reading back gives the last value written, NOT the input value from the pins.  
- If core 0 and core 1 both write to GPIO_OUT simultaneously (or to a SET/CLR/XOR alias),  
- the result is as though the write from core 0 took place first,  
- and the write from core 1 was then applied to that intermediate result."]
+#[doc = "Field `GPIO_OUT` writer - Set output level (1/0 -> high/low) for GPIO0...29. Reading back gives the last value written, NOT the input value from the pins. If core 0 and core 1 both write to GPIO_OUT simultaneously (or to a SET/CLR/XOR alias), the result is as though the write from core 0 took place first, and the write from core 1 was then applied to that intermediate result."]
 pub type GPIO_OUT_W<'a, REG> = crate::FieldWriter<'a, REG, 30, u32>;
 impl R {
-    #[doc = "Bits 0:29 - Set output level (1/0 -> high/low) for GPIO0...29.  
- Reading back gives the last value written, NOT the input value from the pins.  
- If core 0 and core 1 both write to GPIO_OUT simultaneously (or to a SET/CLR/XOR alias),  
- the result is as though the write from core 0 took place first,  
- and the write from core 1 was then applied to that intermediate result."]
+    #[doc = "Bits 0:29 - Set output level (1/0 -> high/low) for GPIO0...29. Reading back gives the last value written, NOT the input value from the pins. If core 0 and core 1 both write to GPIO_OUT simultaneously (or to a SET/CLR/XOR alias), the result is as though the write from core 0 took place first, and the write from core 1 was then applied to that intermediate result."]
     #[inline(always)]
     pub fn gpio_out(&self) -> GPIO_OUT_R {
         GPIO_OUT_R::new(self.bits & 0x3fff_ffff)
     }
 }
 impl W {
-    #[doc = "Bits 0:29 - Set output level (1/0 -> high/low) for GPIO0...29.  
- Reading back gives the last value written, NOT the input value from the pins.  
- If core 0 and core 1 both write to GPIO_OUT simultaneously (or to a SET/CLR/XOR alias),  
- the result is as though the write from core 0 took place first,  
- and the write from core 1 was then applied to that intermediate result."]
+    #[doc = "Bits 0:29 - Set output level (1/0 -> high/low) for GPIO0...29. Reading back gives the last value written, NOT the input value from the pins. If core 0 and core 1 both write to GPIO_OUT simultaneously (or to a SET/CLR/XOR alias), the result is as though the write from core 0 took place first, and the write from core 1 was then applied to that intermediate result."]
     #[inline(always)]
     #[must_use]
     pub fn gpio_out(&mut self) -> GPIO_OUT_W<GPIO_OUT_SPEC> {

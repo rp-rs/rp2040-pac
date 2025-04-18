@@ -2,11 +2,9 @@
 pub type R = crate::R<CLK_SYS_RESUS_CTRL_SPEC>;
 #[doc = "Register `CLK_SYS_RESUS_CTRL` writer"]
 pub type W = crate::W<CLK_SYS_RESUS_CTRL_SPEC>;
-#[doc = "Field `TIMEOUT` reader - This is expressed as a number of clk_ref cycles  
- and must be >= 2x clk_ref_freq/min_clk_tst_freq"]
+#[doc = "Field `TIMEOUT` reader - This is expressed as a number of clk_ref cycles and must be >= 2x clk_ref_freq/min_clk_tst_freq"]
 pub type TIMEOUT_R = crate::FieldReader;
-#[doc = "Field `TIMEOUT` writer - This is expressed as a number of clk_ref cycles  
- and must be >= 2x clk_ref_freq/min_clk_tst_freq"]
+#[doc = "Field `TIMEOUT` writer - This is expressed as a number of clk_ref cycles and must be >= 2x clk_ref_freq/min_clk_tst_freq"]
 pub type TIMEOUT_W<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 #[doc = "Field `ENABLE` reader - Enable resus"]
 pub type ENABLE_R = crate::BitReader;
@@ -21,8 +19,7 @@ pub type CLEAR_R = crate::BitReader;
 #[doc = "Field `CLEAR` writer - For clearing the resus after the fault that triggered it has been corrected"]
 pub type CLEAR_W<'a, REG> = crate::BitWriter<'a, REG>;
 impl R {
-    #[doc = "Bits 0:7 - This is expressed as a number of clk_ref cycles  
- and must be >= 2x clk_ref_freq/min_clk_tst_freq"]
+    #[doc = "Bits 0:7 - This is expressed as a number of clk_ref cycles and must be >= 2x clk_ref_freq/min_clk_tst_freq"]
     #[inline(always)]
     pub fn timeout(&self) -> TIMEOUT_R {
         TIMEOUT_R::new((self.bits & 0xff) as u8)
@@ -44,8 +41,7 @@ impl R {
     }
 }
 impl W {
-    #[doc = "Bits 0:7 - This is expressed as a number of clk_ref cycles  
- and must be >= 2x clk_ref_freq/min_clk_tst_freq"]
+    #[doc = "Bits 0:7 - This is expressed as a number of clk_ref cycles and must be >= 2x clk_ref_freq/min_clk_tst_freq"]
     #[inline(always)]
     #[must_use]
     pub fn timeout(&mut self) -> TIMEOUT_W<CLK_SYS_RESUS_CTRL_SPEC> {

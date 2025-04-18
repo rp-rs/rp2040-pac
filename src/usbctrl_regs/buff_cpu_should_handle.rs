@@ -1,5 +1,7 @@
 #[doc = "Register `BUFF_CPU_SHOULD_HANDLE` reader"]
 pub type R = crate::R<BUFF_CPU_SHOULD_HANDLE_SPEC>;
+#[doc = "Register `BUFF_CPU_SHOULD_HANDLE` writer"]
+pub type W = crate::W<BUFF_CPU_SHOULD_HANDLE_SPEC>;
 #[doc = "Field `EP0_IN` reader - "]
 pub type EP0_IN_R = crate::BitReader;
 #[doc = "Field `EP0_OUT` reader - "]
@@ -226,15 +228,22 @@ impl R {
         EP15_OUT_R::new(((self.bits >> 31) & 1) != 0)
     }
 }
+impl W {}
 #[doc = "Which of the double buffers should be handled. Only valid if using an interrupt per buffer (i.e. not per 2 buffers). Not valid for host interrupt endpoint polling because they are only single buffered.  
 
-You can [`read`](crate::generic::Reg::read) this register and get [`buff_cpu_should_handle::R`](R).  See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+You can [`read`](crate::generic::Reg::read) this register and get [`buff_cpu_should_handle::R`](R).  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`buff_cpu_should_handle::W`](W). You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
 pub struct BUFF_CPU_SHOULD_HANDLE_SPEC;
 impl crate::RegisterSpec for BUFF_CPU_SHOULD_HANDLE_SPEC {
     type Ux = u32;
 }
 #[doc = "`read()` method returns [`buff_cpu_should_handle::R`](R) reader structure"]
 impl crate::Readable for BUFF_CPU_SHOULD_HANDLE_SPEC {}
+#[doc = "`write(|w| ..)` method takes [`buff_cpu_should_handle::W`](W) writer structure"]
+impl crate::Writable for BUFF_CPU_SHOULD_HANDLE_SPEC {
+    type Safety = crate::Unsafe;
+    const ZERO_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+    const ONE_TO_MODIFY_FIELDS_BITMAP: u32 = 0;
+}
 #[doc = "`reset()` method sets BUFF_CPU_SHOULD_HANDLE to value 0"]
 impl crate::Resettable for BUFF_CPU_SHOULD_HANDLE_SPEC {
     const RESET_VALUE: u32 = 0;

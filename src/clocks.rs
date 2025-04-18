@@ -20,7 +20,7 @@ pub struct RegisterBlock {
     clk_sys_div: CLK_SYS_DIV,
     clk_sys_selected: CLK_SYS_SELECTED,
     clk_peri_ctrl: CLK_PERI_CTRL,
-    _reserved19: [u8; 0x04],
+    clk_peri_div: CLK_PERI_DIV,
     clk_peri_selected: CLK_PERI_SELECTED,
     clk_usb_ctrl: CLK_USB_CTRL,
     clk_usb_div: CLK_USB_DIV,
@@ -63,8 +63,7 @@ impl RegisterBlock {
     pub const fn clk_gpout0_div(&self) -> &CLK_GPOUT0_DIV {
         &self.clk_gpout0_div
     }
-    #[doc = "0x08 - Indicates which SRC is currently selected by the glitchless mux (one-hot).  
- This slice does not have a glitchless mux (only the AUX_SRC field is present, not SRC) so this register is hardwired to 0x1."]
+    #[doc = "0x08 - Indicates which SRC is currently selected by the glitchless mux (one-hot)."]
     #[inline(always)]
     pub const fn clk_gpout0_selected(&self) -> &CLK_GPOUT0_SELECTED {
         &self.clk_gpout0_selected
@@ -79,8 +78,7 @@ impl RegisterBlock {
     pub const fn clk_gpout1_div(&self) -> &CLK_GPOUT1_DIV {
         &self.clk_gpout1_div
     }
-    #[doc = "0x14 - Indicates which SRC is currently selected by the glitchless mux (one-hot).  
- This slice does not have a glitchless mux (only the AUX_SRC field is present, not SRC) so this register is hardwired to 0x1."]
+    #[doc = "0x14 - Indicates which SRC is currently selected by the glitchless mux (one-hot)."]
     #[inline(always)]
     pub const fn clk_gpout1_selected(&self) -> &CLK_GPOUT1_SELECTED {
         &self.clk_gpout1_selected
@@ -95,8 +93,7 @@ impl RegisterBlock {
     pub const fn clk_gpout2_div(&self) -> &CLK_GPOUT2_DIV {
         &self.clk_gpout2_div
     }
-    #[doc = "0x20 - Indicates which SRC is currently selected by the glitchless mux (one-hot).  
- This slice does not have a glitchless mux (only the AUX_SRC field is present, not SRC) so this register is hardwired to 0x1."]
+    #[doc = "0x20 - Indicates which SRC is currently selected by the glitchless mux (one-hot)."]
     #[inline(always)]
     pub const fn clk_gpout2_selected(&self) -> &CLK_GPOUT2_SELECTED {
         &self.clk_gpout2_selected
@@ -111,8 +108,7 @@ impl RegisterBlock {
     pub const fn clk_gpout3_div(&self) -> &CLK_GPOUT3_DIV {
         &self.clk_gpout3_div
     }
-    #[doc = "0x2c - Indicates which SRC is currently selected by the glitchless mux (one-hot).  
- This slice does not have a glitchless mux (only the AUX_SRC field is present, not SRC) so this register is hardwired to 0x1."]
+    #[doc = "0x2c - Indicates which SRC is currently selected by the glitchless mux (one-hot)."]
     #[inline(always)]
     pub const fn clk_gpout3_selected(&self) -> &CLK_GPOUT3_SELECTED {
         &self.clk_gpout3_selected
@@ -127,8 +123,7 @@ impl RegisterBlock {
     pub const fn clk_ref_div(&self) -> &CLK_REF_DIV {
         &self.clk_ref_div
     }
-    #[doc = "0x38 - Indicates which SRC is currently selected by the glitchless mux (one-hot).  
- The glitchless multiplexer does not switch instantaneously (to avoid glitches), so software should poll this register to wait for the switch to complete. This register contains one decoded bit for each of the clock sources enumerated in the CTRL SRC field. At most one of these bits will be set at any time, indicating that clock is currently present at the output of the glitchless mux. Whilst switching is in progress, this register may briefly show all-0s."]
+    #[doc = "0x38 - Indicates which SRC is currently selected by the glitchless mux (one-hot)."]
     #[inline(always)]
     pub const fn clk_ref_selected(&self) -> &CLK_REF_SELECTED {
         &self.clk_ref_selected
@@ -143,8 +138,7 @@ impl RegisterBlock {
     pub const fn clk_sys_div(&self) -> &CLK_SYS_DIV {
         &self.clk_sys_div
     }
-    #[doc = "0x44 - Indicates which SRC is currently selected by the glitchless mux (one-hot).  
- The glitchless multiplexer does not switch instantaneously (to avoid glitches), so software should poll this register to wait for the switch to complete. This register contains one decoded bit for each of the clock sources enumerated in the CTRL SRC field. At most one of these bits will be set at any time, indicating that clock is currently present at the output of the glitchless mux. Whilst switching is in progress, this register may briefly show all-0s."]
+    #[doc = "0x44 - Indicates which SRC is currently selected by the glitchless mux (one-hot)."]
     #[inline(always)]
     pub const fn clk_sys_selected(&self) -> &CLK_SYS_SELECTED {
         &self.clk_sys_selected
@@ -154,8 +148,12 @@ impl RegisterBlock {
     pub const fn clk_peri_ctrl(&self) -> &CLK_PERI_CTRL {
         &self.clk_peri_ctrl
     }
-    #[doc = "0x50 - Indicates which SRC is currently selected by the glitchless mux (one-hot).  
- This slice does not have a glitchless mux (only the AUX_SRC field is present, not SRC) so this register is hardwired to 0x1."]
+    #[doc = "0x4c - Clock divisor, can be changed on-the-fly"]
+    #[inline(always)]
+    pub const fn clk_peri_div(&self) -> &CLK_PERI_DIV {
+        &self.clk_peri_div
+    }
+    #[doc = "0x50 - Indicates which SRC is currently selected by the glitchless mux (one-hot)."]
     #[inline(always)]
     pub const fn clk_peri_selected(&self) -> &CLK_PERI_SELECTED {
         &self.clk_peri_selected
@@ -170,8 +168,7 @@ impl RegisterBlock {
     pub const fn clk_usb_div(&self) -> &CLK_USB_DIV {
         &self.clk_usb_div
     }
-    #[doc = "0x5c - Indicates which SRC is currently selected by the glitchless mux (one-hot).  
- This slice does not have a glitchless mux (only the AUX_SRC field is present, not SRC) so this register is hardwired to 0x1."]
+    #[doc = "0x5c - Indicates which SRC is currently selected by the glitchless mux (one-hot)."]
     #[inline(always)]
     pub const fn clk_usb_selected(&self) -> &CLK_USB_SELECTED {
         &self.clk_usb_selected
@@ -186,8 +183,7 @@ impl RegisterBlock {
     pub const fn clk_adc_div(&self) -> &CLK_ADC_DIV {
         &self.clk_adc_div
     }
-    #[doc = "0x68 - Indicates which SRC is currently selected by the glitchless mux (one-hot).  
- This slice does not have a glitchless mux (only the AUX_SRC field is present, not SRC) so this register is hardwired to 0x1."]
+    #[doc = "0x68 - Indicates which SRC is currently selected by the glitchless mux (one-hot)."]
     #[inline(always)]
     pub const fn clk_adc_selected(&self) -> &CLK_ADC_SELECTED {
         &self.clk_adc_selected
@@ -202,8 +198,7 @@ impl RegisterBlock {
     pub const fn clk_rtc_div(&self) -> &CLK_RTC_DIV {
         &self.clk_rtc_div
     }
-    #[doc = "0x74 - Indicates which SRC is currently selected by the glitchless mux (one-hot).  
- This slice does not have a glitchless mux (only the AUX_SRC field is present, not SRC) so this register is hardwired to 0x1."]
+    #[doc = "0x74 - Indicates which SRC is currently selected by the glitchless mux (one-hot)."]
     #[inline(always)]
     pub const fn clk_rtc_selected(&self) -> &CLK_RTC_SELECTED {
         &self.clk_rtc_selected
@@ -233,20 +228,17 @@ impl RegisterBlock {
     pub const fn fc0_max_khz(&self) -> &FC0_MAX_KHZ {
         &self.fc0_max_khz
     }
-    #[doc = "0x8c - Delays the start of frequency counting to allow the mux to settle  
- Delay is measured in multiples of the reference clock period"]
+    #[doc = "0x8c - Delays the start of frequency counting to allow the mux to settle Delay is measured in multiples of the reference clock period"]
     #[inline(always)]
     pub const fn fc0_delay(&self) -> &FC0_DELAY {
         &self.fc0_delay
     }
-    #[doc = "0x90 - The test interval is 0.98us * 2**interval, but let's call it 1us * 2**interval  
- The default gives a test interval of 250us"]
+    #[doc = "0x90 - The test interval is 0.98us * 2**interval, but let's call it 1us * 2**interval The default gives a test interval of 250us"]
     #[inline(always)]
     pub const fn fc0_interval(&self) -> &FC0_INTERVAL {
         &self.fc0_interval
     }
-    #[doc = "0x94 - Clock sent to frequency counter, set to 0 when not required  
- Writing to this register initiates the frequency count"]
+    #[doc = "0x94 - Clock sent to frequency counter, set to 0 when not required Writing to this register initiates the frequency count"]
     #[inline(always)]
     pub const fn fc0_src(&self) -> &FC0_SRC {
         &self.fc0_src
@@ -330,16 +322,14 @@ module"]
 pub type CLK_GPOUT0_DIV = crate::Reg<clk_gpout0_div::CLK_GPOUT0_DIV_SPEC>;
 #[doc = "Clock divisor, can be changed on-the-fly"]
 pub mod clk_gpout0_div;
-#[doc = "CLK_GPOUT0_SELECTED (r) register accessor: Indicates which SRC is currently selected by the glitchless mux (one-hot).  
- This slice does not have a glitchless mux (only the AUX_SRC field is present, not SRC) so this register is hardwired to 0x1.  
+#[doc = "CLK_GPOUT0_SELECTED (rw) register accessor: Indicates which SRC is currently selected by the glitchless mux (one-hot).  
 
-You can [`read`](crate::generic::Reg::read) this register and get [`clk_gpout0_selected::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+You can [`read`](crate::generic::Reg::read) this register and get [`clk_gpout0_selected::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`clk_gpout0_selected::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
 
 For information about available fields see [`mod@clk_gpout0_selected`]
 module"]
 pub type CLK_GPOUT0_SELECTED = crate::Reg<clk_gpout0_selected::CLK_GPOUT0_SELECTED_SPEC>;
-#[doc = "Indicates which SRC is currently selected by the glitchless mux (one-hot).  
- This slice does not have a glitchless mux (only the AUX_SRC field is present, not SRC) so this register is hardwired to 0x1."]
+#[doc = "Indicates which SRC is currently selected by the glitchless mux (one-hot)."]
 pub mod clk_gpout0_selected;
 #[doc = "CLK_GPOUT1_CTRL (rw) register accessor: Clock control, can be changed on-the-fly (except for auxsrc)  
 
@@ -359,16 +349,14 @@ module"]
 pub type CLK_GPOUT1_DIV = crate::Reg<clk_gpout1_div::CLK_GPOUT1_DIV_SPEC>;
 #[doc = "Clock divisor, can be changed on-the-fly"]
 pub mod clk_gpout1_div;
-#[doc = "CLK_GPOUT1_SELECTED (r) register accessor: Indicates which SRC is currently selected by the glitchless mux (one-hot).  
- This slice does not have a glitchless mux (only the AUX_SRC field is present, not SRC) so this register is hardwired to 0x1.  
+#[doc = "CLK_GPOUT1_SELECTED (rw) register accessor: Indicates which SRC is currently selected by the glitchless mux (one-hot).  
 
-You can [`read`](crate::generic::Reg::read) this register and get [`clk_gpout1_selected::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+You can [`read`](crate::generic::Reg::read) this register and get [`clk_gpout1_selected::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`clk_gpout1_selected::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
 
 For information about available fields see [`mod@clk_gpout1_selected`]
 module"]
 pub type CLK_GPOUT1_SELECTED = crate::Reg<clk_gpout1_selected::CLK_GPOUT1_SELECTED_SPEC>;
-#[doc = "Indicates which SRC is currently selected by the glitchless mux (one-hot).  
- This slice does not have a glitchless mux (only the AUX_SRC field is present, not SRC) so this register is hardwired to 0x1."]
+#[doc = "Indicates which SRC is currently selected by the glitchless mux (one-hot)."]
 pub mod clk_gpout1_selected;
 #[doc = "CLK_GPOUT2_CTRL (rw) register accessor: Clock control, can be changed on-the-fly (except for auxsrc)  
 
@@ -388,16 +376,14 @@ module"]
 pub type CLK_GPOUT2_DIV = crate::Reg<clk_gpout2_div::CLK_GPOUT2_DIV_SPEC>;
 #[doc = "Clock divisor, can be changed on-the-fly"]
 pub mod clk_gpout2_div;
-#[doc = "CLK_GPOUT2_SELECTED (r) register accessor: Indicates which SRC is currently selected by the glitchless mux (one-hot).  
- This slice does not have a glitchless mux (only the AUX_SRC field is present, not SRC) so this register is hardwired to 0x1.  
+#[doc = "CLK_GPOUT2_SELECTED (rw) register accessor: Indicates which SRC is currently selected by the glitchless mux (one-hot).  
 
-You can [`read`](crate::generic::Reg::read) this register and get [`clk_gpout2_selected::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+You can [`read`](crate::generic::Reg::read) this register and get [`clk_gpout2_selected::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`clk_gpout2_selected::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
 
 For information about available fields see [`mod@clk_gpout2_selected`]
 module"]
 pub type CLK_GPOUT2_SELECTED = crate::Reg<clk_gpout2_selected::CLK_GPOUT2_SELECTED_SPEC>;
-#[doc = "Indicates which SRC is currently selected by the glitchless mux (one-hot).  
- This slice does not have a glitchless mux (only the AUX_SRC field is present, not SRC) so this register is hardwired to 0x1."]
+#[doc = "Indicates which SRC is currently selected by the glitchless mux (one-hot)."]
 pub mod clk_gpout2_selected;
 #[doc = "CLK_GPOUT3_CTRL (rw) register accessor: Clock control, can be changed on-the-fly (except for auxsrc)  
 
@@ -417,16 +403,14 @@ module"]
 pub type CLK_GPOUT3_DIV = crate::Reg<clk_gpout3_div::CLK_GPOUT3_DIV_SPEC>;
 #[doc = "Clock divisor, can be changed on-the-fly"]
 pub mod clk_gpout3_div;
-#[doc = "CLK_GPOUT3_SELECTED (r) register accessor: Indicates which SRC is currently selected by the glitchless mux (one-hot).  
- This slice does not have a glitchless mux (only the AUX_SRC field is present, not SRC) so this register is hardwired to 0x1.  
+#[doc = "CLK_GPOUT3_SELECTED (rw) register accessor: Indicates which SRC is currently selected by the glitchless mux (one-hot).  
 
-You can [`read`](crate::generic::Reg::read) this register and get [`clk_gpout3_selected::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+You can [`read`](crate::generic::Reg::read) this register and get [`clk_gpout3_selected::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`clk_gpout3_selected::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
 
 For information about available fields see [`mod@clk_gpout3_selected`]
 module"]
 pub type CLK_GPOUT3_SELECTED = crate::Reg<clk_gpout3_selected::CLK_GPOUT3_SELECTED_SPEC>;
-#[doc = "Indicates which SRC is currently selected by the glitchless mux (one-hot).  
- This slice does not have a glitchless mux (only the AUX_SRC field is present, not SRC) so this register is hardwired to 0x1."]
+#[doc = "Indicates which SRC is currently selected by the glitchless mux (one-hot)."]
 pub mod clk_gpout3_selected;
 #[doc = "CLK_REF_CTRL (rw) register accessor: Clock control, can be changed on-the-fly (except for auxsrc)  
 
@@ -446,16 +430,14 @@ module"]
 pub type CLK_REF_DIV = crate::Reg<clk_ref_div::CLK_REF_DIV_SPEC>;
 #[doc = "Clock divisor, can be changed on-the-fly"]
 pub mod clk_ref_div;
-#[doc = "CLK_REF_SELECTED (r) register accessor: Indicates which SRC is currently selected by the glitchless mux (one-hot).  
- The glitchless multiplexer does not switch instantaneously (to avoid glitches), so software should poll this register to wait for the switch to complete. This register contains one decoded bit for each of the clock sources enumerated in the CTRL SRC field. At most one of these bits will be set at any time, indicating that clock is currently present at the output of the glitchless mux. Whilst switching is in progress, this register may briefly show all-0s.  
+#[doc = "CLK_REF_SELECTED (rw) register accessor: Indicates which SRC is currently selected by the glitchless mux (one-hot).  
 
-You can [`read`](crate::generic::Reg::read) this register and get [`clk_ref_selected::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+You can [`read`](crate::generic::Reg::read) this register and get [`clk_ref_selected::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`clk_ref_selected::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
 
 For information about available fields see [`mod@clk_ref_selected`]
 module"]
 pub type CLK_REF_SELECTED = crate::Reg<clk_ref_selected::CLK_REF_SELECTED_SPEC>;
-#[doc = "Indicates which SRC is currently selected by the glitchless mux (one-hot).  
- The glitchless multiplexer does not switch instantaneously (to avoid glitches), so software should poll this register to wait for the switch to complete. This register contains one decoded bit for each of the clock sources enumerated in the CTRL SRC field. At most one of these bits will be set at any time, indicating that clock is currently present at the output of the glitchless mux. Whilst switching is in progress, this register may briefly show all-0s."]
+#[doc = "Indicates which SRC is currently selected by the glitchless mux (one-hot)."]
 pub mod clk_ref_selected;
 #[doc = "CLK_SYS_CTRL (rw) register accessor: Clock control, can be changed on-the-fly (except for auxsrc)  
 
@@ -475,16 +457,14 @@ module"]
 pub type CLK_SYS_DIV = crate::Reg<clk_sys_div::CLK_SYS_DIV_SPEC>;
 #[doc = "Clock divisor, can be changed on-the-fly"]
 pub mod clk_sys_div;
-#[doc = "CLK_SYS_SELECTED (r) register accessor: Indicates which SRC is currently selected by the glitchless mux (one-hot).  
- The glitchless multiplexer does not switch instantaneously (to avoid glitches), so software should poll this register to wait for the switch to complete. This register contains one decoded bit for each of the clock sources enumerated in the CTRL SRC field. At most one of these bits will be set at any time, indicating that clock is currently present at the output of the glitchless mux. Whilst switching is in progress, this register may briefly show all-0s.  
+#[doc = "CLK_SYS_SELECTED (rw) register accessor: Indicates which SRC is currently selected by the glitchless mux (one-hot).  
 
-You can [`read`](crate::generic::Reg::read) this register and get [`clk_sys_selected::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+You can [`read`](crate::generic::Reg::read) this register and get [`clk_sys_selected::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`clk_sys_selected::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
 
 For information about available fields see [`mod@clk_sys_selected`]
 module"]
 pub type CLK_SYS_SELECTED = crate::Reg<clk_sys_selected::CLK_SYS_SELECTED_SPEC>;
-#[doc = "Indicates which SRC is currently selected by the glitchless mux (one-hot).  
- The glitchless multiplexer does not switch instantaneously (to avoid glitches), so software should poll this register to wait for the switch to complete. This register contains one decoded bit for each of the clock sources enumerated in the CTRL SRC field. At most one of these bits will be set at any time, indicating that clock is currently present at the output of the glitchless mux. Whilst switching is in progress, this register may briefly show all-0s."]
+#[doc = "Indicates which SRC is currently selected by the glitchless mux (one-hot)."]
 pub mod clk_sys_selected;
 #[doc = "CLK_PERI_CTRL (rw) register accessor: Clock control, can be changed on-the-fly (except for auxsrc)  
 
@@ -495,16 +475,23 @@ module"]
 pub type CLK_PERI_CTRL = crate::Reg<clk_peri_ctrl::CLK_PERI_CTRL_SPEC>;
 #[doc = "Clock control, can be changed on-the-fly (except for auxsrc)"]
 pub mod clk_peri_ctrl;
-#[doc = "CLK_PERI_SELECTED (r) register accessor: Indicates which SRC is currently selected by the glitchless mux (one-hot).  
- This slice does not have a glitchless mux (only the AUX_SRC field is present, not SRC) so this register is hardwired to 0x1.  
+#[doc = "CLK_PERI_DIV (rw) register accessor: Clock divisor, can be changed on-the-fly  
 
-You can [`read`](crate::generic::Reg::read) this register and get [`clk_peri_selected::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+You can [`read`](crate::generic::Reg::read) this register and get [`clk_peri_div::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`clk_peri_div::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+
+For information about available fields see [`mod@clk_peri_div`]
+module"]
+pub type CLK_PERI_DIV = crate::Reg<clk_peri_div::CLK_PERI_DIV_SPEC>;
+#[doc = "Clock divisor, can be changed on-the-fly"]
+pub mod clk_peri_div;
+#[doc = "CLK_PERI_SELECTED (rw) register accessor: Indicates which SRC is currently selected by the glitchless mux (one-hot).  
+
+You can [`read`](crate::generic::Reg::read) this register and get [`clk_peri_selected::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`clk_peri_selected::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
 
 For information about available fields see [`mod@clk_peri_selected`]
 module"]
 pub type CLK_PERI_SELECTED = crate::Reg<clk_peri_selected::CLK_PERI_SELECTED_SPEC>;
-#[doc = "Indicates which SRC is currently selected by the glitchless mux (one-hot).  
- This slice does not have a glitchless mux (only the AUX_SRC field is present, not SRC) so this register is hardwired to 0x1."]
+#[doc = "Indicates which SRC is currently selected by the glitchless mux (one-hot)."]
 pub mod clk_peri_selected;
 #[doc = "CLK_USB_CTRL (rw) register accessor: Clock control, can be changed on-the-fly (except for auxsrc)  
 
@@ -524,16 +511,14 @@ module"]
 pub type CLK_USB_DIV = crate::Reg<clk_usb_div::CLK_USB_DIV_SPEC>;
 #[doc = "Clock divisor, can be changed on-the-fly"]
 pub mod clk_usb_div;
-#[doc = "CLK_USB_SELECTED (r) register accessor: Indicates which SRC is currently selected by the glitchless mux (one-hot).  
- This slice does not have a glitchless mux (only the AUX_SRC field is present, not SRC) so this register is hardwired to 0x1.  
+#[doc = "CLK_USB_SELECTED (rw) register accessor: Indicates which SRC is currently selected by the glitchless mux (one-hot).  
 
-You can [`read`](crate::generic::Reg::read) this register and get [`clk_usb_selected::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+You can [`read`](crate::generic::Reg::read) this register and get [`clk_usb_selected::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`clk_usb_selected::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
 
 For information about available fields see [`mod@clk_usb_selected`]
 module"]
 pub type CLK_USB_SELECTED = crate::Reg<clk_usb_selected::CLK_USB_SELECTED_SPEC>;
-#[doc = "Indicates which SRC is currently selected by the glitchless mux (one-hot).  
- This slice does not have a glitchless mux (only the AUX_SRC field is present, not SRC) so this register is hardwired to 0x1."]
+#[doc = "Indicates which SRC is currently selected by the glitchless mux (one-hot)."]
 pub mod clk_usb_selected;
 #[doc = "CLK_ADC_CTRL (rw) register accessor: Clock control, can be changed on-the-fly (except for auxsrc)  
 
@@ -553,16 +538,14 @@ module"]
 pub type CLK_ADC_DIV = crate::Reg<clk_adc_div::CLK_ADC_DIV_SPEC>;
 #[doc = "Clock divisor, can be changed on-the-fly"]
 pub mod clk_adc_div;
-#[doc = "CLK_ADC_SELECTED (r) register accessor: Indicates which SRC is currently selected by the glitchless mux (one-hot).  
- This slice does not have a glitchless mux (only the AUX_SRC field is present, not SRC) so this register is hardwired to 0x1.  
+#[doc = "CLK_ADC_SELECTED (rw) register accessor: Indicates which SRC is currently selected by the glitchless mux (one-hot).  
 
-You can [`read`](crate::generic::Reg::read) this register and get [`clk_adc_selected::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+You can [`read`](crate::generic::Reg::read) this register and get [`clk_adc_selected::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`clk_adc_selected::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
 
 For information about available fields see [`mod@clk_adc_selected`]
 module"]
 pub type CLK_ADC_SELECTED = crate::Reg<clk_adc_selected::CLK_ADC_SELECTED_SPEC>;
-#[doc = "Indicates which SRC is currently selected by the glitchless mux (one-hot).  
- This slice does not have a glitchless mux (only the AUX_SRC field is present, not SRC) so this register is hardwired to 0x1."]
+#[doc = "Indicates which SRC is currently selected by the glitchless mux (one-hot)."]
 pub mod clk_adc_selected;
 #[doc = "CLK_RTC_CTRL (rw) register accessor: Clock control, can be changed on-the-fly (except for auxsrc)  
 
@@ -582,16 +565,14 @@ module"]
 pub type CLK_RTC_DIV = crate::Reg<clk_rtc_div::CLK_RTC_DIV_SPEC>;
 #[doc = "Clock divisor, can be changed on-the-fly"]
 pub mod clk_rtc_div;
-#[doc = "CLK_RTC_SELECTED (r) register accessor: Indicates which SRC is currently selected by the glitchless mux (one-hot).  
- This slice does not have a glitchless mux (only the AUX_SRC field is present, not SRC) so this register is hardwired to 0x1.  
+#[doc = "CLK_RTC_SELECTED (rw) register accessor: Indicates which SRC is currently selected by the glitchless mux (one-hot).  
 
-You can [`read`](crate::generic::Reg::read) this register and get [`clk_rtc_selected::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+You can [`read`](crate::generic::Reg::read) this register and get [`clk_rtc_selected::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`clk_rtc_selected::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
 
 For information about available fields see [`mod@clk_rtc_selected`]
 module"]
 pub type CLK_RTC_SELECTED = crate::Reg<clk_rtc_selected::CLK_RTC_SELECTED_SPEC>;
-#[doc = "Indicates which SRC is currently selected by the glitchless mux (one-hot).  
- This slice does not have a glitchless mux (only the AUX_SRC field is present, not SRC) so this register is hardwired to 0x1."]
+#[doc = "Indicates which SRC is currently selected by the glitchless mux (one-hot)."]
 pub mod clk_rtc_selected;
 #[doc = "CLK_SYS_RESUS_CTRL (rw) register accessor:   
 
@@ -602,9 +583,9 @@ module"]
 pub type CLK_SYS_RESUS_CTRL = crate::Reg<clk_sys_resus_ctrl::CLK_SYS_RESUS_CTRL_SPEC>;
 #[doc = ""]
 pub mod clk_sys_resus_ctrl;
-#[doc = "CLK_SYS_RESUS_STATUS (r) register accessor:   
+#[doc = "CLK_SYS_RESUS_STATUS (rw) register accessor:   
 
-You can [`read`](crate::generic::Reg::read) this register and get [`clk_sys_resus_status::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+You can [`read`](crate::generic::Reg::read) this register and get [`clk_sys_resus_status::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`clk_sys_resus_status::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
 
 For information about available fields see [`mod@clk_sys_resus_status`]
 module"]
@@ -638,51 +619,45 @@ module"]
 pub type FC0_MAX_KHZ = crate::Reg<fc0_max_khz::FC0_MAX_KHZ_SPEC>;
 #[doc = "Maximum pass frequency in kHz. This is optional. Set to 0x1ffffff if you are not using the pass/fail flags"]
 pub mod fc0_max_khz;
-#[doc = "FC0_DELAY (rw) register accessor: Delays the start of frequency counting to allow the mux to settle  
- Delay is measured in multiples of the reference clock period  
+#[doc = "FC0_DELAY (rw) register accessor: Delays the start of frequency counting to allow the mux to settle Delay is measured in multiples of the reference clock period  
 
 You can [`read`](crate::generic::Reg::read) this register and get [`fc0_delay::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`fc0_delay::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
 
 For information about available fields see [`mod@fc0_delay`]
 module"]
 pub type FC0_DELAY = crate::Reg<fc0_delay::FC0_DELAY_SPEC>;
-#[doc = "Delays the start of frequency counting to allow the mux to settle  
- Delay is measured in multiples of the reference clock period"]
+#[doc = "Delays the start of frequency counting to allow the mux to settle Delay is measured in multiples of the reference clock period"]
 pub mod fc0_delay;
-#[doc = "FC0_INTERVAL (rw) register accessor: The test interval is 0.98us * 2**interval, but let's call it 1us * 2**interval  
- The default gives a test interval of 250us  
+#[doc = "FC0_INTERVAL (rw) register accessor: The test interval is 0.98us * 2**interval, but let's call it 1us * 2**interval The default gives a test interval of 250us  
 
 You can [`read`](crate::generic::Reg::read) this register and get [`fc0_interval::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`fc0_interval::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
 
 For information about available fields see [`mod@fc0_interval`]
 module"]
 pub type FC0_INTERVAL = crate::Reg<fc0_interval::FC0_INTERVAL_SPEC>;
-#[doc = "The test interval is 0.98us * 2**interval, but let's call it 1us * 2**interval  
- The default gives a test interval of 250us"]
+#[doc = "The test interval is 0.98us * 2**interval, but let's call it 1us * 2**interval The default gives a test interval of 250us"]
 pub mod fc0_interval;
-#[doc = "FC0_SRC (rw) register accessor: Clock sent to frequency counter, set to 0 when not required  
- Writing to this register initiates the frequency count  
+#[doc = "FC0_SRC (rw) register accessor: Clock sent to frequency counter, set to 0 when not required Writing to this register initiates the frequency count  
 
 You can [`read`](crate::generic::Reg::read) this register and get [`fc0_src::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`fc0_src::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
 
 For information about available fields see [`mod@fc0_src`]
 module"]
 pub type FC0_SRC = crate::Reg<fc0_src::FC0_SRC_SPEC>;
-#[doc = "Clock sent to frequency counter, set to 0 when not required  
- Writing to this register initiates the frequency count"]
+#[doc = "Clock sent to frequency counter, set to 0 when not required Writing to this register initiates the frequency count"]
 pub mod fc0_src;
-#[doc = "FC0_STATUS (r) register accessor: Frequency counter status  
+#[doc = "FC0_STATUS (rw) register accessor: Frequency counter status  
 
-You can [`read`](crate::generic::Reg::read) this register and get [`fc0_status::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+You can [`read`](crate::generic::Reg::read) this register and get [`fc0_status::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`fc0_status::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
 
 For information about available fields see [`mod@fc0_status`]
 module"]
 pub type FC0_STATUS = crate::Reg<fc0_status::FC0_STATUS_SPEC>;
 #[doc = "Frequency counter status"]
 pub mod fc0_status;
-#[doc = "FC0_RESULT (r) register accessor: Result of frequency measurement, only valid when status_done=1  
+#[doc = "FC0_RESULT (rw) register accessor: Result of frequency measurement, only valid when status_done=1  
 
-You can [`read`](crate::generic::Reg::read) this register and get [`fc0_result::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+You can [`read`](crate::generic::Reg::read) this register and get [`fc0_result::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`fc0_result::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
 
 For information about available fields see [`mod@fc0_result`]
 module"]
@@ -725,27 +700,27 @@ module"]
 pub type SLEEP_EN1 = crate::Reg<sleep_en1::SLEEP_EN1_SPEC>;
 #[doc = "enable clock in sleep mode"]
 pub mod sleep_en1;
-#[doc = "ENABLED0 (r) register accessor: indicates the state of the clock enable  
+#[doc = "ENABLED0 (rw) register accessor: indicates the state of the clock enable  
 
-You can [`read`](crate::generic::Reg::read) this register and get [`enabled0::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+You can [`read`](crate::generic::Reg::read) this register and get [`enabled0::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`enabled0::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
 
 For information about available fields see [`mod@enabled0`]
 module"]
 pub type ENABLED0 = crate::Reg<enabled0::ENABLED0_SPEC>;
 #[doc = "indicates the state of the clock enable"]
 pub mod enabled0;
-#[doc = "ENABLED1 (r) register accessor: indicates the state of the clock enable  
+#[doc = "ENABLED1 (rw) register accessor: indicates the state of the clock enable  
 
-You can [`read`](crate::generic::Reg::read) this register and get [`enabled1::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+You can [`read`](crate::generic::Reg::read) this register and get [`enabled1::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`enabled1::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
 
 For information about available fields see [`mod@enabled1`]
 module"]
 pub type ENABLED1 = crate::Reg<enabled1::ENABLED1_SPEC>;
 #[doc = "indicates the state of the clock enable"]
 pub mod enabled1;
-#[doc = "INTR (r) register accessor: Raw Interrupts  
+#[doc = "INTR (rw) register accessor: Raw Interrupts  
 
-You can [`read`](crate::generic::Reg::read) this register and get [`intr::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+You can [`read`](crate::generic::Reg::read) this register and get [`intr::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`intr::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
 
 For information about available fields see [`mod@intr`]
 module"]
@@ -770,9 +745,9 @@ module"]
 pub type INTF = crate::Reg<intf::INTF_SPEC>;
 #[doc = "Interrupt Force"]
 pub mod intf;
-#[doc = "INTS (r) register accessor: Interrupt status after masking &amp; forcing  
+#[doc = "INTS (rw) register accessor: Interrupt status after masking &amp; forcing  
 
-You can [`read`](crate::generic::Reg::read) this register and get [`ints::R`].  See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
+You can [`read`](crate::generic::Reg::read) this register and get [`ints::R`].  You can [`reset`](crate::generic::Reg::reset), [`write`](crate::generic::Reg::write), [`write_with_zero`](crate::generic::Reg::write_with_zero) this register using [`ints::W`]. You can also [`modify`](crate::generic::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).  
 
 For information about available fields see [`mod@ints`]
 module"]
